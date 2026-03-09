@@ -15,10 +15,6 @@ export default function ServiceAreas() {
       cities: ['Bethesda', 'Silver Spring', 'Rockville', 'Annapolis', 'Frederick'],
     },
     {
-      name: 'Washington D.C.',
-      cities: ['Northwest DC', 'Northeast DC', 'Capitol Hill', 'Georgetown'],
-    },
-    {
       name: 'West Virginia',
       cities: ['Martinsburg', 'Charles Town', 'Harpers Ferry'],
     },
@@ -32,7 +28,7 @@ export default function ServiceAreas() {
     <div className="pt-24 md:pt-28 pb-14 md:pb-16">
       <SEO
         title="Service Areas"
-        description="First Chimney serves homeowners across Virginia, Maryland, Washington DC, West Virginia, and Pennsylvania with premium chimney and fireplace services."
+        description="First Chimney serves homeowners across Virginia, Maryland, West Virginia, and Pennsylvania with premium chimney and fireplace services."
         path="/service-areas"
       />
 

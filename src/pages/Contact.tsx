@@ -159,7 +159,7 @@ export default function Contact() {
                   <div>
                     <h4 className="font-display font-bold text-xl mb-2 text-white">Service Coverage</h4>
                     <p className="text-warm-ivory/75 mb-2">Proudly serving homeowners throughout the Mid-Atlantic.</p>
-                    <p className="text-lg font-medium text-white">VA, MD, DC, WV, & PA</p>
+                    <p className="text-lg font-medium text-white">VA, MD, WV, & PA</p>
                   </div>
                 </div>
               </div>

@@ -4,7 +4,7 @@ export const SITE = {
   displayDomain: 'firstchimneycontracting.com',
   phoneDisplay: '757-589-0783',
   phoneHref: 'tel:+17575890783',
-  serviceRegions: 'VA, MD, DC, WV, & PA',
+  serviceRegions: 'VA, MD, WV, & PA',
   email: 'info@firstchimneycontracting.com',
   logo: '/images/logos/logo-white.png',
   ogImage: '/images/hero-images/hayden-scott-lyTgIeUBOUE-unsplash-768x513.jpg',

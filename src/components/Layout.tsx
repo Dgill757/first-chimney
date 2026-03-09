@@ -13,7 +13,7 @@ export default function Layout() {
     url: SITE.domain,
     logo: `${SITE.domain}${SITE.logo}`,
     telephone: SITE.phoneDisplay,
-    areaServed: ['VA', 'MD', 'DC', 'WV', 'PA'],
+    areaServed: ['VA', 'MD', 'WV', 'PA'],
     serviceType: [
       'Chimney Inspection',
       'Chimney Sweeping',

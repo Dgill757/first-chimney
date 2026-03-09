@@ -133,7 +133,7 @@ export default function Home() {
     <div className="flex flex-col">
       <SEO
         title="Chimney Services Built for Safety and Long-Term Value"
-        description="First Chimney delivers inspections, sweeping, chimney leak repair, masonry restoration, and fireplace services across VA, MD, DC, WV, and PA."
+        description="First Chimney delivers inspections, sweeping, chimney leak repair, masonry restoration, and fireplace services across VA, MD, WV, and PA."
         path="/"
         image={IMAGE_ASSETS.hero}
       />
@@ -381,10 +381,10 @@ export default function Home() {
         <div className="container mx-auto px-6 lg:px-12 text-center">
           <MapPin className="w-12 h-12 text-copper-ember mx-auto mb-6" />
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-white">Serving the Mid-Atlantic</h2>
-          <p className="text-warm-ivory/85 max-w-2xl mx-auto mb-12">Professional chimney and fireplace service across Virginia, Maryland, Washington DC, West Virginia, and Pennsylvania.</p>
+          <p className="text-warm-ivory/85 max-w-2xl mx-auto mb-12">Professional chimney and fireplace service across Virginia, Maryland, West Virginia, and Pennsylvania.</p>
 
           <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-            {['Virginia', 'Maryland', 'Washington D.C.', 'West Virginia', 'Pennsylvania'].map((state) => (
+            {['Virginia', 'Maryland', 'West Virginia', 'Pennsylvania'].map((state) => (
               <Link
                 key={state}
                 to={`/service-areas/${state.toLowerCase().replace(/[.']/g, '').replace(/ /g, '-')}`}

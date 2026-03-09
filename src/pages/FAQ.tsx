@@ -31,7 +31,7 @@ export default function FAQ() {
     {
       question: 'What areas do you service?',
       answer:
-        'We serve homeowners across Virginia, Maryland, Washington DC, West Virginia, and Pennsylvania.',
+        'We serve homeowners across Virginia, Maryland, West Virginia, and Pennsylvania.',
     },
   ];
 

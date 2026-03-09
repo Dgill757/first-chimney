@@ -10,7 +10,7 @@ export default function Reviews() {
     { name: 'Michael Chen', location: 'Bethesda, MD', service: 'Masonry Rebuild', rating: 5, text: 'Our chimney was leaking and deteriorating. The rebuild quality was excellent and cleanup was spotless.' },
     { name: 'Emily Davis', location: 'Arlington, VA', service: 'Chimney Sweeping', rating: 5, text: 'Fast, clean, and professional. They left the room cleaner than when they arrived.' },
     { name: 'David Thompson', location: 'Frederick, MD', service: 'Leak Repair', rating: 5, text: 'After years of recurring leaks, First Chimney fixed the flashing and crown issues in one visit.' },
-    { name: 'Jessica Martinez', location: 'Washington, DC', service: 'Dryer Vent Cleaning', rating: 5, text: 'Huge airflow improvement and clear explanation of what caused the blockage.' },
+    { name: 'Jessica Martinez', location: 'Martinsburg, WV', service: 'Dryer Vent Cleaning', rating: 5, text: 'Huge airflow improvement and clear explanation of what caused the blockage.' },
     { name: 'Robert Wilson', location: 'Loudoun County, VA', service: 'Fireplace Repair', rating: 5, text: 'Craftsmanship was top-tier. Our fireplace is safe, efficient, and looks fantastic again.' },
   ];
 
@@ -18,7 +18,7 @@ export default function Reviews() {
     <div className="pt-24 md:pt-28 pb-14 md:pb-16">
       <SEO
         title="Customer Reviews"
-        description="See what homeowners across VA, MD, DC, WV, and PA are saying about First Chimney's premium service and craftsmanship."
+        description="See what homeowners across VA, MD, WV, and PA are saying about First Chimney's premium service and craftsmanship."
         path="/reviews"
       />
 

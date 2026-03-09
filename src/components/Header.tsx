@@ -43,8 +43,8 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         isScrolled
-          ? 'bg-midnight/95 backdrop-blur-xl shadow-[0_12px_40px_rgba(0,0,0,0.45)] py-2.5'
-          : 'bg-gradient-to-b from-midnight/90 via-midnight/55 to-transparent py-4.5'
+          ? 'bg-midnight/95 backdrop-blur-xl shadow-[0_12px_40px_rgba(0,0,0,0.45)] py-3'
+          : 'bg-gradient-to-b from-midnight/90 via-midnight/55 to-transparent py-5'
       }`}
     >
       <div
@@ -54,7 +54,7 @@ export default function Header() {
       >
         <div className="flex items-center gap-2">
           <MapPin className="w-3 h-3 text-copper-ember" />
-          <span>Serving VA, MD, DC, WV & PA</span>
+          <span>Serving VA, MD, WV & PA</span>
         </div>
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-1">
@@ -78,9 +78,13 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="px-4 lg:px-8 flex justify-between items-center mt-2 lg:mt-0 gap-6">
+      <div className="px-4 lg:px-8 flex justify-between items-center mt-2 lg:mt-0 gap-6 min-h-[4.75rem] lg:min-h-[5.25rem]">
         <Link to="/" className="z-50 shrink-0">
-          <img src={SITE.logo} alt="First Chimney logo" className="h-14 lg:h-16 w-auto object-contain drop-shadow-[0_0_12px_rgba(231,163,75,0.18)]" />
+          <img
+            src={SITE.logo}
+            alt="First Chimney logo"
+            className="h-12 lg:h-16 w-[190px] lg:w-[240px] object-contain object-left drop-shadow-[0_0_8px_rgba(255,120,40,0.25)]"
+          />
         </Link>
 
         <nav className="hidden lg:flex items-center justify-center flex-1 gap-7 xl:gap-9">
