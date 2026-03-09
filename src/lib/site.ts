@@ -8,6 +8,11 @@ export const SITE = {
   email: 'info@firstchimneycontracting.com',
   logo: '/images/logos/logo-white.png',
   ogImage: '/images/hero-images/hayden-scott-lyTgIeUBOUE-unsplash-768x513.jpg',
+  social: {
+    facebook: 'https://www.facebook.com/firstchimneycontracting',
+    instagram: 'https://www.instagram.com/firstchimneycontracting',
+    linkedin: 'https://www.linkedin.com/company/first-chimney-contracting',
+  },
 };
 
 export const IMAGE_ASSETS = {

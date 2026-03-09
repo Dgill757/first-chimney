@@ -59,7 +59,7 @@ export default function ServiceAreas() {
                 <ul className="space-y-4">
                   {state.cities.map((city) => (
                     <li key={city}>
-                      <Link to={`/service-areas/${city.toLowerCase().replace(/ /g, '-')}`} className="flex items-center justify-between text-warm-ivory/85 hover:text-white group">
+                      <Link to={`/service-areas/${city.toLowerCase().replace(/[.']/g, '').replace(/ /g, '-')}`} className="flex items-center justify-between text-warm-ivory/85 hover:text-white group">
                         <span>{city}</span>
                         <ArrowRight className="w-4 h-4 text-copper-ember opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                       </Link>

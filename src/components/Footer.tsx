@@ -22,7 +22,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
             <Link to="/" className="inline-flex items-center">
-              <img src={SITE.logo} alt="First Chimney logo" className="h-14 w-auto object-contain" />
+              <img src={SITE.logo} alt="First Chimney logo" className="h-16 md:h-20 w-auto object-contain drop-shadow-[0_0_14px_rgba(231,163,75,0.16)]" />
             </Link>
             <p className="text-warm-ivory/80 text-sm leading-relaxed max-w-xs">
               Premium chimney inspection, sweeping, repair, masonry, leak repair, and fireplace service across the Mid-Atlantic.
@@ -35,9 +35,9 @@ export default function Footer() {
               {SITE.displayDomain}
             </a>
             <div className="flex items-center gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-midnight border border-white/10 flex items-center justify-center text-warm-ivory/70 hover:text-copper-ember hover:border-copper-ember/50 transition-all"><Facebook className="w-4 h-4" /></a>
-              <a href="#" className="w-10 h-10 rounded-full bg-midnight border border-white/10 flex items-center justify-center text-warm-ivory/70 hover:text-copper-ember hover:border-copper-ember/50 transition-all"><Instagram className="w-4 h-4" /></a>
-              <a href="#" className="w-10 h-10 rounded-full bg-midnight border border-white/10 flex items-center justify-center text-warm-ivory/70 hover:text-copper-ember hover:border-copper-ember/50 transition-all"><Linkedin className="w-4 h-4" /></a>
+              <a href={SITE.social.facebook} target="_blank" rel="noreferrer" aria-label="First Chimney Facebook" className="w-10 h-10 rounded-full bg-midnight border border-white/10 flex items-center justify-center text-warm-ivory/70 hover:text-copper-ember hover:border-copper-ember/50 transition-all"><Facebook className="w-4 h-4" /></a>
+              <a href={SITE.social.instagram} target="_blank" rel="noreferrer" aria-label="First Chimney Instagram" className="w-10 h-10 rounded-full bg-midnight border border-white/10 flex items-center justify-center text-warm-ivory/70 hover:text-copper-ember hover:border-copper-ember/50 transition-all"><Instagram className="w-4 h-4" /></a>
+              <a href={SITE.social.linkedin} target="_blank" rel="noreferrer" aria-label="First Chimney LinkedIn" className="w-10 h-10 rounded-full bg-midnight border border-white/10 flex items-center justify-center text-warm-ivory/70 hover:text-copper-ember hover:border-copper-ember/50 transition-all"><Linkedin className="w-4 h-4" /></a>
             </div>
           </div>
 

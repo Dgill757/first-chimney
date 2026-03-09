@@ -51,32 +51,39 @@ export default function Contact() {
                     </button>
                   </motion.div>
                 ) : (
-                  <motion.form initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onSubmit={handleSubmit} className="space-y-6 relative z-10">
+                  <motion.form
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    onSubmit={handleSubmit}
+                    className="space-y-6 relative z-10"
+                    aria-label="Contact request form"
+                  >
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="firstName" className="block text-sm font-medium text-warm-ivory/85 mb-2">First Name *</label>
-                        <input type="text" id="firstName" required className="w-full bg-midnight border border-white/15 rounded-xl px-4 py-3 text-white" placeholder="John" />
+                        <input type="text" id="firstName" name="first_name" autoComplete="given-name" minLength={2} required className="w-full bg-midnight border border-white/15 rounded-xl px-4 py-3 text-white" placeholder="John" />
                       </div>
                       <div>
                         <label htmlFor="lastName" className="block text-sm font-medium text-warm-ivory/85 mb-2">Last Name *</label>
-                        <input type="text" id="lastName" required className="w-full bg-midnight border border-white/15 rounded-xl px-4 py-3 text-white" placeholder="Doe" />
+                        <input type="text" id="lastName" name="last_name" autoComplete="family-name" minLength={2} required className="w-full bg-midnight border border-white/15 rounded-xl px-4 py-3 text-white" placeholder="Doe" />
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="email" className="block text-sm font-medium text-warm-ivory/85 mb-2">Email Address *</label>
-                        <input type="email" id="email" required className="w-full bg-midnight border border-white/15 rounded-xl px-4 py-3 text-white" placeholder="name@email.com" />
+                        <input type="email" id="email" name="email" autoComplete="email" required className="w-full bg-midnight border border-white/15 rounded-xl px-4 py-3 text-white" placeholder="name@email.com" />
                       </div>
                       <div>
                         <label htmlFor="phone" className="block text-sm font-medium text-warm-ivory/85 mb-2">Phone Number *</label>
-                        <input type="tel" id="phone" required className="w-full bg-midnight border border-white/15 rounded-xl px-4 py-3 text-white" placeholder="757-589-0783" />
+                        <input type="tel" id="phone" name="phone" autoComplete="tel" inputMode="tel" pattern="^\\+?[0-9()\\-\\s]{10,}$" required className="w-full bg-midnight border border-white/15 rounded-xl px-4 py-3 text-white" placeholder="757-589-0783" />
                       </div>
                     </div>
 
                     <div>
                       <label htmlFor="service" className="block text-sm font-medium text-warm-ivory/85 mb-2">Service Needed</label>
-                      <select id="service" className="w-full bg-midnight border border-white/15 rounded-xl px-4 py-3 text-white appearance-none">
+                      <select id="service" name="service" className="w-full bg-midnight border border-white/15 rounded-xl px-4 py-3 text-white appearance-none">
                         <option value="">Select a service...</option>
                         <option value="inspection">Chimney Inspection</option>
                         <option value="sweeping">Chimney Sweeping</option>
@@ -89,7 +96,14 @@ export default function Contact() {
 
                     <div>
                       <label htmlFor="message" className="block text-sm font-medium text-warm-ivory/85 mb-2">How can we help? *</label>
-                      <textarea id="message" required rows={4} className="w-full bg-midnight border border-white/15 rounded-xl px-4 py-3 text-white resize-none" placeholder="Tell us what you are seeing..." />
+                      <textarea id="message" name="message" minLength={20} required rows={4} className="w-full bg-midnight border border-white/15 rounded-xl px-4 py-3 text-white resize-none" placeholder="Tell us what you are seeing..." />
+                    </div>
+
+                    <div className="flex items-start gap-3 bg-midnight/60 border border-white/10 rounded-xl p-3">
+                      <input id="consent" name="consent" type="checkbox" required className="mt-1 h-4 w-4 accent-copper-ember" />
+                      <label htmlFor="consent" className="text-sm text-warm-ivory/80">
+                        I agree to be contacted by First Chimney regarding this request.
+                      </label>
                     </div>
 
                     <button
@@ -99,11 +113,14 @@ export default function Contact() {
                     >
                       {formStatus === 'submitting' ? 'Sending...' : (
                         <>
-                          Send Message
+                          Request My Estimate
                           <Send className="w-5 h-5" />
                         </>
                       )}
                     </button>
+                    <p className="text-xs text-warm-ivory/55">
+                      Form is structured for webhook/CRM connection and currently shows an on-page success confirmation.
+                    </p>
                   </motion.form>
                 )}
               </AnimatePresence>

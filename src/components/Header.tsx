@@ -80,7 +80,7 @@ export default function Header() {
 
       <div className="px-4 lg:px-8 flex justify-between items-center mt-2 lg:mt-0 gap-6">
         <Link to="/" className="z-50 shrink-0">
-          <img src={SITE.logo} alt="First Chimney logo" className="h-12 lg:h-14 w-auto object-contain" />
+          <img src={SITE.logo} alt="First Chimney logo" className="h-14 lg:h-16 w-auto object-contain drop-shadow-[0_0_12px_rgba(231,163,75,0.18)]" />
         </Link>
 
         <nav className="hidden lg:flex items-center justify-center flex-1 gap-7 xl:gap-9">
@@ -129,7 +129,7 @@ export default function Header() {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 28, stiffness: 230 }}
-            className="fixed inset-0 bg-midnight/95 backdrop-blur-xl z-40 flex flex-col pt-24 px-6 lg:hidden"
+            className="fixed inset-0 bg-midnight/95 backdrop-blur-xl z-40 flex flex-col pt-24 px-6 lg:hidden overflow-y-auto"
           >
             <nav className="flex flex-col gap-5">
               {navLinks.map((link, i) => (

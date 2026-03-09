@@ -387,7 +387,7 @@ export default function Home() {
             {['Virginia', 'Maryland', 'Washington D.C.', 'West Virginia', 'Pennsylvania'].map((state) => (
               <Link
                 key={state}
-                to={`/service-areas/${state.toLowerCase().replace(/ /g, '-')}`}
+                to={`/service-areas/${state.toLowerCase().replace(/[.']/g, '').replace(/ /g, '-')}`}
                 className="bg-soft-black border border-white/10 px-6 py-3 rounded-full text-warm-ivory hover:border-copper-ember hover:text-white transition-colors"
               >
                 {state}
