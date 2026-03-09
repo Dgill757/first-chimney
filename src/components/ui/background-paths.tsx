@@ -12,20 +12,21 @@ function FloatingPaths({ position }: { position: number }) {
 
   return (
     <div className="absolute inset-0 pointer-events-none">
-      <svg className="w-full h-full text-copper-ember/30" viewBox="0 0 696 316" fill="none" aria-hidden="true">
+      <svg className="w-full h-full" viewBox="0 0 696 316" fill="none" aria-hidden="true">
         {paths.map((path) => (
           <motion.path
             key={path.id}
             d={path.d}
-            stroke="currentColor"
+            stroke={position > 0 ? 'rgba(231, 163, 75, 0.55)' : 'rgba(198, 106, 43, 0.42)'}
             strokeWidth={path.width}
-            strokeOpacity={0.08 + path.id * 0.02}
-            initial={{ pathLength: 0.2, opacity: 0.5 }}
-            animate={{ pathLength: 1, opacity: [0.2, 0.5, 0.2], pathOffset: [0, 1, 0] }}
-            transition={{ duration: 18 + Math.random() * 8, repeat: Number.POSITIVE_INFINITY, ease: 'linear' }}
+            strokeOpacity={0.18 + path.id * 0.018}
+            initial={{ pathLength: 0.2, opacity: 0.42 }}
+            animate={{ pathLength: 1, opacity: [0.28, 0.7, 0.28], pathOffset: [0, 1, 0] }}
+            transition={{ duration: 17 + Math.random() * 7, repeat: Number.POSITIVE_INFINITY, ease: 'linear' }}
           />
         ))}
       </svg>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_60%,rgba(198,106,43,0.18),transparent_55%),radial-gradient(circle_at_78%_38%,rgba(166,58,43,0.14),transparent_55%)]" />
     </div>
   );
 }
@@ -50,7 +51,7 @@ export function BackgroundPaths({
 
       <div className="relative z-10 container mx-auto px-4 md:px-6 text-center">
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.9 }} className="max-w-4xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight text-white">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight text-white px-2">
             {words.map((word, wordIndex) => (
               <span key={wordIndex} className="inline-block mr-3 last:mr-0">
                 {word.split('').map((letter, letterIndex) => (
@@ -73,7 +74,7 @@ export function BackgroundPaths({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25, duration: 0.6 }}
-              className="text-xl text-warm-ivory/90 mb-10 max-w-2xl mx-auto"
+              className="text-lg md:text-xl text-warm-ivory/90 mb-10 max-w-2xl mx-auto px-2"
             >
               {description}
             </motion.p>

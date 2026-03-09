@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { Camera, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { WavePath } from '../components/ui/wave-path';
@@ -22,7 +22,7 @@ export default function Gallery() {
   ];
 
   return (
-    <div className="pt-24 pb-16">
+    <div className="pt-24 md:pt-28 pb-14 md:pb-16">
       <SEO
         title="Project Gallery"
         description="View First Chimney project photos including inspections, sweeping, leak repairs, masonry restoration, and before/after results."

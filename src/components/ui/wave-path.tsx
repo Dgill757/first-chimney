@@ -1,83 +1,101 @@
-'use client';
-import React from 'react';
+﻿'use client';
+
+import React, { useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
-import { useRef, useEffect } from 'react';
 
-type WWavePathProps = React.ComponentProps<'div'>;
+type WavePathProps = React.ComponentProps<'div'>;
 
-export function WavePath({ className, ...props }: WWavePathProps) {
-	const path = useRef<SVGPathElement>(null);
-	let progress = 0;
-	let x = 0.2;
-	let time = Math.PI / 2;
-	let reqId: number | null = null;
+export function WavePath({ className, ...props }: WavePathProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const pathRef = useRef<SVGPathElement>(null);
+  const progressRef = useRef(0);
+  const controlXRef = useRef(0.5);
+  const reqIdRef = useRef<number | null>(null);
+  const timeRef = useRef(Math.PI / 2);
 
-	useEffect(() => {
-		setPath(progress);
-	}, []);
+  const setPath = (progress: number, controlX: number) => {
+    if (!pathRef.current || !containerRef.current) return;
 
-	const setPath = (progress: number) => {
-		const width = window.innerWidth * 0.7;
-		if (path.current) {
-			path.current.setAttributeNS(
-				null,
-				'd',
-				`M0 100 Q${width * x} ${100 + progress * 0.6}, ${width} 100`,
-			);
-		}
-	};
+    const width = containerRef.current.offsetWidth;
+    const centerY = 100;
+    const pull = progress * 0.52;
+    const swing = (controlX - 0.5) * 30;
 
-	const lerp = (x: number, y: number, a: number) => x * (1 - a) + y * a;
+    pathRef.current.setAttributeNS(
+      null,
+      'd',
+      `M0 ${centerY} C${width * 0.24} ${centerY + pull - swing * 0.2}, ${width * 0.76} ${centerY + pull + swing * 0.2}, ${width} ${centerY}`,
+    );
+  };
 
-	const manageMouseEnter = () => {
-		if (reqId) {
-			cancelAnimationFrame(reqId);
-			resetAnimation();
-		}
-	};
+  const lerp = (x: number, y: number, a: number) => x * (1 - a) + y * a;
 
-	const manageMouseMove = (e: React.MouseEvent) => {
-		const { movementY, clientX } = e;
-		if (path.current) {
-			const pathBound = path.current.getBoundingClientRect();
-			x = (clientX - pathBound.left) / pathBound.width;
-			progress += movementY;
-			setPath(progress);
-		}
-	};
+  const resetAnimation = () => {
+    timeRef.current = Math.PI / 2;
+    progressRef.current = 0;
+  };
 
-	const manageMouseLeave = () => {
-		animateOut();
-	};
+  const animateOut = () => {
+    const newProgress = progressRef.current * Math.sin(timeRef.current);
+    progressRef.current = lerp(progressRef.current, 0, 0.07);
+    timeRef.current += 0.18;
+    setPath(newProgress, controlXRef.current);
 
-	const animateOut = () => {
-		const newProgress = progress * Math.sin(time);
-		progress = lerp(progress, 0, 0.025);
-		time += 0.2;
-		setPath(newProgress);
-		if (Math.abs(progress) > 0.75) {
-			reqId = requestAnimationFrame(animateOut);
-		} else {
-			resetAnimation();
-		}
-	};
+    if (Math.abs(progressRef.current) > 0.45) {
+      reqIdRef.current = requestAnimationFrame(animateOut);
+    } else {
+      setPath(0, controlXRef.current);
+      resetAnimation();
+    }
+  };
 
-	const resetAnimation = () => {
-		time = Math.PI / 2;
-		progress = 0;
-	};
+  useEffect(() => {
+    setPath(0, 0.5);
 
-	return (
-		<div className={cn('relative h-px w-[70vw]', className)} {...props}>
-			<div
-				onMouseEnter={manageMouseEnter}
-				onMouseMove={manageMouseMove}
-				onMouseLeave={manageMouseLeave}
-				className="relative -top-5 z-10 h-10 w-full hover:-top-[150px] hover:h-[300px]"
-			/>
-			<svg className="absolute -top-[100px] h-[300px] w-full">
-				<path ref={path} className="fill-none stroke-current" strokeWidth={2} />
-			</svg>
-		</div>
-	);
+    const handleResize = () => setPath(progressRef.current, controlXRef.current);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      if (reqIdRef.current) cancelAnimationFrame(reqIdRef.current);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const manageMouseEnter = () => {
+    if (reqIdRef.current) {
+      cancelAnimationFrame(reqIdRef.current);
+      reqIdRef.current = null;
+    }
+    resetAnimation();
+  };
+
+  const manageMouseMove = (e: React.MouseEvent) => {
+    if (!pathRef.current) return;
+
+    const { movementY, clientX } = e;
+    const pathBound = pathRef.current.getBoundingClientRect();
+
+    controlXRef.current = Math.min(0.85, Math.max(0.15, (clientX - pathBound.left) / pathBound.width));
+    progressRef.current = Math.min(72, Math.max(-72, progressRef.current + movementY));
+
+    setPath(progressRef.current, controlXRef.current);
+  };
+
+  const manageMouseLeave = () => {
+    animateOut();
+  };
+
+  return (
+    <div ref={containerRef} className={cn('relative h-px w-[70vw] max-w-[900px]', className)} {...props}>
+      <div
+        onMouseEnter={manageMouseEnter}
+        onMouseMove={manageMouseMove}
+        onMouseLeave={manageMouseLeave}
+        className="relative -top-5 z-10 h-10 w-full md:hover:-top-[120px] md:hover:h-[240px]"
+      />
+      <svg className="absolute -top-[100px] h-[240px] w-full">
+        <path ref={pathRef} className="fill-none stroke-current" strokeWidth={2.1} strokeLinecap="round" />
+      </svg>
+    </div>
+  );
 }

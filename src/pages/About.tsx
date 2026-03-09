@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import { Shield, CheckCircle, ArrowRight, Users, Award } from 'lucide-react';
 import { WavePath } from '../components/ui/wave-path';
 import { BackgroundPaths } from '../components/ui/background-paths';
@@ -7,7 +7,7 @@ import { IMAGE_ASSETS } from '@/lib/site';
 
 export default function About() {
   return (
-    <div className="pt-24 pb-16">
+    <div className="pt-24 md:pt-28 pb-14 md:pb-16">
       <SEO
         title="About First Chimney"
         description="Learn how First Chimney combines diagnostic transparency, safety-first service, and expert craftsmanship for homeowners across the Mid-Atlantic."

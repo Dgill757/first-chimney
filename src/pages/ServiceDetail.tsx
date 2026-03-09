@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+﻿import { useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Camera, Shield, Wrench, CheckCircle, Star, FileText, ArrowRight, Phone, CircleDashed, Droplets } from 'lucide-react';
 import { WavePath } from '../components/ui/wave-path';
@@ -130,7 +130,7 @@ export default function ServiceDetail() {
   );
 
   return (
-    <div className="pt-24 pb-16">
+    <div className="pt-24 md:pt-28 pb-14 md:pb-16">
       <SEO
         title={service.title}
         description={service.desc}

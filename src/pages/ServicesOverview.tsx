@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import { Camera, Shield, Wrench, CheckCircle, Star, FileText, ArrowRight, CircleDashed, Droplets } from 'lucide-react';
 import { WavePath } from '../components/ui/wave-path';
 import { BackgroundPaths } from '../components/ui/background-paths';
@@ -66,7 +66,7 @@ export default function ServicesOverview() {
   ];
 
   return (
-    <div className="pt-24 pb-16">
+    <div className="pt-24 md:pt-28 pb-14 md:pb-16">
       <SEO
         title="Chimney Services"
         description="Explore First Chimney services including inspections, sweeping, leak repair, masonry rebuilds, cap installation, and fireplace restoration."

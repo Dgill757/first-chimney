@@ -6,7 +6,7 @@ export const SITE = {
   phoneHref: 'tel:+17575890783',
   serviceRegions: 'VA, MD, DC, WV, & PA',
   email: 'info@firstchimneycontracting.com',
-  logo: '/images/logos/first-chimney-logo.png',
+  logo: '/images/logos/logo-white.png',
   ogImage: '/images/hero-images/hayden-scott-lyTgIeUBOUE-unsplash-768x513.jpg',
 };
 
@@ -26,6 +26,7 @@ export const IMAGE_ASSETS = {
   beforeAfter3: '/images/before-after-images/Before.webp',
   rebuild: '/images/before-after-images/1000s.jpg',
   fireplace: '/images/hero-images/7360968-640w.webp',
+  heroVideo: '/images/videos/970176-hd_1920_1080_24fps.mp4',
 };
 
 export const SERVICES = [

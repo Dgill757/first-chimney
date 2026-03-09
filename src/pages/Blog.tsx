@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import { Calendar, User } from 'lucide-react';
 import SEO from '@/components/SEO';
 import { IMAGE_ASSETS } from '@/lib/site';
@@ -35,7 +35,7 @@ export default function Blog() {
   ];
 
   return (
-    <div className="pt-24 pb-16">
+    <div className="pt-24 md:pt-28 pb-14 md:pb-16">
       <SEO
         title="Chimney Safety Blog"
         description="Read First Chimney blog articles on chimney maintenance, creosote risks, inspections, and homeowner safety tips."

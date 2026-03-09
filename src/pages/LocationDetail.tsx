@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+﻿import { useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { MapPin, Shield, CheckCircle, ArrowRight, Phone, Camera, Wrench, Droplets } from 'lucide-react';
 import { WavePath } from '../components/ui/wave-path';
@@ -14,7 +14,7 @@ export default function LocationDetail() {
   );
 
   return (
-    <div className="pt-24 pb-16">
+    <div className="pt-24 md:pt-28 pb-14 md:pb-16">
       <SEO
         title={`Chimney Services in ${locationName}`}
         description={`First Chimney provides inspections, sweeping, leak repair, masonry restoration, and fireplace service in ${locationName} and surrounding communities.`}

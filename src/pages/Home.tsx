@@ -1,6 +1,6 @@
-import { useMemo } from 'react';
+﻿import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'motion/react';
+import { motion, useReducedMotion } from 'motion/react';
 import {
   Shield,
   CheckCircle,
@@ -16,6 +16,8 @@ import {
   CircleDashed,
   Flame,
   BrickWall,
+  BadgeCheck,
+  Star,
 } from 'lucide-react';
 import { WavePath } from '../components/ui/wave-path';
 import { BackgroundPaths } from '../components/ui/background-paths';
@@ -23,6 +25,8 @@ import SEO from '@/components/SEO';
 import { IMAGE_ASSETS, SITE } from '@/lib/site';
 
 export default function Home() {
+  const reduceMotion = useReducedMotion();
+
   const emberParticles = useMemo(
     () =>
       Array.from({ length: 14 }, (_, i) => ({
@@ -135,16 +139,25 @@ export default function Home() {
       />
 
       <section className="relative h-screen min-h-[640px] flex items-center justify-center overflow-hidden">
-        <motion.div
-          aria-hidden="true"
-          initial={{ scale: 1.05 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 14, ease: 'linear' }}
-          className="absolute inset-0 z-0"
-        >
-          <img src={IMAGE_ASSETS.hero} alt="First Chimney team servicing residential chimney" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-b from-midnight/85 via-midnight/70 to-midnight" />
-        </motion.div>
+        <div aria-hidden="true" className="absolute inset-0 z-0">
+          {!reduceMotion ? (
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              poster={IMAGE_ASSETS.hero}
+              className="w-full h-full object-cover scale-[1.04]"
+            >
+              <source src={IMAGE_ASSETS.heroVideo} type="video/mp4" />
+            </video>
+          ) : (
+            <img src={IMAGE_ASSETS.hero} alt="" className="w-full h-full object-cover scale-[1.04]" />
+          )}
+          <div className="absolute inset-0 bg-gradient-to-b from-midnight/86 via-midnight/72 to-midnight" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(198,106,43,0.14),transparent_52%)]" />
+        </div>
 
         <div className="absolute inset-0 pointer-events-none">
           {emberParticles.map((p) => (
@@ -220,7 +233,7 @@ export default function Home() {
             </motion.div>
 
             <div className="flex justify-center w-full mt-8">
-              <WavePath className="text-copper-ember/35" />
+              <WavePath className="text-copper-ember/30" />
             </div>
           </div>
         </div>
@@ -229,10 +242,23 @@ export default function Home() {
       <section className="bg-soft-black border-y border-white/5 py-8">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center">
-            {['CSIA Certified', 'NFI Ready', '5-State Coverage', '5-Star Client Focus'].map((item) => (
-              <div key={item} className="bg-midnight/60 border border-white/10 rounded-xl py-4 px-3 text-sm md:text-base font-semibold text-warm-ivory/90">
-                {item}
-              </div>
+            {[
+              { label: 'CSIA Certified', icon: BadgeCheck },
+              { label: 'NFI Ready', icon: Shield },
+              { label: '5-State Coverage', icon: MapPin },
+              { label: '5-Star Client Focus', icon: Star },
+            ].map((item, i) => (
+              <motion.div
+                key={item.label}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.38, delay: i * 0.06 }}
+                className="trust-badge bg-midnight/60 border border-white/10 rounded-xl py-4 px-3 text-sm md:text-base font-semibold text-warm-ivory/90 flex flex-col items-center gap-2"
+              >
+                <item.icon className="w-5 h-5 text-copper-ember" />
+                <span>{item.label}</span>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -330,7 +356,7 @@ export default function Home() {
         <div className="container mx-auto px-6 lg:px-12">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-sm font-bold tracking-widest text-copper-ember uppercase mb-4">Smart Diagnostic Tool</h2>
-            <h3 className="text-4xl md:text-5xl font-display font-bold mb-6 text-white">Know What�s Wrong Before You Spend Big</h3>
+            <h3 className="text-4xl md:text-5xl font-display font-bold mb-6 text-white">Know What’s Wrong Before You Spend Big</h3>
             <p className="text-warm-ivory/85 text-lg">Click the issue you are seeing at home and go straight to the service page that solves it.</p>
           </div>
 

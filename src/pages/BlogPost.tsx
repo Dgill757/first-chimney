@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom';
+﻿import { useParams, Link } from 'react-router-dom';
 import { Calendar, User, ArrowLeft } from 'lucide-react';
 import SEO from '@/components/SEO';
 import { IMAGE_ASSETS, SITE } from '@/lib/site';
@@ -34,7 +34,7 @@ export default function BlogPost() {
   };
 
   return (
-    <div className="pt-24 pb-16">
+    <div className="pt-24 md:pt-28 pb-14 md:pb-16">
       <SEO title={post.title} description={post.intro} path={`/blog/${postId || ''}`} image={IMAGE_ASSETS.inspectionAlt} />
 
       <section className="relative py-24 bg-soft-black border-b border-white/5 overflow-hidden">

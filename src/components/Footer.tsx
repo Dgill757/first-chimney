@@ -21,9 +21,8 @@ export default function Footer() {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
-            <Link to="/" className="flex items-center gap-3">
-              <img src={SITE.logo} alt="First Chimney logo" className="h-12 w-auto object-contain" />
-              <span className="font-display font-bold text-xl tracking-tight text-white">First Chimney</span>
+            <Link to="/" className="inline-flex items-center">
+              <img src={SITE.logo} alt="First Chimney logo" className="h-14 w-auto object-contain" />
             </Link>
             <p className="text-warm-ivory/80 text-sm leading-relaxed max-w-xs">
               Premium chimney inspection, sweeping, repair, masonry, leak repair, and fireplace service across the Mid-Atlantic.

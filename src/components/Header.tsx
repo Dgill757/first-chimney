@@ -43,8 +43,8 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         isScrolled
-          ? 'bg-midnight/95 backdrop-blur-xl shadow-[0_12px_40px_rgba(0,0,0,0.45)] py-2'
-          : 'bg-gradient-to-b from-midnight/90 via-midnight/55 to-transparent py-4'
+          ? 'bg-midnight/95 backdrop-blur-xl shadow-[0_12px_40px_rgba(0,0,0,0.45)] py-2.5'
+          : 'bg-gradient-to-b from-midnight/90 via-midnight/55 to-transparent py-4.5'
       }`}
     >
       <div
@@ -78,21 +78,17 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="px-4 lg:px-8 flex justify-between items-center mt-2 lg:mt-0">
-        <Link to="/" className="flex items-center gap-3 z-50">
-          <img src={SITE.logo} alt="First Chimney logo" className="h-11 w-auto object-contain" />
-          <div>
-            <p className="font-display font-bold text-xl tracking-tight text-white">First Chimney</p>
-            <p className="hidden md:block text-[11px] tracking-[0.16em] uppercase text-warm-ivory/75">Safety First. Craft Built.</p>
-          </div>
+      <div className="px-4 lg:px-8 flex justify-between items-center mt-2 lg:mt-0 gap-6">
+        <Link to="/" className="z-50 shrink-0">
+          <img src={SITE.logo} alt="First Chimney logo" className="h-12 lg:h-14 w-auto object-contain" />
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-7">
+        <nav className="hidden lg:flex items-center justify-center flex-1 gap-7 xl:gap-9">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               to={link.path}
-              className={`text-sm font-semibold transition-colors group ${
+              className={`text-sm xl:text-[15px] font-semibold tracking-[0.01em] transition-colors group ${
                 isActivePath(link.path) ? 'text-copper-ember' : 'text-warm-ivory hover:text-white'
               }`}
             >
@@ -100,6 +96,22 @@ export default function Header() {
             </Link>
           ))}
         </nav>
+
+        <div className="hidden 2xl:flex items-center gap-4 shrink-0">
+          <a
+            href={SITE.phoneHref}
+            className="flex items-center justify-center gap-2 bg-white/6 border border-white/15 text-white px-4 py-2.5 rounded-full font-semibold text-sm hover:border-copper-ember/60 hover:text-copper-ember"
+          >
+            <Phone className="w-4 h-4" />
+            {SITE.phoneDisplay}
+          </a>
+          <Link
+            to="/contact"
+            className="bg-copper-ember text-white px-5 py-2.5 rounded-full font-semibold text-sm hover:bg-fire-gold shadow-[0_0_18px_rgba(198,106,43,0.32)] hover:shadow-[0_0_24px_rgba(231,163,75,0.52)]"
+          >
+            Request Estimate
+          </Link>
+        </div>
 
         <button
           aria-label="Toggle menu"

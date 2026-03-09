@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import { CreditCard, CheckCircle, ArrowRight, Shield } from 'lucide-react';
 import { WavePath } from '../components/ui/wave-path';
 import { BackgroundPaths } from '../components/ui/background-paths';
@@ -6,7 +6,7 @@ import SEO from '@/components/SEO';
 
 export default function Financing() {
   return (
-    <div className="pt-24 pb-16">
+    <div className="pt-24 md:pt-28 pb-14 md:pb-16">
       <SEO
         title="Financing Options"
         description="Explore flexible financing options for chimney repairs and rebuilds so critical safety work is never delayed."

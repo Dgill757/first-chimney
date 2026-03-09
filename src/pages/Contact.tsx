@@ -1,4 +1,4 @@
-import { useState, FormEvent } from 'react';
+﻿import { useState, FormEvent } from 'react';
 import { Phone, Mail, MapPin, Send, CheckCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { BackgroundPaths } from '../components/ui/background-paths';
@@ -17,7 +17,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="pt-24 pb-16">
+    <div className="pt-24 md:pt-28 pb-14 md:pb-16">
       <SEO
         title="Contact First Chimney"
         description="Request chimney inspection, sweeping, repair, or leak diagnostics from First Chimney. Call 757-589-0783 or send a message online."

@@ -1,4 +1,4 @@
-import { Star, Quote, ArrowRight } from 'lucide-react';
+﻿import { Star, Quote, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { WavePath } from '../components/ui/wave-path';
 import { BackgroundPaths } from '../components/ui/background-paths';
@@ -15,7 +15,7 @@ export default function Reviews() {
   ];
 
   return (
-    <div className="pt-24 pb-16">
+    <div className="pt-24 md:pt-28 pb-14 md:pb-16">
       <SEO
         title="Customer Reviews"
         description="See what homeowners across VA, MD, DC, WV, and PA are saying about First Chimney's premium service and craftsmanship."

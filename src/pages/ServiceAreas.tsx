@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import { MapPin, ArrowRight } from 'lucide-react';
 import { WavePath } from '../components/ui/wave-path';
 import { BackgroundPaths } from '../components/ui/background-paths';
@@ -29,7 +29,7 @@ export default function ServiceAreas() {
   ];
 
   return (
-    <div className="pt-24 pb-16">
+    <div className="pt-24 md:pt-28 pb-14 md:pb-16">
       <SEO
         title="Service Areas"
         description="First Chimney serves homeowners across Virginia, Maryland, Washington DC, West Virginia, and Pennsylvania with premium chimney and fireplace services."
