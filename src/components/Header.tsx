@@ -18,7 +18,7 @@ const SERVICES_GROUP: Group = {
 const FIREPLACE_GROUP: Group = {
   label: 'Fireplaces',
   items: [
-    { label: 'Build Your Fireplace', to: '/design-your-fireplace', note: 'Build a look and preview it live.' },
+    { label: 'Build Your Fireplace', to: '/build-your-fireplace', note: 'Pick a real model, customize it, get a PDF.' },
     { label: 'Fireplace Shop', to: '/fireplace-shop', note: 'Inserts, gas, electric, mantels and caps.' },
     { label: 'Fireplace Repair', to: '/services/fireplace-repair', note: 'Smoke, damper and firebox problems.' },
   ],

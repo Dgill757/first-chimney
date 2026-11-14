@@ -90,7 +90,7 @@ export function TextLink({ placement, className = 'btn btn-ghost', children }: {
 }
 
 /** The glowing "Build Your Fireplace" call to action used across the site. */
-export function FireButton({ placement, size = 'md', label = 'Build Your Fireplace', className = '', onClick, to = '/design-your-fireplace' }: { placement: string; size?: 'md' | 'lg'; label?: string; className?: string; onClick?: () => void; to?: string }) {
+export function FireButton({ placement, size = 'md', label = 'Build Your Fireplace', className = '', onClick, to = '/build-your-fireplace' }: { placement: string; size?: 'md' | 'lg'; label?: string; className?: string; onClick?: () => void; to?: string }) {
   return (
     <Link
       to={to}

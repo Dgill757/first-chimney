@@ -10,7 +10,6 @@
  */
 import { ARTICLES } from '../data/blog';
 import { GENERAL_FAQS } from '../data/content';
-import { PRODUCTS, SHOP_CATEGORIES } from '../data/shop';
 import { SERVICE_AREAS, publishedCities } from '../data/serviceAreas';
 import { SERVICES } from '../data/services';
 import { SOURCES } from '../data/sources';
@@ -99,7 +98,7 @@ function promoOfferLd() {
   };
 }
 
-export function buildRoutes(): RouteMeta[] {
+export function buildRoutes(extra: RouteMeta[] = []): RouteMeta[] {
   const routes: RouteMeta[] = [];
   const add = (r: Omit<RouteMeta, 'jsonLd' | 'priority' | 'changefreq'> & Partial<Pick<RouteMeta, 'jsonLd' | 'priority' | 'changefreq'>>) =>
     routes.push({ priority: 0.6, changefreq: 'monthly', ...r, jsonLd: [...(r.jsonLd ?? []), ...(r.crumbs.length > 1 ? [breadcrumbLd(r.crumbs)] : [])] });
@@ -120,7 +119,7 @@ export function buildRoutes(): RouteMeta[] {
       promoIsLive() ? `Holiday special: ${HOLIDAY_PROMO.title} for ${HOLIDAY_PROMO.priceLabel}.` : '',
       `Call or text ${SITE.phoneDisplay}.`,
     ].filter(Boolean),
-    links: [{ label: 'Holiday $199 special', path: HOLIDAY_PROMO.path }, ...serviceLinks, ...stateLinks, { label: 'Build your fireplace', path: '/design-your-fireplace' }, { label: 'Contact', path: '/contact' }],
+    links: [{ label: 'Holiday $199 special', path: HOLIDAY_PROMO.path }, ...serviceLinks, ...stateLinks, { label: 'Build your fireplace', path: '/build-your-fireplace' }, { label: 'Contact', path: '/contact' }],
     crumbs: [HOME],
     jsonLd: [
       businessJsonLd(),
@@ -243,64 +242,34 @@ export function buildRoutes(): RouteMeta[] {
   }
 
   add({
-    path: '/design-your-fireplace',
-    title: 'Build Your Fireplace',
-    description: 'Explore fireplace styles, brick and stone surrounds, mantels, hearths and fire types, preview your design live, then send it to First Chimney for a consultation.',
+    path: '/build-your-fireplace',
+    title: 'Build Your Fireplace: Gas, Wood, Electric Fireplaces & Inserts',
+    description: `Build your fireplace online with real models from Fireplace Xtrordinair, Lopi, Valor, Kozy Heat, Enviro, Modern Flames and SimpliFire. Customize fronts and finishes, check heat and fit, and get a branded PDF from First Chimney.`,
     image: '/og/og-designer.jpg',
     h1: 'Build your fireplace',
     summary: [
-      'An interactive tool to explore fireplace styles (traditional, transitional, modern linear, farmhouse), surround materials (brick, stone, limewash, tile, marble), mantels, hearths and fire types (wood, wood insert, gas logs, linear gas, electric).',
-      'Your design is a visual starting point, not a quote or a code review. First Chimney confirms what is possible for your home during a consultation.',
+      'Tell us what it goes into (a new wall, an existing fireplace or the middle of the room), what it burns (gas, wood, pellet or electric) and how much space you heat. Then pick a real model, customize its fronts, liners, media and finishes, and see it previewed.',
+      'The builder estimates the heat your room needs and checks whether an insert fits your opening, using the published manufacturer dimensions.',
+      'Send your build to First Chimney and download a branded PDF. Pricing is confirmed in writing after an on-site measure.',
     ],
     links: [{ label: 'Fireplace shop', path: '/fireplace-shop' }, { label: 'Fireplace repair', path: '/services/fireplace-repair' }],
-    crumbs: [HOME, { name: 'Build Your Fireplace', path: '/design-your-fireplace' }],
-    priority: 0.8,
+    crumbs: [HOME, { name: 'Build Your Fireplace', path: '/build-your-fireplace' }],
+    priority: 0.85,
   });
 
   add({
     path: '/fireplace-shop',
-    title: 'Fireplace Shop: Inserts, Gas, Electric, Mantels & Caps',
-    description: 'Browse fireplace inserts, gas and electric fireplaces, mantels, doors and chimney caps. Request pricing and a consultation from First Chimney.',
+    title: 'Fireplace Shop: Gas, Wood & Electric Fireplaces, Inserts and Stoves',
+    description: `Shop gas, wood, pellet and electric fireplaces, inserts and stoves from leading manufacturers. Request a quote and installation from First Chimney in ${STATE_LIST_TEXT}.`,
     image: '/og/og-designer.jpg',
     h1: 'Fireplace shop',
     summary: [
-      'Explore fireplace products by type and add them to a quote request. Availability, brands and pricing are confirmed with First Chimney during your consultation. There is no online checkout.',
-      ...SHOP_CATEGORIES.map((c) => `${c.name}: ${c.blurb}`),
+      'Browse fireplaces, inserts and stoves from Fireplace Xtrordinair, Lopi, Valor, Kozy Heat, Enviro, Modern Flames and SimpliFire. Save models to a quote request; First Chimney confirms fit, venting and pricing after measuring.',
     ],
-    links: SHOP_CATEGORIES.map((c) => ({ label: c.name, path: `/fireplace-shop/${c.id}` })),
+    links: [{ label: 'Build your fireplace', path: '/build-your-fireplace' }],
     crumbs: [HOME, { name: 'Fireplace Shop', path: '/fireplace-shop' }],
-    priority: 0.7,
+    priority: 0.75,
   });
-
-  for (const c of SHOP_CATEGORIES) {
-    const path = `/fireplace-shop/${c.id}`;
-    const items = PRODUCTS.filter((p) => p.category === c.id);
-    add({
-      path,
-      title: `${c.name} | Fireplace Shop`,
-      description: `${c.blurb} Request pricing and installation from First Chimney Contracting.`,
-      image: '/og/og-designer.jpg',
-      h1: c.name,
-      summary: [c.blurb, ...items.map((p) => `${p.name}: ${p.summary}`)],
-      links: items.map((p) => ({ label: p.name, path: `${path}/${p.id}` })),
-      crumbs: [HOME, { name: 'Fireplace Shop', path: '/fireplace-shop' }, { name: c.name, path }],
-      priority: 0.6,
-    });
-    for (const p of items) {
-      const ppath = `${path}/${p.id}`;
-      add({
-        path: ppath,
-        title: `${p.name} | ${c.name}`,
-        description: `${p.summary} Request pricing and installation from First Chimney.`,
-        image: '/og/og-designer.jpg',
-        h1: p.name,
-        summary: [p.summary, `Best for: ${p.bestFor}`, `Features: ${p.features.join('; ')}.`, `Good to know: ${p.considerations.join('; ')}.`],
-        links: [{ label: c.name, path }, { label: 'Request a quote', path: '/fireplace-shop/quote' }],
-        crumbs: [HOME, { name: 'Fireplace Shop', path: '/fireplace-shop' }, { name: c.name, path }, { name: p.name, path: ppath }],
-        priority: 0.5,
-      });
-    }
-  }
 
   add({
     path: '/fireplace-shop/quote',
@@ -439,6 +408,7 @@ export function buildRoutes(): RouteMeta[] {
     changefreq: 'yearly',
   });
 
+  routes.push(...extra);
   return routes;
 }
 

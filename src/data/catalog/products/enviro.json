@@ -1,0 +1,5826 @@
+[
+ {
+  "id": "en-c34-gas-fireplace",
+  "slug": "c34-gas-fireplace",
+  "brandId": "enviro",
+  "name": "C34",
+  "sku": "C34",
+  "fuel": "gas",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "A gas linear fireplace. Rated to heat about 1,100 square feet. 30,000 BTU maximum input.",
+  "makerDescription": "Linear design for a striking effect. Customizable with choice of liner and burner media kits. Clear View Safety Screen included.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "1,100 ft²"
+   },
+   {
+    "label": "Max Input BTU (NG)",
+    "value": "30,000"
+   },
+   {
+    "label": "Min Output BTU",
+    "value": "15,000"
+   },
+   {
+    "label": "P4 Efficiency",
+    "value": "64.6%"
+   },
+   {
+    "label": "Visible Glass Area",
+    "value": "32\" W x 11 3/8\" H"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "Optional Dual Fan Kit"
+   },
+   {
+    "label": "Unit Dims",
+    "value": "39\" W x 31\" H x 18\" D"
+   },
+   {
+    "label": "Install Dims",
+    "value": "45\" W x 65\" H x 20\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 1100,
+   "btuMax": 30000,
+   "btuMin": 15000,
+   "efficiency": "64.6%"
+  },
+  "dimensions": {
+   "text": "39\" W x 31\" H x 18\" D",
+   "width": 39,
+   "height": 31,
+   "depth": 18
+  },
+  "options": [
+   {
+    "id": "surrounds",
+    "label": "Surrounds",
+    "area": "exterior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "borderview-surround",
+      "name": "Borderview Surround",
+      "detail": "Powder Coated Grey, 40 3/4\" W x 21 7/16\" H"
+     },
+     {
+      "id": "slim-surround",
+      "name": "Slim Surround",
+      "detail": "39 3/8\" W x 20\" H"
+     }
+    ]
+   },
+   {
+    "id": "firebox-liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "black-enameled",
+      "name": "Black Enameled"
+     },
+     {
+      "id": "fluted",
+      "name": "Fluted"
+     },
+     {
+      "id": "ledgestone",
+      "name": "Ledgestone"
+     },
+     {
+      "id": "steel-included",
+      "name": "Steel (Included)"
+     }
+    ]
+   },
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "black-glass-media",
+      "name": "Black Glass Media"
+     },
+     {
+      "id": "bezel-base-w-vermiculite",
+      "name": "Bezel Base w/ Vermiculite"
+     },
+     {
+      "id": "halogen-light-kit-w-clear-glass-media-and-perforated-burner-tray",
+      "name": "Halogen Light Kit w/Clear Glass Media & Perforated Burner Tray"
+     },
+     {
+      "id": "ultra-high-definition-driftwood-log-set",
+      "name": "Ultra High Definition Driftwood Log Set"
+     },
+     {
+      "id": "river-rock-set-w-twigs",
+      "name": "River Rock Set w/Twigs"
+     },
+     {
+      "id": "optional-cool-surface-system",
+      "name": "Optional Cool Surface System"
+     },
+     {
+      "id": "front-vent-or-side-vent",
+      "name": "Front Vent or Side Vent"
+     },
+     {
+      "id": "optional-dual-fan-kit-220-cfm-combined",
+      "name": "Optional Dual Fan Kit (220 CFM Combined)"
+     },
+     {
+      "id": "flex-vent-adapter-collars",
+      "name": "Flex Vent Adapter Collars"
+     },
+     {
+      "id": "horizontal-power-vent-kit-10-110ft",
+      "name": "Horizontal Power Vent Kit (10-110ft)"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/c34-1.webp",
+    "alt": "C34 fireplace",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/c34-2.webp",
+     "alt": "C34 fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/c34-3.webp",
+     "alt": "C34 fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/c34-4.webp",
+     "alt": "C34 fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/c34-5.webp",
+     "alt": "C34 fireplace",
+     "width": 620,
+     "height": 365
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=C34",
+  "enabled": true
+ },
+ {
+  "id": "en-c44-gas-fireplace",
+  "slug": "c44-gas-fireplace",
+  "brandId": "enviro",
+  "name": "C44",
+  "sku": "C44",
+  "fuel": "gas",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "A gas linear fireplace. Rated to heat about 1,300 square feet. 38,000 BTU maximum input.",
+  "makerDescription": "Linear design for a striking effect. Customizable with choice of liner and burner media kits. Clear View Safety Screen included.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "1,300 ft²"
+   },
+   {
+    "label": "Max Input BTU (NG)",
+    "value": "38,000"
+   },
+   {
+    "label": "Min Output BTU",
+    "value": "19,000"
+   },
+   {
+    "label": "P4 Efficiency",
+    "value": "64.5%"
+   },
+   {
+    "label": "Visible Glass Area",
+    "value": "42\" W x 11 3/8\" H"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "Optional Dual Fan Kit"
+   },
+   {
+    "label": "Unit Dims",
+    "value": "46\" W x 16\" H x 18\" D"
+   },
+   {
+    "label": "Install Dims",
+    "value": "55\" W x 65\" H x 20\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 1300,
+   "btuMax": 38000,
+   "btuMin": 19000,
+   "efficiency": "64.5%"
+  },
+  "dimensions": {
+   "text": "46\" W x 16\" H x 18\" D",
+   "width": 46,
+   "height": 16,
+   "depth": 18
+  },
+  "options": [
+   {
+    "id": "surrounds",
+    "label": "Surrounds",
+    "area": "exterior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "borderview-surround",
+      "name": "Borderview Surround",
+      "detail": "Powder Coated Grey, 50 3/4\" W x 21\" H"
+     },
+     {
+      "id": "slim-surround",
+      "name": "Slim Surround",
+      "detail": "49 3/8\" W x 19 1/2\" H"
+     }
+    ]
+   },
+   {
+    "id": "firebox-liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "black-enameled",
+      "name": "Black Enameled"
+     },
+     {
+      "id": "fluted",
+      "name": "Fluted"
+     },
+     {
+      "id": "ledgestone",
+      "name": "Ledgestone"
+     },
+     {
+      "id": "steel-included",
+      "name": "Steel (Included)"
+     }
+    ]
+   },
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "black-glass-media",
+      "name": "Black Glass Media"
+     },
+     {
+      "id": "bezel-base-w-vermiculite",
+      "name": "Bezel Base w/Vermiculite"
+     },
+     {
+      "id": "halogen-light-kit-w-clear-glass-media-and-perforated-burner-tray",
+      "name": "Halogen Light Kit w/Clear Glass Media & Perforated Burner Tray"
+     },
+     {
+      "id": "ultra-high-definition-driftwood-log-set-w-rocks",
+      "name": "Ultra High Definition Driftwood Log Set w/Rocks"
+     },
+     {
+      "id": "river-rock-set-w-twigs",
+      "name": "River Rock Set w/Twigs"
+     },
+     {
+      "id": "optional-cool-surface-system",
+      "name": "Optional Cool Surface System"
+     },
+     {
+      "id": "front-vent-or-side-vent",
+      "name": "Front Vent or Side Vent"
+     },
+     {
+      "id": "optional-dual-fan-kit-220-cfm-combined",
+      "name": "Optional Dual Fan Kit (220 CFM Combined)"
+     },
+     {
+      "id": "flex-vent-adapter-collars",
+      "name": "Flex Vent Adapter Collars"
+     },
+     {
+      "id": "horizontal-power-vent-kit-10-110ft",
+      "name": "Horizontal Power Vent Kit (10-110ft)"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/c44-1.webp",
+    "alt": "C44 fireplace",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/c44-2.webp",
+     "alt": "C44 fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/c44-3.webp",
+     "alt": "C44 fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/c44-4.webp",
+     "alt": "C44 fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/c44-5.webp",
+     "alt": "C44 fireplace",
+     "width": 620,
+     "height": 365
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=C44",
+  "enabled": true
+ },
+ {
+  "id": "en-c60-gas-fireplace",
+  "slug": "c60-gas-fireplace",
+  "brandId": "enviro",
+  "name": "C60",
+  "sku": "C60",
+  "fuel": "gas",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "A gas linear fireplace. Rated to heat about 1,500 square feet. 51,000 BTU maximum input.",
+  "makerDescription": "Linear design for a striking effect. Customizable with choice of liner and burner media kits. Clear View Safety Screen included.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "1,500 ft²"
+   },
+   {
+    "label": "Max Input BTU (NG)",
+    "value": "51,000"
+   },
+   {
+    "label": "Min Output BTU",
+    "value": "25,500"
+   },
+   {
+    "label": "P4 Efficiency",
+    "value": "65.7%"
+   },
+   {
+    "label": "Visible Glass Area",
+    "value": "58\" W x 11 3/8\" H"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "Optional Dual Fan Kit"
+   },
+   {
+    "label": "Unit Dims",
+    "value": "62\" W x 17\" H x 18\" D"
+   },
+   {
+    "label": "Install Dims",
+    "value": "71\" W x 38\" H x 20\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 1500,
+   "btuMax": 51000,
+   "btuMin": 25500,
+   "efficiency": "65.7%"
+  },
+  "dimensions": {
+   "text": "62\" W x 17\" H x 18\" D",
+   "width": 62,
+   "height": 17,
+   "depth": 18
+  },
+  "options": [
+   {
+    "id": "surrounds",
+    "label": "Surrounds",
+    "area": "exterior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "borderview-surround",
+      "name": "Borderview Surround",
+      "detail": "Powder Coated Grey, 66 3/4\" W x 21 7/16\" H"
+     },
+     {
+      "id": "slim-surround",
+      "name": "Slim Surround",
+      "detail": "65 3/8\" W x 20\" H"
+     }
+    ]
+   },
+   {
+    "id": "firebox-liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "black-enameled",
+      "name": "Black Enameled"
+     },
+     {
+      "id": "fluted",
+      "name": "Fluted"
+     },
+     {
+      "id": "ledgestone",
+      "name": "Ledgestone"
+     },
+     {
+      "id": "steel-included",
+      "name": "Steel (Included)"
+     }
+    ]
+   },
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "black-glass-media",
+      "name": "Black Glass Media"
+     },
+     {
+      "id": "bezel-base-w-vermiculite",
+      "name": "Bezel Base w/Vermiculite"
+     },
+     {
+      "id": "halogen-light-kit-w-clear-glass-media-and-perforated-burner-tray",
+      "name": "Halogen Light Kit w/Clear Glass Media & Perforated Burner Tray"
+     },
+     {
+      "id": "ultra-high-definition-driftwood-log-set-w-rocks",
+      "name": "Ultra High Definition Driftwood Log Set w/Rocks"
+     },
+     {
+      "id": "river-rock-set-w-twigs",
+      "name": "River Rock Set w/Twigs"
+     },
+     {
+      "id": "optional-cool-surface-system",
+      "name": "Optional Cool Surface System"
+     },
+     {
+      "id": "front-vent-or-side-vent",
+      "name": "Front Vent or Side Vent"
+     },
+     {
+      "id": "optional-dual-fan-kit-220-cfm-combined",
+      "name": "Optional Dual Fan Kit (220 CFM Combined)"
+     },
+     {
+      "id": "flex-vent-adapter-collars",
+      "name": "Flex Vent Adapter Collars"
+     },
+     {
+      "id": "horizontal-power-vent-kit-10-110ft",
+      "name": "Horizontal Power Vent Kit (10-110ft)"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/c60-1.webp",
+    "alt": "C60 fireplace",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/c60-2.webp",
+     "alt": "C60 fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/c60-3.webp",
+     "alt": "C60 fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/c60-4.webp",
+     "alt": "C60 fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/c60-5.webp",
+     "alt": "C60 fireplace",
+     "width": 620,
+     "height": 365
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=C60",
+  "enabled": true
+ },
+ {
+  "id": "en-c60-tall-gas-fireplace",
+  "slug": "c60-tall-gas-fireplace",
+  "brandId": "enviro",
+  "name": "C60 Tall",
+  "sku": "C60T",
+  "fuel": "gas",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "A gas linear fireplace. Rated to heat about 1,500 square feet. 51,000 BTU maximum input.",
+  "makerDescription": "Linear design for a striking effect. Impressive 20\" tall and over 60\" wide glass size. Cool Surface System included. Remote included.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "1,500 ft²"
+   },
+   {
+    "label": "Max Input BTU (NG)",
+    "value": "51,000"
+   },
+   {
+    "label": "Min Output BTU",
+    "value": "25,500"
+   },
+   {
+    "label": "P4 Efficiency",
+    "value": "71.5%"
+   },
+   {
+    "label": "Visible Glass Area",
+    "value": "58\" W x 17 3/8\" H"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "Optional Dual Fan Kit"
+   },
+   {
+    "label": "Unit Dims",
+    "value": "62\" W x 20\" H x 18\" D"
+   },
+   {
+    "label": "Install Dims",
+    "value": "71\" W x 44\" H x 19 1/2\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 1500,
+   "btuMax": 51000,
+   "btuMin": 25500,
+   "efficiency": "71.5%"
+  },
+  "dimensions": {
+   "text": "62\" W x 20\" H x 18\" D",
+   "width": 62,
+   "height": 20,
+   "depth": 18
+  },
+  "options": [
+   {
+    "id": "surrounds",
+    "label": "Surrounds",
+    "area": "exterior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "borderview-surround",
+      "name": "Borderview Surround",
+      "detail": "66 3/4\" W x 27 1/2\" H"
+     },
+     {
+      "id": "slim-surround",
+      "name": "Slim Surround",
+      "detail": "65 3/8\" W x 26\" H"
+     }
+    ]
+   },
+   {
+    "id": "firebox-liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "black-enameled",
+      "name": "Black Enameled"
+     },
+     {
+      "id": "ledgestone",
+      "name": "Ledgestone"
+     },
+     {
+      "id": "fluted",
+      "name": "Fluted"
+     },
+     {
+      "id": "painted-steel-included",
+      "name": "Painted Steel (Included)"
+     }
+    ]
+   },
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "black-glass",
+      "name": "Black Glass"
+     },
+     {
+      "id": "black-glass-media",
+      "name": "Black Glass Media"
+     },
+     {
+      "id": "bezel-base-w-vermiculite",
+      "name": "Bezel Base w/Vermiculite"
+     },
+     {
+      "id": "signature-log-sets-birch-or-traditional",
+      "name": "Signature Log Sets - Birch or Traditional"
+     },
+     {
+      "id": "halogen-light-kit-w-clear-glass-media-and-perforated-burner-tray",
+      "name": "Halogen Light Kit w/Clear Glass Media & Perforated Burner Tray"
+     },
+     {
+      "id": "ultra-high-definition-driftwood-log-set-w-rocks",
+      "name": "Ultra High Definition Driftwood Log Set w/Rocks"
+     },
+     {
+      "id": "river-rock-set-w-twigs",
+      "name": "River Rock Set w/Twigs"
+     },
+     {
+      "id": "optional-dual-fan-kit-240-cfm-combined",
+      "name": "Optional Dual Fan Kit (240 CFM Combined)"
+     },
+     {
+      "id": "horizontal-power-vent-kit-10-110ft",
+      "name": "Horizontal Power Vent Kit (10-110ft)"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/c60t-1.webp",
+    "alt": "C60 Tall fireplace",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/c60t-2.webp",
+     "alt": "C60 Tall fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/c60t-3.webp",
+     "alt": "C60 Tall fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/c60t-4.webp",
+     "alt": "C60 Tall fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/c60t-5.webp",
+     "alt": "C60 Tall fireplace",
+     "width": 620,
+     "height": 365
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=C60T",
+  "enabled": true
+ },
+ {
+  "id": "en-c72-gas-fireplace",
+  "slug": "c72-gas-fireplace",
+  "brandId": "enviro",
+  "name": "C72",
+  "sku": "C72",
+  "fuel": "gas",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "A gas linear fireplace. Rated to heat about 1,700 square feet. 55,000 BTU maximum input.",
+  "makerDescription": "Linear design for a striking effect. Customizable with choice of liner and burner media kits. Clear View Safety Screen included.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "1,700 ft²"
+   },
+   {
+    "label": "Max Input BTU (NG)",
+    "value": "55,000"
+   },
+   {
+    "label": "Min Output BTU",
+    "value": "38,000"
+   },
+   {
+    "label": "P4 Efficiency",
+    "value": "61.16%"
+   },
+   {
+    "label": "Visible Glass Area",
+    "value": "70\" W x 11 3/8\" H"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "Optional Dual Fan Kit"
+   },
+   {
+    "label": "Unit Dims",
+    "value": "74\" W x 17\" H x 18\" D"
+   },
+   {
+    "label": "Install Dims",
+    "value": "83\" W x 84\" H x 20\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 1700,
+   "btuMax": 55000,
+   "btuMin": 38000,
+   "efficiency": "61.16%"
+  },
+  "dimensions": {
+   "text": "74\" W x 17\" H x 18\" D",
+   "width": 74,
+   "height": 17,
+   "depth": 18
+  },
+  "options": [
+   {
+    "id": "surrounds",
+    "label": "Surrounds",
+    "area": "exterior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "borderview-surround",
+      "name": "Borderview Surround",
+      "detail": "Powder Coated Grey, 78 3/4\" W x 21 1/2\" H"
+     },
+     {
+      "id": "slim-surround",
+      "name": "Slim Surround",
+      "detail": "77 3/8\" W x 20\" H"
+     }
+    ]
+   },
+   {
+    "id": "firebox-liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "black-enameled",
+      "name": "Black Enameled"
+     },
+     {
+      "id": "fluted",
+      "name": "Fluted"
+     },
+     {
+      "id": "ledgestone",
+      "name": "Ledgestone"
+     },
+     {
+      "id": "steel-included",
+      "name": "Steel (Included)"
+     }
+    ]
+   },
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "black-glass-media",
+      "name": "Black Glass Media"
+     },
+     {
+      "id": "bezel-base-w-vermiculite",
+      "name": "Bezel Base w/Vermiculite"
+     },
+     {
+      "id": "ultra-high-definition-driftwood-log-set",
+      "name": "Ultra High Definition Driftwood Log Set"
+     },
+     {
+      "id": "river-rock-set-w-twigs",
+      "name": "River Rock Set w/Twigs"
+     },
+     {
+      "id": "optional-cool-surface-system",
+      "name": "Optional Cool Surface System"
+     },
+     {
+      "id": "front-vent-or-side-vent",
+      "name": "Front Vent or Side Vent"
+     },
+     {
+      "id": "optional-dual-fan-kit-220-cfm-combined",
+      "name": "Optional Dual Fan Kit (220 CFM Combined)"
+     },
+     {
+      "id": "flex-vent-adapter-collars",
+      "name": "Flex Vent Adapter Collars"
+     },
+     {
+      "id": "horizontal-power-vent-kit",
+      "name": "Horizontal Power Vent Kit"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/c72-1.webp",
+    "alt": "C72 fireplace",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/c72-2.webp",
+     "alt": "C72 fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/c72-3.webp",
+     "alt": "C72 fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/c72-4.webp",
+     "alt": "C72 fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/c72-5.webp",
+     "alt": "C72 fireplace",
+     "width": 620,
+     "height": 365
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=C72",
+  "enabled": true
+ },
+ {
+  "id": "en-g39-gas-fireplace",
+  "slug": "g39-gas-fireplace",
+  "brandId": "enviro",
+  "name": "G39",
+  "sku": "G39",
+  "fuel": "gas",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "A gas fireplace. Rated to heat about 1,600 square feet. 30,000 BTU maximum input.",
+  "makerDescription": "Adjustable Ember Bed Lighting (IPI Log Burner) Cool Surface System HDK included. Clear View Safety Screen. Includes Painted Steel Liner.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "1,600 ft²"
+   },
+   {
+    "label": "Max Input BTU (NG)",
+    "value": "30,000"
+   },
+   {
+    "label": "Min Output BTU",
+    "value": "10,000"
+   },
+   {
+    "label": "P4 Efficiency",
+    "value": "69.8%"
+   },
+   {
+    "label": "Visible Glass Area",
+    "value": "30\" W x 24\" H"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "130 CFM"
+   },
+   {
+    "label": "Weight",
+    "value": "192 lbs"
+   },
+   {
+    "label": "Unit Dims",
+    "value": "42\" W x 42\" H x 18\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 1600,
+   "btuMax": 30000,
+   "btuMin": 10000,
+   "efficiency": "69.8%"
+  },
+  "dimensions": {
+   "text": "42\" W x 42\" H x 18\" D",
+   "width": 42,
+   "height": 42,
+   "depth": 18
+  },
+  "options": [
+   {
+    "id": "firebox-liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "black-enameled",
+      "name": "Black Enameled"
+     },
+     {
+      "id": "brick-painted-black",
+      "name": "Brick - Painted Black"
+     },
+     {
+      "id": "brick-rustic-brown",
+      "name": "Brick - Rustic Brown"
+     },
+     {
+      "id": "herringbone",
+      "name": "Herringbone"
+     }
+    ]
+   },
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "forgeworks-face",
+      "name": "Forgeworks Face"
+     },
+     {
+      "id": "midnight-bronze",
+      "name": "Midnight Bronze"
+     },
+     {
+      "id": "39-w-x-33-3-4-h",
+      "name": "39\" W x 33 3/4\" H"
+     },
+     {
+      "id": "slim-face",
+      "name": "Slim Face"
+     },
+     {
+      "id": "painted-black",
+      "name": "Painted Black"
+     },
+     {
+      "id": "39-w-x-33-3-4-h",
+      "name": "39\" W x 33 3/4\" H"
+     },
+     {
+      "id": "birch-or-traditional-log-set-burners",
+      "name": "Birch or Traditional Log Set Burners"
+     },
+     {
+      "id": "driftwood-log-set-for-glass-burner",
+      "name": "Driftwood Log Set for Glass Burner"
+     },
+     {
+      "id": "andirons",
+      "name": "Andirons"
+     },
+     {
+      "id": "ceramic-glass-door-available",
+      "name": "Ceramic Glass Door Available"
+     },
+     {
+      "id": "horizontal-power-vent-kit-10-110ft",
+      "name": "Horizontal Power Vent Kit (10-110ft)"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/g39-1.webp",
+    "alt": "G39 fireplace",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/g39-2.webp",
+     "alt": "G39 fireplace",
+     "width": 762,
+     "height": 449
+    },
+    {
+     "src": "/catalog/enviro/gallery/g39-3.webp",
+     "alt": "G39 fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/g39-5.webp",
+     "alt": "G39 fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/g39-6.webp",
+     "alt": "G39 fireplace",
+     "width": 762,
+     "height": 449
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=G39",
+  "enabled": true
+ },
+ {
+  "id": "en-g42-gas-fireplace",
+  "slug": "g42-gas-fireplace",
+  "brandId": "enviro",
+  "name": "G42",
+  "sku": "G42",
+  "fuel": "gas",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "A gas fireplace. Rated to heat about 2,000 square feet. 40,000 BTU maximum input.",
+  "makerDescription": "Adjustable Ember Bed Lighting (IPI Log Burner) Cool Surface System HDK included. Clear View Safety Screen. Includes Painted Steel Liner.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "2,000 ft²"
+   },
+   {
+    "label": "Max Input BTU (NG)",
+    "value": "40,000"
+   },
+   {
+    "label": "Min Output BTU",
+    "value": "11,000"
+   },
+   {
+    "label": "P4 Efficiency",
+    "value": "69.6%"
+   },
+   {
+    "label": "Visible Glass Area",
+    "value": "34\" W x 26 7/8\" H"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "130 CFM"
+   },
+   {
+    "label": "Weight",
+    "value": "250 lbs"
+   },
+   {
+    "label": "Unit Dims",
+    "value": "49\" W x 50\" H x 23\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 2000,
+   "btuMax": 40000,
+   "btuMin": 11000,
+   "efficiency": "69.6%"
+  },
+  "dimensions": {
+   "text": "49\" W x 50\" H x 23\" D",
+   "width": 49,
+   "height": 50,
+   "depth": 23
+  },
+  "options": [
+   {
+    "id": "firebox-liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "black-enameled",
+      "name": "Black Enameled"
+     },
+     {
+      "id": "brick-painted-black",
+      "name": "Brick - Painted Black"
+     },
+     {
+      "id": "brick-rustic-brown",
+      "name": "Brick - Rustic Brown"
+     },
+     {
+      "id": "herringbone",
+      "name": "Herringbone"
+     }
+    ]
+   },
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "forgeworks-face",
+      "name": "Forgeworks Face"
+     },
+     {
+      "id": "midnight-bronze",
+      "name": "Midnight Bronze"
+     },
+     {
+      "id": "42-1-2-w-x-37-h",
+      "name": "42 1/2\" W x 37\" H"
+     },
+     {
+      "id": "slim-face",
+      "name": "Slim Face"
+     },
+     {
+      "id": "painted-black-powder-coated-grey",
+      "name": "Painted Black | Powder Coated Grey"
+     },
+     {
+      "id": "42-1-2-w-x-37-h",
+      "name": "42 1/2\" W x 37\" H"
+     },
+     {
+      "id": "birch-or-traditional-log-set-burners",
+      "name": "Birch or Traditional Log Set Burners"
+     },
+     {
+      "id": "driftwood-log-set-for-glass-burner",
+      "name": "Driftwood Log Set for Glass Burner"
+     },
+     {
+      "id": "andirons",
+      "name": "Andirons"
+     },
+     {
+      "id": "horizontal-power-vent-kit-10-110ft",
+      "name": "Horizontal Power Vent Kit (10-110ft)"
+     },
+     {
+      "id": "flex-vent-adapter-collars",
+      "name": "Flex Vent Adapter Collars"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/g42-1.webp",
+    "alt": "G42 fireplace",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/g42-3.webp",
+     "alt": "G42 fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/g42-4.webp",
+     "alt": "G42 fireplace",
+     "width": 762,
+     "height": 449
+    },
+    {
+     "src": "/catalog/enviro/gallery/g42-5.webp",
+     "alt": "G42 fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/g42-6.webp",
+     "alt": "G42 fireplace",
+     "width": 762,
+     "height": 449
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=G42",
+  "enabled": true
+ },
+ {
+  "id": "en-g50-gas-fireplace",
+  "slug": "g50-gas-fireplace",
+  "brandId": "enviro",
+  "name": "G50",
+  "sku": "G50",
+  "fuel": "gas",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "A gas fireplace. Rated to heat about 2,200 square feet. 48,000 BTU maximum input.",
+  "makerDescription": "Adjustable Ember Bed Lighting (IPI Log Burner) Cool Surface System HDK included. Clear View Safety Screen. Includes Painted Steel Liner.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "2,200 ft²"
+   },
+   {
+    "label": "Max Input BTU (NG)",
+    "value": "48,000"
+   },
+   {
+    "label": "Min Output BTU",
+    "value": "13,000"
+   },
+   {
+    "label": "P4 Efficiency",
+    "value": "73.6%"
+   },
+   {
+    "label": "Visible Glass Area",
+    "value": "41\" W x 28\" H"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "130 CFM"
+   },
+   {
+    "label": "Weight",
+    "value": "280 lbs"
+   },
+   {
+    "label": "Unit Dims",
+    "value": "55\" W x 50\" H x 23\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 2200,
+   "btuMax": 48000,
+   "btuMin": 13000,
+   "efficiency": "73.6%"
+  },
+  "dimensions": {
+   "text": "55\" W x 50\" H x 23\" D",
+   "width": 55,
+   "height": 50,
+   "depth": 23
+  },
+  "options": [
+   {
+    "id": "firebox-liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "black-enameled",
+      "name": "Black Enameled"
+     },
+     {
+      "id": "brick-painted-black",
+      "name": "Brick - Painted Black"
+     },
+     {
+      "id": "brick-rustic-brown",
+      "name": "Brick - Rustic Brown"
+     },
+     {
+      "id": "herringbone",
+      "name": "Herringbone"
+     }
+    ]
+   },
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "forgeworks-face",
+      "name": "Forgeworks Face"
+     },
+     {
+      "id": "midnight-bronze",
+      "name": "Midnight Bronze"
+     },
+     {
+      "id": "50-1-2-w-x-39-h",
+      "name": "50 1/2\" W x 39\" H"
+     },
+     {
+      "id": "slim-face",
+      "name": "Slim Face"
+     },
+     {
+      "id": "painted-black-powder-coated-silver",
+      "name": "Painted Black | Powder Coated Silver"
+     },
+     {
+      "id": "50-1-2-w-x-39-h",
+      "name": "50 1/2\" W x 39\" H"
+     },
+     {
+      "id": "birch-or-traditional-log-set-burners",
+      "name": "Birch or Traditional Log Set Burners"
+     },
+     {
+      "id": "driftwood-log-set-for-glass-burner",
+      "name": "Driftwood Log Set for Glass Burner"
+     },
+     {
+      "id": "horizontal-power-vent-kit-10-110ft",
+      "name": "Horizontal Power Vent Kit (10-110ft)"
+     },
+     {
+      "id": "flex-vent-adapter-collars",
+      "name": "Flex Vent Adapter Collars"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/g50-1.webp",
+    "alt": "G50 fireplace",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/g50-2.webp",
+     "alt": "G50 fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/g50-3.webp",
+     "alt": "G50 fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/g50-4.webp",
+     "alt": "G50 fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/g50-5.webp",
+     "alt": "G50 fireplace",
+     "width": 620,
+     "height": 365
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=G50",
+  "enabled": true
+ },
+ {
+  "id": "en-q1-gas-fireplace",
+  "slug": "q1-gas-fireplace",
+  "brandId": "enviro",
+  "name": "Q1",
+  "sku": "Q1FP",
+  "fuel": "gas",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "A gas fireplace. Rated to heat about 1,100 square feet. 20,000 BTU maximum input.",
+  "makerDescription": "Clean face look - no louvers. IPI System with Remote Clear View Safety Screen Hand welded firebox.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "1,100 ft²"
+   },
+   {
+    "label": "Max Input BTU (NG)",
+    "value": "20,000"
+   },
+   {
+    "label": "Min Output BTU",
+    "value": "13,400"
+   },
+   {
+    "label": "P4 Efficiency",
+    "value": "74.5%"
+   },
+   {
+    "label": "Visible Glass Area",
+    "value": "16 1/2\" W x 18 3/4\" H"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "150 CFM"
+   },
+   {
+    "label": "Weight",
+    "value": "110 lbs"
+   },
+   {
+    "label": "Unit Dims",
+    "value": "20\" W x 26\" H x 15\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 1100,
+   "btuMax": 20000,
+   "btuMin": 13400,
+   "efficiency": "74.5%"
+  },
+  "dimensions": {
+   "text": "20\" W x 26\" H x 15\" D",
+   "width": 20,
+   "height": 26,
+   "depth": 15
+  },
+  "options": [
+   {
+    "id": "surrounds",
+    "label": "Surrounds",
+    "area": "exterior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "minimal-3s-surround",
+      "name": "Minimal 3S Surround",
+      "detail": "22 3/4\" W x 26 7/16\" H"
+     },
+     {
+      "id": "minimal-4s-surround",
+      "name": "Minimal 4S Surround",
+      "detail": "23 3/8\" W x 26 11/16\" H"
+     },
+     {
+      "id": "modern-surround",
+      "name": "Modern Surround",
+      "detail": "30\" W x 30\" H"
+     }
+    ]
+   },
+   {
+    "id": "firebox-liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "black-enameled",
+      "name": "Black Enameled"
+     },
+     {
+      "id": "ceramic-brick",
+      "name": "Ceramic Brick"
+     },
+     {
+      "id": "ledgestone",
+      "name": "Ledgestone"
+     },
+     {
+      "id": "steel-included",
+      "name": "Steel (Included)"
+     }
+    ]
+   },
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "black-enameled-or-ledgestone-liners",
+      "name": "Black Enameled or Ledgestone Liners"
+     },
+     {
+      "id": "q1-co-linear-venting-insert-adapter-kit",
+      "name": "Q1 Co-linear Venting Insert Adapter Kit"
+     },
+     {
+      "id": "q1-clean-face-trim-kit",
+      "name": "Q1 Clean Face Trim Kit"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/q1fp-1.webp",
+    "alt": "Q1 fireplace",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/q1fp-2.webp",
+     "alt": "Q1 fireplace",
+     "width": 762,
+     "height": 449
+    },
+    {
+     "src": "/catalog/enviro/gallery/q1fp-3.webp",
+     "alt": "Q1 fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/q1fp-4.webp",
+     "alt": "Q1 fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/q1fp-1t.webp",
+     "alt": "Q1 fireplace",
+     "width": 75,
+     "height": 75
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=Q1FP",
+  "enabled": true
+ },
+ {
+  "id": "en-q2-gas-fireplace",
+  "slug": "q2-gas-fireplace",
+  "brandId": "enviro",
+  "name": "Q2",
+  "sku": "Q2",
+  "fuel": "gas",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "A gas fireplace. Rated to heat about 1,400 square feet. 24,000 BTU maximum input.",
+  "makerDescription": "Clean Face Look - No Louvers IPI System with Remote Clear View Safety Screen Hand Welded Firebox",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "1,400 ft²"
+   },
+   {
+    "label": "Max Input BTU (NG)",
+    "value": "24,000"
+   },
+   {
+    "label": "Min Output BTU",
+    "value": "8,000"
+   },
+   {
+    "label": "P4 Efficiency",
+    "value": "69.3%"
+   },
+   {
+    "label": "Visible Glass Area",
+    "value": "26\" W x 21 1/4\" H"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "Optional"
+   },
+   {
+    "label": "Unit Dims",
+    "value": "35\" W x 30\" H x 16\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 1400,
+   "btuMax": 24000,
+   "btuMin": 8000,
+   "efficiency": "69.3%"
+  },
+  "dimensions": {
+   "text": "35\" W x 30\" H x 16\" D",
+   "width": 35,
+   "height": 30,
+   "depth": 16
+  },
+  "options": [
+   {
+    "id": "firebox-liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "black-enameled",
+      "name": "Black Enameled"
+     },
+     {
+      "id": "ceramic-brick",
+      "name": "Ceramic Brick"
+     }
+    ]
+   },
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "forgeworks-face",
+      "name": "Forgeworks Face"
+     },
+     {
+      "id": "midnight-bronze",
+      "name": "Midnight Bronze"
+     },
+     {
+      "id": "33-7-8-w-x-29-1-4-h",
+      "name": "33 7/8\" W x 29 1/4\" H"
+     },
+     {
+      "id": "slim-face",
+      "name": "Slim Face"
+     },
+     {
+      "id": "32-3-4-w-x-28-13-16-h",
+      "name": "32 3/4\" W x 28 13/16\" H"
+     },
+     {
+      "id": "herringbone",
+      "name": "Herringbone"
+     },
+     {
+      "id": "traditional-split-log-set",
+      "name": "Traditional Split Log Set"
+     },
+     {
+      "id": "driftwood-log-set",
+      "name": "Driftwood Log Set"
+     },
+     {
+      "id": "glass-burner-tray",
+      "name": "Glass Burner Tray"
+     },
+     {
+      "id": "top-vent-configuration-only",
+      "name": "(Top Vent Configuration Only)"
+     },
+     {
+      "id": "optional-fan-kit",
+      "name": "Optional Fan Kit"
+     },
+     {
+      "id": "150-cfm-fan",
+      "name": "150 CFM Fan"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/q2-1.webp",
+    "alt": "Q2 fireplace",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/q2-2.webp",
+     "alt": "Q2 fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/q2-3.webp",
+     "alt": "Q2 fireplace",
+     "width": 1400,
+     "height": 833
+    },
+    {
+     "src": "/catalog/enviro/gallery/q2-4.webp",
+     "alt": "Q2 fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/q2-5.webp",
+     "alt": "Q2 fireplace",
+     "width": 1400,
+     "height": 834
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=Q2",
+  "enabled": true
+ },
+ {
+  "id": "en-q3-gas-fireplace",
+  "slug": "q3-gas-fireplace",
+  "brandId": "enviro",
+  "name": "Q3",
+  "sku": "Q3",
+  "fuel": "gas",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "A gas fireplace. Rated to heat about 2,000 square feet. 38,000 BTU maximum input.",
+  "makerDescription": "Clean Face Look - No Louvers IPI System with Remote IPI Valve with Remote Hand Welded Firebox",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "2,000 ft²"
+   },
+   {
+    "label": "Max Input BTU (NG)",
+    "value": "38,000"
+   },
+   {
+    "label": "Min Output BTU",
+    "value": "13,870"
+   },
+   {
+    "label": "P4 Efficiency",
+    "value": "67.3%"
+   },
+   {
+    "label": "Visible Glass Area",
+    "value": "26\" W x 24 1/4\" H"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "Optional"
+   },
+   {
+    "label": "Unit Dims",
+    "value": "35\" W x 34\" H x 16\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 2000,
+   "btuMax": 38000,
+   "btuMin": 13870,
+   "efficiency": "67.3%"
+  },
+  "dimensions": {
+   "text": "35\" W x 34\" H x 16\" D",
+   "width": 35,
+   "height": 34,
+   "depth": 16
+  },
+  "options": [
+   {
+    "id": "firebox-liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "black-enameled",
+      "name": "Black Enameled"
+     },
+     {
+      "id": "ceramic-brick",
+      "name": "Ceramic Brick"
+     }
+    ]
+   },
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "forgeworks-face",
+      "name": "Forgeworks Face"
+     },
+     {
+      "id": "midnight-bronze",
+      "name": "Midnight Bronze"
+     },
+     {
+      "id": "35-7-8-w-x-32-7-8-h",
+      "name": "35 7/8\" W x 32 7/8\" H"
+     },
+     {
+      "id": "ledgestone",
+      "name": "Ledgestone"
+     },
+     {
+      "id": "lp-conversion-kit",
+      "name": "LP Conversion Kit"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/q3-1.webp",
+    "alt": "Q3 fireplace",
+    "width": 749,
+    "height": 446
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/q3-2.webp",
+     "alt": "Q3 fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/q3-3.webp",
+     "alt": "Q3 fireplace",
+     "width": 749,
+     "height": 446
+    },
+    {
+     "src": "/catalog/enviro/gallery/q3-4.webp",
+     "alt": "Q3 fireplace",
+     "width": 813,
+     "height": 484
+    },
+    {
+     "src": "/catalog/enviro/gallery/q3-5.webp",
+     "alt": "Q3 fireplace",
+     "width": 749,
+     "height": 446
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=Q3",
+  "enabled": true
+ },
+ {
+  "id": "en-rz41-fire-under-log-gas-fireplace",
+  "slug": "rz41-fire-under-log-gas-fireplace",
+  "brandId": "enviro",
+  "name": "RZ41 Fire-Under-Log",
+  "sku": "RZ41",
+  "fuel": "gas",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "A gas fireplace. Rated to heat about 2,000 square feet. 40,000 BTU maximum input.",
+  "makerDescription": "Fire-Under-Log Technology Modern Surround Accent Cool Surface system Ember Bed Lighting",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "2,000 ft²"
+   },
+   {
+    "label": "Max Input BTU (NG)",
+    "value": "40,000"
+   },
+   {
+    "label": "Min Output BTU",
+    "value": "26,000"
+   },
+   {
+    "label": "P4 Efficiency",
+    "value": "66.2%"
+   },
+   {
+    "label": "Unit Dims",
+    "value": "41\" W x 44\" H x 20\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 2000,
+   "btuMax": 40000,
+   "btuMin": 26000,
+   "efficiency": "66.2%"
+  },
+  "dimensions": {
+   "text": "41\" W x 44\" H x 20\" D",
+   "width": 41,
+   "height": 44,
+   "depth": 20
+  },
+  "options": [
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "included-liner",
+      "name": "Included Liner:"
+     },
+     {
+      "id": "painted-steel-log-burner-skus",
+      "name": "Painted Steel (Log Burner SKUs)"
+     },
+     {
+      "id": "optional-liners",
+      "name": "Optional Liners:"
+     },
+     {
+      "id": "traditional-split-log-set",
+      "name": "Traditional Split Log Set"
+     },
+     {
+      "id": "birch-split-log-set",
+      "name": "Birch Split Log Set"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/rz41-1.webp",
+    "alt": "RZ41 Fire-Under-Log fireplace",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/rz41-2.webp",
+     "alt": "RZ41 Fire-Under-Log fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/rz41-3.webp",
+     "alt": "RZ41 Fire-Under-Log fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/rz41-4.webp",
+     "alt": "RZ41 Fire-Under-Log fireplace",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/rz41-5.webp",
+     "alt": "RZ41 Fire-Under-Log fireplace",
+     "width": 620,
+     "height": 365
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=RZ41",
+  "enabled": true
+ },
+ {
+  "id": "en-e20-gas-insert",
+  "slug": "e20-gas-insert",
+  "brandId": "enviro",
+  "name": "E20",
+  "sku": "E20",
+  "fuel": "gas",
+  "kind": "insert",
+  "style": "traditional",
+  "summary": "A gas insert. Rated to heat about 1,200 square feet. 23,000 BTU maximum input.",
+  "makerDescription": "Clean face look - no louvers. Cast iron heat exchanger. Intermittent pilot. Classic log set.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "1,200 ft²"
+   },
+   {
+    "label": "Max Input BTU (NG)",
+    "value": "23,000"
+   },
+   {
+    "label": "Min Output BTU",
+    "value": "7,700"
+   },
+   {
+    "label": "P4 Efficiency",
+    "value": "66.45%"
+   },
+   {
+    "label": "Visible Glass Area",
+    "value": "20 3/8\" W x 12 1/8\" H"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "110 CFM"
+   },
+   {
+    "label": "Install Dims",
+    "value": "24 1/4\" W x 18 1/4\" H"
+   },
+   {
+    "label": "Install Depth Range",
+    "value": "14 5/16\" - 16 1/2\""
+   }
+  ],
+  "heat": {
+   "areaSqFt": 1200,
+   "btuMax": 23000,
+   "btuMin": 7700,
+   "efficiency": "66.45%"
+  },
+  "options": [
+   {
+    "id": "surrounds",
+    "label": "Surrounds",
+    "area": "exterior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "contemporary-surround",
+      "name": "Contemporary Surround",
+      "detail": "35 3/8\" W x 23 7/8\" H"
+     },
+     {
+      "id": "galiano-surround",
+      "name": "Galiano Surround",
+      "detail": "35 3/8\" W x 23 7/8\" H"
+     },
+     {
+      "id": "modern-surround",
+      "name": "Modern Surround",
+      "detail": "35 3/8\" W x 23 7/8\" H"
+     },
+     {
+      "id": "o-s-contemporary-surround",
+      "name": "O/S Contemporary Surround",
+      "detail": "37 3/8\" W x 26 7/8\" H"
+     },
+     {
+      "id": "slim-surround",
+      "name": "Slim Surround",
+      "detail": "29 3/4\" W x 21\" H"
+     }
+    ]
+   },
+   {
+    "id": "firebox-liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "black-enameled",
+      "name": "Black Enameled"
+     },
+     {
+      "id": "brick",
+      "name": "Brick"
+     },
+     {
+      "id": "fluted",
+      "name": "Fluted"
+     },
+     {
+      "id": "steel-included",
+      "name": "Steel (Included)"
+     }
+    ]
+   },
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "brushed-graphite",
+      "name": "Brushed Graphite"
+     },
+     {
+      "id": "trimmable-filler-panel",
+      "name": "Trimmable Filler Panel"
+     },
+     {
+      "id": "41-3-4-w-x-28-3-4-h",
+      "name": "41 3/4\" W x 28 3/4\" H"
+     },
+     {
+      "id": "includes-fan-and-log-burner",
+      "name": "Includes Fan and Log Burner."
+     },
+     {
+      "id": "glass-tray-with-clear-or-black-glass",
+      "name": "Glass Tray with Clear or Black Glass"
+     },
+     {
+      "id": "rock-set-8-pcs",
+      "name": "Rock Set (8 pcs.)"
+     },
+     {
+      "id": "base-shelf",
+      "name": "Base Shelf."
+     },
+     {
+      "id": "base-shelf-riser",
+      "name": "Base Shelf Riser."
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/e20-1.webp",
+    "alt": "E20 insert",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/e20-2.webp",
+     "alt": "E20 insert",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/e20-3.webp",
+     "alt": "E20 insert",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/e20-4.webp",
+     "alt": "E20 insert",
+     "width": 762,
+     "height": 449
+    },
+    {
+     "src": "/catalog/enviro/gallery/e20-5.webp",
+     "alt": "E20 insert",
+     "width": 762,
+     "height": 449
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=E20",
+  "enabled": true
+ },
+ {
+  "id": "en-e25-gas-insert",
+  "slug": "e25-gas-insert",
+  "brandId": "enviro",
+  "name": "E25",
+  "sku": "E25",
+  "fuel": "gas",
+  "kind": "insert",
+  "style": "traditional",
+  "summary": "A gas insert. Rated to heat about 1,600 square feet. 28,000 BTU maximum input.",
+  "makerDescription": "Traditional Log Set included. Liner not required. Steel Firebox Grate. Easy Access Burner Switch (Standing Pilot)",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "1,600 ft²"
+   },
+   {
+    "label": "Max Input BTU (NG)",
+    "value": "28,000"
+   },
+   {
+    "label": "Min Output BTU",
+    "value": "14,000"
+   },
+   {
+    "label": "P4 Efficiency",
+    "value": "63.9%"
+   },
+   {
+    "label": "Visible Glass Area",
+    "value": "24 3/8\" W x 14\" H"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "110 CFM"
+   },
+   {
+    "label": "Install Dims",
+    "value": "27 7/8\" W x 19 3/4\" H"
+   },
+   {
+    "label": "Install Depth Range",
+    "value": "13 15/16\" - 14 15/16\""
+   }
+  ],
+  "heat": {
+   "areaSqFt": 1600,
+   "btuMax": 28000,
+   "btuMin": 14000,
+   "efficiency": "63.9%"
+  },
+  "options": [
+   {
+    "id": "surrounds",
+    "label": "Surrounds",
+    "area": "exterior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "included-e25-surround",
+      "name": "(Included) E25 Surround",
+      "detail": "39\" W x 25 3/4\" H"
+     }
+    ]
+   },
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "trimmable-filler-panel",
+      "name": "Trimmable Filler Panel"
+     },
+     {
+      "id": "46-w-x-38-h",
+      "name": "46\" W x 38\" H"
+     },
+     {
+      "id": "brick-liner",
+      "name": "Brick Liner"
+     },
+     {
+      "id": "lp-conversion-kit-available",
+      "name": "LP Conversion Kit available."
+     },
+     {
+      "id": "convection-fan-available-for-nova-version",
+      "name": "Convection fan available for Nova version."
+     },
+     {
+      "id": "hearth-riser",
+      "name": "Hearth Riser."
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/e25-1.webp",
+    "alt": "E25 insert",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/e25-2.webp",
+     "alt": "E25 insert",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/e25-3.webp",
+     "alt": "E25 insert",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/e25-4.webp",
+     "alt": "E25 insert",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/e25-5.webp",
+     "alt": "E25 insert",
+     "width": 620,
+     "height": 365
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=E25",
+  "enabled": true
+ },
+ {
+  "id": "en-e30-gas-insert",
+  "slug": "e30-gas-insert",
+  "brandId": "enviro",
+  "name": "E30",
+  "sku": "E30",
+  "fuel": "gas",
+  "kind": "insert",
+  "style": "traditional",
+  "summary": "A gas insert. Rated to heat about 1,700 square feet. 33,000 BTU maximum input.",
+  "makerDescription": "Clean face look - no louvers. SIT Valve 820 (standing pilot). Easy-access burner switch. Up to 50% turn down valve.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "1,700 ft²"
+   },
+   {
+    "label": "Max Input BTU (NG)",
+    "value": "33,000"
+   },
+   {
+    "label": "Min Output BTU",
+    "value": "11,800"
+   },
+   {
+    "label": "P4 Efficiency",
+    "value": "71.4%"
+   },
+   {
+    "label": "Visible Glass Area",
+    "value": "24 3/8\" W x 14\" H"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "150 CFM"
+   },
+   {
+    "label": "Install Dims",
+    "value": "27 7/8\" W x 19 7/8\" H"
+   },
+   {
+    "label": "Install Depth Range",
+    "value": "16 7/16\" - 18 5/8\""
+   }
+  ],
+  "heat": {
+   "areaSqFt": 1700,
+   "btuMax": 33000,
+   "btuMin": 11800,
+   "efficiency": "71.4%"
+  },
+  "options": [
+   {
+    "id": "surrounds",
+    "label": "Surrounds",
+    "area": "exterior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "borderview-surround",
+      "name": "Borderview Surround",
+      "detail": "Powder Coated Grey, 40\" W x 26 1/8\" H"
+     },
+     {
+      "id": "borderview-plus-4s-surround",
+      "name": "Borderview Plus 4S Surround",
+      "detail": "Powder Coated Grey, 40\" W x 31\" H"
+     },
+     {
+      "id": "cast-plus-surround",
+      "name": "Cast Plus Surround",
+      "detail": "39 3/8\" W x 24 3/4\" H"
+     },
+     {
+      "id": "cast-plus-o-s-surround",
+      "name": "Cast Plus O/S Surround",
+      "detail": "50\" W x 30\" H"
+     },
+     {
+      "id": "contemporary-surround",
+      "name": "Contemporary Surround",
+      "detail": "39 7/8\" W x 25\" H"
+     },
+     {
+      "id": "designer-surround",
+      "name": "Designer Surround",
+      "detail": "Powder Coated Grey | Powder Coated Silver, 38 5/8\" W x 24 1/2\" H"
+     },
+     {
+      "id": "extruded-surround",
+      "name": "Extruded Surround",
+      "detail": "39 3/4\" W x 25 1/8\" H"
+     },
+     {
+      "id": "extruded-4s-surround",
+      "name": "Extruded 4S Surround",
+      "detail": "39 3/4\" W x 31 1/2\" H"
+     },
+     {
+      "id": "extruded-o-s-surround",
+      "name": "Extruded O/S Surround",
+      "detail": "39 3/4\" W x 29\" H"
+     },
+     {
+      "id": "galiano-surround",
+      "name": "Galiano Surround",
+      "detail": "39 7/8\" W x 25\" H"
+     },
+     {
+      "id": "modern-surround",
+      "name": "Modern Surround",
+      "detail": "39 7/8\" W x 25\" H"
+     },
+     {
+      "id": "o-s-contemporary-surround",
+      "name": "O/S Contemporary Surround",
+      "detail": "39 7/8\" W x 29\" H"
+     },
+     {
+      "id": "slim-surround",
+      "name": "Slim Surround",
+      "detail": "33 1/4\" W x 22\" H"
+     }
+    ]
+   },
+   {
+    "id": "firebox-liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "black-enameled-included",
+      "name": "Black Enameled (Included)"
+     },
+     {
+      "id": "brick",
+      "name": "Brick"
+     },
+     {
+      "id": "fluted",
+      "name": "Fluted"
+     },
+     {
+      "id": "grey-brick",
+      "name": "Grey Brick"
+     }
+    ]
+   },
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "forgeworks-face",
+      "name": "Forgeworks Face"
+     },
+     {
+      "id": "midnight-bronze",
+      "name": "Midnight Bronze"
+     },
+     {
+      "id": "brushed-graphite",
+      "name": "Brushed Graphite"
+     },
+     {
+      "id": "trimmable-filler-panel",
+      "name": "Trimmable Filler Panel"
+     },
+     {
+      "id": "46-w-x-38-h",
+      "name": "46\" W x 38\" H"
+     },
+     {
+      "id": "steel-included",
+      "name": "Steel (Included)"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/e30-1.webp",
+    "alt": "E30 insert",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/e30-2.webp",
+     "alt": "E30 insert",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/e30-3.webp",
+     "alt": "E30 insert",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/e30-4.webp",
+     "alt": "E30 insert",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/e30-5.webp",
+     "alt": "E30 insert",
+     "width": 620,
+     "height": 365
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=E30",
+  "enabled": true
+ },
+ {
+  "id": "en-e33-gas-insert",
+  "slug": "e33-gas-insert",
+  "brandId": "enviro",
+  "name": "E33",
+  "sku": "E33",
+  "fuel": "gas",
+  "kind": "insert",
+  "style": "traditional",
+  "summary": "A gas insert. Rated to heat about 1,800 square feet. 34,000 BTU maximum input.",
+  "makerDescription": "Clean face look - no louvers. Standing pilot or IPI System with Remote Easy-access burner switch. Up to 50% turn down valve.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "1,800 ft²"
+   },
+   {
+    "label": "Max Input BTU (NG)",
+    "value": "34,000"
+   },
+   {
+    "label": "Min Output BTU",
+    "value": "12,100"
+   },
+   {
+    "label": "P4 Efficiency",
+    "value": "71.1%"
+   },
+   {
+    "label": "Visible Glass Area",
+    "value": "27\" W x 16 5/8\" H"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "150 CFM"
+   },
+   {
+    "label": "Install Dims",
+    "value": "32\" W x 20\" H"
+   },
+   {
+    "label": "Install Depth Range",
+    "value": "18 1/8\" - 20 1/2\""
+   }
+  ],
+  "heat": {
+   "areaSqFt": 1800,
+   "btuMax": 34000,
+   "btuMin": 12100,
+   "efficiency": "71.1%"
+  },
+  "options": [
+   {
+    "id": "surrounds",
+    "label": "Surrounds",
+    "area": "exterior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "cast-plus-surround",
+      "name": "Cast Plus Surround",
+      "detail": "42 1/4\" W x 25 1/4\" H"
+     },
+     {
+      "id": "cast-plus-o-s-surround",
+      "name": "Cast Plus O/S Surround",
+      "detail": "51 3/4\" W x 30\" H"
+     },
+     {
+      "id": "contemporary-surround",
+      "name": "Contemporary Surround",
+      "detail": "44 1/8\" W x 26 1/2\" H"
+     },
+     {
+      "id": "designer-surround",
+      "name": "Designer Surround",
+      "detail": "Powder Coated Grey, 41 3/4\" W x 25\" H"
+     },
+     {
+      "id": "galiano-surround",
+      "name": "Galiano Surround",
+      "detail": "44\" W x 26 1/2\" H"
+     },
+     {
+      "id": "modern-surround",
+      "name": "Modern Surround",
+      "detail": "43 1/2\" W x 26 1/2\" H"
+     },
+     {
+      "id": "o-s-contemporary-surround",
+      "name": "O/S Contemporary Surround",
+      "detail": "44\" W x 29\" H"
+     },
+     {
+      "id": "slim-surround",
+      "name": "Slim Surround",
+      "detail": "36\" W x 22 1/4\" H"
+     }
+    ]
+   },
+   {
+    "id": "firebox-liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "black-enameled-included",
+      "name": "Black Enameled (Included)"
+     },
+     {
+      "id": "brick",
+      "name": "Brick"
+     },
+     {
+      "id": "fluted",
+      "name": "Fluted"
+     },
+     {
+      "id": "grey-brick",
+      "name": "Grey Brick"
+     }
+    ]
+   },
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "forgeworks-face",
+      "name": "Forgeworks Face"
+     },
+     {
+      "id": "midnight-bronze",
+      "name": "Midnight Bronze"
+     },
+     {
+      "id": "42-w-x-25-1-8-h",
+      "name": "42\" W x 25 1/8\" H"
+     },
+     {
+      "id": "brushed-graphite",
+      "name": "Brushed Graphite"
+     },
+     {
+      "id": "trimmable-filler-panel",
+      "name": "Trimmable Filler Panel"
+     },
+     {
+      "id": "46-w-x-38-h",
+      "name": "46\" W x 38\" H"
+     },
+     {
+      "id": "steel-included",
+      "name": "Steel (Included)"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/e33-1.webp",
+    "alt": "E33 insert",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/e33-2.webp",
+     "alt": "E33 insert",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/e33-3.webp",
+     "alt": "E33 insert",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/e33-4.webp",
+     "alt": "E33 insert",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/e33-5.webp",
+     "alt": "E33 insert",
+     "width": 620,
+     "height": 365
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=E33",
+  "enabled": true
+ },
+ {
+  "id": "en-e44-gas-insert",
+  "slug": "e44-gas-insert",
+  "brandId": "enviro",
+  "name": "E44",
+  "sku": "E44",
+  "fuel": "gas",
+  "kind": "insert",
+  "style": "traditional",
+  "summary": "A gas insert. Rated to heat about 2,300 square feet. 42,000 BTU maximum input.",
+  "makerDescription": "Clean face look - no louvers. IPI system with remote. 50% turn down valve. Clear View Safety Screen",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "2,300 ft²"
+   },
+   {
+    "label": "Max Input BTU (NG)",
+    "value": "42,000"
+   },
+   {
+    "label": "Min Output BTU",
+    "value": "12,300"
+   },
+   {
+    "label": "P4 Efficiency",
+    "value": "58.49%"
+   },
+   {
+    "label": "Visible Glass Area",
+    "value": "29 3/8\" W x 21 1/8\" H"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "200 CFM"
+   },
+   {
+    "label": "Install Dims",
+    "value": "34 1/2\" W x 24\" H"
+   },
+   {
+    "label": "Install Depth Range",
+    "value": "20 3/4\" - 21 3/4\""
+   }
+  ],
+  "heat": {
+   "areaSqFt": 2300,
+   "btuMax": 42000,
+   "btuMin": 12300,
+   "efficiency": "58.49%"
+  },
+  "options": [
+   {
+    "id": "surrounds",
+    "label": "Surrounds",
+    "area": "exterior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "contemporary-surround",
+      "name": "Contemporary Surround",
+      "detail": "45\" W x 30 1/8\" H"
+     },
+     {
+      "id": "modern-surround",
+      "name": "Modern Surround",
+      "detail": "45\" W x 30 1/8\" H"
+     }
+    ]
+   },
+   {
+    "id": "firebox-liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "black-enameled",
+      "name": "Black Enameled"
+     },
+     {
+      "id": "brick",
+      "name": "Brick"
+     },
+     {
+      "id": "fluted",
+      "name": "Fluted"
+     },
+     {
+      "id": "herringbone",
+      "name": "Herringbone"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/e44-1.webp",
+    "alt": "E44 insert",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/e44-2.webp",
+     "alt": "E44 insert",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/e44-3.webp",
+     "alt": "E44 insert",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/e44-4.webp",
+     "alt": "E44 insert",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/e44-5.webp",
+     "alt": "E44 insert",
+     "width": 620,
+     "height": 365
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=E44",
+  "enabled": true
+ },
+ {
+  "id": "en-ex32-gas-insert",
+  "slug": "ex32-gas-insert",
+  "brandId": "enviro",
+  "name": "EX32",
+  "sku": "EX32",
+  "fuel": "gas",
+  "kind": "insert",
+  "style": "traditional",
+  "summary": "A gas insert. Rated to heat about 1,700 square feet. 32,500 BTU maximum input.",
+  "makerDescription": "Adjustable Ember Bed Lighting. Glass or Ceramic Embers. Clean Face Look - no louvers. SIT Valve 885 (IPI System with Remote).",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "1,700 ft²"
+   },
+   {
+    "label": "Max Input BTU (NG)",
+    "value": "32,500"
+   },
+   {
+    "label": "Min Output BTU",
+    "value": "21,775"
+   },
+   {
+    "label": "P4 Efficiency",
+    "value": "74.97%"
+   },
+   {
+    "label": "Visible Glass Area",
+    "value": "24 3/8\" W x 14\" H"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "150 CFM"
+   },
+   {
+    "label": "Install Dims",
+    "value": "27 7/8\" W x 19 7/8\" H"
+   },
+   {
+    "label": "Install Depth Range",
+    "value": "16 7/16\" - 18 5/8\""
+   }
+  ],
+  "heat": {
+   "areaSqFt": 1700,
+   "btuMax": 32500,
+   "btuMin": 21775,
+   "efficiency": "74.97%"
+  },
+  "options": [
+   {
+    "id": "surrounds",
+    "label": "Surrounds",
+    "area": "exterior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "borderview-surround",
+      "name": "Borderview Surround",
+      "detail": "Powder Coated Grey, 40\" W x 26 1/8\" H"
+     },
+     {
+      "id": "borderview-plus-4s-surround",
+      "name": "Borderview Plus 4S Surround",
+      "detail": "Powder Coated Grey, 40\" W x 31\" H"
+     },
+     {
+      "id": "cast-plus-surround",
+      "name": "Cast Plus Surround",
+      "detail": "39 3/8\" W x 24 3/4\" H"
+     },
+     {
+      "id": "cast-plus-o-s-surround",
+      "name": "Cast Plus O/S Surround",
+      "detail": "50\" W x 30\" H"
+     },
+     {
+      "id": "contemporary-surround",
+      "name": "Contemporary Surround",
+      "detail": "39 7/8\" W x 25\" H"
+     },
+     {
+      "id": "designer-surround",
+      "name": "Designer Surround",
+      "detail": "Powder Coated Grey | Powder Coated Silver, 38 5/8\" W x 24 1/2\" H"
+     },
+     {
+      "id": "extruded-surround",
+      "name": "Extruded Surround",
+      "detail": "39 3/4\" W x 25 1/8\" H"
+     },
+     {
+      "id": "extruded-4s-surround",
+      "name": "Extruded 4S Surround",
+      "detail": "39 3/4\" W x 31 1/2\" H"
+     },
+     {
+      "id": "extruded-o-s-surround",
+      "name": "Extruded O/S Surround",
+      "detail": "39 3/4\" W x 29\" H"
+     },
+     {
+      "id": "galiano-surround",
+      "name": "Galiano Surround",
+      "detail": "39 7/8\" W x 25\" H"
+     },
+     {
+      "id": "o-s-contemporary-surround",
+      "name": "O/S Contemporary Surround",
+      "detail": "39 7/8\" W x 29\" H"
+     },
+     {
+      "id": "slim-surround",
+      "name": "Slim Surround",
+      "detail": "33 1/4\" W x 22\" H"
+     }
+    ]
+   },
+   {
+    "id": "firebox-liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "black-enameled",
+      "name": "Black Enameled"
+     },
+     {
+      "id": "brick",
+      "name": "Brick"
+     },
+     {
+      "id": "fluted",
+      "name": "Fluted"
+     },
+     {
+      "id": "graphite-grey-brick",
+      "name": "Graphite Grey Brick"
+     }
+    ]
+   },
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "forgeworks-face",
+      "name": "Forgeworks Face"
+     },
+     {
+      "id": "midnight-bronze",
+      "name": "Midnight Bronze"
+     },
+     {
+      "id": "brushed-graphite",
+      "name": "Brushed Graphite"
+     },
+     {
+      "id": "trimmable-filler-panel",
+      "name": "Trimmable Filler Panel"
+     },
+     {
+      "id": "46-w-x-38-h",
+      "name": "46\" W x 38\" H"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/ex32-1.webp",
+    "alt": "EX32 insert",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/ex32-2.webp",
+     "alt": "EX32 insert",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/ex32-3.webp",
+     "alt": "EX32 insert",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/ex32-4.webp",
+     "alt": "EX32 insert",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/ex32-5.webp",
+     "alt": "EX32 insert",
+     "width": 620,
+     "height": 365
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=EX32",
+  "enabled": true
+ },
+ {
+  "id": "en-ex35-gas-insert",
+  "slug": "ex35-gas-insert",
+  "brandId": "enviro",
+  "name": "EX35",
+  "sku": "EX35",
+  "fuel": "gas",
+  "kind": "insert",
+  "style": "traditional",
+  "summary": "A gas insert. Rated to heat about 1,900 square feet. 35,000 BTU maximum input.",
+  "makerDescription": "Adjustable Ember Bed Lighting. Glass or Ceramic Embers. Clean Face Look - no louvers. SIT Valve 885 (IPI System with Remote).",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "1,900 ft²"
+   },
+   {
+    "label": "Max Input BTU (NG)",
+    "value": "35,000"
+   },
+   {
+    "label": "Min Output BTU",
+    "value": "23,450"
+   },
+   {
+    "label": "P4 Efficiency",
+    "value": "74.11%"
+   },
+   {
+    "label": "Visible Glass Area",
+    "value": "26 3/8\" W x 16 1/8\" H"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "150 CFM"
+   },
+   {
+    "label": "Install Dims",
+    "value": "32\" W x 20\" H"
+   },
+   {
+    "label": "Install Depth Range",
+    "value": "17 7/8\" - 20 1/4\""
+   }
+  ],
+  "heat": {
+   "areaSqFt": 1900,
+   "btuMax": 35000,
+   "btuMin": 23450,
+   "efficiency": "74.11%"
+  },
+  "options": [
+   {
+    "id": "surrounds",
+    "label": "Surrounds",
+    "area": "exterior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "cast-plus-surround",
+      "name": "Cast Plus Surround",
+      "detail": "42 1/4\" W x 25 1/4\" H"
+     },
+     {
+      "id": "cast-plus-o-s-surround",
+      "name": "Cast Plus O/S Surround",
+      "detail": "51 3/4\" W x 30\" H"
+     },
+     {
+      "id": "contemporary-surround",
+      "name": "Contemporary Surround",
+      "detail": "44 1/8\" W x 26 1/2\" H"
+     },
+     {
+      "id": "designer-surround",
+      "name": "Designer Surround",
+      "detail": "Powder Coated Grey, 41 3/4\" W x 25\" H"
+     },
+     {
+      "id": "galiano-surround",
+      "name": "Galiano Surround",
+      "detail": "44\" W x 26 1/2\" H"
+     },
+     {
+      "id": "o-s-contemporary-surround",
+      "name": "O/S Contemporary Surround",
+      "detail": "44\" W x 29\" H"
+     },
+     {
+      "id": "slim-surround",
+      "name": "Slim Surround",
+      "detail": "36\" W x 22 1/4\" H"
+     }
+    ]
+   },
+   {
+    "id": "firebox-liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "black-enameled",
+      "name": "Black Enameled"
+     },
+     {
+      "id": "brick",
+      "name": "Brick"
+     },
+     {
+      "id": "fluted",
+      "name": "Fluted"
+     },
+     {
+      "id": "graphite-grey-brick",
+      "name": "Graphite Grey Brick"
+     }
+    ]
+   },
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "forgeworks-face",
+      "name": "Forgeworks Face"
+     },
+     {
+      "id": "midnight-bronze",
+      "name": "Midnight Bronze"
+     },
+     {
+      "id": "42-w-x-25-1-8-h",
+      "name": "42\" W x 25 1/8\" H"
+     },
+     {
+      "id": "brushed-graphite",
+      "name": "Brushed Graphite"
+     },
+     {
+      "id": "trimmable-filler-panel",
+      "name": "Trimmable Filler Panel"
+     },
+     {
+      "id": "46-w-x-38-h",
+      "name": "46\" W x 38\" H"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/ex35-1.webp",
+    "alt": "EX35 insert",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/ex35-2.webp",
+     "alt": "EX35 insert",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/ex35-3.webp",
+     "alt": "EX35 insert",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/ex35-4.webp",
+     "alt": "EX35 insert",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/ex35-5.webp",
+     "alt": "EX35 insert",
+     "width": 620,
+     "height": 365
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=EX35",
+  "enabled": true
+ },
+ {
+  "id": "en-q1-gas-insert",
+  "slug": "q1-gas-insert",
+  "brandId": "enviro",
+  "name": "Q1",
+  "sku": "Q1FPI",
+  "fuel": "gas",
+  "kind": "insert",
+  "style": "traditional",
+  "summary": "A gas insert. Rated to heat about 1,100 square feet. 20,000 BTU maximum input.",
+  "makerDescription": "Clean face look - no louvers. IPI System with Remote Clear View Safety Screen Hand welded firebox.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "1,100 ft²"
+   },
+   {
+    "label": "Max Input BTU (NG)",
+    "value": "20,000"
+   },
+   {
+    "label": "Min Output BTU",
+    "value": "13,400"
+   },
+   {
+    "label": "P4 Efficiency",
+    "value": "74.5%"
+   },
+   {
+    "label": "Visible Glass Area",
+    "value": "16 1/2\" W x 18 3/4\" H"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "150 CFM"
+   },
+   {
+    "label": "Weight",
+    "value": "110 lbs"
+   },
+   {
+    "label": "Install Dims",
+    "value": "20 1/4\" W x 27 1/2\" H"
+   },
+   {
+    "label": "Install Depth Range",
+    "value": "13 1/8\" - 15 3/4\""
+   }
+  ],
+  "heat": {
+   "areaSqFt": 1100,
+   "btuMax": 20000,
+   "btuMin": 13400,
+   "efficiency": "74.5%"
+  },
+  "options": [
+   {
+    "id": "surrounds",
+    "label": "Surrounds",
+    "area": "exterior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "minimal-3s-surround",
+      "name": "Minimal 3S Surround",
+      "detail": "22 3/4\" W x 26 7/16\" H"
+     },
+     {
+      "id": "modern-surround",
+      "name": "Modern Surround",
+      "detail": "30\" W x 30\" H"
+     }
+    ]
+   },
+   {
+    "id": "firebox-liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "black-enameled",
+      "name": "Black Enameled"
+     },
+     {
+      "id": "ceramic-brick",
+      "name": "Ceramic Brick"
+     },
+     {
+      "id": "ledgestone",
+      "name": "Ledgestone"
+     },
+     {
+      "id": "steel-included",
+      "name": "Steel (Included)"
+     }
+    ]
+   },
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "contemporary-w-trimmable-panel",
+      "name": "Contemporary w/Trimmable Panel"
+     },
+     {
+      "id": "36-w-x-32-h",
+      "name": "36\" W x 32\" H"
+     },
+     {
+      "id": "trimmable-panel",
+      "name": "Trimmable Panel"
+     },
+     {
+      "id": "36-w-x-32-h",
+      "name": "36\" W x 32\" H"
+     },
+     {
+      "id": "victorian-face",
+      "name": "Victorian Face"
+     },
+     {
+      "id": "black-antique-bronze",
+      "name": "Black | Antique Bronze"
+     },
+     {
+      "id": "31-3-8-w-x-30-1-2-h",
+      "name": "31 3/8\" W x 30 1/2\" H"
+     },
+     {
+      "id": "victorian-depth-reducing-panel",
+      "name": "Victorian Depth Reducing Panel"
+     },
+     {
+      "id": "36-w-x-34-h",
+      "name": "36\" W x 34\" H"
+     },
+     {
+      "id": "black-enameled-or-ledgestone-liners",
+      "name": "Black Enameled or Ledgestone Liners"
+     },
+     {
+      "id": "q1-co-linear-venting-insert-adapter-kit",
+      "name": "Q1 Co-linear Venting Insert Adapter Kit"
+     },
+     {
+      "id": "q1-clean-face-trim-kit",
+      "name": "Q1 Clean Face Trim Kit"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/q1fpi-1.webp",
+    "alt": "Q1 insert",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/q1fpi-2.webp",
+     "alt": "Q1 insert",
+     "width": 762,
+     "height": 449
+    },
+    {
+     "src": "/catalog/enviro/gallery/q1fpi-3.webp",
+     "alt": "Q1 insert",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/q1fpi-4.webp",
+     "alt": "Q1 insert",
+     "width": 762,
+     "height": 449
+    },
+    {
+     "src": "/catalog/enviro/gallery/q1fpi-1t.webp",
+     "alt": "Q1 insert",
+     "width": 75,
+     "height": 75
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=Q1FPI",
+  "enabled": true
+ },
+ {
+  "id": "en-ri30-fire-under-log-gas-insert",
+  "slug": "ri30-fire-under-log-gas-insert",
+  "brandId": "enviro",
+  "name": "RI30 Fire-Under-Log",
+  "sku": "Ri30",
+  "fuel": "gas",
+  "kind": "insert",
+  "style": "traditional",
+  "summary": "A gas insert. Rated to heat about 1,700 square feet. 32,000 BTU maximum input.",
+  "makerDescription": "Fire-Under-Log Technology Ember Bed Lighting Run-Quiet Fan System Limited Lifetime Warranty",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "1,700 ft²"
+   },
+   {
+    "label": "Max Input BTU (NG)",
+    "value": "32,000"
+   },
+   {
+    "label": "Min Output BTU",
+    "value": "21,440"
+   },
+   {
+    "label": "P4 Efficiency",
+    "value": "68%"
+   },
+   {
+    "label": "Visible Glass Area",
+    "value": "26 3/8\" W x 18 3/8\" H"
+   },
+   {
+    "label": "Install Dims",
+    "value": "30 1/2\" W x 20\" H"
+   },
+   {
+    "label": "Install Depth Range",
+    "value": "15\" - 17\""
+   }
+  ],
+  "heat": {
+   "areaSqFt": 1700,
+   "btuMax": 32000,
+   "btuMin": 21440,
+   "efficiency": "68%"
+  },
+  "options": [
+   {
+    "id": "surrounds",
+    "label": "Surrounds",
+    "area": "exterior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "contemporary-surround",
+      "name": "Contemporary Surround",
+      "detail": "40\" W x 25 1/4\" H"
+     },
+     {
+      "id": "galiano-surround",
+      "name": "Galiano Surround",
+      "detail": "40\" W x 25 1/4\" H"
+     },
+     {
+      "id": "slim-surround",
+      "name": "Slim Surround",
+      "detail": "33 1/2\" W x 22\" H"
+     }
+    ]
+   },
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "4s-trimmable-panel",
+      "name": "4S Trimmable Panel"
+     },
+     {
+      "id": "46-w-x-38-h",
+      "name": "46\" W x 38\" H"
+     },
+     {
+      "id": "forgeworks-face",
+      "name": "Forgeworks Face"
+     },
+     {
+      "id": "40-w-x-26-3-8-h",
+      "name": "40\" W x 26 3/8\" H"
+     },
+     {
+      "id": "trimmable-panel",
+      "name": "Trimmable Panel"
+     },
+     {
+      "id": "46-w-x-38-h",
+      "name": "46\" W x 38\" H"
+     },
+     {
+      "id": "included-liner",
+      "name": "Included Liner:"
+     },
+     {
+      "id": "painted-steel",
+      "name": "Painted Steel"
+     },
+     {
+      "id": "optional-liners",
+      "name": "Optional Liners:"
+     },
+     {
+      "id": "black-enameled-brick-herringbone-ledgestone",
+      "name": "Black Enameled | Brick | Herringbone | Ledgestone"
+     },
+     {
+      "id": "traditional-log-set",
+      "name": "Traditional Log Set"
+     },
+     {
+      "id": "birch-log-set",
+      "name": "Birch Log Set"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/ri30-1.webp",
+    "alt": "RI30 Fire-Under-Log insert",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/ri30-2.webp",
+     "alt": "RI30 Fire-Under-Log insert",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/ri30-3.webp",
+     "alt": "RI30 Fire-Under-Log insert",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/ri30-4.webp",
+     "alt": "RI30 Fire-Under-Log insert",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/ri30-5.webp",
+     "alt": "RI30 Fire-Under-Log insert",
+     "width": 620,
+     "height": 365
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=Ri30",
+  "enabled": true
+ },
+ {
+  "id": "en-ef2-pellet-insert",
+  "slug": "ef2-pellet-insert",
+  "brandId": "enviro",
+  "name": "EF2",
+  "sku": "EF2-1-FPI",
+  "fuel": "pellet",
+  "kind": "insert",
+  "style": "traditional",
+  "summary": "A pellet insert. Rated to heat about 2,000 square feet. 40,000 BTU maximum input.",
+  "makerDescription": "Firebox brick liner. Recessed hopper lid handle. Heavy-duty heat exchanger. Welded firebox.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "2,000 ft²"
+   },
+   {
+    "label": "Max Input BTU",
+    "value": "40,000"
+   },
+   {
+    "label": "Efficiency",
+    "value": "77%"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "200 CFM"
+   },
+   {
+    "label": "EPA Emissions",
+    "value": "1.4 gms"
+   },
+   {
+    "label": "Hopper Capacity",
+    "value": "55 lbs"
+   },
+   {
+    "label": "Install Dims",
+    "value": "24\" W x 22 3/4\" H x 11\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 2000,
+   "btuMax": 40000,
+   "efficiency": "77%"
+  },
+  "options": [
+   {
+    "id": "surrounds",
+    "label": "Surrounds",
+    "area": "exterior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "included-surround",
+      "name": "(Included) Surround",
+      "detail": "40\" W x 30 1/4\" H"
+     },
+     {
+      "id": "o-s-surround",
+      "name": "O/S Surround",
+      "detail": "45\" W x 33\" H"
+     }
+    ]
+   },
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "optional-log-set",
+      "name": "Optional log set."
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/ef2-1-fpi-1.webp",
+    "alt": "EF2 insert",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": []
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=EF2-1-FPI",
+  "enabled": true
+ },
+ {
+  "id": "en-m55-cast-iron-pellet-insert",
+  "slug": "m55-cast-iron-pellet-insert",
+  "brandId": "enviro",
+  "name": "M55 Cast Iron",
+  "sku": "M55CI",
+  "fuel": "pellet",
+  "kind": "insert",
+  "style": "traditional",
+  "summary": "A pellet insert. Rated to heat about 2,500 square feet. 55,000 BTU maximum input.",
+  "makerDescription": "Cast iron construction. Multi-fuel compatible. Air wash system for cleaner glass. Operates with cast doors open or closed.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "2,500 ft²"
+   },
+   {
+    "label": "Max Input BTU",
+    "value": "55,000"
+   },
+   {
+    "label": "Efficiency",
+    "value": "78%"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "200 CFM"
+   },
+   {
+    "label": "EPA Emissions",
+    "value": "1.82 gms"
+   },
+   {
+    "label": "Hopper Capacity",
+    "value": "60 lbs"
+   },
+   {
+    "label": "Install Dims",
+    "value": "25\" W x 23\" H x 16\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 2500,
+   "btuMax": 55000,
+   "efficiency": "78%"
+  },
+  "options": [
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "o-s-filler-panel",
+      "name": "O/S Filler Panel"
+     },
+     {
+      "id": "34-w-x-50-h",
+      "name": "34\" W x 50\" H"
+     },
+     {
+      "id": "fresh-air-intake-coupler",
+      "name": "Fresh Air Intake Coupler."
+     },
+     {
+      "id": "service-rails",
+      "name": "Service rails."
+     },
+     {
+      "id": "log-set",
+      "name": "Log Set."
+     },
+     {
+      "id": "exhaust-starter-tube",
+      "name": "Exhaust Starter Tube."
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/m55ci-1.webp",
+    "alt": "M55 Cast Iron insert",
+    "width": 762,
+    "height": 449
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/m55ci-3.webp",
+     "alt": "M55 Cast Iron insert",
+     "width": 762,
+     "height": 449
+    },
+    {
+     "src": "/catalog/enviro/gallery/m55ci-4.webp",
+     "alt": "M55 Cast Iron insert",
+     "width": 762,
+     "height": 449
+    },
+    {
+     "src": "/catalog/enviro/gallery/m55ci-1t.webp",
+     "alt": "M55 Cast Iron insert",
+     "width": 75,
+     "height": 75
+    },
+    {
+     "src": "/catalog/enviro/gallery/m55ci-3t.webp",
+     "alt": "M55 Cast Iron insert",
+     "width": 75,
+     "height": 75
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=M55CI",
+  "enabled": true
+ },
+ {
+  "id": "en-meridian-pellet-insert",
+  "slug": "meridian-pellet-insert",
+  "brandId": "enviro",
+  "name": "Meridian",
+  "sku": "EFMFPI-A",
+  "fuel": "pellet",
+  "kind": "insert",
+  "style": "traditional",
+  "summary": "A pellet insert. Rated to heat about 2,000 square feet. 45,000 BTU maximum input.",
+  "makerDescription": "Large arched bay door. Tri-mode thermostat compatible. Remote thermostat compatible. Large heat exchanger.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "2,000 ft²"
+   },
+   {
+    "label": "Max Input BTU",
+    "value": "45,000"
+   },
+   {
+    "label": "Efficiency*",
+    "value": "75%"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "160 CFM"
+   },
+   {
+    "label": "EPA Emissions",
+    "value": "1.84 gms"
+   },
+   {
+    "label": "Hopper Capacity",
+    "value": "55 lbs"
+   },
+   {
+    "label": "Install Dims",
+    "value": "22\" W x 22 3/4\" H x 11\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 2000,
+   "btuMax": 45000,
+   "efficiency": "75%"
+  },
+  "options": [
+   {
+    "id": "surrounds",
+    "label": "Surrounds",
+    "area": "exterior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "oversize-surround",
+      "name": "Oversize Surround",
+      "detail": "46\" W x 33\" H"
+     },
+     {
+      "id": "regular-surround",
+      "name": "Regular Surround",
+      "detail": "40\" W x 30\" H"
+     }
+    ]
+   },
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "log-set-1-pc",
+      "name": "Log Set (1 pc.)"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/efmfpi-a-1.webp",
+    "alt": "Meridian insert",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/efmfpi-a-2.webp",
+     "alt": "Meridian insert",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/efmfpi-a-3.webp",
+     "alt": "Meridian insert",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/efmfpi-a-1t.webp",
+     "alt": "Meridian insert",
+     "width": 75,
+     "height": 75
+    },
+    {
+     "src": "/catalog/enviro/gallery/efmfpi-a-2t.webp",
+     "alt": "Meridian insert",
+     "width": 75,
+     "height": 75
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=EFMFPI-A",
+  "enabled": true
+ },
+ {
+  "id": "en-berkeley-cast-iron-gas-stove",
+  "slug": "berkeley-cast-iron-gas-stove",
+  "brandId": "enviro",
+  "name": "Berkeley Cast Iron",
+  "sku": "BRK",
+  "fuel": "gas",
+  "kind": "stove",
+  "style": "freestanding",
+  "summary": "A gas stove. Rated to heat about 2,000 square feet. 40,000 BTU maximum input.",
+  "makerDescription": "Split-flow ceramic burner (SIT IPI Proflame 2 models only). Fluted liner. Heavy duty heat exchanger. Clear View Safety Screen.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "2,000 ft²"
+   },
+   {
+    "label": "Max Input BTU (NG)",
+    "value": "40,000"
+   },
+   {
+    "label": "P4 Efficiency",
+    "value": "66.6%"
+   },
+   {
+    "label": "Visible Glass Area",
+    "value": "19 3/4\" W x 15\" H"
+   },
+   {
+    "label": "Unit Dims",
+    "value": "30\" W x 31\" H x 23\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 2000,
+   "btuMax": 40000,
+   "efficiency": "66.6%"
+  },
+  "dimensions": {
+   "text": "30\" W x 31\" H x 23\" D",
+   "width": 30,
+   "height": 31,
+   "depth": 23
+  },
+  "options": [
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "painted-black-or-antique-chestnut-finish",
+      "name": "Painted Black or Antique Chestnut finish."
+     },
+     {
+      "id": "thermostat-or-remote-compatible",
+      "name": "Thermostat or remote compatible."
+     },
+     {
+      "id": "ng-to-lp-conversion-kit",
+      "name": "NG to LP conversion kit."
+     },
+     {
+      "id": "b-vent-draft-hood-adapter",
+      "name": "B Vent draft hood adapter."
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/brk-1.webp",
+    "alt": "Berkeley Cast Iron FS stove",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/brk-2.webp",
+     "alt": "Berkeley Cast Iron FS stove",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/brk-3.webp",
+     "alt": "Berkeley Cast Iron FS stove",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/brk-4.webp",
+     "alt": "Berkeley Cast Iron FS stove",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/brk-5.webp",
+     "alt": "Berkeley Cast Iron FS stove",
+     "width": 620,
+     "height": 365
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=BRK",
+  "enabled": true
+ },
+ {
+  "id": "en-cube-gas-stove",
+  "slug": "cube-gas-stove",
+  "brandId": "enviro",
+  "name": "Cube",
+  "sku": "CUBE",
+  "fuel": "gas",
+  "kind": "stove",
+  "style": "freestanding",
+  "summary": "A gas stove. Rated to heat about 1,700 square feet. 30,000 BTU maximum input.",
+  "makerDescription": "High Definition Log Set (Included) Painted Black Finish (Included) Ceramic Fluted Liner (Included) Top / Rear Vent Convertible",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "1,700 ft²"
+   },
+   {
+    "label": "Max Input BTU (NG)",
+    "value": "30,000"
+   },
+   {
+    "label": "P4 Efficiency",
+    "value": "60%"
+   },
+   {
+    "label": "Visible Glass Area",
+    "value": "18 7/8\" W x 13 5/8\" H"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "150 CFM"
+   },
+   {
+    "label": "Unit Dims",
+    "value": "w/Table"
+   },
+   {
+    "label": "24\" W x 351/8\" H x 173/4\" D",
+    "value": "w/Long Table"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 1700,
+   "btuMax": 30000,
+   "efficiency": "60%"
+  },
+  "dimensions": {
+   "text": "w/Table"
+  },
+  "options": [
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "fluted-liner",
+      "name": "Fluted Liner"
+     },
+     {
+      "id": "table-or-left-right-reversible-long-table",
+      "name": "Table or left/right reversible Long Table."
+     },
+     {
+      "id": "cypress-green-bordeaux-red-and-sage-green-panel-kits-available-separately",
+      "name": "Cypress Green, Bordeaux Red, and Sage Green Panel Kits available separately."
+     },
+     {
+      "id": "150-cfm-fan-kit",
+      "name": "150 CFM Fan Kit"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/cube-1.webp",
+    "alt": "Cube stove",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/cube-2.webp",
+     "alt": "Cube stove",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/cube-3.webp",
+     "alt": "Cube stove",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/cube-4.webp",
+     "alt": "Cube stove",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/cube-5.webp",
+     "alt": "Cube stove",
+     "width": 620,
+     "height": 365
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=CUBE",
+  "enabled": true
+ },
+ {
+  "id": "en-s20-gas-stove",
+  "slug": "s20-gas-stove",
+  "brandId": "enviro",
+  "name": "S20",
+  "sku": "S20",
+  "fuel": "gas",
+  "kind": "stove",
+  "style": "freestanding",
+  "summary": "A gas stove. Rated to heat about 1,100 square feet. 20,000 BTU maximum input.",
+  "makerDescription": "Ceramic log set. Charcoal fluted liner. Clear View Safety Screen. Easy access control panel.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "1,100 ft²"
+   },
+   {
+    "label": "Max Input BTU (NG)",
+    "value": "20,000"
+   },
+   {
+    "label": "P4 Efficiency",
+    "value": "74.5%"
+   },
+   {
+    "label": "Visible Glass Area",
+    "value": "16 1/2\" W x 18 3/4\" H"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "150 CFM"
+   },
+   {
+    "label": "Unit Dims",
+    "value": "25\" W x 34\" H x 19\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 1100,
+   "btuMax": 20000,
+   "efficiency": "74.5%"
+  },
+  "dimensions": {
+   "text": "25\" W x 34\" H x 19\" D",
+   "width": 25,
+   "height": 34,
+   "depth": 19
+  },
+  "options": [
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "fluted-liner",
+      "name": "Fluted Liner"
+     },
+     {
+      "id": "thermostat-or-remote-compatible",
+      "name": "Thermostat or Remote Compatible."
+     },
+     {
+      "id": "ng-to-lp-conversion-kit-ipi",
+      "name": "NG to LP Conversion Kit - IPI."
+     },
+     {
+      "id": "nova-or-ipi-editions-available",
+      "name": "Nova or IPI editions available."
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/s20-1.webp",
+    "alt": "S20 stove",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/s20-2.webp",
+     "alt": "S20 stove",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/s20-3.webp",
+     "alt": "S20 stove",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/s20-4.webp",
+     "alt": "S20 stove",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/s20-5.webp",
+     "alt": "S20 stove",
+     "width": 620,
+     "height": 365
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=S20",
+  "enabled": true
+ },
+ {
+  "id": "en-s40-gas-stove",
+  "slug": "s40-gas-stove",
+  "brandId": "enviro",
+  "name": "S40",
+  "sku": "S40",
+  "fuel": "gas",
+  "kind": "stove",
+  "style": "freestanding",
+  "summary": "A gas stove. Rated to heat about 2,000 square feet. 40,000 BTU maximum input.",
+  "makerDescription": "Ceramic log set & burner. Charcoal fluted liner. Heavy duty heat exchanger. Easy access controls.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "2,000 ft²"
+   },
+   {
+    "label": "Max Input BTU (NG)",
+    "value": "40,000"
+   },
+   {
+    "label": "P4 Efficiency",
+    "value": "65.9%"
+   },
+   {
+    "label": "Visible Glass Area",
+    "value": "19 3/4\" W x 16 5/8\" H"
+   },
+   {
+    "label": "Unit Dims",
+    "value": "26\" W x 29\" H x 23\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 2000,
+   "btuMax": 40000,
+   "efficiency": "65.9%"
+  },
+  "dimensions": {
+   "text": "26\" W x 29\" H x 23\" D",
+   "width": 26,
+   "height": 29,
+   "depth": 23
+  },
+  "options": [
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "fluted-liner",
+      "name": "Fluted Liner"
+     },
+     {
+      "id": "thermostat-or-remote-compatible",
+      "name": "Thermostat or remote compatible."
+     },
+     {
+      "id": "ng-to-lp-conversion-kit",
+      "name": "NG to LP conversion kit."
+     },
+     {
+      "id": "b-vent-adapter",
+      "name": "B Vent adapter."
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/s40-1.webp",
+    "alt": "S40 stove",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/s40-2.webp",
+     "alt": "S40 stove",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/s40-3.webp",
+     "alt": "S40 stove",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/s40-4.webp",
+     "alt": "S40 stove",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/s40-5.webp",
+     "alt": "S40 stove",
+     "width": 620,
+     "height": 365
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=S40",
+  "enabled": true
+ },
+ {
+  "id": "en-s50-gas-stove",
+  "slug": "s50-gas-stove",
+  "brandId": "enviro",
+  "name": "S50",
+  "sku": "S50",
+  "fuel": "gas",
+  "kind": "stove",
+  "style": "freestanding",
+  "summary": "A gas stove. Rated to heat about 1,500 square feet. 30,000 BTU maximum input.",
+  "makerDescription": "Available in Painted Metallic Black or Powder Coated Carrara White. Top and rear vent capabilities.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "1,500 ft²"
+   },
+   {
+    "label": "Max Input BTU (NG)",
+    "value": "30,000"
+   },
+   {
+    "label": "P4 Efficiency",
+    "value": "68%"
+   },
+   {
+    "label": "Visible Glass Area",
+    "value": "18\" W x 15\" H"
+   },
+   {
+    "label": "Unit Dims",
+    "value": "20\" W x 46\" H x 20\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 1500,
+   "btuMax": 30000,
+   "efficiency": "68%"
+  },
+  "dimensions": {
+   "text": "20\" W x 46\" H x 20\" D",
+   "width": 20,
+   "height": 46,
+   "depth": 20
+  },
+  "options": [
+   {
+    "id": "firebox-liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "black-glass",
+      "name": "Black Glass"
+     },
+     {
+      "id": "fluted",
+      "name": "Fluted"
+     }
+    ]
+   },
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "steel-included",
+      "name": "Steel (Included)"
+     },
+     {
+      "id": "optional-door-covers-white-red-or-green",
+      "name": "Optional Door Covers (White, Red or Green)"
+     },
+     {
+      "id": "traditional-log-set",
+      "name": "Traditional Log Set"
+     },
+     {
+      "id": "birch-log-set",
+      "name": "Birch Log Set"
+     },
+     {
+      "id": "river-rock-set-w-twigs",
+      "name": "River Rock Set w/Twigs"
+     },
+     {
+      "id": "diamond-glass-media-black",
+      "name": "Diamond Glass Media - Black"
+     },
+     {
+      "id": "pole-pedestal-black-or-white",
+      "name": "Pole Pedestal (Black or White)"
+     },
+     {
+      "id": "wood-pedestal-black",
+      "name": "Wood Pedestal (Black)"
+     },
+     {
+      "id": "remote-optional",
+      "name": "Remote optional."
+     },
+     {
+      "id": "circulation-fan-kit-70-cfm",
+      "name": "Circulation fan kit 70 CFM."
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/s50-1.webp",
+    "alt": "S50 stove",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/s50-2.webp",
+     "alt": "S50 stove",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/s50-3.webp",
+     "alt": "S50 stove",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/s50-4.webp",
+     "alt": "S50 stove",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/s50-5.webp",
+     "alt": "S50 stove",
+     "width": 620,
+     "height": 365
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=S50",
+  "enabled": true
+ },
+ {
+  "id": "en-westley-cast-iron-gas-stove",
+  "slug": "westley-cast-iron-gas-stove",
+  "brandId": "enviro",
+  "name": "Westley Cast Iron",
+  "sku": "WSLY",
+  "fuel": "gas",
+  "kind": "stove",
+  "style": "freestanding",
+  "summary": "A gas stove. Rated to heat about 1,700 square feet. 29,000 BTU maximum input.",
+  "makerDescription": "Ultra High Definition Log Set Fluted liner. Heavy duty heat exchanger. Cast Iron body and legs.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "1,700 ft²"
+   },
+   {
+    "label": "Max Input BTU (NG)",
+    "value": "29,000"
+   },
+   {
+    "label": "P4 Efficiency",
+    "value": "67%"
+   },
+   {
+    "label": "Visible Glass Area",
+    "value": "17 3/4\" W x 12 1/2\" H"
+   },
+   {
+    "label": "Weight",
+    "value": "190 lbs"
+   },
+   {
+    "label": "Unit Dims",
+    "value": "27\" W x 28\" H x 20\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 1700,
+   "btuMax": 29000,
+   "efficiency": "67%"
+  },
+  "dimensions": {
+   "text": "27\" W x 28\" H x 20\" D",
+   "width": 27,
+   "height": 28,
+   "depth": 20
+  },
+  "options": [
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "painted-black-or-antique-bronze-finish",
+      "name": "Painted Black or Antique Bronze finish."
+     },
+     {
+      "id": "thermostat-or-remote-compatible",
+      "name": "Thermostat or remote compatible."
+     },
+     {
+      "id": "ng-to-lp-conversion-kit",
+      "name": "NG to LP conversion kit."
+     },
+     {
+      "id": "b-vent-draft-hood-adapter",
+      "name": "B Vent draft hood adapter."
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/wsly-1.webp",
+    "alt": "Westley Cast Iron stove",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/wsly-2.webp",
+     "alt": "Westley Cast Iron stove",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/wsly-3.webp",
+     "alt": "Westley Cast Iron stove",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/wsly-4.webp",
+     "alt": "Westley Cast Iron stove",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/wsly-5.webp",
+     "alt": "Westley Cast Iron stove",
+     "width": 620,
+     "height": 365
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=WSLY",
+  "enabled": true
+ },
+ {
+  "id": "en-westport-cast-iron-gas-stove",
+  "slug": "westport-cast-iron-gas-stove",
+  "brandId": "enviro",
+  "name": "Westport Cast Iron",
+  "sku": "WP",
+  "fuel": "gas",
+  "kind": "stove",
+  "style": "freestanding",
+  "summary": "A gas stove. Rated to heat about 1,700 square feet. 30,000 BTU maximum input.",
+  "makerDescription": "Thermostat or remote compatible. Ceramic log set. Ceramic brick liner. Heavy duty heat exchanger.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "1,700 ft²"
+   },
+   {
+    "label": "Max Input BTU (NG)",
+    "value": "30,000"
+   },
+   {
+    "label": "P4 Efficiency",
+    "value": "64.9%"
+   },
+   {
+    "label": "Visible Glass Area",
+    "value": "19 1/4\" W x 13 1/2\" H"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "150 CFM"
+   },
+   {
+    "label": "Unit Dims",
+    "value": "26\" W x 28\" H x 20\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 1700,
+   "btuMax": 30000,
+   "efficiency": "64.9%"
+  },
+  "dimensions": {
+   "text": "26\" W x 28\" H x 20\" D",
+   "width": 26,
+   "height": 28,
+   "depth": 20
+  },
+  "options": [
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "painted-black-or-antique-chestnut-finish",
+      "name": "Painted Black or Antique Chestnut Finish."
+     },
+     {
+      "id": "fan-kit-150-cfm",
+      "name": "Fan Kit 150 CFM."
+     },
+     {
+      "id": "b-vent-draft-hood-adapter",
+      "name": "B Vent Draft Hood Adapter"
+     },
+     {
+      "id": "dv-vent-kit-with-coupler",
+      "name": "DV Vent Kit with Coupler."
+     },
+     {
+      "id": "lp-conversion-kit-available",
+      "name": "LP Conversion Kit available."
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/wp-1.webp",
+    "alt": "Westport Cast Iron stove",
+    "width": 762,
+    "height": 449
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/wp-2.webp",
+     "alt": "Westport Cast Iron stove",
+     "width": 762,
+     "height": 449
+    },
+    {
+     "src": "/catalog/enviro/gallery/wp-3.webp",
+     "alt": "Westport Cast Iron stove",
+     "width": 762,
+     "height": 449
+    },
+    {
+     "src": "/catalog/enviro/gallery/wp-4.webp",
+     "alt": "Westport Cast Iron stove",
+     "width": 762,
+     "height": 449
+    },
+    {
+     "src": "/catalog/enviro/gallery/wp-5.webp",
+     "alt": "Westport Cast Iron stove",
+     "width": 762,
+     "height": 449
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=WP",
+  "enabled": true
+ },
+ {
+  "id": "en-westport-steel-gas-stove",
+  "slug": "westport-steel-gas-stove",
+  "brandId": "enviro",
+  "name": "Westport Steel",
+  "sku": "WP-S-STL",
+  "fuel": "gas",
+  "kind": "stove",
+  "style": "freestanding",
+  "summary": "A gas stove. Rated to heat about 1,700 square feet. 30,000 BTU maximum input.",
+  "makerDescription": "Thermostat or remote compatible. Ceramic log set. Safety Screen Heavy duty heat exchanger.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "1,700 ft²"
+   },
+   {
+    "label": "Max Input BTU (NG)",
+    "value": "30,000"
+   },
+   {
+    "label": "P4 Efficiency",
+    "value": "64.9%"
+   },
+   {
+    "label": "Visible Glass Area",
+    "value": "19 1/4\" W x 13 1/2\" H"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "150 CFM"
+   },
+   {
+    "label": "Unit Dims",
+    "value": "26\" W x 28\" H x 20\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 1700,
+   "btuMax": 30000,
+   "efficiency": "64.9%"
+  },
+  "dimensions": {
+   "text": "26\" W x 28\" H x 20\" D",
+   "width": 26,
+   "height": 28,
+   "depth": 20
+  },
+  "options": [
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "fan-kit-150-cfm",
+      "name": "Fan Kit 150 CFM."
+     },
+     {
+      "id": "b-vent-draft-hood-adapter",
+      "name": "B Vent Draft Hood Adapter"
+     },
+     {
+      "id": "dv-vent-kit-with-coupler",
+      "name": "DV Vent Kit with Coupler."
+     },
+     {
+      "id": "lp-conversion-kit-available",
+      "name": "LP Conversion Kit available."
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/wp-s-stl-1.webp",
+    "alt": "Westport Steel stove",
+    "width": 762,
+    "height": 449
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/wp-s-stl-2.webp",
+     "alt": "Westport Steel stove",
+     "width": 762,
+     "height": 449
+    },
+    {
+     "src": "/catalog/enviro/gallery/wp-s-stl-3.webp",
+     "alt": "Westport Steel stove",
+     "width": 762,
+     "height": 449
+    },
+    {
+     "src": "/catalog/enviro/gallery/wp-s-stl-4.webp",
+     "alt": "Westport Steel stove",
+     "width": 762,
+     "height": 449
+    },
+    {
+     "src": "/catalog/enviro/gallery/wp-s-stl-1t.webp",
+     "alt": "Westport Steel stove",
+     "width": 75,
+     "height": 75
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=WP-S-STL",
+  "enabled": true
+ },
+ {
+  "id": "en-ef2-pellet-stove",
+  "slug": "ef2-pellet-stove",
+  "brandId": "enviro",
+  "name": "EF2",
+  "sku": "EF2-1-FS",
+  "fuel": "pellet",
+  "kind": "stove",
+  "style": "freestanding",
+  "summary": "A pellet stove. Rated to heat about 2,000 square feet. 40,000 BTU maximum input.",
+  "makerDescription": "Firebox brick liner. Recessed hopper lid handle. Heavy-duty heat exchanger. Welded firebox.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "2,000 ft²"
+   },
+   {
+    "label": "Max Input BTU",
+    "value": "40,000"
+   },
+   {
+    "label": "Efficiency",
+    "value": "77%"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "200 CFM"
+   },
+   {
+    "label": "EPA Emissions",
+    "value": "1.4 gms"
+   },
+   {
+    "label": "Hopper Capacity",
+    "value": "55 lbs"
+   },
+   {
+    "label": "Unit Dims",
+    "value": "22\" W x 30\" H x 24\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 2000,
+   "btuMax": 40000,
+   "efficiency": "77%"
+  },
+  "dimensions": {
+   "text": "22\" W x 30\" H x 24\" D",
+   "width": 22,
+   "height": 30,
+   "depth": 24
+  },
+  "options": [
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "optional-log-set",
+      "name": "Optional log set."
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/ef2-1-fs-1.webp",
+    "alt": "EF2 stove",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": []
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=EF2-1-FS",
+  "enabled": true
+ },
+ {
+  "id": "en-m55-pellet-stove",
+  "slug": "m55-pellet-stove",
+  "brandId": "enviro",
+  "name": "M55",
+  "sku": "M55-FS",
+  "fuel": "pellet",
+  "kind": "stove",
+  "style": "freestanding",
+  "summary": "A pellet stove. Rated to heat about 2,500 square feet. 55,000 BTU maximum input.",
+  "makerDescription": "Huge 80 lbs hopper capacity. Fluted cast iron firebox liner. Tri-mode thermostat compatible. Remote thermostat compatible.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "2,500 ft²"
+   },
+   {
+    "label": "Max Input BTU",
+    "value": "55,000"
+   },
+   {
+    "label": "Efficiency",
+    "value": "78%"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "300 CFM"
+   },
+   {
+    "label": "EPA Emissions",
+    "value": "1.82 gms"
+   },
+   {
+    "label": "Hopper Capacity",
+    "value": "80 lbs"
+   },
+   {
+    "label": "Weight",
+    "value": "300 lbs"
+   },
+   {
+    "label": "Unit Dims",
+    "value": "24\" W x 37\" H x 29\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 2500,
+   "btuMax": 55000,
+   "efficiency": "78%"
+  },
+  "dimensions": {
+   "text": "24\" W x 37\" H x 29\" D",
+   "width": 24,
+   "height": 37,
+   "depth": 29
+  },
+  "options": [
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "ceramic-refractory-brick-liner-kit",
+      "name": "Ceramic Refractory Brick Liner Kit."
+     },
+     {
+      "id": "hopper-extension-kit",
+      "name": "Hopper Extension Kit."
+     },
+     {
+      "id": "log-set",
+      "name": "Log Set."
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/m55-fs-1.webp",
+    "alt": "M55 stove",
+    "width": 762,
+    "height": 449
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/m55-fs-2.webp",
+     "alt": "M55 stove",
+     "width": 762,
+     "height": 449
+    },
+    {
+     "src": "/catalog/enviro/gallery/m55-fs-3.webp",
+     "alt": "M55 stove",
+     "width": 762,
+     "height": 449
+    },
+    {
+     "src": "/catalog/enviro/gallery/m55-fs-1t.webp",
+     "alt": "M55 stove",
+     "width": 75,
+     "height": 75
+    },
+    {
+     "src": "/catalog/enviro/gallery/m55-fs-2t.webp",
+     "alt": "M55 stove",
+     "width": 75,
+     "height": 75
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=M55-FS",
+  "enabled": true
+ },
+ {
+  "id": "en-m55-cast-iron-pellet-stove",
+  "slug": "m55-cast-iron-pellet-stove",
+  "brandId": "enviro",
+  "name": "M55 Cast Iron",
+  "sku": "M55C-FS",
+  "fuel": "pellet",
+  "kind": "stove",
+  "style": "freestanding",
+  "summary": "A pellet stove. Rated to heat about 2,500 square feet. 55,000 BTU maximum input.",
+  "makerDescription": "Cast iron construction. Tri-mode thermostat compatible. Large hopper capacity (60 lbs) Operates with cast doors open or closed.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "2,500 ft²"
+   },
+   {
+    "label": "Max Input BTU",
+    "value": "55,000"
+   },
+   {
+    "label": "Efficiency",
+    "value": "78%"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "300 CFM"
+   },
+   {
+    "label": "EPA Emissions",
+    "value": "1.82 gms"
+   },
+   {
+    "label": "Hopper Capacity",
+    "value": "60 lbs"
+   },
+   {
+    "label": "Weight",
+    "value": "480 lbs"
+   },
+   {
+    "label": "Unit Dims",
+    "value": "30\" W x 32\" H x 28\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 2500,
+   "btuMax": 55000,
+   "efficiency": "78%"
+  },
+  "dimensions": {
+   "text": "30\" W x 32\" H x 28\" D",
+   "width": 30,
+   "height": 32,
+   "depth": 28
+  },
+  "options": [
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "ceramic-refractory-brick-liner-kit",
+      "name": "Ceramic Refractory Brick Liner Kit."
+     },
+     {
+      "id": "log-set",
+      "name": "Log Set."
+     },
+     {
+      "id": "exhaust-starter-tube",
+      "name": "Exhaust Starter Tube."
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/m55c-fs-1.webp",
+    "alt": "M55 Cast Iron stove",
+    "width": 762,
+    "height": 449
+   },
+   "gallery": []
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=M55C-FS",
+  "enabled": true
+ },
+ {
+  "id": "en-maxx-pellet-stove",
+  "slug": "maxx-pellet-stove",
+  "brandId": "enviro",
+  "name": "MAXX",
+  "sku": "MAXX-1",
+  "fuel": "pellet",
+  "kind": "stove",
+  "style": "freestanding",
+  "summary": "A pellet stove. Rated to heat about 2,700 square feet. 60,000 BTU maximum input.",
+  "makerDescription": "Tri-mode thermostat compatible. Large 1320 in2 heat exhanger. Dual chamber ash pan removal. Automatic controls.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "2,700 ft²"
+   },
+   {
+    "label": "Max Input BTU",
+    "value": "60,000"
+   },
+   {
+    "label": "Efficiency",
+    "value": "77.4%"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "455 CFM"
+   },
+   {
+    "label": "EPA Emissions",
+    "value": "1.87 gms"
+   },
+   {
+    "label": "Hopper Capacity",
+    "value": "130 lbs"
+   },
+   {
+    "label": "Weight",
+    "value": "325 lbs"
+   },
+   {
+    "label": "Unit Dims",
+    "value": "27\" W x 42\" H x 31\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 2700,
+   "btuMax": 60000,
+   "efficiency": "77.4%"
+  },
+  "dimensions": {
+   "text": "27\" W x 42\" H x 31\" D",
+   "width": 27,
+   "height": 42,
+   "depth": 31
+  },
+  "options": [
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "includes-door-convection-fan-and-hearth-pad",
+      "name": "Includes Door, Convection Fan and Hearth Pad."
+     },
+     {
+      "id": "heat-distribution-kit",
+      "name": "Heat Distribution Kit."
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/maxx-1-1.webp",
+    "alt": "MAXX stove",
+    "width": 762,
+    "height": 449
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/maxx-1-2.webp",
+     "alt": "MAXX stove",
+     "width": 762,
+     "height": 449
+    },
+    {
+     "src": "/catalog/enviro/gallery/maxx-1-3.webp",
+     "alt": "MAXX stove",
+     "width": 762,
+     "height": 449
+    },
+    {
+     "src": "/catalog/enviro/gallery/maxx-1-1t.webp",
+     "alt": "MAXX stove",
+     "width": 75,
+     "height": 75
+    },
+    {
+     "src": "/catalog/enviro/gallery/maxx-1-2t.webp",
+     "alt": "MAXX stove",
+     "width": 75,
+     "height": 75
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=MAXX-1",
+  "enabled": true
+ },
+ {
+  "id": "en-meridian-pellet-stove",
+  "slug": "meridian-pellet-stove",
+  "brandId": "enviro",
+  "name": "Meridian",
+  "sku": "EFMFS-A",
+  "fuel": "pellet",
+  "kind": "stove",
+  "style": "freestanding",
+  "summary": "A pellet stove. Rated to heat about 2,000 square feet. 45,000 BTU maximum input.",
+  "makerDescription": "Large arched bay door. Tri-mode thermostat compatible. Remote thermostat compatible. Large heat exchanger.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "2,000 ft²"
+   },
+   {
+    "label": "Max Input BTU",
+    "value": "45,000"
+   },
+   {
+    "label": "Efficiency*",
+    "value": "75%"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "160 CFM"
+   },
+   {
+    "label": "EPA Emissions",
+    "value": "1.84 gms"
+   },
+   {
+    "label": "Hopper Capacity",
+    "value": "55 lbs"
+   },
+   {
+    "label": "Weight",
+    "value": "273 lbs"
+   },
+   {
+    "label": "Unit Dims",
+    "value": "25\" W x 33\" H x 25\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 2000,
+   "btuMax": 45000,
+   "efficiency": "75%"
+  },
+  "dimensions": {
+   "text": "25\" W x 33\" H x 25\" D",
+   "width": 25,
+   "height": 33,
+   "depth": 25
+  },
+  "options": [
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "log-set-1-pc",
+      "name": "Log Set (1 pc.)"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/efmfs-a-1.webp",
+    "alt": "Meridian stove",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/efmfs-a-2.webp",
+     "alt": "Meridian stove",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/efmfs-a-3.webp",
+     "alt": "Meridian stove",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/efmfs-a-1t.webp",
+     "alt": "Meridian stove",
+     "width": 75,
+     "height": 75
+    },
+    {
+     "src": "/catalog/enviro/gallery/efmfs-a-2t.webp",
+     "alt": "Meridian stove",
+     "width": 75,
+     "height": 75
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=EFMFS-A",
+  "enabled": true
+ },
+ {
+  "id": "en-meridian-cast-iron-pellet-stove",
+  "slug": "meridian-cast-iron-pellet-stove",
+  "brandId": "enviro",
+  "name": "Meridian Cast Iron",
+  "sku": "EFMFSC",
+  "fuel": "pellet",
+  "kind": "stove",
+  "style": "freestanding",
+  "summary": "A pellet stove. Rated to heat about 2,000 square feet. 45,000 BTU maximum input.",
+  "makerDescription": "Formed fluted liner. Heavy-duty heat exchanger. Easy to access ash pan. Run-Quiet system.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "2,000 ft²"
+   },
+   {
+    "label": "Max Input BTU",
+    "value": "45,000"
+   },
+   {
+    "label": "Efficiency*",
+    "value": "75%"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "160 CFM"
+   },
+   {
+    "label": "EPA Emissions",
+    "value": "1.84 gms"
+   },
+   {
+    "label": "Hopper Capacity",
+    "value": "51 lbs"
+   },
+   {
+    "label": "Weight",
+    "value": "273 lbs"
+   },
+   {
+    "label": "Unit Dims",
+    "value": "31\" W x 31\" H x 24\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 2000,
+   "btuMax": 45000,
+   "efficiency": "75%"
+  },
+  "dimensions": {
+   "text": "31\" W x 31\" H x 24\" D",
+   "width": 31,
+   "height": 31,
+   "depth": 24
+  },
+  "options": [
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "composite-log-set",
+      "name": "Composite log set."
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/efmfsc-1.webp",
+    "alt": "Meridian Cast Iron stove",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/efmfsc-2.webp",
+     "alt": "Meridian Cast Iron stove",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/efmfsc-3.webp",
+     "alt": "Meridian Cast Iron stove",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/efmfsc-4.webp",
+     "alt": "Meridian Cast Iron stove",
+     "width": 620,
+     "height": 365
+    },
+    {
+     "src": "/catalog/enviro/gallery/efmfsc-5.webp",
+     "alt": "Meridian Cast Iron stove",
+     "width": 620,
+     "height": 365
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=EFMFSC",
+  "enabled": true
+ },
+ {
+  "id": "en-mini-pellet-stove",
+  "slug": "mini-pellet-stove",
+  "brandId": "enviro",
+  "name": "Mini",
+  "sku": "Mini-A",
+  "fuel": "pellet",
+  "kind": "stove",
+  "style": "freestanding",
+  "summary": "A pellet stove. Rated to heat about 1,200 square feet. 30,000 BTU maximum input.",
+  "makerDescription": "Automatic controls. \"Run Quiet\" system. Large ash pan. Includes bolt-on hearth pad.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "1,200 ft²"
+   },
+   {
+    "label": "Max Input BTU",
+    "value": "30,000"
+   },
+   {
+    "label": "Efficiency*",
+    "value": "80%"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "130 CFM"
+   },
+   {
+    "label": "EPA Emissions",
+    "value": "0.54 gms"
+   },
+   {
+    "label": "Hopper Capacity",
+    "value": "48 lbs"
+   },
+   {
+    "label": "Weight",
+    "value": "238 lbs"
+   },
+   {
+    "label": "Unit Dims",
+    "value": "18\" W x 34\" H x 20\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 1200,
+   "btuMax": 30000,
+   "efficiency": "80%"
+  },
+  "dimensions": {
+   "text": "18\" W x 34\" H x 20\" D",
+   "width": 18,
+   "height": 34,
+   "depth": 20
+  },
+  "options": [
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "hearth-pad-included",
+      "name": "Hearth Pad included."
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/mini-a-1.webp",
+    "alt": "Mini stove",
+    "width": 762,
+    "height": 449
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/mini-a-2.webp",
+     "alt": "Mini stove",
+     "width": 762,
+     "height": 449
+    },
+    {
+     "src": "/catalog/enviro/gallery/mini-a-3.webp",
+     "alt": "Mini stove",
+     "width": 762,
+     "height": 449
+    },
+    {
+     "src": "/catalog/enviro/gallery/mini-a-4.webp",
+     "alt": "Mini stove",
+     "width": 762,
+     "height": 449
+    },
+    {
+     "src": "/catalog/enviro/gallery/mini-a-1t.webp",
+     "alt": "Mini stove",
+     "width": 75,
+     "height": 75
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=Mini-A",
+  "enabled": true
+ },
+ {
+  "id": "en-p3-pellet-stove-w-hearth-pad-pellet-stove",
+  "slug": "p3-pellet-stove-w-hearth-pad-pellet-stove",
+  "brandId": "enviro",
+  "name": "P3 Pellet Stove w/Hearth Pad",
+  "sku": "P3",
+  "fuel": "pellet",
+  "kind": "stove",
+  "style": "freestanding",
+  "summary": "A pellet stove. Rated to heat about 1,200 square feet. 30,000 BTU maximum input.",
+  "makerDescription": "European designed cast iron accents. Large capacity pellet hopper. Heavy duty welded heat exchanger. New \"Comfort Level\" system with internal thermostat.",
+  "specs": [
+   {
+    "label": "Heating Area",
+    "value": "1,200 ft²"
+   },
+   {
+    "label": "Max Input BTU",
+    "value": "30,000"
+   },
+   {
+    "label": "Efficiency*",
+    "value": "80%"
+   },
+   {
+    "label": "Convection Fan",
+    "value": "130 CFM"
+   },
+   {
+    "label": "EPA Emissions",
+    "value": "0.54 gms"
+   },
+   {
+    "label": "Hopper Capacity",
+    "value": "62 lbs"
+   },
+   {
+    "label": "Unit Dims",
+    "value": "21\" W x 34\" H x 24\" D"
+   }
+  ],
+  "heat": {
+   "areaSqFt": 1200,
+   "btuMax": 30000,
+   "efficiency": "80%"
+  },
+  "dimensions": {
+   "text": "21\" W x 34\" H x 24\" D",
+   "width": 21,
+   "height": 34,
+   "depth": 24
+  },
+  "options": [
+   {
+    "id": "media-and-kits",
+    "label": "Media and kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "panel-set-liner",
+      "name": "Panel Set (Liner)"
+     },
+     {
+      "id": "p3-side-panel-kit-w-ash-pan-lip",
+      "name": "P3 Side Panel Kit w/ Ash Pan Lip"
+     },
+     {
+      "id": "painted-black",
+      "name": "Painted Black"
+     },
+     {
+      "id": "25-ft-room-temp-extension-probe",
+      "name": "25 ft Room Temp. Extension Probe"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/enviro/hero/p3-1.webp",
+    "alt": "P3 Pellet Stove w/Hearth Pad stove",
+    "width": 620,
+    "height": 365
+   },
+   "gallery": [
+    {
+     "src": "/catalog/enviro/gallery/p3-2.webp",
+     "alt": "P3 Pellet Stove w/Hearth Pad stove",
+     "width": 762,
+     "height": 449
+    },
+    {
+     "src": "/catalog/enviro/gallery/p3-3.webp",
+     "alt": "P3 Pellet Stove w/Hearth Pad stove",
+     "width": 762,
+     "height": 449
+    },
+    {
+     "src": "/catalog/enviro/gallery/p3-4.webp",
+     "alt": "P3 Pellet Stove w/Hearth Pad stove",
+     "width": 762,
+     "height": 449
+    },
+    {
+     "src": "/catalog/enviro/gallery/p3-5.webp",
+     "alt": "P3 Pellet Stove w/Hearth Pad stove",
+     "width": 762,
+     "height": 449
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://enviro.com/products/catalogue/product/?prod=P3",
+  "enabled": true
+ }
+]

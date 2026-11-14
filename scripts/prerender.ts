@@ -17,6 +17,7 @@ import { SERVICE_AREAS } from '../src/data/serviceAreas';
 import { SERVICES } from '../src/data/services';
 import { HOLIDAY_PROMO, promoIsLive } from '../src/lib/promo';
 import { buildRoutes, fullTitle, NOT_FOUND_META, type RouteMeta } from '../src/lib/routes';
+import { buildCatalogRoutes } from '../src/lib/catalogRoutes';
 import { CREDENTIALS, SITE, STATE_LIST_TEXT } from '../src/lib/site';
 
 const DIST = join(process.cwd(), 'dist');
@@ -72,7 +73,7 @@ function write(rel: string, content: string) {
   writeFileSync(file, content);
 }
 
-const routes = buildRoutes();
+const routes = buildRoutes(buildCatalogRoutes());
 const seen = new Set<string>();
 for (const r of routes) {
   if (seen.has(r.path)) throw new Error(`Duplicate route ${r.path}`);
@@ -131,7 +132,7 @@ const llms = [
   ...ARTICLES.map((a) => `- [${a.title}](${SITE.domain}/blog/${a.slug}): ${a.description}`),
   '',
   '## Tools',
-  `- [Build your fireplace](${SITE.domain}/design-your-fireplace): Interactive fireplace style and finish designer.`,
+  `- [Build your fireplace](${SITE.domain}/build-your-fireplace): Pick a real gas, wood, pellet or electric model, customize it, check heat and fit, get a branded PDF.`,
   `- [Fireplace shop](${SITE.domain}/fireplace-shop): Browse fireplace product types and request pricing.`,
   '',
   '## Company',

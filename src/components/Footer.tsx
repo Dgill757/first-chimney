@@ -69,8 +69,11 @@ export default function Footer() {
             <ul className="mt-5 grid gap-2.5">
               {[
                 ...(live ? [{ label: `Holiday ${HOLIDAY_PROMO.priceLabel} special`, to: HOLIDAY_PROMO.path }] : []),
-                { label: 'Build your fireplace', to: '/design-your-fireplace' },
+                { label: 'Build your fireplace', to: '/build-your-fireplace' },
                 { label: 'Fireplace shop', to: '/fireplace-shop' },
+                { label: 'Gas inserts', to: '/fireplace-shop/gas-inserts' },
+                { label: 'Wood stoves & inserts', to: '/fireplace-shop/wood-inserts' },
+                { label: 'Electric fireplaces', to: '/fireplace-shop/electric-fireplaces' },
                 { label: 'Our work', to: '/gallery' },
                 { label: 'Reviews', to: '/reviews' },
                 { label: 'Resource center', to: '/blog' },

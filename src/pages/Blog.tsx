@@ -1,7 +1,7 @@
 ﻿import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArrowRight, BookOpen, Clock, ExternalLink, Lightbulb } from 'lucide-react';
-import { Breadcrumbs, CallLink, PageIntro, Reveal } from '@/components/ui';
+import { Breadcrumbs, CallLink, FireButton, PageIntro, Reveal } from '@/components/ui';
 import { ARTICLES, articleBySlug, type Article } from '@/data/blog';
 import { serviceById } from '@/data/services';
 import { SOURCES } from '@/data/sources';
@@ -164,6 +164,27 @@ export function BlogPost() {
               </div>
             ))}
           </div>
+          <section className="card mt-14 p-6 sm:p-7" aria-labelledby="upgrade">
+            <h2 id="upgrade" className="text-xl text-bone">
+              Thinking about an upgrade?
+            </h2>
+            <p className="mt-2 text-mute">A clean, sound chimney is the right time to consider a more efficient insert or a new fireplace. Explore real models from the brands we install.</p>
+            <ul className="mt-5 flex flex-wrap gap-2">
+              {[
+                ['Gas inserts', '/fireplace-shop/gas-inserts'],
+                ['Wood inserts', '/fireplace-shop/wood-inserts'],
+                ['Gas fireplaces', '/fireplace-shop/gas-fireplaces'],
+                ['Electric fireplaces', '/fireplace-shop/electric-fireplaces'],
+              ].map(([l, to]) => (
+                <li key={to}>
+                  <Link to={to} className="inline-flex rounded-full border border-white/12 px-4 py-2 text-sm text-bone hover:border-ember">
+                    {l}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <FireButton placement={`article_${a.slug}`} className="mt-5" />
+          </section>
           <section className="mt-14 border-t hairline pt-8" aria-labelledby="sources">
             <h2 id="sources" className="flex items-center gap-2 text-base text-bone" style={{ fontFamily: 'var(--font-sans)', fontStretch: '100%', letterSpacing: 0 }}>
               <BookOpen className="h-4 w-4 text-ember" aria-hidden /> Sources

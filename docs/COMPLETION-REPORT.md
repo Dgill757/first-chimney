@@ -77,3 +77,20 @@ Date: November 14, 2026. Branch `feature/premium-rebuild-holiday-199`, fast-forw
 ## 8. Future enhancements
 
 Real project gallery and reviews; city pages; GA4 + Search Console + Bing Webmaster submission of the sitemap; online booking calendar embed from GHL; replace stock photography; confirmed product catalog with photos; image CDN for responsive `srcset`.
+
+## 9. Round 2 additions (same day, at Dan's direction)
+
+- **Holiday popup** with lead capture and a coupon saved to the phone (native share sheet to Photos), calendar reminder and share link. Code `HOLIDAY199`. Shown once per session after 9s or 35% scroll; 3-day cooldown after close; never after a claim; never on the promo, contact, builder or quote pages. `?promo=preview` forces it for testing.
+- **Hero upgrade**: cursor-following ember glow, rising embers, glass offer/trust card, glowing Build Your Fireplace button (also in nav, mobile menu, footer, shop, articles, fireplace repair, city pages).
+- **Build Your Fireplace** (`/build-your-fireplace`) is now the Chim Chim Churee configurator ported to First Chimney: real catalog of 230 models (Fireplace Xtrordinair, Lopi, Kozy Heat, Valor, Enviro, Modern Flames, SimpliFire) with manufacturer photography and layered preview art, heat sizing, insert fit checker, compare, and a **branded PDF** (product imagery, choices, maker specs, next steps, clickable link back to the build) downloaded on demand and automatically when the build is sent to First Chimney. Old `/design-your-fireplace` and `/build-my-fireplace` links redirect.
+- **Fireplace Shop** on the same catalog: 11 categories and 230 product pages, each prerendered with Product + BreadcrumbList schema (293 indexable routes total).
+- **20 city pages** (5 per state) with unique local content. Proposed list, pending Andrew's confirmation (`src/data/cities.ts`; set `published: false` to remove one).
+- **Articles** link into shop categories and the builder; footer links popular categories.
+- **AI scene generator** ready (`scripts/generate-scenes.mjs`, OpenAI gpt-image-1). Needs `OPENAI_API_KEY`; generates ambiance and material scenes only, never staff or "our work".
+
+### New approvals needed
+| Item | Owner |
+| --- | --- |
+| Which brands Andrew is an authorized dealer/installer for. Turn off any others with `enabled: false` in `src/data/catalog/brands.ts` | Andrew |
+| Confirm or edit the 20 proposed city pages | Andrew |
+| Run the AI scene script (or approve its output) once an OpenAI key is provided | Dan |

@@ -20,7 +20,7 @@ function MobileActionBar() {
   useMotionValueEvent(scrollY, 'change', (y) => setShow(y > 320));
 
   const live = promoIsLive();
-  const hidden = pathname.startsWith('/design-your-fireplace') || pathname === HOLIDAY_PROMO.path;
+  const hidden = pathname.startsWith('/build-your-fireplace') || pathname === HOLIDAY_PROMO.path;
   const cta = live ? { to: HOLIDAY_PROMO.path, label: `${HOLIDAY_PROMO.priceLabel} Holiday Special` } : { to: '/contact', label: 'Schedule' };
 
   return (

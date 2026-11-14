@@ -1,0 +1,6941 @@
+[
+ {
+  "id": "va-3182",
+  "slug": "he6-electric-fireplace",
+  "brandId": "valor",
+  "name": "HE6 Electric",
+  "sku": "HE6",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "An electric fireplace.",
+  "makerDescription": "The HE6's vibrant LCD backdrop brings depth and motion to the ember-lit logs, creating an immersive visual experience that elevates any interior.",
+  "specs": [
+   {
+    "label": "Fireplace Type",
+    "value": "Electric"
+   },
+   {
+    "label": "Installation Type",
+    "value": "Zero Clearance or Insert"
+   },
+   {
+    "label": "Max Heat Output",
+    "value": "1,400W or 2,800W"
+   },
+   {
+    "label": "Supply Voltage",
+    "value": "120V or 240V"
+   }
+  ],
+  "dimensions": {
+   "text": "36\" w x 34-1/2\" h x 11-3/4\" d",
+   "width": 36,
+   "height": 34.5,
+   "depth": 11.75
+  },
+  "options": [
+   {
+    "id": "engines",
+    "label": "Version",
+    "area": "extras",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "3285",
+      "name": "HE6-LC",
+      "part": "HE6-LC",
+      "thumb": "/catalog/valor/thumb/641783488559-lc.webp",
+      "layer": "/catalog/valor/layer/661767820329-Engine.webp",
+      "z": 1,
+      "unlocks": [
+       "3184",
+       "3185"
+      ],
+      "isDefault": true
+     },
+     {
+      "id": "3284",
+      "name": "HE6-LE",
+      "part": "HE6-LE",
+      "thumb": "/catalog/valor/thumb/671783488560-le.webp",
+      "layer": "/catalog/valor/layer/661767820329-Engine.webp",
+      "z": 1,
+      "unlocks": [
+       "3286",
+       "3287"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "fronts",
+    "label": "Fronts",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "3187",
+      "name": "Clean Installation Kit - Black",
+      "part": "HE6CIK",
+      "thumb": "/catalog/valor/thumb/631769794072-cik-thumb.webp",
+      "layer": "/catalog/valor/layer/481767820368-HE6CIK.webp",
+      "z": 5,
+      "isDefault": true
+     },
+     {
+      "id": "3188",
+      "name": "3-Sided Clearview - Vintage Iron",
+      "part": "HE6CFV",
+      "thumb": "/catalog/valor/thumb/121769794060-cfv-thumb.webp",
+      "layer": "/catalog/valor/layer/971767820358-HE6CFV.webp",
+      "z": 5
+     },
+     {
+      "id": "3189",
+      "name": "4-Sided Edgemont Front - Pewter",
+      "part": "HE6EDPW",
+      "thumb": "/catalog/valor/thumb/491769794087-edpw-thumb.webp",
+      "layer": "/catalog/valor/layer/251767820379-HE6EDPW.webp",
+      "z": 5
+     }
+    ]
+   },
+   {
+    "id": "fuel-beds",
+    "label": "Fuel beds",
+    "area": "burner",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "3184",
+      "name": "Glowing Birch Logs",
+      "part": "HE6GBLK",
+      "thumb": "/catalog/valor/thumb/701767820389-thumb-birch.webp",
+      "layer": "/catalog/valor/layer/231767820338-GBLK.webp",
+      "z": 3,
+      "requires": [
+       "3285"
+      ],
+      "isDefault": true
+     },
+     {
+      "id": "3185",
+      "name": "Glowing Traditional Logs",
+      "part": "HE6GLSK",
+      "thumb": "/catalog/valor/thumb/851767820397-thumb-lsk.webp",
+      "layer": "/catalog/valor/layer/411767820348-GLSK.webp",
+      "z": 3,
+      "requires": [
+       "3285"
+      ]
+     },
+     {
+      "id": "3286",
+      "name": "Glowing Birch Logs",
+      "part": "HE6GBLK",
+      "thumb": "/catalog/valor/thumb/361781282900-thumb-gblk-le.webp",
+      "layer": "/catalog/valor/layer/161781281617-GBLK-LE.webp",
+      "z": 3,
+      "requires": [
+       "3284"
+      ]
+     },
+     {
+      "id": "3287",
+      "name": "Glowing Traditional Logs",
+      "part": "HE6GLSK",
+      "thumb": "/catalog/valor/thumb/831781282894-thumb-glsk-le.webp",
+      "layer": "/catalog/valor/layer/251781281606-GLSK-LE.webp",
+      "z": 3,
+      "requires": [
+       "3284"
+      ]
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/931769793491-he6-hero.webp",
+    "alt": "HE6 Electric fireplace",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [
+   {
+    "label": "English",
+    "url": "https://www.valorfireplaces.com/media/HE6/HE6-LC-LE-Installation.pdf"
+   },
+   {
+    "label": "French",
+    "url": "https://www.valorfireplaces.com/media/HE6/HE6-LC-LE-Installation-F.pdf"
+   },
+   {
+    "label": "Glowing Birch Logs",
+    "url": "https://www.valorfireplaces.com/media/HE6/HE6GBLK-E-F.pdf"
+   },
+   {
+    "label": "Glowing Traditional Logs",
+    "url": "https://www.valorfireplaces.com/media/HE6/HE6GLSK-E-F.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.valorfireplaces.com/electric-fireplaces/he6.php",
+  "enabled": true
+ },
+ {
+  "id": "va-2174",
+  "slug": "lex2-s-50-fireplace",
+  "brandId": "valor",
+  "name": "LEX2-S 50\"",
+  "sku": "LEX2-S",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace.",
+  "makerDescription": "An ideal option when creating two rooms out of one, easing the transition from one to another, or being installed in a feature wall.",
+  "specs": [
+   {
+    "label": "Fireplace Type",
+    "value": "Electric"
+   },
+   {
+    "label": "Max Heat Output",
+    "value": "1,400W or 2,800W"
+   },
+   {
+    "label": "Supply Voltage",
+    "value": "120V or 240V"
+   }
+  ],
+  "dimensions": {
+   "text": "49.2\" x 21.9\" x 12\""
+  },
+  "options": [
+   {
+    "id": "engines",
+    "label": "Version",
+    "area": "extras",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "2176",
+      "name": "3-Sided",
+      "part": "LEX2",
+      "thumb": "/catalog/valor/thumb/411638301692-3s-thumb.webp",
+      "layer": "/catalog/valor/layer/941643930439-lex2-engine-3s.webp",
+      "z": 1,
+      "unlocks": [
+       "2181",
+       "2182",
+       "2183",
+       "2966",
+       "3138"
+      ],
+      "isDefault": true
+     },
+     {
+      "id": "2177",
+      "name": "Left Corner",
+      "part": "LEX2",
+      "thumb": "/catalog/valor/thumb/461638301693-lc-thumb.webp",
+      "layer": "/catalog/valor/layer/751643930446-lex2-engine-rp.webp",
+      "z": 1,
+      "unlocks": [
+       "3138",
+       "2181",
+       "2182",
+       "2183",
+       "2966"
+      ]
+     },
+     {
+      "id": "2178",
+      "name": "Right Corner",
+      "part": "LEX2",
+      "thumb": "/catalog/valor/thumb/801638301690-rc-thumb.webp",
+      "layer": "/catalog/valor/layer/721643930443-lex2-engine-lp.webp",
+      "z": 1,
+      "unlocks": [
+       "3138",
+       "2181",
+       "2182",
+       "2183",
+       "2966"
+      ]
+     },
+     {
+      "id": "2179",
+      "name": "Front Facing",
+      "part": "LEX2",
+      "thumb": "/catalog/valor/thumb/171638301693-ff-thumb.webp",
+      "layer": "/catalog/valor/layer/591643930441-lex2-engine-flush.webp",
+      "z": 1,
+      "unlocks": [
+       "3138",
+       "2181",
+       "2182",
+       "2183",
+       "2966"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "fuel-beds",
+    "label": "Fuel beds",
+    "area": "burner",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "3138",
+      "name": "Real Wood Logs",
+      "part": "LEX2AWK",
+      "thumb": "/catalog/valor/thumb/571762987435-awk-thumb.webp",
+      "layer": "/catalog/valor/layer/771762988648-awk2-all.webp",
+      "z": 3,
+      "isDefault": true
+     },
+     {
+      "id": "2181",
+      "name": "Birch Logs",
+      "part": "LEXBLK",
+      "thumb": "/catalog/valor/thumb/941643930971-birch-thumb.webp",
+      "layer": "/catalog/valor/layer/811644252185-lex2-blk-3s.webp",
+      "z": 3
+     },
+     {
+      "id": "2182",
+      "name": "Driftwood Logs",
+      "part": "LEXDWK",
+      "thumb": "/catalog/valor/thumb/311643930971-driftwood-thumb.webp",
+      "layer": "/catalog/valor/layer/681644253384-lex2-dwk-3s.webp",
+      "z": 3
+     },
+     {
+      "id": "2183",
+      "name": "Splitwood Logs",
+      "part": "LEXSWK",
+      "thumb": "/catalog/valor/thumb/441643930970-splitwood-thumb.webp",
+      "layer": "/catalog/valor/layer/511644254386-lex2-swk-3s.webp",
+      "z": 3
+     },
+     {
+      "id": "2966",
+      "name": "Glass (Included)",
+      "thumb": "/catalog/valor/thumb/801730756762-glass-thumb.webp",
+      "layer": "/catalog/valor/layer/501730756608-lex2-glass-3s.webp",
+      "z": 3
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/551645639710-lex2.webp",
+    "alt": "LEX2-S 50\" fireplace",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [
+   {
+    "label": "download the LEX electric installation manual",
+    "url": "https://www.valorfireplaces.com/media/LEX/LEX-S-Installation-Manual.pdf"
+   },
+   {
+    "label": "Birch Logs",
+    "url": "https://www.valorfireplaces.com/media/LEX/LEXBLK-E-F.pdf"
+   },
+   {
+    "label": "Driftwood Logs",
+    "url": "https://www.valorfireplaces.com/media/LEX/LEXDWK-E-F.pdf"
+   },
+   {
+    "label": "Splitwood Logs",
+    "url": "https://www.valorfireplaces.com/media/LEX/LEXSWK-E-F.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.valorfireplaces.com/electric-fireplaces/lex2.php",
+  "enabled": true
+ },
+ {
+  "id": "va-2193",
+  "slug": "lex3-s-60-fireplace",
+  "brandId": "valor",
+  "name": "LEX3-S 60\"",
+  "sku": "LEX3-S",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace.",
+  "makerDescription": "Designed to create maximum visual impact. Clean lines make this modern design look attractive even when the fire is off.",
+  "specs": [
+   {
+    "label": "Fireplace Type",
+    "value": "Electric"
+   },
+   {
+    "label": "Max Heat Output",
+    "value": "1,400W or 2,800W"
+   },
+   {
+    "label": "Supply Voltage",
+    "value": "120V or 240V"
+   }
+  ],
+  "dimensions": {
+   "text": "59\" x 21.9\" x 12\""
+  },
+  "options": [
+   {
+    "id": "engines",
+    "label": "Version",
+    "area": "extras",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "2199",
+      "name": "3-Sided",
+      "part": "LEX3",
+      "thumb": "/catalog/valor/thumb/411638301692-3s-thumb.webp",
+      "layer": "/catalog/valor/layer/351643930656-lex3-engine-3s.webp",
+      "z": 1,
+      "unlocks": [
+       "2207",
+       "2208",
+       "2209",
+       "2967",
+       "3139"
+      ],
+      "isDefault": true
+     },
+     {
+      "id": "2200",
+      "name": "Left Corner",
+      "part": "LEX3",
+      "thumb": "/catalog/valor/thumb/461638301693-lc-thumb.webp",
+      "layer": "/catalog/valor/layer/161643930664-lex3-engine-rp.webp",
+      "z": 1,
+      "unlocks": [
+       "3139",
+       "2207",
+       "2208",
+       "2209",
+       "2967"
+      ]
+     },
+     {
+      "id": "2201",
+      "name": "Right Corner",
+      "part": "LEX3",
+      "thumb": "/catalog/valor/thumb/801638301690-rc-thumb.webp",
+      "layer": "/catalog/valor/layer/851643930661-lex3-engine-lp.webp",
+      "z": 1,
+      "unlocks": [
+       "3139",
+       "2207",
+       "2208",
+       "2209",
+       "2967"
+      ]
+     },
+     {
+      "id": "2202",
+      "name": "Front Facing",
+      "part": "LEX3",
+      "thumb": "/catalog/valor/thumb/171638301693-ff-thumb.webp",
+      "layer": "/catalog/valor/layer/451643930659-lex3-engine-flush.webp",
+      "z": 1,
+      "unlocks": [
+       "3139",
+       "2207",
+       "2208",
+       "2209",
+       "2967"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "fuel-beds",
+    "label": "Fuel beds",
+    "area": "burner",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "3139",
+      "name": "Real Wood Logs",
+      "part": "LEX3AWK",
+      "thumb": "/catalog/valor/thumb/571762987435-awk-thumb.webp",
+      "layer": "/catalog/valor/layer/701762988377-awk3-all.webp",
+      "z": 3,
+      "isDefault": true
+     },
+     {
+      "id": "2207",
+      "name": "Birch Logs",
+      "part": "LEXBLK",
+      "thumb": "/catalog/valor/thumb/941643930971-birch-thumb.webp",
+      "layer": "/catalog/valor/layer/681645041938-lex3-blk-3s.webp",
+      "z": 3
+     },
+     {
+      "id": "2208",
+      "name": "Driftwood Logs",
+      "part": "LEXDWK",
+      "thumb": "/catalog/valor/thumb/311643930971-driftwood-thumb.webp",
+      "layer": "/catalog/valor/layer/611645041956-lex3-dwk-3s.webp",
+      "z": 3
+     },
+     {
+      "id": "2209",
+      "name": "Splitwood Logs",
+      "part": "LEXSWK",
+      "thumb": "/catalog/valor/thumb/441643930970-splitwood-thumb.webp",
+      "layer": "/catalog/valor/layer/411645043430-lex3-swk-3s.webp",
+      "z": 3
+     },
+     {
+      "id": "2967",
+      "name": "Glass (Included)",
+      "thumb": "/catalog/valor/thumb/801730756762-glass-thumb.webp",
+      "layer": "/catalog/valor/layer/981730757580-lex3-glass-3s.webp",
+      "z": 3
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/361645639707-lex3.webp",
+    "alt": "LEX3-S 60\" fireplace",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [
+   {
+    "label": "download the LEX electric installation manual",
+    "url": "https://www.valorfireplaces.com/media/LEX/LEX-S-Installation-Manual.pdf"
+   },
+   {
+    "label": "Birch Logs",
+    "url": "https://www.valorfireplaces.com/media/LEX/LEXBLK-E-F.pdf"
+   },
+   {
+    "label": "Driftwood Logs",
+    "url": "https://www.valorfireplaces.com/media/LEX/LEXDWK-E-F.pdf"
+   },
+   {
+    "label": "Splitwood Logs",
+    "url": "https://www.valorfireplaces.com/media/LEX/LEXSWK-E-F.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.valorfireplaces.com/electric-fireplaces/lex3.php",
+  "enabled": true
+ },
+ {
+  "id": "va-2194",
+  "slug": "lex4-s-72-fireplace",
+  "brandId": "valor",
+  "name": "LEX4-S 72\"",
+  "sku": "LEX4-S",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace.",
+  "makerDescription": "With a 71\" viewing area the LEX4-S is perfectly suited to create a stunning focal point that will enhance even the largest of rooms.",
+  "specs": [
+   {
+    "label": "Fireplace Type",
+    "value": "Electric"
+   },
+   {
+    "label": "Max Heat Output",
+    "value": "1,400W or 2,800W"
+   },
+   {
+    "label": "Supply Voltage",
+    "value": "120V or 240V"
+   }
+  ],
+  "dimensions": {
+   "text": "70.9\" x 21.9\" x 12\""
+  },
+  "options": [
+   {
+    "id": "engines",
+    "label": "Version",
+    "area": "extras",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "2203",
+      "name": "3-Sided",
+      "part": "LEX4",
+      "thumb": "/catalog/valor/thumb/411638301692-3s-thumb.webp",
+      "layer": "/catalog/valor/layer/371643930786-lex4-engine-3s.webp",
+      "z": 1,
+      "unlocks": [
+       "2219",
+       "2220",
+       "2221",
+       "2971",
+       "3140"
+      ],
+      "isDefault": true
+     },
+     {
+      "id": "2204",
+      "name": "Left Corner",
+      "part": "LEX4",
+      "thumb": "/catalog/valor/thumb/461638301693-lc-thumb.webp",
+      "layer": "/catalog/valor/layer/581643930791-lex4-engine-rp.webp",
+      "z": 1,
+      "unlocks": [
+       "3140",
+       "2219",
+       "2220",
+       "2221",
+       "2971"
+      ]
+     },
+     {
+      "id": "2205",
+      "name": "Right Corner",
+      "part": "LEX4",
+      "thumb": "/catalog/valor/thumb/801638301690-rc-thumb.webp",
+      "layer": "/catalog/valor/layer/151643930794-lex4-engine-lp.webp",
+      "z": 1,
+      "unlocks": [
+       "3140",
+       "2219",
+       "2220",
+       "2221",
+       "2971"
+      ]
+     },
+     {
+      "id": "2206",
+      "name": "Front Facing",
+      "part": "LEX4",
+      "thumb": "/catalog/valor/thumb/171638301693-ff-thumb.webp",
+      "layer": "/catalog/valor/layer/291643930788-lex4-engine-flush.webp",
+      "z": 1,
+      "unlocks": [
+       "3140",
+       "2219",
+       "2220",
+       "2221",
+       "2971"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "fuel-beds",
+    "label": "Fuel beds",
+    "area": "burner",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "3140",
+      "name": "Real Wood Logs",
+      "part": "LEX4AWK",
+      "thumb": "/catalog/valor/thumb/571762987435-awk-thumb.webp",
+      "layer": "/catalog/valor/layer/991762987302-awk4-all.webp",
+      "z": 3,
+      "isDefault": true
+     },
+     {
+      "id": "2219",
+      "name": "Birch Logs",
+      "part": "LEXBLK",
+      "thumb": "/catalog/valor/thumb/941643930971-birch-thumb.webp",
+      "layer": "/catalog/valor/layer/651645202428-lex4-blk-3s.webp",
+      "z": 3
+     },
+     {
+      "id": "2220",
+      "name": "Driftwood Logs",
+      "part": "LEXDWK",
+      "thumb": "/catalog/valor/thumb/311643930971-driftwood-thumb.webp",
+      "layer": "/catalog/valor/layer/261645202443-lex4-dwk-3s.webp",
+      "z": 3
+     },
+     {
+      "id": "2221",
+      "name": "Splitwood Logs",
+      "part": "LEXSWK",
+      "thumb": "/catalog/valor/thumb/441643930970-splitwood-thumb.webp",
+      "layer": "/catalog/valor/layer/631645202484-lex4-swk-3s.webp",
+      "z": 3
+     },
+     {
+      "id": "2971",
+      "name": "Glass (Included)",
+      "thumb": "/catalog/valor/thumb/801730756762-glass-thumb.webp",
+      "layer": "/catalog/valor/layer/921730758032-lex4-glass-3s.webp",
+      "z": 3
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/301645639704-lex4.webp",
+    "alt": "LEX4-S 72\" fireplace",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [
+   {
+    "label": "download the LEX electric installation manual",
+    "url": "https://www.valorfireplaces.com/media/LEX/LEX-S-Installation-Manual.pdf"
+   },
+   {
+    "label": "Birch Logs",
+    "url": "https://www.valorfireplaces.com/media/LEX/LEXBLK-E-F.pdf"
+   },
+   {
+    "label": "Driftwood Logs",
+    "url": "https://www.valorfireplaces.com/media/LEX/LEXDWK-E-F.pdf"
+   },
+   {
+    "label": "Splitwood Logs",
+    "url": "https://www.valorfireplaces.com/media/LEX/LEXSWK-E-F.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.valorfireplaces.com/electric-fireplaces/lex4.php",
+  "enabled": true
+ },
+ {
+  "id": "va-2787",
+  "slug": "pe2-electric-fireplace",
+  "brandId": "valor",
+  "name": "PE2 Electric",
+  "sku": "PE2",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "An electric fireplace.",
+  "makerDescription": "The Valor PE2 electric introduces an LCD video panel to provide one of our best electric fires to date. Choose between birch or coal fire beds.",
+  "specs": [
+   {
+    "label": "Fireplace Type",
+    "value": "Electric"
+   },
+   {
+    "label": "Installation Type",
+    "value": "Zero Clearance or Insert"
+   },
+   {
+    "label": "Max Heat Output",
+    "value": "1,400W or 2,800W"
+   },
+   {
+    "label": "Supply Voltage",
+    "value": "120V or 240V"
+   }
+  ],
+  "dimensions": {
+   "text": "20\" w x 25\" h x 10\" d",
+   "width": 20,
+   "height": 25,
+   "depth": 10
+  },
+  "options": [
+   {
+    "id": "fronts",
+    "label": "Fronts",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "2793",
+      "name": "Clearview Front - Vintage Iron",
+      "part": "PE2CFV",
+      "thumb": "/catalog/valor/thumb/161722360891-thumb-cfv.webp",
+      "layer": "/catalog/valor/layer/101722360362-CFV.webp",
+      "z": 5,
+      "isDefault": true
+     },
+     {
+      "id": "2794",
+      "name": "Ledgeview - Pewter",
+      "part": "PE2LFPW",
+      "thumb": "/catalog/valor/thumb/181722360901-thumb-lfpw.webp",
+      "layer": "/catalog/valor/layer/721722360365-LFPW.webp",
+      "z": 5
+     },
+     {
+      "id": "2797",
+      "name": "Richmond Cast Front - Black",
+      "part": "263RCB + PE2CBK",
+      "thumb": "/catalog/valor/thumb/631722360903-thumb-richmond.webp",
+      "layer": "/catalog/valor/layer/321722360381-Richmond.webp",
+      "z": 5
+     },
+     {
+      "id": "2798",
+      "name": "President Insert Front - Black",
+      "part": "536CXBI + PE2CBK",
+      "thumb": "/catalog/valor/thumb/801722360899-thumb-president.webp",
+      "layer": "/catalog/valor/layer/661722360377-President.webp",
+      "z": 5
+     },
+     {
+      "id": "2799",
+      "name": "Windsor Arch Insert Front - Black",
+      "part": "549AFBV2 + PE2CBK",
+      "thumb": "/catalog/valor/thumb/511722360906-thumb-windsor-black.webp",
+      "layer": "/catalog/valor/layer/611722360384-Windsor-Black.webp",
+      "z": 5
+     },
+     {
+      "id": "2800",
+      "name": "Windsor Arch Insert Front - Chrome",
+      "part": "549AFPV2 + PE2CBK",
+      "thumb": "/catalog/valor/thumb/861722360904-thumb-windsor-chrome.webp",
+      "layer": "/catalog/valor/layer/231722360387-Windsor-Chrome.webp",
+      "z": 5
+     },
+     {
+      "id": "2904",
+      "name": "Windsor Arch ZC Front - Black w/ Backing Plate",
+      "part": "539AFBv2 + PE2CBK",
+      "thumb": "/catalog/valor/thumb/561502905895-539AFBv2-thumb.webp",
+      "layer": "/catalog/valor/layer/231728064963-549-black.webp",
+      "z": 5
+     },
+     {
+      "id": "2903",
+      "name": "Windsor Arch ZC Front - Chrome w/ Backing Plate",
+      "part": "539AFPv2 + PE2CBK",
+      "thumb": "/catalog/valor/thumb/531502905907-539AFPv2-thumb.webp",
+      "layer": "/catalog/valor/layer/251728064968-549-chrome.webp",
+      "z": 5
+     }
+    ]
+   },
+   {
+    "id": "closurebacking-plates",
+    "label": "Closure and backing plates",
+    "area": "exterior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "2795",
+      "name": "3-Sided Backing Plate - Black",
+      "part": "PE2BPB1",
+      "thumb": "/catalog/valor/thumb/731722360898-thumb-3bpb.webp",
+      "layer": "/catalog/valor/layer/601722360355-BPB-3Sided.webp",
+      "z": 7
+     },
+     {
+      "id": "2796",
+      "name": "4-Sided Backing Plate - Black",
+      "part": "PE24SBPB1",
+      "thumb": "/catalog/valor/thumb/881722360896-thumb-4bpb.webp",
+      "layer": "/catalog/valor/layer/531722360359-BPB-4Sided.webp",
+      "z": 7
+     },
+     {
+      "id": "2801",
+      "name": "Backing Plate - Black - 26\" x 31\"",
+      "part": "582CPB",
+      "thumb": "/catalog/valor/thumb/701723485545-582-thumb.webp",
+      "layer": "/catalog/valor/layer/871723485324-582.webp",
+      "z": 7
+     },
+     {
+      "id": "2802",
+      "name": "Backing Plate - Black - 30\" x 33\"",
+      "part": "583CPB",
+      "thumb": "/catalog/valor/thumb/361723485547-583-thumb.webp",
+      "layer": "/catalog/valor/layer/371723485320-583.webp",
+      "z": 7
+     },
+     {
+      "id": "2803",
+      "name": "Backing Plate - Black - 33\" x 36\"",
+      "part": "3336CP",
+      "thumb": "/catalog/valor/thumb/791723485550-3336-thumb.webp",
+      "layer": "/catalog/valor/layer/321723485329-3336.webp",
+      "z": 7
+     },
+     {
+      "id": "2804",
+      "name": "Black Arched",
+      "part": "549APB",
+      "thumb": "/catalog/valor/thumb/931723486261-549ap-thumb.webp",
+      "layer": "/catalog/valor/layer/521723486434-549apb.webp",
+      "z": 7
+     },
+     {
+      "id": "-1",
+      "name": "None"
+     }
+    ]
+   },
+   {
+    "id": "fuel-beds",
+    "label": "Fuel beds",
+    "area": "burner",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "2791",
+      "name": "Glowing Birch Logs",
+      "part": "PE2BLK",
+      "thumb": "/catalog/valor/thumb/911722360894-thumb-birch.webp",
+      "layer": "/catalog/valor/layer/571722360368-PE2-Birch.webp",
+      "z": 3,
+      "isDefault": true
+     },
+     {
+      "id": "2792",
+      "name": "Glowing Coals",
+      "part": "PE2CSK",
+      "thumb": "/catalog/valor/thumb/401722360893-thumb-coal.webp",
+      "layer": "/catalog/valor/layer/961722360371-PE2-Coals.webp",
+      "z": 3
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/741722362209-pe2-hero.webp",
+    "alt": "PE2 Electric fireplace",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [
+   {
+    "label": "English",
+    "url": "https://www.valorfireplaces.com/media/PE2/Manuals/PE2-Electric-Fireplace-Manual.pdf"
+   },
+   {
+    "label": "French",
+    "url": "https://www.valorfireplaces.com/media/PE2/Manuals/PE2-Electric-Fireplace-Manual-F.pdf"
+   },
+   {
+    "label": "Birch Logs",
+    "url": "https://www.valorfireplaces.com/media/PE2/Manuals/PE2BLK-E-F.pdf"
+   },
+   {
+    "label": "Coal Set",
+    "url": "https://www.valorfireplaces.com/media/PE2/Manuals/PE2CSK-E-F.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.valorfireplaces.com/electric-fireplaces/pe2.php",
+  "enabled": true
+ },
+ {
+  "id": "va-1105",
+  "slug": "h3-fireplace-fireplace",
+  "brandId": "valor",
+  "name": "H3 Fireplace",
+  "sku": "1000M",
+  "fuel": "gas",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "A gas fireplace. 25,000 BTU maximum input. Efficiency: 72.05% / 73.13% (EnerGuide).",
+  "makerDescription": "The H3 offers a slim engine design that's engineered for new construction installs, or the growing trend to remove and replace outdated, inefficient wood and gas fireplaces.",
+  "specs": [
+   {
+    "label": "Max input (BTU)",
+    "value": "25,000 / 24,000"
+   },
+   {
+    "label": "Min input (BTU)",
+    "value": "12,000 / 11,000"
+   },
+   {
+    "label": "Max output (BTU)",
+    "value": "19,098 / 18,523"
+   },
+   {
+    "label": "Efficiency (EnerGuide)",
+    "value": "72.05% / 73.13%"
+   },
+   {
+    "label": "Gas Type",
+    "value": "Natural Gas (NG) or Propane (LPG)"
+   },
+   {
+    "label": "Viewing Area",
+    "value": "27 ⅞\" w x 17 ⅜\" h = 484\"²"
+   },
+   {
+    "label": "Framing & Venting",
+    "value": "Refer to the Installation Manual."
+   }
+  ],
+  "heat": {
+   "btuMax": 25000,
+   "btuMin": 11000,
+   "efficiency": "72.05% / 73.13% (EnerGuide)"
+  },
+  "dimensions": {
+   "text": "34-1/16\" w x 28-7/16\" h x 15\" d",
+   "width": 34.0625,
+   "height": 28.4375,
+   "depth": 15
+  },
+  "options": [
+   {
+    "id": "fronts",
+    "label": "Fronts",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1114",
+      "name": "1\" Black Clean Install",
+      "part": "1030CIK",
+      "thumb": "/catalog/valor/thumb/451556646890-1030cik.webp",
+      "layer": "/catalog/valor/layer/211560359462-1030CIK.webp",
+      "z": 5,
+      "isDefault": true
+     },
+     {
+      "id": "1112",
+      "name": "3\" Vintage Iron 4-Sided",
+      "part": "1041FSV",
+      "thumb": "/catalog/valor/thumb/451556646891-1041fsv.webp",
+      "layer": "/catalog/valor/layer/241560359468-1041FSV.webp",
+      "z": 5
+     },
+     {
+      "id": "1115",
+      "name": "Clearview Vintage Iron 3-Sided",
+      "part": "1045CFV",
+      "thumb": "/catalog/valor/thumb/511556646892-1045cfv.webp",
+      "layer": "/catalog/valor/layer/261560359472-1045CFV.webp",
+      "z": 5
+     }
+    ]
+   },
+   {
+    "id": "closurebacking-plates",
+    "label": "Closure and backing plates",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1116",
+      "name": "3-Sided Backing Plate",
+      "part": "1035BPB",
+      "detail": "37-3/4\" x 29-9/16\" h",
+      "thumb": "/catalog/valor/thumb/121556646870-1035bpb.webp",
+      "layer": "/catalog/valor/layer/161560359491-1035BPB.webp",
+      "z": 7,
+      "isDefault": true
+     },
+     {
+      "id": "1117",
+      "name": "3-Sided RC Backing Plate",
+      "part": "1035BPB-RC",
+      "detail": "39-1/2\" w x 32-1/4\" h",
+      "thumb": "/catalog/valor/thumb/291556646869-1035bpb-rc.webp",
+      "layer": "/catalog/valor/layer/681560359489-1035BPB-RC.webp",
+      "z": 7
+     },
+     {
+      "id": "1719",
+      "name": "3-Sided RC Backing Plate",
+      "part": "1036BPB-RC",
+      "thumb": "/catalog/valor/thumb/301598910024-1036bpb-rc-thumb.webp",
+      "layer": "/catalog/valor/layer/171598910570-1036bpb-rc.webp",
+      "z": 7
+     },
+     {
+      "id": "1118",
+      "name": "4-Sided Backing Plate",
+      "part": "1040BPB",
+      "detail": "40\" w x 30-13/16\" h",
+      "thumb": "/catalog/valor/thumb/661556646871-1040bpb.webp",
+      "layer": "/catalog/valor/layer/521560359496-1040BPB.webp",
+      "z": 7
+     },
+     {
+      "id": "1119",
+      "name": "4-Sided RC Backing Plate",
+      "part": "1040BPB-RC",
+      "detail": "40\" w x 33 1/8\" h",
+      "thumb": "/catalog/valor/thumb/701556646870-1040bpb-rc.webp",
+      "layer": "/catalog/valor/layer/391560359494-1040BPB-RC.webp",
+      "z": 7
+     }
+    ]
+   },
+   {
+    "id": "liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1235",
+      "name": "Fluted Black",
+      "part": "1025FBL",
+      "thumb": "/catalog/valor/thumb/651560359516-FBL.webp",
+      "layer": "/catalog/valor/layer/681560359369-FBL.webp",
+      "z": 2,
+      "isDefault": true
+     },
+     {
+      "id": "1236",
+      "name": "Reflective Glass",
+      "part": "1070RGL",
+      "thumb": "/catalog/valor/thumb/761560359520-RGL.webp",
+      "layer": "/catalog/valor/layer/891560359393-RGL.webp",
+      "z": 2
+     },
+     {
+      "id": "1238",
+      "name": "Charcoal Brick",
+      "part": "1065CBL",
+      "thumb": "/catalog/valor/thumb/751560359515-CBL.webp",
+      "layer": "/catalog/valor/layer/671560359374-CBL.webp",
+      "z": 2
+     },
+     {
+      "id": "1240",
+      "name": "Herringbone",
+      "part": "1075HBL",
+      "thumb": "/catalog/valor/thumb/881560359517-HBL.webp",
+      "layer": "/catalog/valor/layer/271560359378-HBL.webp",
+      "z": 2
+     },
+     {
+      "id": "1241",
+      "name": "Plain Black",
+      "part": "1060PBL",
+      "thumb": "/catalog/valor/thumb/161560359520-PBL.webp",
+      "layer": "/catalog/valor/layer/951560359387-PBL.webp",
+      "z": 2
+     }
+    ]
+   },
+   {
+    "id": "fuel-beds",
+    "label": "Fuel beds",
+    "area": "burner",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1242",
+      "name": "Birch Logs",
+      "part": "1000BLKV2",
+      "thumb": "/catalog/valor/thumb/121560359514-BLK.webp",
+      "layer": "/catalog/valor/layer/511560359441-BLK.webp",
+      "z": 3,
+      "isDefault": true
+     },
+     {
+      "id": "1243",
+      "name": "Driftwood Logs",
+      "part": "1000DWKV2",
+      "thumb": "/catalog/valor/thumb/411560359514-DWK.webp",
+      "layer": "/catalog/valor/layer/721560359443-DWK.webp",
+      "z": 3
+     },
+     {
+      "id": "1244",
+      "name": "Traditional Logs",
+      "part": "1000LSKV2",
+      "thumb": "/catalog/valor/thumb/781560359518-LSK.webp",
+      "layer": "/catalog/valor/layer/301560359446-LSK.webp",
+      "z": 3
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/161557154893-hero-h3.webp",
+    "alt": "H3 Fireplace fireplace",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [
+   {
+    "label": "Quick Guide",
+    "url": "https://www.valorfireplaces.com/media/Remote/remote-guide-valor10.pdf"
+   },
+   {
+    "label": "Manual",
+    "url": "https://www.valorfireplaces.com/media/Remote/GV60-SYMAX.pdf"
+   },
+   {
+    "label": "Installation Manual",
+    "url": "https://www.valorfireplaces.com/media/H3/english/1000MN-P-Installation.pdf"
+   },
+   {
+    "label": "Installation & Planning",
+    "url": "https://www.valorfireplaces.com/media/H3/english/HeatShift-H3.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.valorfireplaces.com/gas-fireplaces/h3.php",
+  "enabled": true
+ },
+ {
+  "id": "va-677",
+  "slug": "h5-fireplace-fireplace",
+  "brandId": "valor",
+  "name": "H5 Fireplace",
+  "sku": "1100M",
+  "fuel": "gas",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "A gas fireplace. 30,000 BTU maximum input. Efficiency: 71.00% (EnerGuide).",
+  "makerDescription": "The H5 Series is a diverse fireplace, blending distinct, quality materials with the latest in radiant and convective heat technology.",
+  "specs": [
+   {
+    "label": "Max input (BTU)",
+    "value": "30,000"
+   },
+   {
+    "label": "Min input (BTU)",
+    "value": "16,000"
+   },
+   {
+    "label": "Max output (BTU)",
+    "value": "22,857"
+   },
+   {
+    "label": "Efficiency (EnerGuide)",
+    "value": "71.00%"
+   },
+   {
+    "label": "Gas Type",
+    "value": "Natural Gas (NG) or Propane (LPG)"
+   },
+   {
+    "label": "Viewing Area",
+    "value": "29 ⅞\" w x 19 ¼\" h = 575\"²"
+   },
+   {
+    "label": "Framing & Venting",
+    "value": "Refer to the Installation Manual."
+   }
+  ],
+  "heat": {
+   "btuMax": 30000,
+   "btuMin": 16000,
+   "efficiency": "71.00% (EnerGuide)"
+  },
+  "dimensions": {
+   "text": "38\" w x 29\" h x 18\" d",
+   "width": 38,
+   "height": 29,
+   "depth": 18
+  },
+  "options": [
+   {
+    "id": "fronts",
+    "label": "Fronts",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1992",
+      "name": "1\" Clean Install Kit",
+      "part": "1130CIK",
+      "thumb": "/catalog/valor/thumb/211560359462-1030CIK.webp",
+      "layer": "/catalog/valor/layer/611626210955-1130cik.webp",
+      "z": 5,
+      "isDefault": true
+     },
+     {
+      "id": "746",
+      "name": "1\" Black Fixed Frame",
+      "part": "1130FFK",
+      "thumb": "/catalog/valor/thumb/361502984950-1130FFK-thumb.webp",
+      "layer": "/catalog/valor/layer/731561563791-1130FFK.webp",
+      "z": 5
+     },
+     {
+      "id": "747",
+      "name": "3-1/4\" Black Three Sided",
+      "part": "1135TSB",
+      "thumb": "/catalog/valor/thumb/271502984960-1135TSB-thumb.webp",
+      "layer": "/catalog/valor/layer/581561563794-1135TSB.webp",
+      "z": 5
+     },
+     {
+      "id": "750",
+      "name": "4\" Black Four Sided",
+      "part": "1140FSB2",
+      "thumb": "/catalog/valor/thumb/931502984992-1140FSB-thumb.webp",
+      "layer": "/catalog/valor/layer/891561563805-1140FSB.webp",
+      "z": 5
+     },
+     {
+      "id": "1899",
+      "name": "Craftsman Front - Aged Steel",
+      "part": "1184ECAS",
+      "thumb": "/catalog/valor/thumb/721626211329-1184ecas.webp",
+      "layer": "/catalog/valor/layer/551626210961-1184ecas.webp",
+      "z": 5
+     },
+     {
+      "id": "1900",
+      "name": "Craftsman Front - Pewter",
+      "part": "1184ECPW",
+      "thumb": "/catalog/valor/thumb/191626211328-1184ecpw.webp",
+      "layer": "/catalog/valor/layer/401626210965-1184ecpw.webp",
+      "z": 5
+     }
+    ]
+   },
+   {
+    "id": "liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1414",
+      "name": "Fluted Black",
+      "part": "1125FBL",
+      "thumb": "/catalog/valor/thumb/571559844233-FBL.webp",
+      "layer": "/catalog/valor/layer/151561563714-FBL.webp",
+      "z": 2,
+      "isDefault": true
+     },
+     {
+      "id": "1415",
+      "name": "Plain Black",
+      "part": "1160PBL",
+      "thumb": "/catalog/valor/thumb/211561476508-PBL.webp",
+      "layer": "/catalog/valor/layer/241561563728-PBL.webp",
+      "z": 2
+     },
+     {
+      "id": "3113",
+      "name": "Ledgestone Liner",
+      "part": "1115LSL",
+      "thumb": "/catalog/valor/thumb/411561476507-LSL.webp",
+      "layer": "/catalog/valor/layer/951561563724-LSL.webp",
+      "z": 2
+     },
+     {
+      "id": "1416",
+      "name": "Reflective Glass",
+      "part": "1170RGL",
+      "thumb": "/catalog/valor/thumb/201559844235-RGL.webp",
+      "layer": "/catalog/valor/layer/371561563734-RGL.webp",
+      "z": 2
+     },
+     {
+      "id": "1419",
+      "name": "Herringbone",
+      "part": "1175HBL",
+      "thumb": "/catalog/valor/thumb/881561476505-HBL.webp",
+      "layer": "/catalog/valor/layer/851561563720-HBL.webp",
+      "z": 2
+     },
+     {
+      "id": "3229",
+      "name": "Grey Brick",
+      "part": "1185GBL",
+      "thumb": "/catalog/valor/thumb/331760979364-GBL-thumb.webp",
+      "layer": "/catalog/valor/layer/441775079384-GBL.webp",
+      "z": 2
+     }
+    ]
+   },
+   {
+    "id": "fuel-beds",
+    "label": "Fuel beds",
+    "area": "burner",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1412",
+      "name": "Birch Logs",
+      "part": "1100BLK",
+      "thumb": "/catalog/valor/thumb/991626211191-blk.webp",
+      "layer": "/catalog/valor/layer/561626214676-1100blk.webp",
+      "z": 3,
+      "isDefault": true
+     },
+     {
+      "id": "1410",
+      "name": "Driftwood Logs",
+      "part": "1100DWK",
+      "thumb": "/catalog/valor/thumb/671626211192-dwk.webp",
+      "layer": "/catalog/valor/layer/641626214674-1100dwk.webp",
+      "z": 3
+     },
+     {
+      "id": "1413",
+      "name": "Traditional Logs",
+      "part": "1100LSK",
+      "thumb": "/catalog/valor/thumb/991626211191-lsk.webp",
+      "layer": "/catalog/valor/layer/511626214672-1100lsk.webp",
+      "z": 3
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/941628704273-1100m-thumb.webp",
+    "alt": "H5 Fireplace fireplace",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [
+   {
+    "label": "Quick Guide",
+    "url": "https://www.valorfireplaces.com/media/Remote/remote-guide-valor10.pdf"
+   },
+   {
+    "label": "Manual",
+    "url": "https://www.valorfireplaces.com/media/Remote/GV60-SYMAX.pdf"
+   },
+   {
+    "label": "Installation Manual",
+    "url": "https://www.valorfireplaces.com/media/H5/English/1100MN-P-Installation.pdf"
+   },
+   {
+    "label": "Installation & Planning",
+    "url": "https://www.valorfireplaces.com/media/Heatshift/installs/H5-H6-HeatShift-E.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.valorfireplaces.com/gas-fireplaces/h5.php",
+  "enabled": true
+ },
+ {
+  "id": "va-675",
+  "slug": "h6-fireplace-fireplace",
+  "brandId": "valor",
+  "name": "H6 Fireplace",
+  "sku": "1400M",
+  "fuel": "gas",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "A gas fireplace. 36,000 BTU maximum input. Efficiency: 71% (EnerGuide).",
+  "makerDescription": "Framed beautifully against any wall surface, the H6 includes a collection of highgrade steel powder coated trims in both three and four sided configurations.",
+  "specs": [
+   {
+    "label": "Max input (BTU)",
+    "value": "36,000"
+   },
+   {
+    "label": "Min input (BTU)",
+    "value": "18,000 / 15,000"
+   },
+   {
+    "label": "Max output (BTU)",
+    "value": "26,928"
+   },
+   {
+    "label": "Efficiency (EnerGuide)",
+    "value": "71%"
+   },
+   {
+    "label": "Gas Type",
+    "value": "Natural Gas (NG) or Propane (LPG)"
+   },
+   {
+    "label": "Lighting",
+    "value": "Decorative Overhead Lighting"
+   },
+   {
+    "label": "Viewing Area",
+    "value": "36 ⅛\" w x 25 ½\" h = 921\"²"
+   },
+   {
+    "label": "Framing & Venting",
+    "value": "Refer to Installation Manual."
+   }
+  ],
+  "heat": {
+   "btuMax": 36000,
+   "btuMin": 15000,
+   "efficiency": "71% (EnerGuide)"
+  },
+  "dimensions": {
+   "text": "43-7/8\" w x 34-1/2\" h x 20-3/8\" d",
+   "width": 43.875,
+   "height": 34.5,
+   "depth": 20.375
+  },
+  "options": [
+   {
+    "id": "fronts",
+    "label": "Fronts",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "2318",
+      "name": "1\" Clean Install Kit",
+      "part": "1430CIK",
+      "thumb": "/catalog/valor/thumb/451556646890-1030cik.webp",
+      "layer": "/catalog/valor/layer/761669752926-1430cik.webp",
+      "z": 5,
+      "isDefault": true
+     },
+     {
+      "id": "723",
+      "name": "1\" Black Fixed Frame",
+      "part": "1430FFK",
+      "thumb": "/catalog/valor/thumb/201502916372-1430FFK-thumb.webp",
+      "layer": "/catalog/valor/layer/791561476322-1430FFK.webp",
+      "z": 5
+     },
+     {
+      "id": "726",
+      "name": "3-1/4\" Black Three Sided",
+      "part": "1435TSB",
+      "thumb": "/catalog/valor/thumb/961502916407-1435TSB-thumb.webp",
+      "layer": "/catalog/valor/layer/291561476325-1435TSB.webp",
+      "z": 5
+     },
+     {
+      "id": "724",
+      "name": "4\" Black Four Sided",
+      "part": "1440FSB2",
+      "thumb": "/catalog/valor/thumb/861502916395-1440FSB-thumb.webp",
+      "layer": "/catalog/valor/layer/721561476328-1440FSB.webp",
+      "z": 5
+     }
+    ]
+   },
+   {
+    "id": "liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1398",
+      "name": "Fluted Black",
+      "part": "1425FBL",
+      "thumb": "/catalog/valor/thumb/571559844233-FBL.webp",
+      "layer": "/catalog/valor/layer/821561476253-FBL.webp",
+      "z": 2,
+      "isDefault": true
+     },
+     {
+      "id": "1399",
+      "name": "Reflective Glass",
+      "part": "1470RGL",
+      "thumb": "/catalog/valor/thumb/201559844235-RGL.webp",
+      "layer": "/catalog/valor/layer/211561476276-RGL.webp",
+      "z": 2
+     },
+     {
+      "id": "1400",
+      "name": "Plain Black",
+      "part": "1460PBL",
+      "thumb": "/catalog/valor/thumb/211561476508-PBL.webp",
+      "layer": "/catalog/valor/layer/751561476269-PBL.webp",
+      "z": 2
+     },
+     {
+      "id": "1402",
+      "name": "Herringbone",
+      "part": "1475HBL",
+      "thumb": "/catalog/valor/thumb/881561476505-HBL.webp",
+      "layer": "/catalog/valor/layer/551561476259-HBL.webp",
+      "z": 2
+     },
+     {
+      "id": "2317",
+      "name": "Ledgestone",
+      "part": "1415LSLV2",
+      "thumb": "/catalog/valor/thumb/971560359519-LSL.webp",
+      "layer": "/catalog/valor/layer/921561476264-LSL.webp",
+      "z": 2
+     },
+     {
+      "id": "3228",
+      "name": "Grey Brick",
+      "part": "1485GBL",
+      "thumb": "/catalog/valor/thumb/331760979364-GBL-thumb.webp",
+      "layer": "/catalog/valor/layer/371775079198-GBL.webp",
+      "z": 2
+     }
+    ]
+   },
+   {
+    "id": "fuel-beds",
+    "label": "Fuel beds",
+    "area": "burner",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1395",
+      "name": "Birch Logs",
+      "part": "1400BLK",
+      "thumb": "/catalog/valor/thumb/651669754154-blk-thumb.webp",
+      "layer": "/catalog/valor/layer/541669752966-1400blk.webp",
+      "z": 3,
+      "isDefault": true
+     },
+     {
+      "id": "1393",
+      "name": "Driftwood Logs",
+      "part": "1400DWKV2",
+      "thumb": "/catalog/valor/thumb/101669754159-dwkv2-thumb.webp",
+      "layer": "/catalog/valor/layer/441669752960-1400dwkv2.webp",
+      "z": 3
+     },
+     {
+      "id": "1394",
+      "name": "Traditional Logs",
+      "part": "1400LSKV2",
+      "thumb": "/catalog/valor/thumb/301669754150-lskv2-thumb.webp",
+      "layer": "/catalog/valor/layer/571669753847-1400lskv2.webp",
+      "z": 3
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/941712173781-h6-2024.webp",
+    "alt": "H6 Fireplace fireplace",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [
+   {
+    "label": "Quick Guide",
+    "url": "https://www.valorfireplaces.com/media/Remote/remote-guide-valor10.pdf"
+   },
+   {
+    "label": "Manual",
+    "url": "https://www.valorfireplaces.com/media/Remote/GV60-SYMAX.pdf"
+   },
+   {
+    "label": "Installation Manual",
+    "url": "https://www.valorfireplaces.com/media/H6/English/1400MN-MP-Installation.pdf"
+   },
+   {
+    "label": "Installation & Planning",
+    "url": "https://www.valorfireplaces.com/media/Heatshift/installs/H5-H6-HeatShift-E.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.valorfireplaces.com/gas-fireplaces/h6.php",
+  "enabled": true
+ },
+ {
+  "id": "va-680",
+  "slug": "horizon-fireplace-fireplace",
+  "brandId": "valor",
+  "name": "Horizon Fireplace",
+  "sku": "534V",
+  "fuel": "gas",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "A gas fireplace. 24,000 BTU maximum input. Efficiency: 65.07% / 66.12% (EnerGuide).",
+  "makerDescription": "Compact in design, the Horizon engine features a range of installation opportunities in both top and rear vent applications. Designs range from traditional to contemporary and everything in between.",
+  "specs": [
+   {
+    "label": "Max input (BTU)",
+    "value": "24,000 / 23,500"
+   },
+   {
+    "label": "Min input (BTU)",
+    "value": "12,500 / 13,900"
+   },
+   {
+    "label": "Max output (BTU)",
+    "value": "17,798 / 17,761"
+   },
+   {
+    "label": "Efficiency (EnerGuide)",
+    "value": "65.07% / 66.12%"
+   },
+   {
+    "label": "Gas Type",
+    "value": "Natural Gas (NG) or Propane (LPG)"
+   },
+   {
+    "label": "Viewing Area",
+    "value": "26 ½\" w x 14 ¾\" h = 391\"²"
+   },
+   {
+    "label": "Framing & Venting",
+    "value": "Refer to Installation Manual."
+   }
+  ],
+  "heat": {
+   "btuMax": 24000,
+   "btuMin": 12500,
+   "efficiency": "65.07% / 66.12% (EnerGuide)"
+  },
+  "dimensions": {
+   "text": "32-3/16\" w x 29-3/4\" h x 14\" d",
+   "width": 32.1875,
+   "height": 29.75,
+   "depth": 14
+  },
+  "options": [
+   {
+    "id": "fronts",
+    "label": "Fronts",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "807",
+      "name": "Black Cast Iron",
+      "part": "602CFB",
+      "thumb": "/catalog/valor/thumb/891502990799-602CFB-thumb.webp",
+      "layer": "/catalog/valor/layer/631561582667-602CFB.webp",
+      "z": 5,
+      "isDefault": true
+     },
+     {
+      "id": "808",
+      "name": "Vintage Iron Double Doors",
+      "part": "610FVI",
+      "thumb": "/catalog/valor/thumb/681532970708-610FVI-thumb.webp",
+      "layer": "/catalog/valor/layer/611561582670-610FVI.webp",
+      "z": 5
+     },
+     {
+      "id": "804",
+      "name": "Clearview",
+      "part": "645CFV",
+      "thumb": "/catalog/valor/thumb/821502989688-645CFV-thumb.webp",
+      "layer": "/catalog/valor/layer/781563230690-645cfv.webp",
+      "z": 5
+     },
+     {
+      "id": "3048",
+      "name": "H4 Landscape - Pewter",
+      "part": "663LSPW",
+      "thumb": "/catalog/valor/thumb/911754426910-663-thumb.webp",
+      "layer": "/catalog/valor/layer/941754426779-663lspw.webp",
+      "z": 5
+     },
+     {
+      "id": "811",
+      "name": "Matte Black",
+      "part": "672MBF",
+      "thumb": "/catalog/valor/thumb/291502990841-672MBF-thumb.webp",
+      "layer": "/catalog/valor/layer/401753825012-672mbf-fix2.webp",
+      "z": 5
+     }
+    ]
+   },
+   {
+    "id": "frets",
+    "label": "Frets",
+    "area": "exterior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "793",
+      "name": "Clearview Access Panel",
+      "part": "645CAP",
+      "thumb": "/catalog/valor/thumb/901501182035-740CAP.webp",
+      "layer": "/catalog/valor/layer/101561582714-645CAP.webp",
+      "z": 5
+     },
+     {
+      "id": "795",
+      "name": "Ventana",
+      "part": "1225VFB",
+      "thumb": "/catalog/valor/thumb/221501259973-1225VFB.webp",
+      "layer": "/catalog/valor/layer/161561582719-1225VFB.webp",
+      "z": 5
+     },
+     {
+      "id": "797",
+      "name": "Traditional",
+      "part": "RA24TB",
+      "thumb": "/catalog/valor/thumb/861501259979-RA24TB.webp",
+      "layer": "/catalog/valor/layer/391561582724-RA24TB.webp",
+      "z": 5
+     },
+     {
+      "id": "-1",
+      "name": "None"
+     }
+    ]
+   },
+   {
+    "id": "surrounds",
+    "label": "Surrounds",
+    "area": "exterior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "798",
+      "name": "Black 3-Sided Contour",
+      "part": "603FSK",
+      "thumb": "/catalog/valor/thumb/251502991061-603FSK-thumb.webp",
+      "layer": "/catalog/valor/layer/931561582746-603FSK.webp",
+      "z": 7
+     },
+     {
+      "id": "799",
+      "name": "Black 4-Sided Contour",
+      "part": "605FSK",
+      "thumb": "/catalog/valor/thumb/561502991070-605FSK-thumb.webp",
+      "layer": "/catalog/valor/layer/741561582749-605FSK.webp",
+      "z": 7
+     },
+     {
+      "id": "-1",
+      "name": "None"
+     }
+    ]
+   },
+   {
+    "id": "liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1441",
+      "name": "Fluted Black",
+      "part": "620FBL",
+      "thumb": "/catalog/valor/thumb/571559844233-FBL.webp",
+      "layer": "/catalog/valor/layer/761561582622-FBL.webp",
+      "z": 2,
+      "isDefault": true
+     },
+     {
+      "id": "1443",
+      "name": "Red Brick",
+      "part": "621VRL",
+      "thumb": "/catalog/valor/thumb/341559844238-VRL.webp",
+      "layer": "/catalog/valor/layer/531686588155-VRL-23.webp",
+      "z": 2
+     }
+    ]
+   },
+   {
+    "id": "fuel-beds",
+    "label": "Fuel beds",
+    "area": "burner",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "3049",
+      "name": "Birch Logs",
+      "part": "MF28VBLK",
+      "thumb": "/catalog/valor/thumb/291675280995-739blk-thumb.webp",
+      "layer": "/catalog/valor/layer/131743180009-VBLK.webp",
+      "z": 3,
+      "isDefault": true
+     },
+     {
+      "id": "3050",
+      "name": "Driftwood Logs",
+      "part": "MF28VDWK",
+      "thumb": "/catalog/valor/thumb/301675280996-739vdwk-thumb.webp",
+      "layer": "/catalog/valor/layer/981743180005-VDWK.webp",
+      "z": 3
+     },
+     {
+      "id": "3051",
+      "name": "Traditional Logs",
+      "part": "MF28VLSK",
+      "thumb": "/catalog/valor/thumb/521675280997-739vlsk-thumb.webp",
+      "layer": "/catalog/valor/layer/141743180012-VLSK.webp",
+      "z": 3
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/391743179606-horizon-vclass-tile.webp",
+    "alt": "Horizon Fireplace fireplace",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [
+   {
+    "label": "Quick Guide",
+    "url": "https://www.valorfireplaces.com/media/Remote/remote-guide-plus-max.pdf"
+   },
+   {
+    "label": "Manual",
+    "url": "https://www.valorfireplaces.com/media/Remote/GV60-PLUS.pdf"
+   },
+   {
+    "label": "Installation Manual",
+    "url": "https://www.valorfireplaces.com/media/Horizon/English/534VN-P-Installation.pdf"
+   },
+   {
+    "label": "1265WSK",
+    "url": "https://www.valorfireplaces.com/media/Generic%20Title%20PDF%20manuals/Bilingual/1265WSK%20manual.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.valorfireplaces.com/gas-fireplaces/horizon.php",
+  "enabled": true
+ },
+ {
+  "id": "va-336",
+  "slug": "l1-linear-fireplace-fireplace",
+  "brandId": "valor",
+  "name": "L1 Linear Fireplace",
+  "sku": "1500K",
+  "fuel": "gas",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "A gas linear fireplace. 30,000 BTU maximum input. Efficiency: 66.30% / 67.00% (EnerGuide).",
+  "makerDescription": "A highly effective radiant and convective heater, the L1 raises \"decorative widescreen\" fireplace standards.",
+  "specs": [
+   {
+    "label": "Max input (BTU)",
+    "value": "30,000 / 28,000"
+   },
+   {
+    "label": "Min input (BTU)",
+    "value": "18,000 / 18,500"
+   },
+   {
+    "label": "Max output (BTU)",
+    "value": "21,705 / 20,409"
+   },
+   {
+    "label": "Efficiency (EnerGuide)",
+    "value": "66.30% / 67.00%"
+   },
+   {
+    "label": "Gas Type",
+    "value": "Natural Gas (NG) or Propane (LPG)"
+   },
+   {
+    "label": "Viewing Area",
+    "value": "40\" w x 14 ½\" h = 580\"²"
+   },
+   {
+    "label": "Framing & Venting",
+    "value": "Refer to the Installation Manual."
+   }
+  ],
+  "heat": {
+   "btuMax": 30000,
+   "btuMin": 18000,
+   "efficiency": "66.30% / 67.00% (EnerGuide)"
+  },
+  "dimensions": {
+   "text": "42\" w x 32-3/8\" h x 18\" d",
+   "width": 42,
+   "height": 32.375,
+   "depth": 18
+  },
+  "options": [
+   {
+    "id": "trims",
+    "label": "Trims",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1602",
+      "name": "Clean Install *requires Valor HeatShift",
+      "part": "1530CIK",
+      "thumb": "/catalog/valor/thumb/761581359848-1830cik.webp",
+      "layer": "/catalog/valor/layer/851581363573-1530CIK.webp",
+      "z": 6,
+      "isDefault": true
+     },
+     {
+      "id": "346",
+      "name": "3-1/2” Black",
+      "part": "1550LSBv2",
+      "thumb": "/catalog/valor/thumb/691606850183-1550-mod.webp",
+      "layer": "/catalog/valor/layer/221561139182-1550LSB.webp",
+      "z": 6
+     },
+     {
+      "id": "349",
+      "name": "1” Black Adjustable",
+      "part": "1575LFB",
+      "thumb": "/catalog/valor/thumb/301606850184-1575-mod.webp",
+      "layer": "/catalog/valor/layer/141561139192-1575.webp",
+      "z": 6
+     }
+    ]
+   },
+   {
+    "id": "liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1361",
+      "name": "Fluted Black",
+      "part": "1515FBL",
+      "thumb": "/catalog/valor/thumb/571559844233-FBL.webp",
+      "layer": "/catalog/valor/layer/381561139117-FBL.webp",
+      "z": 2,
+      "isDefault": true
+     },
+     {
+      "id": "1362",
+      "name": "Reflective Glass",
+      "part": "1525RGL",
+      "thumb": "/catalog/valor/thumb/201559844235-RGL.webp",
+      "layer": "/catalog/valor/layer/441561139126-RGL.webp",
+      "z": 2
+     },
+     {
+      "id": "1916",
+      "name": "Plain Black",
+      "part": "1560PBL",
+      "thumb": "/catalog/valor/thumb/161560359520-PBL.webp",
+      "layer": "/catalog/valor/layer/751630078580-1560pbl.webp",
+      "z": 2
+     }
+    ]
+   },
+   {
+    "id": "fuel-beds",
+    "label": "Fuel beds",
+    "area": "burner",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1601",
+      "name": "Birch Logs",
+      "part": "1505BLKV2",
+      "thumb": "/catalog/valor/thumb/301581359846-blk.webp",
+      "layer": "/catalog/valor/layer/511630079427-1500-BLKV2.webp",
+      "z": 3,
+      "isDefault": true
+     },
+     {
+      "id": "1355",
+      "name": "Driftwood Logs",
+      "part": "1505DWKV2",
+      "thumb": "/catalog/valor/thumb/671561067765-DWK.webp",
+      "layer": "/catalog/valor/layer/131630079431-1500-1505dwkv2.webp",
+      "z": 3
+     },
+     {
+      "id": "1356",
+      "name": "Splitwood Logs",
+      "part": "1505SWKV2",
+      "thumb": "/catalog/valor/thumb/111561067768-SWK.webp",
+      "layer": "/catalog/valor/layer/741630079429-1500-swkv2.webp",
+      "z": 3
+     },
+     {
+      "id": "1357",
+      "name": "Rock & Shale",
+      "part": "1514RSS",
+      "thumb": "/catalog/valor/thumb/591561067767-RSS.webp",
+      "layer": "/catalog/valor/layer/191561139150-RSS.webp",
+      "z": 3
+     },
+     {
+      "id": "1358",
+      "name": "Murano Glass",
+      "part": "1500DGM",
+      "thumb": "/catalog/valor/thumb/431561067766-DGM.webp",
+      "layer": "/catalog/valor/layer/161561139144-DGM.webp",
+      "z": 3
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/911502489773-hero-l1.webp",
+    "alt": "L1 Linear Fireplace fireplace",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [
+   {
+    "label": "Quick Guide",
+    "url": "https://www.valorfireplaces.com/media/Remote/remote-guide-valor10.pdf"
+   },
+   {
+    "label": "Manual",
+    "url": "https://www.valorfireplaces.com/media/Remote/GV60-SYMAX.pdf"
+   },
+   {
+    "label": "Installation Manual",
+    "url": "https://www.valorfireplaces.com/media/L1/English/1500KN-KP-installation.pdf"
+   },
+   {
+    "label": "Installation & Planning",
+    "url": "https://www.valorfireplaces.com/media/Heatshift/installs/Linear-HeatShift-E.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.valorfireplaces.com/gas-fireplaces/linear-fireplaces/l1.php",
+  "enabled": true
+ },
+ {
+  "id": "va-350",
+  "slug": "l1-see-thru-fireplace-fireplace",
+  "brandId": "valor",
+  "name": "L1 See-Thru Fireplace",
+  "sku": "1600K",
+  "fuel": "gas",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "A gas linear fireplace. 30,000 BTU maximum input. Efficiency: 69.00% (EnerGuide).",
+  "makerDescription": "A seamless transition between architectural spaces, the L1 See-Thru boasts the same widescreen proportions as the highly successful L1 Series. Connect living spaces with Valor warmth, design and reliable home comfort.",
+  "specs": [
+   {
+    "label": "Max input (BTU)",
+    "value": "30,000 / 26,000"
+   },
+   {
+    "label": "Min input (BTU)",
+    "value": "18,000 / 18,500"
+   },
+   {
+    "label": "Max output (BTU)",
+    "value": "22,116 / 19,198"
+   },
+   {
+    "label": "Efficiency (EnerGuide)",
+    "value": "69.00%"
+   },
+   {
+    "label": "Gas Type",
+    "value": "Natural Gas (NG) or Propane (LPG)"
+   },
+   {
+    "label": "Viewing Area",
+    "value": "40\" w x 14 ½\" h = 580\"²"
+   },
+   {
+    "label": "Framing & Venting",
+    "value": "Refer to the Installation Manual."
+   }
+  ],
+  "heat": {
+   "btuMax": 30000,
+   "btuMin": 18000,
+   "efficiency": "69.00% (EnerGuide)"
+  },
+  "dimensions": {
+   "text": "45-1/4\" w x 33-1/8\" h x 18-1/2\" d",
+   "width": 45.25,
+   "height": 33.125,
+   "depth": 18.5
+  },
+  "options": [
+   {
+    "id": "trims",
+    "label": "Trims",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1600",
+      "name": "Clean Install *requires Valor HeatShift",
+      "part": "1530CIK",
+      "thumb": "/catalog/valor/thumb/761581359848-1830cik.webp",
+      "layer": "/catalog/valor/layer/851581363573-1530CIK.webp",
+      "z": 6,
+      "isDefault": true
+     },
+     {
+      "id": "364",
+      "name": "3-1/2\" Black",
+      "part": "1550LSBv2",
+      "thumb": "/catalog/valor/thumb/691606850183-1550-mod.webp",
+      "layer": "/catalog/valor/layer/221561139182-1550LSB.webp",
+      "z": 6
+     },
+     {
+      "id": "367",
+      "name": "1\" Black Adjustable",
+      "part": "1575LFB",
+      "thumb": "/catalog/valor/thumb/301606850184-1575-mod.webp",
+      "layer": "/catalog/valor/layer/141561139192-1575.webp",
+      "z": 6
+     }
+    ]
+   },
+   {
+    "id": "liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1376",
+      "name": "Fluted Black",
+      "part": "1615FBL",
+      "thumb": "/catalog/valor/thumb/571559844233-FBL.webp",
+      "layer": "/catalog/valor/layer/621561140506-1600-FBL.webp",
+      "z": 2,
+      "isDefault": true
+     },
+     {
+      "id": "1377",
+      "name": "Reflective Glass",
+      "part": "1625RGL",
+      "thumb": "/catalog/valor/thumb/201559844235-RGL.webp",
+      "layer": "/catalog/valor/layer/121561140511-1600-RGL.webp",
+      "z": 2
+     }
+    ]
+   },
+   {
+    "id": "fuel-beds",
+    "label": "Fuel beds",
+    "area": "burner",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1599",
+      "name": "Birch Logs",
+      "part": "1505BLKV2",
+      "thumb": "/catalog/valor/thumb/861563224071-BLK.webp",
+      "layer": "/catalog/valor/layer/511630079427-1500-BLKV2.webp",
+      "z": 3,
+      "isDefault": true
+     },
+     {
+      "id": "1371",
+      "name": "Driftwood Logs",
+      "part": "1505DWKV2",
+      "thumb": "/catalog/valor/thumb/671561067765-DWK.webp",
+      "layer": "/catalog/valor/layer/131630079431-1500-1505dwkv2.webp",
+      "z": 3
+     },
+     {
+      "id": "1372",
+      "name": "Splitwood Logs",
+      "part": "1505SWKV2",
+      "thumb": "/catalog/valor/thumb/111561067768-SWK.webp",
+      "layer": "/catalog/valor/layer/741630079429-1500-swkv2.webp",
+      "z": 3
+     },
+     {
+      "id": "1373",
+      "name": "Rock & Shale",
+      "part": "1514RSS",
+      "thumb": "/catalog/valor/thumb/591561067767-RSS.webp",
+      "layer": "/catalog/valor/layer/471561140533-1600-RSS.webp",
+      "z": 3
+     },
+     {
+      "id": "1374",
+      "name": "Murano Glass",
+      "part": "1500DGM",
+      "thumb": "/catalog/valor/thumb/431561067766-DGM.webp",
+      "layer": "/catalog/valor/layer/151561140526-1600-DGM.webp",
+      "z": 3
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/821502489813-hero-l1-2.webp",
+    "alt": "L1 See-Thru Fireplace fireplace",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [
+   {
+    "label": "Quick Guide",
+    "url": "https://www.valorfireplaces.com/media/Remote/remote-guide-valor10.pdf"
+   },
+   {
+    "label": "Manual",
+    "url": "https://www.valorfireplaces.com/media/Remote/GV60-SYMAX.pdf"
+   },
+   {
+    "label": "Installation Manual",
+    "url": "https://www.valorfireplaces.com/media/L1-2Sided/english/1600KN-KP-installation.pdf"
+   },
+   {
+    "label": "Installation & Planning",
+    "url": "https://www.valorfireplaces.com/media/Heatshift/installs/Linear-HeatShift-E.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.valorfireplaces.com/gas-fireplaces/linear-fireplaces/l1-seethru.php",
+  "enabled": true
+ },
+ {
+  "id": "va-560",
+  "slug": "l2-linear-fireplace-fireplace",
+  "brandId": "valor",
+  "name": "L2 Linear Fireplace",
+  "sku": "1700K",
+  "fuel": "gas",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "A gas linear fireplace. 36,000 BTU maximum input. Efficiency: 67.00% / 70.00% (EnerGuide).",
+  "makerDescription": "A bold statement in any living space, the L2 is luxury fireplace design at its finest.",
+  "specs": [
+   {
+    "label": "Max input (BTU)",
+    "value": "36,000 / 34,000"
+   },
+   {
+    "label": "Min input (BTU)",
+    "value": "19,000 / 21,000"
+   },
+   {
+    "label": "Max output (BTU)",
+    "value": "25,916 / 25,347"
+   },
+   {
+    "label": "Efficiency (EnerGuide)",
+    "value": "67.00% / 70.00%"
+   },
+   {
+    "label": "Gas Type",
+    "value": "Natural Gas (NG) or Propane (LPG)"
+   },
+   {
+    "label": "Viewing Area",
+    "value": "50\" w x 14 ½\" h = 725\"²"
+   },
+   {
+    "label": "Framing & Venting",
+    "value": "Refer to the Installation Manual."
+   }
+  ],
+  "heat": {
+   "btuMax": 36000,
+   "btuMin": 19000,
+   "efficiency": "67.00% / 70.00% (EnerGuide)"
+  },
+  "dimensions": {
+   "text": "52\" w x 32-3/8\" h x 18\" d",
+   "width": 52,
+   "height": 32.375,
+   "depth": 18
+  },
+  "options": [
+   {
+    "id": "trims",
+    "label": "Trims",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1597",
+      "name": "Clean Install *requires Valor HeatShift",
+      "part": "1730CIK",
+      "thumb": "/catalog/valor/thumb/761581359848-1830cik.webp",
+      "layer": "/catalog/valor/layer/911581361649-1730CIK.webp",
+      "z": 6,
+      "isDefault": true
+     },
+     {
+      "id": "577",
+      "name": "1\" Black Adjustable",
+      "part": "1775LFB",
+      "thumb": "/catalog/valor/thumb/301606850184-1575-mod.webp",
+      "layer": "/catalog/valor/layer/691561133782-1775LFB.webp",
+      "z": 6
+     }
+    ]
+   },
+   {
+    "id": "liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1350",
+      "name": "Fluted Black",
+      "part": "1715FBL",
+      "thumb": "/catalog/valor/thumb/571559844233-FBL.webp",
+      "layer": "/catalog/valor/layer/181561133721-FBL.webp",
+      "z": 2,
+      "isDefault": true
+     },
+     {
+      "id": "1351",
+      "name": "Reflective Glass",
+      "part": "1725RGL",
+      "thumb": "/catalog/valor/thumb/201559844235-RGL.webp",
+      "layer": "/catalog/valor/layer/621561133718-RGL.webp",
+      "z": 2
+     },
+     {
+      "id": "1922",
+      "name": "Plain Black",
+      "part": "1760PBL",
+      "thumb": "/catalog/valor/thumb/161560359520-PBL.webp",
+      "layer": "/catalog/valor/layer/291630079048-1760pbl.webp",
+      "z": 2
+     }
+    ]
+   },
+   {
+    "id": "fuel-beds",
+    "label": "Fuel beds",
+    "area": "burner",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1598",
+      "name": "Birch Logs",
+      "part": "1705BLKV2",
+      "thumb": "/catalog/valor/thumb/811706555316-blkv2.webp",
+      "layer": "/catalog/valor/layer/441714755044-blk-fix.webp",
+      "z": 3,
+      "isDefault": true
+     },
+     {
+      "id": "1346",
+      "name": "Driftwood Logs",
+      "part": "1705DWKV2",
+      "thumb": "/catalog/valor/thumb/801706555356-dwkv2.webp",
+      "layer": "/catalog/valor/layer/721706648145-l2-dwk-v2.webp",
+      "z": 3
+     },
+     {
+      "id": "1347",
+      "name": "Splitwood Logs",
+      "part": "1705SWKV2",
+      "thumb": "/catalog/valor/thumb/131706555336-swkv2.webp",
+      "layer": "/catalog/valor/layer/571706648150-l2-swk-v2.webp",
+      "z": 3
+     },
+     {
+      "id": "1348",
+      "name": "Rock & Shale",
+      "part": "1714RSS",
+      "thumb": "/catalog/valor/thumb/591561067767-RSS.webp",
+      "layer": "/catalog/valor/layer/831561133750-RSS.webp",
+      "z": 3
+     },
+     {
+      "id": "1349",
+      "name": "Murano Glass",
+      "part": "1700DGM",
+      "thumb": "/catalog/valor/thumb/431561067766-DGM.webp",
+      "layer": "/catalog/valor/layer/431561133746-DGM.webp",
+      "z": 3
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/311502747485-hero-l2.webp",
+    "alt": "L2 Linear Fireplace fireplace",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [
+   {
+    "label": "Quick Guide",
+    "url": "https://www.valorfireplaces.com/media/Remote/remote-guide-valor10.pdf"
+   },
+   {
+    "label": "Manual",
+    "url": "https://www.valorfireplaces.com/media/Remote/GV60-SYMAX.pdf"
+   },
+   {
+    "label": "Installation Manual",
+    "url": "https://www.valorfireplaces.com/media/L2/english/1700KN-KP-installation.pdf"
+   },
+   {
+    "label": "Installation & Planning",
+    "url": "https://www.valorfireplaces.com/media/Heatshift/installs/Linear-HeatShift-E.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.valorfireplaces.com/gas-fireplaces/linear-fireplaces/l2.php",
+  "enabled": true
+ },
+ {
+  "id": "va-561",
+  "slug": "l3-linear-fireplace-fireplace",
+  "brandId": "valor",
+  "name": "L3 Linear Fireplace",
+  "sku": "1800K",
+  "fuel": "gas",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "A gas linear fireplace. 42,000 BTU maximum input. Efficiency: 66.46% (EnerGuide).",
+  "makerDescription": "The L3 is also ready to take the new HeatShift System, we recommend this option especially for installations where cooler walls immediately above the fireplace are desirable.",
+  "specs": [
+   {
+    "label": "Max input (BTU)",
+    "value": "42,000"
+   },
+   {
+    "label": "Min input (BTU)",
+    "value": "23,000"
+   },
+   {
+    "label": "Max output (BTU)",
+    "value": "30,484"
+   },
+   {
+    "label": "Efficiency (EnerGuide)",
+    "value": "66.46%"
+   },
+   {
+    "label": "Gas Type",
+    "value": "Natural Gas (NG) or Propane (LPG)"
+   },
+   {
+    "label": "Viewing Area",
+    "value": "64\" w x 14 ½\" h = 928\"²"
+   },
+   {
+    "label": "Framing & Venting",
+    "value": "Refer to the Installation Manual."
+   }
+  ],
+  "heat": {
+   "btuMax": 42000,
+   "btuMin": 23000,
+   "efficiency": "66.46% (EnerGuide)"
+  },
+  "dimensions": {
+   "text": "66-1/4\" w 32-3/8\" h x 18\" d",
+   "width": 66.25,
+   "height": 32.375,
+   "depth": 18
+  },
+  "options": [
+   {
+    "id": "trims",
+    "label": "Trims",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1596",
+      "name": "Clean Install *requires Valor HeatShift",
+      "part": "1830CIK",
+      "thumb": "/catalog/valor/thumb/761581359848-1830cik.webp",
+      "layer": "/catalog/valor/layer/411581359398-1830CIK.webp",
+      "z": 6,
+      "isDefault": true
+     },
+     {
+      "id": "570",
+      "name": "5-1/4\" Black",
+      "part": "1850LSB",
+      "thumb": "/catalog/valor/thumb/691606850183-1550-mod.webp",
+      "layer": "/catalog/valor/layer/431561150171-1850LSB.webp",
+      "z": 6
+     },
+     {
+      "id": "571",
+      "name": "1\" Black Adjustable",
+      "part": "1875LFB",
+      "thumb": "/catalog/valor/thumb/301606850184-1575-mod.webp",
+      "layer": "/catalog/valor/layer/561561150175-1875LFB.webp",
+      "z": 6
+     }
+    ]
+   },
+   {
+    "id": "liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1383",
+      "name": "Fluted Black",
+      "part": "1815FBL",
+      "thumb": "/catalog/valor/thumb/571559844233-FBL.webp",
+      "layer": "/catalog/valor/layer/181561150125-FBL.webp",
+      "z": 2,
+      "isDefault": true
+     },
+     {
+      "id": "1384",
+      "name": "Reflective Glass",
+      "part": "1825RGL",
+      "thumb": "/catalog/valor/thumb/201559844235-RGL.webp",
+      "layer": "/catalog/valor/layer/551561150134-RGL.webp",
+      "z": 2
+     },
+     {
+      "id": "1923",
+      "name": "Plain Black",
+      "part": "1860PBL",
+      "thumb": "/catalog/valor/thumb/161560359520-PBL.webp",
+      "layer": "/catalog/valor/layer/781630079064-1860pbl.webp",
+      "z": 2
+     }
+    ]
+   },
+   {
+    "id": "fuel-beds",
+    "label": "Fuel beds",
+    "area": "burner",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1595",
+      "name": "Birch Logs",
+      "part": "1800BLK",
+      "thumb": "/catalog/valor/thumb/301581359846-blk.webp",
+      "layer": "/catalog/valor/layer/401581359252-BLK.webp",
+      "z": 3,
+      "isDefault": true
+     },
+     {
+      "id": "1380",
+      "name": "Driftwood Logs",
+      "part": "1800DWKV2",
+      "thumb": "/catalog/valor/thumb/671561067765-DWK.webp",
+      "layer": "/catalog/valor/layer/711561150153-DWK.webp",
+      "z": 3
+     },
+     {
+      "id": "1381",
+      "name": "Splitwood Logs",
+      "part": "1800SWK",
+      "thumb": "/catalog/valor/thumb/111561067768-SWK.webp",
+      "layer": "/catalog/valor/layer/111561150155-SWK.webp",
+      "z": 3
+     },
+     {
+      "id": "1382",
+      "name": "Murano Glass",
+      "part": "1800DGMV2",
+      "thumb": "/catalog/valor/thumb/431561067766-DGM.webp",
+      "layer": "/catalog/valor/layer/681561150151-DGM.webp",
+      "z": 3
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/931502747645-hero-l3.webp",
+    "alt": "L3 Linear Fireplace fireplace",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [
+   {
+    "label": "Quick Guide",
+    "url": "https://www.valorfireplaces.com/media/Remote/remote-guide-valor10.pdf"
+   },
+   {
+    "label": "Manual",
+    "url": "https://www.valorfireplaces.com/media/Remote/GV60-SYMAX.pdf"
+   },
+   {
+    "label": "Installation Manual",
+    "url": "https://www.valorfireplaces.com/media/L3/English/1800KN-KP-installation.pdf"
+   },
+   {
+    "label": "Installation & Planning",
+    "url": "https://www.valorfireplaces.com/media/Heatshift/installs/Linear-HeatShift-E.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.valorfireplaces.com/gas-fireplaces/linear-fireplaces/l3.php",
+  "enabled": true
+ },
+ {
+  "id": "va-2378",
+  "slug": "lt1-tall-linear-fireplace",
+  "brandId": "valor",
+  "name": "LT1 Tall Linear",
+  "sku": "2500K",
+  "fuel": "gas",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "A gas linear fireplace. 34,000 BTU maximum input. Efficiency: 70% (EnerGuide).",
+  "makerDescription": "The LT1 continues to raise the standards for linear gas fireplaces.",
+  "specs": [
+   {
+    "label": "Max input (BTU)",
+    "value": "34,000"
+   },
+   {
+    "label": "Min input (BTU)",
+    "value": "20,000 / 22,000"
+   },
+   {
+    "label": "Max output (BTU)",
+    "value": "24,446"
+   },
+   {
+    "label": "Efficiency (EnerGuide)",
+    "value": "70%"
+   },
+   {
+    "label": "Gas Type",
+    "value": "Natural Gas (NG) or Propane (LPG)"
+   },
+   {
+    "label": "Lighting",
+    "value": "Decorative Overhead Lighting"
+   },
+   {
+    "label": "Viewing Area",
+    "value": "40\" w x 17 ½\" h = 700\"²"
+   },
+   {
+    "label": "Framing & Venting",
+    "value": "Refer to Installation Manual."
+   },
+   {
+    "label": "Additional Features",
+    "value": "Integrated safety screen."
+   }
+  ],
+  "heat": {
+   "btuMax": 34000,
+   "btuMin": 20000,
+   "efficiency": "70% (EnerGuide)"
+  },
+  "dimensions": {
+   "text": "42\" w x 36-15/16\" h x 19-7/8\" d",
+   "width": 42,
+   "height": 36.9375,
+   "depth": 19.875
+  },
+  "options": [
+   {
+    "id": "fronts",
+    "label": "Fronts",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "2388",
+      "name": "Clean Install Kit - Black",
+      "part": "2530CIK",
+      "thumb": "/catalog/valor/thumb/761581359848-1830cik.webp",
+      "layer": "/catalog/valor/layer/531682367628-2530cik.webp",
+      "z": 5,
+      "isDefault": true
+     },
+     {
+      "id": "2389",
+      "name": "1” Adjustable - Black",
+      "part": "2575LFB",
+      "detail": "1” Adjustable - Black",
+      "thumb": "/catalog/valor/thumb/701581359845-1875.webp",
+      "layer": "/catalog/valor/layer/531682367635-2575lfb.webp",
+      "z": 5
+     }
+    ]
+   },
+   {
+    "id": "liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "2382",
+      "name": "Fluted Black",
+      "part": "2515FBL",
+      "detail": "Fluted Black Liner",
+      "thumb": "/catalog/valor/thumb/651560359516-FBL.webp",
+      "layer": "/catalog/valor/layer/521683653016-2515fbl.webp",
+      "z": 2,
+      "isDefault": true
+     },
+     {
+      "id": "2383",
+      "name": "Reflective Glass",
+      "part": "2525RGL",
+      "detail": "Reflective Glass Liner",
+      "thumb": "/catalog/valor/thumb/761560359520-RGL.webp",
+      "layer": "/catalog/valor/layer/341683653052-2525rgl.webp",
+      "z": 2
+     },
+     {
+      "id": "2384",
+      "name": "Plain Black",
+      "part": "2560PBL",
+      "detail": "Plain Black Liner",
+      "thumb": "/catalog/valor/thumb/161560359520-PBL.webp",
+      "layer": "/catalog/valor/layer/641683653078-2560pbl.webp",
+      "z": 2
+     },
+     {
+      "id": "3148",
+      "name": "Grey Brick",
+      "part": "2585GBL",
+      "thumb": "/catalog/valor/thumb/331760979364-GBL-thumb.webp",
+      "layer": "/catalog/valor/layer/431760979348-2585GBL.webp",
+      "z": 2
+     }
+    ]
+   },
+   {
+    "id": "fires",
+    "label": "Fire style",
+    "area": "burner",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "3149",
+      "name": "Grand Traditional Logs",
+      "part": "2505GTL",
+      "thumb": "/catalog/valor/thumb/111760980955-GTL-thumb.webp",
+      "layer": "/catalog/valor/layer/831760980928-2505GTL.webp",
+      "z": 3,
+      "isDefault": true
+     },
+     {
+      "id": "2385",
+      "name": "Birch Logs",
+      "part": "1505BLKV2",
+      "detail": "Birch Logs",
+      "thumb": "/catalog/valor/thumb/741683651177-blk-thumb.webp",
+      "layer": "/catalog/valor/layer/541682367593-1505blkv2.webp",
+      "z": 3
+     },
+     {
+      "id": "2386",
+      "name": "Driftwood Logs",
+      "part": "1505DWKV2",
+      "detail": "Driftwood Logs",
+      "thumb": "/catalog/valor/thumb/851683651176-dwk-thumb.webp",
+      "layer": "/catalog/valor/layer/921682367599-1505dwkv2.webp",
+      "z": 3
+     },
+     {
+      "id": "2387",
+      "name": "Splitwood Logs",
+      "part": "1505SWKV2",
+      "detail": "Splitwood Logs",
+      "thumb": "/catalog/valor/thumb/661683651179-swk-thumb.webp",
+      "layer": "/catalog/valor/layer/971682367605-1505swkv2.webp",
+      "z": 3
+     },
+     {
+      "id": "2400",
+      "name": "Rock & Shale",
+      "part": "1514RSS",
+      "detail": "Rock & Shale",
+      "thumb": "/catalog/valor/thumb/591561067767-RSS.webp",
+      "layer": "/catalog/valor/layer/461682367611-1514rss.webp",
+      "z": 3
+     },
+     {
+      "id": "2401",
+      "name": "Murano Glass",
+      "part": "1500DGM",
+      "detail": "Murano Glass",
+      "thumb": "/catalog/valor/thumb/431561067766-DGM.webp",
+      "layer": "/catalog/valor/layer/821682367586-1500dgm.webp",
+      "z": 3
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/231683650034-lt1-thumb1.webp",
+    "alt": "LT1 Tall Linear fireplace",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [
+   {
+    "label": "Quick Guide",
+    "url": "https://www.valorfireplaces.com/media/Remote/remote-guide-valor10.pdf"
+   },
+   {
+    "label": "Manual",
+    "url": "https://www.valorfireplaces.com/media/Remote/GV60-SYMAX.pdf"
+   },
+   {
+    "label": "Refer to Installation Manual",
+    "url": "https://www.valorfireplaces.com/media/LT1/English/2500KN-KP-Installation.pdf"
+   },
+   {
+    "label": "RBWSK",
+    "url": "https://www.valorfireplaces.com/media/L3/Bilingual/RBWSK-E-F.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.valorfireplaces.com/gas-fireplaces/linear-fireplaces/lt1.php",
+  "enabled": true
+ },
+ {
+  "id": "va-2567",
+  "slug": "lt2-tall-linear-fireplace",
+  "brandId": "valor",
+  "name": "LT2 Tall Linear",
+  "sku": "2700K",
+  "fuel": "gas",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "A gas linear fireplace. 39,000 BTU maximum input. Efficiency: 68% (EnerGuide).",
+  "makerDescription": "LT2 Tall Linear",
+  "specs": [
+   {
+    "label": "Max input (BTU)",
+    "value": "39,000"
+   },
+   {
+    "label": "Min input (BTU)",
+    "value": "22,000 / 20,000"
+   },
+   {
+    "label": "Max output (BTU)",
+    "value": "28,025"
+   },
+   {
+    "label": "Efficiency (EnerGuide)",
+    "value": "68%"
+   },
+   {
+    "label": "Gas Type",
+    "value": "Natural Gas (NG) or Propane (LPG)"
+   },
+   {
+    "label": "Lighting",
+    "value": "Decorative Overhead Lighting"
+   },
+   {
+    "label": "Viewing Area",
+    "value": "49-13/16\" w x 19-5/8\" h = 932\"²"
+   },
+   {
+    "label": "Framing & Venting",
+    "value": "Refer to Installation Manual."
+   },
+   {
+    "label": "Additional Features",
+    "value": "Integrated safety screen."
+   }
+  ],
+  "heat": {
+   "btuMax": 39000,
+   "btuMin": 20000,
+   "efficiency": "68% (EnerGuide)"
+  },
+  "dimensions": {
+   "text": "52\" w x 36-15/16\" h x 20-3/8\" d",
+   "width": 52,
+   "height": 36.9375,
+   "depth": 20.375
+  },
+  "options": [
+   {
+    "id": "fronts",
+    "label": "Fronts",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "2579",
+      "name": "Clean Install Kit - Black",
+      "part": "2730CIK",
+      "thumb": "/catalog/valor/thumb/761581359848-1830cik.webp",
+      "layer": "/catalog/valor/layer/441700525410-2730CIK.webp",
+      "z": 5,
+      "isDefault": true
+     },
+     {
+      "id": "2580",
+      "name": "1\" Adjustable - Black",
+      "part": "2775LFB",
+      "thumb": "/catalog/valor/thumb/701581359845-1875.webp",
+      "layer": "/catalog/valor/layer/431700525395-2775LFB.webp",
+      "z": 5
+     }
+    ]
+   },
+   {
+    "id": "liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "2571",
+      "name": "Fluted Black",
+      "part": "2715FBL",
+      "thumb": "/catalog/valor/thumb/651560359516-FBL.webp",
+      "layer": "/catalog/valor/layer/591700525380-FBLLiner.webp",
+      "z": 2,
+      "isDefault": true
+     },
+     {
+      "id": "2572",
+      "name": "Reflective Glass",
+      "part": "2725RGL",
+      "thumb": "/catalog/valor/thumb/761560359520-RGL.webp",
+      "layer": "/catalog/valor/layer/761700525366-RGLLiner.webp",
+      "z": 2
+     },
+     {
+      "id": "2573",
+      "name": "Plain Black",
+      "part": "2760PBL",
+      "thumb": "/catalog/valor/thumb/161560359520-PBL.webp",
+      "layer": "/catalog/valor/layer/101700525352-PBLLiner.webp",
+      "z": 2
+     },
+     {
+      "id": "3147",
+      "name": "Grey Brick",
+      "part": "2785GBL",
+      "thumb": "/catalog/valor/thumb/331760979364-GBL-thumb.webp",
+      "layer": "/catalog/valor/layer/131760979761-2785GBL.webp",
+      "z": 2
+     }
+    ]
+   },
+   {
+    "id": "fuel-beds",
+    "label": "Fuel beds",
+    "area": "burner",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "3146",
+      "name": "Grand Traditional Logs",
+      "part": "2705GTL",
+      "thumb": "/catalog/valor/thumb/111760980955-GTL-thumb.webp",
+      "layer": "/catalog/valor/layer/651760981339-2705GTL.webp",
+      "z": 3,
+      "isDefault": true
+     },
+     {
+      "id": "2574",
+      "name": "Birch Logs",
+      "part": "1705BLKV2",
+      "thumb": "/catalog/valor/thumb/811706555316-blkv2.webp",
+      "layer": "/catalog/valor/layer/141700525469-1705BLKV2.webp",
+      "z": 3
+     },
+     {
+      "id": "2575",
+      "name": "Driftwood Logs",
+      "part": "1705DWKV2",
+      "thumb": "/catalog/valor/thumb/801706555356-dwkv2.webp",
+      "layer": "/catalog/valor/layer/271700525452-1705DWKV2.webp",
+      "z": 3
+     },
+     {
+      "id": "2576",
+      "name": "Splitwood Logs",
+      "part": "1705SWKV2",
+      "thumb": "/catalog/valor/thumb/131706555336-swkv2.webp",
+      "layer": "/catalog/valor/layer/321700525439-1705SWKV2.webp",
+      "z": 3
+     },
+     {
+      "id": "2577",
+      "name": "Rock & Shale",
+      "part": "1714RSS",
+      "thumb": "/catalog/valor/thumb/751706555760-rss-thumb.webp",
+      "layer": "/catalog/valor/layer/531700602514-1714RSS.webp",
+      "z": 3
+     },
+     {
+      "id": "2578",
+      "name": "Murano Glass",
+      "part": "1700DGM",
+      "thumb": "/catalog/valor/thumb/201706555740-dgm-thumb.webp",
+      "layer": "/catalog/valor/layer/211700602530-1700DGM.webp",
+      "z": 3
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/411706554020-lt2-hero.webp",
+    "alt": "LT2 Tall Linear fireplace",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [
+   {
+    "label": "Quick Guide",
+    "url": "https://www.valorfireplaces.com/media/Remote/remote-guide-valor10.pdf"
+   },
+   {
+    "label": "Manual",
+    "url": "https://www.valorfireplaces.com/media/Remote/GV60-SYMAX.pdf"
+   },
+   {
+    "label": "Refer to Installation Manual",
+    "url": "https://www.valorfireplaces.com/media/LT2/English/2700KN-KP-Installation.pdf"
+   },
+   {
+    "label": "RBWSK",
+    "url": "https://www.valorfireplaces.com/media/L3/Bilingual/RBWSK-E-F.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.valorfireplaces.com/gas-fireplaces/linear-fireplaces/lt2.php",
+  "enabled": true
+ },
+ {
+  "id": "va-1450",
+  "slug": "lx1-pier-fireplace-fireplace",
+  "brandId": "valor",
+  "name": "LX1 Pier Fireplace",
+  "sku": "2100PK",
+  "fuel": "gas",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "A gas linear fireplace. 25,000 BTU maximum input. Efficiency: 66.63% (EnerGuide).",
+  "makerDescription": "The LX1 Pier easily fits into any home, creating two rooms out of one or easing the transition from one to another.",
+  "specs": [
+   {
+    "label": "Max input (BTU)",
+    "value": "25,000"
+   },
+   {
+    "label": "Min input (BTU)",
+    "value": "14,000"
+   },
+   {
+    "label": "Max output (BTU)",
+    "value": "17,573"
+   },
+   {
+    "label": "Efficiency (EnerGuide)",
+    "value": "66.63%"
+   },
+   {
+    "label": "Gas Type",
+    "value": "Natural Gas (NG) or Propane (LPG)"
+   },
+   {
+    "label": "Lighting",
+    "value": "Decorative Overhead Lighting"
+   },
+   {
+    "label": "Framing & Venting",
+    "value": "Refer to the Installation Manual."
+   }
+  ],
+  "heat": {
+   "btuMax": 25000,
+   "btuMin": 14000,
+   "efficiency": "66.63% (EnerGuide)"
+  },
+  "dimensions": {
+   "text": "46-3/4\" w x 47-1/4\" h x 18-1/2\" d",
+   "width": 46.75,
+   "height": 47.25,
+   "depth": 18.5
+  },
+  "options": [
+   {
+    "id": "liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1455",
+      "name": "Fluted Black Panel",
+      "part": "2200FBP",
+      "thumb": "/catalog/valor/thumb/571559844233-FBL.webp",
+      "layer": "/catalog/valor/layer/861563223908-FBL.webp",
+      "z": 2,
+      "isDefault": true
+     },
+     {
+      "id": "1456",
+      "name": "Reflective Glass Panel",
+      "part": "2100RGP",
+      "thumb": "/catalog/valor/thumb/201559844235-RGL.webp",
+      "layer": "/catalog/valor/layer/241563223915-RGL.webp",
+      "z": 2
+     }
+    ]
+   },
+   {
+    "id": "fuel-beds",
+    "label": "Fuel beds",
+    "area": "burner",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1458",
+      "name": "Birch Logs",
+      "part": "2100BLK",
+      "thumb": "/catalog/valor/thumb/861563224071-BLK.webp",
+      "layer": "/catalog/valor/layer/711563223932-BLK.webp",
+      "z": 3,
+      "isDefault": true
+     },
+     {
+      "id": "1459",
+      "name": "Driftwood Logs",
+      "part": "2100DWK",
+      "thumb": "/catalog/valor/thumb/671561067765-DWK.webp",
+      "layer": "/catalog/valor/layer/261563223935-DWK.webp",
+      "z": 3
+     },
+     {
+      "id": "1460",
+      "name": "Rock & Shale",
+      "part": "2100RSS",
+      "thumb": "/catalog/valor/thumb/591561067767-RSS.webp",
+      "layer": "/catalog/valor/layer/481563223937-RSS.webp",
+      "z": 3
+     },
+     {
+      "id": "1461",
+      "name": "Murano Glass",
+      "part": "2100DGM",
+      "thumb": "/catalog/valor/thumb/431561067766-DGM.webp",
+      "layer": "/catalog/valor/layer/541563223929-DGM.webp",
+      "z": 3
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/591563224070-lx1-hero.webp",
+    "alt": "LX1 Pier Fireplace fireplace",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [
+   {
+    "label": "Quick Guide",
+    "url": "https://www.valorfireplaces.com/media/Remote/remote-guide-valor10.pdf"
+   },
+   {
+    "label": "Manual",
+    "url": "https://www.valorfireplaces.com/media/Remote/GV60-SYMAX.pdf"
+   },
+   {
+    "label": "Installation Manual",
+    "url": "https://www.valorfireplaces.com/media/LX1/English/2100-Install.pdf"
+   },
+   {
+    "label": "Installation & Planning",
+    "url": "https://www.valorfireplaces.com/media/Heatshift/installs/LX1-HeatShift-E.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.valorfireplaces.com/gas-fireplaces/linear-fireplaces/lx1.php",
+  "enabled": true
+ },
+ {
+  "id": "va-898",
+  "slug": "lx2-3-sided-fireplace-fireplace",
+  "brandId": "valor",
+  "name": "LX2 3-Sided Fireplace",
+  "sku": "2200K",
+  "fuel": "gas",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "A gas linear fireplace. 36,000 BTU maximum input. Efficiency: 67.40% / 65.90% (EnerGuide).",
+  "makerDescription": "Designed for 90 degree enjoyment, the LX2's outstanding radiant performance will heat any living space - without compromising on safety.",
+  "specs": [
+   {
+    "label": "Max input (BTU)",
+    "value": "36,000"
+   },
+   {
+    "label": "Min input (BTU)",
+    "value": "19,000 / 21,000"
+   },
+   {
+    "label": "Max output (BTU)",
+    "value": "26,028 / 25,975"
+   },
+   {
+    "label": "Efficiency (EnerGuide)",
+    "value": "67.40% / 65.90%"
+   },
+   {
+    "label": "Gas Type",
+    "value": "Natural Gas (NG) or Propane (LPG)"
+   },
+   {
+    "label": "Lighting",
+    "value": "Decorative Overhead Lighting"
+   },
+   {
+    "label": "Framing & Venting",
+    "value": "Engine Type: 3-Sided or Corner."
+   }
+  ],
+  "heat": {
+   "btuMax": 36000,
+   "btuMin": 19000,
+   "efficiency": "67.40% / 65.90% (EnerGuide)"
+  },
+  "dimensions": {
+   "text": "52\" w x 33-14\" h x 18\" d",
+   "width": 52,
+   "depth": 18
+  },
+  "options": [
+   {
+    "id": "liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1331",
+      "name": "Fluted Black",
+      "part": "2200FBL",
+      "thumb": "/catalog/valor/thumb/571559844233-FBL.webp",
+      "layer": "/catalog/valor/layer/801561071648-FBL.webp",
+      "z": 2,
+      "isDefault": true
+     },
+     {
+      "id": "1332",
+      "name": "Reflective Glass",
+      "part": "2200RGL",
+      "thumb": "/catalog/valor/thumb/201559844235-RGL.webp",
+      "layer": "/catalog/valor/layer/971561071658-RGL.webp",
+      "z": 2
+     }
+    ]
+   },
+   {
+    "id": "fuel-beds",
+    "label": "Fuel beds",
+    "area": "burner",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1673",
+      "name": "Birch Logs",
+      "part": "1705BLKV2",
+      "thumb": "/catalog/valor/thumb/811706555316-blkv2.webp",
+      "layer": "/catalog/valor/layer/631706718116-lx2-3s-blk-v2.webp",
+      "z": 3,
+      "isDefault": true
+     },
+     {
+      "id": "1334",
+      "name": "Driftwood Logs",
+      "part": "1705DWKV2",
+      "thumb": "/catalog/valor/thumb/801706555356-dwkv2.webp",
+      "layer": "/catalog/valor/layer/411706718114-lx2-3s-dwk-v2.webp",
+      "z": 3
+     },
+     {
+      "id": "1335",
+      "name": "Splitwood Logs",
+      "part": "1705SWKV2",
+      "thumb": "/catalog/valor/thumb/131706555336-swkv2.webp",
+      "layer": "/catalog/valor/layer/381706718110-lx2-3s-swk-v2.webp",
+      "z": 3
+     },
+     {
+      "id": "1336",
+      "name": "Rock & Shale",
+      "part": "1714RSS",
+      "thumb": "/catalog/valor/thumb/591561067767-RSS.webp",
+      "layer": "/catalog/valor/layer/541561071680-RSS.webp",
+      "z": 3
+     },
+     {
+      "id": "1337",
+      "name": "Murano Glass",
+      "part": "2200DGM",
+      "thumb": "/catalog/valor/thumb/431561067766-DGM.webp",
+      "layer": "/catalog/valor/layer/471561071674-DGM.webp",
+      "z": 3
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/141505494707-hero-lx2.webp",
+    "alt": "LX2 3-Sided Fireplace fireplace",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [
+   {
+    "label": "Quick Guide",
+    "url": "https://www.valorfireplaces.com/media/Remote/remote-guide-valor10.pdf"
+   },
+   {
+    "label": "Manual",
+    "url": "https://www.valorfireplaces.com/media/Remote/GV60-SYMAX.pdf"
+   },
+   {
+    "label": "3-Sided",
+    "url": "https://www.valorfireplaces.com/media/LX2/English/2200K-3S-Installation.pdf"
+   },
+   {
+    "label": "Corner",
+    "url": "https://www.valorfireplaces.com/media/LX2/English/2200K-Corner-Installation.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.valorfireplaces.com/gas-fireplaces/linear-fireplaces/lx2.php",
+  "enabled": true
+ },
+ {
+  "id": "va-1028",
+  "slug": "lx2-corner-fireplace-fireplace",
+  "brandId": "valor",
+  "name": "LX2 Corner Fireplace",
+  "sku": "2200R/LK",
+  "fuel": "gas",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "A gas linear fireplace. 36,000 BTU maximum input. Efficiency: 67.40% / 65.90% (EnerGuide).",
+  "makerDescription": "The LX2 Corner engines offer design flexibility for almost any room installation.",
+  "specs": [
+   {
+    "label": "Max input (BTU)",
+    "value": "36,000"
+   },
+   {
+    "label": "Min input (BTU)",
+    "value": "19,000 / 21,000"
+   },
+   {
+    "label": "Max output (BTU)",
+    "value": "26,028 / 25,975"
+   },
+   {
+    "label": "Efficiency (EnerGuide)",
+    "value": "67.40% / 65.90%"
+   },
+   {
+    "label": "Gas Type",
+    "value": "Natural Gas (NG) or Propane (LPG)"
+   },
+   {
+    "label": "Lighting",
+    "value": "Decorative Overhead Lighting"
+   },
+   {
+    "label": "Framing & Venting",
+    "value": "Engine Type: 3-Sided or Corner."
+   }
+  ],
+  "heat": {
+   "btuMax": 36000,
+   "btuMin": 19000,
+   "efficiency": "67.40% / 65.90% (EnerGuide)"
+  },
+  "dimensions": {
+   "text": "52\" w x 33-14\" h x 18\" d",
+   "width": 52,
+   "depth": 18
+  },
+  "options": [
+   {
+    "id": "liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1317",
+      "name": "Fluted Black Liner",
+      "part": "2200FBL",
+      "thumb": "/catalog/valor/thumb/571559844233-FBL.webp",
+      "layer": "/catalog/valor/layer/301561069583-FBL.webp",
+      "z": 2,
+      "isDefault": true
+     },
+     {
+      "id": "1319",
+      "name": "Reflective Glass Liner",
+      "part": "2200RGL",
+      "thumb": "/catalog/valor/thumb/201559844235-RGL.webp",
+      "layer": "/catalog/valor/layer/941561069594-RGL.webp",
+      "z": 2
+     }
+    ]
+   },
+   {
+    "id": "liner-panels",
+    "label": "Liner panels",
+    "area": "interior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1974",
+      "name": "Fluted Black Panel",
+      "part": "2200FBP",
+      "thumb": "/catalog/valor/thumb/651560359516-FBL.webp",
+      "layer": "/catalog/valor/layer/201637694868-2200fbp.webp",
+      "z": 2,
+      "isDefault": true
+     },
+     {
+      "id": "1975",
+      "name": "Reflective Glass Panel",
+      "part": "2200RGP",
+      "thumb": "/catalog/valor/thumb/761560359520-RGL.webp",
+      "layer": "/catalog/valor/layer/391637694867-2200rgp.webp",
+      "z": 2
+     }
+    ]
+   },
+   {
+    "id": "fuel-beds",
+    "label": "Fuel beds",
+    "area": "burner",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1672",
+      "name": "Birch Logs",
+      "part": "1705BLKV2",
+      "thumb": "/catalog/valor/thumb/811706555316-blkv2.webp",
+      "layer": "/catalog/valor/layer/871706718364-lx2-corner-blk-v2.webp",
+      "z": 3,
+      "isDefault": true
+     },
+     {
+      "id": "1320",
+      "name": "Driftwood Logs",
+      "part": "1705DWKV2",
+      "thumb": "/catalog/valor/thumb/801706555356-dwkv2.webp",
+      "layer": "/catalog/valor/layer/771706718367-lx2-corner-dwk-v2.webp",
+      "z": 3
+     },
+     {
+      "id": "1321",
+      "name": "Splitwood Logs",
+      "part": "1705SWKV2",
+      "thumb": "/catalog/valor/thumb/131706555336-swkv2.webp",
+      "layer": "/catalog/valor/layer/801706718369-lx2-corner-swk-v2.webp",
+      "z": 3
+     },
+     {
+      "id": "1322",
+      "name": "Rock & Shale",
+      "part": "1714RSS",
+      "thumb": "/catalog/valor/thumb/591561067767-RSS.webp",
+      "layer": "/catalog/valor/layer/671561069621-RSS.webp",
+      "z": 3
+     },
+     {
+      "id": "1323",
+      "name": "Murano Glass",
+      "part": "2200DGM",
+      "thumb": "/catalog/valor/thumb/431561067766-DGM.webp",
+      "layer": "/catalog/valor/layer/131561069615-DGM.webp",
+      "z": 3
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/431530814330-hero-lx2corner.webp",
+    "alt": "LX2 Corner Fireplace fireplace",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [
+   {
+    "label": "Quick Guide",
+    "url": "https://www.valorfireplaces.com/media/Remote/remote-guide-valor10.pdf"
+   },
+   {
+    "label": "Manual",
+    "url": "https://www.valorfireplaces.com/media/Remote/GV60-SYMAX.pdf"
+   },
+   {
+    "label": "3-Sided",
+    "url": "https://www.valorfireplaces.com/media/LX2/English/2200K-3S-Installation.pdf"
+   },
+   {
+    "label": "Corner",
+    "url": "https://www.valorfireplaces.com/media/LX2/English/2200K-Corner-Installation.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.valorfireplaces.com/gas-fireplaces/linear-fireplaces/lx2.php",
+  "enabled": true
+ },
+ {
+  "id": "va-2737",
+  "slug": "p2-fireplace",
+  "brandId": "valor",
+  "name": "P2",
+  "sku": "200A",
+  "fuel": "gas",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "A gas fireplace. 20,000 BTU maximum input. Efficiency: 68% (EnerGuide).",
+  "makerDescription": "200A",
+  "specs": [
+   {
+    "label": "Max input (BTU)",
+    "value": "20,000"
+   },
+   {
+    "label": "Min input (BTU)",
+    "value": "9,500 / 10,000"
+   },
+   {
+    "label": "Max output (BTU)",
+    "value": "14,600"
+   },
+   {
+    "label": "Efficiency (EnerGuide)",
+    "value": "68%"
+   },
+   {
+    "label": "Gas Type",
+    "value": "Natural Gas (NG) or Propane (LPG)"
+   },
+   {
+    "label": "Viewing Area",
+    "value": "15-15/16\" w x 17-5/16\" h = 276\"²"
+   },
+   {
+    "label": "Framing & Venting",
+    "value": "Refer to Installation Manual."
+   }
+  ],
+  "heat": {
+   "btuMax": 20000,
+   "btuMin": 9500,
+   "efficiency": "68% (EnerGuide)"
+  },
+  "dimensions": {
+   "text": "25\" w x 26-3/16\" h x 15\" d",
+   "width": 25,
+   "height": 26.1875,
+   "depth": 15
+  },
+  "options": [
+   {
+    "id": "fronts",
+    "label": "Fronts",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "2748",
+      "name": "Clearview Front - Vintage Iron",
+      "part": "245CFV",
+      "thumb": "/catalog/valor/thumb/811715793346-thumb-cfv.webp",
+      "layer": "/catalog/valor/layer/861715790435-254cfv.webp",
+      "z": 5,
+      "isDefault": true
+     },
+     {
+      "id": "2749",
+      "name": "Clean Install",
+      "part": "230CIK",
+      "thumb": "/catalog/valor/thumb/691715793312-thumb-cik.webp",
+      "layer": "/catalog/valor/layer/161715790424-230cik.webp",
+      "z": 5
+     },
+     {
+      "id": "2750",
+      "name": "Ledgeview - Aged Steel",
+      "part": "246LFAS",
+      "thumb": "/catalog/valor/thumb/781715793348-thumb-lfas.webp",
+      "layer": "/catalog/valor/layer/931715790430-246lfas.webp",
+      "z": 5
+     },
+     {
+      "id": "2751",
+      "name": "Ledgeview - Black",
+      "part": "246LFB",
+      "thumb": "/catalog/valor/thumb/901715793348-thumb-lfb.webp",
+      "layer": "/catalog/valor/layer/591715790433-246lfb.webp",
+      "z": 5
+     },
+     {
+      "id": "2943",
+      "name": "Richmond Cast - Black",
+      "part": "263RCB",
+      "thumb": "/catalog/valor/thumb/631722360903-thumb-richmond.webp",
+      "layer": "/catalog/valor/layer/231725899610-263rcb.webp",
+      "z": 5
+     }
+    ]
+   },
+   {
+    "id": "closurebacking-plates",
+    "label": "Closure and backing plates",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "2752",
+      "name": "3-Sided Backing Plate - Black",
+      "part": "235BPB1",
+      "thumb": "/catalog/valor/thumb/191715793345-thumb-bpb1.webp",
+      "layer": "/catalog/valor/layer/441715790426-235bpb1.webp",
+      "z": 7,
+      "isDefault": true
+     },
+     {
+      "id": "2753",
+      "name": "3-Sided Backing Plate - Black",
+      "part": "235BPB2",
+      "thumb": "/catalog/valor/thumb/761715793347-thumb-bpb2.webp",
+      "layer": "/catalog/valor/layer/161715790428-235bpb2.webp",
+      "z": 7
+     },
+     {
+      "id": "2754",
+      "name": "3-Sided Reduced Depth Backing Plate (insert only)",
+      "part": "235SBPB1",
+      "thumb": "/catalog/valor/thumb/191715793345-thumb-bpb1.webp",
+      "layer": "/catalog/valor/layer/991716404951-rd-plate.webp",
+      "z": 7
+     }
+    ]
+   },
+   {
+    "id": "liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "2742",
+      "name": "Plain Black Liner",
+      "part": "260PBL",
+      "thumb": "/catalog/valor/thumb/161560359520-PBL.webp",
+      "layer": "/catalog/valor/layer/271715790422-206pbl.webp",
+      "z": 2,
+      "isDefault": true
+     },
+     {
+      "id": "2743",
+      "name": "Charcoal Brick Liner",
+      "part": "265CBL",
+      "thumb": "/catalog/valor/thumb/751560359515-CBL.webp",
+      "layer": "/catalog/valor/layer/421715790437-265cbl.webp",
+      "z": 2
+     },
+     {
+      "id": "2744",
+      "name": "Reflective Glass Liner",
+      "part": "270RGL",
+      "thumb": "/catalog/valor/thumb/761560359520-RGL.webp",
+      "layer": "/catalog/valor/layer/631715790439-270rgl.webp",
+      "z": 2
+     }
+    ]
+   },
+   {
+    "id": "fuel-beds",
+    "label": "Fuel beds",
+    "area": "burner",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "2745",
+      "name": "Birch Logs",
+      "part": "205BLK",
+      "thumb": "/catalog/valor/thumb/961715791207-thumb-blk.webp",
+      "layer": "/catalog/valor/layer/501715790415-205blk.webp",
+      "z": 3,
+      "isDefault": true
+     },
+     {
+      "id": "2746",
+      "name": "Driftwood Logs",
+      "part": "205DWK",
+      "thumb": "/catalog/valor/thumb/461715791208-thumb-dwk.webp",
+      "layer": "/catalog/valor/layer/801715790418-205dwk.webp",
+      "z": 3
+     },
+     {
+      "id": "2747",
+      "name": "Traditional Logs",
+      "part": "205LSK",
+      "thumb": "/catalog/valor/thumb/671715791209-thumb-lsk.webp",
+      "layer": "/catalog/valor/layer/961715791623-205lsk.webp",
+      "z": 3
+     },
+     {
+      "id": "2944",
+      "name": "Coals",
+      "part": "205CSK",
+      "thumb": "/catalog/valor/thumb/401725899693-205csk-thumb.webp",
+      "layer": "/catalog/valor/layer/621725899607-205csk.webp",
+      "z": 3
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/241715790443-p2-hero.webp",
+    "alt": "P2 fireplace",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [
+   {
+    "label": "Quick Guide",
+    "url": "https://www.valorfireplaces.com/media/Remote/remote-guide-valor10.pdf"
+   },
+   {
+    "label": "Manual",
+    "url": "https://www.valorfireplaces.com/media/Remote/GV60-SYMAX.pdf"
+   },
+   {
+    "label": "Installation Manual",
+    "url": "https://www.valorfireplaces.com/media/P2/English/200AN-AP-Installation.pdf"
+   },
+   {
+    "label": "Installation & Planning",
+    "url": "https://www.valorfireplaces.com/media/P2/English/HeatShift-Valor-P2.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.valorfireplaces.com/gas-fireplaces/p2.php",
+  "enabled": true
+ },
+ {
+  "id": "va-681",
+  "slug": "portrait-zero-clearance-fireplace",
+  "brandId": "valor",
+  "name": "Portrait Zero Clearance",
+  "sku": "530V",
+  "fuel": "gas",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "A gas fireplace. 20,500 BTU maximum input. Efficiency: 70% (EnerGuide).",
+  "makerDescription": "Engineered as a zero clearance fireplace, installation possibilities become vast and welcome your architectural and interior design inspirations.",
+  "specs": [
+   {
+    "label": "Max input (BTU)",
+    "value": "20,500 / 19,500"
+   },
+   {
+    "label": "Min input (BTU)",
+    "value": "12,500 / 11,000"
+   },
+   {
+    "label": "Max output (BTU)",
+    "value": "15,117 / 14,476"
+   },
+   {
+    "label": "Efficiency (EnerGuide)",
+    "value": "70%"
+   },
+   {
+    "label": "Gas Type",
+    "value": "Natural Gas (NG) or Propane (LPG)"
+   },
+   {
+    "label": "Viewing Area",
+    "value": "16 ¾\" w x 15 ⅜\" h = 258\"²"
+   },
+   {
+    "label": "Framing & Venting",
+    "value": "Refer to Owner's Manual."
+   },
+   {
+    "label": "Additional Features",
+    "value": "Co-Axial Venting | Convertible Top/Rear Vent"
+   }
+  ],
+  "heat": {
+   "btuMax": 20500,
+   "btuMin": 11000,
+   "efficiency": "70% (EnerGuide)"
+  },
+  "dimensions": {
+   "text": "20\" w x 25-1/4\" h x 9\" d",
+   "width": 20,
+   "height": 25.25,
+   "depth": 9
+  },
+  "options": [
+   {
+    "id": "fronts",
+    "label": "Fronts",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "710",
+      "name": "President ZC",
+      "part": "536CXB",
+      "thumb": "/catalog/valor/thumb/261502833828-536CXBI-thumb.webp",
+      "layer": "/catalog/valor/layer/511560199491-536CXB-I.webp",
+      "z": 5,
+      "isDefault": true
+     },
+     {
+      "id": "711",
+      "name": "Windsor Arch ZC - Black",
+      "part": "539AFBv2",
+      "thumb": "/catalog/valor/thumb/561502905895-539AFBv2-thumb.webp",
+      "layer": "/catalog/valor/layer/641560199494-539AFBv2.webp",
+      "z": 5
+     },
+     {
+      "id": "712",
+      "name": "Windsor Arch ZC - Chrome",
+      "part": "539AFPv2",
+      "thumb": "/catalog/valor/thumb/531502905907-539AFPv2-thumb.webp",
+      "layer": "/catalog/valor/layer/871560199496-539AFPv2.webp",
+      "z": 5
+     },
+     {
+      "id": "714",
+      "name": "Clearview ZC",
+      "part": "545CFVZC",
+      "thumb": "/catalog/valor/thumb/571502836834-545CFV-thumb.webp",
+      "layer": "/catalog/valor/layer/491600902292-545CFV-ZC.webp",
+      "z": 5
+     },
+     {
+      "id": "717",
+      "name": "Ledgeview ZC - Black",
+      "part": "546LFBZC",
+      "thumb": "/catalog/valor/thumb/281502836849-546LFB-thumb.webp",
+      "layer": "/catalog/valor/layer/641560199505-546LFB.webp",
+      "z": 5
+     },
+     {
+      "id": "716",
+      "name": "Senator",
+      "part": "563SCB",
+      "thumb": "/catalog/valor/thumb/491502905972-563SCB-thumb.webp",
+      "layer": "/catalog/valor/layer/471560199524-563SCB.webp",
+      "z": 5
+     },
+     {
+      "id": "720",
+      "name": "Ledge - Black",
+      "part": "569LFB",
+      "thumb": "/catalog/valor/thumb/301502905989-569LFB-thumb.webp",
+      "layer": "/catalog/valor/layer/891560199528-569LFB.webp",
+      "z": 5
+     }
+    ]
+   },
+   {
+    "id": "frets",
+    "label": "Frets",
+    "area": "exterior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "708",
+      "name": "Traditional Black",
+      "part": "545TFB",
+      "thumb": "/catalog/valor/thumb/781501256864-545TFB.webp",
+      "layer": "/catalog/valor/layer/811560199584-545TFB.webp",
+      "z": 5
+     },
+     {
+      "id": "-1",
+      "name": "None"
+     }
+    ]
+   },
+   {
+    "id": "closurebacking-plates",
+    "label": "Closure and backing plates",
+    "area": "exterior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "709",
+      "name": "Ledge Finishing Plate",
+      "part": "570FPB",
+      "thumb": "/catalog/valor/thumb/101502905608-570FPB-thumb.webp",
+      "layer": "/catalog/valor/layer/811560199601-570-for569.webp",
+      "z": 7
+     },
+     {
+      "id": "-1",
+      "name": "None"
+     }
+    ]
+   },
+   {
+    "id": "liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1221",
+      "name": "Fluted Black (Reversible)",
+      "part": "526RL",
+      "thumb": "/catalog/valor/thumb/571559844233-FBL.webp",
+      "layer": "/catalog/valor/layer/731560199454-FBL.webp",
+      "z": 2,
+      "isDefault": true
+     },
+     {
+      "id": "1222",
+      "name": "Reflective Glass",
+      "part": "580RGLV2",
+      "thumb": "/catalog/valor/thumb/201559844235-RGL.webp",
+      "layer": "/catalog/valor/layer/491560199452-RGL.webp",
+      "z": 2
+     },
+     {
+      "id": "1223",
+      "name": "Red Brick (Reversible)",
+      "part": "526RL",
+      "thumb": "/catalog/valor/thumb/341559844238-VRL.webp",
+      "layer": "/catalog/valor/layer/851560199457-VRL.webp",
+      "z": 2
+     }
+    ]
+   },
+   {
+    "id": "fuel-beds",
+    "label": "Fuel beds",
+    "area": "burner",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1226",
+      "name": "Birch Logs",
+      "part": "530VBLK",
+      "thumb": "/catalog/valor/thumb/961715791207-thumb-blk.webp",
+      "layer": "/catalog/valor/layer/821779728059-530vblk.webp",
+      "z": 3,
+      "isDefault": true
+     },
+     {
+      "id": "1224",
+      "name": "Driftwood Logs",
+      "part": "530VDWK",
+      "thumb": "/catalog/valor/thumb/461715791208-thumb-dwk.webp",
+      "layer": "/catalog/valor/layer/881779728064-530vdwk.webp",
+      "z": 3
+     },
+     {
+      "id": "1225",
+      "name": "Traditional Logs",
+      "part": "530VLSK",
+      "thumb": "/catalog/valor/thumb/671715791209-thumb-lsk.webp",
+      "layer": "/catalog/valor/layer/741779728047-530vlsk.webp",
+      "z": 3
+     },
+     {
+      "id": "1227",
+      "name": "Coals",
+      "part": "530VCSK",
+      "thumb": "/catalog/valor/thumb/401725899693-205csk-thumb.webp",
+      "layer": "/catalog/valor/layer/711779728053-530vcsk.webp",
+      "z": 3
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/751785889398-zc-2026.webp",
+    "alt": "Portrait Zero Clearance fireplace",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [
+   {
+    "label": "Quick Guide",
+    "url": "https://www.valorfireplaces.com/media/Remote/remote-guide-plus-max.pdf"
+   },
+   {
+    "label": "Manual",
+    "url": "https://www.valorfireplaces.com/media/Remote/GV60-PLUS.pdf"
+   },
+   {
+    "label": "Owner's Manual",
+    "url": "https://www.valorfireplaces.com/media/Portrait/English/530-IN-IP.pdf"
+   },
+   {
+    "label": "RBWSK",
+    "url": "https://www.valorfireplaces.com/media/L3/Bilingual/RBWSK-E-F.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.valorfireplaces.com/gas-fireplaces/portrait.php",
+  "enabled": true
+ },
+ {
+  "id": "va-2422",
+  "slug": "ge3-electric-insert",
+  "brandId": "valor",
+  "name": "GE3 Electric",
+  "sku": "GE3",
+  "fuel": "electric",
+  "kind": "insert",
+  "style": "traditional",
+  "summary": "An electric insert.",
+  "makerDescription": "The Valor GE3 electric fireplace is a flexible alternative to gas or wood but only requires a simple plug-in installation.",
+  "specs": [
+   {
+    "label": "Fireplace Type",
+    "value": "Electric"
+   },
+   {
+    "label": "Installation Type",
+    "value": "Zero Clearance or Insert"
+   },
+   {
+    "label": "Max Heat Output",
+    "value": "1,400W or 2,800W"
+   },
+   {
+    "label": "Supply Voltage",
+    "value": "120V or 240V"
+   }
+  ],
+  "dimensions": {
+   "text": "27\" w x 20\" h",
+   "width": 27,
+   "height": 20
+  },
+  "options": [
+   {
+    "id": "fronts",
+    "label": "Fronts",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "2429",
+      "name": "3-Sided Clearview Front - Vintage Iron",
+      "part": "GE3CFV",
+      "thumb": "/catalog/valor/thumb/731686777705-cfv-thumb.webp",
+      "layer": "/catalog/valor/layer/371686776968-GE3CFV.webp",
+      "z": 5,
+      "isDefault": true
+     },
+     {
+      "id": "2658",
+      "name": "4-Sided Edgemont Front - Pewter",
+      "part": "GE3EDPW",
+      "thumb": "/catalog/valor/thumb/881709061398-edpw-thumb.webp",
+      "layer": "/catalog/valor/layer/641709138633-ge3edpw.webp",
+      "z": 5
+     }
+    ]
+   },
+   {
+    "id": "closurebacking-plates",
+    "label": "Closure and backing plates",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "2430",
+      "name": "3-Sided Backing Plate - Black",
+      "part": "GE3BPB1",
+      "thumb": "/catalog/valor/thumb/571686777703-bpb1-thumb.webp",
+      "layer": "/catalog/valor/layer/881686776965-GE3PBP1.webp",
+      "z": 7,
+      "isDefault": true
+     },
+     {
+      "id": "2725",
+      "name": "3-Sided Backing Plate - Black",
+      "part": "GE3BPB1",
+      "thumb": "/catalog/valor/thumb/571686777703-bpb1-thumb.webp",
+      "layer": "/catalog/valor/layer/951715704279-ge3bpb1-4s.webp",
+      "z": 7
+     },
+     {
+      "id": "2431",
+      "name": "3-Sided Shroud Kit - Black",
+      "part": "GE3SK1",
+      "thumb": "/catalog/valor/thumb/471686777703-sk1-thumb.webp"
+     },
+     {
+      "id": "2659",
+      "name": "4-Sided Backing Plate - Black",
+      "part": "GE34SBP1",
+      "thumb": "/catalog/valor/thumb/761709061396-4sbpb1-thumb.webp",
+      "layer": "/catalog/valor/layer/551709138629-ge34sbpb1.webp",
+      "z": 7
+     }
+    ]
+   },
+   {
+    "id": "fuel-beds",
+    "label": "Fuel beds",
+    "area": "burner",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "2424",
+      "name": "Birch Logs",
+      "part": "GE3BLK",
+      "thumb": "/catalog/valor/thumb/271686777556-blk-thumb.webp",
+      "layer": "/catalog/valor/layer/361687291029-ge3-blk-en.webp",
+      "z": 3,
+      "isDefault": true
+     },
+     {
+      "id": "2425",
+      "name": "Driftwood Logs",
+      "part": "GE3DWK",
+      "thumb": "/catalog/valor/thumb/281686777555-dwk-thumb.webp",
+      "layer": "/catalog/valor/layer/421687291035-ge3-dwk-en.webp",
+      "z": 3
+     },
+     {
+      "id": "2426",
+      "name": "Splitwood Logs",
+      "part": "GE3SWK",
+      "thumb": "/catalog/valor/thumb/181686777554-swk-thumb.webp",
+      "layer": "/catalog/valor/layer/181687291032-ge3-swk-en.webp",
+      "z": 3
+     }
+    ]
+   },
+   {
+    "id": "riser-or-baselift-kits",
+    "label": "Riser and base-lift kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "3259",
+      "name": "Riser Kit - Black",
+      "part": "725RTB",
+      "thumb": "/catalog/valor/thumb/401502745739-725RTB-thumb.webp"
+     },
+     {
+      "id": "3260",
+      "name": "Base Trim Kit - Black",
+      "part": "752BTK",
+      "thumb": "/catalog/valor/thumb/131502745365-751-752-Black-thumb.webp"
+     },
+     {
+      "id": "3261",
+      "name": "Riser Kit - Black",
+      "part": "793RTB",
+      "thumb": "/catalog/valor/thumb/751502483441-793RTB.webp"
+     },
+     {
+      "id": "3262",
+      "name": "Riser Kit - Vintage Iron",
+      "part": "793RTV",
+      "thumb": "/catalog/valor/thumb/411502483440-793RTV.webp"
+     },
+     {
+      "id": "-1",
+      "name": "None"
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/971687289842-ge3-hero.webp",
+    "alt": "GE3 Electric insert",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [],
+  "sourceUrl": "https://www.valorfireplaces.com/electric-fireplace-inserts/ge3-electric-insert.php",
+  "enabled": true
+ },
+ {
+  "id": "va-2605",
+  "slug": "ge4-electric-insert",
+  "brandId": "valor",
+  "name": "GE4 Electric",
+  "sku": "GE4",
+  "fuel": "electric",
+  "kind": "insert",
+  "style": "traditional",
+  "summary": "An electric insert.",
+  "makerDescription": "The Valor GE4 electric fireplace is a flexible alternative to gas or wood but only requires a simple plug-in installation.",
+  "specs": [
+   {
+    "label": "Fireplace Type",
+    "value": "Electric"
+   },
+   {
+    "label": "Installation Type",
+    "value": "Zero Clearance or Insert"
+   },
+   {
+    "label": "Max Heat Output",
+    "value": "1,400W or 2,800W"
+   },
+   {
+    "label": "Supply Voltage",
+    "value": "120V or 240V"
+   }
+  ],
+  "dimensions": {
+   "text": "33\" w x 23\" h x 15\" d",
+   "width": 33,
+   "height": 23,
+   "depth": 15
+  },
+  "options": [
+   {
+    "id": "fronts",
+    "label": "Fronts",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "2612",
+      "name": "3-Sided Clearview Front - Vintage Iron",
+      "part": "GE4CFV",
+      "thumb": "/catalog/valor/thumb/731686777705-cfv-thumb.webp",
+      "layer": "/catalog/valor/layer/431709061089-GE4CFV.webp",
+      "z": 5,
+      "isDefault": true
+     },
+     {
+      "id": "2613",
+      "name": "4-Sided Edgemont Front - Pewter",
+      "part": "GE4EDPW",
+      "thumb": "/catalog/valor/thumb/881709061398-edpw-thumb.webp",
+      "layer": "/catalog/valor/layer/761709060816-GE4EDPW.webp",
+      "z": 5
+     },
+     {
+      "id": "2637",
+      "name": "Clean Installation Kit - Black",
+      "part": "GE4CIK",
+      "detail": "Clean Installation Kit (requires framing to edge of CIK front)",
+      "thumb": "/catalog/valor/thumb/451556646890-1030cik.webp",
+      "layer": "/catalog/valor/layer/471710284084-GE4CIK.webp",
+      "z": 5
+     }
+    ]
+   },
+   {
+    "id": "closurebacking-plates",
+    "label": "Closure and backing plates",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "2614",
+      "name": "3-Sided Backing Plate - Black",
+      "part": "GE4BPB1",
+      "thumb": "/catalog/valor/thumb/571686777703-bpb1-thumb.webp",
+      "layer": "/catalog/valor/layer/901709060809-GE4BPB1.webp",
+      "z": 7,
+      "isDefault": true
+     },
+     {
+      "id": "2719",
+      "name": "3-Sided Backing Plate - Black",
+      "part": "GE4BPB1",
+      "thumb": "/catalog/valor/thumb/571686777703-bpb1-thumb.webp",
+      "layer": "/catalog/valor/layer/471715035973-GE4BPB1-EDPW.webp",
+      "z": 7
+     },
+     {
+      "id": "2615",
+      "name": "3-Sided Shroud Kit - Black",
+      "part": "GE4SK1",
+      "thumb": "/catalog/valor/thumb/471686777703-sk1-thumb.webp"
+     },
+     {
+      "id": "2616",
+      "name": "4-Sided Backing Plate - Black",
+      "part": "GE44SBP1",
+      "thumb": "/catalog/valor/thumb/761709061396-4sbpb1-thumb.webp",
+      "layer": "/catalog/valor/layer/941709060824-GE44SBPBP1.webp",
+      "z": 7
+     }
+    ]
+   },
+   {
+    "id": "fuel-beds",
+    "label": "Fuel beds",
+    "area": "burner",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "2609",
+      "name": "Birch Logs",
+      "part": "GE4BLK",
+      "thumb": "/catalog/valor/thumb/901709061401-blk.webp",
+      "layer": "/catalog/valor/layer/121709062349-GE4BLK-en.webp",
+      "z": 3,
+      "isDefault": true
+     },
+     {
+      "id": "2610",
+      "name": "Driftwood Logs",
+      "part": "GE4DWK",
+      "thumb": "/catalog/valor/thumb/411709061403-dwk.webp",
+      "layer": "/catalog/valor/layer/221709062352-GE4DWK-en.webp",
+      "z": 3
+     },
+     {
+      "id": "2611",
+      "name": "Splitwood Logs",
+      "part": "GE4SWK",
+      "thumb": "/catalog/valor/thumb/951709061400-swk.webp",
+      "layer": "/catalog/valor/layer/471709062355-GE4SWK-en.webp",
+      "z": 3
+     }
+    ]
+   },
+   {
+    "id": "riser-or-baselift-kits",
+    "label": "Riser and base-lift kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "3269",
+      "name": "Riser Kit - Black",
+      "part": "725RTB",
+      "thumb": "/catalog/valor/thumb/401502745739-725RTB-thumb.webp"
+     },
+     {
+      "id": "3270",
+      "name": "Base Trim Kit - Black",
+      "part": "752BTK",
+      "thumb": "/catalog/valor/thumb/131502745365-751-752-Black-thumb.webp"
+     },
+     {
+      "id": "3271",
+      "name": "Riser Kit - Black",
+      "part": "793RTB",
+      "thumb": "/catalog/valor/thumb/751502483441-793RTB.webp"
+     },
+     {
+      "id": "3272",
+      "name": "Riser Kit - Vintage Iron",
+      "part": "793RTV",
+      "thumb": "/catalog/valor/thumb/411502483440-793RTV.webp"
+     },
+     {
+      "id": "-1",
+      "name": "None"
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/641709060792-ge4-hero.webp",
+    "alt": "GE4 Electric insert",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [
+   {
+    "label": "English",
+    "url": "https://www.valorfireplaces.com/media/GE4/Manuals/GE4-Installation-Manual-E.pdf"
+   },
+   {
+    "label": "French",
+    "url": "https://www.valorfireplaces.com/media/GE4/Manuals/GE4-Installation-Manual-F.pdf"
+   },
+   {
+    "label": "English",
+    "url": "https://www.valorfireplaces.com/media/GE4/Manuals/GE4-LogSets-E.pdf"
+   },
+   {
+    "label": "French",
+    "url": "https://www.valorfireplaces.com/media/GE4/Manuals/GE4-LogSets-F.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.valorfireplaces.com/electric-fireplace-inserts/ge4-electric-insert.php",
+  "enabled": true
+ },
+ {
+  "id": "va-228",
+  "slug": "g3-insert-insert",
+  "brandId": "valor",
+  "name": "G3 Insert",
+  "sku": "739",
+  "fuel": "gas",
+  "kind": "insert",
+  "style": "traditional",
+  "summary": "A gas insert. 24,000 BTU maximum input. Efficiency: 70.30% / 70.00% (EnerGuide).",
+  "makerDescription": "Inspired by three generations of our top selling insert gas fireplaces. Ideal for any renovation job.",
+  "specs": [
+   {
+    "label": "Max input (BTU)",
+    "value": "24,000"
+   },
+   {
+    "label": "Min input (BTU)",
+    "value": "6,500 / 13,000"
+   },
+   {
+    "label": "Max output (BTU)",
+    "value": "18,132 / 18,388"
+   },
+   {
+    "label": "Efficiency (EnerGuide)",
+    "value": "70.30% / 70.00%"
+   },
+   {
+    "label": "Gas Type",
+    "value": "Natural Gas (NG) or Propane (LPG)"
+   },
+   {
+    "label": "Viewing Area",
+    "value": "26 ⅛\" w x 12 ⅛\" h = 317\"²"
+   },
+   {
+    "label": "Minimum cavity",
+    "value": "28\" w x 20\" h x 12\" d"
+   },
+   {
+    "label": "Installation Type",
+    "value": "Direct Vent or B-Vent"
+   }
+  ],
+  "heat": {
+   "btuMax": 24000,
+   "btuMin": 6500,
+   "efficiency": "70.30% / 70.00% (EnerGuide)"
+  },
+  "dimensions": {
+   "text": "28-5/8\" w x 20\" h x 12\" d",
+   "width": 28.625,
+   "height": 20,
+   "depth": 12
+  },
+  "fit": {
+   "minFrontWidth": 28,
+   "minHeight": 20,
+   "minDepth": 12,
+   "note": "Published as the minimum cavity: 28\" w x 20\" h x 12\" d"
+  },
+  "options": [
+   {
+    "id": "engines",
+    "label": "Version",
+    "area": "extras",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "2040",
+      "name": "G3 Insert Direct Vent",
+      "part": "739M",
+      "thumb": "/catalog/valor/thumb/421637778222-739m.webp",
+      "layer": "/catalog/valor/layer/301559854424-738-739-engine.webp",
+      "z": 1,
+      "unlocks": [
+       "1153",
+       "1154",
+       "1155",
+       "239",
+       "242",
+       "241",
+       "243",
+       "249",
+       "244",
+       "246",
+       "248",
+       "1156",
+       "2327",
+       "1157",
+       "2328",
+       "1158",
+       "1159"
+      ],
+      "isDefault": true
+     },
+     {
+      "id": "2329",
+      "name": "G3 Insert DV V-Class",
+      "part": "739V",
+      "thumb": "/catalog/valor/thumb/851675281459-739v-thumb.webp",
+      "layer": "/catalog/valor/layer/301559854424-738-739-engine.webp",
+      "z": 1,
+      "unlocks": [
+       "1153",
+       "1154",
+       "1155",
+       "2324",
+       "2325",
+       "2326",
+       "239",
+       "241",
+       "242",
+       "243",
+       "249",
+       "244",
+       "246",
+       "248"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "fronts",
+    "label": "Fronts",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "239",
+      "name": "Black Contemporary Steel",
+      "part": "741SFB",
+      "thumb": "/catalog/valor/thumb/851502816142-741SFB.webp",
+      "layer": "/catalog/valor/layer/531559854523-741SFB.webp",
+      "z": 5,
+      "isDefault": true
+     },
+     {
+      "id": "241",
+      "name": "Black Cast Iron",
+      "part": "742CFB",
+      "thumb": "/catalog/valor/thumb/611666648679-742cfbthumb.webp",
+      "layer": "/catalog/valor/layer/251666648356-742CFB.webp",
+      "z": 5
+     },
+     {
+      "id": "242",
+      "name": "FenderFire Double Doors",
+      "part": "743FVI",
+      "thumb": "/catalog/valor/thumb/601502816149-743FVI.webp",
+      "layer": "/catalog/valor/layer/611559854534-743FVI.webp",
+      "z": 5
+     },
+     {
+      "id": "243",
+      "name": "FenderFire Single Door",
+      "part": "744FVI",
+      "detail": "FenderFire Single Door",
+      "thumb": "/catalog/valor/thumb/211510178956-744FVI.webp",
+      "layer": "/catalog/valor/layer/401603898927-744FVI.webp",
+      "z": 5
+     },
+     {
+      "id": "249",
+      "name": "Clearview",
+      "part": "745CFV",
+      "thumb": "/catalog/valor/thumb/271502816155-745CFV.webp",
+      "layer": "/catalog/valor/layer/571559854542-745CFV.webp",
+      "z": 5
+     },
+     {
+      "id": "244",
+      "name": "Black Contemporary Surround",
+      "part": "765CSB",
+      "thumb": "/catalog/valor/thumb/461502816158-765b.webp",
+      "layer": "/catalog/valor/layer/491559854545-765CSB.webp",
+      "z": 5
+     },
+     {
+      "id": "246",
+      "name": "Nickel Contemporary Surround",
+      "part": "765CSN",
+      "thumb": "/catalog/valor/thumb/101502816165-765n.webp",
+      "layer": "/catalog/valor/layer/671559854553-765CSN.webp",
+      "z": 5
+     },
+     {
+      "id": "248",
+      "name": "Matte Black",
+      "part": "772MBF2",
+      "thumb": "/catalog/valor/thumb/291502816170-772MBF.webp",
+      "layer": "/catalog/valor/layer/291559854563-772MBF2.webp",
+      "z": 5
+     }
+    ]
+   },
+   {
+    "id": "frets",
+    "label": "Frets",
+    "area": "exterior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "251",
+      "name": "Clearview Access Panel",
+      "part": "740CAP",
+      "thumb": "/catalog/valor/thumb/901501182035-740CAP.webp",
+      "layer": "/catalog/valor/layer/841559854731-740CAP.webp",
+      "z": 5
+     },
+     {
+      "id": "250",
+      "name": "Clearview Cast",
+      "part": "758CCB",
+      "detail": "Clearview Cast Fret",
+      "thumb": "/catalog/valor/thumb/201501182037-758CCB.webp",
+      "layer": "/catalog/valor/layer/901559854734-758CCB.webp",
+      "z": 5
+     },
+     {
+      "id": "252",
+      "name": "Ventana",
+      "part": "1225VFB",
+      "thumb": "/catalog/valor/thumb/561501182039-1225VFB.webp",
+      "layer": "/catalog/valor/layer/541560183536-1225VFB.webp",
+      "z": 5
+     },
+     {
+      "id": "-1",
+      "name": "None"
+     }
+    ]
+   },
+   {
+    "id": "trims",
+    "label": "Trims",
+    "area": "exterior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "549",
+      "name": "Vintage Iron Cast Iron",
+      "part": "715CVI",
+      "thumb": "/catalog/valor/thumb/201502744121-715CVI.webp",
+      "layer": "/catalog/valor/layer/851594245959-715CVI.webp",
+      "z": 6
+     },
+     {
+      "id": "269",
+      "name": "Black 3-Sided Contour",
+      "part": "746CTK",
+      "thumb": "/catalog/valor/thumb/341502744131-746CTK.webp",
+      "layer": "/catalog/valor/layer/731559854624-746CTK.webp",
+      "z": 6
+     },
+     {
+      "id": "271",
+      "name": "Black 3-Sided Deluxe",
+      "part": "747DTK",
+      "thumb": "/catalog/valor/thumb/161502744322-747DTK.webp",
+      "layer": "/catalog/valor/layer/271559854631-747DTK.webp",
+      "z": 6
+     },
+     {
+      "id": "550",
+      "name": "Black Oversized",
+      "part": "753OTK",
+      "thumb": "/catalog/valor/thumb/741502733387-753OTK.webp",
+      "layer": "/catalog/valor/layer/861559854649-753OTK.webp",
+      "z": 6
+     },
+     {
+      "id": "552",
+      "name": "Black 3-Sided Square",
+      "part": "756STB",
+      "thumb": "/catalog/valor/thumb/151502743362-756STB.webp",
+      "layer": "/catalog/valor/layer/811559854666-756STB.webp",
+      "z": 6
+     },
+     {
+      "id": "546",
+      "name": "Black 3-Sided Square",
+      "part": "756STB",
+      "detail": "For 765",
+      "thumb": "/catalog/valor/thumb/151502743362-756STB.webp",
+      "layer": "/catalog/valor/layer/991559854658-756B-765.webp",
+      "z": 6
+     },
+     {
+      "id": "554",
+      "name": "Vintage Iron 3-Sided Square",
+      "part": "756STV",
+      "thumb": "/catalog/valor/thumb/351502743387-756STV.webp",
+      "layer": "/catalog/valor/layer/781559854675-756STV.webp",
+      "z": 6
+     },
+     {
+      "id": "548",
+      "name": "Vintage Iron 3-Sided Square",
+      "part": "756STV",
+      "detail": "For 765",
+      "thumb": "/catalog/valor/thumb/351502743387-756STV.webp",
+      "layer": "/catalog/valor/layer/711559854678-756V-765.webp",
+      "z": 6
+     },
+     {
+      "id": "281",
+      "name": "Black 4-Sided Square",
+      "part": "757STB",
+      "thumb": "/catalog/valor/thumb/161502744501-757STB.webp",
+      "layer": "/catalog/valor/layer/731559854682-757STB.webp",
+      "z": 6
+     },
+     {
+      "id": "284",
+      "name": "Black Backing Plate",
+      "part": "763BPB",
+      "thumb": "/catalog/valor/thumb/661502744535-763BPB.webp",
+      "layer": "/catalog/valor/layer/721559854776-763BPB.webp",
+      "z": 6
+     },
+     {
+      "id": "285",
+      "name": "4-Sided Square Picture Frame",
+      "part": "764PFB",
+      "thumb": "/catalog/valor/thumb/631502743338-764PFB.webp",
+      "layer": "/catalog/valor/layer/681559854692-764PFB.webp",
+      "z": 6
+     },
+     {
+      "id": "286",
+      "name": "2\" Black 3-Sided Square",
+      "part": "767STB",
+      "thumb": "/catalog/valor/thumb/121502744548-767STB.webp",
+      "layer": "/catalog/valor/layer/461559854697-767STB.webp",
+      "z": 6
+     },
+     {
+      "id": "-1",
+      "name": "None"
+     }
+    ]
+   },
+   {
+    "id": "liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1153",
+      "name": "Fluted Black",
+      "part": "739FBL",
+      "thumb": "/catalog/valor/thumb/571559844233-FBL.webp",
+      "layer": "/catalog/valor/layer/801559854456-engineFBL.webp",
+      "z": 2,
+      "isDefault": true
+     },
+     {
+      "id": "1154",
+      "name": "Reflective Glass",
+      "part": "739RGL",
+      "thumb": "/catalog/valor/thumb/201559844235-RGL.webp",
+      "layer": "/catalog/valor/layer/541559854453-engineRGL.webp",
+      "z": 2
+     },
+     {
+      "id": "1155",
+      "name": "Red Brick",
+      "part": "739VRL",
+      "thumb": "/catalog/valor/thumb/341559844238-VRL.webp",
+      "layer": "/catalog/valor/layer/891559854461-engineVRL.webp",
+      "z": 2
+     }
+    ]
+   },
+   {
+    "id": "fires",
+    "label": "Fire style",
+    "area": "burner",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1156",
+      "name": "Driftwood",
+      "part": "739DWK",
+      "thumb": "/catalog/valor/thumb/191559844232-DWK.webp",
+      "layer": "/catalog/valor/layer/261559854485-DWK.webp",
+      "z": 3,
+      "requires": [
+       "2040"
+      ],
+      "isDefault": true
+     },
+     {
+      "id": "2327",
+      "name": "Traditional Logs",
+      "part": "739TLK",
+      "thumb": "/catalog/valor/thumb/171675280996-739tlk-thumb.webp",
+      "layer": "/catalog/valor/layer/511672875426-739tlk.webp",
+      "z": 3,
+      "requires": [
+       "2040"
+      ]
+     },
+     {
+      "id": "1157",
+      "name": "Logs",
+      "part": "739LSK",
+      "thumb": "/catalog/valor/thumb/101559844234-LSK.webp",
+      "layer": "/catalog/valor/layer/121559854487-LSK.webp",
+      "z": 3,
+      "requires": [
+       "2040"
+      ]
+     },
+     {
+      "id": "2328",
+      "name": "Classic Logs",
+      "part": "739CLK",
+      "thumb": "/catalog/valor/thumb/771675280994-739clk-thumb.webp",
+      "layer": "/catalog/valor/layer/701672875419-739clk.webp",
+      "z": 3,
+      "requires": [
+       "2040"
+      ]
+     },
+     {
+      "id": "1158",
+      "name": "Rocks",
+      "part": "739RSK",
+      "thumb": "/catalog/valor/thumb/561559844237-RSK.webp",
+      "layer": "/catalog/valor/layer/831559854489-RSK.webp",
+      "z": 3,
+      "requires": [
+       "2040"
+      ]
+     },
+     {
+      "id": "1159",
+      "name": "Rocks + Decorative Kit",
+      "part": "739RSK + 761DRK",
+      "thumb": "/catalog/valor/thumb/581559844236-RSK-DRK.webp",
+      "layer": "/catalog/valor/layer/631559854492-RSKDRK.webp",
+      "z": 3,
+      "requires": [
+       "2040"
+      ]
+     },
+     {
+      "id": "2324",
+      "name": "Driftwood V-Class",
+      "part": "739VDWK",
+      "thumb": "/catalog/valor/thumb/301675280996-739vdwk-thumb.webp",
+      "layer": "/catalog/valor/layer/821672876226-739vdwk.webp",
+      "z": 3,
+      "requires": [
+       "2329"
+      ]
+     },
+     {
+      "id": "2325",
+      "name": "Birch V-Class",
+      "part": "739VBLK",
+      "thumb": "/catalog/valor/thumb/291675280995-739blk-thumb.webp",
+      "layer": "/catalog/valor/layer/201672875925-739vblk.webp",
+      "z": 3,
+      "requires": [
+       "2329"
+      ]
+     },
+     {
+      "id": "2326",
+      "name": "Traditional Logs V-Class",
+      "part": "739VLSK",
+      "thumb": "/catalog/valor/thumb/521675280997-739vlsk-thumb.webp",
+      "layer": "/catalog/valor/layer/591672876507-739vlsk.webp",
+      "z": 3,
+      "requires": [
+       "2329"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "riser-or-baselift-kits",
+    "label": "Riser and base-lift kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "557",
+      "name": "Black Lift & Base",
+      "part": "751LTK + 752BTK",
+      "thumb": "/catalog/valor/thumb/131502745365-751-752-Black-thumb.webp"
+     },
+     {
+      "id": "559",
+      "name": "Black Riser",
+      "part": "725RTB",
+      "thumb": "/catalog/valor/thumb/401502745739-725RTB-thumb.webp"
+     },
+     {
+      "id": "-1",
+      "name": "None"
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/621502466364-hero-g3.webp",
+    "alt": "G3 Insert insert",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [
+   {
+    "label": "Quick Guide",
+    "url": "https://www.valorfireplaces.com/media/Remote/remote-guide-plus-max.pdf"
+   },
+   {
+    "label": "Manual",
+    "url": "https://www.valorfireplaces.com/media/Remote/GV60-PLUS.pdf"
+   },
+   {
+    "label": "1265WSK",
+    "url": "https://www.valorfireplaces.com/media/Generic%20Title%20PDF%20manuals/Bilingual/1265WSK%20manual.pdf"
+   },
+   {
+    "label": "Owner's Manual",
+    "url": "https://www.valorfireplaces.com/media/LegendG3/English/739-M-V-Homeowner.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.valorfireplaces.com/gas-fireplace-inserts/g3.php",
+  "enabled": true
+ },
+ {
+  "id": "va-452",
+  "slug": "g3-5-insert-insert",
+  "brandId": "valor",
+  "name": "G3.5 Insert",
+  "sku": "700R",
+  "fuel": "gas",
+  "kind": "insert",
+  "style": "traditional",
+  "summary": "A gas insert. 26,000 BTU maximum input. Efficiency: 70.00% (EnerGuide).",
+  "makerDescription": "With over two decades of design innovation and four generations of Legend gas insert DNA, it's no surprise that the Legend G3.5 exudes radiance, high efficiency and the ultimate in comfort control.",
+  "specs": [
+   {
+    "label": "Max input (BTU)",
+    "value": "26,000"
+   },
+   {
+    "label": "Min input (BTU)",
+    "value": "13,000 / 11,000"
+   },
+   {
+    "label": "Max output (BTU)",
+    "value": "20,933"
+   },
+   {
+    "label": "Efficiency (EnerGuide)",
+    "value": "70.00%"
+   },
+   {
+    "label": "Gas Type",
+    "value": "Natural Gas (NG) or Propane (LPG)"
+   },
+   {
+    "label": "Viewing Area",
+    "value": "23 ⅝\" w x 15\" h = 354 ⅜\"²"
+   },
+   {
+    "label": "Minimum cavity",
+    "value": "28 ⅞\" w x 20 ½\" h x 13 ½\" d"
+   }
+  ],
+  "heat": {
+   "btuMax": 26000,
+   "btuMin": 11000,
+   "efficiency": "70.00% (EnerGuide)"
+  },
+  "dimensions": {
+   "text": "28-5/8\" w x 20\" h x 13\" d",
+   "width": 28.625,
+   "height": 20,
+   "depth": 13
+  },
+  "fit": {
+   "minFrontWidth": 28.875,
+   "minHeight": 20.5,
+   "minDepth": 13.5,
+   "note": "Published as the minimum cavity: 28 ⅞\" w x 20 ½\" h x 13 ½\" d"
+  },
+  "options": [
+   {
+    "id": "fronts",
+    "label": "Fronts",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "470",
+      "name": "Black Floating 3-Sided",
+      "part": "709FTB",
+      "thumb": "/catalog/valor/thumb/501502746314-709FTB.webp",
+      "layer": "/catalog/valor/layer/821560981115-709FTB.webp",
+      "z": 5,
+      "isDefault": true
+     },
+     {
+      "id": "472",
+      "name": "Vintage Iron Floating 3-Sided",
+      "part": "709FTV",
+      "thumb": "/catalog/valor/thumb/811502746333-709FTV.webp",
+      "layer": "/catalog/valor/layer/471560981120-709FTV.webp",
+      "z": 5
+     },
+     {
+      "id": "473",
+      "name": "Bronze Floating 3-Sided",
+      "part": "709FTZ",
+      "thumb": "/catalog/valor/thumb/761502746342-709FTZ.webp",
+      "layer": "/catalog/valor/layer/801725557714-709FTZ-darker.webp",
+      "z": 5
+     },
+     {
+      "id": "474",
+      "name": "Black Floating 4-Sided",
+      "part": "713FFB",
+      "thumb": "/catalog/valor/thumb/851502746428-713FFB.webp",
+      "layer": "/catalog/valor/layer/911560981126-713FFB.webp",
+      "z": 5
+     },
+     {
+      "id": "475",
+      "name": "Vintage Iron Floating 4-Sided",
+      "part": "713FFV",
+      "thumb": "/catalog/valor/thumb/881502746437-713FFV.webp",
+      "layer": "/catalog/valor/layer/321560981129-713FFV.webp",
+      "z": 5
+     },
+     {
+      "id": "3124",
+      "name": "Craftsman Front - Black",
+      "part": "716ECB",
+      "thumb": "/catalog/valor/thumb/501763403159-784ecb-thumb.webp",
+      "layer": "/catalog/valor/layer/601763403375-716ecb.webp",
+      "z": 5
+     },
+     {
+      "id": "1689",
+      "name": "Craftsman Front - Champagne Brass",
+      "part": "716ECCB",
+      "thumb": "/catalog/valor/thumb/201578069726-784ecbc.webp",
+      "layer": "/catalog/valor/layer/991593720764-716eccb.webp",
+      "z": 5
+     },
+     {
+      "id": "1690",
+      "name": "Craftsman Front - Pewter",
+      "part": "716ECPW",
+      "thumb": "/catalog/valor/thumb/901578069729-784ecpw.webp",
+      "layer": "/catalog/valor/layer/201593720760-716ecpw.webp",
+      "z": 5
+     },
+     {
+      "id": "3125",
+      "name": "Edgemont - Black",
+      "part": "721EDB",
+      "thumb": "/catalog/valor/thumb/631763403913-721edb-thumb.webp",
+      "layer": "/catalog/valor/layer/871763403359-721edb.webp",
+      "z": 5
+     },
+     {
+      "id": "479",
+      "name": "Edgemont - Vintage Iron",
+      "part": "721EDV",
+      "thumb": "/catalog/valor/thumb/801502746679-721EDV.webp",
+      "layer": "/catalog/valor/layer/431560981139-721EDN.webp",
+      "z": 5
+     },
+     {
+      "id": "481",
+      "name": "Edgemont - Bronze",
+      "part": "721EDZ",
+      "thumb": "/catalog/valor/thumb/191502746689-721EDZ.webp",
+      "layer": "/catalog/valor/layer/901583445011-721EDZ.webp",
+      "z": 5
+     }
+    ]
+   },
+   {
+    "id": "trims",
+    "label": "Trims",
+    "area": "exterior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "483",
+      "name": "Black 3-Sided",
+      "part": "717BPB",
+      "thumb": "/catalog/valor/thumb/881502746846-717BPB.webp",
+      "layer": "/catalog/valor/layer/281593721053-717BPB.webp",
+      "z": 6
+     },
+     {
+      "id": "1691",
+      "name": "Black Flat 3-Sided",
+      "part": "717BPBF",
+      "thumb": "/catalog/valor/thumb/881502746846-717BPB.webp",
+      "layer": "/catalog/valor/layer/311593721069-717bpbf.webp",
+      "z": 6
+     },
+     {
+      "id": "484",
+      "name": "Black 4-Sided",
+      "part": "719BPB",
+      "thumb": "/catalog/valor/thumb/451502746836-719BPB.webp",
+      "layer": "/catalog/valor/layer/621560981168-719BPB.webp",
+      "z": 6
+     },
+     {
+      "id": "485",
+      "name": "Black Backing Plate",
+      "part": "710BPB",
+      "detail": "26-7/8\" x 37-3/4\" (709 applications)",
+      "thumb": "/catalog/valor/thumb/591502474969-710.webp",
+      "layer": "/catalog/valor/layer/881560981170-710-for709.webp",
+      "z": 6
+     },
+     {
+      "id": "486",
+      "name": "Black Backing Plate",
+      "part": "714BPB",
+      "detail": "29\" x 42\" (709/717 applications)",
+      "thumb": "/catalog/valor/thumb/391502475036-714.webp",
+      "layer": "/catalog/valor/layer/321560981174-714-for709.webp",
+      "z": 6
+     },
+     {
+      "id": "2917",
+      "name": "None",
+      "detail": "None",
+      "thumb": "/catalog/valor/thumb/141694451542-none.webp",
+      "layer": "/catalog/valor/layer/481502491051-none.webp",
+      "z": 6
+     },
+     {
+      "id": "-1",
+      "name": "None"
+     }
+    ]
+   },
+   {
+    "id": "liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1260",
+      "name": "Ledgestone",
+      "part": "705LSLV3",
+      "thumb": "/catalog/valor/thumb/971560359519-LSL.webp",
+      "layer": "/catalog/valor/layer/571593720684-LSLV3.webp",
+      "z": 2,
+      "isDefault": true
+     },
+     {
+      "id": "1258",
+      "name": "Reflective Glass",
+      "part": "706RGL",
+      "thumb": "/catalog/valor/thumb/201559844235-RGL.webp",
+      "layer": "/catalog/valor/layer/901560981073-RGL.webp",
+      "z": 2
+     },
+     {
+      "id": "1257",
+      "name": "Fluted Black",
+      "part": "707FBL",
+      "thumb": "/catalog/valor/thumb/571559844233-FBL.webp",
+      "layer": "/catalog/valor/layer/161560981066-FBL.webp",
+      "z": 2
+     },
+     {
+      "id": "1259",
+      "name": "Red Brick",
+      "part": "708VRL",
+      "thumb": "/catalog/valor/thumb/341559844238-VRL.webp",
+      "layer": "/catalog/valor/layer/811560981076-VRL.webp",
+      "z": 2
+     }
+    ]
+   },
+   {
+    "id": "fires",
+    "label": "Fire style",
+    "area": "burner",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1685",
+      "name": "Birch Logs",
+      "part": "700BLK",
+      "thumb": "/catalog/valor/thumb/121560359514-BLK.webp",
+      "layer": "/catalog/valor/layer/891593720731-700blk.webp",
+      "z": 3,
+      "isDefault": true
+     },
+     {
+      "id": "1686",
+      "name": "Traditional Logs",
+      "part": "700LSK",
+      "thumb": "/catalog/valor/thumb/781560359518-LSK.webp",
+      "layer": "/catalog/valor/layer/881593720725-700lsk.webp",
+      "z": 3
+     },
+     {
+      "id": "1687",
+      "name": "Driftwood Logs",
+      "part": "700DWK",
+      "thumb": "/catalog/valor/thumb/411560359514-DWK.webp",
+      "layer": "/catalog/valor/layer/981593720728-700dwk.webp",
+      "z": 3
+     }
+    ]
+   },
+   {
+    "id": "riser-or-baselift-kits",
+    "label": "Riser and base-lift kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "509",
+      "name": "40\" Riser - Black",
+      "part": "725RTB",
+      "detail": "2-1/2\" x 40\"",
+      "thumb": "/catalog/valor/thumb/141502483442-725RTB.webp"
+     },
+     {
+      "id": "510",
+      "name": "46-1/4\" Riser - Black",
+      "part": "793RTB",
+      "detail": "2-1/2\" X 46-1/4\"",
+      "thumb": "/catalog/valor/thumb/751502483441-793RTB.webp"
+     },
+     {
+      "id": "511",
+      "name": "46-1/4\" Riser - Vintage Iron",
+      "part": "793RTV",
+      "detail": "2-1/2\" x 46-1/4\"",
+      "thumb": "/catalog/valor/thumb/411502483440-793RTV.webp"
+     },
+     {
+      "id": "-1",
+      "name": "None"
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/431611772549-hero-g35-21.webp",
+    "alt": "G3.5 Insert insert",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [
+   {
+    "label": "Quick Guide",
+    "url": "https://www.valorfireplaces.com/media/Remote/remote-guide-valor10.pdf"
+   },
+   {
+    "label": "Manual",
+    "url": "https://www.valorfireplaces.com/media/Remote/GV60-SYMAX.pdf"
+   },
+   {
+    "label": "1265WSK",
+    "url": "https://www.valorfireplaces.com/media/Generic%20Title%20PDF%20manuals/Bilingual/1265WSK%20manual.pdf"
+   },
+   {
+    "label": "RBWSK",
+    "url": "https://www.valorfireplaces.com/media/L3/Bilingual/RBWSK-E-F.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.valorfireplaces.com/gas-fireplace-inserts/g35.php",
+  "enabled": true
+ },
+ {
+  "id": "va-453",
+  "slug": "g4-insert-insert",
+  "brandId": "valor",
+  "name": "G4 Insert",
+  "sku": "780R",
+  "fuel": "gas",
+  "kind": "insert",
+  "style": "traditional",
+  "summary": "A gas insert. 28,000 BTU maximum input. Efficiency: 70.00% (EnerGuide).",
+  "makerDescription": "Considered the 'big brother' in this collection, the G4 Series is designed to fit existing large fireplace openings without sacrificing presence and performance.",
+  "specs": [
+   {
+    "label": "Max input (BTU)",
+    "value": "28,000"
+   },
+   {
+    "label": "Min input (BTU)",
+    "value": "14,000"
+   },
+   {
+    "label": "Max output (BTU)",
+    "value": "20,933"
+   },
+   {
+    "label": "Efficiency (EnerGuide)",
+    "value": "70.00%"
+   },
+   {
+    "label": "Gas Type",
+    "value": "Natural Gas (NG) or Propane (LPG)"
+   },
+   {
+    "label": "Viewing Area",
+    "value": "28\" w x 18\" h = 504\"²"
+   },
+   {
+    "label": "Minimum cavity",
+    "value": "33 ¼\" w x 23 ¼\" h x 15 ½\" d"
+   }
+  ],
+  "heat": {
+   "btuMax": 28000,
+   "btuMin": 14000,
+   "efficiency": "70.00% (EnerGuide)"
+  },
+  "dimensions": {
+   "text": "33\" w x 23\" h x 15\" d",
+   "width": 33,
+   "height": 23,
+   "depth": 15
+  },
+  "fit": {
+   "minFrontWidth": 33.25,
+   "minHeight": 23.25,
+   "minDepth": 15.5,
+   "note": "Published as the minimum cavity: 33 ¼\" w x 23 ¼\" h x 15 ½\" d"
+  },
+  "options": [
+   {
+    "id": "fronts",
+    "label": "Fronts",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "3127",
+      "name": "Edgemont - Black Craftsman",
+      "part": "784ECB",
+      "thumb": "/catalog/valor/thumb/501763403159-784ecb-thumb.webp",
+      "layer": "/catalog/valor/layer/501763402963-784ecb.webp",
+      "z": 5,
+      "isDefault": true
+     },
+     {
+      "id": "1528",
+      "name": "Edgemont - Pewter Craftsman",
+      "part": "784ECPW",
+      "thumb": "/catalog/valor/thumb/901578069729-784ecpw.webp",
+      "layer": "/catalog/valor/layer/651578069903-784ECPW.webp",
+      "z": 5
+     },
+     {
+      "id": "607",
+      "name": "2 ½\" Vintage Iron Floating",
+      "part": "790FTV",
+      "thumb": "/catalog/valor/thumb/501502821198-790FTV.webp",
+      "layer": "/catalog/valor/layer/271561054427-790FTV.webp",
+      "z": 5
+     },
+     {
+      "id": "608",
+      "name": "5 ¾\" Black Square",
+      "part": "791STB",
+      "thumb": "/catalog/valor/thumb/961502821373-791STB.webp",
+      "layer": "/catalog/valor/layer/931561054430-791STB.webp",
+      "z": 5
+     },
+     {
+      "id": "610",
+      "name": "5\" Vintage Iron 3-Sided Floating",
+      "part": "792FTV",
+      "thumb": "/catalog/valor/thumb/121502821591-792FTV.webp",
+      "layer": "/catalog/valor/layer/251561054439-792FTV.webp",
+      "z": 5
+     },
+     {
+      "id": "611",
+      "name": "5\" Bronze 3-Sided Floating",
+      "part": "792FTZ",
+      "thumb": "/catalog/valor/thumb/471502821601-792FTZ.webp",
+      "layer": "/catalog/valor/layer/321697045774-792ftz-fix.webp",
+      "z": 5
+     },
+     {
+      "id": "612",
+      "name": "5\" Vintage Iron 4-Sided Floating",
+      "part": "798FFV",
+      "thumb": "/catalog/valor/thumb/891502821925-798FFV.webp",
+      "layer": "/catalog/valor/layer/201561054445-798FFV.webp",
+      "z": 5
+     },
+     {
+      "id": "3126",
+      "name": "Edgemont - Black",
+      "part": "799EDFB",
+      "thumb": "/catalog/valor/thumb/631763403913-721edb-thumb.webp",
+      "layer": "/catalog/valor/layer/241763402980-799edfb.webp",
+      "z": 5
+     },
+     {
+      "id": "614",
+      "name": "Edgemont - Brushed Nickel",
+      "part": "799EDFN",
+      "thumb": "/catalog/valor/thumb/271502746669-721EDN.webp",
+      "layer": "/catalog/valor/layer/501561054452-799EDFN.webp",
+      "z": 5
+     },
+     {
+      "id": "615",
+      "name": "Edgemont - Bronze",
+      "part": "799EDFZ",
+      "thumb": "/catalog/valor/thumb/191502746689-721EDZ.webp",
+      "layer": "/catalog/valor/layer/451697046007-799edfz-fix-rails.webp",
+      "z": 5
+     }
+    ]
+   },
+   {
+    "id": "closurebacking-plates",
+    "label": "Closure and backing plates",
+    "area": "exterior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "616",
+      "name": "Backing Plate - 39-1/2\" x 27\"",
+      "part": "799BPB-1",
+      "thumb": "/catalog/valor/thumb/201502829579-799BPB-1.webp",
+      "layer": "/catalog/valor/layer/421561054482-799BPB-1.webp",
+      "z": 7
+     },
+     {
+      "id": "3160",
+      "name": "Backing Plate - 39-1/2\" x 27\"",
+      "part": "799STB-1",
+      "thumb": "/catalog/valor/thumb/201502829579-799BPB-1.webp",
+      "layer": "/catalog/valor/layer/421561054482-799BPB-1.webp",
+      "z": 7
+     },
+     {
+      "id": "617",
+      "name": "Backing Plate - 46\" x 31\"",
+      "part": "799BPB-2",
+      "thumb": "/catalog/valor/thumb/741502829559-799BPB-2.webp",
+      "layer": "/catalog/valor/layer/851561054484-799BPB-2.webp",
+      "z": 7
+     },
+     {
+      "id": "852",
+      "name": "Backing Plate - 48\" x 32-3/8\"",
+      "part": "799BPB-3",
+      "thumb": "/catalog/valor/thumb/741502829559-799BPB-2.webp",
+      "layer": "/catalog/valor/layer/121561054486-799BPB3.webp",
+      "z": 7
+     },
+     {
+      "id": "1843",
+      "name": "Backing Plate - 42\" x 31-1/16\"",
+      "part": "799BPB-4S",
+      "thumb": "/catalog/valor/thumb/451502746836-719BPB.webp",
+      "layer": "/catalog/valor/layer/731614196498-799bpb-4s.webp",
+      "z": 7
+     },
+     {
+      "id": "860",
+      "name": "Backing Plate - 46\" x 31\"",
+      "part": "794BPB",
+      "detail": "For 790",
+      "thumb": "/catalog/valor/thumb/201502829579-799BPB-1.webp",
+      "layer": "/catalog/valor/layer/141561054476-794-790.webp",
+      "z": 7
+     },
+     {
+      "id": "861",
+      "name": "Backing Plate - 48\" x 32-3/8\"",
+      "part": "794BPB-1",
+      "detail": "For 790",
+      "thumb": "/catalog/valor/thumb/741502829559-799BPB-2.webp",
+      "layer": "/catalog/valor/layer/141561054469-794-1-790.webp",
+      "z": 7
+     },
+     {
+      "id": "862",
+      "name": "Backing Plate - 46\" x 31\"",
+      "part": "794BPB",
+      "detail": "For 791",
+      "thumb": "/catalog/valor/thumb/201502829579-799BPB-1.webp",
+      "layer": "/catalog/valor/layer/371561054478-794-791.webp",
+      "z": 7
+     },
+     {
+      "id": "863",
+      "name": "Backing Plate - 48\" x 32-3/8\"",
+      "part": "794BPB-1",
+      "detail": "For 791",
+      "thumb": "/catalog/valor/thumb/741502829559-799BPB-2.webp",
+      "layer": "/catalog/valor/layer/321561054471-794-1-791.webp",
+      "z": 7
+     },
+     {
+      "id": "864",
+      "name": "Backing Plate - 46\" x 31\"",
+      "part": "794BPB",
+      "detail": "For 792",
+      "thumb": "/catalog/valor/thumb/201502829579-799BPB-1.webp",
+      "layer": "/catalog/valor/layer/171561054480-794-792.webp",
+      "z": 7
+     },
+     {
+      "id": "865",
+      "name": "Backing Plate - 48\" x 32-3/8\"",
+      "part": "794BPB-1",
+      "detail": "For 792",
+      "thumb": "/catalog/valor/thumb/741502829559-799BPB-2.webp",
+      "layer": "/catalog/valor/layer/171561054474-794-1-792.webp",
+      "z": 7
+     },
+     {
+      "id": "-1",
+      "name": "None"
+     }
+    ]
+   },
+   {
+    "id": "liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1311",
+      "name": "Fluted Black",
+      "part": "788FBLV2",
+      "thumb": "/catalog/valor/thumb/571559844233-FBL.webp",
+      "layer": "/catalog/valor/layer/871561054328-FBL.webp",
+      "z": 2,
+      "isDefault": true
+     },
+     {
+      "id": "1312",
+      "name": "Reflective Glass",
+      "part": "787RGL",
+      "thumb": "/catalog/valor/thumb/201559844235-RGL.webp",
+      "layer": "/catalog/valor/layer/191561054336-RGL.webp",
+      "z": 2
+     },
+     {
+      "id": "1313",
+      "name": "Red Brick",
+      "part": "789VRLV2",
+      "thumb": "/catalog/valor/thumb/341559844238-VRL.webp",
+      "layer": "/catalog/valor/layer/861561054340-VRL.webp",
+      "z": 2
+     },
+     {
+      "id": "1314",
+      "name": "Ledgestone",
+      "part": "786LSLV3",
+      "thumb": "/catalog/valor/thumb/971560359519-LSL.webp",
+      "layer": "/catalog/valor/layer/131578519427-LSLV3.webp",
+      "z": 2
+     }
+    ]
+   },
+   {
+    "id": "fires",
+    "label": "Fire style",
+    "area": "burner",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1305",
+      "name": "Birch Logs",
+      "part": "1000BLKV2",
+      "thumb": "/catalog/valor/thumb/121560359514-BLK.webp",
+      "layer": "/catalog/valor/layer/331578069834-BLK-2019.webp",
+      "z": 3,
+      "isDefault": true
+     },
+     {
+      "id": "1306",
+      "name": "Driftwood Logs",
+      "part": "1000DWKV2",
+      "thumb": "/catalog/valor/thumb/411560359514-DWK.webp",
+      "layer": "/catalog/valor/layer/441578069836-DWK-2019.webp",
+      "z": 3
+     },
+     {
+      "id": "1529",
+      "name": "Traditional Logs",
+      "part": "1000LSKV2",
+      "thumb": "/catalog/valor/thumb/781560359518-LSK.webp",
+      "layer": "/catalog/valor/layer/851578069838-LSK-2019.webp",
+      "z": 3
+     }
+    ]
+   },
+   {
+    "id": "riser-or-baselift-kits",
+    "label": "Riser and base-lift kits",
+    "area": "extras",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "619",
+      "name": "Black Riser",
+      "part": "793RTB",
+      "thumb": "/catalog/valor/thumb/751502483441-793RTB.webp"
+     },
+     {
+      "id": "620",
+      "name": "Vintage Iron Riser",
+      "part": "793RTV",
+      "thumb": "/catalog/valor/thumb/411502483440-793RTV.webp"
+     },
+     {
+      "id": "-1",
+      "name": "None"
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/221502466410-hero-g4.webp",
+    "alt": "G4 Insert insert",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [
+   {
+    "label": "Quick Guide",
+    "url": "https://www.valorfireplaces.com/media/Remote/remote-guide-valor10.pdf"
+   },
+   {
+    "label": "Manual",
+    "url": "https://www.valorfireplaces.com/media/Remote/GV60-SYMAX.pdf"
+   },
+   {
+    "label": "1265WSK",
+    "url": "https://www.valorfireplaces.com/media/Generic%20Title%20PDF%20manuals/Bilingual/1265WSK%20manual.pdf"
+   },
+   {
+    "label": "RBWSK",
+    "url": "https://www.valorfireplaces.com/media/L3/Bilingual/RBWSK-E-F.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.valorfireplaces.com/gas-fireplace-inserts/g4.php",
+  "enabled": true
+ },
+ {
+  "id": "va-454",
+  "slug": "portrait-insert-insert",
+  "brandId": "valor",
+  "name": "Portrait Insert",
+  "sku": "530VI",
+  "fuel": "gas",
+  "kind": "insert",
+  "style": "traditional",
+  "summary": "A gas insert. 20,500 BTU maximum input. Efficiency: 64% / 66% (EnerGuide).",
+  "makerDescription": "A wide range of diverse venting solutions unique to the Portrait engine, position the Clearview front as a perfect upgrade to your home renovation project.",
+  "specs": [
+   {
+    "label": "Max input (BTU)",
+    "value": "20,500 / 19,500"
+   },
+   {
+    "label": "Min input (BTU)",
+    "value": "12,500 / 11,000"
+   },
+   {
+    "label": "Max output (BTU)",
+    "value": "13,223 / 13,100"
+   },
+   {
+    "label": "Efficiency (EnerGuide)",
+    "value": "64% / 66%"
+   },
+   {
+    "label": "Gas Type",
+    "value": "Natural Gas (NG) or Propane (LPG)"
+   },
+   {
+    "label": "Viewing Area",
+    "value": "16 ¾\" w x 15 ⅜\" h = 258\"²"
+   },
+   {
+    "label": "Additional Features",
+    "value": "Co-Linear venting | Tapered fire box | Slim engine design"
+   }
+  ],
+  "heat": {
+   "btuMax": 20500,
+   "btuMin": 11000,
+   "efficiency": "64% / 66% (EnerGuide)"
+  },
+  "dimensions": {
+   "text": "20\" w x 25-1/4\" h x 9\" d",
+   "width": 20,
+   "height": 25.25,
+   "depth": 9
+  },
+  "options": [
+   {
+    "id": "fronts",
+    "label": "Fronts",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "633",
+      "name": "President Insert",
+      "part": "536CXBI",
+      "thumb": "/catalog/valor/thumb/261502833828-536CXBI-thumb.webp",
+      "layer": "/catalog/valor/layer/511560199491-536CXB-I.webp",
+      "z": 5,
+      "isDefault": true
+     },
+     {
+      "id": "637",
+      "name": "Windsor Arch ZC - Black",
+      "part": "539AFBv2",
+      "thumb": "/catalog/valor/thumb/561502905895-539AFBv2-thumb.webp",
+      "layer": "/catalog/valor/layer/641560199494-539AFBv2.webp",
+      "z": 5
+     },
+     {
+      "id": "638",
+      "name": "Windsor Arch ZC - Chrome",
+      "part": "539AFPv2",
+      "thumb": "/catalog/valor/thumb/531502905907-539AFPv2-thumb.webp",
+      "layer": "/catalog/valor/layer/871560199496-539AFPv2.webp",
+      "z": 5
+     },
+     {
+      "id": "1207",
+      "name": "Windsor Arch Insert - Black",
+      "part": "549AFBv2",
+      "thumb": "/catalog/valor/thumb/931502836888-549AFBv2-thumb.webp",
+      "layer": "/catalog/valor/layer/881560199514-549AFBv2.webp",
+      "z": 5
+     },
+     {
+      "id": "1208",
+      "name": "Windsor Arch Insert - Chrome",
+      "part": "549AFPv2",
+      "thumb": "/catalog/valor/thumb/491502836898-549AFPv2-thumb.webp",
+      "layer": "/catalog/valor/layer/301560199517-549AFPv2.webp",
+      "z": 5
+     },
+     {
+      "id": "639",
+      "name": "Clearview Insert",
+      "part": "545CFV",
+      "thumb": "/catalog/valor/thumb/571502836834-545CFV-thumb.webp",
+      "layer": "/catalog/valor/layer/491600902292-545CFV-ZC.webp",
+      "z": 5
+     },
+     {
+      "id": "640",
+      "name": "Ledgeview Insert - Black",
+      "part": "546LFB",
+      "thumb": "/catalog/valor/thumb/281502836849-546LFB-thumb.webp",
+      "layer": "/catalog/valor/layer/641560199505-546LFB.webp",
+      "z": 5
+     },
+     {
+      "id": "1708",
+      "name": "Ledgeview Insert - Pewter",
+      "part": "546LFPW",
+      "thumb": "/catalog/valor/thumb/501597959221-546LFPW-thumb.webp",
+      "layer": "/catalog/valor/layer/711597958881-546LFPW.webp",
+      "z": 5
+     },
+     {
+      "id": "1211",
+      "name": "Senator",
+      "part": "563SCB",
+      "thumb": "/catalog/valor/thumb/491502905972-563SCB-thumb.webp",
+      "layer": "/catalog/valor/layer/471560199524-563SCB.webp",
+      "z": 5
+     }
+    ]
+   },
+   {
+    "id": "frets",
+    "label": "Frets",
+    "area": "exterior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "632",
+      "name": "Traditional Black",
+      "part": "545TFB",
+      "thumb": "/catalog/valor/thumb/781501256864-545TFB.webp",
+      "layer": "/catalog/valor/layer/811560199584-545TFB.webp",
+      "z": 5
+     },
+     {
+      "id": "-1",
+      "name": "None"
+     }
+    ]
+   },
+   {
+    "id": "closurebacking-plates",
+    "label": "Closure and backing plates",
+    "area": "exterior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1212",
+      "name": "Black Closure Plate - 26\" x 31\"",
+      "part": "582CPB",
+      "detail": "For 536",
+      "thumb": "/catalog/valor/thumb/481502834511-582CPB-thumb.webp",
+      "layer": "/catalog/valor/layer/201560199604-582-for536.webp",
+      "z": 7
+     },
+     {
+      "id": "1213",
+      "name": "Black Closure Plate - 30\" x 33\"",
+      "part": "583CPB",
+      "detail": "For 536",
+      "thumb": "/catalog/valor/thumb/201502834513-583CPB-thumb.webp",
+      "layer": "/catalog/valor/layer/631560199608-583-for536.webp",
+      "z": 7
+     },
+     {
+      "id": "1214",
+      "name": "Black Closure Plate - 26\" x 31\"",
+      "part": "582CPB",
+      "detail": "For 541",
+      "thumb": "/catalog/valor/thumb/481502834511-582CPB-thumb.webp",
+      "layer": "/catalog/valor/layer/941560199606-582-for541.webp",
+      "z": 7
+     },
+     {
+      "id": "1215",
+      "name": "Black Closure Plate - 30\" x 33\"",
+      "part": "583CPB",
+      "detail": "For 541",
+      "thumb": "/catalog/valor/thumb/201502834513-583CPB-thumb.webp",
+      "layer": "/catalog/valor/layer/491560199610-583-for541.webp",
+      "z": 7
+     },
+     {
+      "id": "1216",
+      "name": "Black Closure Plate - 26\" x 31\"",
+      "part": "582CPB",
+      "detail": "For 563",
+      "thumb": "/catalog/valor/thumb/481502834511-582CPB-thumb.webp",
+      "layer": "/catalog/valor/layer/641560201123-582-for563.webp",
+      "z": 7
+     },
+     {
+      "id": "1217",
+      "name": "Black Closure Plate - 30\" x 33\"",
+      "part": "583CPB",
+      "detail": "For 563",
+      "thumb": "/catalog/valor/thumb/201502834513-583CPB-thumb.webp",
+      "layer": "/catalog/valor/layer/541560201125-583-for563.webp",
+      "z": 7
+     },
+     {
+      "id": "643",
+      "name": "Black Closure Plate - 30\" x 33\"",
+      "part": "583CPB",
+      "detail": "For 545CFV",
+      "thumb": "/catalog/valor/thumb/201502834513-583CPB-thumb.webp",
+      "layer": "/catalog/valor/layer/791560199612-583-for545.webp",
+      "z": 7
+     },
+     {
+      "id": "1009",
+      "name": "Black Arched",
+      "part": "549APB",
+      "thumb": "/catalog/valor/thumb/481529081905-549apb-thumb.webp",
+      "layer": "/catalog/valor/layer/601560199599-549APB.webp",
+      "z": 7
+     },
+     {
+      "id": "1218",
+      "name": "Black Closure Plate - 33\" x 36\"",
+      "part": "3336CP",
+      "detail": "For 536",
+      "thumb": "/catalog/valor/thumb/751502833803-3336CP-thumb.webp",
+      "layer": "/catalog/valor/layer/731560199615-3336-for536.webp",
+      "z": 7
+     },
+     {
+      "id": "-1",
+      "name": "None"
+     }
+    ]
+   },
+   {
+    "id": "liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1200",
+      "name": "Fluted Black (Reversible)",
+      "part": "526RL",
+      "thumb": "/catalog/valor/thumb/571559844233-FBL.webp",
+      "layer": "/catalog/valor/layer/731560199454-FBL.webp",
+      "z": 2,
+      "isDefault": true
+     },
+     {
+      "id": "1201",
+      "name": "Reflective Glass",
+      "part": "580RGLV2",
+      "thumb": "/catalog/valor/thumb/201559844235-RGL.webp",
+      "layer": "/catalog/valor/layer/491560199452-RGL.webp",
+      "z": 2
+     },
+     {
+      "id": "1202",
+      "name": "Red Brick (Reversible)",
+      "part": "526RL",
+      "thumb": "/catalog/valor/thumb/341559844238-VRL.webp",
+      "layer": "/catalog/valor/layer/851560199457-VRL.webp",
+      "z": 2
+     }
+    ]
+   },
+   {
+    "id": "fires",
+    "label": "Fire style",
+    "area": "burner",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1205",
+      "name": "Birch Logs",
+      "part": "530VBLK",
+      "thumb": "/catalog/valor/thumb/961715791207-thumb-blk.webp",
+      "layer": "/catalog/valor/layer/821779728059-530vblk.webp",
+      "z": 3,
+      "isDefault": true
+     },
+     {
+      "id": "1203",
+      "name": "Driftwood Logs",
+      "part": "530VDWK",
+      "thumb": "/catalog/valor/thumb/461715791208-thumb-dwk.webp",
+      "layer": "/catalog/valor/layer/881779728064-530vdwk.webp",
+      "z": 3
+     },
+     {
+      "id": "1204",
+      "name": "Traditional Logs",
+      "part": "530VLSK",
+      "thumb": "/catalog/valor/thumb/671715791209-thumb-lsk.webp",
+      "layer": "/catalog/valor/layer/741779728047-530vlsk.webp",
+      "z": 3
+     },
+     {
+      "id": "1206",
+      "name": "Coals",
+      "part": "530VCSK",
+      "thumb": "/catalog/valor/thumb/401725899693-205csk-thumb.webp",
+      "layer": "/catalog/valor/layer/711779728053-530vcsk.webp",
+      "z": 3
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/681785889397-insert-2026.webp",
+    "alt": "Portrait Insert insert",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [
+   {
+    "label": "Quick Guide",
+    "url": "https://www.valorfireplaces.com/media/Remote/remote-guide-plus-max.pdf"
+   },
+   {
+    "label": "Manual",
+    "url": "https://www.valorfireplaces.com/media/Remote/GV60-PLUS.pdf"
+   },
+   {
+    "label": "RBWSK",
+    "url": "https://www.valorfireplaces.com/media/L3/Bilingual/RBWSK-E-F.pdf"
+   },
+   {
+    "label": "1265WSK",
+    "url": "https://www.valorfireplaces.com/media/Generic%20Title%20PDF%20manuals/Bilingual/1265WSK%20manual.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.valorfireplaces.com/gas-fireplace-inserts/portrait.php",
+  "enabled": true
+ },
+ {
+  "id": "va-182",
+  "slug": "retrofire-insert-insert",
+  "brandId": "valor",
+  "name": "Retrofire Insert",
+  "sku": "RF24JD",
+  "fuel": "gas",
+  "kind": "insert",
+  "style": "traditional",
+  "summary": "A gas insert. 20,000 BTU maximum input. Efficiency: 70.03% / 64.20% / 67.18% / 57.74% (EnerGuide).",
+  "makerDescription": "Designed specifically for inserting into any masonry or factory built fireplace.",
+  "specs": [
+   {
+    "label": "Max input (BTU)",
+    "value": "20,000 / 18,000"
+   },
+   {
+    "label": "Min input (BTU)",
+    "value": "6,500 / 12,500"
+   },
+   {
+    "label": "Max output (BTU)",
+    "value": "14,322 / 14,294 / 13,248 / 12,118"
+   },
+   {
+    "label": "Efficiency (EnerGuide)",
+    "value": "70.03% / 64.20% / 67.18% / 57.74%"
+   },
+   {
+    "label": "Gas Type",
+    "value": "Natural Gas (NG) or Propane (LPG)"
+   },
+   {
+    "label": "Viewing Area",
+    "value": "21 ½\" w x 11 ¾\" h = 252 ⅝\"²"
+   },
+   {
+    "label": "Minimum cavity",
+    "value": "27\" w x 20\" h x 14 ⅛\" d"
+   },
+   {
+    "label": "Installation Type",
+    "value": "Direct Vent"
+   }
+  ],
+  "heat": {
+   "btuMax": 20000,
+   "btuMin": 6500,
+   "efficiency": "70.03% / 64.20% / 67.18% / 57.74% (EnerGuide)"
+  },
+  "dimensions": {
+   "text": "26-1/2\" w x 19\" h x 14\" d",
+   "width": 26.5,
+   "height": 19,
+   "depth": 14
+  },
+  "fit": {
+   "minFrontWidth": 27,
+   "minHeight": 20,
+   "minDepth": 14.125,
+   "note": "Published as the minimum cavity: 27\" w x 20\" h x 14 ⅛\" d"
+  },
+  "options": [
+   {
+    "id": "frets",
+    "label": "Frets",
+    "area": "exterior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "207",
+      "name": "Traditional",
+      "part": "RA24TB",
+      "thumb": "/catalog/valor/thumb/391501179626-RA24TB.webp",
+      "layer": "/catalog/valor/layer/851532370527-RA24TB.webp",
+      "z": 5
+     },
+     {
+      "id": "210",
+      "name": "Ventana",
+      "part": "1225VFB",
+      "thumb": "/catalog/valor/thumb/471501179622-1225VFB.webp",
+      "layer": "/catalog/valor/layer/931532370516-1225VFB.webp",
+      "z": 5
+     },
+     {
+      "id": "-1",
+      "name": "None"
+     }
+    ]
+   },
+   {
+    "id": "fuel-beds",
+    "label": "Fuel beds",
+    "area": "burner",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "645",
+      "name": "Traditional Logs",
+      "part": "MF28LSK",
+      "thumb": "/catalog/valor/thumb/731501255833-MF28MF28LSK.webp",
+      "layer": "/catalog/valor/layer/811532371162-mf28lsk-logs.webp",
+      "z": 3,
+      "isDefault": true
+     },
+     {
+      "id": "1056",
+      "name": "Driftwood Logs",
+      "part": "MF28DWK",
+      "thumb": "/catalog/valor/thumb/221501255836-MF28MF28DWK.webp",
+      "layer": "/catalog/valor/layer/831532371122-mf28dwk-driftwood.webp",
+      "z": 3
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/161532370914-hero-retro.webp",
+    "alt": "Retrofire Insert insert",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [
+   {
+    "label": "Quick Guide",
+    "url": "https://www.valorfireplaces.com/media/Remote/remote-guide-plus-max.pdf"
+   },
+   {
+    "label": "Manual",
+    "url": "https://www.valorfireplaces.com/media/Remote/GV60-PLUS.pdf"
+   },
+   {
+    "label": "1265WSK",
+    "url": "https://www.valorfireplaces.com/media/Generic%20Title%20PDF%20manuals/Bilingual/1265WSK%20manual.pdf"
+   },
+   {
+    "label": "Quick Guide",
+    "url": "https://www.valorfireplaces.com/media/Remote/remote-guide-plus-max.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.valorfireplaces.com/gas-fireplace-inserts/retrofire.php",
+  "enabled": true
+ },
+ {
+  "id": "va-2516",
+  "slug": "bramshaw-electric-stove-stove",
+  "brandId": "valor",
+  "name": "Bramshaw Electric Stove",
+  "sku": "FCBUS0013",
+  "fuel": "electric",
+  "kind": "stove",
+  "style": "freestanding",
+  "summary": "An electric stove.",
+  "makerDescription": "A highly flexible freestanding 3-sided electric stove, with a design like a wood or gas model but with easy installation and a simple plug-in.",
+  "specs": [
+   {
+    "label": "Fireplace Type",
+    "value": "Electric"
+   },
+   {
+    "label": "Supply Voltage",
+    "value": "120V"
+   }
+  ],
+  "dimensions": {
+   "text": "15-3/4\" w x 39-7/8 h x 12-1/5\" d",
+   "width": 15.75,
+   "height": 39.875,
+   "depth": 12.2
+  },
+  "options": [
+   {
+    "id": "engines",
+    "label": "Version",
+    "area": "extras",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "2518",
+      "name": "Log Storage Base",
+      "part": "FCBUS0015",
+      "thumb": "/catalog/valor/thumb/331690223097-thumb-wood.webp",
+      "layer": "/catalog/valor/layer/381694451810-engine-wood-fix.webp",
+      "z": 1,
+      "unlocks": [
+       "2521"
+      ],
+      "isDefault": true
+     },
+     {
+      "id": "2519",
+      "name": "Pedestal Base",
+      "part": "FCBUS0018",
+      "thumb": "/catalog/valor/thumb/371690223098-thumb-pedastool.webp",
+      "layer": "/catalog/valor/layer/831694451812-engine-pedestal-fix.webp",
+      "z": 1,
+      "unlocks": [
+       "2521"
+      ]
+     },
+     {
+      "id": "2537",
+      "name": "Wall Hanging Bracket",
+      "part": "FCBUS0019",
+      "thumb": "/catalog/valor/thumb/421694452275-wall-bracket.webp",
+      "layer": "/catalog/valor/layer/821690221721-stove-body.webp",
+      "z": 1,
+      "unlocks": [
+       "2521"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "fires",
+    "label": "Fire style",
+    "area": "burner",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "2521",
+      "name": "Flue Pipe",
+      "part": "FCBUS0016",
+      "thumb": "/catalog/valor/thumb/891690223096-thumb-pipe.webp",
+      "layer": "/catalog/valor/layer/971690221719-stove-pipe.webp",
+      "z": 3
+     },
+     {
+      "id": "-1",
+      "name": "None"
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/591694449359-bramhshaw-hero.webp",
+    "alt": "Bramshaw Electric Stove stove",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [
+   {
+    "label": "download the Bramshaw electric installation manual",
+    "url": "https://www.valorfireplaces.com/media/Bramshaw/USA-Bramshaw-Stove-Installation-Manual-2023.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.valorfireplaces.com/electric-fireplaces/bramshaw-electric-stove.php",
+  "enabled": true
+ },
+ {
+  "id": "va-373",
+  "slug": "madrona-freestanding-stove-stove",
+  "brandId": "valor",
+  "name": "Madrona Freestanding Stove",
+  "sku": "MF28V",
+  "fuel": "gas",
+  "kind": "stove",
+  "style": "freestanding",
+  "summary": "A gas stove.",
+  "makerDescription": "The Madrona supplies a constant flow of both radiant heat and naturally convected warm air. Continuously warming objects in its path, radiant heat satisfies your comfort needs with up to 25% less overall energy compared to forced air systems.",
+  "specs": [],
+  "dimensions": {
+   "text": "Size varies by casting"
+  },
+  "options": [
+   {
+    "id": "castings",
+    "label": "Castings",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "380",
+      "name": "Traditional Square - Black",
+      "part": "MFCS01-1 + MFCS01V-3",
+      "thumb": "/catalog/valor/thumb/801502899296-square-black.webp",
+      "layer": "/catalog/valor/layer/681560376616-Square-Black.webp",
+      "z": 4,
+      "isDefault": true
+     },
+     {
+      "id": "381",
+      "name": "Traditional Arched - Black",
+      "part": "MFCS01-1 + MFCS01V-2",
+      "thumb": "/catalog/valor/thumb/891502899290-arched-black.webp",
+      "layer": "/catalog/valor/layer/481560376604-Arched-Black.webp",
+      "z": 4
+     },
+     {
+      "id": "383",
+      "name": "Traditional Square - Majolica",
+      "part": "MFCS02-1 + MFCS02-3",
+      "thumb": "/catalog/valor/thumb/701502899299-square-majolica.webp",
+      "layer": "/catalog/valor/layer/151560376619-Square-Majolica.webp",
+      "z": 4
+     },
+     {
+      "id": "382",
+      "name": "Traditional Arched - Majolica",
+      "part": "MFCS02-1 + MFCS02V-2",
+      "thumb": "/catalog/valor/thumb/841502899294-arched-majolica.webp",
+      "layer": "/catalog/valor/layer/951560376602-Arched-Majolica.webp",
+      "z": 4
+     },
+     {
+      "id": "914",
+      "name": "Modern - Almond White",
+      "part": "MFCS05-1AW + MFCS05-3AW + MFCS05-2",
+      "thumb": "/catalog/valor/thumb/161515436317-Modern-White.webp",
+      "layer": "/catalog/valor/layer/391560376607-Modern-AlmondWhite.webp",
+      "z": 4
+     },
+     {
+      "id": "915",
+      "name": "Modern - Pewter",
+      "part": "MFCS05-1PW + MFCS05-3PW + MFCS05-2",
+      "thumb": "/catalog/valor/thumb/911515436316-Modern-Pewter.webp",
+      "layer": "/catalog/valor/layer/461560376613-Modern-Pewter.webp",
+      "z": 4
+     },
+     {
+      "id": "998",
+      "name": "Modern - Black",
+      "part": "MFCS05-1BK + MFCS05-3BK + MFCS05-2",
+      "thumb": "/catalog/valor/thumb/371524499386-Modern-Black.webp",
+      "layer": "/catalog/valor/layer/861560376610-Modern-Black.webp",
+      "z": 4
+     }
+    ]
+   },
+   {
+    "id": "fuel-beds",
+    "label": "Fuel beds",
+    "area": "burner",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "2950",
+      "name": "Birch Logs",
+      "part": "MF28VBLK",
+      "thumb": "/catalog/valor/thumb/291675280995-739blk-thumb.webp",
+      "layer": "/catalog/valor/layer/471730743461-mf28vblk-engine.webp",
+      "z": 3,
+      "isDefault": true
+     },
+     {
+      "id": "2951",
+      "name": "Driftwood Logs",
+      "part": "MF28VDWK",
+      "thumb": "/catalog/valor/thumb/301675280996-739vdwk-thumb.webp",
+      "layer": "/catalog/valor/layer/301730743458-mf28vdwk-engine.webp",
+      "z": 3
+     },
+     {
+      "id": "2952",
+      "name": "Traditional Logs",
+      "part": "MF28VLSK",
+      "thumb": "/catalog/valor/thumb/521675280997-739vlsk-thumb.webp",
+      "layer": "/catalog/valor/layer/111730743463-mf28vlsk-engine.webp",
+      "z": 3
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/721730742800-mf28v-hero.webp",
+    "alt": "Madrona Freestanding Stove stove",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [],
+  "sourceUrl": "https://design.valorfireplaces.com/",
+  "enabled": true
+ },
+ {
+  "id": "va-646",
+  "slug": "portrait-president-stove-stove",
+  "brandId": "valor",
+  "name": "Portrait President Stove",
+  "sku": "530V",
+  "fuel": "gas",
+  "kind": "stove",
+  "style": "freestanding",
+  "summary": "A gas stove.",
+  "makerDescription": "Crafted with detail and inspired by classic design, the President Freestanding Stove is perfect for upgrading traditional spaces.",
+  "specs": [],
+  "options": [
+   {
+    "id": "castings",
+    "label": "Castings",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "662",
+      "name": "President & Top Casting",
+      "part": "531-1 & 2",
+      "thumb": "/catalog/valor/thumb/691559945922-pres-thumb.webp",
+      "layer": "/catalog/valor/layer/501559945821-531-1CSB531-2CSB.webp",
+      "z": 4,
+      "isDefault": true
+     }
+    ]
+   },
+   {
+    "id": "liners",
+    "label": "Firebox liners",
+    "area": "interior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1186",
+      "name": "Fluted Black (Reversible)",
+      "part": "526RL",
+      "thumb": "/catalog/valor/thumb/571559844233-FBL.webp",
+      "layer": "/catalog/valor/layer/311559945777-FBL.webp",
+      "z": 2,
+      "isDefault": true
+     },
+     {
+      "id": "1187",
+      "name": "Reflective Glass",
+      "part": "580RGLV2",
+      "thumb": "/catalog/valor/thumb/201559844235-RGL.webp",
+      "layer": "/catalog/valor/layer/131559945774-RGL.webp",
+      "z": 2
+     },
+     {
+      "id": "1188",
+      "name": "Red Brick (Reversible)",
+      "part": "526RL",
+      "thumb": "/catalog/valor/thumb/341559844238-VRL.webp",
+      "layer": "/catalog/valor/layer/591559945781-VRL.webp",
+      "z": 2
+     }
+    ]
+   },
+   {
+    "id": "fuel-beds",
+    "label": "Fuel beds",
+    "area": "burner",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "1189",
+      "name": "Driftwood Logs",
+      "part": "530VDWK",
+      "thumb": "/catalog/valor/thumb/461715791208-thumb-dwk.webp",
+      "layer": "/catalog/valor/layer/881779728064-530vdwk.webp",
+      "z": 3,
+      "isDefault": true
+     },
+     {
+      "id": "1190",
+      "name": "Traditional Logs",
+      "part": "530VLSK",
+      "thumb": "/catalog/valor/thumb/671715791209-thumb-lsk.webp",
+      "layer": "/catalog/valor/layer/741779728047-530vlsk.webp",
+      "z": 3
+     },
+     {
+      "id": "1191",
+      "name": "Birch Logs",
+      "part": "530VBLK",
+      "thumb": "/catalog/valor/thumb/961715791207-thumb-blk.webp",
+      "layer": "/catalog/valor/layer/821779728059-530vblk.webp",
+      "z": 3
+     },
+     {
+      "id": "1192",
+      "name": "Coals",
+      "part": "530VCSK",
+      "thumb": "/catalog/valor/thumb/401725899693-205csk-thumb.webp",
+      "layer": "/catalog/valor/layer/711779728053-530vcsk.webp",
+      "z": 3
+     }
+    ]
+   }
+  ],
+  "preview": {
+   "width": 1434,
+   "height": 889,
+   "modelSku": "",
+   "interiorOrder": [],
+   "interior": {}
+  },
+  "images": {
+   "hero": {
+    "src": "/catalog/valor/hero/261785889394-fs-2026.webp",
+    "alt": "Portrait President Stove stove",
+    "width": 340,
+    "height": 215
+   },
+   "gallery": []
+  },
+  "docs": [],
+  "sourceUrl": "https://design.valorfireplaces.com/",
+  "enabled": true
+ }
+]

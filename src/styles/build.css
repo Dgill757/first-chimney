@@ -1,0 +1,104 @@
+/**
+ * Build My Fireplace and Shop styles. Loaded only with those lazy routes.
+ *
+ * Palette is the site's own (ink, ember, gold, paper) pushed into a cinematic,
+ * lit-from-below register. One radius scale: cards 1.25rem, controls .75rem,
+ * buttons full pill. All motion is gated on prefers-reduced-motion at the end.
+ */
+
+.bmf .container { width: 100%; max-width: 1360px; margin-inline: auto; padding-inline: 1.25rem; }
+@media (min-width: 640px) { .bmf .container { padding-inline: 2rem; } }
+@media (min-width: 1280px) { .bmf .container { padding-inline: 3rem; } }
+.bmf h1, .bmf h2, .bmf h3, .bmf .font-serif { font-family: var(--ff-display); font-stretch: 108%; letter-spacing: -0.02em; }
+.bmf { --bmf-card: 1.25rem; --bmf-ctrl: .75rem; --bmf-edge: rgb(248 244 236 / .12); --bmf-glow: 236 71 7; color: #f8f4ec; background:
+  radial-gradient(120% 70% at 50% -10%, rgb(236 71 7 / .16), transparent 60%),
+  radial-gradient(90% 60% at 100% 100%, rgb(230 161 58 / .08), transparent 55%),
+  #131214; }
+
+/* ------------------------------------------------------------ ember button
+ * The glow is three layers: a five-stop gold-to-ember gradient that slides
+ * sideways (the "flowing" fire), a tight inner rim, and two soft outer shadows
+ * in ember and gold. Ink text on that gradient measures 4.6:1 or better at its
+ * darkest stop. Hover lifts, press sinks, and the slide stops for reduced motion.
+ */
+.btn-ember { position: relative; isolation: isolate; display: inline-flex; align-items: center; justify-content: center; gap: .6rem; min-height: 3.1rem; padding: .78rem 1.5rem; border: 0; border-radius: 999px; cursor: pointer;
+  font-family: var(--ff-ui); font-size: .8rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; color: #171719;
+  background: linear-gradient(100deg, #f6c15a 0%, #f08a24 30%, #ec4707 55%, #f08a24 78%, #f6c15a 100%); background-size: 220% 100%;
+  box-shadow: 0 0 0 1px rgb(255 214 140 / .55) inset, 0 10px 30px -8px rgb(236 71 7 / .75), 0 0 56px -14px rgb(246 193 90 / .6);
+  transition: transform .18s var(--ease-out), box-shadow .18s var(--ease-out), filter .18s var(--ease-out); }
+.btn-ember:disabled { cursor: not-allowed; filter: grayscale(.85) brightness(.7); box-shadow: none; }
+.btn-ember:active:not(:disabled) { transform: scale(.97); }
+.btn-ember-sm { min-height: 2.75rem; padding: .55rem 1.1rem; font-size: .74rem; }
+.btn-ghost-ember { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 3.1rem; padding: .7rem 1.3rem; border: 1px solid rgb(248 244 236 / .3); border-radius: 999px; background: transparent; color: #f8f4ec; cursor: pointer;
+  font-family: var(--ff-ui); font-size: .78rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; white-space: nowrap; transition: transform .16s var(--ease-out), border-color .16s var(--ease-out), background-color .16s var(--ease-out), color .16s var(--ease-out); }
+.btn-ghost-ember:active:not(:disabled) { transform: scale(.97); }
+.btn-ghost-ember:disabled { opacity: .4; cursor: not-allowed; }
+@media (hover: hover) and (pointer: fine) {
+  .btn-ember:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 0 0 1px rgb(255 214 140 / .75) inset, 0 16px 38px -8px rgb(236 71 7 / .9), 0 0 72px -10px rgb(246 193 90 / .8); }
+  .btn-ghost-ember:hover:not(:disabled) { border-color: #e6a13a; color: #e6a13a; background: rgb(230 161 58 / .08); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .btn-ember { animation: emberflow 6s linear infinite; }
+  .btn-ember:disabled { animation: none; }
+}
+@keyframes emberflow { from { background-position: 0% 50%; } to { background-position: -220% 50%; } }
+
+/* ------------------------------------------------------------- stage + cards */
+.bmf-stage { position: relative; overflow: hidden; border-radius: var(--bmf-card); border: 1px solid var(--bmf-edge);
+  background: radial-gradient(70% 60% at 50% 55%, #3a322d 0%, #221e1c 55%, #171514 100%); box-shadow: 0 30px 80px -30px rgb(0 0 0 / .8), 0 0 90px -40px rgb(236 71 7 / .5); }
+/* (no bottom gradient over the image: it dimmed the lower part of the unit on phones) */
+.bmf-stage img { user-select: none; -webkit-user-drag: none; }
+/* The stage keeps each product's own aspect ratio. On a phone it is capped to a
+   third of the screen so the options stay reachable; on desktop it grows. */
+.bmf-stagebox { width: min(100%, calc(38dvh * var(--ar, 1))); }
+@media (min-width: 1024px) { .bmf-stagebox { width: min(100%, calc(72dvh * var(--ar, 1)), 860px); } }
+.bmf-layer { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity .28s var(--ease-out); }
+.bmf-layer[data-ready="1"] { opacity: 1; }
+
+.bmf-card { position: relative; border: 1px solid var(--bmf-edge); border-radius: var(--bmf-card); background: rgb(248 244 236 / .045); transition: transform .22s var(--ease-out), border-color .2s var(--ease-out), background-color .2s var(--ease-out), box-shadow .22s var(--ease-out); }
+.bmf-card[data-selected="true"] { border-color: #e6a13a; background: rgb(230 161 58 / .1); box-shadow: 0 0 0 1px #e6a13a inset, 0 18px 50px -24px rgb(236 71 7 / .7); }
+.bmf-card:active:not(:disabled) { transform: scale(.985); }
+.bmf-card:disabled, .bmf-card[aria-disabled="true"] { opacity: .45; cursor: not-allowed; }
+@media (hover: hover) and (pointer: fine) {
+  .bmf-card:hover:not(:disabled):not([aria-disabled="true"]) { border-color: rgb(230 161 58 / .6); background: rgb(248 244 236 / .08); transform: translateY(-4px); }
+  .bmf-card[data-selected="true"]:hover { transform: translateY(-4px); }
+}
+
+.bmf-chip { display: inline-flex; align-items: center; gap: .4rem; min-height: 2.75rem; padding: .35rem .95rem; border: 1px solid rgb(248 244 236 / .22); border-radius: 999px; background: transparent; color: rgb(248 244 236 / .88); cursor: pointer;
+  font-family: var(--ff-ui); font-size: .76rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; transition: transform .16s var(--ease-out), background-color .16s var(--ease-out), border-color .16s var(--ease-out), color .16s var(--ease-out); }
+.bmf-chip[aria-pressed="true"], .bmf-chip[aria-checked="true"] { background: #f8f4ec; border-color: #f8f4ec; color: #171719; }
+.bmf-chip:active:not(:disabled) { transform: scale(.97); }
+.bmf-chip:disabled { opacity: .35; cursor: not-allowed; }
+@media (hover: hover) and (pointer: fine) { .bmf-chip:hover:not(:disabled):not([aria-pressed="true"]):not([aria-checked="true"]) { border-color: #e6a13a; color: #e6a13a; } }
+
+.bmf-input { width: 100%; min-height: 3rem; padding: .7rem .9rem; border: 1px solid rgb(248 244 236 / .3); border-radius: var(--bmf-ctrl); background: rgb(0 0 0 / .35); color: #f8f4ec; outline: none; font-size: 1rem; transition: border-color .16s var(--ease-out), box-shadow .16s var(--ease-out); }
+.bmf-input::placeholder { color: rgb(248 244 236 / .55); }
+.bmf-input:focus { border-color: #e6a13a; box-shadow: 0 0 0 3px rgb(230 161 58 / .28); }
+.bmf-input[aria-invalid="true"] { border-color: #ff8f7a; }
+.bmf-label { display: block; margin-bottom: .4rem; color: rgb(248 244 236 / .85); font-family: var(--ff-ui); font-size: .74rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.bmf-help { margin-top: .4rem; color: rgb(248 244 236 / .7); font-size: .84rem; line-height: 1.5; }
+.bmf-error { margin-top: .4rem; color: #ffb4a3; font-size: .86rem; font-weight: 600; }
+
+.bmf-skeleton { border-radius: var(--bmf-card); background: linear-gradient(100deg, rgb(248 244 236 / .05) 30%, rgb(248 244 236 / .12) 50%, rgb(248 244 236 / .05) 70%); background-size: 220% 100%; }
+@media (prefers-reduced-motion: no-preference) { .bmf-skeleton { animation: bmfShimmer 1.4s linear infinite; } }
+@keyframes bmfShimmer { from { background-position: 120% 0; } to { background-position: -120% 0; } }
+
+/* Step transitions use a short rise; stagger is applied inline per card. */
+@media (prefers-reduced-motion: no-preference) {
+  .bmf-rise { animation: bmfRise .42s var(--ease-out) both; }
+}
+@keyframes bmfRise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Print: the build summary becomes a clean one-page sheet. */
+@media print {
+  body::before, header, footer, .bmf-noprint, .skip-link { display: none !important; }
+  .bmf { background: #fff !important; color: #171719 !important; }
+  .bmf * { color: #171719 !important; box-shadow: none !important; background: transparent !important; border-color: #bbb !important; }
+  .bmf-print-only { display: block !important; }
+  .bmf-stage { border: 1px solid #bbb !important; }
+}
+.bmf-print-only { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .bmf-layer { transition: none; }
+}

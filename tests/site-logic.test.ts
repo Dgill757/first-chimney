@@ -1,7 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { jpegToPdf } from '../src/lib/designPdf.ts';
-import { decodeDesign, DEFAULT_DESIGN, designSummary, encodeDesign } from '../src/data/designer.ts';
 import { HOLIDAY_PROMO, reminderIcs, shouldShowPopup } from '../src/lib/promo.ts';
 import { isPublishableCity, SERVICE_AREAS } from '../src/data/serviceAreas.ts';
 import { buildRoutes } from '../src/lib/routes.ts';
@@ -19,14 +18,6 @@ test('jpegToPdf writes a structurally valid PDF with correct xref offsets', () =
   entries.forEach((off, i) => assert.equal(text.slice(off, off + `${i + 1} 0 obj`.length), `${i + 1} 0 obj`));
   assert.match(text, /\/Title \(Test \\\(design\\\)\)/);
   assert.match(text, /\/URI \(https:\/\/example.com\/a\?b=c\)/);
-});
-
-test('design encode/decode round-trips including project and timeline', () => {
-  const d = { ...DEFAULT_DESIGN, project: 'insert', timeline: 'Next 1 to 3 months', extras: ['glass-doors', 'built-ins'] };
-  const back = decodeDesign(encodeDesign(d));
-  assert.deepEqual(back, d);
-  assert.match(designSummary(d), /Project: Add an insert or switch to gas/);
-  assert.equal(decodeDesign('s=traditional&m=hacker&x=evil.screen')?.surround, DEFAULT_DESIGN.surround);
 });
 
 test('popup rules: never on the promo page, after a claim, or within cooldown', () => {
@@ -58,4 +49,16 @@ test('every published city has unique, substantial content and a route', () => {
       assert.ok(routes.has(`/service-areas/${s.slug}/${c.slug}`), `${c.name} has no route`);
     }
   }
+});
+
+test('catalog: every product route is unique with a title, image and Product schema', async () => {
+  const { buildCatalogRoutes, catalogProducts } = await import('../src/lib/catalogRoutes.ts');
+  const products = catalogProducts();
+  assert.ok(products.length > 200);
+  const routes = buildCatalogRoutes();
+  const paths = new Set(routes.map((r) => r.path));
+  assert.equal(paths.size, routes.length);
+  const productRoutes = routes.filter((r) => r.path.split('/').length === 4);
+  assert.equal(productRoutes.length, products.length);
+  for (const r of productRoutes) assert.ok(r.jsonLd.some((j: any) => j['@type'] === 'Product'), r.path);
 });

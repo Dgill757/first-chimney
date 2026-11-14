@@ -76,7 +76,7 @@ export function shouldShowPopup(o: { pathname: string; preview: boolean; now: nu
   if (o.preview) return true;
   if (!HOLIDAY_PROMO.popup.enabled || !promoIsLive(new Date(o.now))) return false;
   if (o.claimed || o.shownThisSession) return false;
-  if (['/holiday-chimney-special', '/design-your-fireplace', '/fireplace-shop/quote', '/contact', '/privacy-policy'].some((p) => o.pathname.startsWith(p))) return false;
+  if (['/holiday-chimney-special', '/build-your-fireplace', '/fireplace-shop/quote', '/contact', '/privacy-policy'].some((p) => o.pathname.startsWith(p))) return false;
   if (o.dismissedAt && o.now - o.dismissedAt < HOLIDAY_PROMO.popup.cooldownDays * 86_400_000) return false;
   return true;
 }

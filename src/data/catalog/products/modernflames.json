@@ -1,0 +1,4218 @@
+[
+ {
+  "id": "mf-landscape-pro-multi-44-fireplace",
+  "slug": "landscape-pro-multi-44-fireplace",
+  "brandId": "mf",
+  "name": "Landscape Pro Multi 44″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 44 inches wide. Heater rated up to 10,000 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "With the most unique installation options suitable for any type of wall – allow this eye-catching electric fireplace to unlock your design vision for years to come.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "44″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 10,000 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 10000
+  },
+  "dimensions": {
+   "width": 44,
+   "text": "44″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/landscape-pro-multi-img.webp",
+    "alt": "Landscape Pro Multi electric fireplace",
+    "width": 847,
+    "height": 338
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/lpm-56-blue-outdoor-2-1.webp",
+     "alt": "Landscape Pro Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/lpm-outdoor-56-blue.webp",
+     "alt": "Landscape Pro Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/multi-56-roomw.webp",
+     "alt": "Landscape Pro Multi electric fireplace",
+     "width": 1400,
+     "height": 788
+    },
+    {
+     "src": "/catalog/modernflames/gallery/multi-68-rooma.webp",
+     "alt": "Landscape Pro Multi electric fireplace",
+     "width": 1400,
+     "height": 766
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Landscape Pro Multi 44″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Multiview-44-Spec-Sheet.pdf"
+   },
+   {
+    "label": "Installation Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2025/06/Modern-Flames-Landscape-Pro-Multi-Installation-Manual-English.pdf"
+   },
+   {
+    "label": "Linear Brochure",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/MF-2024-Linear-Brochure-2.2024.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/landscape-pro-multi/",
+  "enabled": true
+ },
+ {
+  "id": "mf-landscape-pro-multi-56-fireplace",
+  "slug": "landscape-pro-multi-56-fireplace",
+  "brandId": "mf",
+  "name": "Landscape Pro Multi 56″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 56 inches wide. Heater rated up to 10,000 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "With the most unique installation options suitable for any type of wall – allow this eye-catching electric fireplace to unlock your design vision for years to come.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "56″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 10,000 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 10000
+  },
+  "dimensions": {
+   "width": 56,
+   "text": "56″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/landscape-pro-multi-img.webp",
+    "alt": "Landscape Pro Multi electric fireplace",
+    "width": 847,
+    "height": 338
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/lpm-56-blue-outdoor-2-1.webp",
+     "alt": "Landscape Pro Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/lpm-outdoor-56-blue.webp",
+     "alt": "Landscape Pro Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/multi-56-roomw.webp",
+     "alt": "Landscape Pro Multi electric fireplace",
+     "width": 1400,
+     "height": 788
+    },
+    {
+     "src": "/catalog/modernflames/gallery/multi-68-rooma.webp",
+     "alt": "Landscape Pro Multi electric fireplace",
+     "width": 1400,
+     "height": 766
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Landscape Pro Multi 56″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Multiview-56-Spec-Sheet.pdf"
+   },
+   {
+    "label": "Installation Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2025/06/Modern-Flames-Landscape-Pro-Multi-Installation-Manual-English.pdf"
+   },
+   {
+    "label": "Linear Brochure",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/MF-2024-Linear-Brochure-2.2024.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/landscape-pro-multi/",
+  "enabled": true
+ },
+ {
+  "id": "mf-landscape-pro-multi-68-fireplace",
+  "slug": "landscape-pro-multi-68-fireplace",
+  "brandId": "mf",
+  "name": "Landscape Pro Multi 68″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 68 inches wide. Heater rated up to 10,000 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "With the most unique installation options suitable for any type of wall – allow this eye-catching electric fireplace to unlock your design vision for years to come.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "68″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 10,000 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 10000
+  },
+  "dimensions": {
+   "width": 68,
+   "text": "68″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/landscape-pro-multi-img.webp",
+    "alt": "Landscape Pro Multi electric fireplace",
+    "width": 847,
+    "height": 338
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/lpm-56-blue-outdoor-2-1.webp",
+     "alt": "Landscape Pro Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/lpm-outdoor-56-blue.webp",
+     "alt": "Landscape Pro Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/multi-56-roomw.webp",
+     "alt": "Landscape Pro Multi electric fireplace",
+     "width": 1400,
+     "height": 788
+    },
+    {
+     "src": "/catalog/modernflames/gallery/multi-68-rooma.webp",
+     "alt": "Landscape Pro Multi electric fireplace",
+     "width": 1400,
+     "height": 766
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Landscape Pro Multi 68″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Multiview-68-Spec-Sheet.pdf"
+   },
+   {
+    "label": "Installation Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2025/06/Modern-Flames-Landscape-Pro-Multi-Installation-Manual-English.pdf"
+   },
+   {
+    "label": "Linear Brochure",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/MF-2024-Linear-Brochure-2.2024.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/landscape-pro-multi/",
+  "enabled": true
+ },
+ {
+  "id": "mf-landscape-pro-multi-80-fireplace",
+  "slug": "landscape-pro-multi-80-fireplace",
+  "brandId": "mf",
+  "name": "Landscape Pro Multi 80″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 80 inches wide. Heater rated up to 10,000 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "With the most unique installation options suitable for any type of wall – allow this eye-catching electric fireplace to unlock your design vision for years to come.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "80″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 10,000 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 10000
+  },
+  "dimensions": {
+   "width": 80,
+   "text": "80″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/landscape-pro-multi-img.webp",
+    "alt": "Landscape Pro Multi electric fireplace",
+    "width": 847,
+    "height": 338
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/lpm-56-blue-outdoor-2-1.webp",
+     "alt": "Landscape Pro Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/lpm-outdoor-56-blue.webp",
+     "alt": "Landscape Pro Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/multi-56-roomw.webp",
+     "alt": "Landscape Pro Multi electric fireplace",
+     "width": 1400,
+     "height": 788
+    },
+    {
+     "src": "/catalog/modernflames/gallery/multi-68-rooma.webp",
+     "alt": "Landscape Pro Multi electric fireplace",
+     "width": 1400,
+     "height": 766
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Landscape Pro Multi 80″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Multiview-80-Spec-Sheet.pdf"
+   },
+   {
+    "label": "Installation Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2025/06/Modern-Flames-Landscape-Pro-Multi-Installation-Manual-English.pdf"
+   },
+   {
+    "label": "Linear Brochure",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/MF-2024-Linear-Brochure-2.2024.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/landscape-pro-multi/",
+  "enabled": true
+ },
+ {
+  "id": "mf-landscape-pro-multi-96-fireplace",
+  "slug": "landscape-pro-multi-96-fireplace",
+  "brandId": "mf",
+  "name": "Landscape Pro Multi 96″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 96 inches wide. Heater rated up to 10,000 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "With the most unique installation options suitable for any type of wall – allow this eye-catching electric fireplace to unlock your design vision for years to come.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "96″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 10,000 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 10000
+  },
+  "dimensions": {
+   "width": 96,
+   "text": "96″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/landscape-pro-multi-img.webp",
+    "alt": "Landscape Pro Multi electric fireplace",
+    "width": 847,
+    "height": 338
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/lpm-56-blue-outdoor-2-1.webp",
+     "alt": "Landscape Pro Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/lpm-outdoor-56-blue.webp",
+     "alt": "Landscape Pro Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/multi-56-roomw.webp",
+     "alt": "Landscape Pro Multi electric fireplace",
+     "width": 1400,
+     "height": 788
+    },
+    {
+     "src": "/catalog/modernflames/gallery/multi-68-rooma.webp",
+     "alt": "Landscape Pro Multi electric fireplace",
+     "width": 1400,
+     "height": 766
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Landscape Pro Multi 96″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Multiview-96-Spec-Sheet.pdf"
+   },
+   {
+    "label": "Installation Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2025/06/Modern-Flames-Landscape-Pro-Multi-Installation-Manual-English.pdf"
+   },
+   {
+    "label": "Linear Brochure",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/MF-2024-Linear-Brochure-2.2024.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/landscape-pro-multi/",
+  "enabled": true
+ },
+ {
+  "id": "mf-landscape-pro-slim-44-fireplace",
+  "slug": "landscape-pro-slim-44-fireplace",
+  "brandId": "mf",
+  "name": "Landscape Pro Slim 44″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 44 inches wide. Heater rated up to 5,000 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Our best and most compatible design for mounting alongside your TV to create a sleek, one-of-a kind entertainment center.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "44″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 5,000 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 5000
+  },
+  "dimensions": {
+   "width": 44,
+   "text": "44″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/landscape-pro-slim-img.webp",
+    "alt": "Landscape Pro Slim electric fireplace",
+    "width": 847,
+    "height": 337
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/lps-56-outdoor-patio.webp",
+     "alt": "Landscape Pro Slim electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/lps-56-room-orange-yellow-v2-small.webp",
+     "alt": "Landscape Pro Slim electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/lps-56-orange-v2-copy.webp",
+     "alt": "Landscape Pro Slim electric fireplace",
+     "width": 1400,
+     "height": 356
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Landscape Pro Slim 44″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Landscape-Pro-Slim-44-1.pdf"
+   },
+   {
+    "label": "Installation Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2025/07/Modern-Flames-Landscape-Pro-Slim-Installation-Manual-2025-English.pdf"
+   },
+   {
+    "label": "Linear Brochure",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/MF-2024-Linear-Brochure-2.2024-1.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/landscape-pro-slim/",
+  "enabled": true
+ },
+ {
+  "id": "mf-landscape-pro-slim-56-fireplace",
+  "slug": "landscape-pro-slim-56-fireplace",
+  "brandId": "mf",
+  "name": "Landscape Pro Slim 56″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 56 inches wide. Heater rated up to 5,000 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Our best and most compatible design for mounting alongside your TV to create a sleek, one-of-a kind entertainment center.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "56″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 5,000 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 5000
+  },
+  "dimensions": {
+   "width": 56,
+   "text": "56″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/landscape-pro-slim-img.webp",
+    "alt": "Landscape Pro Slim electric fireplace",
+    "width": 847,
+    "height": 337
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/lps-56-outdoor-patio.webp",
+     "alt": "Landscape Pro Slim electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/lps-56-room-orange-yellow-v2-small.webp",
+     "alt": "Landscape Pro Slim electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/lps-56-orange-v2-copy.webp",
+     "alt": "Landscape Pro Slim electric fireplace",
+     "width": 1400,
+     "height": 356
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Landscape Pro Slim 56″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Landscape-Pro-Slim-56-1.pdf"
+   },
+   {
+    "label": "Installation Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2025/07/Modern-Flames-Landscape-Pro-Slim-Installation-Manual-2025-English.pdf"
+   },
+   {
+    "label": "Linear Brochure",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/MF-2024-Linear-Brochure-2.2024-1.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/landscape-pro-slim/",
+  "enabled": true
+ },
+ {
+  "id": "mf-landscape-pro-slim-68-fireplace",
+  "slug": "landscape-pro-slim-68-fireplace",
+  "brandId": "mf",
+  "name": "Landscape Pro Slim 68″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 68 inches wide. Heater rated up to 5,000 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Our best and most compatible design for mounting alongside your TV to create a sleek, one-of-a kind entertainment center.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "68″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 5,000 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 5000
+  },
+  "dimensions": {
+   "width": 68,
+   "text": "68″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/landscape-pro-slim-img.webp",
+    "alt": "Landscape Pro Slim electric fireplace",
+    "width": 847,
+    "height": 337
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/lps-56-outdoor-patio.webp",
+     "alt": "Landscape Pro Slim electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/lps-56-room-orange-yellow-v2-small.webp",
+     "alt": "Landscape Pro Slim electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/lps-56-orange-v2-copy.webp",
+     "alt": "Landscape Pro Slim electric fireplace",
+     "width": 1400,
+     "height": 356
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Landscape Pro Slim 68″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Landscape-Pro-Slim-68-1.pdf"
+   },
+   {
+    "label": "Installation Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2025/07/Modern-Flames-Landscape-Pro-Slim-Installation-Manual-2025-English.pdf"
+   },
+   {
+    "label": "Linear Brochure",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/MF-2024-Linear-Brochure-2.2024-1.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/landscape-pro-slim/",
+  "enabled": true
+ },
+ {
+  "id": "mf-landscape-pro-slim-80-fireplace",
+  "slug": "landscape-pro-slim-80-fireplace",
+  "brandId": "mf",
+  "name": "Landscape Pro Slim 80″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 80 inches wide. Heater rated up to 5,000 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Our best and most compatible design for mounting alongside your TV to create a sleek, one-of-a kind entertainment center.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "80″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 5,000 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 5000
+  },
+  "dimensions": {
+   "width": 80,
+   "text": "80″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/landscape-pro-slim-img.webp",
+    "alt": "Landscape Pro Slim electric fireplace",
+    "width": 847,
+    "height": 337
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/lps-56-outdoor-patio.webp",
+     "alt": "Landscape Pro Slim electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/lps-56-room-orange-yellow-v2-small.webp",
+     "alt": "Landscape Pro Slim electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/lps-56-orange-v2-copy.webp",
+     "alt": "Landscape Pro Slim electric fireplace",
+     "width": 1400,
+     "height": 356
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Landscape Pro Slim 80″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Landscape-Pro-Slim-80-1.pdf"
+   },
+   {
+    "label": "Installation Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2025/07/Modern-Flames-Landscape-Pro-Slim-Installation-Manual-2025-English.pdf"
+   },
+   {
+    "label": "Linear Brochure",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/MF-2024-Linear-Brochure-2.2024-1.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/landscape-pro-slim/",
+  "enabled": true
+ },
+ {
+  "id": "mf-landscape-pro-slim-96-fireplace",
+  "slug": "landscape-pro-slim-96-fireplace",
+  "brandId": "mf",
+  "name": "Landscape Pro Slim 96″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 96 inches wide. Heater rated up to 5,000 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Our best and most compatible design for mounting alongside your TV to create a sleek, one-of-a kind entertainment center.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "96″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 5,000 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 5000
+  },
+  "dimensions": {
+   "width": 96,
+   "text": "96″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/landscape-pro-slim-img.webp",
+    "alt": "Landscape Pro Slim electric fireplace",
+    "width": 847,
+    "height": 337
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/lps-56-outdoor-patio.webp",
+     "alt": "Landscape Pro Slim electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/lps-56-room-orange-yellow-v2-small.webp",
+     "alt": "Landscape Pro Slim electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/lps-56-orange-v2-copy.webp",
+     "alt": "Landscape Pro Slim electric fireplace",
+     "width": 1400,
+     "height": 356
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Landscape Pro Slim 96″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Landscape-Pro-Slim-96.pdf"
+   },
+   {
+    "label": "Installation Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2025/07/Modern-Flames-Landscape-Pro-Slim-Installation-Manual-2025-English.pdf"
+   },
+   {
+    "label": "Linear Brochure",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/MF-2024-Linear-Brochure-2.2024-1.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/landscape-pro-slim/",
+  "enabled": true
+ },
+ {
+  "id": "mf-nova-clear-48-fireplace",
+  "slug": "nova-clear-48-fireplace",
+  "brandId": "mf",
+  "name": "Nova Clear 48″",
+  "sku": "NOVA-CLR-48",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 48 inches wide. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "See-through fireplaces have always been one of the most desired architectural elements in luxury design. Nova Clear creates a true visual connection between rooms while adding the movement, warmth, and atmosphere from both sides. It creates a new way to use fireplaces in open spaces. The result is not another electric fireplace; it is a new architectural feature built for open-concept luxury living.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "48″"
+   },
+   {
+    "label": "Model number",
+    "value": "NOVA-CLR-48"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "dimensions": {
+   "width": 48,
+   "text": "48″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/nova-catalog-image-pg5.webp",
+    "alt": "Nova Clear electric fireplace",
+    "width": 1152,
+    "height": 768
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/nova-clear-open-kitchen-op2.webp",
+     "alt": "Nova Clear electric fireplace",
+     "width": 1366,
+     "height": 769
+    },
+    {
+     "src": "/catalog/modernflames/gallery/nova-catalog-pg4-new.webp",
+     "alt": "Nova Clear electric fireplace",
+     "width": 1366,
+     "height": 769
+    },
+    {
+     "src": "/catalog/modernflames/gallery/nova-clear-flame-1-yellow-upd.webp",
+     "alt": "Nova Clear electric fireplace",
+     "width": 1366,
+     "height": 922
+    },
+    {
+     "src": "/catalog/modernflames/gallery/nova-cat-im-pg-10-upd.webp",
+     "alt": "Nova Clear electric fireplace",
+     "width": 1366,
+     "height": 769
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Nova Clear 48″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/08/Nova-Clear-Dimd-Drawing.pdf"
+   },
+   {
+    "label": "Nova Clear Catalog",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/08/Nova-Clear-Catalog-2026.pdf"
+   },
+   {
+    "label": "Installation Manual – Nova Clear",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/07/Nova-Clear-Manual-MF-0626.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/nova-clear/",
+  "enabled": true
+ },
+ {
+  "id": "mf-orion-multi-52-fireplace",
+  "slug": "orion-multi-52-fireplace",
+  "brandId": "mf",
+  "name": "Orion Multi 52″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 52 inches wide. Heater rated up to 10,000 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Experience the innovative Orion virtual fireplace that utilizes the most optimized technology, creating the most life like-fire in an electric fireplace.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "52″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 10,000 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 10000
+  },
+  "dimensions": {
+   "width": 52,
+   "text": "52″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/hero-orion-multi.webp",
+    "alt": "Orion Multi electric fireplace",
+    "width": 1135,
+    "height": 655
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/living-room-orion-multi-60-orange.webp",
+     "alt": "Orion Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/mf-orion-52-cleanface-famroom.webp",
+     "alt": "Orion Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-52-multi-famroom.webp",
+     "alt": "Orion Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-60-multi-blue-fam-room.webp",
+     "alt": "Orion Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Orion Multi 52″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Multi_52.pdf"
+   },
+   {
+    "label": "Owner’S Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/OR52-120-MULTI-Instruction-Manual-low-res.pdf"
+   },
+   {
+    "label": "Brochure",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/ORION-BROCHURE-08-2023_1-2.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/orion-multi/",
+  "enabled": true
+ },
+ {
+  "id": "mf-orion-multi-60-fireplace",
+  "slug": "orion-multi-60-fireplace",
+  "brandId": "mf",
+  "name": "Orion Multi 60″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 60 inches wide. Heater rated up to 10,000 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Experience the innovative Orion virtual fireplace that utilizes the most optimized technology, creating the most life like-fire in an electric fireplace.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "60″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 10,000 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 10000
+  },
+  "dimensions": {
+   "width": 60,
+   "text": "60″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/hero-orion-multi.webp",
+    "alt": "Orion Multi electric fireplace",
+    "width": 1135,
+    "height": 655
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/living-room-orion-multi-60-orange.webp",
+     "alt": "Orion Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/mf-orion-52-cleanface-famroom.webp",
+     "alt": "Orion Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-52-multi-famroom.webp",
+     "alt": "Orion Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-60-multi-blue-fam-room.webp",
+     "alt": "Orion Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Orion Multi 60″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Multi_60.pdf"
+   },
+   {
+    "label": "Owner’S Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/OR52-120-MULTI-Instruction-Manual-low-res.pdf"
+   },
+   {
+    "label": "Brochure",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/ORION-BROCHURE-08-2023_1-2.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/orion-multi/",
+  "enabled": true
+ },
+ {
+  "id": "mf-orion-multi-76-fireplace",
+  "slug": "orion-multi-76-fireplace",
+  "brandId": "mf",
+  "name": "Orion Multi 76″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 76 inches wide. Heater rated up to 10,000 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Experience the innovative Orion virtual fireplace that utilizes the most optimized technology, creating the most life like-fire in an electric fireplace.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "76″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 10,000 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 10000
+  },
+  "dimensions": {
+   "width": 76,
+   "text": "76″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/hero-orion-multi.webp",
+    "alt": "Orion Multi electric fireplace",
+    "width": 1135,
+    "height": 655
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/living-room-orion-multi-60-orange.webp",
+     "alt": "Orion Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/mf-orion-52-cleanface-famroom.webp",
+     "alt": "Orion Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-52-multi-famroom.webp",
+     "alt": "Orion Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-60-multi-blue-fam-room.webp",
+     "alt": "Orion Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Orion Multi 76″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Multi_76.pdf"
+   },
+   {
+    "label": "Owner’S Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/OR52-120-MULTI-Instruction-Manual-low-res.pdf"
+   },
+   {
+    "label": "Brochure",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/ORION-BROCHURE-08-2023_1-2.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/orion-multi/",
+  "enabled": true
+ },
+ {
+  "id": "mf-orion-multi-100-fireplace",
+  "slug": "orion-multi-100-fireplace",
+  "brandId": "mf",
+  "name": "Orion Multi 100″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 100 inches wide. Heater rated up to 10,000 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Experience the innovative Orion virtual fireplace that utilizes the most optimized technology, creating the most life like-fire in an electric fireplace.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "100″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 10,000 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 10000
+  },
+  "dimensions": {
+   "width": 100,
+   "text": "100″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/hero-orion-multi.webp",
+    "alt": "Orion Multi electric fireplace",
+    "width": 1135,
+    "height": 655
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/living-room-orion-multi-60-orange.webp",
+     "alt": "Orion Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/mf-orion-52-cleanface-famroom.webp",
+     "alt": "Orion Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-52-multi-famroom.webp",
+     "alt": "Orion Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-60-multi-blue-fam-room.webp",
+     "alt": "Orion Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Orion Multi 100″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Multi_100.pdf"
+   },
+   {
+    "label": "Owner’S Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/OR52-120-MULTI-Instruction-Manual-low-res.pdf"
+   },
+   {
+    "label": "Brochure",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/ORION-BROCHURE-08-2023_1-2.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/orion-multi/",
+  "enabled": true
+ },
+ {
+  "id": "mf-orion-multi-120-fireplace",
+  "slug": "orion-multi-120-fireplace",
+  "brandId": "mf",
+  "name": "Orion Multi 120″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 120 inches wide. Heater rated up to 10,000 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Experience the innovative Orion virtual fireplace that utilizes the most optimized technology, creating the most life like-fire in an electric fireplace.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "120″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 10,000 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 10000
+  },
+  "dimensions": {
+   "width": 120,
+   "text": "120″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/hero-orion-multi.webp",
+    "alt": "Orion Multi electric fireplace",
+    "width": 1135,
+    "height": 655
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/living-room-orion-multi-60-orange.webp",
+     "alt": "Orion Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/mf-orion-52-cleanface-famroom.webp",
+     "alt": "Orion Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-52-multi-famroom.webp",
+     "alt": "Orion Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-60-multi-blue-fam-room.webp",
+     "alt": "Orion Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Orion Multi 120″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Multi_120.pdf"
+   },
+   {
+    "label": "Owner’S Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/OR52-120-MULTI-Instruction-Manual-low-res.pdf"
+   },
+   {
+    "label": "Brochure",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/ORION-BROCHURE-08-2023_1-2.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/orion-multi/",
+  "enabled": true
+ },
+ {
+  "id": "mf-orion-slim-52-fireplace",
+  "slug": "orion-slim-52-fireplace",
+  "brandId": "mf",
+  "name": "Orion Slim 52″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 52 inches wide. Heater rated up to 5,000 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Experience the innovative Orion virtual fireplace that utilizes the most optimized technology, creating the most life like-fire in an electric fireplace.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "52″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 5,000 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 5000
+  },
+  "dimensions": {
+   "width": 52,
+   "text": "52″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/orion-cut-out1.webp",
+    "alt": "Orion Slim electric fireplace",
+    "width": 1400,
+    "height": 734
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/product-2.webp",
+     "alt": "Orion Slim electric fireplace",
+     "width": 1400,
+     "height": 937
+    },
+    {
+     "src": "/catalog/modernflames/gallery/product-3.webp",
+     "alt": "Orion Slim electric fireplace",
+     "width": 1400,
+     "height": 937
+    },
+    {
+     "src": "/catalog/modernflames/gallery/product-4.webp",
+     "alt": "Orion Slim electric fireplace",
+     "width": 1400,
+     "height": 937
+    },
+    {
+     "src": "/catalog/modernflames/gallery/product-5.webp",
+     "alt": "Orion Slim electric fireplace",
+     "width": 1400,
+     "height": 937
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Orion Slim 52″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/OR52-SLIM-1.pdf"
+   },
+   {
+    "label": "Owner’S Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Orion-Slim-Owners-Manual.pdf"
+   },
+   {
+    "label": "Brochure",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/ORION-BROCHURE-08-2023_1-1.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/orion-slim/",
+  "enabled": true
+ },
+ {
+  "id": "mf-orion-slim-60-fireplace",
+  "slug": "orion-slim-60-fireplace",
+  "brandId": "mf",
+  "name": "Orion Slim 60″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 60 inches wide. Heater rated up to 5,000 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Experience the innovative Orion virtual fireplace that utilizes the most optimized technology, creating the most life like-fire in an electric fireplace.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "60″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 5,000 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 5000
+  },
+  "dimensions": {
+   "width": 60,
+   "text": "60″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/orion-cut-out1.webp",
+    "alt": "Orion Slim electric fireplace",
+    "width": 1400,
+    "height": 734
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/product-2.webp",
+     "alt": "Orion Slim electric fireplace",
+     "width": 1400,
+     "height": 937
+    },
+    {
+     "src": "/catalog/modernflames/gallery/product-3.webp",
+     "alt": "Orion Slim electric fireplace",
+     "width": 1400,
+     "height": 937
+    },
+    {
+     "src": "/catalog/modernflames/gallery/product-4.webp",
+     "alt": "Orion Slim electric fireplace",
+     "width": 1400,
+     "height": 937
+    },
+    {
+     "src": "/catalog/modernflames/gallery/product-5.webp",
+     "alt": "Orion Slim electric fireplace",
+     "width": 1400,
+     "height": 937
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Orion Slim 60″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/OR60-SLIM-1.pdf"
+   },
+   {
+    "label": "Owner’S Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Orion-Slim-Owners-Manual.pdf"
+   },
+   {
+    "label": "Brochure",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/ORION-BROCHURE-08-2023_1-1.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/orion-slim/",
+  "enabled": true
+ },
+ {
+  "id": "mf-orion-slim-76-fireplace",
+  "slug": "orion-slim-76-fireplace",
+  "brandId": "mf",
+  "name": "Orion Slim 76″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 76 inches wide. Heater rated up to 5,000 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Experience the innovative Orion virtual fireplace that utilizes the most optimized technology, creating the most life like-fire in an electric fireplace.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "76″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 5,000 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 5000
+  },
+  "dimensions": {
+   "width": 76,
+   "text": "76″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/orion-cut-out1.webp",
+    "alt": "Orion Slim electric fireplace",
+    "width": 1400,
+    "height": 734
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/product-2.webp",
+     "alt": "Orion Slim electric fireplace",
+     "width": 1400,
+     "height": 937
+    },
+    {
+     "src": "/catalog/modernflames/gallery/product-3.webp",
+     "alt": "Orion Slim electric fireplace",
+     "width": 1400,
+     "height": 937
+    },
+    {
+     "src": "/catalog/modernflames/gallery/product-4.webp",
+     "alt": "Orion Slim electric fireplace",
+     "width": 1400,
+     "height": 937
+    },
+    {
+     "src": "/catalog/modernflames/gallery/product-5.webp",
+     "alt": "Orion Slim electric fireplace",
+     "width": 1400,
+     "height": 937
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Orion Slim 76″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/OR76-SLIM-1.pdf"
+   },
+   {
+    "label": "Owner’S Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Orion-Slim-Owners-Manual.pdf"
+   },
+   {
+    "label": "Brochure",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/ORION-BROCHURE-08-2023_1-1.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/orion-slim/",
+  "enabled": true
+ },
+ {
+  "id": "mf-orion-slim-100-fireplace",
+  "slug": "orion-slim-100-fireplace",
+  "brandId": "mf",
+  "name": "Orion Slim 100″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 100 inches wide. Heater rated up to 5,000 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Experience the innovative Orion virtual fireplace that utilizes the most optimized technology, creating the most life like-fire in an electric fireplace.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "100″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 5,000 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 5000
+  },
+  "dimensions": {
+   "width": 100,
+   "text": "100″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/orion-cut-out1.webp",
+    "alt": "Orion Slim electric fireplace",
+    "width": 1400,
+    "height": 734
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/product-2.webp",
+     "alt": "Orion Slim electric fireplace",
+     "width": 1400,
+     "height": 937
+    },
+    {
+     "src": "/catalog/modernflames/gallery/product-3.webp",
+     "alt": "Orion Slim electric fireplace",
+     "width": 1400,
+     "height": 937
+    },
+    {
+     "src": "/catalog/modernflames/gallery/product-4.webp",
+     "alt": "Orion Slim electric fireplace",
+     "width": 1400,
+     "height": 937
+    },
+    {
+     "src": "/catalog/modernflames/gallery/product-5.webp",
+     "alt": "Orion Slim electric fireplace",
+     "width": 1400,
+     "height": 937
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Orion Slim 100″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/OR100-SLIM-1.pdf"
+   },
+   {
+    "label": "Owner’S Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Orion-Slim-Owners-Manual.pdf"
+   },
+   {
+    "label": "Brochure",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/ORION-BROCHURE-08-2023_1-1.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/orion-slim/",
+  "enabled": true
+ },
+ {
+  "id": "mf-orion-traditional-26-fireplace",
+  "slug": "orion-traditional-26-fireplace",
+  "brandId": "mf",
+  "name": "Orion Traditional 26″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "An electric fireplace, 26 inches wide. Heater rated up to 6,800 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Experience the innovative Orion virtual fireplace that utilizes the most optimized technology, creating the most life-like fire in an electric fireplace. Make every presentation brilliant with three flame styles. Embers and down lighting, six colors options and three flames which offers 18 different flame color displays. No matter where you stand or sit, the image quality is consistent. Heliovision technology gives you the premium flame you desire.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "26″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 6,800 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 6800
+  },
+  "dimensions": {
+   "width": 26,
+   "text": "26″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/hero-orion-traditional.webp",
+    "alt": "Orion Traditional electric fireplace",
+    "width": 989,
+    "height": 772
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/mf-orion-traditional-insert-after-sm1.webp",
+     "alt": "Orion Traditional electric fireplace",
+     "width": 1100,
+     "height": 806
+    },
+    {
+     "src": "/catalog/modernflames/gallery/mf-orion-36-traditional-livingroom-white-sm.webp",
+     "alt": "Orion Traditional electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/mf-orion-36-traditional-familyroom-sm.webp",
+     "alt": "Orion Traditional electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-traditional-flame-1-yellow.webp",
+     "alt": "Orion Traditional electric fireplace",
+     "width": 1400,
+     "height": 788
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Orion Traditional 26″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/OR26-TRAD.pdf"
+   },
+   {
+    "label": "Installation Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Manual-Orion-Traditional-US.pdf"
+   },
+   {
+    "label": "Orion Traditional Virtual Electric Fireplace Brochure",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/ORION-BROCHURE-08-2023_1.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/orion-traditional/",
+  "enabled": true
+ },
+ {
+  "id": "mf-orion-traditional-30-fireplace",
+  "slug": "orion-traditional-30-fireplace",
+  "brandId": "mf",
+  "name": "Orion Traditional 30″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "An electric fireplace, 30 inches wide. Heater rated up to 6,800 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Experience the innovative Orion virtual fireplace that utilizes the most optimized technology, creating the most life-like fire in an electric fireplace. Make every presentation brilliant with three flame styles. Embers and down lighting, six colors options and three flames which offers 18 different flame color displays. No matter where you stand or sit, the image quality is consistent. Heliovision technology gives you the premium flame you desire.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "30″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 6,800 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 6800
+  },
+  "dimensions": {
+   "width": 30,
+   "text": "30″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/hero-orion-traditional.webp",
+    "alt": "Orion Traditional electric fireplace",
+    "width": 989,
+    "height": 772
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/mf-orion-traditional-insert-after-sm1.webp",
+     "alt": "Orion Traditional electric fireplace",
+     "width": 1100,
+     "height": 806
+    },
+    {
+     "src": "/catalog/modernflames/gallery/mf-orion-36-traditional-livingroom-white-sm.webp",
+     "alt": "Orion Traditional electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/mf-orion-36-traditional-familyroom-sm.webp",
+     "alt": "Orion Traditional electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-traditional-flame-1-yellow.webp",
+     "alt": "Orion Traditional electric fireplace",
+     "width": 1400,
+     "height": 788
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Orion Traditional 30″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/OR30-TRAD.pdf"
+   },
+   {
+    "label": "Installation Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Manual-Orion-Traditional-US.pdf"
+   },
+   {
+    "label": "Orion Traditional Virtual Electric Fireplace Brochure",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/ORION-BROCHURE-08-2023_1.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/orion-traditional/",
+  "enabled": true
+ },
+ {
+  "id": "mf-orion-traditional-36-fireplace",
+  "slug": "orion-traditional-36-fireplace",
+  "brandId": "mf",
+  "name": "Orion Traditional 36″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "An electric fireplace, 36 inches wide. Heater rated up to 6,800 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Experience the innovative Orion virtual fireplace that utilizes the most optimized technology, creating the most life-like fire in an electric fireplace. Make every presentation brilliant with three flame styles. Embers and down lighting, six colors options and three flames which offers 18 different flame color displays. No matter where you stand or sit, the image quality is consistent. Heliovision technology gives you the premium flame you desire.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "36″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 6,800 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 6800
+  },
+  "dimensions": {
+   "width": 36,
+   "text": "36″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/hero-orion-traditional.webp",
+    "alt": "Orion Traditional electric fireplace",
+    "width": 989,
+    "height": 772
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/mf-orion-traditional-insert-after-sm1.webp",
+     "alt": "Orion Traditional electric fireplace",
+     "width": 1100,
+     "height": 806
+    },
+    {
+     "src": "/catalog/modernflames/gallery/mf-orion-36-traditional-livingroom-white-sm.webp",
+     "alt": "Orion Traditional electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/mf-orion-36-traditional-familyroom-sm.webp",
+     "alt": "Orion Traditional electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-traditional-flame-1-yellow.webp",
+     "alt": "Orion Traditional electric fireplace",
+     "width": 1400,
+     "height": 788
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Orion Traditional 36″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/OR36-TRAD.pdf"
+   },
+   {
+    "label": "Installation Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Manual-Orion-Traditional-US.pdf"
+   },
+   {
+    "label": "Orion Traditional Virtual Electric Fireplace Brochure",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/ORION-BROCHURE-08-2023_1.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/orion-traditional/",
+  "enabled": true
+ },
+ {
+  "id": "mf-orion-traditional-42-fireplace",
+  "slug": "orion-traditional-42-fireplace",
+  "brandId": "mf",
+  "name": "Orion Traditional 42″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "An electric fireplace, 42 inches wide. Heater rated up to 6,800 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Experience the innovative Orion virtual fireplace that utilizes the most optimized technology, creating the most life-like fire in an electric fireplace. Make every presentation brilliant with three flame styles. Embers and down lighting, six colors options and three flames which offers 18 different flame color displays. No matter where you stand or sit, the image quality is consistent. Heliovision technology gives you the premium flame you desire.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "42″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 6,800 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 6800
+  },
+  "dimensions": {
+   "width": 42,
+   "text": "42″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/hero-orion-traditional.webp",
+    "alt": "Orion Traditional electric fireplace",
+    "width": 989,
+    "height": 772
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/mf-orion-traditional-insert-after-sm1.webp",
+     "alt": "Orion Traditional electric fireplace",
+     "width": 1100,
+     "height": 806
+    },
+    {
+     "src": "/catalog/modernflames/gallery/mf-orion-36-traditional-livingroom-white-sm.webp",
+     "alt": "Orion Traditional electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/mf-orion-36-traditional-familyroom-sm.webp",
+     "alt": "Orion Traditional electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-traditional-flame-1-yellow.webp",
+     "alt": "Orion Traditional electric fireplace",
+     "width": 1400,
+     "height": 788
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Orion Traditional 42″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/OR42-TRAD.pdf"
+   },
+   {
+    "label": "Installation Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Manual-Orion-Traditional-US.pdf"
+   },
+   {
+    "label": "Orion Traditional Virtual Electric Fireplace Brochure",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/ORION-BROCHURE-08-2023_1.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/orion-traditional/",
+  "enabled": true
+ },
+ {
+  "id": "mf-orion-traditional-54-fireplace",
+  "slug": "orion-traditional-54-fireplace",
+  "brandId": "mf",
+  "name": "Orion Traditional 54″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "An electric fireplace, 54 inches wide. Heater rated up to 6,800 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Experience the innovative Orion virtual fireplace that utilizes the most optimized technology, creating the most life-like fire in an electric fireplace. Make every presentation brilliant with three flame styles. Embers and down lighting, six colors options and three flames which offers 18 different flame color displays. No matter where you stand or sit, the image quality is consistent. Heliovision technology gives you the premium flame you desire.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "54″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 6,800 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 6800
+  },
+  "dimensions": {
+   "width": 54,
+   "text": "54″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/hero-orion-traditional.webp",
+    "alt": "Orion Traditional electric fireplace",
+    "width": 989,
+    "height": 772
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/mf-orion-traditional-insert-after-sm1.webp",
+     "alt": "Orion Traditional electric fireplace",
+     "width": 1100,
+     "height": 806
+    },
+    {
+     "src": "/catalog/modernflames/gallery/mf-orion-36-traditional-livingroom-white-sm.webp",
+     "alt": "Orion Traditional electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/mf-orion-36-traditional-familyroom-sm.webp",
+     "alt": "Orion Traditional electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-traditional-flame-1-yellow.webp",
+     "alt": "Orion Traditional electric fireplace",
+     "width": 1400,
+     "height": 788
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Orion Traditional 54″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/OR54-TRAD.pdf"
+   },
+   {
+    "label": "Installation Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Manual-Orion-Traditional-US.pdf"
+   },
+   {
+    "label": "Orion Traditional Virtual Electric Fireplace Brochure",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/ORION-BROCHURE-08-2023_1.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/orion-traditional/",
+  "enabled": true
+ },
+ {
+  "id": "mf-orion-v2-multi-52-fireplace",
+  "slug": "orion-v2-multi-52-fireplace",
+  "brandId": "mf",
+  "name": "Orion V2 Multi 52″",
+  "sku": "OR52-MULTI-V2",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 52 inches wide. Heater rated up to 8,500 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "The Orion V2 Multi electric fireplace redefines what an electric fireplace can be, transforming the virtual fireplace experience into a captivating focal point. Advanced multi-dimensional virtual flame technology, immersive audio, layered lighting, and a lifelike lit log set work together to create a remarkably realistic fireside experience.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "52″"
+   },
+   {
+    "label": "Model number",
+    "value": "OR52-MULTI-V2"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 8,500 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 8500
+  },
+  "dimensions": {
+   "width": 52,
+   "text": "52″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/orion-v2-multi-60-yellow-flames.webp",
+    "alt": "Orion V2 Multi electric fireplace",
+    "width": 768,
+    "height": 768
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/grand-living-room-or-v2-multi-60.webp",
+     "alt": "Orion V2 Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/living-room-or-v2-multi-60.webp",
+     "alt": "Orion V2 Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-v2-flame-close-up.webp",
+     "alt": "Orion V2 Multi electric fireplace",
+     "width": 1366,
+     "height": 768
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-v2-multi-installation-options2.webp",
+     "alt": "Orion V2 Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Orion V2 Multi 52″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/06/ORV2-52-MULTI.pdf"
+   },
+   {
+    "label": "Installation Manual – Orion V2 Multi",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/08/Manual-Orion-Multi-US-082426.pdf"
+   },
+   {
+    "label": "Orion V2 Product Catalog",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/07/Modern-Flames-Orion-V2-Catalog-Compressed.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/orionv2-multi/",
+  "enabled": true
+ },
+ {
+  "id": "mf-orion-v2-multi-60-fireplace",
+  "slug": "orion-v2-multi-60-fireplace",
+  "brandId": "mf",
+  "name": "Orion V2 Multi 60″",
+  "sku": "OR60-MULTI-V2",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 60 inches wide. Heater rated up to 8,500 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "The Orion V2 Multi electric fireplace redefines what an electric fireplace can be, transforming the virtual fireplace experience into a captivating focal point. Advanced multi-dimensional virtual flame technology, immersive audio, layered lighting, and a lifelike lit log set work together to create a remarkably realistic fireside experience.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "60″"
+   },
+   {
+    "label": "Model number",
+    "value": "OR60-MULTI-V2"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 8,500 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 8500
+  },
+  "dimensions": {
+   "width": 60,
+   "text": "60″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/orion-v2-multi-60-yellow-flames.webp",
+    "alt": "Orion V2 Multi electric fireplace",
+    "width": 768,
+    "height": 768
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/grand-living-room-or-v2-multi-60.webp",
+     "alt": "Orion V2 Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/living-room-or-v2-multi-60.webp",
+     "alt": "Orion V2 Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-v2-flame-close-up.webp",
+     "alt": "Orion V2 Multi electric fireplace",
+     "width": 1366,
+     "height": 768
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-v2-multi-installation-options2.webp",
+     "alt": "Orion V2 Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Orion V2 Multi 60″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/06/ORV2-60-MULTI.pdf"
+   },
+   {
+    "label": "Installation Manual – Orion V2 Multi",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/08/Manual-Orion-Multi-US-082426.pdf"
+   },
+   {
+    "label": "Orion V2 Product Catalog",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/07/Modern-Flames-Orion-V2-Catalog-Compressed.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/orionv2-multi/",
+  "enabled": true
+ },
+ {
+  "id": "mf-orion-v2-multi-76-fireplace",
+  "slug": "orion-v2-multi-76-fireplace",
+  "brandId": "mf",
+  "name": "Orion V2 Multi 76″",
+  "sku": "OR76-MULTI-V2",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 76 inches wide. Heater rated up to 8,500 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "The Orion V2 Multi electric fireplace redefines what an electric fireplace can be, transforming the virtual fireplace experience into a captivating focal point. Advanced multi-dimensional virtual flame technology, immersive audio, layered lighting, and a lifelike lit log set work together to create a remarkably realistic fireside experience.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "76″"
+   },
+   {
+    "label": "Model number",
+    "value": "OR76-MULTI-V2"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 8,500 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 8500
+  },
+  "dimensions": {
+   "width": 76,
+   "text": "76″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/orion-v2-multi-60-yellow-flames.webp",
+    "alt": "Orion V2 Multi electric fireplace",
+    "width": 768,
+    "height": 768
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/grand-living-room-or-v2-multi-60.webp",
+     "alt": "Orion V2 Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/living-room-or-v2-multi-60.webp",
+     "alt": "Orion V2 Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-v2-flame-close-up.webp",
+     "alt": "Orion V2 Multi electric fireplace",
+     "width": 1366,
+     "height": 768
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-v2-multi-installation-options2.webp",
+     "alt": "Orion V2 Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Orion V2 Multi 76″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/06/ORV2-76-MULTI.pdf"
+   },
+   {
+    "label": "Installation Manual – Orion V2 Multi",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/08/Manual-Orion-Multi-US-082426.pdf"
+   },
+   {
+    "label": "Orion V2 Product Catalog",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/07/Modern-Flames-Orion-V2-Catalog-Compressed.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/orionv2-multi/",
+  "enabled": true
+ },
+ {
+  "id": "mf-orion-v2-multi-100-fireplace",
+  "slug": "orion-v2-multi-100-fireplace",
+  "brandId": "mf",
+  "name": "Orion V2 Multi 100″",
+  "sku": "OR100-MULTI-V2",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 100 inches wide. Heater rated up to 8,500 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "The Orion V2 Multi electric fireplace redefines what an electric fireplace can be, transforming the virtual fireplace experience into a captivating focal point. Advanced multi-dimensional virtual flame technology, immersive audio, layered lighting, and a lifelike lit log set work together to create a remarkably realistic fireside experience.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "100″"
+   },
+   {
+    "label": "Model number",
+    "value": "OR100-MULTI-V2"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 8,500 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 8500
+  },
+  "dimensions": {
+   "width": 100,
+   "text": "100″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/orion-v2-multi-60-yellow-flames.webp",
+    "alt": "Orion V2 Multi electric fireplace",
+    "width": 768,
+    "height": 768
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/grand-living-room-or-v2-multi-60.webp",
+     "alt": "Orion V2 Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/living-room-or-v2-multi-60.webp",
+     "alt": "Orion V2 Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-v2-flame-close-up.webp",
+     "alt": "Orion V2 Multi electric fireplace",
+     "width": 1366,
+     "height": 768
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-v2-multi-installation-options2.webp",
+     "alt": "Orion V2 Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Orion V2 Multi 100″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/06/ORV2-100-MULTI.pdf"
+   },
+   {
+    "label": "Installation Manual – Orion V2 Multi",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/08/Manual-Orion-Multi-US-082426.pdf"
+   },
+   {
+    "label": "Orion V2 Product Catalog",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/07/Modern-Flames-Orion-V2-Catalog-Compressed.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/orionv2-multi/",
+  "enabled": true
+ },
+ {
+  "id": "mf-orion-v2-multi-120-fireplace",
+  "slug": "orion-v2-multi-120-fireplace",
+  "brandId": "mf",
+  "name": "Orion V2 Multi 120″",
+  "sku": "OR120-MULTI-V2",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 120 inches wide. Heater rated up to 8,500 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "The Orion V2 Multi electric fireplace redefines what an electric fireplace can be, transforming the virtual fireplace experience into a captivating focal point. Advanced multi-dimensional virtual flame technology, immersive audio, layered lighting, and a lifelike lit log set work together to create a remarkably realistic fireside experience.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "120″"
+   },
+   {
+    "label": "Model number",
+    "value": "OR120-MULTI-V2"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 8,500 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 8500
+  },
+  "dimensions": {
+   "width": 120,
+   "text": "120″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/orion-v2-multi-60-yellow-flames.webp",
+    "alt": "Orion V2 Multi electric fireplace",
+    "width": 768,
+    "height": 768
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/grand-living-room-or-v2-multi-60.webp",
+     "alt": "Orion V2 Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/living-room-or-v2-multi-60.webp",
+     "alt": "Orion V2 Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-v2-flame-close-up.webp",
+     "alt": "Orion V2 Multi electric fireplace",
+     "width": 1366,
+     "height": 768
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-v2-multi-installation-options2.webp",
+     "alt": "Orion V2 Multi electric fireplace",
+     "width": 1400,
+     "height": 933
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Orion V2 Multi 120″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/06/ORV2-120-MULTI.pdf"
+   },
+   {
+    "label": "Installation Manual – Orion V2 Multi",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/08/Manual-Orion-Multi-US-082426.pdf"
+   },
+   {
+    "label": "Orion V2 Product Catalog",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/07/Modern-Flames-Orion-V2-Catalog-Compressed.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/orionv2-multi/",
+  "enabled": true
+ },
+ {
+  "id": "mf-orion-v2-slim-52-fireplace",
+  "slug": "orion-v2-slim-52-fireplace",
+  "brandId": "mf",
+  "name": "Orion V2 Slim 52″",
+  "sku": "OR52-SLIM-V2",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 52 inches wide. Heater rated up to 8,500 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "The Orion V2 Slim electric fireplace redefines what an electric fireplace can be, transforming the virtual fireplace experience into a captivating focal point. Advanced multi-dimensional virtual flame technology, immersive audio, layered lighting, and a lifelike log set work together to create a remarkably realistic fireside experience.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "52″"
+   },
+   {
+    "label": "Model number",
+    "value": "OR52-SLIM-V2"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 8,500 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 8500
+  },
+  "dimensions": {
+   "width": 52,
+   "text": "52″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/orion-v2-60-slim-yellow-flames.webp",
+    "alt": "Orion V2 Slim electric fireplace",
+    "width": 1366,
+    "height": 1164
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/bedroom-or-v2-slim.webp",
+     "alt": "Orion V2 Slim electric fireplace",
+     "width": 1152,
+     "height": 768
+    },
+    {
+     "src": "/catalog/modernflames/gallery/living-room-orion-v2-slim.webp",
+     "alt": "Orion V2 Slim electric fireplace",
+     "width": 1152,
+     "height": 768
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-v2-slim-60-yellow-flames-angled.webp",
+     "alt": "Orion V2 Slim electric fireplace",
+     "width": 1366,
+     "height": 1164
+    },
+    {
+     "src": "/catalog/modernflames/gallery/or-v2-flame-1-colors.webp",
+     "alt": "Orion V2 Slim electric fireplace",
+     "width": 1350,
+     "height": 1165
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Orion V2 Slim 52″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/06/ORV2-52-SLIM.pdf"
+   },
+   {
+    "label": "Installation Manual – Orion V2 Slim",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/08/Manual-Orion-Slim-US-V2-082426.pdf"
+   },
+   {
+    "label": "Orion V2 Product Catalog",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/07/Modern-Flames-Orion-V2-Catalog-Compressed.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/orionv2-slim/",
+  "enabled": true
+ },
+ {
+  "id": "mf-orion-v2-slim-60-fireplace",
+  "slug": "orion-v2-slim-60-fireplace",
+  "brandId": "mf",
+  "name": "Orion V2 Slim 60″",
+  "sku": "OR60-SLIM-V2",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 60 inches wide. Heater rated up to 8,500 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "The Orion V2 Slim electric fireplace redefines what an electric fireplace can be, transforming the virtual fireplace experience into a captivating focal point. Advanced multi-dimensional virtual flame technology, immersive audio, layered lighting, and a lifelike log set work together to create a remarkably realistic fireside experience.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "60″"
+   },
+   {
+    "label": "Model number",
+    "value": "OR60-SLIM-V2"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 8,500 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 8500
+  },
+  "dimensions": {
+   "width": 60,
+   "text": "60″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/orion-v2-60-slim-yellow-flames.webp",
+    "alt": "Orion V2 Slim electric fireplace",
+    "width": 1366,
+    "height": 1164
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/bedroom-or-v2-slim.webp",
+     "alt": "Orion V2 Slim electric fireplace",
+     "width": 1152,
+     "height": 768
+    },
+    {
+     "src": "/catalog/modernflames/gallery/living-room-orion-v2-slim.webp",
+     "alt": "Orion V2 Slim electric fireplace",
+     "width": 1152,
+     "height": 768
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-v2-slim-60-yellow-flames-angled.webp",
+     "alt": "Orion V2 Slim electric fireplace",
+     "width": 1366,
+     "height": 1164
+    },
+    {
+     "src": "/catalog/modernflames/gallery/or-v2-flame-1-colors.webp",
+     "alt": "Orion V2 Slim electric fireplace",
+     "width": 1350,
+     "height": 1165
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Orion V2 Slim 60″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/06/ORV2-60-SLIM.pdf"
+   },
+   {
+    "label": "Installation Manual – Orion V2 Slim",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/08/Manual-Orion-Slim-US-V2-082426.pdf"
+   },
+   {
+    "label": "Orion V2 Product Catalog",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/07/Modern-Flames-Orion-V2-Catalog-Compressed.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/orionv2-slim/",
+  "enabled": true
+ },
+ {
+  "id": "mf-orion-v2-slim-76-fireplace",
+  "slug": "orion-v2-slim-76-fireplace",
+  "brandId": "mf",
+  "name": "Orion V2 Slim 76″",
+  "sku": "OR76-SLIM-V2",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 76 inches wide. Heater rated up to 8,500 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "The Orion V2 Slim electric fireplace redefines what an electric fireplace can be, transforming the virtual fireplace experience into a captivating focal point. Advanced multi-dimensional virtual flame technology, immersive audio, layered lighting, and a lifelike log set work together to create a remarkably realistic fireside experience.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "76″"
+   },
+   {
+    "label": "Model number",
+    "value": "OR76-SLIM-V2"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 8,500 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 8500
+  },
+  "dimensions": {
+   "width": 76,
+   "text": "76″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/orion-v2-60-slim-yellow-flames.webp",
+    "alt": "Orion V2 Slim electric fireplace",
+    "width": 1366,
+    "height": 1164
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/bedroom-or-v2-slim.webp",
+     "alt": "Orion V2 Slim electric fireplace",
+     "width": 1152,
+     "height": 768
+    },
+    {
+     "src": "/catalog/modernflames/gallery/living-room-orion-v2-slim.webp",
+     "alt": "Orion V2 Slim electric fireplace",
+     "width": 1152,
+     "height": 768
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-v2-slim-60-yellow-flames-angled.webp",
+     "alt": "Orion V2 Slim electric fireplace",
+     "width": 1366,
+     "height": 1164
+    },
+    {
+     "src": "/catalog/modernflames/gallery/or-v2-flame-1-colors.webp",
+     "alt": "Orion V2 Slim electric fireplace",
+     "width": 1350,
+     "height": 1165
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Orion V2 Slim 76″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/06/ORV2-76-SLIM.pdf"
+   },
+   {
+    "label": "Installation Manual – Orion V2 Slim",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/08/Manual-Orion-Slim-US-V2-082426.pdf"
+   },
+   {
+    "label": "Orion V2 Product Catalog",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/07/Modern-Flames-Orion-V2-Catalog-Compressed.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/orionv2-slim/",
+  "enabled": true
+ },
+ {
+  "id": "mf-orion-v2-slim-100-fireplace",
+  "slug": "orion-v2-slim-100-fireplace",
+  "brandId": "mf",
+  "name": "Orion V2 Slim 100″",
+  "sku": "OR100-SLIM-V2",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 100 inches wide. Heater rated up to 8,500 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "The Orion V2 Slim electric fireplace redefines what an electric fireplace can be, transforming the virtual fireplace experience into a captivating focal point. Advanced multi-dimensional virtual flame technology, immersive audio, layered lighting, and a lifelike log set work together to create a remarkably realistic fireside experience.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "100″"
+   },
+   {
+    "label": "Model number",
+    "value": "OR100-SLIM-V2"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 8,500 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 8500
+  },
+  "dimensions": {
+   "width": 100,
+   "text": "100″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/orion-v2-60-slim-yellow-flames.webp",
+    "alt": "Orion V2 Slim electric fireplace",
+    "width": 1366,
+    "height": 1164
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/bedroom-or-v2-slim.webp",
+     "alt": "Orion V2 Slim electric fireplace",
+     "width": 1152,
+     "height": 768
+    },
+    {
+     "src": "/catalog/modernflames/gallery/living-room-orion-v2-slim.webp",
+     "alt": "Orion V2 Slim electric fireplace",
+     "width": 1152,
+     "height": 768
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-v2-slim-60-yellow-flames-angled.webp",
+     "alt": "Orion V2 Slim electric fireplace",
+     "width": 1366,
+     "height": 1164
+    },
+    {
+     "src": "/catalog/modernflames/gallery/or-v2-flame-1-colors.webp",
+     "alt": "Orion V2 Slim electric fireplace",
+     "width": 1350,
+     "height": 1165
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Orion V2 Slim 100″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/06/ORV2-100-SLIM.pdf"
+   },
+   {
+    "label": "Installation Manual – Orion V2 Slim",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/08/Manual-Orion-Slim-US-V2-082426.pdf"
+   },
+   {
+    "label": "Orion V2 Product Catalog",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/07/Modern-Flames-Orion-V2-Catalog-Compressed.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/orionv2-slim/",
+  "enabled": true
+ },
+ {
+  "id": "mf-orion-v2-traditional-26-fireplace",
+  "slug": "orion-v2-traditional-26-fireplace",
+  "brandId": "mf",
+  "name": "Orion V2 Traditional 26″",
+  "sku": "OR26-TRAD-V2",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "An electric fireplace, 26 inches wide. Heater rated up to 8,500 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "The Orion V2 Traditional electric fireplace redefines what an electric fireplace can be, transforming the virtual fireplace experience into a captivating focal point. Advanced multi-dimensional virtual flame technology, immersive audio, layered lighting, and a lifelike lit log set work together to create a remarkably realistic fireside experience.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "26″"
+   },
+   {
+    "label": "Model number",
+    "value": "OR26-TRAD-V2"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 8,500 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 8500
+  },
+  "dimensions": {
+   "width": 26,
+   "text": "26″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/orion-v2-trad-36-yellow-flames-1.webp",
+    "alt": "Orion V2 Traditional electric fireplace",
+    "width": 1366,
+    "height": 1180
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/family-room-orv2-traditional.webp",
+     "alt": "Orion V2 Traditional electric fireplace",
+     "width": 1152,
+     "height": 768
+    },
+    {
+     "src": "/catalog/modernflames/gallery/or-v2-installation-options1.webp",
+     "alt": "Orion V2 Traditional electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-v2-flame-close-up.webp",
+     "alt": "Orion V2 Traditional electric fireplace",
+     "width": 1366,
+     "height": 768
+    },
+    {
+     "src": "/catalog/modernflames/gallery/or-v2-flame-1-colors.webp",
+     "alt": "Orion V2 Traditional electric fireplace",
+     "width": 1350,
+     "height": 1165
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Orion V2 Traditional 26″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/06/ORV2-26-TRAD.pdf"
+   },
+   {
+    "label": "Installation Manual – Orion V2 Traditional",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/08/Manual-Orion-Traditional-US-082426.pdf"
+   },
+   {
+    "label": "Orion V2 Product Catalog",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/07/Modern-Flames-Orion-V2-Catalog-Compressed.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/orionv2-traditional/",
+  "enabled": true
+ },
+ {
+  "id": "mf-orion-v2-traditional-30-fireplace",
+  "slug": "orion-v2-traditional-30-fireplace",
+  "brandId": "mf",
+  "name": "Orion V2 Traditional 30″",
+  "sku": "OR30-TRAD-V2",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "An electric fireplace, 30 inches wide. Heater rated up to 8,500 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "The Orion V2 Traditional electric fireplace redefines what an electric fireplace can be, transforming the virtual fireplace experience into a captivating focal point. Advanced multi-dimensional virtual flame technology, immersive audio, layered lighting, and a lifelike lit log set work together to create a remarkably realistic fireside experience.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "30″"
+   },
+   {
+    "label": "Model number",
+    "value": "OR30-TRAD-V2"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 8,500 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 8500
+  },
+  "dimensions": {
+   "width": 30,
+   "text": "30″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/orion-v2-trad-36-yellow-flames-1.webp",
+    "alt": "Orion V2 Traditional electric fireplace",
+    "width": 1366,
+    "height": 1180
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/family-room-orv2-traditional.webp",
+     "alt": "Orion V2 Traditional electric fireplace",
+     "width": 1152,
+     "height": 768
+    },
+    {
+     "src": "/catalog/modernflames/gallery/or-v2-installation-options1.webp",
+     "alt": "Orion V2 Traditional electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-v2-flame-close-up.webp",
+     "alt": "Orion V2 Traditional electric fireplace",
+     "width": 1366,
+     "height": 768
+    },
+    {
+     "src": "/catalog/modernflames/gallery/or-v2-flame-1-colors.webp",
+     "alt": "Orion V2 Traditional electric fireplace",
+     "width": 1350,
+     "height": 1165
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Orion V2 Traditional 30″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/06/ORV2-30-Trad.pdf"
+   },
+   {
+    "label": "Installation Manual – Orion V2 Traditional",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/08/Manual-Orion-Traditional-US-082426.pdf"
+   },
+   {
+    "label": "Orion V2 Product Catalog",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/07/Modern-Flames-Orion-V2-Catalog-Compressed.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/orionv2-traditional/",
+  "enabled": true
+ },
+ {
+  "id": "mf-orion-v2-traditional-36-fireplace",
+  "slug": "orion-v2-traditional-36-fireplace",
+  "brandId": "mf",
+  "name": "Orion V2 Traditional 36″",
+  "sku": "OR36-TRAD-V2",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "An electric fireplace, 36 inches wide. Heater rated up to 8,500 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "The Orion V2 Traditional electric fireplace redefines what an electric fireplace can be, transforming the virtual fireplace experience into a captivating focal point. Advanced multi-dimensional virtual flame technology, immersive audio, layered lighting, and a lifelike lit log set work together to create a remarkably realistic fireside experience.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "36″"
+   },
+   {
+    "label": "Model number",
+    "value": "OR36-TRAD-V2"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 8,500 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 8500
+  },
+  "dimensions": {
+   "width": 36,
+   "text": "36″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/orion-v2-trad-36-yellow-flames-1.webp",
+    "alt": "Orion V2 Traditional electric fireplace",
+    "width": 1366,
+    "height": 1180
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/family-room-orv2-traditional.webp",
+     "alt": "Orion V2 Traditional electric fireplace",
+     "width": 1152,
+     "height": 768
+    },
+    {
+     "src": "/catalog/modernflames/gallery/or-v2-installation-options1.webp",
+     "alt": "Orion V2 Traditional electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-v2-flame-close-up.webp",
+     "alt": "Orion V2 Traditional electric fireplace",
+     "width": 1366,
+     "height": 768
+    },
+    {
+     "src": "/catalog/modernflames/gallery/or-v2-flame-1-colors.webp",
+     "alt": "Orion V2 Traditional electric fireplace",
+     "width": 1350,
+     "height": 1165
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Orion V2 Traditional 36″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/06/ORV2-36-Trad.pdf"
+   },
+   {
+    "label": "Installation Manual – Orion V2 Traditional",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/08/Manual-Orion-Traditional-US-082426.pdf"
+   },
+   {
+    "label": "Orion V2 Product Catalog",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/07/Modern-Flames-Orion-V2-Catalog-Compressed.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/orionv2-traditional/",
+  "enabled": true
+ },
+ {
+  "id": "mf-orion-v2-traditional-42-fireplace",
+  "slug": "orion-v2-traditional-42-fireplace",
+  "brandId": "mf",
+  "name": "Orion V2 Traditional 42″",
+  "sku": "OR42-TRAD-V2",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "An electric fireplace, 42 inches wide. Heater rated up to 8,500 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "The Orion V2 Traditional electric fireplace redefines what an electric fireplace can be, transforming the virtual fireplace experience into a captivating focal point. Advanced multi-dimensional virtual flame technology, immersive audio, layered lighting, and a lifelike lit log set work together to create a remarkably realistic fireside experience.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "42″"
+   },
+   {
+    "label": "Model number",
+    "value": "OR42-TRAD-V2"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 8,500 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 8500
+  },
+  "dimensions": {
+   "width": 42,
+   "text": "42″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/orion-v2-trad-36-yellow-flames-1.webp",
+    "alt": "Orion V2 Traditional electric fireplace",
+    "width": 1366,
+    "height": 1180
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/family-room-orv2-traditional.webp",
+     "alt": "Orion V2 Traditional electric fireplace",
+     "width": 1152,
+     "height": 768
+    },
+    {
+     "src": "/catalog/modernflames/gallery/or-v2-installation-options1.webp",
+     "alt": "Orion V2 Traditional electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-v2-flame-close-up.webp",
+     "alt": "Orion V2 Traditional electric fireplace",
+     "width": 1366,
+     "height": 768
+    },
+    {
+     "src": "/catalog/modernflames/gallery/or-v2-flame-1-colors.webp",
+     "alt": "Orion V2 Traditional electric fireplace",
+     "width": 1350,
+     "height": 1165
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Orion V2 Traditional 42″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/06/ORV2-42-Trad.pdf"
+   },
+   {
+    "label": "Installation Manual – Orion V2 Traditional",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/08/Manual-Orion-Traditional-US-082426.pdf"
+   },
+   {
+    "label": "Orion V2 Product Catalog",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/07/Modern-Flames-Orion-V2-Catalog-Compressed.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/orionv2-traditional/",
+  "enabled": true
+ },
+ {
+  "id": "mf-orion-v2-traditional-54-fireplace",
+  "slug": "orion-v2-traditional-54-fireplace",
+  "brandId": "mf",
+  "name": "Orion V2 Traditional 54″",
+  "sku": "OR54-TRAD-V2",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "An electric fireplace, 54 inches wide. Heater rated up to 8,500 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "The Orion V2 Traditional electric fireplace redefines what an electric fireplace can be, transforming the virtual fireplace experience into a captivating focal point. Advanced multi-dimensional virtual flame technology, immersive audio, layered lighting, and a lifelike lit log set work together to create a remarkably realistic fireside experience.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "54″"
+   },
+   {
+    "label": "Model number",
+    "value": "OR54-TRAD-V2"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 8,500 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 8500
+  },
+  "dimensions": {
+   "width": 54,
+   "text": "54″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/orion-v2-trad-36-yellow-flames-1.webp",
+    "alt": "Orion V2 Traditional electric fireplace",
+    "width": 1366,
+    "height": 1180
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/family-room-orv2-traditional.webp",
+     "alt": "Orion V2 Traditional electric fireplace",
+     "width": 1152,
+     "height": 768
+    },
+    {
+     "src": "/catalog/modernflames/gallery/or-v2-installation-options1.webp",
+     "alt": "Orion V2 Traditional electric fireplace",
+     "width": 1400,
+     "height": 933
+    },
+    {
+     "src": "/catalog/modernflames/gallery/orion-v2-flame-close-up.webp",
+     "alt": "Orion V2 Traditional electric fireplace",
+     "width": 1366,
+     "height": 768
+    },
+    {
+     "src": "/catalog/modernflames/gallery/or-v2-flame-1-colors.webp",
+     "alt": "Orion V2 Traditional electric fireplace",
+     "width": 1350,
+     "height": 1165
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Orion V2 Traditional 54″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/06/ORV2-54-Trad.pdf"
+   },
+   {
+    "label": "Installation Manual – Orion V2 Traditional",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/08/Manual-Orion-Traditional-US-082426.pdf"
+   },
+   {
+    "label": "Orion V2 Product Catalog",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/07/Modern-Flames-Orion-V2-Catalog-Compressed.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/orionv2-traditional/",
+  "enabled": true
+ },
+ {
+  "id": "mf-redstone-26-insert",
+  "slug": "redstone-26-insert",
+  "brandId": "mf",
+  "name": "Redstone 26″",
+  "fuel": "electric",
+  "kind": "insert",
+  "style": "traditional",
+  "summary": "An electric insert, 26 inches wide. Heater rated up to 5,000 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "The Redstone features our Hybrid-FX flame technology, which maximizes the flame height in an enlarged vertical viewing area. It easily installs in a rough frame wall or a finished opening.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "26″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 5,000 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 5000
+  },
+  "dimensions": {
+   "width": 26,
+   "text": "26″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [
+   {
+    "id": "trim",
+    "label": "Trim width",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "16mm-trim",
+      "name": "16 millimetermm trim",
+      "isDefault": true
+     },
+     {
+      "id": "41mm-trim",
+      "name": "41 millimetermm trim",
+      "isDefault": false
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/hero-redstone.webp",
+    "alt": "Redstone electric fireplace",
+    "width": 1045,
+    "height": 680
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/redstone-36-white-room-orange-flame.webp",
+     "alt": "Redstone electric fireplace",
+     "width": 1200,
+     "height": 800
+    },
+    {
+     "src": "/catalog/modernflames/gallery/redstone-36-wtrim-room.webp",
+     "alt": "Redstone electric fireplace",
+     "width": 1200,
+     "height": 800
+    },
+    {
+     "src": "/catalog/modernflames/gallery/redstone-54-bedroom.webp",
+     "alt": "Redstone electric fireplace",
+     "width": 1200,
+     "height": 746
+    },
+    {
+     "src": "/catalog/modernflames/gallery/redstone-featured.webp",
+     "alt": "Redstone electric fireplace",
+     "width": 1200,
+     "height": 900
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Redstone 26″ spec sheet (16mm trim)",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Redstone-26-2621-with-16mm-trim.pdf"
+   },
+   {
+    "label": "Redstone 26″ spec sheet (41mm trim)",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Redstone-26-2621-with-dims-with-41mm-trim.pdf"
+   },
+   {
+    "label": "Owner'S Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Redstone-USA-owners-manual.pdf"
+   },
+   {
+    "label": "Insert Flyer",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/REDSTONE-INSERT-FLYER-2021_LR.pdf"
+   },
+   {
+    "label": "Built-In Flyer",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/REDSTONE-BUILT-IN-FLYER-2021_LR.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/redstone-series/",
+  "enabled": true
+ },
+ {
+  "id": "mf-redstone-30-insert",
+  "slug": "redstone-30-insert",
+  "brandId": "mf",
+  "name": "Redstone 30″",
+  "fuel": "electric",
+  "kind": "insert",
+  "style": "traditional",
+  "summary": "An electric insert, 30 inches wide. Heater rated up to 5,000 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "The Redstone features our Hybrid-FX flame technology, which maximizes the flame height in an enlarged vertical viewing area. It easily installs in a rough frame wall or a finished opening.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "30″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 5,000 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 5000
+  },
+  "dimensions": {
+   "width": 30,
+   "text": "30″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [
+   {
+    "id": "trim",
+    "label": "Trim width",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "16mm-trim",
+      "name": "16 millimetermm trim",
+      "isDefault": true
+     },
+     {
+      "id": "41mm-trim",
+      "name": "41 millimetermm trim",
+      "isDefault": false
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/hero-redstone.webp",
+    "alt": "Redstone electric fireplace",
+    "width": 1045,
+    "height": 680
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/redstone-36-white-room-orange-flame.webp",
+     "alt": "Redstone electric fireplace",
+     "width": 1200,
+     "height": 800
+    },
+    {
+     "src": "/catalog/modernflames/gallery/redstone-36-wtrim-room.webp",
+     "alt": "Redstone electric fireplace",
+     "width": 1200,
+     "height": 800
+    },
+    {
+     "src": "/catalog/modernflames/gallery/redstone-54-bedroom.webp",
+     "alt": "Redstone electric fireplace",
+     "width": 1200,
+     "height": 746
+    },
+    {
+     "src": "/catalog/modernflames/gallery/redstone-featured.webp",
+     "alt": "Redstone electric fireplace",
+     "width": 1200,
+     "height": 900
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Redstone 30″ spec sheet (16mm trim)",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Redstone-30-3021-with-16mm-trim-1.pdf"
+   },
+   {
+    "label": "Redstone 30″ spec sheet (41mm trim)",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Redstone-30-3021-with-dims-with-41mm-trim-1.pdf"
+   },
+   {
+    "label": "Owner'S Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Redstone-USA-owners-manual.pdf"
+   },
+   {
+    "label": "Insert Flyer",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/REDSTONE-INSERT-FLYER-2021_LR.pdf"
+   },
+   {
+    "label": "Built-In Flyer",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/REDSTONE-BUILT-IN-FLYER-2021_LR.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/redstone-series/",
+  "enabled": true
+ },
+ {
+  "id": "mf-redstone-36-insert",
+  "slug": "redstone-36-insert",
+  "brandId": "mf",
+  "name": "Redstone 36″",
+  "fuel": "electric",
+  "kind": "insert",
+  "style": "traditional",
+  "summary": "An electric insert, 36 inches wide. Heater rated up to 5,000 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "The Redstone features our Hybrid-FX flame technology, which maximizes the flame height in an enlarged vertical viewing area. It easily installs in a rough frame wall or a finished opening.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "36″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 5,000 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 5000
+  },
+  "dimensions": {
+   "width": 36,
+   "text": "36″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [
+   {
+    "id": "trim",
+    "label": "Trim width",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "16mm-trim",
+      "name": "16 millimetermm trim",
+      "isDefault": true
+     },
+     {
+      "id": "41mm-trim",
+      "name": "41 millimetermm trim",
+      "isDefault": false
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/hero-redstone.webp",
+    "alt": "Redstone electric fireplace",
+    "width": 1045,
+    "height": 680
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/redstone-36-white-room-orange-flame.webp",
+     "alt": "Redstone electric fireplace",
+     "width": 1200,
+     "height": 800
+    },
+    {
+     "src": "/catalog/modernflames/gallery/redstone-36-wtrim-room.webp",
+     "alt": "Redstone electric fireplace",
+     "width": 1200,
+     "height": 800
+    },
+    {
+     "src": "/catalog/modernflames/gallery/redstone-54-bedroom.webp",
+     "alt": "Redstone electric fireplace",
+     "width": 1200,
+     "height": 746
+    },
+    {
+     "src": "/catalog/modernflames/gallery/redstone-featured.webp",
+     "alt": "Redstone electric fireplace",
+     "width": 1200,
+     "height": 900
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Redstone 36″ spec sheet (16mm trim)",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Redstone-36-3626-with-16mm-trim.pdf"
+   },
+   {
+    "label": "Redstone 36″ spec sheet (41mm trim)",
+    "url": "https://www.modernflames.com/wp-content/uploads/2026/05/Redstone-36-RS-3626-with-dims-with-41mm-trim-1.pdf"
+   },
+   {
+    "label": "Owner'S Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Redstone-USA-owners-manual.pdf"
+   },
+   {
+    "label": "Insert Flyer",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/REDSTONE-INSERT-FLYER-2021_LR.pdf"
+   },
+   {
+    "label": "Built-In Flyer",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/REDSTONE-BUILT-IN-FLYER-2021_LR.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/redstone-series/",
+  "enabled": true
+ },
+ {
+  "id": "mf-redstone-42-insert",
+  "slug": "redstone-42-insert",
+  "brandId": "mf",
+  "name": "Redstone 42″",
+  "fuel": "electric",
+  "kind": "insert",
+  "style": "traditional",
+  "summary": "An electric insert, 42 inches wide. Heater rated up to 5,000 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "The Redstone features our Hybrid-FX flame technology, which maximizes the flame height in an enlarged vertical viewing area. It easily installs in a rough frame wall or a finished opening.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "42″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 5,000 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 5000
+  },
+  "dimensions": {
+   "width": 42,
+   "text": "42″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [
+   {
+    "id": "trim",
+    "label": "Trim width",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "16mm-trim",
+      "name": "16 millimetermm trim",
+      "isDefault": true
+     },
+     {
+      "id": "41mm-trim",
+      "name": "41 millimetermm trim",
+      "isDefault": false
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/hero-redstone.webp",
+    "alt": "Redstone electric fireplace",
+    "width": 1045,
+    "height": 680
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/redstone-36-white-room-orange-flame.webp",
+     "alt": "Redstone electric fireplace",
+     "width": 1200,
+     "height": 800
+    },
+    {
+     "src": "/catalog/modernflames/gallery/redstone-36-wtrim-room.webp",
+     "alt": "Redstone electric fireplace",
+     "width": 1200,
+     "height": 800
+    },
+    {
+     "src": "/catalog/modernflames/gallery/redstone-54-bedroom.webp",
+     "alt": "Redstone electric fireplace",
+     "width": 1200,
+     "height": 746
+    },
+    {
+     "src": "/catalog/modernflames/gallery/redstone-featured.webp",
+     "alt": "Redstone electric fireplace",
+     "width": 1200,
+     "height": 900
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Redstone 42″ spec sheet (16mm trim)",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Redstone-42-4229-with-16mm-trim.pdf"
+   },
+   {
+    "label": "Redstone 42″ spec sheet (41mm trim)",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Redstone-42-RS-4229-with-dims-with-41mm-trim-1.pdf"
+   },
+   {
+    "label": "Owner'S Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Redstone-USA-owners-manual.pdf"
+   },
+   {
+    "label": "Insert Flyer",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/REDSTONE-INSERT-FLYER-2021_LR.pdf"
+   },
+   {
+    "label": "Built-In Flyer",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/REDSTONE-BUILT-IN-FLYER-2021_LR.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/redstone-series/",
+  "enabled": true
+ },
+ {
+  "id": "mf-redstone-54-insert",
+  "slug": "redstone-54-insert",
+  "brandId": "mf",
+  "name": "Redstone 54″",
+  "fuel": "electric",
+  "kind": "insert",
+  "style": "traditional",
+  "summary": "An electric insert, 54 inches wide. Heater rated up to 5,000 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "The Redstone features our Hybrid-FX flame technology, which maximizes the flame height in an enlarged vertical viewing area. It easily installs in a rough frame wall or a finished opening.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "54″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 5,000 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 5000
+  },
+  "dimensions": {
+   "width": 54,
+   "text": "54″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [
+   {
+    "id": "trim",
+    "label": "Trim width",
+    "area": "exterior",
+    "required": true,
+    "limit": 1,
+    "options": [
+     {
+      "id": "16mm-trim",
+      "name": "16 millimetermm trim",
+      "isDefault": true
+     },
+     {
+      "id": "41mm-trim",
+      "name": "41 millimetermm trim",
+      "isDefault": false
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/hero-redstone.webp",
+    "alt": "Redstone electric fireplace",
+    "width": 1045,
+    "height": 680
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/redstone-36-white-room-orange-flame.webp",
+     "alt": "Redstone electric fireplace",
+     "width": 1200,
+     "height": 800
+    },
+    {
+     "src": "/catalog/modernflames/gallery/redstone-36-wtrim-room.webp",
+     "alt": "Redstone electric fireplace",
+     "width": 1200,
+     "height": 800
+    },
+    {
+     "src": "/catalog/modernflames/gallery/redstone-54-bedroom.webp",
+     "alt": "Redstone electric fireplace",
+     "width": 1200,
+     "height": 746
+    },
+    {
+     "src": "/catalog/modernflames/gallery/redstone-featured.webp",
+     "alt": "Redstone electric fireplace",
+     "width": 1200,
+     "height": 900
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Redstone 54″ spec sheet (16mm trim)",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Redstone-54-5435-with-16mm-trim.pdf"
+   },
+   {
+    "label": "Redstone 54″ spec sheet (41mm trim)",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Redstone-54-5435-with-dims-with-41mm-trim.pdf"
+   },
+   {
+    "label": "Owner'S Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Redstone-USA-owners-manual.pdf"
+   },
+   {
+    "label": "Insert Flyer",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/REDSTONE-INSERT-FLYER-2021_LR.pdf"
+   },
+   {
+    "label": "Built-In Flyer",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/REDSTONE-BUILT-IN-FLYER-2021_LR.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/redstone-series/",
+  "enabled": true
+ },
+ {
+  "id": "mf-sedona-pro-multi-fireplace",
+  "slug": "sedona-pro-multi-fireplace",
+  "brandId": "mf",
+  "name": "Sedona Pro Multi",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace. Heater rated up to 5,000 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "With the cleanest built-in design and the tallest flames of our entire collection – enjoy a hyper-realistic electronic flamescape that rivals real fire.",
+  "specs": [
+   {
+    "label": "Heater output",
+    "value": "Up to 5,000 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 5000
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/sedona-room-1200.webp",
+    "alt": "Sedona Pro Multi electric fireplace",
+    "width": 1200,
+    "height": 858
+   },
+   "gallery": []
+  },
+  "docs": [
+   {
+    "label": "Sedona Pro Multi document",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Sedona-Pro-Multi-Manual_singles-1-copy.pdf"
+   },
+   {
+    "label": "Installation/Owners Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Sedona-Pro-Multi-Manual_singles-1-copy.pdf"
+   },
+   {
+    "label": "Flyer",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/SEDONA-PRO%E2%84%A2-MULTI-SERIES-FLYER.pdf"
+   },
+   {
+    "label": "Traditional Catalog",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/MF-2020-Traditional-Catalog-9_2020REV-9-29-20-1.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/sedona-pro-multi/",
+  "enabled": true
+ },
+ {
+  "id": "mf-spectrum-slimline-50-fireplace",
+  "slug": "spectrum-slimline-50-fireplace",
+  "brandId": "mf",
+  "name": "Spectrum Slimline 50″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 50 inches wide. Heater rated up to 5,000 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Minimalist in both design and installation – this ultra-chic electric fireplace will create a luxurious gathering point for your home or business.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "50″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 5,000 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 5000
+  },
+  "dimensions": {
+   "width": 50,
+   "text": "50″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/hero-spectrum-slimline.webp",
+    "alt": "Spectrum Slimline electric fireplace",
+    "width": 1317,
+    "height": 655
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/spectrum-slimline-60.webp",
+     "alt": "Spectrum Slimline electric fireplace",
+     "width": 1200,
+     "height": 800
+    },
+    {
+     "src": "/catalog/modernflames/gallery/spectrumslimline-50-inch.webp",
+     "alt": "Spectrum Slimline electric fireplace",
+     "width": 1200,
+     "height": 675
+    },
+    {
+     "src": "/catalog/modernflames/gallery/spectrumslimline60-orangebedroom.webp",
+     "alt": "Spectrum Slimline electric fireplace",
+     "width": 1200,
+     "height": 800
+    },
+    {
+     "src": "/catalog/modernflames/gallery/sps-100b-greenroom.webp",
+     "alt": "Spectrum Slimline electric fireplace",
+     "width": 1200,
+     "height": 800
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Spectrum Slimline 50″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/SPS-50B.pdf"
+   },
+   {
+    "label": "Owner’S Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Spectrum-Slimline-Owners-Manual-1.pdf"
+   },
+   {
+    "label": "Linear Brochure",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/MF-2024-Linear-Brochure-2.2024-2.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/spectrum-slimline/",
+  "enabled": true
+ },
+ {
+  "id": "mf-spectrum-slimline-60-fireplace",
+  "slug": "spectrum-slimline-60-fireplace",
+  "brandId": "mf",
+  "name": "Spectrum Slimline 60″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 60 inches wide. Heater rated up to 5,000 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Minimalist in both design and installation – this ultra-chic electric fireplace will create a luxurious gathering point for your home or business.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "60″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 5,000 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 5000
+  },
+  "dimensions": {
+   "width": 60,
+   "text": "60″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/hero-spectrum-slimline.webp",
+    "alt": "Spectrum Slimline electric fireplace",
+    "width": 1317,
+    "height": 655
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/spectrum-slimline-60.webp",
+     "alt": "Spectrum Slimline electric fireplace",
+     "width": 1200,
+     "height": 800
+    },
+    {
+     "src": "/catalog/modernflames/gallery/spectrumslimline-50-inch.webp",
+     "alt": "Spectrum Slimline electric fireplace",
+     "width": 1200,
+     "height": 675
+    },
+    {
+     "src": "/catalog/modernflames/gallery/spectrumslimline60-orangebedroom.webp",
+     "alt": "Spectrum Slimline electric fireplace",
+     "width": 1200,
+     "height": 800
+    },
+    {
+     "src": "/catalog/modernflames/gallery/sps-100b-greenroom.webp",
+     "alt": "Spectrum Slimline electric fireplace",
+     "width": 1200,
+     "height": 800
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Spectrum Slimline 60″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/SPS-60B.pdf"
+   },
+   {
+    "label": "Owner’S Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Spectrum-Slimline-Owners-Manual-1.pdf"
+   },
+   {
+    "label": "Linear Brochure",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/MF-2024-Linear-Brochure-2.2024-2.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/spectrum-slimline/",
+  "enabled": true
+ },
+ {
+  "id": "mf-spectrum-slimline-74-fireplace",
+  "slug": "spectrum-slimline-74-fireplace",
+  "brandId": "mf",
+  "name": "Spectrum Slimline 74″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 74 inches wide. Heater rated up to 5,000 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Minimalist in both design and installation – this ultra-chic electric fireplace will create a luxurious gathering point for your home or business.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "74″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 5,000 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 5000
+  },
+  "dimensions": {
+   "width": 74,
+   "text": "74″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/hero-spectrum-slimline.webp",
+    "alt": "Spectrum Slimline electric fireplace",
+    "width": 1317,
+    "height": 655
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/spectrum-slimline-60.webp",
+     "alt": "Spectrum Slimline electric fireplace",
+     "width": 1200,
+     "height": 800
+    },
+    {
+     "src": "/catalog/modernflames/gallery/spectrumslimline-50-inch.webp",
+     "alt": "Spectrum Slimline electric fireplace",
+     "width": 1200,
+     "height": 675
+    },
+    {
+     "src": "/catalog/modernflames/gallery/spectrumslimline60-orangebedroom.webp",
+     "alt": "Spectrum Slimline electric fireplace",
+     "width": 1200,
+     "height": 800
+    },
+    {
+     "src": "/catalog/modernflames/gallery/sps-100b-greenroom.webp",
+     "alt": "Spectrum Slimline electric fireplace",
+     "width": 1200,
+     "height": 800
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Spectrum Slimline 74″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/SPS-74B.pdf"
+   },
+   {
+    "label": "Owner’S Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Spectrum-Slimline-Owners-Manual-1.pdf"
+   },
+   {
+    "label": "Linear Brochure",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/MF-2024-Linear-Brochure-2.2024-2.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/spectrum-slimline/",
+  "enabled": true
+ },
+ {
+  "id": "mf-spectrum-slimline-100-fireplace",
+  "slug": "spectrum-slimline-100-fireplace",
+  "brandId": "mf",
+  "name": "Spectrum Slimline 100″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace, 100 inches wide. Heater rated up to 5,000 BTU. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Minimalist in both design and installation – this ultra-chic electric fireplace will create a luxurious gathering point for your home or business.",
+  "specs": [
+   {
+    "label": "Nominal width",
+    "value": "100″"
+   },
+   {
+    "label": "Heater output",
+    "value": "Up to 5,000 BTU"
+   },
+   {
+    "label": "Fuel",
+    "value": "Electric"
+   }
+  ],
+  "heat": {
+   "btuMax": 5000
+  },
+  "dimensions": {
+   "width": 100,
+   "text": "100″ nominal width. Full dimensions are on the spec sheet."
+  },
+  "options": [],
+  "images": {
+   "hero": {
+    "src": "/catalog/modernflames/hero/hero-spectrum-slimline.webp",
+    "alt": "Spectrum Slimline electric fireplace",
+    "width": 1317,
+    "height": 655
+   },
+   "gallery": [
+    {
+     "src": "/catalog/modernflames/gallery/spectrum-slimline-60.webp",
+     "alt": "Spectrum Slimline electric fireplace",
+     "width": 1200,
+     "height": 800
+    },
+    {
+     "src": "/catalog/modernflames/gallery/spectrumslimline-50-inch.webp",
+     "alt": "Spectrum Slimline electric fireplace",
+     "width": 1200,
+     "height": 675
+    },
+    {
+     "src": "/catalog/modernflames/gallery/spectrumslimline60-orangebedroom.webp",
+     "alt": "Spectrum Slimline electric fireplace",
+     "width": 1200,
+     "height": 800
+    },
+    {
+     "src": "/catalog/modernflames/gallery/sps-100b-greenroom.webp",
+     "alt": "Spectrum Slimline electric fireplace",
+     "width": 1200,
+     "height": 800
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Spectrum Slimline 100″ spec sheet",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/SPS-100B.pdf"
+   },
+   {
+    "label": "Owner’S Manual",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/Spectrum-Slimline-Owners-Manual-1.pdf"
+   },
+   {
+    "label": "Linear Brochure",
+    "url": "https://www.modernflames.com/wp-content/uploads/2024/10/MF-2024-Linear-Brochure-2.2024-2.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.modernflames.com/fireplaces/spectrum-slimline/",
+  "enabled": true
+ }
+]

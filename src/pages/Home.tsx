@@ -2,12 +2,10 @@
 import { Link } from 'react-router-dom';
 import { AnimatePresence, motion, useMotionTemplate, useMotionValue, useReducedMotion, useScroll, useSpring, useTransform } from 'motion/react';
 import { ArrowRight, ArrowUpRight, BadgeCheck, Camera, ClipboardList, Hammer, MessageSquareText, Phone, ShieldCheck, Sparkles, Star } from 'lucide-react';
-import FireplacePreview from '@/components/FireplacePreview';
 import { HolidayFeature } from '@/components/Holiday';
 import LeadForm from '@/components/LeadForm';
 import { CallLink, EASE, Faq, FireButton, Reveal, SectionHeading, SERVICE_ICONS } from '@/components/ui';
 import { GENERAL_FAQS, PROJECTS, REVIEWS } from '@/data/content';
-import { DEFAULT_DESIGN, STYLES, SURROUNDS, type Design } from '@/data/designer';
 import { SERVICE_AREAS } from '@/data/serviceAreas';
 import { SERVICES, serviceById } from '@/data/services';
 import { HOLIDAY_PROMO, promoIsLive } from '@/lib/promo';
@@ -251,67 +249,68 @@ function ServicesBento() {
   );
 }
 
+const LOOKS = [
+  { label: 'Modern linear gas', brand: 'Kozy Heat', model: 'Generation 7220', src: '/catalog/kozy/gallery/gen-7220-single-livingroomb-horz-copy.webp', alt: 'Kozy Heat Generation 7220 linear gas fireplace in a bright open living room', to: '/fireplace-shop/gas-fireplaces/generation-7220-gas-fireplace' },
+  { label: 'Insert in classic brick', brand: 'Kozy Heat', model: 'Chaska 29', src: '/catalog/kozy/gallery/chaska29-crushed-glass-livingroom-e1760551265147.webp', alt: 'Kozy Heat Chaska 29 gas insert in a red brick fireplace', to: '/fireplace-shop/gas-inserts/chaska-29-gas-insert' },
+  { label: 'Stacked stone refresh', brand: 'Kozy Heat', model: 'Chaska 34', src: '/catalog/kozy/gallery/chaska-34-bak-room-e1760551659771.webp', alt: 'Kozy Heat Chaska 34 gas insert in a stacked stone surround', to: '/fireplace-shop/gas-inserts/chaska-34-gas-insert' },
+  { label: 'Clean contemporary', brand: 'Enviro', model: 'Q2', src: '/catalog/enviro/gallery/q2-3.webp', alt: 'Enviro Q2 gas fireplace in a minimalist concrete wall with stacked firewood', to: '/fireplace-shop/gas-fireplaces/q2-gas-fireplace' },
+  { label: 'Electric with wood niche', brand: 'Modern Flames', model: 'Landscape Pro Multi', src: '/catalog/modernflames/gallery/multi-56-roomw.webp', alt: 'Modern Flames Landscape Pro Multi electric fireplace beside a firewood niche', to: '/fireplace-shop/electric-fireplaces/landscape-pro-multi-44-fireplace' },
+  { label: 'Freestanding stove', brand: 'Kozy Heat', model: 'Oakport 18', src: '/catalog/kozy/gallery/oakport-prairie-room.webp', alt: 'Kozy Heat Oakport 18 freestanding gas stove in a living room', to: '/fireplace-shop/gas-stoves/oakport-18-gas-stove' },
+];
+
 function DesignerTeaser() {
-  const [design, setDesign] = useState<Design>(DEFAULT_DESIGN);
-  const swatches = SURROUNDS.slice(0, 6);
+  const [pick, setPick] = useState(0);
+  const reduce = useReducedMotion();
+  const look = LOOKS[pick];
   return (
     <section className="section relative overflow-hidden" aria-labelledby="designer-h">
-      <div className="wrap grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
-        <Reveal className="order-2 lg:order-1">
-          <div className="media relative aspect-[4/3] border hairline shadow-[0_40px_120px_-50px_rgb(240_122_50/0.6)]">
-            <FireplacePreview design={design} className="h-full w-full" />
+      <div className="wrap grid items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
+        <Reveal className="order-2 min-w-0 lg:order-1">
+          <div className="media relative aspect-[3/2] border hairline shadow-[0_40px_120px_-50px_rgb(240_122_50/0.6)]">
+            <AnimatePresence initial={false}>
+              <motion.img
+                key={look.src}
+                src={look.src}
+                alt={look.alt}
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover"
+                initial={reduce ? { opacity: 0 } : { opacity: 0, transform: 'scale(1.04)' }}
+                animate={{ opacity: 1, transform: 'scale(1)' }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.7, ease: EASE }}
+              />
+            </AnimatePresence>
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/90 to-transparent p-5 pt-16">
+              <Link to={look.to} className="link-arrow inline-flex items-center gap-2 text-sm text-bone">
+                <span className="font-semibold text-gold">{look.brand}</span> {look.model} <ArrowRight className="h-4 w-4" aria-hidden />
+              </Link>
+            </div>
           </div>
         </Reveal>
-        <div className="order-1 lg:order-2">
+        <div className="order-1 min-w-0 lg:order-2">
           <p className="eyebrow">Build your fireplace</p>
           <h2 id="designer-h" className="display-lg mt-4 text-bone">
             See it before anyone lifts a trowel.
           </h2>
-          <p className="lede mt-5">Try a few finishes right here. The full designer adds mantels, hearths, fire types and extras, then sends your design to us.</p>
-
-          <fieldset className="mt-8">
-            <legend className="text-sm font-medium text-bone">Surround</legend>
-            <div className="mt-3 flex flex-wrap gap-2.5">
-              {swatches.map((s) => {
-                const on = design.surround === s.id;
-                return (
-                  <button
-                    key={s.id}
-                    type="button"
-                    aria-pressed={on}
-                    onClick={() => setDesign((d) => ({ ...d, surround: s.id }))}
-                    className={`flex items-center gap-2 rounded-full border px-3 py-1.5 text-sm transition-colors ${on ? 'border-ember bg-ember/10 text-bone' : 'border-white/12 text-mute hover:border-white/30'}`}
-                  >
-                    <span className="h-4 w-4 rounded-full border border-white/20" style={{ background: s.base }} aria-hidden />
-                    {s.name}
-                  </button>
-                );
-              })}
-            </div>
-          </fieldset>
-          <fieldset className="mt-6">
-            <legend className="text-sm font-medium text-bone">Style</legend>
-            <div className="mt-3 flex flex-wrap gap-2.5">
-              {STYLES.map((s) => {
-                const on = design.style === s.id;
-                return (
-                  <button
-                    key={s.id}
-                    type="button"
-                    aria-pressed={on}
-                    onClick={() => setDesign((d) => ({ ...d, style: s.id, fire: s.id === 'modern' ? 'linear-gas' : d.fire === 'linear-gas' ? 'open-wood' : d.fire, mantel: s.id === 'modern' ? 'walnut-float' : d.mantel }))}
-                    className={`rounded-full border px-3.5 py-1.5 text-sm transition-colors ${on ? 'border-ember bg-ember/10 text-bone' : 'border-white/12 text-mute hover:border-white/30'}`}
-                  >
-                    {s.name}
-                  </button>
-                );
-              })}
-            </div>
-          </fieldset>
+          <p className="lede mt-5">Real fireplaces from the brands we install. Pick a look, then build your own: choose the model, fronts, finishes and fire, and get a branded PDF of your build.</p>
+          <div className="mt-8 flex flex-wrap gap-2.5" role="radiogroup" aria-label="Fireplace looks">
+            {LOOKS.map((l, i) => (
+              <button
+                key={l.src}
+                type="button"
+                role="radio"
+                aria-checked={pick === i}
+                onClick={() => setPick(i)}
+                className={`rounded-full border px-3.5 py-1.5 text-sm transition-colors ${pick === i ? 'border-ember bg-ember/10 text-bone' : 'border-white/12 text-mute hover:border-white/30'}`}
+              >
+                {l.label}
+              </button>
+            ))}
+          </div>
           <div className="mt-9 flex flex-wrap gap-3">
-            <FireButton placement="home_teaser" size="lg" label="Build your full fireplace" to={`/design-your-fireplace?s=${design.style}&m=${design.surround}&t=${design.mantel}&h=${design.hearth}&f=${design.fire}#builder`} />
-            <Link to="/fireplace-shop" className="btn btn-ghost">
-              Browse the fireplace shop
+            <FireButton placement="home_teaser" size="lg" />
+            <Link to="/fireplace-shop" className="btn btn-ghost btn-lg">
+              Browse the shop
             </Link>
           </div>
         </div>

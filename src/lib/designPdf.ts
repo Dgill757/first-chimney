@@ -6,11 +6,8 @@
  * 2. Encode as JPEG and wrap it in a minimal single-page PDF (pure function below,
  *    unit tested) with a clickable link that reopens the exact design.
  */
-import { PROJECT_TYPES, resolveDesign, type Design } from '../data/designer';
 import { CREDENTIALS, SITE } from './site';
 
-const W = 1275;
-const H = 1650;
 
 /* ------------------------------ PDF writer ------------------------------ */
 
@@ -74,6 +71,9 @@ export function jpegToPdf(jpeg: Uint8Array, px: { w: number; h: number }, meta: 
 
 /* ------------------------------ Page layout ------------------------------ */
 
+const W = 1275;
+const H = 1650;
+
 function loadImage(src: string): Promise<HTMLImageElement> {
   return new Promise((resolve, reject) => {
     const img = new Image();
@@ -93,145 +93,155 @@ function roundRect(ctx: CanvasRenderingContext2D, x: number, y: number, w: numbe
   ctx.closePath();
 }
 
-export function designRef(d: Design): string {
-  const s = JSON.stringify(d);
-  let h = 0;
-  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0;
-  return `FD-${h.toString(36).toUpperCase().slice(0, 6)}`;
+function fit(ctx: CanvasRenderingContext2D, t: string, max: number): string {
+  let v = t;
+  while (ctx.measureText(v).width > max && v.length > 4) v = `${v.slice(0, -4)}...`;
+  return v;
 }
 
-export async function buildDesignPdf(svg: SVGSVGElement, design: Design, shareUrl: string, forName?: string): Promise<Blob> {
-  const r = resolveDesign(design);
-  await Promise.all([document.fonts.load('760 60px Archivo'), document.fonts.load('500 24px Geist')]).catch(() => undefined);
+function wrap(ctx: CanvasRenderingContext2D, t: string, max: number): string[] {
+  const words = t.split(' ');
+  const lines: string[] = [];
+  let line = '';
+  for (const w of words) {
+    const next = line ? `${line} ${w}` : w;
+    if (ctx.measureText(next).width > max && line) {
+      lines.push(line);
+      line = w;
+    } else line = next;
+  }
+  if (line) lines.push(line);
+  return lines;
+}
 
+export function buildRef(seed: string): string {
+  let h = 0;
+  for (let i = 0; i < seed.length; i++) h = (h * 31 + seed.charCodeAt(i)) >>> 0;
+  return `FB-${h.toString(36).toUpperCase().slice(0, 6)}`;
+}
+
+export type BuildPdfInput = {
+  brandName: string;
+  productName: string;
+  subtitle: string;
+  /** Image layers drawn in order (layered preview art) or a single product photo. */
+  layers: string[];
+  options: [string, string][];
+  specs: [string, string][];
+  notes: string[];
+  shareUrl: string;
+  forName?: string;
+};
+
+/** Branded one-page PDF of a customer's build: product imagery, choices, specs and next steps. */
+export async function buildBuildPdf(b: BuildPdfInput): Promise<Blob> {
+  await Promise.all([document.fonts.load('760 60px Archivo'), document.fonts.load('500 24px Geist')]).catch(() => undefined);
   const canvas = document.createElement('canvas');
   canvas.width = W;
   canvas.height = H;
   const ctx = canvas.getContext('2d')!;
   const display = (px: number, weight = 760) => `${weight} ${px}px Archivo, "Segoe UI", sans-serif`;
   const text = (px: number, weight = 400) => `${weight} ${px}px Geist, "Segoe UI", sans-serif`;
+  const ref = buildRef(b.shareUrl);
 
-  // Ground
   ctx.fillStyle = '#121110';
   ctx.fillRect(0, 0, W, H);
-  const glow = ctx.createRadialGradient(W / 2, 520, 50, W / 2, 520, 800);
-  glow.addColorStop(0, 'rgba(240,122,50,0.16)');
+  const glow = ctx.createRadialGradient(W / 2, 560, 60, W / 2, 560, 820);
+  glow.addColorStop(0, 'rgba(240,122,50,0.18)');
   glow.addColorStop(1, 'rgba(240,122,50,0)');
   ctx.fillStyle = glow;
   ctx.fillRect(0, 0, W, H);
   ctx.fillStyle = '#f07a32';
   ctx.fillRect(0, 0, W, 12);
 
-  // Header
   const logo = await loadImage(SITE.logoPng);
-  const lw = 260;
-  ctx.drawImage(logo, 70, 52, lw, (logo.height / logo.width) * lw);
+  ctx.drawImage(logo, 70, 52, 250, (logo.height / logo.width) * 250);
   ctx.textAlign = 'right';
   ctx.fillStyle = '#f07a32';
   ctx.font = text(20, 600);
-  ctx.fillText('FIREPLACE DESIGN', W - 70, 84);
+  ctx.fillText('YOUR FIREPLACE BUILD', W - 70, 84);
   ctx.fillStyle = '#b9b0a4';
   ctx.font = text(20);
-  ctx.fillText(`${designRef(design)}  ·  ${new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}`, W - 70, 116);
-  if (forName) ctx.fillText(`Prepared for ${forName}`, W - 70, 146);
+  ctx.fillText(`${ref}  ·  ${new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}`, W - 70, 116);
+  if (b.forName) ctx.fillText(`Prepared for ${b.forName}`, W - 70, 146);
 
   ctx.textAlign = 'left';
+  ctx.fillStyle = '#f6c56f';
+  ctx.font = text(22, 700);
+  ctx.fillText(b.brandName.toUpperCase(), 70, 232);
   ctx.fillStyle = '#f3ede4';
-  ctx.font = display(62);
-  ctx.fillText('Your fireplace design', 70, 262);
+  ctx.font = display(56);
+  ctx.fillText(fit(ctx, b.productName, W - 140), 70, 292);
+  ctx.fillStyle = '#b9b0a4';
+  ctx.font = text(22, 500);
+  ctx.fillText(b.subtitle, 70, 330);
 
-  // Preview
-  const clone = svg.cloneNode(true) as SVGSVGElement;
-  clone.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-  clone.setAttribute('width', '1600');
-  clone.setAttribute('height', '1200');
-  clone.removeAttribute('class');
-  const svgUrl = URL.createObjectURL(new Blob([new XMLSerializer().serializeToString(clone)], { type: 'image/svg+xml' }));
-  try {
-    const pic = await loadImage(svgUrl);
-    const px = 70;
-    const py = 300;
-    const pw = W - 140;
-    const ph = Math.round(pw * 0.75);
-    ctx.save();
-    roundRect(ctx, px, py, pw, ph, 28);
-    ctx.clip();
-    ctx.drawImage(pic, px, py, pw, ph);
-    ctx.restore();
-    ctx.strokeStyle = 'rgba(255,244,230,0.12)';
-    ctx.lineWidth = 2;
-    roundRect(ctx, px, py, pw, ph, 28);
-    ctx.stroke();
-  } finally {
-    URL.revokeObjectURL(svgUrl);
-  }
-
-  // Spec sheet: two columns
-  const rows: [string, string, string?][] = [
-    ['Project', PROJECT_TYPES.find((p) => p.id === design.project)?.name ?? 'Not specified'],
-    ['Timeline', design.timeline ?? 'Not specified'],
-    ['Style', r.style.name],
-    ['Surround', r.surround.name, r.surround.base],
-    ['Mantel', r.mantel.name, r.mantel.color === 'transparent' ? undefined : r.mantel.color],
-    ['Hearth', r.hearth.name, r.hearth.color],
-    ['Fire', r.fire.name],
-    ['Extras', r.extras.length ? r.extras.map((e) => e.name).join(', ') : 'None'],
-  ];
-  const top = 1150;
-  const colW = (W - 140 - 40) / 2;
-  rows.forEach(([k, v, sw], i) => {
-    const col = i < 4 ? 0 : 1;
-    const x = 70 + col * (colW + 40);
-    const y = top + (i % 4) * 62;
-    ctx.fillStyle = '#948b80';
-    ctx.font = text(19, 500);
-    ctx.fillText(k.toUpperCase(), x, y);
-    let tx = x + 150;
-    if (sw) {
-      ctx.fillStyle = sw;
-      roundRect(ctx, tx, y - 20, 24, 24, 6);
-      ctx.fill();
-      tx += 36;
+  // Product imagery on a warm stage, contained (never cropped).
+  const sx = 70, sy = 360, sw = W - 140, sh = 640;
+  ctx.save();
+  roundRect(ctx, sx, sy, sw, sh, 28);
+  ctx.clip();
+  ctx.fillStyle = '#f4f1ea';
+  ctx.fillRect(sx, sy, sw, sh);
+  for (const src of b.layers) {
+    try {
+      const im = await loadImage(src);
+      const s = Math.min(sw / im.width, sh / im.height);
+      const w = im.width * s, h = im.height * s;
+      ctx.drawImage(im, sx + (sw - w) / 2, sy + (sh - h) / 2, w, h);
+    } catch {
+      /* a missing layer is skipped rather than failing the PDF */
     }
-    ctx.fillStyle = '#f3ede4';
-    ctx.font = text(22, 500);
-    let val = v;
-    while (ctx.measureText(val).width > colW - (tx - x) && val.length > 4) val = `${val.slice(0, -4)}...`;
-    ctx.fillText(val, tx, y);
-    ctx.fillStyle = 'rgba(255,244,230,0.08)';
-    ctx.fillRect(x, y + 20, colW, 1);
-  });
+  }
+  ctx.restore();
+
+  // Choices (left) and maker specs (right)
+  const top = 1050;
+  const colW = (W - 140 - 50) / 2;
+  const list = (title: string, rows: [string, string][], x: number) => {
+    ctx.fillStyle = '#f07a32';
+    ctx.font = text(19, 700);
+    ctx.fillText(title.toUpperCase(), x, top);
+    rows.slice(0, 7).forEach(([k, v], i) => {
+      const y = top + 42 + i * 40;
+      ctx.fillStyle = '#948b80';
+      ctx.font = text(18, 500);
+      ctx.fillText(fit(ctx, k, 200), x, y);
+      ctx.fillStyle = '#f3ede4';
+      ctx.font = text(19, 500);
+      ctx.fillText(fit(ctx, v, colW - 220), x + 215, y);
+    });
+  };
+  list('Your choices', b.options.length ? b.options : [['Options', 'Maker defaults']], 70);
+  list('From the maker', b.specs, 70 + colW + 50);
 
   // Next steps
-  const ny = 1430;
-  ctx.fillStyle = 'rgba(255,244,230,0.04)';
-  roundRect(ctx, 70, ny, W - 140, 120, 20);
+  const ny = 1370;
+  ctx.fillStyle = 'rgba(255,244,230,0.05)';
+  roundRect(ctx, 70, ny, W - 140, 170, 20);
   ctx.fill();
   ctx.fillStyle = '#f3ede4';
   ctx.font = text(22, 600);
-  ctx.fillText('What happens next', 100, ny + 42);
+  ctx.fillText('What happens next', 100, ny + 44);
   ctx.fillStyle = '#b9b0a4';
-  ctx.font = text(19);
-  ctx.fillText('First Chimney reviews your design, then visits to measure and confirm what fits your home. Pricing comes after', 100, ny + 76);
-  ctx.fillText('that visit, in writing. This illustration is for inspiration and is not a quote, code review or venting plan.', 100, ny + 104);
+  ctx.font = text(18);
+  const steps = [b.notes[0] ?? '', 'We measure and confirm every dimension on site before ordering. Pricing comes after that visit, in writing.'].filter(Boolean).join(' ');
+  wrap(ctx, steps, W - 200).slice(0, 4).forEach((l, i) => ctx.fillText(l, 100, ny + 82 + i * 28));
 
-  // Footer
   ctx.fillStyle = '#f07a32';
   ctx.font = text(24, 700);
-  ctx.fillText(`Call or text ${SITE.phoneDisplay}`, 70, H - 52);
+  ctx.fillText(`Call or text ${SITE.phoneDisplay}`, 70, H - 50);
   ctx.textAlign = 'right';
   ctx.fillStyle = '#b9b0a4';
   ctx.font = text(19);
-  ctx.fillText(`${CREDENTIALS.fire.label}  ·  VA · NJ · CT · MA  ·  Open this design online`, W - 70, H - 52);
+  ctx.fillText(`${CREDENTIALS.fire.label}  ·  VA · NJ · CT · MA  ·  Open this build online`, W - 70, H - 50);
 
-  const jpegUrl = canvas.toDataURL('image/jpeg', 0.9);
-  const bin = atob(jpegUrl.split(',')[1]);
+  const url = canvas.toDataURL('image/jpeg', 0.9);
+  const bin = atob(url.split(',')[1]);
   const jpeg = new Uint8Array(bin.length);
   for (let i = 0; i < bin.length; i++) jpeg[i] = bin.charCodeAt(i);
-
-  // Link rect over the footer right text, converted px -> pt (612/1275) with origin bottom-left.
   const k = 612 / W;
-  const pdf = jpegToPdf(jpeg, { w: W, h: H }, { title: `First Chimney fireplace design ${designRef(design)}`, link: { url: shareUrl, rect: [Math.round(640 * k), Math.round(30 * k), Math.round((W - 70) * k), Math.round(80 * k)] } });
+  const pdf = jpegToPdf(jpeg, { w: W, h: H }, { title: `First Chimney fireplace build ${ref}: ${b.brandName} ${b.productName}`, link: { url: b.shareUrl, rect: [Math.round(640 * k), Math.round(28 * k), Math.round((W - 70) * k), Math.round(78 * k)] } });
   return new Blob([pdf as BlobPart], { type: 'application/pdf' });
 }
 

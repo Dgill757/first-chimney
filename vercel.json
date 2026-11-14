@@ -15,8 +15,11 @@
     { "source": "/service-areas/pennsylvania", "destination": "/service-areas", "permanent": true },
     { "source": "/holiday", "destination": "/holiday-chimney-special", "permanent": false },
     { "source": "/199", "destination": "/holiday-chimney-special", "permanent": false },
-    { "source": "/design", "destination": "/design-your-fireplace", "permanent": false },
-    { "source": "/shop", "destination": "/fireplace-shop", "permanent": false }
+    { "source": "/design", "destination": "/build-your-fireplace", "permanent": false },
+    { "source": "/shop", "destination": "/fireplace-shop", "permanent": false },
+    { "source": "/shop/:path*", "destination": "/fireplace-shop/:path*", "permanent": false },
+    { "source": "/design-your-fireplace", "destination": "/build-your-fireplace", "permanent": true },
+    { "source": "/build-my-fireplace", "destination": "/build-your-fireplace", "permanent": true }
   ],
   "headers": [
     {
@@ -28,7 +31,7 @@
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
     },
     {
-      "source": "/(media|brand|og|promo)/(.*)",
+      "source": "/(media|brand|og|promo|catalog)/(.*)",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }]
     },
     {

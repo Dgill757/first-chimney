@@ -1,0 +1,2257 @@
+[
+ {
+  "id": "sf-30-built-in-fireplace",
+  "slug": "30-built-in-fireplace",
+  "brandId": "sf",
+  "name": "30″ Built-in",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "An electric fireplace. 10,000 BTU/hr input. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Adding the traditional look of a fireplace to your home has never been easier thanks to the Built-in electric fireplace from SimpliFire. A masonry-style interior, textured log set, and flame height adjustments give you all the ambiance of a real fire with the convenience of pressing a button. Available in 30-inch and 36-inch fireplace widths.",
+  "specs": [
+   {
+    "label": "Unit Width",
+    "value": "31\""
+   },
+   {
+    "label": "Unit Depth",
+    "value": "11-3/4\""
+   },
+   {
+    "label": "Unit Height",
+    "value": "26-3/4\""
+   },
+   {
+    "label": "Framing Width",
+    "value": "31-3/4\""
+   },
+   {
+    "label": "Framing Depth",
+    "value": "11-5/8\""
+   },
+   {
+    "label": "Framing Height",
+    "value": "120= 27-1/4\" 240V=31-1/2\""
+   },
+   {
+    "label": "BTU/hr Input",
+    "value": "120 volt: 4,800; 240 volt: 10,000"
+   }
+  ],
+  "heat": {
+   "btuMax": 10000
+  },
+  "dimensions": {
+   "width": 31,
+   "height": 26.75,
+   "depth": 11.75
+  },
+  "options": [
+   {
+    "id": "interior",
+    "label": "Options",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "open-all",
+      "name": "Open All"
+     },
+     {
+      "id": "fronts-and-doors",
+      "name": "Fronts and Doors"
+     },
+     {
+      "id": "front-30",
+      "name": "Front 30\""
+     },
+     {
+      "id": "black",
+      "name": "Black"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/simplifire/hero/c51c7df9-img-product-card-simplifire-built-in-jpg.webp",
+    "alt": "Built-In electric fireplace",
+    "width": 1136,
+    "height": 852
+   },
+   "gallery": [
+    {
+     "src": "/catalog/simplifire/gallery/fd088a37-img-pdp-simplifire-built-in-jpg.webp",
+     "alt": "SimpliFire built-In electric masonry-style fireplace with glowing logs, embers and realistic flames at the touch of a button.",
+     "width": 1200,
+     "height": 1200
+    },
+    {
+     "src": "/catalog/simplifire/gallery/6930a46e-img-pdp-simplifire-built-in-room-shot-01-jpg.webp",
+     "alt": "SimpliFire Built-In 30\" electric fireplace with orange LED flames, glowing logs and lighted ember bed in living room.",
+     "width": 1400,
+     "height": 788
+    },
+    {
+     "src": "/catalog/simplifire/gallery/f867da51-img-pdp-simplifire-built-in-room-shot-02-jpg.webp",
+     "alt": "SimpliFire Built-In 36\" electric fireplace with orange LED flames, glowing logs and lighted ember bed in living room.",
+     "width": 1400,
+     "height": 788
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://www.simplifire.com/products/built-in-fireplace",
+  "enabled": true
+ },
+ {
+  "id": "sf-36-built-in-fireplace",
+  "slug": "36-built-in-fireplace",
+  "brandId": "sf",
+  "name": "36″ Built-in",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "An electric fireplace. 10,000 BTU/hr input. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Adding the traditional look of a fireplace to your home has never been easier thanks to the Built-in electric fireplace from SimpliFire. A masonry-style interior, textured log set, and flame height adjustments give you all the ambiance of a real fire with the convenience of pressing a button. Available in 30-inch and 36-inch fireplace widths.",
+  "specs": [
+   {
+    "label": "Unit Width",
+    "value": "37\""
+   },
+   {
+    "label": "Unit Depth",
+    "value": "11-3/4\""
+   },
+   {
+    "label": "Unit Height",
+    "value": "31-7/32\""
+   },
+   {
+    "label": "Framing Width",
+    "value": "38\""
+   },
+   {
+    "label": "Framing Depth",
+    "value": "11-5/8\""
+   },
+   {
+    "label": "Framing Height",
+    "value": "120: 31-1/2\" 240: 33-1/2\""
+   },
+   {
+    "label": "BTU/hr Input",
+    "value": "120 volt: 4,800; 240 volt: 10,000"
+   }
+  ],
+  "heat": {
+   "btuMax": 10000
+  },
+  "dimensions": {
+   "width": 37,
+   "height": 31.21875,
+   "depth": 11.75
+  },
+  "options": [
+   {
+    "id": "interior",
+    "label": "Options",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "open-all",
+      "name": "Open All"
+     },
+     {
+      "id": "fronts-and-doors",
+      "name": "Fronts and Doors"
+     },
+     {
+      "id": "front-30",
+      "name": "Front 30\""
+     },
+     {
+      "id": "black",
+      "name": "Black"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/simplifire/hero/c51c7df9-img-product-card-simplifire-built-in-jpg.webp",
+    "alt": "Built-In electric fireplace",
+    "width": 1136,
+    "height": 852
+   },
+   "gallery": [
+    {
+     "src": "/catalog/simplifire/gallery/fd088a37-img-pdp-simplifire-built-in-jpg.webp",
+     "alt": "SimpliFire built-In electric masonry-style fireplace with glowing logs, embers and realistic flames at the touch of a button.",
+     "width": 1200,
+     "height": 1200
+    },
+    {
+     "src": "/catalog/simplifire/gallery/6930a46e-img-pdp-simplifire-built-in-room-shot-01-jpg.webp",
+     "alt": "SimpliFire Built-In 30\" electric fireplace with orange LED flames, glowing logs and lighted ember bed in living room.",
+     "width": 1400,
+     "height": 788
+    },
+    {
+     "src": "/catalog/simplifire/gallery/f867da51-img-pdp-simplifire-built-in-room-shot-02-jpg.webp",
+     "alt": "SimpliFire Built-In 36\" electric fireplace with orange LED flames, glowing logs and lighted ember bed in living room.",
+     "width": 1400,
+     "height": 788
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://www.simplifire.com/products/built-in-fireplace",
+  "enabled": true
+ },
+ {
+  "id": "sf-allusion-edge-50-fireplace",
+  "slug": "allusion-edge-50-fireplace",
+  "brandId": "sf",
+  "name": "Allusion Edge 50″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Lifelike digital flames flicker and crackle over glowing logs and embers, delivering all the cozy feels within a modern fireplace design. A sleek profile and subtle heat vents keep the focus on the fire, while slide-in installation and an optional build-out kit make it easy to integrate beautifully. Choose your favorite flame look, control it by remote or app, and enjoy with or without heat all year long. Available in 50, 60, 78 and 100-inch widths.",
+  "specs": [],
+  "options": [
+   {
+    "id": "interior",
+    "label": "Options",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "hand-painted-logs",
+      "name": "Hand-Painted Logs"
+     },
+     {
+      "id": "decorative-spheres",
+      "name": "Decorative Spheres"
+     },
+     {
+      "id": "glowing-birch-logs",
+      "name": "Glowing birch logs"
+     },
+     {
+      "id": "kit",
+      "name": "Kit"
+     },
+     {
+      "id": "boyd-build-out-kit-ready-to-paint",
+      "name": "Boyd Build-out Kit - Ready to Paint"
+     },
+     {
+      "id": "boyd-build-out-kit-white-shiplap",
+      "name": "Boyd Build-out Kit - White Shiplap"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/simplifire/hero/402eb289-14-sfe-allusedge-100-crystals-chromaticflames-cabin.webp",
+    "alt": "Allusion Edge electric fireplace",
+    "width": 1400,
+    "height": 977
+   },
+   "gallery": [
+    {
+     "src": "/catalog/simplifire/gallery/08a4fc99-2c-sfe-allusedge-50-blkgls-birchlogs-orangesignatureflames-s.webp",
+     "alt": "SimpliFire Allusion Edge electric fireplace product",
+     "width": 1400,
+     "height": 561
+    },
+    {
+     "src": "/catalog/simplifire/gallery/55373ceb-11-sfe-allusedge-78-birchlogs-classicflames-tilewall-adobest.webp",
+     "alt": "Fireplace against white sofa and rustic wooden coffee table. Scandinavian style home interior design of modern living room",
+     "width": 1400,
+     "height": 780
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Electric Fireplace Guide",
+    "url": "https://downloads.hearthnhome.com/brochures/SFE-1023_Electric_Fireplace_Guide.pdf"
+   },
+   {
+    "label": "Allusion Edge (Canadian French)",
+    "url": "https://downloads.hearthnhome.com/installManuals/Translations/SF-ALLE-MANFR_ALLUSION-EDGE_INSTALL_FRENCH.pdf"
+   },
+   {
+    "label": "Allusion Edge Series",
+    "url": "https://downloads.hearthnhome.com/installManuals/SF-ALLE-MAN_ALLUSION-EDGE_ALLE50-60-78-100_INSTALL.pdf"
+   },
+   {
+    "label": "Allusion Edge Series",
+    "url": "https://downloads.hearthnhome.com/installManuals/SF-ALLE-FSM_ALLUSION-EDGE_ALLE50-60-78-100_SERVICE.pdf"
+   },
+   {
+    "label": "Allusion Edge 100",
+    "url": "https://downloads.hearthnhome.com/serviceParts/SF-ALLE100.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.simplifire.com/products/allusion-edge",
+  "enabled": true
+ },
+ {
+  "id": "sf-allusion-edge-60-fireplace",
+  "slug": "allusion-edge-60-fireplace",
+  "brandId": "sf",
+  "name": "Allusion Edge 60″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Lifelike digital flames flicker and crackle over glowing logs and embers, delivering all the cozy feels within a modern fireplace design. A sleek profile and subtle heat vents keep the focus on the fire, while slide-in installation and an optional build-out kit make it easy to integrate beautifully. Choose your favorite flame look, control it by remote or app, and enjoy with or without heat all year long. Available in 50, 60, 78 and 100-inch widths.",
+  "specs": [],
+  "options": [
+   {
+    "id": "interior",
+    "label": "Options",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "hand-painted-logs",
+      "name": "Hand-Painted Logs"
+     },
+     {
+      "id": "decorative-spheres",
+      "name": "Decorative Spheres"
+     },
+     {
+      "id": "glowing-birch-logs",
+      "name": "Glowing birch logs"
+     },
+     {
+      "id": "kit",
+      "name": "Kit"
+     },
+     {
+      "id": "boyd-build-out-kit-ready-to-paint",
+      "name": "Boyd Build-out Kit - Ready to Paint"
+     },
+     {
+      "id": "boyd-build-out-kit-white-shiplap",
+      "name": "Boyd Build-out Kit - White Shiplap"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/simplifire/hero/402eb289-14-sfe-allusedge-100-crystals-chromaticflames-cabin.webp",
+    "alt": "Allusion Edge electric fireplace",
+    "width": 1400,
+    "height": 977
+   },
+   "gallery": [
+    {
+     "src": "/catalog/simplifire/gallery/08a4fc99-2c-sfe-allusedge-50-blkgls-birchlogs-orangesignatureflames-s.webp",
+     "alt": "SimpliFire Allusion Edge electric fireplace product",
+     "width": 1400,
+     "height": 561
+    },
+    {
+     "src": "/catalog/simplifire/gallery/55373ceb-11-sfe-allusedge-78-birchlogs-classicflames-tilewall-adobest.webp",
+     "alt": "Fireplace against white sofa and rustic wooden coffee table. Scandinavian style home interior design of modern living room",
+     "width": 1400,
+     "height": 780
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Electric Fireplace Guide",
+    "url": "https://downloads.hearthnhome.com/brochures/SFE-1023_Electric_Fireplace_Guide.pdf"
+   },
+   {
+    "label": "Allusion Edge (Canadian French)",
+    "url": "https://downloads.hearthnhome.com/installManuals/Translations/SF-ALLE-MANFR_ALLUSION-EDGE_INSTALL_FRENCH.pdf"
+   },
+   {
+    "label": "Allusion Edge Series",
+    "url": "https://downloads.hearthnhome.com/installManuals/SF-ALLE-MAN_ALLUSION-EDGE_ALLE50-60-78-100_INSTALL.pdf"
+   },
+   {
+    "label": "Allusion Edge Series",
+    "url": "https://downloads.hearthnhome.com/installManuals/SF-ALLE-FSM_ALLUSION-EDGE_ALLE50-60-78-100_SERVICE.pdf"
+   },
+   {
+    "label": "Allusion Edge 100",
+    "url": "https://downloads.hearthnhome.com/serviceParts/SF-ALLE100.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.simplifire.com/products/allusion-edge",
+  "enabled": true
+ },
+ {
+  "id": "sf-allusion-edge-78-fireplace",
+  "slug": "allusion-edge-78-fireplace",
+  "brandId": "sf",
+  "name": "Allusion Edge 78″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Lifelike digital flames flicker and crackle over glowing logs and embers, delivering all the cozy feels within a modern fireplace design. A sleek profile and subtle heat vents keep the focus on the fire, while slide-in installation and an optional build-out kit make it easy to integrate beautifully. Choose your favorite flame look, control it by remote or app, and enjoy with or without heat all year long. Available in 50, 60, 78 and 100-inch widths.",
+  "specs": [],
+  "options": [
+   {
+    "id": "interior",
+    "label": "Options",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "hand-painted-logs",
+      "name": "Hand-Painted Logs"
+     },
+     {
+      "id": "decorative-spheres",
+      "name": "Decorative Spheres"
+     },
+     {
+      "id": "glowing-birch-logs",
+      "name": "Glowing birch logs"
+     },
+     {
+      "id": "kit",
+      "name": "Kit"
+     },
+     {
+      "id": "boyd-build-out-kit-ready-to-paint",
+      "name": "Boyd Build-out Kit - Ready to Paint"
+     },
+     {
+      "id": "boyd-build-out-kit-white-shiplap",
+      "name": "Boyd Build-out Kit - White Shiplap"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/simplifire/hero/402eb289-14-sfe-allusedge-100-crystals-chromaticflames-cabin.webp",
+    "alt": "Allusion Edge electric fireplace",
+    "width": 1400,
+    "height": 977
+   },
+   "gallery": [
+    {
+     "src": "/catalog/simplifire/gallery/08a4fc99-2c-sfe-allusedge-50-blkgls-birchlogs-orangesignatureflames-s.webp",
+     "alt": "SimpliFire Allusion Edge electric fireplace product",
+     "width": 1400,
+     "height": 561
+    },
+    {
+     "src": "/catalog/simplifire/gallery/55373ceb-11-sfe-allusedge-78-birchlogs-classicflames-tilewall-adobest.webp",
+     "alt": "Fireplace against white sofa and rustic wooden coffee table. Scandinavian style home interior design of modern living room",
+     "width": 1400,
+     "height": 780
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Electric Fireplace Guide",
+    "url": "https://downloads.hearthnhome.com/brochures/SFE-1023_Electric_Fireplace_Guide.pdf"
+   },
+   {
+    "label": "Allusion Edge (Canadian French)",
+    "url": "https://downloads.hearthnhome.com/installManuals/Translations/SF-ALLE-MANFR_ALLUSION-EDGE_INSTALL_FRENCH.pdf"
+   },
+   {
+    "label": "Allusion Edge Series",
+    "url": "https://downloads.hearthnhome.com/installManuals/SF-ALLE-MAN_ALLUSION-EDGE_ALLE50-60-78-100_INSTALL.pdf"
+   },
+   {
+    "label": "Allusion Edge Series",
+    "url": "https://downloads.hearthnhome.com/installManuals/SF-ALLE-FSM_ALLUSION-EDGE_ALLE50-60-78-100_SERVICE.pdf"
+   },
+   {
+    "label": "Allusion Edge 100",
+    "url": "https://downloads.hearthnhome.com/serviceParts/SF-ALLE100.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.simplifire.com/products/allusion-edge",
+  "enabled": true
+ },
+ {
+  "id": "sf-allusion-edge-100-fireplace",
+  "slug": "allusion-edge-100-fireplace",
+  "brandId": "sf",
+  "name": "Allusion Edge 100″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Lifelike digital flames flicker and crackle over glowing logs and embers, delivering all the cozy feels within a modern fireplace design. A sleek profile and subtle heat vents keep the focus on the fire, while slide-in installation and an optional build-out kit make it easy to integrate beautifully. Choose your favorite flame look, control it by remote or app, and enjoy with or without heat all year long. Available in 50, 60, 78 and 100-inch widths.",
+  "specs": [],
+  "options": [
+   {
+    "id": "interior",
+    "label": "Options",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "hand-painted-logs",
+      "name": "Hand-Painted Logs"
+     },
+     {
+      "id": "decorative-spheres",
+      "name": "Decorative Spheres"
+     },
+     {
+      "id": "glowing-birch-logs",
+      "name": "Glowing birch logs"
+     },
+     {
+      "id": "kit",
+      "name": "Kit"
+     },
+     {
+      "id": "boyd-build-out-kit-ready-to-paint",
+      "name": "Boyd Build-out Kit - Ready to Paint"
+     },
+     {
+      "id": "boyd-build-out-kit-white-shiplap",
+      "name": "Boyd Build-out Kit - White Shiplap"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/simplifire/hero/402eb289-14-sfe-allusedge-100-crystals-chromaticflames-cabin.webp",
+    "alt": "Allusion Edge electric fireplace",
+    "width": 1400,
+    "height": 977
+   },
+   "gallery": [
+    {
+     "src": "/catalog/simplifire/gallery/08a4fc99-2c-sfe-allusedge-50-blkgls-birchlogs-orangesignatureflames-s.webp",
+     "alt": "SimpliFire Allusion Edge electric fireplace product",
+     "width": 1400,
+     "height": 561
+    },
+    {
+     "src": "/catalog/simplifire/gallery/55373ceb-11-sfe-allusedge-78-birchlogs-classicflames-tilewall-adobest.webp",
+     "alt": "Fireplace against white sofa and rustic wooden coffee table. Scandinavian style home interior design of modern living room",
+     "width": 1400,
+     "height": 780
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Electric Fireplace Guide",
+    "url": "https://downloads.hearthnhome.com/brochures/SFE-1023_Electric_Fireplace_Guide.pdf"
+   },
+   {
+    "label": "Allusion Edge (Canadian French)",
+    "url": "https://downloads.hearthnhome.com/installManuals/Translations/SF-ALLE-MANFR_ALLUSION-EDGE_INSTALL_FRENCH.pdf"
+   },
+   {
+    "label": "Allusion Edge Series",
+    "url": "https://downloads.hearthnhome.com/installManuals/SF-ALLE-MAN_ALLUSION-EDGE_ALLE50-60-78-100_INSTALL.pdf"
+   },
+   {
+    "label": "Allusion Edge Series",
+    "url": "https://downloads.hearthnhome.com/installManuals/SF-ALLE-FSM_ALLUSION-EDGE_ALLE50-60-78-100_SERVICE.pdf"
+   },
+   {
+    "label": "Allusion Edge 100",
+    "url": "https://downloads.hearthnhome.com/serviceParts/SF-ALLE100.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.simplifire.com/products/allusion-edge",
+  "enabled": true
+ },
+ {
+  "id": "sf-allusion-heritage-36-fireplace",
+  "slug": "allusion-heritage-36-fireplace",
+  "brandId": "sf",
+  "name": "Allusion Heritage 36″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "An electric fireplace. 10,000 BTU/hr input. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "The Allusion Heritage brings classic fireplace character into a clean, electric form. Lifelike logs and embers create a warm, inviting glow that can be enjoyed with or without heat. Subtle heat vents keep the focus on the flames, and it’s easy to personalize the look from nine flame effects and save your favorite settings. Installs almost anywhere. Feels right everywhere. Available in 36” and 42” square widths.",
+  "specs": [
+   {
+    "label": "Unit Width",
+    "value": "39-1/4\""
+   },
+   {
+    "label": "Unit Height",
+    "value": "31-1/2\""
+   },
+   {
+    "label": "Framing Width",
+    "value": "37-3/4\""
+   },
+   {
+    "label": "Framing Depth",
+    "value": "12\""
+   },
+   {
+    "label": "Framing Height",
+    "value": "31-1/2\""
+   },
+   {
+    "label": "BTU/hr Input",
+    "value": "120 volt: 4,800; 240 volt: 10,000"
+   },
+   {
+    "label": "Viewing Area",
+    "value": "34\" x 27\""
+   }
+  ],
+  "heat": {
+   "btuMax": 10000
+  },
+  "dimensions": {
+   "width": 39.25,
+   "height": 31.5
+  },
+  "options": [
+   {
+    "id": "interior",
+    "label": "Interior panels",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "reflective-black-glass",
+      "name": "Reflective Black Glass"
+     },
+     {
+      "id": "hand-painted-logs",
+      "name": "Hand-Painted Logs"
+     },
+     {
+      "id": "allusion-heritage-glowing-birch-log-set",
+      "name": "Allusion Heritage Glowing Birch Log Set"
+     },
+     {
+      "id": "ceramic-white-stones",
+      "name": "Ceramic White Stones"
+     },
+     {
+      "id": "decorative-stacked-spheres",
+      "name": "Decorative Stacked Spheres"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/simplifire/hero/9da72cfe-2-sfe-allusionheritage-blkbrick-timberlogs-so-rm.webp",
+    "alt": "Allusion Heritage electric fireplace",
+    "width": 1400,
+    "height": 900
+   },
+   "gallery": [
+    {
+     "src": "/catalog/simplifire/gallery/6d48e117-4-sfe-allusionheritage-42-blkglass-timlogs-so-rm-4.webp",
+     "alt": "SimpliFire Allusion Heritage 42 inch electric fireplace",
+     "width": 1200,
+     "height": 1200
+    },
+    {
+     "src": "/catalog/simplifire/gallery/1989df4a-1-sfe-allusheritage-spheres-blkglasref-graypan-rm.webp",
+     "alt": "Allusion Heritage traditional electric fireplace",
+     "width": 1400,
+     "height": 764
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://www.simplifire.com/products/allusion-heritage",
+  "enabled": true
+ },
+ {
+  "id": "sf-allusion-heritage-42-fireplace",
+  "slug": "allusion-heritage-42-fireplace",
+  "brandId": "sf",
+  "name": "Allusion Heritage 42″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "An electric fireplace. 10,000 BTU/hr input. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "The Allusion Heritage brings classic fireplace character into a clean, electric form. Lifelike logs and embers create a warm, inviting glow that can be enjoyed with or without heat. Subtle heat vents keep the focus on the flames, and it’s easy to personalize the look from nine flame effects and save your favorite settings. Installs almost anywhere. Feels right everywhere. Available in 36” and 42” square widths.",
+  "specs": [
+   {
+    "label": "Unit Width",
+    "value": "42-7/16\""
+   },
+   {
+    "label": "Unit Height",
+    "value": "40\""
+   },
+   {
+    "label": "Framing Width",
+    "value": "42\""
+   },
+   {
+    "label": "Framing Depth",
+    "value": "13-1/2\""
+   },
+   {
+    "label": "Framing Height",
+    "value": "40-1/4\""
+   },
+   {
+    "label": "BTU/hr Input",
+    "value": "120 volt: 4,800; 240 volt: 10,000"
+   },
+   {
+    "label": "Viewing Area",
+    "value": "38-7/16\" x 35-3/4\""
+   }
+  ],
+  "heat": {
+   "btuMax": 10000
+  },
+  "dimensions": {
+   "width": 42.4375,
+   "height": 40
+  },
+  "options": [
+   {
+    "id": "interior",
+    "label": "Interior panels",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "reflective-black-glass",
+      "name": "Reflective Black Glass"
+     },
+     {
+      "id": "hand-painted-logs",
+      "name": "Hand-Painted Logs"
+     },
+     {
+      "id": "allusion-heritage-glowing-birch-log-set",
+      "name": "Allusion Heritage Glowing Birch Log Set"
+     },
+     {
+      "id": "ceramic-white-stones",
+      "name": "Ceramic White Stones"
+     },
+     {
+      "id": "decorative-stacked-spheres",
+      "name": "Decorative Stacked Spheres"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/simplifire/hero/9da72cfe-2-sfe-allusionheritage-blkbrick-timberlogs-so-rm.webp",
+    "alt": "Allusion Heritage electric fireplace",
+    "width": 1400,
+    "height": 900
+   },
+   "gallery": [
+    {
+     "src": "/catalog/simplifire/gallery/6d48e117-4-sfe-allusionheritage-42-blkglass-timlogs-so-rm-4.webp",
+     "alt": "SimpliFire Allusion Heritage 42 inch electric fireplace",
+     "width": 1200,
+     "height": 1200
+    },
+    {
+     "src": "/catalog/simplifire/gallery/1989df4a-1-sfe-allusheritage-spheres-blkglasref-graypan-rm.webp",
+     "alt": "Allusion Heritage traditional electric fireplace",
+     "width": 1400,
+     "height": 764
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://www.simplifire.com/products/allusion-heritage",
+  "enabled": true
+ },
+ {
+  "id": "sf-allusion-platinum-50-fireplace",
+  "slug": "allusion-platinum-50-fireplace",
+  "brandId": "sf",
+  "name": "Allusion Platinum 50″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace. 5,000 BTU/hr input. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "With the modern design of the Allusion Platinum, you can easily create a cozy atmosphere with an optional build-out kit or wall-mount kit, or enjoy a built-in, flush design installed by pros. Use this electric fireplace year-round, with or without heat. Available in 50-inch, 60-inch, and 72-inch fireplace widths.",
+  "specs": [
+   {
+    "label": "Unit Width",
+    "value": "52-5/16\""
+   },
+   {
+    "label": "Unit Depth",
+    "value": "5-5/8\""
+   },
+   {
+    "label": "Unit Height",
+    "value": "20-7/16\""
+   },
+   {
+    "label": "Framing Width",
+    "value": "51\""
+   },
+   {
+    "label": "Framing Depth",
+    "value": "6\""
+   },
+   {
+    "label": "Framing Height",
+    "value": "19-3/4\""
+   },
+   {
+    "label": "BTU/hr Input",
+    "value": "5,000"
+   },
+   {
+    "label": "Viewing Area",
+    "value": "48\" x 15\""
+   }
+  ],
+  "heat": {
+   "btuMax": 5000
+  },
+  "dimensions": {
+   "width": 52.3125,
+   "height": 20.4375,
+   "depth": 5.625
+  },
+  "options": [
+   {
+    "id": "interior",
+    "label": "Options",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "allusion-platinum-50",
+      "name": "Allusion Platinum 50"
+     },
+     {
+      "id": "allusion-platinum-60",
+      "name": "Allusion Platinum 60"
+     },
+     {
+      "id": "allusion-platinum-72",
+      "name": "Allusion Platinum 72"
+     },
+     {
+      "id": "hand-painted-logs",
+      "name": "Hand-Painted Logs"
+     },
+     {
+      "id": "driftwood",
+      "name": "Driftwood"
+     },
+     {
+      "id": "kit",
+      "name": "Kit"
+     },
+     {
+      "id": "boyd-build-out-kit-ready-to-paint",
+      "name": "Boyd Build-out Kit - Ready to Paint"
+     },
+     {
+      "id": "boyd-build-out-kit-white-shiplap",
+      "name": "Boyd Build-out Kit - White Shiplap"
+     },
+     {
+      "id": "wall-mount-kit",
+      "name": "Wall Mount Kit"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/simplifire/hero/38e6fc0b-img-product-card-simplifire-allusion-platinum-jpg.webp",
+    "alt": "Allusion Platinum electric fireplace",
+    "width": 1136,
+    "height": 852
+   },
+   "gallery": [
+    {
+     "src": "/catalog/simplifire/gallery/d262642b-img-pdp-simplifire-allusion-platinum-jpg.webp",
+     "alt": "SimpliFire Allusion Platinum 50-inch linear electric fireplace with black frame, clear crystal glass and blue LED flames.",
+     "width": 1400,
+     "height": 546
+    },
+    {
+     "src": "/catalog/simplifire/gallery/9d25045c-img-pdp-simplifire-allusion-platinum-room-shot-01-jpg.webp",
+     "alt": "SimpliFire Allusion Platinum 60-inch linear electric fireplace with blue LED flames in modern living room with white décor.",
+     "width": 1400,
+     "height": 788
+    },
+    {
+     "src": "/catalog/simplifire/gallery/db4adf6b-img-pdp-simplifire-allusion-platinum-room-shot-02-jpg.webp",
+     "alt": "SimpliFire Allusion Platinum 72-inch linear electric fireplace with orange LED flames in modern living room with gray decor",
+     "width": 1400,
+     "height": 788
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://www.simplifire.com/products/allusion-platinum-fireplace",
+  "enabled": true
+ },
+ {
+  "id": "sf-allusion-platinum-60-fireplace",
+  "slug": "allusion-platinum-60-fireplace",
+  "brandId": "sf",
+  "name": "Allusion Platinum 60″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace. 5,000 BTU/hr input. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "With the modern design of the Allusion Platinum, you can easily create a cozy atmosphere with an optional build-out kit or wall-mount kit, or enjoy a built-in, flush design installed by pros. Use this electric fireplace year-round, with or without heat. Available in 50-inch, 60-inch, and 72-inch fireplace widths.",
+  "specs": [
+   {
+    "label": "Unit Width",
+    "value": "62-5/16\""
+   },
+   {
+    "label": "Unit Depth",
+    "value": "5-5/8\""
+   },
+   {
+    "label": "Unit Height",
+    "value": "20-7/16\""
+   },
+   {
+    "label": "Framing Width",
+    "value": "61\""
+   },
+   {
+    "label": "Framing Depth",
+    "value": "6\""
+   },
+   {
+    "label": "Framing Height",
+    "value": "19-3/4\""
+   },
+   {
+    "label": "BTU/hr Input",
+    "value": "5,000"
+   },
+   {
+    "label": "Viewing Area",
+    "value": "58\" x 15\""
+   }
+  ],
+  "heat": {
+   "btuMax": 5000
+  },
+  "dimensions": {
+   "width": 62.3125,
+   "height": 20.4375,
+   "depth": 5.625
+  },
+  "options": [
+   {
+    "id": "interior",
+    "label": "Options",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "allusion-platinum-50",
+      "name": "Allusion Platinum 50"
+     },
+     {
+      "id": "allusion-platinum-60",
+      "name": "Allusion Platinum 60"
+     },
+     {
+      "id": "allusion-platinum-72",
+      "name": "Allusion Platinum 72"
+     },
+     {
+      "id": "hand-painted-logs",
+      "name": "Hand-Painted Logs"
+     },
+     {
+      "id": "driftwood",
+      "name": "Driftwood"
+     },
+     {
+      "id": "kit",
+      "name": "Kit"
+     },
+     {
+      "id": "boyd-build-out-kit-ready-to-paint",
+      "name": "Boyd Build-out Kit - Ready to Paint"
+     },
+     {
+      "id": "boyd-build-out-kit-white-shiplap",
+      "name": "Boyd Build-out Kit - White Shiplap"
+     },
+     {
+      "id": "wall-mount-kit",
+      "name": "Wall Mount Kit"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/simplifire/hero/38e6fc0b-img-product-card-simplifire-allusion-platinum-jpg.webp",
+    "alt": "Allusion Platinum electric fireplace",
+    "width": 1136,
+    "height": 852
+   },
+   "gallery": [
+    {
+     "src": "/catalog/simplifire/gallery/d262642b-img-pdp-simplifire-allusion-platinum-jpg.webp",
+     "alt": "SimpliFire Allusion Platinum 50-inch linear electric fireplace with black frame, clear crystal glass and blue LED flames.",
+     "width": 1400,
+     "height": 546
+    },
+    {
+     "src": "/catalog/simplifire/gallery/9d25045c-img-pdp-simplifire-allusion-platinum-room-shot-01-jpg.webp",
+     "alt": "SimpliFire Allusion Platinum 60-inch linear electric fireplace with blue LED flames in modern living room with white décor.",
+     "width": 1400,
+     "height": 788
+    },
+    {
+     "src": "/catalog/simplifire/gallery/db4adf6b-img-pdp-simplifire-allusion-platinum-room-shot-02-jpg.webp",
+     "alt": "SimpliFire Allusion Platinum 72-inch linear electric fireplace with orange LED flames in modern living room with gray decor",
+     "width": 1400,
+     "height": 788
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://www.simplifire.com/products/allusion-platinum-fireplace",
+  "enabled": true
+ },
+ {
+  "id": "sf-allusion-platinum-72-fireplace",
+  "slug": "allusion-platinum-72-fireplace",
+  "brandId": "sf",
+  "name": "Allusion Platinum 72″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace. 5,000 BTU/hr input. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "With the modern design of the Allusion Platinum, you can easily create a cozy atmosphere with an optional build-out kit or wall-mount kit, or enjoy a built-in, flush design installed by pros. Use this electric fireplace year-round, with or without heat. Available in 50-inch, 60-inch, and 72-inch fireplace widths.",
+  "specs": [
+   {
+    "label": "Unit Width",
+    "value": "74-5/16\""
+   },
+   {
+    "label": "Unit Depth",
+    "value": "5-5/8\""
+   },
+   {
+    "label": "Unit Height",
+    "value": "20-7/16\""
+   },
+   {
+    "label": "Framing Width",
+    "value": "73\""
+   },
+   {
+    "label": "Framing Depth",
+    "value": "6\""
+   },
+   {
+    "label": "Framing Height",
+    "value": "19-3/4\""
+   },
+   {
+    "label": "BTU/hr Input",
+    "value": "5,000"
+   },
+   {
+    "label": "Viewing Area",
+    "value": "70\" x 15\""
+   }
+  ],
+  "heat": {
+   "btuMax": 5000
+  },
+  "dimensions": {
+   "width": 74.3125,
+   "height": 20.4375,
+   "depth": 5.625
+  },
+  "options": [
+   {
+    "id": "interior",
+    "label": "Options",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "allusion-platinum-50",
+      "name": "Allusion Platinum 50"
+     },
+     {
+      "id": "allusion-platinum-60",
+      "name": "Allusion Platinum 60"
+     },
+     {
+      "id": "allusion-platinum-72",
+      "name": "Allusion Platinum 72"
+     },
+     {
+      "id": "hand-painted-logs",
+      "name": "Hand-Painted Logs"
+     },
+     {
+      "id": "driftwood",
+      "name": "Driftwood"
+     },
+     {
+      "id": "kit",
+      "name": "Kit"
+     },
+     {
+      "id": "boyd-build-out-kit-ready-to-paint",
+      "name": "Boyd Build-out Kit - Ready to Paint"
+     },
+     {
+      "id": "boyd-build-out-kit-white-shiplap",
+      "name": "Boyd Build-out Kit - White Shiplap"
+     },
+     {
+      "id": "wall-mount-kit",
+      "name": "Wall Mount Kit"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/simplifire/hero/38e6fc0b-img-product-card-simplifire-allusion-platinum-jpg.webp",
+    "alt": "Allusion Platinum electric fireplace",
+    "width": 1136,
+    "height": 852
+   },
+   "gallery": [
+    {
+     "src": "/catalog/simplifire/gallery/d262642b-img-pdp-simplifire-allusion-platinum-jpg.webp",
+     "alt": "SimpliFire Allusion Platinum 50-inch linear electric fireplace with black frame, clear crystal glass and blue LED flames.",
+     "width": 1400,
+     "height": 546
+    },
+    {
+     "src": "/catalog/simplifire/gallery/9d25045c-img-pdp-simplifire-allusion-platinum-room-shot-01-jpg.webp",
+     "alt": "SimpliFire Allusion Platinum 60-inch linear electric fireplace with blue LED flames in modern living room with white décor.",
+     "width": 1400,
+     "height": 788
+    },
+    {
+     "src": "/catalog/simplifire/gallery/db4adf6b-img-pdp-simplifire-allusion-platinum-room-shot-02-jpg.webp",
+     "alt": "SimpliFire Allusion Platinum 72-inch linear electric fireplace with orange LED flames in modern living room with gray decor",
+     "width": 1400,
+     "height": 788
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://www.simplifire.com/products/allusion-platinum-fireplace",
+  "enabled": true
+ },
+ {
+  "id": "sf-allusion-slim-fireplace",
+  "slug": "allusion-slim-fireplace",
+  "brandId": "sf",
+  "name": "Allusion Slim",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "The ultra-slim, four-inch depth of the Allusion Slim make it the thinnest fireplace we offer. It can be installed directly into a 2x4 or 2x6 wall without taking up floor space. For a no-construction alternative, the optional Crestline wall-mount kit is available for 50\" and 60\" models, making it easy to add a stylish fireplace to almost any room. The ember bed features clear and black crystals, complemented by petite timber logs for added depth and realism. Available in 40, 50, 60 and 72-inch widths.",
+  "specs": [],
+  "options": [
+   {
+    "id": "interior",
+    "label": "Options",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "allusion-slim-40-electric-fireplace",
+      "name": "Allusion Slim 40 Electric Fireplace"
+     },
+     {
+      "id": "allusion-slim-50-electric-fireplace",
+      "name": "Allusion Slim 50 Electric Fireplace"
+     },
+     {
+      "id": "allusion-slim-60-electric-fireplace",
+      "name": "Allusion Slim 60 Electric Fireplace"
+     },
+     {
+      "id": "allusion-slim-72-electric-fireplace",
+      "name": "Allusion Slim 72 Electric Fireplace"
+     },
+     {
+      "id": "hand-painted-logs",
+      "name": "Hand-Painted Logs"
+     },
+     {
+      "id": "ceramic-white-stones",
+      "name": "Ceramic White Stones"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/simplifire/hero/9e3330a6-sfe-alluslim-72-crystalmedia-orangeredflames-logs-shot4.webp",
+    "alt": "Allusion Slim electric fireplace",
+    "width": 1400,
+    "height": 784
+   },
+   "gallery": [
+    {
+     "src": "/catalog/simplifire/gallery/e5f13e0e-6-sfe-alluslim-50-crystmedia-redmultiflames-logs-layers.webp",
+     "alt": "SimpliFire Allusion Slim electric fireplace",
+     "width": 1400,
+     "height": 534
+    },
+    {
+     "src": "/catalog/simplifire/gallery/59ecc2d9-sfe-allusionslim-72-basement.webp",
+     "alt": "SimpliFire Allusion Slim in basement setting.",
+     "width": 1400,
+     "height": 875
+    },
+    {
+     "src": "/catalog/simplifire/gallery/aa0b4437-sfe-allusionslim-50-bedroom.webp",
+     "alt": "SimpliFire Allusion Slim in bedroom setting.",
+     "width": 1200,
+     "height": 1200
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Electric Fireplace Guide",
+    "url": "https://downloads.hearthnhome.com/brochures/SFE-1023_Electric_Fireplace_Guide.pdf"
+   },
+   {
+    "label": "Allusion Slim",
+    "url": "https://downloads.hearthnhome.com/installManuals/SF-ALLS-MAN_SF-ALLS40-50-60-72_ALLUSION_SLIM_INSTALL.pdf"
+   },
+   {
+    "label": "Allusion Slim (Canadian French)",
+    "url": "https://stwebdocsp01.blob.core.windows.net/downloads/installmanuals/translations/sf-alls-manfr_allusion-slim_install_french.pdf"
+   },
+   {
+    "label": "Allusion Slim (US Spanish)",
+    "url": "https://stwebdocsp01.blob.core.windows.net/downloads/installmanuals/translations/sf-alls-mansp_allusion-slim_install_spanish.pdf"
+   },
+   {
+    "label": "Allusion Slim",
+    "url": "https://downloads.hearthnhome.com/installManuals/SF-ALLS-FSM_SF-ALLS40-50-60-72_ALLUSION_SLIM_SERVICE_MANUAL.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.simplifire.com/products/allusion-slim-fireplace",
+  "enabled": true
+ },
+ {
+  "id": "sf-format-36-fireplace",
+  "slug": "format-36-fireplace",
+  "brandId": "sf",
+  "name": "Format 36",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace. 5,000 BTU/hr input. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "The Format is the best electric fireplace for sleek, minimal style that requires zero hassle to hang. With its floating mantel, this white electric fireplace provides glow from LED flames, as well as moody mantel downlighting. Enjoy it year-round with or without heat. Available in 43-inch, 50-inch, and 60-inch fireplace widths.",
+  "specs": [
+   {
+    "label": "BTU/hr Input",
+    "value": "5,000"
+   },
+   {
+    "label": "Viewing Area",
+    "value": "36-1/16\" x 12-5/8\""
+   }
+  ],
+  "heat": {
+   "btuMax": 5000
+  },
+  "options": [
+   {
+    "id": "interior",
+    "label": "Options",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "floating-mantels",
+      "name": "Floating Mantels"
+     },
+     {
+      "id": "floating-mantel-kit-43-inch",
+      "name": "Floating Mantel Kit 43 inch"
+     },
+     {
+      "id": "floating-mantel-kit-50-inch",
+      "name": "Floating Mantel Kit 50 inch"
+     },
+     {
+      "id": "floating-mantel-kit-60-inch",
+      "name": "Floating Mantel Kit 60 inch"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/simplifire/hero/228d7240-sfe-format-floating-mantel-fireplace.webp",
+    "alt": "Format electric fireplace",
+    "width": 1400,
+    "height": 1050
+   },
+   "gallery": [
+    {
+     "src": "/catalog/simplifire/gallery/ba03332f-sfe50-format-so-o-b-flame.webp",
+     "alt": "50-inch Format Floating Mantel Fireplace with orange-blue lights, logs Product only",
+     "width": 1400,
+     "height": 708
+    },
+    {
+     "src": "/catalog/simplifire/gallery/0734e91b-sfe-format-floating-mantel-fireplace.webp",
+     "alt": "60-inch electric fireplace with floating mantel above and below on worn brick wall in mid-century modern living room.",
+     "width": 1200,
+     "height": 1200
+    },
+    {
+     "src": "/catalog/simplifire/gallery/1bbb3006-sfe-format-floating-mantel-fireplace.webp",
+     "alt": "Linear electric fireplace with split logs, orange flame, floating mantel and TV overhead in contemporary living room.",
+     "width": 1200,
+     "height": 1200
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://www.simplifire.com/products/format",
+  "enabled": true
+ },
+ {
+  "id": "sf-inception-36-fireplace",
+  "slug": "inception-36-fireplace",
+  "brandId": "sf",
+  "name": "Inception 36″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "traditional",
+  "summary": "An electric fireplace. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Enjoy total personalization of your electric fireplace. Choose from multiple fire backdrops with DigitalSpark technology, enhanced by a range of built-in sound effects. Plus, enjoy the flexibility of installing the Inception almost anywhere, either directly into the wall or with the Wescott mantel kit. Available in a 36-inch fireplace width.",
+  "specs": [
+   {
+    "label": "Unit Width",
+    "value": "41-1/4\""
+   },
+   {
+    "label": "Unit Depth",
+    "value": "8-7/8\""
+   },
+   {
+    "label": "Unit Height",
+    "value": "34-3/8\""
+   },
+   {
+    "label": "Framing Width",
+    "value": "42\""
+   },
+   {
+    "label": "Framing Depth",
+    "value": "8-3/4\""
+   },
+   {
+    "label": "Framing Height",
+    "value": "34-7/8\""
+   }
+  ],
+  "dimensions": {
+   "width": 41.25,
+   "height": 34.375,
+   "depth": 8.875
+  },
+  "options": [
+   {
+    "id": "interior",
+    "label": "Options",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "fronts-and-doors",
+      "name": "Fronts and Doors"
+     },
+     {
+      "id": "chateau-forge-front",
+      "name": "Chateau Forge Front"
+     },
+     {
+      "id": "chateau-forge-hand-crafted-iron",
+      "name": "Chateau Forge Hand-crafted Iron"
+     },
+     {
+      "id": "folio-front",
+      "name": "Folio Front"
+     },
+     {
+      "id": "black",
+      "name": "Black"
+     },
+     {
+      "id": "halston-front",
+      "name": "Halston Front"
+     },
+     {
+      "id": "hand-painted-logs",
+      "name": "Hand-Painted Logs"
+     },
+     {
+      "id": "log-and-grate-accessory",
+      "name": "Log and Grate Accessory"
+     },
+     {
+      "id": "kit",
+      "name": "Kit"
+     },
+     {
+      "id": "wescott-mantel-kit",
+      "name": "Wescott Mantel Kit"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/simplifire/hero/04b5106f-sfe-inception-castlestone-oak-folio-room-2336x1314.webp",
+    "alt": "Inception electric fireplace",
+    "width": 1400,
+    "height": 788
+   },
+   "gallery": [
+    {
+     "src": "/catalog/simplifire/gallery/d4436e7c-sfe-inception-blackstackedbrick-birch-activefire.webp",
+     "alt": "Simplifire Inception",
+     "width": 1200,
+     "height": 1200
+    },
+    {
+     "src": "/catalog/simplifire/gallery/666dc55c-sfe-inception-2026-blkwalker-blktradbrick-bwbirch-folio-room.webp",
+     "alt": "SimpliFire Inception traditional electric fireplace",
+     "width": 1200,
+     "height": 1200
+    },
+    {
+     "src": "/catalog/simplifire/gallery/65f64564-sfe-inception-2026-serenejute-folio-wescottmantel-flat.webp",
+     "alt": "SimpliFire Inception traditional electric fireplace",
+     "width": 1200,
+     "height": 1200
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://www.simplifire.com/products/inception",
+  "enabled": true
+ },
+ {
+  "id": "sf-scion-fireplace",
+  "slug": "scion-fireplace",
+  "brandId": "sf",
+  "name": "Scion",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "The Scion is a linear electric fireplace with a sophisticated design, including a modern, minimal front trim, no visible heater, and a built-in look with 16\" tall glass for a stunning view. Your choice of crystal media or driftwood logs complements vibrant LED flames and customizable ember bed colors, creating a captivating ambiance that’s tailored to your interior design style. Available in 43 and 55-inch widths.",
+  "specs": [],
+  "options": [
+   {
+    "id": "interior",
+    "label": "Options",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "hand-painted-logs",
+      "name": "Hand-Painted Logs"
+     },
+     {
+      "id": "decorative-spheres",
+      "name": "Decorative Spheres"
+     },
+     {
+      "id": "shadowglo-hd-alpine-timber-log-set",
+      "name": "ShadowGlo HD Alpine Timber Log Set"
+     },
+     {
+      "id": "shadowglo-hd-natural-birch-log-set",
+      "name": "ShadowGlo HD Natural Birch Log Set"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/simplifire/hero/03958cae-sfe-scion-55-driftwood-orgflames-room.webp",
+    "alt": "Scion electric fireplace",
+    "width": 1400,
+    "height": 784
+   },
+   "gallery": [
+    {
+     "src": "/catalog/simplifire/gallery/263eb2bd-sfe-scion43-clcrystals-orgflames-so.webp",
+     "alt": "SimpliFire Linear Electric Fireplace",
+     "width": 1400,
+     "height": 615
+    },
+    {
+     "src": "/catalog/simplifire/gallery/d2c3af1c-sfe-scion-43-timberlogs-orgflames-room.webp",
+     "alt": "Scion 43\" electric fireplace installed in a office.",
+     "width": 1400,
+     "height": 785
+    },
+    {
+     "src": "/catalog/simplifire/gallery/11f537b4-sfe-scion-43-clcrystals-orgflames-room.webp",
+     "alt": "SimpliFire 43\" linear electric fireplace in a modern apartment",
+     "width": 1400,
+     "height": 785
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Electric Fireplace Guide",
+    "url": "https://downloads.hearthnhome.com/brochures/SFE-1023_Electric_Fireplace_Guide.pdf"
+   },
+   {
+    "label": "Scion (Canadian French)",
+    "url": "https://downloads.hearthnhome.com/installManuals/Translations/SF-SCN-MANFR_SCION_INSTALL_FRENCH.pdf"
+   },
+   {
+    "label": "Scion Series",
+    "url": "https://downloads.hearthnhome.com/installManuals/SF-SCN-MAN_SCION_SF-SCN43-55_INSTALL.pdf"
+   },
+   {
+    "label": "Scion Series",
+    "url": "https://downloads.hearthnhome.com/installManuals/SF-SCN-FSM_SCION_SF-SCN43-55_SERVICE.pdf"
+   },
+   {
+    "label": "SF-SCN43",
+    "url": "https://downloads.hearthnhome.com/serviceParts/SF-SCN43.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.simplifire.com/products/scion-fireplace",
+  "enabled": true
+ },
+ {
+  "id": "sf-triton-50-fireplace",
+  "slug": "triton-50-fireplace",
+  "brandId": "sf",
+  "name": "Triton 50″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "The Triton electric fireplace is a showstopper with its impressive 20\" tall glass and modern, built-in design. Available in 50\", 65\" and 78\" lengths and three configurations, (one-sided, two-sided corner, three-sided bay) it adapts to any space and style. You can even link multiple units together for unlimited length, extra warmth and bold, continuous flames across a striking feature wall.",
+  "specs": [],
+  "options": [
+   {
+    "id": "interior",
+    "label": "Options",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "triton-50",
+      "name": "Triton 50"
+     },
+     {
+      "id": "triton-65",
+      "name": "Triton 65"
+     },
+     {
+      "id": "triton-78",
+      "name": "Triton 78"
+     },
+     {
+      "id": "floating-mantels",
+      "name": "Floating Mantels"
+     },
+     {
+      "id": "floating-mantel-kit",
+      "name": "Floating Mantel Kit"
+     },
+     {
+      "id": "hand-painted-logs",
+      "name": "Hand-Painted Logs"
+     },
+     {
+      "id": "birch-logs",
+      "name": "Birch Logs"
+     },
+     {
+      "id": "decorative-spheres",
+      "name": "Decorative Spheres"
+     },
+     {
+      "id": "kit",
+      "name": "Kit"
+     },
+     {
+      "id": "linking-kit-for-triton-extended-lengths",
+      "name": "Linking Kit for Triton Extended Lengths"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/simplifire/hero/9727cc21-sfe-triton78-timberlogs-orgflames.webp",
+    "alt": "Triton electric fireplace",
+    "width": 1400,
+    "height": 1076
+   },
+   "gallery": [
+    {
+     "src": "/catalog/simplifire/gallery/e0a242e3-sfe-triton50-blkglsembers-birchlogs-so.webp",
+     "alt": "SimpliFire Triton 50\" electric fireplace unit with birch logs",
+     "width": 1400,
+     "height": 573
+    },
+    {
+     "src": "/catalog/simplifire/gallery/34a98aae-sfe-triton65-bay-timberlogs-orgflames-room.webp",
+     "alt": "SimpliFire Triton 65\" Bay fireplace",
+     "width": 1400,
+     "height": 700
+    },
+    {
+     "src": "/catalog/simplifire/gallery/6aa73f3f-sfe-triton50-mantel-clrcrystals-orgflames-after.webp",
+     "alt": "SimpliFire Triton 50\" electric fireplace with floating mantel and clear crystal spheres",
+     "width": 1400,
+     "height": 788
+    },
+    {
+     "src": "/catalog/simplifire/gallery/51523979-triton-connecting-2-units.webp",
+     "alt": "SimpliFire Triton linking",
+     "width": 1200,
+     "height": 1200
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Electric Fireplace Guide",
+    "url": "https://downloads.hearthnhome.com/brochures/SFE-1023_Electric_Fireplace_Guide.pdf"
+   },
+   {
+    "label": "Triton (Canadian French)",
+    "url": "https://downloads.hearthnhome.com/installManuals/Translations/SF-TR-MANFR_TRITON_INSTALL_FRENCH.pdf"
+   },
+   {
+    "label": "Triton Series",
+    "url": "https://downloads.hearthnhome.com/installManuals/SF-TR-MAN_TRITON_%20SF-TR50-65-78_INSTALL.pdf"
+   },
+   {
+    "label": "Triton Series",
+    "url": "https://downloads.hearthnhome.com/installManuals/SF-TR-FSM_TRITON_%20SF-TR50-65-78_SERVICE.pdf"
+   },
+   {
+    "label": "SF-TR50",
+    "url": "https://downloads.hearthnhome.com/serviceParts/SF-TR50.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.simplifire.com/products/triton",
+  "enabled": true
+ },
+ {
+  "id": "sf-triton-65-fireplace",
+  "slug": "triton-65-fireplace",
+  "brandId": "sf",
+  "name": "Triton 65″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "The Triton electric fireplace is a showstopper with its impressive 20\" tall glass and modern, built-in design. Available in 50\", 65\" and 78\" lengths and three configurations, (one-sided, two-sided corner, three-sided bay) it adapts to any space and style. You can even link multiple units together for unlimited length, extra warmth and bold, continuous flames across a striking feature wall.",
+  "specs": [],
+  "options": [
+   {
+    "id": "interior",
+    "label": "Options",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "triton-50",
+      "name": "Triton 50"
+     },
+     {
+      "id": "triton-65",
+      "name": "Triton 65"
+     },
+     {
+      "id": "triton-78",
+      "name": "Triton 78"
+     },
+     {
+      "id": "floating-mantels",
+      "name": "Floating Mantels"
+     },
+     {
+      "id": "floating-mantel-kit",
+      "name": "Floating Mantel Kit"
+     },
+     {
+      "id": "hand-painted-logs",
+      "name": "Hand-Painted Logs"
+     },
+     {
+      "id": "birch-logs",
+      "name": "Birch Logs"
+     },
+     {
+      "id": "decorative-spheres",
+      "name": "Decorative Spheres"
+     },
+     {
+      "id": "kit",
+      "name": "Kit"
+     },
+     {
+      "id": "linking-kit-for-triton-extended-lengths",
+      "name": "Linking Kit for Triton Extended Lengths"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/simplifire/hero/9727cc21-sfe-triton78-timberlogs-orgflames.webp",
+    "alt": "Triton electric fireplace",
+    "width": 1400,
+    "height": 1076
+   },
+   "gallery": [
+    {
+     "src": "/catalog/simplifire/gallery/e0a242e3-sfe-triton50-blkglsembers-birchlogs-so.webp",
+     "alt": "SimpliFire Triton 50\" electric fireplace unit with birch logs",
+     "width": 1400,
+     "height": 573
+    },
+    {
+     "src": "/catalog/simplifire/gallery/34a98aae-sfe-triton65-bay-timberlogs-orgflames-room.webp",
+     "alt": "SimpliFire Triton 65\" Bay fireplace",
+     "width": 1400,
+     "height": 700
+    },
+    {
+     "src": "/catalog/simplifire/gallery/6aa73f3f-sfe-triton50-mantel-clrcrystals-orgflames-after.webp",
+     "alt": "SimpliFire Triton 50\" electric fireplace with floating mantel and clear crystal spheres",
+     "width": 1400,
+     "height": 788
+    },
+    {
+     "src": "/catalog/simplifire/gallery/51523979-triton-connecting-2-units.webp",
+     "alt": "SimpliFire Triton linking",
+     "width": 1200,
+     "height": 1200
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Electric Fireplace Guide",
+    "url": "https://downloads.hearthnhome.com/brochures/SFE-1023_Electric_Fireplace_Guide.pdf"
+   },
+   {
+    "label": "Triton (Canadian French)",
+    "url": "https://downloads.hearthnhome.com/installManuals/Translations/SF-TR-MANFR_TRITON_INSTALL_FRENCH.pdf"
+   },
+   {
+    "label": "Triton Series",
+    "url": "https://downloads.hearthnhome.com/installManuals/SF-TR-MAN_TRITON_%20SF-TR50-65-78_INSTALL.pdf"
+   },
+   {
+    "label": "Triton Series",
+    "url": "https://downloads.hearthnhome.com/installManuals/SF-TR-FSM_TRITON_%20SF-TR50-65-78_SERVICE.pdf"
+   },
+   {
+    "label": "SF-TR50",
+    "url": "https://downloads.hearthnhome.com/serviceParts/SF-TR50.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.simplifire.com/products/triton",
+  "enabled": true
+ },
+ {
+  "id": "sf-triton-78-fireplace",
+  "slug": "triton-78-fireplace",
+  "brandId": "sf",
+  "name": "Triton 78″",
+  "fuel": "electric",
+  "kind": "fireplace",
+  "style": "linear",
+  "summary": "An electric linear fireplace. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "The Triton electric fireplace is a showstopper with its impressive 20\" tall glass and modern, built-in design. Available in 50\", 65\" and 78\" lengths and three configurations, (one-sided, two-sided corner, three-sided bay) it adapts to any space and style. You can even link multiple units together for unlimited length, extra warmth and bold, continuous flames across a striking feature wall.",
+  "specs": [],
+  "options": [
+   {
+    "id": "interior",
+    "label": "Options",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "triton-50",
+      "name": "Triton 50"
+     },
+     {
+      "id": "triton-65",
+      "name": "Triton 65"
+     },
+     {
+      "id": "triton-78",
+      "name": "Triton 78"
+     },
+     {
+      "id": "floating-mantels",
+      "name": "Floating Mantels"
+     },
+     {
+      "id": "floating-mantel-kit",
+      "name": "Floating Mantel Kit"
+     },
+     {
+      "id": "hand-painted-logs",
+      "name": "Hand-Painted Logs"
+     },
+     {
+      "id": "birch-logs",
+      "name": "Birch Logs"
+     },
+     {
+      "id": "decorative-spheres",
+      "name": "Decorative Spheres"
+     },
+     {
+      "id": "kit",
+      "name": "Kit"
+     },
+     {
+      "id": "linking-kit-for-triton-extended-lengths",
+      "name": "Linking Kit for Triton Extended Lengths"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/simplifire/hero/9727cc21-sfe-triton78-timberlogs-orgflames.webp",
+    "alt": "Triton electric fireplace",
+    "width": 1400,
+    "height": 1076
+   },
+   "gallery": [
+    {
+     "src": "/catalog/simplifire/gallery/e0a242e3-sfe-triton50-blkglsembers-birchlogs-so.webp",
+     "alt": "SimpliFire Triton 50\" electric fireplace unit with birch logs",
+     "width": 1400,
+     "height": 573
+    },
+    {
+     "src": "/catalog/simplifire/gallery/34a98aae-sfe-triton65-bay-timberlogs-orgflames-room.webp",
+     "alt": "SimpliFire Triton 65\" Bay fireplace",
+     "width": 1400,
+     "height": 700
+    },
+    {
+     "src": "/catalog/simplifire/gallery/6aa73f3f-sfe-triton50-mantel-clrcrystals-orgflames-after.webp",
+     "alt": "SimpliFire Triton 50\" electric fireplace with floating mantel and clear crystal spheres",
+     "width": 1400,
+     "height": 788
+    },
+    {
+     "src": "/catalog/simplifire/gallery/51523979-triton-connecting-2-units.webp",
+     "alt": "SimpliFire Triton linking",
+     "width": 1200,
+     "height": 1200
+    }
+   ]
+  },
+  "docs": [
+   {
+    "label": "Electric Fireplace Guide",
+    "url": "https://downloads.hearthnhome.com/brochures/SFE-1023_Electric_Fireplace_Guide.pdf"
+   },
+   {
+    "label": "Triton (Canadian French)",
+    "url": "https://downloads.hearthnhome.com/installManuals/Translations/SF-TR-MANFR_TRITON_INSTALL_FRENCH.pdf"
+   },
+   {
+    "label": "Triton Series",
+    "url": "https://downloads.hearthnhome.com/installManuals/SF-TR-MAN_TRITON_%20SF-TR50-65-78_INSTALL.pdf"
+   },
+   {
+    "label": "Triton Series",
+    "url": "https://downloads.hearthnhome.com/installManuals/SF-TR-FSM_TRITON_%20SF-TR50-65-78_SERVICE.pdf"
+   },
+   {
+    "label": "SF-TR50",
+    "url": "https://downloads.hearthnhome.com/serviceParts/SF-TR50.pdf"
+   }
+  ],
+  "sourceUrl": "https://www.simplifire.com/products/triton",
+  "enabled": true
+ },
+ {
+  "id": "sf-electric-insert-25-insert",
+  "slug": "electric-insert-25-insert",
+  "brandId": "sf",
+  "name": "Electric Insert 25″",
+  "fuel": "electric",
+  "kind": "insert",
+  "style": "traditional",
+  "summary": "An electric insert. 5,000 BTU/hr input. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Convert a drafty, dated fireplace into an eco-friendly, efficient source of warmth with an electric fireplace insert. The electric insert fits directly into a wood fireplace opening with a surround kit or any framed opening with the self-trimming design. Available in 25-inch, 30-inch and 35-inch insert widths.",
+  "specs": [
+   {
+    "label": "Minimum Opening Front Width",
+    "value": "25\""
+   },
+   {
+    "label": "Minimum Opening Back Width",
+    "value": "18\""
+   },
+   {
+    "label": "Minimum Opening Depth",
+    "value": "11-3/8\""
+   },
+   {
+    "label": "Minimum Opening Height",
+    "value": "16-3/8\""
+   },
+   {
+    "label": "BTU/hr Input",
+    "value": "5,000"
+   },
+   {
+    "label": "Viewing Area",
+    "value": "22\" x 12\""
+   }
+  ],
+  "heat": {
+   "btuMax": 5000
+  },
+  "fit": {
+   "minFrontWidth": 25,
+   "minHeight": 16.375,
+   "minDepth": 11.375,
+   "minRearWidth": 18,
+   "note": "Published by the maker as the minimum opening."
+  },
+  "options": [
+   {
+    "id": "interior",
+    "label": "Options",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "fronts-and-doors",
+      "name": "Fronts and Doors"
+     },
+     {
+      "id": "mission-door-front",
+      "name": "Mission Door Front"
+     },
+     {
+      "id": "insert-surrounds",
+      "name": "Insert Surrounds"
+     },
+     {
+      "id": "large-surround-four-sided-with-removable-bottom-piece",
+      "name": "Large surround, four-sided with removable bottom piece"
+     },
+     {
+      "id": "small-surround-four-sided-with-removable-bottom-piece",
+      "name": "Small surround, four-sided with removable bottom piece"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/simplifire/hero/f060b850-gi-32-zc-hi-res.webp",
+    "alt": "Traditional electric insert",
+    "width": 1400,
+    "height": 952
+   },
+   "gallery": [
+    {
+     "src": "/catalog/simplifire/gallery/f0a5fce6-sfe-35-in-mission-1110x624-jpg.webp",
+     "alt": "Fireplace electric insert with vivid flames rising from realistic-looking logs in metal grate over glowing embers.",
+     "width": 1110,
+     "height": 624
+    },
+    {
+     "src": "/catalog/simplifire/gallery/4741fd87-before-n-after-1110x624-jpg.webp",
+     "alt": "Before-and-after of dated masonry fireplace next to authentic-looking new 30\" fireplace electric insert with black surround.",
+     "width": 1110,
+     "height": 624
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://www.simplifire.com/products/electric-insert",
+  "enabled": true
+ },
+ {
+  "id": "sf-electric-insert-30-insert",
+  "slug": "electric-insert-30-insert",
+  "brandId": "sf",
+  "name": "Electric Insert 30″",
+  "fuel": "electric",
+  "kind": "insert",
+  "style": "traditional",
+  "summary": "An electric insert. 5,000 BTU/hr input. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Convert a drafty, dated fireplace into an eco-friendly, efficient source of warmth with an electric fireplace insert. The electric insert fits directly into a wood fireplace opening with a surround kit or any framed opening with the self-trimming design. Available in 25-inch, 30-inch and 35-inch insert widths.",
+  "specs": [
+   {
+    "label": "Minimum Opening Front Width",
+    "value": "30\""
+   },
+   {
+    "label": "Minimum Opening Back Width",
+    "value": "23\""
+   },
+   {
+    "label": "Minimum Opening Depth",
+    "value": "11-3/8\""
+   },
+   {
+    "label": "Minimum Opening Height",
+    "value": "20-5/8\""
+   },
+   {
+    "label": "BTU/hr Input",
+    "value": "5,000"
+   },
+   {
+    "label": "Viewing Area",
+    "value": "27\" x 16-1/4\""
+   }
+  ],
+  "heat": {
+   "btuMax": 5000
+  },
+  "fit": {
+   "minFrontWidth": 30,
+   "minHeight": 20.625,
+   "minDepth": 11.375,
+   "minRearWidth": 23,
+   "note": "Published by the maker as the minimum opening."
+  },
+  "options": [
+   {
+    "id": "interior",
+    "label": "Options",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "fronts-and-doors",
+      "name": "Fronts and Doors"
+     },
+     {
+      "id": "mission-door-front",
+      "name": "Mission Door Front"
+     },
+     {
+      "id": "insert-surrounds",
+      "name": "Insert Surrounds"
+     },
+     {
+      "id": "large-surround-four-sided-with-removable-bottom-piece",
+      "name": "Large surround, four-sided with removable bottom piece"
+     },
+     {
+      "id": "small-surround-four-sided-with-removable-bottom-piece",
+      "name": "Small surround, four-sided with removable bottom piece"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/simplifire/hero/f060b850-gi-32-zc-hi-res.webp",
+    "alt": "Traditional electric insert",
+    "width": 1400,
+    "height": 952
+   },
+   "gallery": [
+    {
+     "src": "/catalog/simplifire/gallery/f0a5fce6-sfe-35-in-mission-1110x624-jpg.webp",
+     "alt": "Fireplace electric insert with vivid flames rising from realistic-looking logs in metal grate over glowing embers.",
+     "width": 1110,
+     "height": 624
+    },
+    {
+     "src": "/catalog/simplifire/gallery/4741fd87-before-n-after-1110x624-jpg.webp",
+     "alt": "Before-and-after of dated masonry fireplace next to authentic-looking new 30\" fireplace electric insert with black surround.",
+     "width": 1110,
+     "height": 624
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://www.simplifire.com/products/electric-insert",
+  "enabled": true
+ },
+ {
+  "id": "sf-electric-insert-35-insert",
+  "slug": "electric-insert-35-insert",
+  "brandId": "sf",
+  "name": "Electric Insert 35″",
+  "fuel": "electric",
+  "kind": "insert",
+  "style": "traditional",
+  "summary": "An electric insert. 5,000 BTU/hr input. Plugs in or is hardwired. No gas line, no chimney.",
+  "makerDescription": "Convert a drafty, dated fireplace into an eco-friendly, efficient source of warmth with an electric fireplace insert. The electric insert fits directly into a wood fireplace opening with a surround kit or any framed opening with the self-trimming design. Available in 25-inch, 30-inch and 35-inch insert widths.",
+  "specs": [
+   {
+    "label": "Minimum Opening Front Width",
+    "value": "35-1/8\""
+   },
+   {
+    "label": "Minimum Opening Back Width",
+    "value": "28-1/8\""
+   },
+   {
+    "label": "Minimum Opening Depth",
+    "value": "11-3/8\""
+   },
+   {
+    "label": "Minimum Opening Height",
+    "value": "23-3/8\""
+   },
+   {
+    "label": "BTU/hr Input",
+    "value": "5,000"
+   },
+   {
+    "label": "Viewing Area",
+    "value": "32-1/8\" x 19\""
+   }
+  ],
+  "heat": {
+   "btuMax": 5000
+  },
+  "fit": {
+   "minFrontWidth": 35.125,
+   "minHeight": 23.375,
+   "minDepth": 11.375,
+   "minRearWidth": 28.125,
+   "note": "Published by the maker as the minimum opening."
+  },
+  "options": [
+   {
+    "id": "interior",
+    "label": "Options",
+    "area": "interior",
+    "required": false,
+    "limit": 1,
+    "options": [
+     {
+      "id": "fronts-and-doors",
+      "name": "Fronts and Doors"
+     },
+     {
+      "id": "mission-door-front",
+      "name": "Mission Door Front"
+     },
+     {
+      "id": "insert-surrounds",
+      "name": "Insert Surrounds"
+     },
+     {
+      "id": "large-surround-four-sided-with-removable-bottom-piece",
+      "name": "Large surround, four-sided with removable bottom piece"
+     },
+     {
+      "id": "small-surround-four-sided-with-removable-bottom-piece",
+      "name": "Small surround, four-sided with removable bottom piece"
+     }
+    ]
+   }
+  ],
+  "images": {
+   "hero": {
+    "src": "/catalog/simplifire/hero/f060b850-gi-32-zc-hi-res.webp",
+    "alt": "Traditional electric insert",
+    "width": 1400,
+    "height": 952
+   },
+   "gallery": [
+    {
+     "src": "/catalog/simplifire/gallery/f0a5fce6-sfe-35-in-mission-1110x624-jpg.webp",
+     "alt": "Fireplace electric insert with vivid flames rising from realistic-looking logs in metal grate over glowing embers.",
+     "width": 1110,
+     "height": 624
+    },
+    {
+     "src": "/catalog/simplifire/gallery/4741fd87-before-n-after-1110x624-jpg.webp",
+     "alt": "Before-and-after of dated masonry fireplace next to authentic-looking new 30\" fireplace electric insert with black surround.",
+     "width": 1110,
+     "height": 624
+    }
+   ]
+  },
+  "docs": [],
+  "sourceUrl": "https://www.simplifire.com/products/electric-insert",
+  "enabled": true
+ }
+]

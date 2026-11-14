@@ -55,7 +55,10 @@ export default function RouteHead() {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    applyHead(routeFor(pathname) ?? { ...NOT_FOUND_META, path: pathname });
+    const meta = routeFor(pathname);
+    // Shop category/product heads are set by the shop page itself (catalog loads lazily).
+    if (meta) applyHead(meta);
+    else if (!pathname.startsWith('/fireplace-shop/')) applyHead({ ...NOT_FOUND_META, path: pathname });
     track('page_view', { path: pathname });
   }, [pathname]);
 
