@@ -39,7 +39,7 @@ export const GENERAL_FAQS: { q: string; a: string }[] = [
   },
   {
     q: 'Can I design a new fireplace with you?',
-    a: 'Yes. Use the Design Your Fireplace tool to explore styles, materials and finishes, then send the design to us. It is a starting point for a conversation, not a quote, and we confirm what is possible on site.',
+    a: 'Yes. Use the Build Your Fireplace tool to explore styles, materials and finishes, then send the design to us. It is a starting point for a conversation, not a quote, and we confirm what is possible on site.',
   },
 ];
 

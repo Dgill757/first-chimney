@@ -1,12 +1,12 @@
 ﻿import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { AnimatePresence, motion, useReducedMotion, useScroll, useTransform } from 'motion/react';
-import { ArrowRight, ArrowUpRight, BadgeCheck, Camera, ClipboardList, Hammer, MessageSquareText, Phone, ShieldCheck, Sparkles, UserRound } from 'lucide-react';
+import { AnimatePresence, motion, useMotionTemplate, useMotionValue, useReducedMotion, useScroll, useSpring, useTransform } from 'motion/react';
+import { ArrowRight, ArrowUpRight, BadgeCheck, Camera, ClipboardList, Hammer, MessageSquareText, Phone, ShieldCheck, Sparkles, Star } from 'lucide-react';
 import FireplacePreview from '@/components/FireplacePreview';
 import { HolidayFeature } from '@/components/Holiday';
 import LeadForm from '@/components/LeadForm';
-import { CallLink, EASE, Faq, Reveal, SectionHeading, SERVICE_ICONS } from '@/components/ui';
-import { GENERAL_FAQS, REVIEWS } from '@/data/content';
+import { CallLink, EASE, Faq, FireButton, Reveal, SectionHeading, SERVICE_ICONS } from '@/components/ui';
+import { GENERAL_FAQS, PROJECTS, REVIEWS } from '@/data/content';
 import { DEFAULT_DESIGN, STYLES, SURROUNDS, type Design } from '@/data/designer';
 import { SERVICE_AREAS } from '@/data/serviceAreas';
 import { SERVICES, serviceById } from '@/data/services';
@@ -19,9 +19,32 @@ function Hero() {
   const live = promoIsLive();
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 700], ['0%', reduce ? '0%' : '12%']);
+  const fade = useTransform(scrollY, [0, 500], [1, reduce ? 1 : 0.35]);
+  // Warm glow that follows the cursor. Motion values + spring: no React re-renders.
+  const mx = useMotionValue(0.3);
+  const my = useMotionValue(0.55);
+  const sx = useSpring(mx, { stiffness: 60, damping: 18 });
+  const sy = useSpring(my, { stiffness: 60, damping: 18 });
+  const glow = useMotionTemplate`radial-gradient(38rem 28rem at ${useTransform(sx, (v) => `${v * 100}%`)} ${useTransform(sy, (v) => `${v * 100}%`)}, rgb(240 122 50 / 0.22), transparent 70%)`;
+
+  const embers = Array.from({ length: 18 }, (_, i) => ({
+    left: `${(i * 37 + 11) % 100}%`,
+    dur: `${10 + (i % 5) * 2.5}s`,
+    delay: `${(i * 0.9) % 12}s`,
+    drift: `${(i % 2 ? 1 : -1) * (12 + (i % 6) * 6)}px`,
+    size: 2 + (i % 3),
+  }));
 
   return (
-    <section className="relative flex min-h-[100dvh] items-end overflow-hidden pb-16 pt-36 md:items-center md:pb-24">
+    <section
+      className="relative flex min-h-[100dvh] items-end overflow-hidden pb-14 pt-36 md:items-center md:pb-20"
+      onPointerMove={(e) => {
+        if (reduce || e.pointerType !== 'mouse') return;
+        const r = e.currentTarget.getBoundingClientRect();
+        mx.set((e.clientX - r.left) / r.width);
+        my.set((e.clientY - r.top) / r.height);
+      }}
+    >
       <motion.div aria-hidden className="absolute inset-0" style={{ y }}>
         {reduce ? (
           <img src={IMAGES.heroPoster} alt="" className="h-full w-full object-cover" fetchPriority="high" />
@@ -33,9 +56,17 @@ function Hero() {
       </motion.div>
       <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-ink via-ink/75 to-ink/10" />
       <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-ink/60" />
+      {!reduce && <motion.div aria-hidden className="pointer-events-none absolute inset-0 hidden md:block" style={{ background: glow }} />}
+      {!reduce && (
+        <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+          {embers.map((e, i) => (
+            <span key={i} className="ember" style={{ left: e.left, width: e.size, height: e.size, animationDuration: e.dur, animationDelay: e.delay, ['--drift' as string]: e.drift }} />
+          ))}
+        </div>
+      )}
 
-      <div className="wrap relative">
-        <div className="max-w-3xl">
+      <motion.div className="wrap relative grid items-center gap-12 lg:grid-cols-[1.25fr_0.75fr]" style={{ opacity: fade }}>
+        <div className="min-w-0 max-w-3xl">
           <motion.p
             initial={reduce ? false : { opacity: 0, transform: 'translateY(10px)' }}
             animate={{ opacity: 1, transform: 'translateY(0px)' }}
@@ -45,7 +76,7 @@ function Hero() {
             <BadgeCheck className="h-4 w-4 text-ember" strokeWidth={1.75} aria-hidden />
             {CREDENTIALS.fire.label} <span className="text-dim">/</span> Owner-operated
           </motion.p>
-          <h1 className="display-xl mt-6 text-bone">
+          <h1 className="mt-6 text-[clamp(2.6rem,5.4vw,4.75rem)] text-bone">
             {['Chimney service', 'done right'].map((line, i) => (
               <motion.span
                 key={line}
@@ -58,7 +89,7 @@ function Hero() {
               </motion.span>
             ))}
             <motion.span
-              className="block text-ember"
+              className="block bg-gradient-to-r from-ember via-[#ffb066] to-ember bg-clip-text pb-1 text-transparent"
               initial={reduce ? false : { opacity: 0, transform: 'translateY(24px)', filter: 'blur(6px)' }}
               animate={{ opacity: 1, transform: 'translateY(0px)', filter: 'blur(0px)' }}
               transition={{ duration: 0.8, delay: 0.28, ease: EASE }}
@@ -66,33 +97,78 @@ function Hero() {
               the first time.
             </motion.span>
           </h1>
-          <motion.p
-            initial={reduce ? false : { opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.45 }}
-            className="lede mt-6 text-bone/80"
-          >
+          <motion.p initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.45 }} className="lede mt-6 text-bone/80">
             Cleaning, inspection and repair for homes in Virginia, New Jersey, Connecticut and Massachusetts.
           </motion.p>
           <motion.div
             initial={reduce ? false : { opacity: 0, transform: 'translateY(10px)' }}
             animate={{ opacity: 1, transform: 'translateY(0px)' }}
             transition={{ duration: 0.6, delay: 0.55, ease: EASE }}
-            className="mt-9 flex flex-wrap gap-3"
+            className="mt-9 flex flex-wrap items-center gap-3"
           >
             {live ? (
               <Link to={HOLIDAY_PROMO.path} onClick={() => track('promo_cta_click', { placement: 'home_hero' })} className="btn btn-primary btn-lg">
-                Book the {HOLIDAY_PROMO.priceLabel} holiday special <ArrowRight className="h-5 w-5" aria-hidden />
+                Book the {HOLIDAY_PROMO.priceLabel} special <ArrowRight className="h-5 w-5" aria-hidden />
               </Link>
             ) : (
               <Link to="/contact" className="btn btn-primary btn-lg">
                 Schedule service <ArrowRight className="h-5 w-5" aria-hidden />
               </Link>
             )}
-            <CallLink placement="home_hero" className="btn btn-ghost btn-lg backdrop-blur-md" />
+            <FireButton placement="home_hero" size="lg" />
           </motion.div>
+          <motion.a
+            href={SITE.phoneHref}
+            onClick={() => track('click_to_call', { placement: 'home_hero' })}
+            initial={reduce ? false : { opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+            className="mt-5 inline-flex items-center gap-2 text-[0.98rem] text-bone/85 hover:text-ember"
+          >
+            <Phone className="h-4 w-4 text-ember" aria-hidden /> Or call or text {SITE.owner.split(' ')[0]}: <span className="font-semibold text-bone">{SITE.phoneDisplay}</span>
+          </motion.a>
         </div>
-      </div>
+
+        {/* Floating offer + trust card (desktop) */}
+        <motion.aside
+          aria-label="Holiday special and our promise"
+          initial={reduce ? false : { opacity: 0, transform: 'translateY(30px)' }}
+          animate={{ opacity: 1, transform: 'translateY(0px)' }}
+          transition={{ duration: 0.9, delay: 0.75, ease: EASE }}
+          className="hidden lg:block"
+        >
+          <div className="rounded-[24px] border border-white/12 bg-ink/55 p-6 shadow-[0_40px_120px_-30px_rgb(0_0_0/0.9),inset_0_1px_0_rgb(255_255_255/0.08)] backdrop-blur-xl">
+            {live && (
+              <Link to={HOLIDAY_PROMO.path} onClick={() => track('promo_cta_click', { placement: 'hero_card' })} className="group block rounded-2xl border border-ember/30 bg-gradient-to-br from-ember/15 to-transparent p-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ember">{HOLIDAY_PROMO.eyebrow}</p>
+                <div className="mt-2 flex items-end justify-between gap-3">
+                  <span className="price-199 text-[4.2rem]">{HOLIDAY_PROMO.priceLabel}</span>
+                  <ArrowRight className="mb-3 h-5 w-5 text-ember transition-transform group-hover:translate-x-1" aria-hidden />
+                </div>
+                <p className="mt-1 text-sm text-bone">{HOLIDAY_PROMO.title}</p>
+              </Link>
+            )}
+            <ul className="mt-5 grid gap-3.5 text-[0.93rem] text-bone/90">
+              {[
+                [BadgeCheck, `${CREDENTIALS.fire.label} inspector`],
+                [ClipboardList, 'Written quote before any repair'],
+                [Sparkles, 'Drop cloths down, house left clean'],
+                [Camera, 'Photos of what we find'],
+              ].map(([I, t]) => {
+                const Icon = I as typeof BadgeCheck;
+                return (
+                  <li key={t as string} className="flex items-center gap-3">
+                    <span className="grid h-8 w-8 place-items-center rounded-full bg-white/[0.06] text-ember">
+                      <Icon className="h-4 w-4" strokeWidth={1.75} aria-hidden />
+                    </span>
+                    {t as string}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </motion.aside>
+      </motion.div>
     </section>
   );
 }
@@ -187,7 +263,7 @@ function DesignerTeaser() {
           </div>
         </Reveal>
         <div className="order-1 lg:order-2">
-          <p className="eyebrow">Design your fireplace</p>
+          <p className="eyebrow">Build your fireplace</p>
           <h2 id="designer-h" className="display-lg mt-4 text-bone">
             See it before anyone lifts a trowel.
           </h2>
@@ -233,9 +309,7 @@ function DesignerTeaser() {
             </div>
           </fieldset>
           <div className="mt-9 flex flex-wrap gap-3">
-            <Link to={`/design-your-fireplace?s=${design.style}&m=${design.surround}&t=${design.mantel}&h=${design.hearth}&f=${design.fire}`} className="btn btn-primary">
-              Open the full designer <ArrowRight className="h-4 w-4" aria-hidden />
-            </Link>
+            <FireButton placement="home_teaser" size="lg" label="Build your full fireplace" to={`/design-your-fireplace?s=${design.style}&m=${design.surround}&t=${design.mantel}&h=${design.hearth}&f=${design.fire}#builder`} />
             <Link to="/fireplace-shop" className="btn btn-ghost">
               Browse the fireplace shop
             </Link>
@@ -251,19 +325,25 @@ function WhyUs() {
     { i: Camera, t: 'We show you what we see', b: 'Findings come with photos where possible, so you are never asked to take a repair on faith.' },
     { i: ClipboardList, t: 'Quote first, work second', b: 'Anything beyond what you booked is explained and priced before a single tool comes out.' },
     { i: ShieldCheck, t: 'Certified, careful work', b: `${CREDENTIALS.fire.label} inspection, done the same careful way on every chimney.` },
-    { i: UserRound, t: 'An owner who answers', b: `First Chimney is owned and run by ${SITE.owner}. You deal with the person accountable for the work.` },
+    { i: Sparkles, t: 'Your home, respected', b: 'Drop cloths and containment go down first. We leave the room the way we found it.' },
   ];
   return (
     <section className="section border-y hairline bg-ink-2" aria-labelledby="why-h">
       <div className="wrap grid gap-14 lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="lg:sticky lg:top-32 lg:self-start">
-          <h2 id="why-h" className="display-lg text-bone">
+        <div className="min-w-0 lg:sticky lg:top-32 lg:self-start">
+          <p className="eyebrow">Who we are</p>
+          <h2 id="why-h" className="display-lg mt-4 text-bone">
             A newer company with an old-fashioned standard.
           </h2>
-          <p className="lede mt-5">First Chimney was built to be the company you would want working in your own house: clear answers, careful work, no upsell.</p>
-          <Link to="/about" className="link-arrow mt-8 inline-flex items-center gap-1.5 font-medium text-ember">
-            Meet First Chimney <ArrowRight className="h-4 w-4" aria-hidden />
-          </Link>
+          <p className="lede mt-5">
+            First Chimney Contracting is owned and run by {SITE.owner}, a {CREDENTIALS.fire.label.replace(' Certified', '-certified')} chimney inspector. When you call, you reach the person accountable for the work. No call center, no commission-driven upsell.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link to="/about" className="btn btn-ghost">
+              Meet First Chimney <ArrowRight className="h-4 w-4" aria-hidden />
+            </Link>
+            <CallLink placement="why_us" className="btn btn-ghost" />
+          </div>
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
           {items.map((x, i) => (
@@ -274,6 +354,92 @@ function WhyUs() {
             </Reveal>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
+
+/** Mid-page lead capture for visitors who know they want help but not which service. */
+function CallbackBand() {
+  return (
+    <section className="relative overflow-hidden border-y hairline" aria-labelledby="callback-h">
+      <div aria-hidden className="ember-glow absolute inset-0 opacity-70" />
+      <div className="wrap relative grid items-center gap-10 py-16 lg:grid-cols-[1fr_minmax(0,30rem)] lg:py-20">
+        <div className="min-w-0">
+          <h2 id="callback-h" className="display-md text-bone">
+            Not sure what you need? Talk it through with {SITE.owner.split(' ')[0]}.
+          </h2>
+          <p className="lede mt-4">Leave your number and we will call you back to talk about what you are seeing. No pressure, no sales script.</p>
+        </div>
+        <div className="card p-6" style={{ background: 'rgb(24 22 20 / 0.94)' }}>
+          <LeadForm formId="service-request" fields={['name', 'phone', 'zip']} required={['name', 'phone', 'zip']} submitLabel="Call me back" defaultService="Phone consultation" dense />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/** Our work + reviews, presented honestly while real photos and reviews are collected. */
+function WorkAndReviews() {
+  const projects = PROJECTS.filter((p) => p.permission);
+  return (
+    <section className="section" aria-labelledby="work-h">
+      <div className="wrap grid gap-6 lg:grid-cols-[1.25fr_0.75fr]">
+        <Reveal className="card overflow-hidden">
+          <div className="grid grid-cols-3 gap-1">
+            {(projects.length ? projects.slice(0, 3).map((p) => ({ src: p.after ?? p.photos[0]?.src, alt: p.title })) : [
+              { src: IMAGES.techRooftop, alt: 'Technician working on a brick chimney' },
+              { src: IMAGES.dropCloths, alt: 'Room protected with drop cloths during chimney service' },
+              { src: IMAGES.capSky, alt: 'Chimney with a metal cap' },
+            ]).map((im) => (
+              <div key={im.src} className="aspect-[4/5] overflow-hidden">
+                <img src={im.src} alt={im.alt} loading="lazy" className="h-full w-full object-cover" />
+              </div>
+            ))}
+          </div>
+          <div className="p-7">
+            <h2 id="work-h" className="text-2xl text-bone">
+              Our work
+            </h2>
+            <p className="mt-3 max-w-xl text-mute">
+              {projects.length
+                ? 'Real First Chimney jobs, photographed on site and shared with each homeowner’s permission.'
+                : 'Every visit is photographed start to finish so you see exactly what was done. Andrew’s project gallery is being built from those job photos, shared only with each homeowner’s permission. Photos above are representative.'}
+            </p>
+            <Link to="/gallery" className="link-arrow mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-ember">
+              View our work <ArrowRight className="h-4 w-4" aria-hidden />
+            </Link>
+          </div>
+        </Reveal>
+        <Reveal delay={0.08} className="card flex flex-col p-7">
+          <div className="flex gap-1 text-gold" aria-hidden>
+            {Array.from({ length: 5 }, (_, i) => (
+              <Star key={i} className={`h-5 w-5 ${REVIEWS.length ? 'fill-current' : ''}`} strokeWidth={1.5} />
+            ))}
+          </div>
+          <h2 className="mt-5 text-2xl text-bone">Reviews</h2>
+          {REVIEWS.length ? (
+            <figure className="mt-4">
+              <blockquote className="text-lg leading-relaxed text-bone">&ldquo;{REVIEWS[0].text}&rdquo;</blockquote>
+              <figcaption className="mt-3 text-sm text-mute">
+                {REVIEWS[0].author}
+                {REVIEWS[0].city ? `, ${REVIEWS[0].city}` : ''} on {REVIEWS[0].source}
+              </figcaption>
+            </figure>
+          ) : (
+            <p className="mt-3 text-mute">We are a new business and every review here will be real. We never buy, script or filter reviews. Our first customers&rsquo; reviews will appear here as they come in.</p>
+          )}
+          <div className="mt-auto flex flex-wrap gap-3 pt-6">
+            <Link to="/reviews" className="btn btn-ghost btn-sm">
+              Read reviews
+            </Link>
+            {promoIsLive() && (
+              <Link to={HOLIDAY_PROMO.path} onClick={() => track('promo_cta_click', { placement: 'reviews_card' })} className="btn btn-primary btn-sm">
+                Be one of our first
+              </Link>
+            )}
+          </div>
+        </Reveal>
       </div>
     </section>
   );
@@ -412,28 +578,6 @@ function Areas() {
   );
 }
 
-function ReviewsBlock() {
-  if (!REVIEWS.length) return null;
-  return (
-    <section className="section border-t hairline" aria-labelledby="reviews-h">
-      <div className="wrap">
-        <SectionHeading id="reviews-h" title="What homeowners say" />
-        <ul className="mt-12 grid gap-5 md:grid-cols-3">
-          {REVIEWS.slice(0, 3).map((r) => (
-            <li key={r.author + r.date} className="card p-7">
-              <p className="text-lg leading-relaxed text-bone">&ldquo;{r.text}&rdquo;</p>
-              <p className="mt-5 text-sm text-mute">
-                {r.author}
-                {r.city ? `, ${r.city}` : ''} on {r.source}
-              </p>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
-  );
-}
-
 function FaqBlock() {
   return (
     <section className="section border-t hairline" aria-labelledby="faq-h">
@@ -495,10 +639,11 @@ export default function Home() {
       {promoIsLive() && <HolidayFeature />}
       <DesignerTeaser />
       <WhyUs />
+      <WorkAndReviews />
       <SymptomFinder />
+      <CallbackBand />
       <Process />
       <Areas />
-      <ReviewsBlock />
       <FaqBlock />
       <FinalCta />
     </>

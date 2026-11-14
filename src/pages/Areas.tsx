@@ -1,7 +1,8 @@
 import { Link, useParams } from 'react-router-dom';
 import { ArrowRight, CloudRain, Home, MapPin } from 'lucide-react';
 import LeadForm from '@/components/LeadForm';
-import { Faq, PageIntro, Reveal, SERVICE_ICONS } from '@/components/ui';
+import { Faq, FireButton, PageIntro, Reveal, SERVICE_ICONS } from '@/components/ui';
+import { HOLIDAY_PROMO, promoIsLive } from '@/lib/promo';
 import { SERVICE_AREAS, isPublishableCity, publishedCities, stateBySlug } from '@/data/serviceAreas';
 import { SERVICES } from '@/data/services';
 import { routeFor } from '@/lib/routes';
@@ -26,14 +27,18 @@ export function ServiceAreasHub() {
                 </div>
                 <h2 className="mt-6 text-3xl text-bone">{s.name}</h2>
                 <p className="mt-3 leading-relaxed text-mute">{s.intro}</p>
-                <ul className="mt-6 flex flex-wrap gap-2">
-                  {s.watchFor.map((w) => (
-                    <li key={w.title} className="rounded-full border border-white/10 px-3 py-1 text-xs text-mute">
-                      {w.title}
+              </Link>
+              {publishedCities(s).length > 0 && (
+                <ul className="mt-3 flex flex-wrap gap-2 px-1">
+                  {publishedCities(s).map((c) => (
+                    <li key={c.slug}>
+                      <Link to={`/service-areas/${s.slug}/${c.slug}`} className="inline-flex items-center gap-1.5 rounded-full border border-white/12 px-3 py-1.5 text-sm text-mute hover:border-ember hover:text-bone">
+                        <MapPin className="h-3.5 w-3.5 text-ember" aria-hidden /> {c.name}
+                      </Link>
                     </li>
                   ))}
                 </ul>
-              </Link>
+              )}
             </Reveal>
           ))}
         </div>
@@ -128,7 +133,7 @@ export function StateArea() {
       </section>
 
       <section className="section border-t hairline">
-        <div className="wrap grid gap-12 lg:grid-cols-[1fr_minmax(0,30rem)]">
+        <div className="wrap grid grid-cols-[minmax(0,1fr)] gap-12 lg:grid-cols-[1fr_minmax(0,30rem)]">
           <div>
             <h2 className="display-md text-bone">{s.name} questions</h2>
             <Faq items={s.faqs} className="mt-8" />
@@ -149,25 +154,87 @@ function CityArea({ stateSlug, citySlug }: { stateSlug: string; citySlug: string
   const s = stateBySlug(stateSlug)!;
   const c = s.cities.find((x) => x.slug === citySlug)!;
   const r = routeFor(`/service-areas/${stateSlug}/${citySlug}`)!;
+  const others = publishedCities(s).filter((x) => x.slug !== c.slug);
+  const live = promoIsLive();
   return (
     <>
-      <PageIntro crumbs={r.crumbs} title={r.h1} lede={c.intro} />
+      <PageIntro crumbs={r.crumbs} eyebrow={`${c.county ? `${c.county}, ` : ''}${s.name}`} title={r.h1} lede={c.intro}>
+        <div className="flex flex-wrap gap-3">
+          <a href="#request" className="btn btn-primary">
+            Request service in {c.name}
+          </a>
+          <FireButton placement={`city_${c.slug}`} />
+          <a href={SITE.phoneHref} className="btn btn-ghost">
+            {SITE.phoneDisplay}
+          </a>
+        </div>
+      </PageIntro>
       <section className="section">
-        <div className="wrap grid gap-12 lg:grid-cols-[1fr_minmax(0,30rem)]">
-          <div>
-            <ul className="grid gap-4">
-              {c.localNotes.map((n) => (
-                <li key={n} className="card p-6 text-mute">
-                  {n}
-                </li>
-              ))}
-            </ul>
-            <Faq items={c.faqs} className="mt-12" />
+        <div className="wrap">
+          <h2 className="display-md text-bone">What we see in {c.name}</h2>
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
+            {c.localNotes.map((n, i) => (
+              <Reveal key={n} delay={i * 0.05} className="card p-7">
+                <span className="font-display text-3xl font-bold text-ember/70" style={{ fontStretch: '112%' }}>
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <p className="mt-4 leading-relaxed text-mute">{n}</p>
+              </Reveal>
+            ))}
           </div>
-          <div className="card p-6 sm:p-8">
+        </div>
+      </section>
+      <section className="section border-t hairline bg-ink-2">
+        <div className="wrap">
+          <h2 className="display-md text-bone">Chimney services in {c.name}</h2>
+          <ul className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {SERVICES.map((x) => {
+              const I = SERVICE_ICONS[x.icon];
+              return (
+                <li key={x.id}>
+                  <Link to={`/services/${x.id}`} className="card lift flex h-full items-center gap-3 p-4 text-bone">
+                    <I className="h-5 w-5 shrink-0 text-ember" strokeWidth={1.75} aria-hidden /> {x.title}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+          {live && (
+            <Link to={HOLIDAY_PROMO.path} className="card lift mt-8 flex flex-wrap items-center justify-between gap-4 border-ember/30 p-6">
+              <span>
+                <span className="block text-xs font-semibold uppercase tracking-[0.14em] text-ember">{HOLIDAY_PROMO.eyebrow}</span>
+                <span className="mt-1 block text-lg text-bone">{HOLIDAY_PROMO.title} in {c.name}</span>
+              </span>
+              <span className="price-199 text-5xl">{HOLIDAY_PROMO.priceLabel}</span>
+            </Link>
+          )}
+        </div>
+      </section>
+      <section className="section border-t hairline">
+        <div className="wrap grid grid-cols-[minmax(0,1fr)] gap-12 lg:grid-cols-[1fr_minmax(0,30rem)]">
+          <div className="min-w-0">
+            <h2 className="display-md text-bone">{c.name} questions</h2>
+            <Faq items={c.faqs} className="mt-8" />
+            {others.length > 0 && (
+              <div className="mt-12">
+                <h3 className="text-lg text-bone">Also serving in {s.name}</h3>
+                <ul className="mt-4 flex flex-wrap gap-2">
+                  {others.map((o) => (
+                    <li key={o.slug}>
+                      <Link to={`/service-areas/${s.slug}/${o.slug}`} className="inline-flex items-center gap-1.5 rounded-full border border-white/12 px-4 py-2 text-sm text-bone hover:border-ember">
+                        <MapPin className="h-3.5 w-3.5 text-ember" aria-hidden /> {o.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+          <div id="request" className="card scroll-mt-28 p-6 sm:p-8">
             <h2 className="text-xl text-bone">Request service in {c.name}</h2>
+            <p className="mt-2 text-sm text-mute">We confirm we can reach your address before anything is booked.</p>
             <div className="mt-5">
-              <LeadForm formId="service-request" fields={['name', 'phone', 'email', 'zip', 'service', 'message']} required={['name', 'phone', 'zip']} submitLabel="Send my request" dense />
+              <LeadForm formId="service-request" fields={['name', 'phone', 'email', 'address', 'zip', 'service', 'message']} required={['name', 'phone', 'zip']} submitLabel="Send my request" dense />
             </div>
           </div>
         </div>

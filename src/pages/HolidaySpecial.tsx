@@ -73,11 +73,11 @@ export default function HolidaySpecial() {
           )}
         </div>
 
-        <div className="wrap relative grid items-start gap-12 lg:grid-cols-[1fr_minmax(0,30rem)] lg:gap-16">
-          <div className="lg:pt-6">
+        <div className="wrap relative grid grid-cols-[minmax(0,1fr)] items-start gap-12 lg:grid-cols-[1fr_minmax(0,30rem)] lg:gap-16">
+          <div className="min-w-0 lg:pt-6">
             <Breadcrumbs crumbs={crumbs} />
             <p className="eyebrow mt-8">{HOLIDAY_PROMO.eyebrow}</p>
-            <h1 className="mt-4 text-[clamp(2.5rem,4.6vw,4.4rem)] text-bone">
+            <h1 className="mt-4 text-[2.05rem] text-bone sm:text-[clamp(2.5rem,4.6vw,4.4rem)]">
               The fire's ready
               <br />
               <span className="text-ember">when your guests are.</span>
@@ -86,14 +86,14 @@ export default function HolidaySpecial() {
               <PriceLockup size="xl" />
             </div>
             <p className="lede mt-5">{HOLIDAY_PROMO.pitch}</p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <button type="button" onClick={toForm} className="btn btn-primary btn-lg lg:hidden">
+            <div className="mt-8 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap">
+              <button type="button" onClick={toForm} className="btn btn-primary btn-lg col-span-2 lg:hidden">
                 Claim your {HOLIDAY_PROMO.priceLabel} special <ArrowDown className="h-5 w-5" aria-hidden />
               </button>
-              <CallLink placement="landing_hero" className="btn btn-ghost btn-lg">
-                <PhoneCall className="h-5 w-5" aria-hidden /> Call to schedule
+              <CallLink placement="landing_hero" className="btn btn-ghost btn-lg px-4">
+                <PhoneCall className="h-5 w-5" aria-hidden /> Call
               </CallLink>
-              <TextLink placement="landing_hero" className="btn btn-ghost btn-lg" />
+              <TextLink placement="landing_hero" className="btn btn-ghost btn-lg px-4" />
             </div>
             <ul className="mt-10 grid max-w-xl gap-3 text-[0.95rem] text-mute sm:grid-cols-2">
               <li className="flex items-center gap-2.5">
@@ -111,7 +111,7 @@ export default function HolidaySpecial() {
             </ul>
           </div>
 
-          <div id="claim" className="card scroll-mt-28 p-6 sm:p-8" style={{ background: 'rgb(24 22 20 / 0.94)' }}>
+          <div id="claim" className="card min-w-0 scroll-mt-28 p-5 sm:p-8" style={{ background: 'rgb(24 22 20 / 0.94)' }}>
             <h2 className="text-2xl text-bone">Claim the {HOLIDAY_PROMO.priceLabel} special</h2>
             <p className="mt-2 text-sm text-mute">Takes about a minute. We will call or text to confirm your appointment.</p>
             <div className="mt-6">

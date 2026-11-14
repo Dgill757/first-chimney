@@ -120,7 +120,7 @@ export function buildRoutes(): RouteMeta[] {
       promoIsLive() ? `Holiday special: ${HOLIDAY_PROMO.title} for ${HOLIDAY_PROMO.priceLabel}.` : '',
       `Call or text ${SITE.phoneDisplay}.`,
     ].filter(Boolean),
-    links: [{ label: 'Holiday $199 special', path: HOLIDAY_PROMO.path }, ...serviceLinks, ...stateLinks, { label: 'Design your fireplace', path: '/design-your-fireplace' }, { label: 'Contact', path: '/contact' }],
+    links: [{ label: 'Holiday $199 special', path: HOLIDAY_PROMO.path }, ...serviceLinks, ...stateLinks, { label: 'Build your fireplace', path: '/design-your-fireplace' }, { label: 'Contact', path: '/contact' }],
     crumbs: [HOME],
     jsonLd: [
       businessJsonLd(),
@@ -244,16 +244,16 @@ export function buildRoutes(): RouteMeta[] {
 
   add({
     path: '/design-your-fireplace',
-    title: 'Design Your Fireplace',
+    title: 'Build Your Fireplace',
     description: 'Explore fireplace styles, brick and stone surrounds, mantels, hearths and fire types, preview your design live, then send it to First Chimney for a consultation.',
     image: '/og/og-designer.jpg',
-    h1: 'Design your fireplace',
+    h1: 'Build your fireplace',
     summary: [
       'An interactive tool to explore fireplace styles (traditional, transitional, modern linear, farmhouse), surround materials (brick, stone, limewash, tile, marble), mantels, hearths and fire types (wood, wood insert, gas logs, linear gas, electric).',
       'Your design is a visual starting point, not a quote or a code review. First Chimney confirms what is possible for your home during a consultation.',
     ],
     links: [{ label: 'Fireplace shop', path: '/fireplace-shop' }, { label: 'Fireplace repair', path: '/services/fireplace-repair' }],
-    crumbs: [HOME, { name: 'Design Your Fireplace', path: '/design-your-fireplace' }],
+    crumbs: [HOME, { name: 'Build Your Fireplace', path: '/design-your-fireplace' }],
     priority: 0.8,
   });
 

@@ -6,6 +6,7 @@ import { HOLIDAY_PROMO, promoIsLive } from '@/lib/promo';
 import { SITE } from '@/lib/site';
 import { track } from '@/lib/track';
 import Footer from './Footer';
+import { HolidayPopup } from './Holiday';
 import Header from './Header';
 import RouteHead from './RouteHead';
 import { EASE } from './ui';
@@ -71,6 +72,7 @@ export default function Layout() {
       </main>
       <Footer />
       <MobileActionBar />
+      <HolidayPopup />
     </div>
   );
 }

@@ -131,7 +131,7 @@ const llms = [
   ...ARTICLES.map((a) => `- [${a.title}](${SITE.domain}/blog/${a.slug}): ${a.description}`),
   '',
   '## Tools',
-  `- [Design your fireplace](${SITE.domain}/design-your-fireplace): Interactive fireplace style and finish designer.`,
+  `- [Build your fireplace](${SITE.domain}/design-your-fireplace): Interactive fireplace style and finish designer.`,
   `- [Fireplace shop](${SITE.domain}/fireplace-shop): Browse fireplace product types and request pricing.`,
   '',
   '## Company',

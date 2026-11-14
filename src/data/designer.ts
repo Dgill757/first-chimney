@@ -1,5 +1,5 @@
 /**
- * Design Your Fireplace: option catalog.
+ * Build Your Fireplace: option catalog.
  *
  * This is an AESTHETIC tool. It does not check code compliance, clearances,
  * venting or structural feasibility, and it never shows a price. Every design
@@ -67,7 +67,17 @@ export const EXTRAS: Extra[] = [
   { id: 'chimney-cap', name: 'New Chimney Cap', note: 'Keep rain and animals out of the flue.' },
 ];
 
+export const PROJECT_TYPES = [
+  { id: 'refresh', name: 'Refresh my fireplace', note: 'New surround, mantel or hearth on the fireplace I have.' },
+  { id: 'insert', name: 'Add an insert or switch to gas', note: 'More heat, less mess, same opening.' },
+  { id: 'new', name: 'Build a new fireplace', note: 'A fireplace where there is not one today.' },
+  { id: 'exploring', name: 'Just exploring ideas', note: 'Getting inspired before deciding anything.' },
+];
+export const TIMELINES = ['As soon as possible', 'Next 1 to 3 months', 'Next 3 to 6 months', 'Just browsing'];
+
 export type Design = {
+  project?: string;
+  timeline?: string;
   style: string;
   surround: string;
   mantel: string;
@@ -110,6 +120,8 @@ export function resolveDesign(d: Design) {
 export function encodeDesign(d: Design): string {
   const q = new URLSearchParams({ s: d.style, m: d.surround, t: d.mantel, h: d.hearth, f: d.fire });
   if (d.extras.length) q.set('x', d.extras.join('.'));
+  if (d.project) q.set('p', d.project);
+  if (d.timeline) q.set('w', String(TIMELINES.indexOf(d.timeline)));
   return q.toString();
 }
 
@@ -124,6 +136,8 @@ export function decodeDesign(search: string): Design | null {
     hearth: pick(HEARTHS, q.get('h'), DEFAULT_DESIGN.hearth),
     fire: pick(FIRES, q.get('f'), DEFAULT_DESIGN.fire),
     extras: (q.get('x') ?? '').split('.').filter((x) => EXTRAS.some((e) => e.id === x)),
+    project: PROJECT_TYPES.some((p) => p.id === q.get('p')) ? (q.get('p') as string) : undefined,
+    timeline: TIMELINES[Number(q.get('w'))] ?? undefined,
   };
 }
 
@@ -132,6 +146,8 @@ export function designSummary(d: Design, shareUrl?: string): string {
   const r = resolveDesign(d);
   const lines = [
     'FIREPLACE DESIGN (aesthetic concept, not a quote)',
+    `Project: ${PROJECT_TYPES.find((p) => p.id === d.project)?.name ?? 'Not specified'}`,
+    `Timeline: ${d.timeline ?? 'Not specified'}`,
     `Style: ${r.style.name}`,
     `Surround: ${r.surround.name}`,
     `Mantel: ${r.mantel.name}`,

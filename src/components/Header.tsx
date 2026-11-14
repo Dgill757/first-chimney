@@ -6,7 +6,7 @@ import { SERVICES } from '@/data/services';
 import { HOLIDAY_PROMO, promoIsLive } from '@/lib/promo';
 import { SITE } from '@/lib/site';
 import { track } from '@/lib/track';
-import { EASE, SERVICE_ICONS } from './ui';
+import { EASE, FireButton, SERVICE_ICONS } from './ui';
 
 type Group = { label: string; items: { label: string; to: string; note?: string }[]; footer?: { label: string; to: string } };
 
@@ -18,7 +18,7 @@ const SERVICES_GROUP: Group = {
 const FIREPLACE_GROUP: Group = {
   label: 'Fireplaces',
   items: [
-    { label: 'Design Your Fireplace', to: '/design-your-fireplace', note: 'Build a look and preview it live.' },
+    { label: 'Build Your Fireplace', to: '/design-your-fireplace', note: 'Build a look and preview it live.' },
     { label: 'Fireplace Shop', to: '/fireplace-shop', note: 'Inserts, gas, electric, mantels and caps.' },
     { label: 'Fireplace Repair', to: '/services/fireplace-repair', note: 'Smoke, damper and firebox problems.' },
   ],
@@ -179,6 +179,8 @@ function MobileMenu({ open, onClose, live }: { open: boolean; onClose: () => voi
             </Link>
           )}
 
+          <FireButton placement="mobile_menu" size="lg" onClick={onClose} className="mt-4 w-full [&>span]:w-full [&>span]:justify-center" />
+
           <nav className="mt-6 grid gap-7" aria-label="Mobile">
             {[SERVICES_GROUP, FIREPLACE_GROUP].map((g) => (
               <div key={g.label}>
@@ -249,14 +251,19 @@ export default function Header() {
               <img src={SITE.logo} alt={`${SITE.name} logo`} width={160} height={92} className="h-11 w-auto lg:h-[3.15rem]" />
             </Link>
 
-            <nav className="ml-6 hidden flex-1 items-center gap-1 lg:flex" aria-label="Primary">
+            <nav className="ml-4 hidden flex-1 items-center gap-0.5 lg:flex xl:ml-6" aria-label="Primary">
               <Dropdown group={SERVICES_GROUP} />
-              <Dropdown group={FIREPLACE_GROUP} />
+              <FireButton placement="header" className="mx-2" />
+              <NavLink to="/fireplace-shop" className={({ isActive }) => `rounded-full px-3 py-2 text-[0.94rem] font-medium transition-colors ${isActive ? 'text-ember' : 'text-bone/90 hover:text-bone'}`}>
+                Shop
+              </NavLink>
               {LINKS.map((l) => (
                 <NavLink
                   key={l.to}
                   to={l.to}
-                  className={({ isActive }) => `rounded-full px-3 py-2 text-[0.94rem] font-medium transition-colors ${isActive ? 'text-ember' : 'text-bone/90 hover:text-bone'}`}
+                  className={({ isActive }) =>
+                    `rounded-full px-3 py-2 text-[0.94rem] font-medium transition-colors ${l.to === '/blog' ? 'hidden xl:block' : ''} ${isActive ? 'text-ember' : 'text-bone/90 hover:text-bone'}`
+                  }
                 >
                   {l.label}
                 </NavLink>

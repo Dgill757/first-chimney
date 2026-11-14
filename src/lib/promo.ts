@@ -26,6 +26,8 @@ export const HOLIDAY_PROMO = {
   title: 'Chimney Cleaning + Inspection',
   /** Andrew's earlier message: Level 1 inspection. Confirm before adding "Level 1" to headlines. */
   inspectionLevel: 'Level 1',
+  /** Short line for tight spaces (popup, hero card). */
+  short: 'Get your fireplace ready before the guests arrive.',
   pitch:
     'Get your fireplace ready for the holiday season with professional chimney cleaning and inspection from First Chimney Contracting.',
   barText: 'Holiday Special: Chimney Cleaning + Inspection for $199',
@@ -55,6 +57,11 @@ export const HOLIDAY_PROMO = {
   ],
   image: '/media/photos/fireplace-logs-glow.webp',
   ogImage: '/og/og-holiday-199.jpg',
+  /** Code printed on the coupon. Customers mention it when booking; Andrew sees it on the CRM tag. */
+  code: 'HOLIDAY199',
+  couponImage: '/promo/first-chimney-holiday-coupon.jpg',
+  /** On-site popup. Shown once per session after a delay or scroll; respects dismissal for `cooldownDays`. */
+  popup: { enabled: true, delayMs: 9000, scrollFraction: 0.35, cooldownDays: 3 },
 } as const;
 
 /** Whether the offer should render right now. */
@@ -64,15 +71,36 @@ export function promoIsLive(now: Date = new Date()): boolean {
   return now <= new Date(`${HOLIDAY_PROMO.validThrough}T23:59:59`);
 }
 
-/**
- * Non-sensitive reference shown to a visitor who saves the offer, so they can
- * mention it on the phone. Derived from time + randomness only; contains no
- * personal data and is not a reservation.
- */
-export function makeOfferRef(now: number = Date.now(), rand: () => number = Math.random): string {
-  const alphabet = '23456789ABCDEFGHJKLMNPQRSTUVWXYZ';
-  let s = '';
-  for (let i = 0; i < 4; i++) s += alphabet[Math.floor(rand() * alphabet.length)];
-  const day = new Date(now).toISOString().slice(5, 10).replace('-', '');
-  return `FC199-${day}-${s}`;
+/** Pure decision for whether the popup may open on this visit. Unit tested. */
+export function shouldShowPopup(o: { pathname: string; preview: boolean; now: number; shownThisSession: boolean; dismissedAt: number | null; claimed: boolean }): boolean {
+  if (o.preview) return true;
+  if (!HOLIDAY_PROMO.popup.enabled || !promoIsLive(new Date(o.now))) return false;
+  if (o.claimed || o.shownThisSession) return false;
+  if (['/holiday-chimney-special', '/design-your-fireplace', '/fireplace-shop/quote', '/contact', '/privacy-policy'].some((p) => o.pathname.startsWith(p))) return false;
+  if (o.dismissedAt && o.now - o.dismissedAt < HOLIDAY_PROMO.popup.cooldownDays * 86_400_000) return false;
+  return true;
+}
+
+/** A calendar file reminding the visitor to book. Opens "Add to Calendar" on phones. */
+export function reminderIcs(now: Date, phone: string, url: string): string {
+  const start = new Date(now);
+  start.setDate(start.getDate() + 1);
+  start.setHours(10, 0, 0, 0);
+  const end = new Date(start.getTime() + 15 * 60_000);
+  const f = (d: Date) => d.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+  return [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//First Chimney Contracting//Holiday Special//EN',
+    'BEGIN:VEVENT',
+    `UID:holiday199-${start.getTime()}@firstchimneycontracting.com`,
+    `DTSTAMP:${f(now)}`,
+    `DTSTART:${f(start)}`,
+    `DTEND:${f(end)}`,
+    `SUMMARY:Book First Chimney $199 holiday chimney special`,
+    `DESCRIPTION:Chimney cleaning + inspection for $199. Code ${HOLIDAY_PROMO.code}. Call or text ${phone}. ${url}`,
+    `URL:${url}`,
+    'END:VEVENT',
+    'END:VCALENDAR',
+  ].join('\r\n');
 }

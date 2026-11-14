@@ -257,6 +257,49 @@ textarea.input { min-height: 6.5rem; resize: vertical; }
   will-change: transform, opacity;
 }
 
+/* "Build Your Fireplace" glowing button: rotating ember ring + soft flicker halo. */
+@property --fire-a { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+@keyframes fire-spin { to { --fire-a: 360deg; } }
+@keyframes fire-breathe { 0%, 100% { opacity: 0.55; transform: scale(1); } 50% { opacity: 0.85; transform: scale(1.04); } }
+@keyframes flame-lick { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-1px) scale(1.08, 1.12); } }
+.fire-btn {
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  border-radius: 999px;
+  padding: 2px;
+  transition: transform 160ms var(--ease-out-strong);
+}
+.fire-btn:active { transform: scale(0.97); }
+.fire-btn::before, .fire-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: conic-gradient(from var(--fire-a), #f07a32, #ffd36b, #ff4d1a, #ffb347, #f07a32);
+  z-index: -1;
+  animation: fire-spin 3.2s linear infinite;
+}
+.fire-btn::after { inset: -6px; filter: blur(14px); animation: fire-spin 3.2s linear infinite, fire-breathe 2.4s ease-in-out infinite; }
+.fire-btn-inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.6rem;
+  padding: 0 1.15rem;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #2b170b, #170d07);
+  color: #ffe2bf;
+  font-weight: 600;
+  font-size: 0.93rem;
+  white-space: nowrap;
+}
+.fire-btn-lg .fire-btn-inner { min-height: 3.5rem; padding: 0 1.8rem; font-size: 1.05rem; }
+.fire-btn .flame-icon { color: #ffb347; animation: flame-lick 1.3s ease-in-out infinite; transform-origin: 50% 100%; }
+@media (hover: hover) and (pointer: fine) {
+  .fire-btn:hover .fire-btn-inner { background: linear-gradient(180deg, #3a1e0c, #1f1108); color: #fff; }
+}
+
 /* Fireplace preview flames */
 @keyframes flicker {
   0%, 100% { transform: scaleY(1) scaleX(1); opacity: 0.95; }
@@ -278,7 +321,7 @@ textarea.input { min-height: 6.5rem; resize: vertical; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .ember { animation: none !important; display: none; }
-  .marquee-track, .fp-flicker { animation: none !important; }
+  .marquee-track, .fp-flicker, .fire-btn::before, .fire-btn::after, .fire-btn .flame-icon { animation: none !important; }
   *, *::before, *::after { transition-duration: 1ms !important; animation-duration: 1ms !important; animation-iteration-count: 1 !important; }
   .ssr-shell { animation-duration: 0s !important; }
 }

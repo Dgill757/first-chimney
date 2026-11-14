@@ -1,7 +1,7 @@
 import { Link, useParams } from 'react-router-dom';
 import { ArrowRight, ArrowUpRight, Check, CircleAlert } from 'lucide-react';
 import LeadForm from '@/components/LeadForm';
-import { Breadcrumbs, CallLink, Faq, PageIntro, Reveal, SERVICE_ICONS } from '@/components/ui';
+import { Breadcrumbs, CallLink, Faq, FireButton, PageIntro, Reveal, SERVICE_ICONS } from '@/components/ui';
 import { ARTICLES } from '@/data/blog';
 import { SERVICES, serviceById } from '@/data/services';
 import { HOLIDAY_PROMO, promoIsLive } from '@/lib/promo';
@@ -70,14 +70,15 @@ export function ServiceDetail() {
           <div className="mt-9 flex flex-wrap gap-3">
             {promoFit ? (
               <Link to={HOLIDAY_PROMO.path} onClick={() => track('promo_cta_click', { placement: `service_${s.id}` })} className="btn btn-primary btn-lg">
-                Holiday special: cleaning + inspection {HOLIDAY_PROMO.priceLabel}
+                {HOLIDAY_PROMO.priceLabel} holiday special
               </Link>
             ) : (
               <a href="#request" className="btn btn-primary btn-lg">
-                Request {s.title.toLowerCase()} <ArrowRight className="h-5 w-5" aria-hidden />
+                Request this service <ArrowRight className="h-5 w-5" aria-hidden />
               </a>
             )}
             <CallLink placement={`service_${s.id}`} className="btn btn-ghost btn-lg" />
+            {s.id === 'fireplace-repair' && <FireButton placement="service_fireplace" size="lg" />}
           </div>
         </div>
       </section>
@@ -143,7 +144,7 @@ export function ServiceDetail() {
       </section>
 
       <section className="section border-t hairline bg-ink-2">
-        <div className="wrap grid gap-12 lg:grid-cols-[1fr_minmax(0,30rem)]">
+        <div className="wrap grid grid-cols-[minmax(0,1fr)] gap-12 lg:grid-cols-[1fr_minmax(0,30rem)]">
           <div>
             <h2 className="display-md text-bone">Related</h2>
             <ul className="mt-8 grid gap-3">

@@ -37,7 +37,7 @@
 <script>
   const SIZES = {
     feed: [1080, 1080], portrait: [1080, 1350], story: [1080, 1920], landscape: [1200, 630],
-    'og-default': [1200, 630], 'og-designer': [1200, 630],
+    'og-default': [1200, 630], 'og-designer': [1200, 630], coupon: [1080, 1500],
   };
   const size = new URLSearchParams(location.search).get('size') || 'portrait';
   const [w, h] = SIZES[size];
@@ -107,6 +107,27 @@
   if (size === 'og-designer') html = landscape(STOVE, 'First Chimney Contracting',
     `<p class="head" style="font-size:70px;margin-top:18px">Design your<br><span style="color:#f07a32">fireplace.</span></p>`,
     `Styles, stone, brick, mantels and fire types. Preview it live, then send it to us.`);
+  if (size === 'coupon') html = `
+    <div style="position:absolute;inset:0;background:radial-gradient(120% 70% at 50% 0%, #3a1d0e 0%, #121110 60%)"></div>
+    ${sparkles(14, 1)}
+    <div style="position:absolute;inset:60px;border-radius:56px;background:linear-gradient(180deg,#1d1a17,#151311);border:2px solid rgb(240 122 50 / 0.5);overflow:hidden">
+      <div style="position:absolute;left:-46px;top:890px;width:92px;height:92px;border-radius:50%;background:#121110;border:2px solid rgb(240 122 50 / 0.5)"></div>
+      <div style="position:absolute;right:-46px;top:890px;width:92px;height:92px;border-radius:50%;background:#121110;border:2px solid rgb(240 122 50 / 0.5)"></div>
+      <div style="position:absolute;left:70px;right:70px;top:935px;border-top:4px dashed rgb(240 122 50 / 0.45)"></div>
+      <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;text-align:center;padding:80px 70px">
+        <img class="logo" src="${LOGO}" style="width:300px">
+        <p class="eyebrow" style="font-size:34px;margin-top:48px">Holiday Coupon</p>
+        <p class="price" style="font-size:310px;margin-top:30px"><sup>$</sup>199</p>
+        <p class="what" style="font-size:58px;margin-top:38px">Chimney Cleaning <b>+</b> Inspection</p>
+        <p class="sub" style="font-size:34px;margin-top:22px">Show this coupon or mention the code when you book.</p>
+        <div style="margin-top:64px;display:flex;flex-direction:column;align-items:center;gap:16px">
+          <p style="font-size:26px;letter-spacing:0.2em;color:#948b80;font-weight:600">CODE</p>
+          <p class="head" style="font-size:96px;letter-spacing:0.06em;color:#f3ede4;font-stretch:118%">HOLIDAY199</p>
+          <span class="cta" style="font-size:40px;padding:26px 46px;margin-top:26px">Call or text ${PHONE}</span>
+          <p class="meta" style="font-size:30px;margin-top:12px">${URL} · ${META}</p>
+        </div>
+      </div>
+    </div>`;
   stage.innerHTML = html;
 </script>
 </body>

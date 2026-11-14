@@ -1,7 +1,7 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
-import { ArrowLeft, ArrowRight, Check, Copy, Info, RotateCcw, Shuffle } from 'lucide-react';
+import { ArrowDown, ArrowLeft, ArrowRight, Check, Copy, FileDown, Info, LoaderCircle, RotateCcw, Shuffle } from 'lucide-react';
 import FireplacePreview from '@/components/FireplacePreview';
 import LeadForm from '@/components/LeadForm';
 import { Breadcrumbs, EASE } from '@/components/ui';
@@ -12,6 +12,8 @@ import {
   HEARTHS,
   MANTELS,
   PRESETS,
+  PROJECT_TYPES,
+  TIMELINES,
   STYLES,
   SURROUNDS,
   decodeDesign,
@@ -21,11 +23,13 @@ import {
   type Design,
 } from '@/data/designer';
 import { routeFor } from '@/lib/routes';
-import { SITE } from '@/lib/site';
+import { buildDesignPdf, designRef, downloadBlob } from '@/lib/designPdf';
+import { IMAGES, SITE } from '@/lib/site';
 import { track } from '@/lib/track';
 
-type StepId = 'style' | 'surround' | 'mantel' | 'hearth' | 'fire' | 'extras' | 'send';
+type StepId = 'project' | 'style' | 'surround' | 'mantel' | 'hearth' | 'fire' | 'extras' | 'send';
 const STEPS: { id: StepId; label: string; title: string }[] = [
+  { id: 'project', label: 'Project', title: 'What are we building?' },
   { id: 'style', label: 'Style', title: 'Pick a style' },
   { id: 'surround', label: 'Surround', title: 'Choose the surround' },
   { id: 'mantel', label: 'Mantel', title: 'Add a mantel' },
@@ -91,11 +95,30 @@ export default function DesignFireplace() {
   const [design, setDesign] = useState<Design>(loadInitial);
   const [step, setStep] = useState(0);
   const [copied, setCopied] = useState(false);
+  const [pdfBusy, setPdfBusy] = useState(false);
+  const previewRef = useRef<HTMLDivElement>(null);
+  const wantsBuilder = useRef(typeof window !== 'undefined' && window.location.hash === '#builder');
+  useEffect(() => {
+    if (wantsBuilder.current) window.setTimeout(() => document.getElementById('builder')?.scrollIntoView({ block: 'start' }), 80);
+  }, []);
   const r = resolveDesign(design);
   const current = STEPS[step];
 
   const query = encodeDesign(design);
   const shareUrl = `${SITE.domain}/design-your-fireplace?${query}`;
+
+  const makePdf = async (forName?: string) => {
+    const svg = previewRef.current?.querySelector('svg');
+    if (!svg) return;
+    setPdfBusy(true);
+    try {
+      const blob = await buildDesignPdf(svg, design, shareUrl, forName);
+      downloadBlob(blob, `First-Chimney-Fireplace-Design-${designRef(design)}.pdf`);
+      track('designer_save', { method: 'pdf' });
+    } finally {
+      setPdfBusy(false);
+    }
+  };
 
   useEffect(() => {
     window.history.replaceState(window.history.state, '', `/design-your-fireplace?${query}`);
@@ -140,14 +163,49 @@ export default function DesignFireplace() {
 
   const chips = useMemo(() => [r.style.name, r.surround.name, r.mantel.name, r.hearth.name, r.fire.name, ...r.extras.map((e) => e.name)], [r]);
 
+  const startBuilding = () => document.getElementById('builder')?.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+
   return (
-    <div className="pb-24 pt-28 md:pt-32">
-      <div className="wrap">
-        <Breadcrumbs crumbs={crumbs} />
-        <div className="mt-6 flex flex-wrap items-end justify-between gap-6">
+    <div className="pb-24">
+      <section className="relative flex min-h-[78dvh] items-end overflow-hidden pb-14 pt-32 md:pb-20">
+        <div aria-hidden className="absolute inset-0">
+          {reduce ? (
+            <img src={IMAGES.stovePoster} alt="" className="h-full w-full object-cover" />
+          ) : (
+            <video className="h-full w-full object-cover" autoPlay muted loop playsInline preload="metadata" poster={IMAGES.stovePoster}>
+              <source src={IMAGES.stoveVideo} type="video/mp4" />
+            </video>
+          )}
+          <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-ink/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/60" />
+        </div>
+        <div className="wrap relative">
+          <Breadcrumbs crumbs={crumbs} />
+          <h1 className="display-xl mt-8 max-w-3xl text-bone">
+            Build your <span className="text-ember">fireplace.</span>
+          </h1>
+          <p className="lede mt-5 text-bone/80">Pick a style, choose brick or stone, add a mantel and a hearth, choose how it burns. Watch it come to life, then get a branded PDF of your design.</p>
+          <ol className="mt-8 flex flex-wrap gap-2 text-sm text-mute">
+            {['Your project', 'Style', 'Materials', 'Fire type', 'Your PDF'].map((t, i) => (
+              <li key={t} className="flex items-center gap-2 rounded-full border border-white/12 bg-ink/50 px-3 py-1.5 backdrop-blur">
+                <span className="grid h-5 w-5 place-items-center rounded-full bg-ember text-[0.7rem] font-semibold text-[#1a0d05]">{i + 1}</span>
+                {t}
+              </li>
+            ))}
+          </ol>
+          <button type="button" onClick={startBuilding} className="fire-btn fire-btn-lg mt-9">
+            <span className="fire-btn-inner">
+              Start building <ArrowDown className="h-5 w-5" aria-hidden />
+            </span>
+          </button>
+        </div>
+      </section>
+
+      <div id="builder" className="wrap scroll-mt-20 pt-14">
+        <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
-            <h1 className="display-lg text-bone">Design your fireplace</h1>
-            <p className="lede mt-3">Mix styles, materials and fire types. Your design saves as you go.</p>
+            <h2 className="display-md text-bone">Your design</h2>
+            <p className="mt-2 text-mute">Your design saves as you go. Come back anytime.</p>
           </div>
           <div className="flex flex-wrap gap-2">
             <button type="button" onClick={surprise} className="btn btn-ghost btn-sm">
@@ -162,7 +220,7 @@ export default function DesignFireplace() {
         <div className="mt-10 grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:gap-12">
           {/* Preview */}
           <div className="sticky top-[4.4rem] z-30 -mx-5 min-w-0 self-start bg-ink/95 px-5 pb-3 pt-2 backdrop-blur-md sm:mx-0 sm:px-0 lg:top-28 lg:bg-transparent lg:p-0 lg:backdrop-blur-none">
-            <div className="media relative aspect-[16/10] border hairline shadow-[0_40px_120px_-50px_rgb(240_122_50/0.6)] lg:aspect-[4/3]">
+            <div ref={previewRef} className="media relative aspect-[16/10] border hairline shadow-[0_40px_120px_-50px_rgb(240_122_50/0.6)] lg:aspect-[4/3]">
               <FireplacePreview design={design} className="h-full w-full" />
             </div>
             <ul className="mt-3 hidden flex-wrap gap-2 lg:flex" aria-label="Your selections">
@@ -213,6 +271,21 @@ export default function DesignFireplace() {
                 >
                   <h2 className="text-2xl text-bone">{current.title}</h2>
 
+                  {current.id === 'project' && (
+                    <div className="mt-6 grid gap-7">
+                      <OptionGrid options={PROJECT_TYPES} value={design.project} onPick={(id) => set({ project: id })} />
+                      <div>
+                        <p className="text-sm font-medium text-bone">When are you thinking?</p>
+                        <div className="mt-3 flex flex-wrap gap-2">
+                          {TIMELINES.map((t) => (
+                            <button key={t} type="button" aria-pressed={design.timeline === t} onClick={() => set({ timeline: t })} className={`rounded-full border px-3.5 py-1.5 text-sm transition-colors ${design.timeline === t ? 'border-ember bg-ember/10 text-bone' : 'border-white/12 text-mute hover:text-bone'}`}>
+                              {t}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  )}
                   {current.id === 'style' && (
                     <div className="mt-6 grid gap-6">
                       <OptionGrid options={STYLES} value={design.style} onPick={(id) => set({ style: id })} />
@@ -277,6 +350,9 @@ export default function DesignFireplace() {
                         ))}
                       </dl>
                       <div className="flex flex-wrap gap-2">
+                        <button type="button" onClick={() => makePdf()} disabled={pdfBusy} className="btn btn-primary btn-sm">
+                          {pdfBusy ? <LoaderCircle className="h-4 w-4 animate-spin" aria-hidden /> : <FileDown className="h-4 w-4" aria-hidden />} Download my PDF
+                        </button>
                         <button type="button" onClick={copy} className="btn btn-ghost btn-sm">
                           {copied ? <Check className="h-4 w-4 text-ok" aria-hidden /> : <Copy className="h-4 w-4" aria-hidden />}
                           {copied ? 'Link copied' : 'Copy design link'}
@@ -287,19 +363,22 @@ export default function DesignFireplace() {
                       </div>
                       <div>
                         <h3 className="text-xl text-bone">Send it to First Chimney</h3>
-                        <p className="mt-2 text-sm text-mute">We will review your design and reach out about a consultation. No obligation and no pricing until we have seen your space.</p>
+                        <p className="mt-2 text-sm text-mute">Your design and its link go straight to First Chimney, and your branded PDF downloads automatically. We reach out about a consultation. No obligation and no pricing until we have seen your space.</p>
                         <div className="mt-5">
                           <LeadForm
                             formId="fireplace-designer"
                             fields={['name', 'phone', 'email', 'city', 'state', 'zip', 'timeframe', 'message']}
                             required={['name', 'phone', 'zip']}
                             details={() => designSummary(design, shareUrl)}
-                            submitLabel="Send my design"
+                            submitLabel="Send my design + get the PDF"
                             messageLabel="Tell us about the room"
                             messagePlaceholder="Existing fireplace or new wall? Room size, what you love or want to change..."
                             successTitle="Your design is on its way."
-                            successBody={<p>We received your fireplace design and will reach out to talk through it and set up a consultation. Your design link keeps working if you want to keep tweaking.</p>}
-                            onSuccess={() => track('designer_save', { method: 'submit' })}
+                            successBody={<p>We received your fireplace design and your PDF is downloading. We will reach out to talk it through and set up a consultation. Your design link keeps working if you want to keep tweaking.</p>}
+                            onSuccess={() => {
+                              track('designer_save', { method: 'submit' });
+                              void makePdf();
+                            }}
                             dense
                           />
                         </div>

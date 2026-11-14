@@ -8,7 +8,7 @@ import { Link, useParams } from 'react-router-dom';
 import { ArrowRight, Check, Heart, Info, Plus, Trash2, X } from 'lucide-react';
 import FireplacePreview from '@/components/FireplacePreview';
 import LeadForm from '@/components/LeadForm';
-import { PageIntro, Reveal } from '@/components/ui';
+import { FireButton, PageIntro, Reveal } from '@/components/ui';
 import { CATALOG_STATUS, PRODUCTS, SHOP_CATEGORIES, categoryById, productById, productsIn, type Product } from '@/data/shop';
 import { encodeDesign } from '@/data/designer';
 import { routeFor } from '@/lib/routes';
@@ -148,9 +148,7 @@ function ShopHome() {
           <a href="#categories" className="btn btn-primary">
             Browse categories
           </a>
-          <Link to="/design-your-fireplace" className="btn btn-ghost">
-            Design your fireplace first
-          </Link>
+          <FireButton placement="shop_intro" />
         </div>
       </PageIntro>
       <section id="categories" className="section scroll-mt-24">

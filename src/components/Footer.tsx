@@ -5,6 +5,7 @@ import { SERVICE_AREAS } from '@/data/serviceAreas';
 import { HOLIDAY_PROMO, promoIsLive } from '@/lib/promo';
 import { CREDENTIALS, SITE, STATE_LIST_TEXT } from '@/lib/site';
 import { track } from '@/lib/track';
+import { FireButton } from './ui';
 
 export default function Footer() {
   const live = promoIsLive();
@@ -68,7 +69,7 @@ export default function Footer() {
             <ul className="mt-5 grid gap-2.5">
               {[
                 ...(live ? [{ label: `Holiday ${HOLIDAY_PROMO.priceLabel} special`, to: HOLIDAY_PROMO.path }] : []),
-                { label: 'Design your fireplace', to: '/design-your-fireplace' },
+                { label: 'Build your fireplace', to: '/design-your-fireplace' },
                 { label: 'Fireplace shop', to: '/fireplace-shop' },
                 { label: 'Our work', to: '/gallery' },
                 { label: 'Reviews', to: '/reviews' },
@@ -99,7 +100,9 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-            <Link to="/contact" className="link-arrow mt-8 inline-flex items-center gap-1.5 text-sm font-medium text-ember">
+            <FireButton placement="footer" className="mt-8" />
+            <br />
+            <Link to="/contact" className="link-arrow mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-ember">
               Check your address <ArrowUpRight className="h-4 w-4" aria-hidden />
             </Link>
           </div>

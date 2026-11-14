@@ -13,6 +13,7 @@
  * state's `cities` array, write the unique content, set published: true, push.
  */
 import type { StateCode } from '../lib/site';
+import { CITY_DATA } from './cities';
 
 export type City = {
   slug: string;
@@ -58,7 +59,7 @@ export const SERVICE_AREAS: StateArea[] = [
       { q: 'When should Virginia homeowners book chimney service?', a: 'Late summer and early fall are ideal. You beat the rush, and any repairs can be done before the first fires of the season.' },
       { q: 'Do you serve all of Virginia?', a: 'Call or text us with your address and we will confirm whether you are in our current service area before booking.' },
     ],
-    cities: [],
+    cities: CITY_DATA.VA,
   },
   {
     code: 'NJ',
@@ -80,7 +81,7 @@ export const SERVICE_AREAS: StateArea[] = [
       { q: 'My chimney vents my furnace. Does it still need service?', a: 'Yes. Gas and oil appliances produce acidic condensation that can deteriorate a liner over time. Annual inspection is recommended for all chimneys and vents.' },
       { q: 'Do you serve all of New Jersey?', a: 'Call or text with your address and we will confirm coverage before we schedule.' },
     ],
-    cities: [],
+    cities: CITY_DATA.NJ,
   },
   {
     code: 'CT',
@@ -102,7 +103,7 @@ export const SERVICE_AREAS: StateArea[] = [
       { q: 'How often should a wood stove chimney be cleaned in Connecticut?', a: 'At least once a year, and more often if you burn daily through the winter. The inspection tells you how fast buildup is forming in your system.' },
       { q: 'Do you serve all of Connecticut?', a: 'Call or text with your address and we will confirm coverage before we schedule.' },
     ],
-    cities: [],
+    cities: CITY_DATA.CT,
   },
   {
     code: 'MA',
@@ -124,7 +125,7 @@ export const SERVICE_AREAS: StateArea[] = [
       { q: 'Can you work on an antique chimney?', a: 'Yes. On older chimneys we focus on compatible repairs that respect the original masonry. If a specialist is needed for historic restoration, we will tell you.' },
       { q: 'Do you serve all of Massachusetts?', a: 'Call or text with your address and we will confirm coverage before we schedule.' },
     ],
-    cities: [],
+    cities: CITY_DATA.MA,
   },
 ];
 

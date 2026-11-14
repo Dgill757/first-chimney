@@ -21,3 +21,4 @@ render story-1080x1920              story     1080 1920
 render facebook-link-1200x630       landscape 1200 630
 render og-default                   og-default 1200 630
 render og-designer                  og-designer 1200 630
+render first-chimney-holiday-coupon coupon 1080 1500

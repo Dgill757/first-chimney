@@ -89,6 +89,25 @@ export function TextLink({ placement, className = 'btn btn-ghost', children }: {
   );
 }
 
+/** The glowing "Build Your Fireplace" call to action used across the site. */
+export function FireButton({ placement, size = 'md', label = 'Build Your Fireplace', className = '', onClick, to = '/design-your-fireplace' }: { placement: string; size?: 'md' | 'lg'; label?: string; className?: string; onClick?: () => void; to?: string }) {
+  return (
+    <Link
+      to={to}
+      onClick={() => {
+        track('cta_click', { placement, target: 'designer' });
+        onClick?.();
+      }}
+      className={`fire-btn ${size === 'lg' ? 'fire-btn-lg' : ''} ${className}`}
+    >
+      <span className="fire-btn-inner">
+        <Flame className="flame-icon h-4 w-4" strokeWidth={2} aria-hidden />
+        {label}
+      </span>
+    </Link>
+  );
+}
+
 export function Breadcrumbs({ crumbs }: { crumbs: Crumb[] }) {
   if (crumbs.length < 2) return null;
   return (

@@ -348,7 +348,7 @@ export const SERVICES: Service[] = [
       },
       {
         q: 'Can you help me redesign my fireplace?',
-        a: 'Yes. Try our Design Your Fireplace tool to explore styles and finishes, then send your design to us for a consultation.',
+        a: 'Yes. Try our Build Your Fireplace tool to explore styles and finishes, then send your design to us for a consultation.',
       },
     ],
     related: ['chimney-sweeping', 'chimney-inspection', 'masonry-rebuilds'],
