@@ -1,0 +1,59 @@
+<!doctype html>
+<!-- Print designs for First Chimney merch. Render with marketing/brand-kit/render.sh. ?item=<name> -->
+<html>
+<head>
+<meta charset="utf-8" />
+<style>
+  @font-face { font-family: Archivo; src: url('../../public/fonts/archivo.woff2') format('woff2'); font-weight: 400 900; font-stretch: 62% 125%; }
+  @font-face { font-family: Geist; src: url('../../public/fonts/geist.woff2') format('woff2'); font-weight: 300 700; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: var(--w); height: var(--h); overflow: hidden; background: transparent; }
+  body { font-family: Geist, sans-serif; }
+  .d { font-family: Archivo; font-stretch: 112%; font-weight: 800; letter-spacing: -0.02em; line-height: 1; }
+  .c { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+<div id="s" style="width:var(--w);height:var(--h)"></div>
+<script>
+  const item = new URLSearchParams(location.search).get('item');
+  const SIZES = {
+    'hoodie-back': [3000, 3600], 'hoodie-front-chest': [1200, 700], 'beanie-patch': [1500, 900],
+    'truck-magnet-24x12': [3600, 1800], 'business-card-front': [1125, 675], 'business-card-back': [1125, 675],
+  };
+  const [w, h] = SIZES[item];
+  document.documentElement.style.setProperty('--w', w + 'px');
+  document.documentElement.style.setProperty('--h', h + 'px');
+  const L = '../../public/brand/logo-light.png', D = '../../public/brand/logo-dark.png';
+  const EMBER = '#f07a32', INK = '#121110', BONE = '#f3ede4';
+  const s = document.getElementById('s');
+  const T = {
+    'hoodie-back': `<div class="c" style="gap:150px;color:${BONE}">
+        <img src="${L}" style="width:2300px">
+        <p class="d" style="font-size:250px">Done right<br><span style="color:${EMBER}">the first time.</span></p>
+        <p style="font-size:110px;font-weight:600;letter-spacing:0.04em">(757) 589-0783</p></div>`,
+    'hoodie-front-chest': `<div class="c"><img src="${L}" style="width:1150px"></div>`,
+    'beanie-patch': `<div class="c" style="background:${INK};border:28px solid ${EMBER};border-radius:120px"><img src="${L}" style="width:1150px"></div>`,
+    'truck-magnet-24x12': `<div style="width:100%;height:100%;background:#fff;display:grid;grid-template-columns:1.05fr 1fr;align-items:center;padding:150px 170px;gap:120px;border-radius:90px">
+        <img src="${D}" style="width:100%">
+        <div style="color:${INK}">
+          <p style="font-size:110px;font-weight:700;color:${EMBER};letter-spacing:0.08em;text-transform:uppercase">Chimney Experts</p>
+          <p class="d" style="font-size:150px;margin-top:40px">Cleaning<br>Inspection<br>Repair</p>
+          <p class="d" style="font-size:205px;margin-top:80px;font-stretch:96%;white-space:nowrap;letter-spacing:-0.035em">757-589-0783</p>
+          <p style="font-size:92px;margin-top:40px;font-weight:600">firstchimneycontracting.com</p>
+        </div></div>`,
+    'business-card-front': `<div style="width:100%;height:100%;background:${INK};display:flex;align-items:center;justify-content:center;position:relative">
+        <img src="${L}" style="width:640px"><div style="position:absolute;left:0;right:0;bottom:0;height:22px;background:${EMBER}"></div></div>`,
+    'business-card-back': `<div style="width:100%;height:100%;background:${BONE};color:${INK};padding:90px 100px;display:flex;flex-direction:column;justify-content:space-between">
+        <div><p class="d" style="font-size:66px">Andrew Paterini</p><p style="font-size:34px;color:#7a5a46;margin-top:14px;font-weight:600">Owner · F.I.R.E. Certified</p></div>
+        <div style="font-size:36px;line-height:1.55;font-weight:500">
+          <p><b style="color:${EMBER}">T</b>&nbsp; (757) 589-0783</p>
+          <p><b style="color:${EMBER}">E</b>&nbsp; info@firstchimneycontracting.com</p>
+          <p><b style="color:${EMBER}">W</b>&nbsp; firstchimneycontracting.com</p>
+          <p style="margin-top:12px;font-size:30px;color:#6b625a">Serving VA · NJ · CT · MA</p>
+        </div></div>`,
+  };
+  s.innerHTML = T[item];
+</script>
+</body>
+</html>

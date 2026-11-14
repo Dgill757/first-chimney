@@ -1,0 +1,78 @@
+<!doctype html>
+<!--
+  First Chimney branded invoice (Letter size). Open in Chrome, click the fields to edit, then Print > Save as PDF.
+  Recommended long term: use GoHighLevel Payments > Invoices with the same logo and colors so invoices,
+  payment links and job records stay in Andrew's CRM. This file is the matching paper/PDF version.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>First Chimney Contracting Invoice</title>
+<style>
+  @font-face { font-family: Archivo; src: url('../../public/fonts/archivo.woff2') format('woff2'); font-weight: 400 900; font-stretch: 62% 125%; }
+  @font-face { font-family: Geist; src: url('../../public/fonts/geist.woff2') format('woff2'); font-weight: 300 700; }
+  @page { size: letter; margin: 0; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #e9e5df; font-family: Geist, Arial, sans-serif; color: #1c1917; }
+  .page { width: 8.5in; min-height: 11in; margin: 0.3in auto; background: #fff; padding: 0.6in 0.65in; position: relative; }
+  .band { position: absolute; left: 0; right: 0; top: 0; height: 10px; background: #f07a32; }
+  header { display: flex; justify-content: space-between; align-items: flex-start; }
+  header img { width: 2.2in; }
+  h1 { font-family: Archivo; font-stretch: 112%; font-weight: 800; font-size: 34px; letter-spacing: -0.02em; margin: 0; text-align: right; }
+  .muted { color: #6b625a; font-size: 12px; line-height: 1.6; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 34px; }
+  .label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #b8501c; font-weight: 700; margin-bottom: 6px; }
+  [contenteditable] { outline: none; border-bottom: 1px dashed transparent; }
+  [contenteditable]:hover { border-bottom-color: #f07a32; }
+  table { width: 100%; border-collapse: collapse; margin-top: 34px; font-size: 13px; }
+  th { text-align: left; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6b625a; border-bottom: 2px solid #1c1917; padding: 8px 6px; }
+  td { padding: 12px 6px; border-bottom: 1px solid #ece7e1; vertical-align: top; }
+  td.n, th.n { text-align: right; white-space: nowrap; }
+  .totals { margin-left: auto; width: 2.9in; margin-top: 18px; font-size: 13px; }
+  .totals div { display: flex; justify-content: space-between; padding: 6px; }
+  .totals .due { background: #121110; color: #f3ede4; font-weight: 700; font-size: 16px; border-radius: 8px; padding: 10px 12px; margin-top: 6px; }
+  .note { margin-top: 36px; padding: 14px 16px; background: #f7f4f0; border-left: 4px solid #f07a32; font-size: 12px; line-height: 1.6; }
+  footer { position: absolute; left: 0.65in; right: 0.65in; bottom: 0.5in; display: flex; justify-content: space-between; font-size: 11px; color: #6b625a; border-top: 1px solid #ece7e1; padding-top: 12px; }
+  @media print { body { background: #fff; } .page { margin: 0; } [contenteditable]:hover { border-bottom-color: transparent; } }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="band"></div>
+  <header>
+    <img src="../../public/brand/logo-dark.png" alt="First Chimney Contracting" />
+    <div>
+      <h1>INVOICE</h1>
+      <p class="muted" style="text-align:right">No. <span contenteditable>FC-0001</span><br />Date: <span contenteditable>MM/DD/YYYY</span><br />Due: <span contenteditable>Upon receipt</span></p>
+    </div>
+  </header>
+  <div class="grid">
+    <div>
+      <div class="label">From</div>
+      <div class="muted" style="color:#1c1917">First Chimney Contracting<br />Andrew Paterini, Owner<br />(757) 589-0783<br />info@firstchimneycontracting.com<br />firstchimneycontracting.com</div>
+    </div>
+    <div>
+      <div class="label">Bill to</div>
+      <div class="muted" style="color:#1c1917" contenteditable>Customer name<br />Service address<br />City, State ZIP<br />Phone / Email</div>
+    </div>
+  </div>
+  <table>
+    <thead><tr><th>Service</th><th>Details</th><th class="n">Qty</th><th class="n">Rate</th><th class="n">Amount</th></tr></thead>
+    <tbody>
+      <tr><td contenteditable>Holiday chimney cleaning + inspection</td><td contenteditable>Single flue, wood-burning fireplace</td><td class="n" contenteditable>1</td><td class="n" contenteditable>$199.00</td><td class="n" contenteditable>$199.00</td></tr>
+      <tr><td contenteditable>&nbsp;</td><td contenteditable>&nbsp;</td><td class="n" contenteditable></td><td class="n" contenteditable></td><td class="n" contenteditable></td></tr>
+      <tr><td contenteditable>&nbsp;</td><td contenteditable>&nbsp;</td><td class="n" contenteditable></td><td class="n" contenteditable></td><td class="n" contenteditable></td></tr>
+    </tbody>
+  </table>
+  <div class="totals">
+    <div><span>Subtotal</span><span contenteditable>$199.00</span></div>
+    <div><span>Tax</span><span contenteditable>$0.00</span></div>
+    <div class="due"><span>Amount due</span><span contenteditable>$199.00</span></div>
+  </div>
+  <div class="note" contenteditable>
+    Thank you for choosing First Chimney Contracting. Inspection findings and photos are on file with your service record. Questions about this invoice? Call or text (757) 589-0783.
+  </div>
+  <footer><span>First Chimney Contracting · F.I.R.E. Certified</span><span>Serving VA · NJ · CT · MA</span></footer>
+</div>
+</body>
+</html>

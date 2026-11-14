@@ -1,0 +1,113 @@
+<!doctype html>
+<!--
+  Holiday $199 creative. Rendered to PNG/JPG by marketing/holiday-2026/render.sh using headless Chrome.
+  Sizes are selected with ?size=feed|portrait|story|landscape|og-default|og-designer.
+  Copy here must match src/lib/promo.ts.
+-->
+<html>
+<head>
+<meta charset="utf-8" />
+<style>
+  @font-face { font-family: Archivo; src: url('../../public/fonts/archivo.woff2') format('woff2'); font-weight: 400 900; font-stretch: 62% 125%; }
+  @font-face { font-family: Geist; src: url('../../public/fonts/geist.woff2') format('woff2'); font-weight: 300 700; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: var(--w); height: var(--h); overflow: hidden; background: #121110; }
+  body { font-family: Geist, sans-serif; color: #f3ede4; }
+  .stage { position: relative; width: var(--w); height: var(--h); overflow: hidden; }
+  .photo { position: absolute; inset: 0; background-size: cover; background-position: center; }
+  .shade { position: absolute; inset: 0; }
+  .content { position: absolute; display: flex; flex-direction: column; }
+  .logo { display: block; height: auto; }
+  .eyebrow { font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #f07a32; }
+  .head { font-family: Archivo; font-stretch: 112%; font-weight: 780; letter-spacing: -0.02em; line-height: 1.02; }
+  .price { font-family: Archivo; font-stretch: 100%; font-weight: 880; letter-spacing: -0.045em; line-height: 0.82; color: #f6c56f; text-shadow: 0 0 80px rgb(246 197 111 / 0.35); }
+  .price sup { font-size: 0.42em; vertical-align: top; position: relative; top: 0.12em; margin-right: 0.02em; }
+  .what { font-family: Archivo; font-stretch: 108%; font-weight: 700; }
+  .what b { color: #f07a32; }
+  .sub { color: #c9c0b4; line-height: 1.35; }
+  .cta { display: inline-flex; align-items: center; gap: 0.5em; background: #f07a32; color: #1a0d05; font-weight: 700; border-radius: 999px; white-space: nowrap; }
+  .meta { color: #b9b0a4; letter-spacing: 0.02em; }
+  .rule { height: 2px; background: linear-gradient(90deg, #f07a32, transparent); }
+  .glow { position: absolute; border-radius: 50%; background: radial-gradient(circle, rgb(240 122 50 / 0.35), transparent 65%); }
+  .flake { position: absolute; color: #f3ede4; opacity: 0.18; font-family: Geist; }
+</style>
+</head>
+<body>
+<div class="stage" id="stage"></div>
+<script>
+  const SIZES = {
+    feed: [1080, 1080], portrait: [1080, 1350], story: [1080, 1920], landscape: [1200, 630],
+    'og-default': [1200, 630], 'og-designer': [1200, 630],
+  };
+  const size = new URLSearchParams(location.search).get('size') || 'portrait';
+  const [w, h] = SIZES[size];
+  document.documentElement.style.setProperty('--w', w + 'px');
+  document.documentElement.style.setProperty('--h', h + 'px');
+  const LOGO = '../../public/brand/logo-light.png';
+  const FIRE = '../../public/media/hero-fire-poster.jpg';
+  const ARCH = '../../public/media/photos/fireplace-brick-arch.webp';
+  const STOVE = '../../public/media/stove-fire-poster.jpg';
+  const PHONE = '(757) 589-0783';
+  const URL = 'firstchimneycontracting.com/199';
+  const META = 'F.I.R.E. Certified · VA · NJ · CT · MA';
+  const stage = document.getElementById('stage');
+
+  function sparkles(n, scale) {
+    let s = '';
+    for (let i = 0; i < n; i++) {
+      const x = (i * 137) % w, y = (i * 211) % (h * 0.6);
+      s += `<span class="flake" style="left:${x}px;top:${y}px;font-size:${(10 + (i % 4) * 6) * scale}px">✦</span>`;
+    }
+    return s;
+  }
+
+  const vertical = (pad, logoH, eyebrowSize, priceSize, whatSize, subSize, ctaSize, photoH) => `
+    <div class="photo" style="background-image:url(${ARCH});height:${photoH}px;bottom:auto;"></div>
+    <div class="shade" style="background:linear-gradient(180deg, rgb(18 17 16 / 0.7) 0%, rgb(18 17 16 / 0.1) 18%, rgb(18 17 16 / 0.55) 32%, rgb(18 17 16 / 0.9) 46%, #121110 ${Math.round((photoH / h) * 100)}%)"></div>
+    <div class="glow" style="width:${w * 1.2}px;height:${w * 1.2}px;left:${-w * 0.1}px;top:${photoH - w * 0.7}px"></div>
+    ${sparkles(10, w / 1080)}
+    <div class="content" style="inset:${pad}px;justify-content:space-between;">
+      <img class="logo" src="${LOGO}" style="width:${logoH * 2.7}px">
+      <div>
+        <p class="eyebrow" style="font-size:${eyebrowSize}px;display:inline-block;background:rgb(18 17 16 / 0.82);padding:${eyebrowSize * 0.45}px ${eyebrowSize * 0.8}px;border-radius:999px;border:1px solid rgb(240 122 50 / 0.45)">Holiday Chimney Special</p>
+        <div class="rule" style="width:${w * 0.28}px;margin:${eyebrowSize * 0.9}px 0 ${eyebrowSize * 1.1}px"></div>
+        <p class="price" style="font-size:${priceSize}px"><sup>$</sup>199</p>
+        <p class="what" style="font-size:${whatSize}px;margin-top:${whatSize * 0.55}px">Chimney Cleaning <b>+</b> Inspection</p>
+        <p class="sub" style="font-size:${subSize}px;margin-top:${subSize * 0.7}px;max-width:${w * 0.82}px">Get your fireplace ready for the holiday season.</p>
+        <div style="display:flex;align-items:center;gap:${subSize}px;margin-top:${subSize * 1.6}px;flex-wrap:wrap">
+          <span class="cta" style="font-size:${ctaSize}px;padding:${ctaSize * 0.7}px ${ctaSize * 1.25}px">Call or text ${PHONE}</span>
+        </div>
+        <p class="meta" style="font-size:${subSize * 0.82}px;margin-top:${subSize * 1.3}px">${URL}<br>${META}</p>
+      </div>
+    </div>`;
+
+  const landscape = (photo, eyebrow, headHtml, sub) => `
+    <div class="photo" style="background-image:url(${photo});left:${w * 0.42}px"></div>
+    <div class="shade" style="background:linear-gradient(90deg, #121110 40%, rgb(18 17 16 / 0.65) 58%, rgb(18 17 16 / 0.05) 100%)"></div>
+    <div class="glow" style="width:700px;height:700px;left:-200px;top:180px"></div>
+    <div class="content" style="inset:52px 56px;justify-content:space-between;width:${w * 0.62}px">
+      <img class="logo" src="${LOGO}" style="width:170px">
+      <div>
+        <p class="eyebrow" style="font-size:20px">${eyebrow}</p>
+        ${headHtml}
+        <p class="meta" style="font-size:19px;margin-top:22px">${sub}</p>
+      </div>
+    </div>`;
+
+  let html = '';
+  if (size === 'feed') html = vertical(76, 92, 30, 330, 52, 32, 30, 640);
+  if (size === 'portrait') html = vertical(80, 100, 32, 360, 56, 34, 32, 820);
+  if (size === 'story') html = vertical(96, 120, 38, 420, 64, 40, 38, 1120).replace(`inset:96px`, 'inset:200px 96px 260px');
+  if (size === 'landscape') html = landscape(ARCH, 'Holiday Chimney Special',
+    `<div style="display:flex;align-items:flex-end;gap:26px;margin-top:14px"><p class="price" style="font-size:190px"><sup>$</sup>199</p><p class="what" style="font-size:34px;line-height:1.15;margin-bottom:18px">Chimney Cleaning<br><b>+</b> Inspection</p></div>`,
+    `Call or text ${PHONE} · ${URL}`);
+  if (size === 'og-default') html = landscape(FIRE, 'F.I.R.E. Certified · VA · NJ · CT · MA',
+    `<p class="head" style="font-size:66px;margin-top:18px">Chimney service<br>done right<br><span style="color:#f07a32">the first time.</span></p>`,
+    `Inspection · Cleaning · Masonry · Leak repair · ${PHONE}`);
+  if (size === 'og-designer') html = landscape(STOVE, 'First Chimney Contracting',
+    `<p class="head" style="font-size:70px;margin-top:18px">Design your<br><span style="color:#f07a32">fireplace.</span></p>`,
+    `Styles, stone, brick, mantels and fire types. Preview it live, then send it to us.`);
+  stage.innerHTML = html;
+</script>
+</body>
+</html>
