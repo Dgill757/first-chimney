@@ -8,7 +8,8 @@ import { FUEL_LABEL, KIND_LABEL, type Product } from "@/data/catalog";
 import { assessSize } from "@/data/catalog/heat";
 import { checkFit, formatInches } from "@/data/catalog/fit";
 import { previewLayers, selectedOptions } from "@/data/catalog/select";
-import { buildBuildPdf, buildRef, downloadBlob } from "@/lib/designPdf";
+import { buildGuidePdf, buildRef, downloadBlob } from "@/lib/designPdf";
+import { buildGuide } from "@/lib/buildGuide";
 import { buildSummaryText, installNotes } from "@/data/catalog/summary";
 import type { BuildApi } from "./useBuild";
 import PreviewStage from "./PreviewStage";
@@ -76,7 +77,7 @@ function SendForm({ api, product, summary, onSent }: { api: BuildApi; product: P
     <form onSubmit={onSubmit} noValidate className="bmf-card grid gap-4 p-5 sm:p-6">
       <div>
         <h3 className="font-serif text-2xl font-bold">Send this build to First Chimney</h3>
-        <p className="mt-1 text-[.95rem] text-paper/75">We get the exact build below and your branded PDF downloads. No price is promised until we have measured.</p>
+        <p className="mt-1 text-[.95rem] text-paper/75">We get the exact build below and your build guide PDF downloads. No price is promised until we have measured.</p>
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
         {field("firstName", "First name", { autoComplete: "given-name" })}
@@ -104,7 +105,7 @@ function SendForm({ api, product, summary, onSent }: { api: BuildApi; product: P
       )}
 
       <button type="submit" className="btn-ember w-full sm:w-auto sm:justify-self-start" disabled={submit.isPending}>
-        {submit.isPending ? <><LoaderCircle size={17} className="animate-spin" /> Sending</> : <><Send size={16} /> Send my build + get the PDF</>}
+        {submit.isPending ? <><LoaderCircle size={17} className="animate-spin" /> Sending</> : <><Send size={16} /> Send my build + get my guide</>}
       </button>
     </form>
   );
@@ -125,18 +126,8 @@ export default function SummaryStep({ api, product }: { api: BuildApi; product: 
     setPdfBusy(true);
     try {
       const layers = product.preview ? previewLayers(product, build.picks) : product.images.hero ? [product.images.hero.src] : [];
-      const blob = await buildBuildPdf({
-        brandName,
-        productName: product.name,
-        subtitle: `${FUEL_LABEL[product.fuel]} ${KIND_LABEL[product.kind].toLowerCase()}${product.sku ? `, ${product.sku}` : ""}`,
-        layers,
-        options: chosen.map(({ group, option }) => [group.label, option.name] as [string, string]),
-        specs: topSpecs.slice(0, 7).map(s => [s.label, s.value] as [string, string]),
-        notes: installNotes(product),
-        shareUrl: api.shareUrl(),
-        forName,
-      });
-      downloadBlob(blob, `First-Chimney-Build-${buildRef(api.shareUrl())}.pdf`);
+      const blob = await buildGuidePdf(buildGuide(product, brandName, build), { layers, shareUrl: api.shareUrl(), forName });
+      downloadBlob(blob, `First-Chimney-Fireplace-Build-Guide-${buildRef(api.shareUrl())}.pdf`);
     } catch {
       toast.error("The PDF could not be created. Use Copy link to save your build.");
     } finally {
@@ -160,7 +151,7 @@ export default function SummaryStep({ api, product }: { api: BuildApi; product: 
           <PreviewStage product={product} picks={build.picks} />
           <div className="bmf-noprint flex flex-wrap gap-3">
             <button type="button" className="btn-ghost-ember" onClick={copy}><Copy size={16} /> Copy link</button>
-            <button type="button" className="btn-ember" onClick={() => makePdf()} disabled={pdfBusy}>{pdfBusy ? <LoaderCircle size={16} className="animate-spin" /> : <FileDown size={16} />} Download branded PDF</button>
+            <button type="button" className="btn-ember" onClick={() => makePdf()} disabled={pdfBusy}>{pdfBusy ? <LoaderCircle size={16} className="animate-spin" /> : <FileDown size={16} />} Download my build guide (PDF)</button>
             <button type="button" className="btn-ghost-ember" onClick={() => window.print()}><Printer size={16} /> Print</button>
             <button type="button" className="btn-ghost-ember" onClick={() => { if (window.confirm("Start over and clear this build?")) api.reset(); }}><RotateCcw size={16} /> Start over</button>
           </div>

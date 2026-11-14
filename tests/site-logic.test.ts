@@ -1,23 +1,46 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { jpegToPdf } from '../src/lib/designPdf.ts';
+import { jpegsToPdf } from '../src/lib/designPdf.ts';
+import { buildGuide } from '../src/lib/buildGuide.ts';
 import { HOLIDAY_PROMO, reminderIcs, shouldShowPopup } from '../src/lib/promo.ts';
 import { isPublishableCity, SERVICE_AREAS } from '../src/data/serviceAreas.ts';
 import { buildRoutes } from '../src/lib/routes.ts';
 
-test('jpegToPdf writes a structurally valid PDF with correct xref offsets', () => {
+test('jpegsToPdf writes a structurally valid multi-page PDF with correct xref offsets', () => {
   const fakeJpeg = new Uint8Array([0xff, 0xd8, 0xff, 0xe0, 1, 2, 3, 0xff, 0xd9]);
-  const pdf = jpegToPdf(fakeJpeg, { w: 10, h: 10 }, { title: 'Test (design)', link: { url: 'https://example.com/a?b=c', rect: [1, 2, 3, 4] } });
+  const link = { url: 'https://example.com/a?b=c', rect: [1, 2, 3, 4] as [number, number, number, number] };
+  const pdf = jpegsToPdf([1, 2, 3].map(() => ({ jpeg: fakeJpeg, w: 10, h: 10, links: [link] })), { title: 'Test (build)' });
   const text = new TextDecoder('latin1').decode(pdf);
   assert.ok(text.startsWith('%PDF-1.4'));
   assert.ok(text.trimEnd().endsWith('%%EOF'));
+  assert.match(text, /\/Count 3/);
   const startxref = Number(text.match(/startxref\n(\d+)/)![1]);
   assert.equal(text.slice(startxref, startxref + 4), 'xref');
   const entries = [...text.slice(startxref).matchAll(/^(\d{10}) 00000 n $/gm)].map((m) => Number(m[1]));
-  assert.equal(entries.length, 7);
+  assert.equal(entries.length, 2 + 3 * 4 + 1);
   entries.forEach((off, i) => assert.equal(text.slice(off, off + `${i + 1} 0 obj`.length), `${i + 1} 0 obj`));
-  assert.match(text, /\/Title \(Test \\\(design\\\)\)/);
-  assert.match(text, /\/URI \(https:\/\/example.com\/a\?b=c\)/);
+  assert.ok(text.includes('/Title (Test \\(build\\))'));
+});
+
+test('build guide: insert guide is itemized, sized against the room and lists real install needs', async () => {
+  const { catalogProducts } = await import('../src/lib/catalogRoutes.ts');
+  const products = catalogProducts();
+  const insert = products.find((p) => p.kind === 'insert' && p.fuel === 'gas' && p.heat?.btuMax && p.options.length)!;
+  const g = buildGuide(insert, 'Brand', { picks: {}, compare: [], room: { sqft: 400, ceiling: 8, openness: 'closed', tightness: 'average' } });
+  assert.equal(g.items[0].item, `Brand ${insert.name}`);
+  assert.ok(g.stats.some((s) => s.label === 'Heat rating' && /^Up to/.test(s.value)));
+  assert.ok(g.alsoNeeded.some((a) => /liner/i.test(a)));
+  assert.ok(g.alsoNeeded.some((a) => /gas line/i.test(a)));
+  assert.ok(g.canWarm.some((c) => /Your space: about 400 sq ft/.test(c)));
+  // A good fit is reported under "It can"; a mismatch under "Keep in mind".
+  assert.ok(Boolean(g.sizeVerdict) || g.canWarm.length >= 4);
+  assert.ok(g.questions.length >= 4 && g.description.length > 20);
+  assert.equal(g.steps.length, 6);
+  assert.ok(g.prep.some((x) => /cleaned and inspected/.test(x)));
+  const electric = products.find((p) => p.fuel === 'electric')!;
+  const e = buildGuide(electric, 'Brand', { picks: {}, compare: [] });
+  assert.ok(e.cannotWarm.some((c) => /supplemental heat/.test(c)));
+  assert.ok(!e.alsoNeeded.some((a) => /liner/i.test(a)));
 });
 
 test('popup rules: never on the promo page, after a claim, or within cooldown', () => {

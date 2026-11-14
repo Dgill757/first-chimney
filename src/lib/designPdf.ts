@@ -1,64 +1,73 @@
 /**
- * Branded "Your Fireplace Design" PDF, generated in the browser with no library.
+ * "Your Fireplace Build" guide: a branded, multi-page PDF generated in the browser.
  *
- * 1. Compose a letter-size page (1275x1650 px = 8.5x11 in at 150 dpi) on a canvas:
- *    logo, the live SVG fireplace render, a spec sheet with swatches, next steps, contact.
- * 2. Encode as JPEG and wrap it in a minimal single-page PDF (pure function below,
- *    unit tested) with a clickable link that reopens the exact design.
+ * Pages are drawn on canvases (letter, 1275x1650 px = 8.5x11 in at 150 dpi),
+ * encoded as JPEG and wrapped by a tiny hand-written PDF writer (unit tested).
+ * No dependencies. Content comes from src/lib/buildGuide.ts.
  */
+import type { BuildGuide } from './buildGuide';
 import { CREDENTIALS, SITE } from './site';
-
 
 /* ------------------------------ PDF writer ------------------------------ */
 
 const enc = new TextEncoder();
 const pdfStr = (s: string) => s.replace(/\\/g, '\\\\').replace(/\(/g, '\\(').replace(/\)/g, '\\)').replace(/[^\x20-\x7e]/g, '');
 
-/**
- * Builds a valid one-page PDF that draws `jpeg` full-bleed on a US Letter page.
- * `link` is in page points (612x792, origin bottom-left).
- */
-export function jpegToPdf(jpeg: Uint8Array, px: { w: number; h: number }, meta: { title: string; link?: { url: string; rect: [number, number, number, number] } }): Uint8Array {
+type Link = { url: string; rect: [number, number, number, number] };
+
+/** Multi-page PDF: one full-bleed JPEG per US Letter page, optional link annotations per page. */
+export function jpegsToPdf(pages: { jpeg: Uint8Array; w: number; h: number; links?: Link[] }[], meta: { title: string }): Uint8Array {
   const parts: Uint8Array[] = [];
   const offsets: number[] = [];
   let length = 0;
+  let next = 3;
   const push = (chunk: Uint8Array | string) => {
     const b = typeof chunk === 'string' ? enc.encode(chunk) : chunk;
     parts.push(b);
     length += b.length;
   };
-  const obj = (n: number, body: () => void) => {
-    offsets[n] = length;
-    push(`${n} 0 obj\n`);
+  const obj = (num: number, body: () => void) => {
+    offsets[num] = length;
+    push(`${num} 0 obj\n`);
     body();
     push('\nendobj\n');
   };
 
-  push('%PDF-1.4\n%\xE2\xE3\xCF\xD3\n'.replace(/[^\x00-\x7f]/g, '~'));
-  obj(1, () => push('<< /Type /Catalog /Pages 2 0 R >>'));
-  obj(2, () => push('<< /Type /Pages /Kids [3 0 R] /Count 1 >>'));
-  obj(3, () =>
-    push(`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /XObject << /Im0 4 0 R >> >> /Contents 5 0 R${meta.link ? ' /Annots [6 0 R]' : ''} >>`),
-  );
-  obj(4, () => {
-    push(`<< /Type /XObject /Subtype /Image /Width ${px.w} /Height ${px.h} /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${jpeg.length} >>\nstream\n`);
-    push(jpeg);
-    push('\nendstream');
+  const plan = pages.map((pg) => {
+    const page = next++;
+    const image = next++;
+    const content = next++;
+    const links = (pg.links ?? []).map(() => next++);
+    return { page, image, content, links };
   });
-  const content = 'q 612 0 0 792 0 0 cm /Im0 Do Q';
-  obj(5, () => push(`<< /Length ${content.length} >>\nstream\n${content}\nendstream`));
-  if (meta.link) {
-    const [x1, y1, x2, y2] = meta.link.rect;
-    obj(6, () => push(`<< /Type /Annot /Subtype /Link /Rect [${x1} ${y1} ${x2} ${y2}] /Border [0 0 0] /A << /S /URI /URI (${pdfStr(meta.link!.url)}) >> >>`));
-  }
-  const infoN = meta.link ? 7 : 6;
-  obj(infoN, () => push(`<< /Title (${pdfStr(meta.title)}) /Author (${pdfStr(SITE.name)}) /Producer (firstchimneycontracting.com) >>`));
+  const info = next++;
+
+  push('%PDF-1.4\n%~~~~\n');
+  obj(1, () => push('<< /Type /Catalog /Pages 2 0 R >>'));
+  obj(2, () => push(`<< /Type /Pages /Kids [${plan.map((p) => `${p.page} 0 R`).join(' ')}] /Count ${pages.length} >>`));
+  pages.forEach((pg, i) => {
+    const o = plan[i];
+    obj(o.page, () =>
+      push(`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /XObject << /Im${i} ${o.image} 0 R >> >> /Contents ${o.content} 0 R${o.links.length ? ` /Annots [${o.links.map((l) => `${l} 0 R`).join(' ')}]` : ''} >>`),
+    );
+    obj(o.image, () => {
+      push(`<< /Type /XObject /Subtype /Image /Width ${pg.w} /Height ${pg.h} /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${pg.jpeg.length} >>\nstream\n`);
+      push(pg.jpeg);
+      push('\nendstream');
+    });
+    const content = `q 612 0 0 792 0 0 cm /Im${i} Do Q`;
+    obj(o.content, () => push(`<< /Length ${content.length} >>\nstream\n${content}\nendstream`));
+    (pg.links ?? []).forEach((l, j) => {
+      const [x1, y1, x2, y2] = l.rect;
+      obj(o.links[j], () => push(`<< /Type /Annot /Subtype /Link /Rect [${x1} ${y1} ${x2} ${y2}] /Border [0 0 0] /A << /S /URI /URI (${pdfStr(l.url)}) >> >>`));
+    });
+  });
+  obj(info, () => push(`<< /Title (${pdfStr(meta.title)}) /Author (${pdfStr(SITE.name)}) /Producer (firstchimneycontracting.com) >>`));
 
   const xrefAt = length;
-  const count = infoN + 1;
-  push(`xref\n0 ${count}\n0000000000 65535 f \n`);
-  for (let i = 1; i < count; i++) push(`${String(offsets[i]).padStart(10, '0')} 00000 n \n`);
-  push(`trailer\n<< /Size ${count} /Root 1 0 R /Info ${infoN} 0 R >>\nstartxref\n${xrefAt}\n%%EOF\n`);
+  push(`xref\n0 ${info + 1}\n0000000000 65535 f \n`);
+  for (let i = 1; i <= info; i++) push(`${String(offsets[i]).padStart(10, '0')} 00000 n \n`);
+  push(`trailer\n<< /Size ${info + 1} /Root 1 0 R /Info ${info} 0 R >>\nstartxref\n${xrefAt}\n%%EOF\n`);
 
   const out = new Uint8Array(length);
   let at = 0;
@@ -69,10 +78,14 @@ export function jpegToPdf(jpeg: Uint8Array, px: { w: number; h: number }, meta: 
   return out;
 }
 
-/* ------------------------------ Page layout ------------------------------ */
+/* ------------------------------ Drawing kit ------------------------------ */
 
 const W = 1275;
 const H = 1650;
+const M = 72;
+const C = { ink: '#121110', panel: 'rgba(255,244,230,0.05)', line: 'rgba(255,244,230,0.10)', bone: '#f3ede4', mute: '#b9b0a4', dim: '#948b80', ember: '#f07a32', gold: '#f6c56f', ok: '#8fd3ae', warn: '#ffb08a' };
+const display = (px: number, w = 760) => `${w} ${px}px Archivo, "Segoe UI", sans-serif`;
+const text = (px: number, w = 400) => `${w} ${px}px Geist, "Segoe UI", sans-serif`;
 
 function loadImage(src: string): Promise<HTMLImageElement> {
   return new Promise((resolve, reject) => {
@@ -83,7 +96,7 @@ function loadImage(src: string): Promise<HTMLImageElement> {
   });
 }
 
-function roundRect(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, r: number) {
+function rr(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, r: number) {
   ctx.beginPath();
   ctx.moveTo(x + r, y);
   ctx.arcTo(x + w, y, x + w, y + h, r);
@@ -93,17 +106,10 @@ function roundRect(ctx: CanvasRenderingContext2D, x: number, y: number, w: numbe
   ctx.closePath();
 }
 
-function fit(ctx: CanvasRenderingContext2D, t: string, max: number): string {
-  let v = t;
-  while (ctx.measureText(v).width > max && v.length > 4) v = `${v.slice(0, -4)}...`;
-  return v;
-}
-
 function wrap(ctx: CanvasRenderingContext2D, t: string, max: number): string[] {
-  const words = t.split(' ');
   const lines: string[] = [];
   let line = '';
-  for (const w of words) {
+  for (const w of t.split(' ')) {
     const next = line ? `${line} ${w}` : w;
     if (ctx.measureText(next).width > max && line) {
       lines.push(line);
@@ -114,134 +120,372 @@ function wrap(ctx: CanvasRenderingContext2D, t: string, max: number): string[] {
   return lines;
 }
 
+/** Draws wrapped text and returns the y after the last line. */
+function para(ctx: CanvasRenderingContext2D, t: string, x: number, y: number, max: number, lh: number, font: string, color: string, maxLines = 99): number {
+  ctx.font = font;
+  ctx.fillStyle = color;
+  const lines = wrap(ctx, t, max).slice(0, maxLines);
+  lines.forEach((l, i) => ctx.fillText(l, x, y + i * lh));
+  return y + lines.length * lh;
+}
+
+function fitText(ctx: CanvasRenderingContext2D, t: string, max: number): string {
+  let v = t;
+  while (ctx.measureText(v).width > max && v.length > 4) v = `${v.slice(0, -4)}...`;
+  return v;
+}
+
+function newPage(): [HTMLCanvasElement, CanvasRenderingContext2D] {
+  const c = document.createElement('canvas');
+  c.width = W;
+  c.height = H;
+  const ctx = c.getContext('2d')!;
+  ctx.fillStyle = C.ink;
+  ctx.fillRect(0, 0, W, H);
+  const g = ctx.createRadialGradient(W * 0.75, -100, 50, W * 0.75, -100, 1100);
+  g.addColorStop(0, 'rgba(240,122,50,0.16)');
+  g.addColorStop(1, 'rgba(240,122,50,0)');
+  ctx.fillStyle = g;
+  ctx.fillRect(0, 0, W, H);
+  ctx.fillStyle = C.ember;
+  ctx.fillRect(0, 0, W, 10);
+  return [c, ctx];
+}
+
+function header(ctx: CanvasRenderingContext2D, logo: HTMLImageElement, label: string, ref: string) {
+  ctx.drawImage(logo, M, 44, 170, (logo.height / logo.width) * 170);
+  ctx.textAlign = 'right';
+  ctx.fillStyle = C.ember;
+  ctx.font = text(18, 700);
+  ctx.fillText(label.toUpperCase(), W - M, 74);
+  ctx.fillStyle = C.dim;
+  ctx.font = text(17);
+  ctx.fillText(ref, W - M, 102);
+  ctx.textAlign = 'left';
+}
+
+function footer(ctx: CanvasRenderingContext2D, page: number, total: number) {
+  ctx.fillStyle = C.line;
+  ctx.fillRect(M, H - 96, W - 2 * M, 1);
+  ctx.fillStyle = C.ember;
+  ctx.font = text(21, 700);
+  ctx.fillText(`Call or text ${SITE.phoneDisplay}`, M, H - 52);
+  ctx.textAlign = 'right';
+  ctx.fillStyle = C.dim;
+  ctx.font = text(16);
+  ctx.fillText(`Open this build online  ·  ${CREDENTIALS.fire.label}  ·  VA · NJ · CT · MA  ·  Page ${page} of ${total}`, W - M, H - 52);
+  ctx.textAlign = 'left';
+}
+
+function sectionTitle(ctx: CanvasRenderingContext2D, t: string, x: number, y: number) {
+  ctx.fillStyle = C.ember;
+  ctx.font = text(17, 700);
+  ctx.fillText(t.toUpperCase(), x, y);
+}
+
+function toJpeg(c: HTMLCanvasElement): Uint8Array {
+  const bin = atob(c.toDataURL('image/jpeg', 0.9).split(',')[1]);
+  const out = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
+  return out;
+}
+
 export function buildRef(seed: string): string {
   let h = 0;
   for (let i = 0; i < seed.length; i++) h = (h * 31 + seed.charCodeAt(i)) >>> 0;
   return `FB-${h.toString(36).toUpperCase().slice(0, 6)}`;
 }
 
-export type BuildPdfInput = {
-  brandName: string;
-  productName: string;
-  subtitle: string;
-  /** Image layers drawn in order (layered preview art) or a single product photo. */
-  layers: string[];
-  options: [string, string][];
-  specs: [string, string][];
-  notes: string[];
-  shareUrl: string;
-  forName?: string;
-};
+/* ------------------------------ The guide ------------------------------ */
 
-/** Branded one-page PDF of a customer's build: product imagery, choices, specs and next steps. */
-export async function buildBuildPdf(b: BuildPdfInput): Promise<Blob> {
-  await Promise.all([document.fonts.load('760 60px Archivo'), document.fonts.load('500 24px Geist')]).catch(() => undefined);
-  const canvas = document.createElement('canvas');
-  canvas.width = W;
-  canvas.height = H;
-  const ctx = canvas.getContext('2d')!;
-  const display = (px: number, weight = 760) => `${weight} ${px}px Archivo, "Segoe UI", sans-serif`;
-  const text = (px: number, weight = 400) => `${weight} ${px}px Geist, "Segoe UI", sans-serif`;
-  const ref = buildRef(b.shareUrl);
-
-  ctx.fillStyle = '#121110';
-  ctx.fillRect(0, 0, W, H);
-  const glow = ctx.createRadialGradient(W / 2, 560, 60, W / 2, 560, 820);
-  glow.addColorStop(0, 'rgba(240,122,50,0.18)');
-  glow.addColorStop(1, 'rgba(240,122,50,0)');
-  ctx.fillStyle = glow;
-  ctx.fillRect(0, 0, W, H);
-  ctx.fillStyle = '#f07a32';
-  ctx.fillRect(0, 0, W, 12);
-
+export async function buildGuidePdf(g: BuildGuide, opts: { layers: string[]; shareUrl: string; forName?: string }): Promise<Blob> {
+  await Promise.all([document.fonts.load('760 60px Archivo'), document.fonts.load('400 20px Geist'), document.fonts.load('700 20px Geist')]).catch(() => undefined);
   const logo = await loadImage(SITE.logoPng);
-  ctx.drawImage(logo, 70, 52, 250, (logo.height / logo.width) * 250);
-  ctx.textAlign = 'right';
-  ctx.fillStyle = '#f07a32';
-  ctx.font = text(20, 600);
-  ctx.fillText('YOUR FIREPLACE BUILD', W - 70, 84);
-  ctx.fillStyle = '#b9b0a4';
-  ctx.font = text(20);
-  ctx.fillText(`${ref}  ·  ${new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}`, W - 70, 116);
-  if (b.forName) ctx.fillText(`Prepared for ${b.forName}`, W - 70, 146);
+  const ref = buildRef(opts.shareUrl);
+  const date = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+  const refLine = `${ref} · ${date}`;
+  const pages: HTMLCanvasElement[] = [];
+  const total = 3;
 
-  ctx.textAlign = 'left';
-  ctx.fillStyle = '#f6c56f';
-  ctx.font = text(22, 700);
-  ctx.fillText(b.brandName.toUpperCase(), 70, 232);
-  ctx.fillStyle = '#f3ede4';
-  ctx.font = display(56);
-  ctx.fillText(fit(ctx, b.productName, W - 140), 70, 292);
-  ctx.fillStyle = '#b9b0a4';
-  ctx.font = text(22, 500);
-  ctx.fillText(b.subtitle, 70, 330);
-
-  // Product imagery on a warm stage, contained (never cropped).
-  const sx = 70, sy = 360, sw = W - 140, sh = 640;
-  ctx.save();
-  roundRect(ctx, sx, sy, sw, sh, 28);
-  ctx.clip();
-  ctx.fillStyle = '#f4f1ea';
-  ctx.fillRect(sx, sy, sw, sh);
-  for (const src of b.layers) {
-    try {
-      const im = await loadImage(src);
-      const s = Math.min(sw / im.width, sh / im.height);
-      const w = im.width * s, h = im.height * s;
-      ctx.drawImage(im, sx + (sw - w) / 2, sy + (sh - h) / 2, w, h);
-    } catch {
-      /* a missing layer is skipped rather than failing the PDF */
+  /* ---------- Page 1: cover ---------- */
+  {
+    const [c, ctx] = newPage();
+    header(ctx, logo, 'Your fireplace build', refLine);
+    ctx.fillStyle = C.gold;
+    ctx.font = text(22, 700);
+    ctx.fillText(g.brand.toUpperCase(), M, 214);
+    ctx.fillStyle = C.bone;
+    ctx.font = display(66);
+    ctx.fillText(fitText(ctx, g.model, W - 2 * M), M, 284);
+    ctx.fillStyle = C.mute;
+    ctx.font = text(22, 500);
+    ctx.fillText(`${g.kindLine.replace(/^\w/, (x) => x.toUpperCase())}${g.sku ? ` · Model ${g.sku}` : ''}`, M, 324);
+    if (opts.forName) {
+      ctx.textAlign = 'right';
+      ctx.fillStyle = C.bone;
+      ctx.font = text(20, 600);
+      ctx.fillText(`Prepared for ${opts.forName}`, W - M, 324);
+      ctx.textAlign = 'left';
     }
-  }
-  ctx.restore();
 
-  // Choices (left) and maker specs (right)
-  const top = 1050;
-  const colW = (W - 140 - 50) / 2;
-  const list = (title: string, rows: [string, string][], x: number) => {
-    ctx.fillStyle = '#f07a32';
-    ctx.font = text(19, 700);
-    ctx.fillText(title.toUpperCase(), x, top);
-    rows.slice(0, 7).forEach(([k, v], i) => {
-      const y = top + 42 + i * 40;
-      ctx.fillStyle = '#948b80';
-      ctx.font = text(18, 500);
-      ctx.fillText(fit(ctx, k, 200), x, y);
-      ctx.fillStyle = '#f3ede4';
-      ctx.font = text(19, 500);
-      ctx.fillText(fit(ctx, v, colW - 220), x + 215, y);
+    const sx = M, sy = 360, sw = W - 2 * M, sh = 640;
+    ctx.save();
+    rr(ctx, sx, sy, sw, sh, 30);
+    ctx.clip();
+    ctx.fillStyle = '#f4f1ea';
+    ctx.fillRect(sx, sy, sw, sh);
+    for (const src of opts.layers) {
+      try {
+        const im = await loadImage(src);
+        const s = Math.min((sw - 40) / im.width, (sh - 40) / im.height);
+        const w = im.width * s, h = im.height * s;
+        ctx.drawImage(im, sx + (sw - w) / 2, sy + (sh - h) / 2, w, h);
+      } catch {
+        /* skip a missing layer */
+      }
+    }
+    ctx.restore();
+
+    const ty = 1040;
+    const cols = Math.max(1, g.stats.length);
+    const tw = (W - 2 * M - (cols - 1) * 20) / cols;
+    g.stats.forEach((s, i) => {
+      const x = M + i * (tw + 20);
+      ctx.fillStyle = C.panel;
+      rr(ctx, x, ty, tw, 128, 18);
+      ctx.fill();
+      ctx.fillStyle = C.dim;
+      ctx.font = text(17, 600);
+      ctx.fillText(s.label.toUpperCase(), x + 22, ty + 42);
+      ctx.fillStyle = C.bone;
+      let fs = 34;
+      ctx.font = display(fs, 720);
+      while (ctx.measureText(s.value).width > tw - 44 && fs > 20) ctx.font = display(--fs, 720);
+      ctx.fillText(fitText(ctx, s.value, tw - 44), x + 22, ty + 94);
     });
-  };
-  list('Your choices', b.options.length ? b.options : [['Options', 'Maker defaults']], 70);
-  list('From the maker', b.specs, 70 + colW + 50);
 
-  // Next steps
-  const ny = 1370;
-  ctx.fillStyle = 'rgba(255,244,230,0.05)';
-  roundRect(ctx, 70, ny, W - 140, 170, 20);
-  ctx.fill();
-  ctx.fillStyle = '#f3ede4';
-  ctx.font = text(22, 600);
-  ctx.fillText('What happens next', 100, ny + 44);
-  ctx.fillStyle = '#b9b0a4';
-  ctx.font = text(18);
-  const steps = [b.notes[0] ?? '', 'We measure and confirm every dimension on site before ordering. Pricing comes after that visit, in writing.'].filter(Boolean).join(' ');
-  wrap(ctx, steps, W - 200).slice(0, 4).forEach((l, i) => ctx.fillText(l, 100, ny + 82 + i * 28));
+    let y = para(ctx, g.description, M, 1226, W - 2 * M, 30, text(20), C.mute, 3);
+    y += 22;
+    sectionTitle(ctx, 'Your choices at a glance', M, y);
+    y += 20;
+    let x = M;
+    ctx.font = text(18, 500);
+    const chips = g.choices.length ? g.choices.map(([k, v]) => `${k}: ${v}`) : ['Maker standard configuration'];
+    for (const chip of chips) {
+      ctx.font = text(18, 500);
+      const w = Math.min(ctx.measureText(chip).width + 36, W - 2 * M);
+      if (x + w > W - M) {
+        x = M;
+        y += 52;
+      }
+      if (y > H - 170) break;
+      ctx.strokeStyle = 'rgba(240,122,50,0.45)';
+      ctx.lineWidth = 1.5;
+      rr(ctx, x, y + 6, w, 40, 20);
+      ctx.stroke();
+      ctx.fillStyle = C.bone;
+      ctx.fillText(fitText(ctx, chip, w - 36), x + 18, y + 33);
+      x += w + 12;
+    }
+    // Next-step band
+    const by = H - 218;
+    ctx.fillStyle = 'rgba(240,122,50,0.10)';
+    rr(ctx, M, by, W - 2 * M, 92, 18);
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(240,122,50,0.45)';
+    ctx.lineWidth = 1.5;
+    rr(ctx, M, by, W - 2 * M, 92, 18);
+    ctx.stroke();
+    ctx.fillStyle = C.bone;
+    ctx.font = text(20, 700);
+    ctx.fillText('Next step: an on-site measure, then a written, itemized quote.', M + 28, by + 40);
+    ctx.fillStyle = C.mute;
+    ctx.font = text(18);
+    ctx.fillText(`Call or text ${SITE.phoneDisplay} and mention build ${ref}. Inside: your item breakdown, heat guide and install journey.`, M + 28, by + 70);
+    footer(ctx, 1, total);
+    pages.push(c);
+  }
 
-  ctx.fillStyle = '#f07a32';
-  ctx.font = text(24, 700);
-  ctx.fillText(`Call or text ${SITE.phoneDisplay}`, 70, H - 50);
-  ctx.textAlign = 'right';
-  ctx.fillStyle = '#b9b0a4';
-  ctx.font = text(19);
-  ctx.fillText(`${CREDENTIALS.fire.label}  ·  VA · NJ · CT · MA  ·  Open this build online`, W - 70, H - 50);
+  /* ---------- Page 2: what you are getting + heat ---------- */
+  {
+    const [c, ctx] = newPage();
+    header(ctx, logo, `${g.brand} ${g.model}`, refLine);
+    ctx.fillStyle = C.bone;
+    ctx.font = display(48);
+    ctx.fillText('What you are getting', M, 220);
 
-  const url = canvas.toDataURL('image/jpeg', 0.9);
-  const bin = atob(url.split(',')[1]);
-  const jpeg = new Uint8Array(bin.length);
-  for (let i = 0; i < bin.length; i++) jpeg[i] = bin.charCodeAt(i);
+    let y = 268;
+    sectionTitle(ctx, 'Item breakdown', M, y);
+    y += 16;
+    const colA = M + 24, colB = M + 360, colC = W - M - 24;
+    const shown = g.items.slice(0, 9);
+    const rowsH = shown.length * 56 + 56;
+    ctx.fillStyle = C.panel;
+    rr(ctx, M, y, W - 2 * M, rowsH, 20);
+    ctx.fill();
+    ctx.fillStyle = C.dim;
+    ctx.font = text(16, 700);
+    ctx.fillText('ITEM', colA, y + 36);
+    ctx.fillText('YOUR SELECTION', colB, y + 36);
+    ctx.textAlign = 'right';
+    ctx.fillText('PART #', colC, y + 36);
+    ctx.textAlign = 'left';
+    shown.forEach((it, i) => {
+      const ry = y + 56 + i * 56;
+      ctx.fillStyle = C.line;
+      ctx.fillRect(M + 20, ry, W - 2 * M - 40, 1);
+      ctx.fillStyle = i === 0 ? C.gold : C.mute;
+      ctx.font = text(19, i === 0 ? 700 : 500);
+      ctx.fillText(fitText(ctx, it.item, colB - colA - 20), colA, ry + 36);
+      ctx.fillStyle = C.bone;
+      ctx.font = text(19, 500);
+      ctx.fillText(fitText(ctx, it.detail, colC - colB - 190), colB, ry + 36);
+      ctx.textAlign = 'right';
+      ctx.fillStyle = C.dim;
+      ctx.font = text(17);
+      ctx.fillText(it.part ? fitText(ctx, it.part, 170) : '-', colC, ry + 36);
+      ctx.textAlign = 'left';
+    });
+    y += rowsH + 44;
+
+    sectionTitle(ctx, 'Also part of a typical install (confirmed at the measure)', M, y);
+    y += 36;
+    for (const a of g.alsoNeeded.slice(0, 6)) {
+      ctx.fillStyle = C.ember;
+      ctx.beginPath();
+      ctx.arc(M + 8, y - 7, 5, 0, Math.PI * 2);
+      ctx.fill();
+      y = para(ctx, a, M + 28, y, W - 2 * M - 40, 28, text(19), C.bone, 2) + 10;
+    }
+    y += 20;
+
+    sectionTitle(ctx, 'Heat and comfort: what it can and cannot do', M, y);
+    y += 22;
+    const half = (W - 2 * M - 24) / 2;
+    const canLines = [...g.canWarm, ...(g.fitNote ? [g.fitNote] : [])];
+    const keepLines = [...(g.sizeVerdict ? [g.sizeVerdict] : []), ...g.cannotWarm];
+    const measure = (lines: string[]) => {
+      ctx.font = text(18);
+      return 84 + lines.reduce((h, l) => h + Math.min(4, wrap(ctx, l, half - 80).length) * 27 + 14, 0) + 10;
+    };
+    const boxH = Math.min(H - 420 - y, Math.max(measure(canLines), measure(keepLines)));
+    const box = (x: number, title: string, color: string, mark: string, lines: string[]) => {
+      ctx.fillStyle = C.panel;
+      rr(ctx, x, y, half, boxH, 20);
+      ctx.fill();
+      ctx.fillStyle = color;
+      ctx.font = text(20, 700);
+      ctx.fillText(title, x + 26, y + 44);
+      let ly = y + 84;
+      for (const l of lines) {
+        if (ly > y + boxH - 40) break;
+        ctx.fillStyle = color;
+        ctx.font = text(19, 700);
+        ctx.fillText(mark, x + 26, ly);
+        ly = para(ctx, l, x + 52, ly, half - 80, 27, text(18), C.bone, 4) + 14;
+      }
+    };
+    box(M, 'It can', C.ok, '+', canLines);
+    box(M + half + 24, 'Keep in mind', C.warn, '!', keepLines);
+
+    // Questions answered at the measure
+    let qy = y + boxH + 52;
+    sectionTitle(ctx, 'Questions we will answer at your measure', M, qy);
+    qy += 36;
+    const qCol = (W - 2 * M - 24) / 2;
+    g.questions.forEach((q, i) => {
+      const x = M + (i % 2) * (qCol + 24);
+      const yy = qy + Math.floor(i / 2) * 62;
+      if (yy > H - 140) return;
+      ctx.fillStyle = C.gold;
+      ctx.font = text(19, 700);
+      ctx.fillText('?', x, yy);
+      para(ctx, q, x + 24, yy, qCol - 36, 26, text(18), C.bone, 2);
+    });
+    footer(ctx, 2, total);
+    pages.push(c);
+  }
+
+  /* ---------- Page 3: the journey, prep, tips, specs ---------- */
+  {
+    const [c, ctx] = newPage();
+    header(ctx, logo, `${g.brand} ${g.model}`, refLine);
+    ctx.fillStyle = C.bone;
+    ctx.font = display(48);
+    ctx.fillText('From this PDF to your first fire', M, 220);
+
+    let y = 268;
+    const colW = (W - 2 * M - 24) / 2;
+    g.steps.forEach((s, i) => {
+      const x = M + (i % 2) * (colW + 24);
+      const sy = y + Math.floor(i / 2) * 150;
+      ctx.fillStyle = C.panel;
+      rr(ctx, x, sy, colW, 136, 18);
+      ctx.fill();
+      ctx.fillStyle = C.ember;
+      ctx.font = display(34, 800);
+      ctx.fillText(String(i + 1).padStart(2, '0'), x + 22, sy + 52);
+      ctx.fillStyle = C.bone;
+      ctx.font = text(21, 700);
+      ctx.fillText(fitText(ctx, s.title, colW - 110), x + 90, sy + 44);
+      para(ctx, s.body, x + 90, sy + 76, colW - 112, 25, text(17), C.mute, 3);
+    });
+    y += 3 * 150 + 30;
+
+    const listCol = (title: string, items: string[], x: number) => {
+      sectionTitle(ctx, title, x, y);
+      let ly = y + 38;
+      for (const t of items) {
+        ctx.fillStyle = C.ember;
+        ctx.font = text(19, 700);
+        ctx.fillText('\u2713', x, ly);
+        ly = para(ctx, t, x + 28, ly, colW - 40, 26, text(18), C.bone, 3) + 12;
+      }
+      return ly;
+    };
+    const a = listCol('How to prepare', g.prep, M);
+    const b = listCol('Good to know', g.tips, M + colW + 24);
+    y = Math.max(a, b) + 26;
+
+    if (g.specs.length && y < H - 420) {
+      sectionTitle(ctx, 'Specifications from the maker', M, y);
+      y += 30;
+      const rows = Math.min(g.specs.length, Math.floor((H - 330 - y) / 34) * 2);
+      g.specs.slice(0, rows).forEach(([k, v], i) => {
+        const x = M + (i % 2) * (colW + 24);
+        const sy = y + Math.floor(i / 2) * 34;
+        ctx.fillStyle = C.dim;
+        ctx.font = text(16, 500);
+        ctx.fillText(fitText(ctx, k, 230), x, sy);
+        ctx.fillStyle = C.bone;
+        ctx.font = text(17, 500);
+        ctx.fillText(fitText(ctx, v, colW - 250), x + 240, sy);
+      });
+    }
+    // Closing panel
+    const py = H - 300;
+    ctx.fillStyle = C.panel;
+    rr(ctx, M, py, W - 2 * M, 150, 20);
+    ctx.fill();
+    ctx.drawImage(logo, M + 28, py + 30, 150, (logo.height / logo.width) * 150);
+    ctx.fillStyle = C.bone;
+    ctx.font = text(22, 700);
+    ctx.fillText(`Ready when you are. Mention build ${ref}.`, M + 220, py + 56);
+    para(ctx, `${SITE.name} is owned and run by ${SITE.owner}, ${CREDENTIALS.fire.label}. Every job gets a written quote before work starts, drop cloths down and a walkthrough when we are done.`, M + 220, py + 92, W - 2 * M - 250, 26, text(18), C.mute, 2);
+    ctx.fillStyle = C.dim;
+    ctx.font = text(15);
+    ctx.fillText('Specifications are the manufacturer\u2019s. We confirm fit and requirements on site, and pricing is provided in writing after the measure.', M, H - 118);
+    footer(ctx, 3, total);
+    pages.push(c);
+  }
+
+  // The footer's right-hand text links back to the build on every page (PDF points).
   const k = 612 / W;
-  const pdf = jpegToPdf(jpeg, { w: W, h: H }, { title: `First Chimney fireplace build ${ref}: ${b.brandName} ${b.productName}`, link: { url: b.shareUrl, rect: [Math.round(640 * k), Math.round(28 * k), Math.round((W - 70) * k), Math.round(78 * k)] } });
+  const link: Link = { url: opts.shareUrl, rect: [Math.round((W - 760) * k), Math.round(30 * k), Math.round((W - M) * k), Math.round(78 * k)] };
+  const pdf = jpegsToPdf(
+    pages.map((cv) => ({ jpeg: toJpeg(cv), w: W, h: H, links: [link] })),
+    { title: `First Chimney fireplace build ${ref}: ${g.brand} ${g.model}` },
+  );
   return new Blob([pdf as BlobPart], { type: 'application/pdf' });
 }
 

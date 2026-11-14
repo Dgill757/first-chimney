@@ -94,3 +94,13 @@ Real project gallery and reviews; city pages; GA4 + Search Console + Bing Webmas
 | Which brands Andrew is an authorized dealer/installer for. Turn off any others with `enabled: false` in `src/data/catalog/brands.ts` | Andrew |
 | Confirm or edit the 20 proposed city pages | Andrew |
 | Run the AI scene script (or approve its output) once an OpenAI key is provided | Dan |
+
+## 10. Build guide PDF (round 3)
+
+The builder's PDF is now a three-page "Your Fireplace Build" guide (`src/lib/buildGuide.ts` content, `src/lib/designPdf.ts` layout):
+1. Cover: product render with the chosen options, heat rating, efficiency, fuel, maker description, choices at a glance, next-step band with the build code.
+2. What you are getting: itemized breakdown with manufacturer part numbers; what a typical install also needs (liner, gas line, venting, inspection, permit), confirmed at the measure; heat and comfort "It can / Keep in mind" using the maker's ratings and the homeowner's own room size; questions answered at the measure.
+3. From this PDF to your first fire: six-step install journey, how to prepare, good-to-know tips, maker specs, First Chimney promise.
+Every page links back to the saved build. Heat figures are labeled as the maker's rating (input and output appear in the specs).
+
+Final QA: 19 tests; all 25 location pages plus home, holiday, builder, shop, contact, about, FAQ, blog, gallery and reviews checked at 375/390/1440 with no errors, overflow or clipped text; builder walked to a downloaded 3-page guide.
