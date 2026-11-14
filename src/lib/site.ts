@@ -1,46 +1,96 @@
+/**
+ * SINGLE SOURCE OF TRUTH for business facts.
+ *
+ * Everything a customer could hold us to (phone, coverage, credentials) lives
+ * here and only here. Pages, structured data, the prerender script, llms.txt
+ * and the sitemap all read from this file, so a change here propagates
+ * everywhere on the next build.
+ *
+ * Rules (from Andrew's instructions):
+ *  - Coverage is VA, NJ, CT, MA only. Do not list cities until Andrew confirms them
+ *    (see src/data/serviceAreas.ts).
+ *  - FIRE certification is confirmed. CSIA/CSI references were removed at Andrew's request.
+ *  - The 757 number is the approved line. An 804 number is under consideration but is NOT
+ *    purchased; do not publish it until it is live.
+ */
+
 export const SITE = {
-  name: 'First Chimney',
-  domain: 'https://firstchimneycontracting.com',
+  name: 'First Chimney Contracting',
+  shortName: 'First Chimney',
+  owner: 'Andrew Paterini',
+  /** Canonical origin. The apex domain 307-redirects to www, so www is canonical. */
+  domain: 'https://www.firstchimneycontracting.com',
   displayDomain: 'firstchimneycontracting.com',
-  phoneDisplay: '757-589-0783',
+  phoneDisplay: '(757) 589-0783',
+  phoneE164: '+17575890783',
   phoneHref: 'tel:+17575890783',
-  serviceRegions: 'VA, MD, WV, & PA',
+  smsHref: 'sms:+17575890783',
   email: 'info@firstchimneycontracting.com',
-  logo: '/images/logos/logo-cropped.png',
-  ogImage: '/images/hero-images/hayden-scott-lyTgIeUBOUE-unsplash-768x513.jpg',
+  /** Business hours are not confirmed. Leave null until Andrew provides them. */
+  hours: null as null | { days: string; time: string }[],
+  logo: '/brand/logo-light.webp',
+  logoPng: '/brand/logo-light.png',
+  logoDark: '/brand/logo-dark.png',
+  ogImage: '/og/og-default.jpg',
   social: {
-    facebook: 'https://www.facebook.com/firstchimneycontracting',
-    instagram: 'https://www.instagram.com/firstchimneycontracting',
-    linkedin: 'https://www.linkedin.com/company/first-chimney-contracting',
+    // Not yet confirmed as active profiles. Only links listed here are rendered.
+    facebook: '',
+    instagram: '',
   },
 };
 
-export const IMAGE_ASSETS = {
-  hero: '/images/hero-images/hayden-scott-lyTgIeUBOUE-unsplash-768x513.jpg',
-  heroAlt: '/images/hero-images/chimney-cleaning-inspection.jpg',
-  chimneySweep1: '/images/chimney-sweeping/sweep.jpg',
-  chimneySweep2: '/images/chimney-sweeping/4L6A9294.jpg',
-  chimneySweep3: '/images/chimney-sweeping/4L6A5532.jpg',
-  inspection: '/images/hero-images/chimney-cleaning-inspection.jpg',
-  inspectionAlt: '/images/chimney-sweeping/DSC05553.webp',
-  cap: '/images/chimney-cap/Chimney.png',
-  crown: '/images/chimney-crown/chimney-repair-image.webp',
-  masonry: '/images/masonry/outdoor-fireplaces-monster-Home-services-e1659378925446.jpg',
-  beforeAfter1: '/images/before-after-images/BA_fireplace-facelift-copy.jpg',
-  beforeAfter2: '/images/before-after-images/Stone-Chimney.jpg',
-  beforeAfter3: '/images/before-after-images/Before.webp',
-  rebuild: '/images/before-after-images/1000s.jpg',
-  fireplace: '/images/hero-images/7360968-640w.webp',
-  heroVideo: '/images/videos/970176-hd_1920_1080_24fps.mp4',
+export type StateCode = 'VA' | 'NJ' | 'CT' | 'MA';
+
+export const STATES: { code: StateCode; name: string; slug: string }[] = [
+  { code: 'VA', name: 'Virginia', slug: 'virginia' },
+  { code: 'NJ', name: 'New Jersey', slug: 'new-jersey' },
+  { code: 'CT', name: 'Connecticut', slug: 'connecticut' },
+  { code: 'MA', name: 'Massachusetts', slug: 'massachusetts' },
+];
+
+export const STATE_LIST_TEXT = 'Virginia, New Jersey, Connecticut & Massachusetts';
+export const STATE_CODES_TEXT = 'VA · NJ · CT · MA';
+
+/**
+ * Credentials shown on the site.
+ * `label` is what renders. Andrew confirmed he holds FIRE certification.
+ * TODO(Andrew): confirm the exact credential title as printed on the certificate
+ * (for example "F.I.R.E. Certified Chimney Inspector") and update `label`/`fullName`.
+ */
+export const CREDENTIALS = {
+  fire: {
+    label: 'F.I.R.E. Certified',
+    fullName: 'F.I.R.E. certified chimney inspection',
+    short: 'FIRE Certified',
+  },
 };
 
-export const SERVICES = [
-  { id: 'chimney-inspection', title: 'Chimney Inspection' },
-  { id: 'chimney-sweeping', title: 'Chimney Sweeping' },
-  { id: 'masonry-rebuilds', title: 'Masonry & Rebuilds' },
-  { id: 'leak-repair', title: 'Leak Repair & Waterproofing' },
-  { id: 'chimney-cap', title: 'Chimney Cap & Chase Cover Installation' },
-  { id: 'chimney-crown', title: 'Chimney Crown Repair' },
-  { id: 'fireplace-repair', title: 'Fireplace Repair' },
-  { id: 'dryer-vent-cleaning', title: 'Dryer Vent Cleaning' },
-] as const;
+/**
+ * Photography. These are licensed stock / illustrative images, NOT First Chimney
+ * job photos. Never caption them as "our work". Real project photos go in
+ * src/data/projects.ts once Andrew approves them.
+ */
+const P = '/media/photos/';
+export const IMAGES = {
+  heroVideo: '/media/hero-fire.mp4',
+  heroPoster: '/media/hero-fire-poster.jpg',
+  stoveVideo: '/media/stove-fire.mp4',
+  stovePoster: '/media/stove-fire-poster.jpg',
+  brickArch: `${P}fireplace-brick-arch.webp`,
+  logsGlow: `${P}fireplace-logs-glow.webp`,
+  brickWide: `${P}fireplace-brick-wide.webp`,
+  capSky: `${P}chimney-cap-sky.webp`,
+  crownFlue: `${P}chimney-crown-flue.webp`,
+  sweepStone: `${P}chimney-sweep-stone-fireplace.webp`,
+  techRooftop: `${P}chimney-tech-rooftop.webp`,
+  sweepRotary: `${P}chimney-sweep-rotary.webp`,
+  dropCloths: `${P}chimney-cleaning-drop-cloths.webp`,
+  inspectionCloseup: `${P}fireplace-inspection-closeup.webp`,
+  rooftopWide: `${P}rooftop-sweep-wide.webp`,
+  rooftopBrush: `${P}rooftop-sweep-brush.webp`,
+  chimneyTopSky: `${P}chimney-top-brush-sky.webp`,
+  cleaningSetup: `${P}fireplace-cleaning-setup.webp`,
+  outdoorStone: `${P}outdoor-stone-fireplace.webp`,
+  fireboxBrush: `${P}firebox-brush.webp`,
+  flueRoof: `${P}chimney-flue-inspection-roof.webp`,
+};
