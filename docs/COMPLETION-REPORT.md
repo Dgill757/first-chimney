@@ -114,3 +114,16 @@ Final QA: 19 tests; all 25 location pages plus home, holiday, builder, shop, con
 - Real photos replace stock on six service pages (inspection, cleaning, masonry, leak repair, caps, crowns), the homepage, holiday page, contact page, all 4 state pages and all 20 city pages.
 
 To confirm with Andrew: the 10 / 25 year figures; that homeowners are OK with their homes appearing in the gallery (no addresses or towns are shown).
+
+## 12. Reviews, credential verification, relining (round 5)
+
+- **Credential verified:** the official F.I.R.E. Service directory lists Andrew Paterini (Virginia Beach) as an **F.I.R.E. Certified Technician** (individual certification). Site wording updated everywhere and linked to the directory as independent proof. This closes the "exact credential title" approval item.
+- **Reviews:** no reviews from Andrew's previous employer are reused. Reviews of another business cannot be presented as First Chimney's (FTC 16 CFR Part 465, Google review policy). The homepage card now shows "Trust you can check" (directory link, experience, real-reviews-only promise) and switches to real reviews automatically once `REVIEWS` in `src/data/content.ts` has entries.
+- **Testimonial collection:** `/reviews#share` collects past customers' experiences with Andrew, with explicit permission to publish first name, town and comments. Submissions reach the CRM tagged `Testimonial` with the permission recorded in the note. Approved ones are added to `REVIEWS` (`source: 'Direct'`).
+- **Chimney Relining** service page added (Andrew's trucks list relining; liner photo used).
+- Default social share image now shows Andrew with his truck.
+
+### How to build reviews fast (and safely)
+1. Send Andrew's past customers the link `firstchimneycontracting.com/reviews#share`. Real words, real permission, published on the site.
+2. When the Google Business Profile is live, ask First Chimney's customers for a Google review after each job (the CRM review-request workflow automates this). Do not offer incentives, do not filter who gets asked, and never write reviews for customers.
+3. Past customers can leave a Google review for First Chimney once First Chimney has done work for them.

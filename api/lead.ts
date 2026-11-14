@@ -38,7 +38,7 @@ const GHL_VERSION = '2021-07-28';
 const MAX_ATTEMPTS = 3;
 const RETRY_DELAY_MS = 1200;
 
-export const FORM_IDS = ['holiday-199', 'contact', 'service-request', 'fireplace-designer', 'shop-quote', 'promo-save'] as const;
+export const FORM_IDS = ['holiday-199', 'contact', 'service-request', 'fireplace-designer', 'shop-quote', 'promo-save', 'testimonial'] as const;
 export type FormId = (typeof FORM_IDS)[number];
 
 export const HOLIDAY_TAG = 'Holiday Special - $199';
@@ -162,6 +162,7 @@ const FORM_LABEL: Record<FormId, string> = {
   'fireplace-designer': 'Fireplace Designer',
   'shop-quote': 'Fireplace Shop Quote',
   'promo-save': 'Saved Holiday Offer',
+  testimonial: 'Customer Testimonial',
 };
 
 export function buildTags(lead: Lead): string[] {
@@ -169,6 +170,7 @@ export function buildTags(lead: Lead): string[] {
   if (lead.formId === 'holiday-199' || lead.formId === 'promo-save' || lead.promo === 'holiday-199-cleaning-inspection') tags.add(HOLIDAY_TAG);
   if (lead.formId === 'fireplace-designer') tags.add('Fireplace Design Request');
   if (lead.formId === 'shop-quote') tags.add('Product Quote Request');
+  if (lead.formId === 'testimonial') tags.add('Testimonial');
   if (lead.service) tags.add(`Service: ${lead.service}`);
   if (lead.state) tags.add(`State: ${lead.state}`);
   if (lead.attribution.utmSource) tags.add(`Source: ${lead.attribution.utmSource}`);

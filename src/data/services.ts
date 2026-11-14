@@ -8,7 +8,7 @@
 import { IMAGES } from '../lib/site';
 import { TEAM } from './team';
 
-export type IconName = 'camera' | 'brush' | 'brick' | 'droplet' | 'cap' | 'crown' | 'flame' | 'wind';
+export type IconName = 'camera' | 'brush' | 'brick' | 'droplet' | 'cap' | 'crown' | 'flame' | 'wind' | 'liner';
 
 export type Service = {
   id: string;
@@ -41,7 +41,7 @@ export const SERVICES: Service[] = [
     answer:
       'A chimney inspection checks the firebox, damper, smoke chamber, flue liner, crown, cap and flashing for damage, blockages and fire hazards. NFPA 211 recommends an inspection every year, and a more detailed Level 2 inspection when you buy or sell a home, change fuel or appliance, or after a chimney fire or major storm.',
     intro:
-      'Most chimney problems stay hidden until they become expensive: a cracked flue tile, a crown that lets water in, creosote that has glazed onto the liner. A First Chimney inspection is performed with F.I.R.E. certified training, and you get a clear explanation of what we saw and what, if anything, needs attention.',
+      'Most chimney problems stay hidden until they become expensive: a cracked flue tile, a crown that lets water in, creosote that has glazed onto the liner. A First Chimney inspection is performed by a F.I.R.E. Certified Technician, and you get a clear explanation of what we saw and what, if anything, needs attention.',
     signs: [
       'You are buying or selling a home',
       'It has been more than a year since the last inspection',
@@ -78,7 +78,7 @@ export const SERVICES: Service[] = [
       },
     ],
     related: ['chimney-sweeping', 'leak-repair', 'chimney-crown'],
-    metaTitle: 'Chimney Inspection by a F.I.R.E. Certified Inspector',
+    metaTitle: 'Chimney Inspection by a F.I.R.E. Certified Technician',
     metaDescription:
       'Chimney inspections in Virginia, New Jersey, Connecticut and Massachusetts. Firebox to crown, photo-documented findings and plain-English recommendations.',
   },
@@ -133,6 +133,54 @@ export const SERVICES: Service[] = [
     metaTitle: 'Chimney Cleaning & Sweeping',
     metaDescription:
       'Professional chimney cleaning that removes creosote and soot, protects your home and leaves you with a clear picture of your chimney. VA, NJ, CT and MA.',
+  },
+  {
+    id: 'chimney-relining',
+    title: 'Chimney Relining',
+    short: 'Stainless steel liners for damaged flues, inserts and appliance changes.',
+    icon: 'liner',
+    image: TEAM.liner.src,
+    imageAlt: TEAM.liner.alt,
+    headline: 'A sound liner is what keeps the fire inside the chimney.',
+    answer:
+      'A chimney liner is the protective channel inside the chimney that contains heat, smoke and combustion gases and carries them safely outside. Cracked or missing clay tile liners can let heat and gases reach the masonry and the house framing. Relining installs a new liner, usually stainless steel, sized to the fireplace, insert, stove or heating appliance it serves.',
+    intro:
+      'Most homeowners never see their chimney liner, but it does the most important job in the system. Clay tiles crack with age, after a chimney fire or from years of acidic condensation, and a new insert or furnace almost always needs a liner sized to it. Andrew inspects the flue first and tells you plainly whether it can be repaired or needs relining.',
+    signs: [
+      'An inspection found cracked, shifted or missing flue tiles',
+      'You are adding a wood or gas insert or a new stove',
+      'You replaced your furnace or water heater and it vents into the chimney',
+      'There was a chimney fire',
+      'Flakes of tile or mortar falling into the firebox',
+    ],
+    included: [
+      'Flue inspection, including a camera look where needed',
+      'Liner sized to the appliance it serves',
+      'Stainless steel liner installation from appliance to chimney top',
+      'Top plate and cap to finish the termination',
+      'Connection to the insert, stove or appliance',
+      'A plain-English walkthrough of what was done',
+    ],
+    process: [
+      { title: 'Inspect the flue', body: 'We find out what shape the existing liner is in and why.' },
+      { title: 'Size it right', body: 'The liner is sized to the appliance, not just the chimney.' },
+      { title: 'Install and connect', body: 'New liner run top to bottom, connected and capped.' },
+      { title: 'Verify', body: 'We check draft and connections before we leave.' },
+    ],
+    faqs: [
+      {
+        q: 'Does my fireplace insert need a liner?',
+        a: 'Almost always. Wood and gas inserts need a liner sized to the unit that runs from the insert to the top of the chimney. It is what makes the insert draft properly and safely.',
+      },
+      {
+        q: 'Can a cracked clay liner be repaired instead of replaced?',
+        a: 'Sometimes. Minor damage can occasionally be repaired, but widespread cracking or an appliance change usually calls for a new stainless steel liner. The inspection tells you which.',
+      },
+    ],
+    related: ['chimney-inspection', 'fireplace-repair', 'chimney-cap'],
+    metaTitle: 'Chimney Relining: Stainless Steel Chimney Liners',
+    metaDescription:
+      'Chimney relining with stainless steel liners for cracked flues, fireplace inserts, stoves and furnace changes. Serving VA, NJ, CT and MA.',
   },
   {
     id: 'masonry-rebuilds',

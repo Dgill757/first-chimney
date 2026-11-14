@@ -53,22 +53,24 @@ export const STATE_CODES_TEXT = 'VA · NJ · CT · MA';
 
 /**
  * Credentials shown on the site.
- * `label` is what renders. Andrew confirmed he holds FIRE certification.
- * TODO(Andrew): confirm the exact credential title as printed on the certificate
- * (for example "F.I.R.E. Certified Chimney Inspector") and update `label`/`fullName`.
+ * Verified 2026-11-14: the official F.I.R.E. Service directory lists Andrew Paterini
+ * (Virginia Beach, VA) as an F.I.R.E. Certified Technician. FIRE certification is
+ * an individual certification. CSIA/CSI references were removed at Andrew's request.
  */
 export const CREDENTIALS = {
   fire: {
     label: 'F.I.R.E. Certified',
-    fullName: 'F.I.R.E. certified chimney inspection',
+    title: 'F.I.R.E. Certified Technician',
+    fullName: 'a F.I.R.E. Certified Technician',
     short: 'FIRE Certified',
+    verifyUrl: 'http://f-i-r-e-service.com/certified_inspectors_VA.php',
+    verifyLabel: 'F.I.R.E. Service directory of Virginia certified technicians',
   },
 };
 
 /**
- * Photography. These are licensed stock / illustrative images, NOT First Chimney
- * job photos. Never caption them as "our work". Real project photos go in
- * src/data/projects.ts once Andrew approves them.
+ * Stock / illustrative photography. Not First Chimney job photos; never caption
+ * these as "our work". Andrew's real photos live in src/data/team.ts.
  */
 const P = '/media/photos/';
 export const IMAGES = {

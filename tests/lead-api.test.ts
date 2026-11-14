@@ -166,6 +166,12 @@ test('handler: honeypot is silently accepted and not delivered', async () => {
   assert.equal(r.body.ok, true);
 });
 
+test('testimonial form is accepted and tagged', () => {
+  const v = validateLead({ ...base, formId: 'testimonial', message: 'Andrew was great.' });
+  assert.ok(v.ok);
+  if (v.ok) assert.ok(buildTags(v.lead).includes('Testimonial'));
+});
+
 test('handler: rejects GET', async () => {
   const { r, res } = mockRes();
   await handler({ method: 'GET', headers: {} }, res);

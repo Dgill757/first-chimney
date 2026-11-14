@@ -14,6 +14,7 @@ import {
   Phone,
   Wind,
   BrickWall,
+  Cylinder,
   type LucideIcon,
 } from 'lucide-react';
 import type { IconName } from '@/data/services';
@@ -49,6 +50,7 @@ export const SERVICE_ICONS: Record<IconName, LucideIcon> = {
   crown: Landmark,
   flame: Flame,
   wind: Wind,
+  liner: Cylinder,
 };
 
 export function SectionHeading({ eyebrow, title, lede, align = 'left', id }: { eyebrow?: string; title: ReactNode; lede?: ReactNode; align?: 'left' | 'center'; id?: string }) {

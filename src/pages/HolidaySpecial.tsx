@@ -98,7 +98,7 @@ export default function HolidaySpecial() {
             </div>
             <ul className="mt-10 grid max-w-xl gap-3 text-[0.95rem] text-mute sm:grid-cols-2">
               <li className="flex items-center gap-2.5">
-                <BadgeCheck className="h-5 w-5 text-ember" strokeWidth={1.75} aria-hidden /> {CREDENTIALS.fire.label} inspector
+                <BadgeCheck className="h-5 w-5 text-ember" strokeWidth={1.75} aria-hidden /> {CREDENTIALS.fire.title}
               </li>
               <li className="flex items-center gap-2.5">
                 <ShieldCheck className="h-5 w-5 text-ember" strokeWidth={1.75} aria-hidden /> Quote before any repair

@@ -17,7 +17,8 @@ export type FormId =
   | 'service-request'
   | 'fireplace-designer'
   | 'shop-quote'
-  | 'promo-save';
+  | 'promo-save'
+  | 'testimonial';
 
 export type LeadInput = {
   formId: FormId;

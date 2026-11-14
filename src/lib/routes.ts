@@ -301,11 +301,11 @@ export function buildRoutes(extra: RouteMeta[] = []): RouteMeta[] {
 
   add({
     path: '/reviews',
-    title: 'Customer Reviews',
-    description: 'Reviews from First Chimney Contracting customers. Worked with us? We would love to hear how it went.',
+    title: 'Reviews: What People Say About Andrew Paterini',
+    description: `Real reviews of ${SITE.owner} and First Chimney Contracting, published with permission. ${CREDENTIALS.fire.title} with ${EXPERIENCE.ownerYears} years in the chimney trade.`,
     image: SITE.ogImage,
     h1: 'Reviews',
-    summary: ['Verified reviews from First Chimney Contracting customers.'],
+    summary: ['Reviews from real customers, published with their permission.', `${SITE.owner} is listed in the official F.I.R.E. directory as an ${CREDENTIALS.fire.title}: ${CREDENTIALS.fire.verifyUrl}`],
     links: [{ label: 'Contact', path: '/contact' }],
     crumbs: [HOME, { name: 'Reviews', path: '/reviews' }],
     priority: 0.4,

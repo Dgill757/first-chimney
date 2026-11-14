@@ -26,12 +26,14 @@ type Props = {
   successBody?: ReactNode;
   onSuccess?: (ref: string) => void;
   dense?: boolean;
+  /** Adds a required checkbox granting permission to publish the person's words (testimonials). */
+  publishConsent?: boolean;
 };
 
 const TIMEFRAMES = ['As soon as possible', 'Within the next week', 'Within 2 weeks', 'Before the holidays', 'I am flexible'];
 
-type Values = Record<FieldName, string> & { consent: boolean; smsConsent: boolean; website: string };
-const EMPTY: Values = { name: '', phone: '', email: '', address: '', city: '', state: '', zip: '', service: '', timeframe: '', message: '', consent: false, smsConsent: false, website: '' };
+type Values = Record<FieldName, string> & { consent: boolean; smsConsent: boolean; publish: boolean; website: string };
+const EMPTY: Values = { name: '', phone: '', email: '', address: '', city: '', state: '', zip: '', service: '', timeframe: '', message: '', consent: false, smsConsent: false, publish: false, website: '' };
 
 export default function LeadForm({
   formId,
@@ -48,6 +50,7 @@ export default function LeadForm({
   successBody,
   onSuccess,
   dense = false,
+  publishConsent = false,
 }: Props) {
   const uid = useId();
   const id = (f: string) => `${uid}-${f}`;
@@ -84,6 +87,7 @@ export default function LeadForm({
       if (has(f) && req(f) && !v[f].trim()) e[f] = 'This field is required.';
     }
     if (!v.consent) e.consent = 'Please check this box so we can contact you about your request.';
+    if (publishConsent && !v.publish) e.publish = 'Please check this box so we can share your words.';
     return e;
   }
 
@@ -109,7 +113,7 @@ export default function LeadForm({
       service: v.service,
       timeframe: v.timeframe,
       message: v.message,
-      details: details?.(),
+      details: [details?.(), publishConsent && v.publish ? `Permission to publish: YES. ${v.name.split(' ')[0]} agreed First Chimney may publish their first name, town and comments.` : ''].filter(Boolean).join('\n') || undefined,
       products,
       promo,
       consent: v.consent,
@@ -292,6 +296,17 @@ export default function LeadForm({
             </span>
           </label>
           <Err f="consent" />
+          {publishConsent && (
+            <>
+              <label className="flex gap-3 text-[0.88rem] leading-relaxed text-mute" htmlFor={id('publish')}>
+                <input id={id('publish')} type="checkbox" className="check" checked={v.publish} onChange={set('publish')} {...aria('publish')} />
+                <span>
+                  I give {SITE.name} permission to publish my first name, town and comments on its website and marketing.<span className="text-ember"> *</span>
+                </span>
+              </label>
+              <Err f="publish" />
+            </>
+          )}
           <label className="flex gap-3 text-[0.82rem] leading-relaxed text-dim" htmlFor={id('sms')}>
             <input id={id('sms')} type="checkbox" className="check" checked={v.smsConsent} onChange={set('smsConsent')} />
             <span>

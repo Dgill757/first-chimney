@@ -160,7 +160,7 @@ function Hero() {
             )}
             <ul className="mt-5 grid gap-3.5 text-[0.93rem] text-bone/90">
               {[
-                [BadgeCheck, `${CREDENTIALS.fire.label} inspector`],
+                [BadgeCheck, CREDENTIALS.fire.title],
                 [ClipboardList, 'Written quote before any repair'],
                 [Sparkles, 'Drop cloths down, house left clean'],
                 [Camera, 'Photos of what we find'],
@@ -213,11 +213,11 @@ function FactsMarquee() {
 }
 
 function ServicesBento() {
-  const [a, b, ...rest] = SERVICES;
+  const [a, b, c, ...rest] = SERVICES;
   const Big = ({ s, i }: { s: typeof a; i: number }) => {
     const Icon = SERVICE_ICONS[s.icon];
     return (
-      <Reveal delay={i * 0.06} className="md:col-span-3 lg:col-span-3">
+      <Reveal delay={i * 0.06} className="md:col-span-2">
         <Link to={`/services/${s.id}`} className="zoom group relative flex h-full min-h-[22rem] flex-col justify-end overflow-hidden rounded-[20px] border hairline">
           <img src={s.image} alt={s.imageAlt} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/5" />
@@ -240,6 +240,7 @@ function ServicesBento() {
         <div className="mt-14 grid gap-4 md:grid-cols-6">
           <Big s={a} i={0} />
           <Big s={b} i={1} />
+          <Big s={c} i={2} />
           {rest.map((s, i) => {
             const Icon = SERVICE_ICONS[s.icon];
             return (
@@ -403,7 +404,7 @@ function WorkAndReviews() {
   const projects = PROJECTS.filter((p) => p.permission);
   return (
     <section className="section" aria-labelledby="work-h">
-      <div className="wrap grid gap-6 lg:grid-cols-[1.25fr_0.75fr]">
+      <div className="wrap grid grid-cols-[minmax(0,1fr)] gap-6 lg:grid-cols-[1.25fr_0.75fr]">
         <Reveal className="card overflow-hidden">
           <div className="grid grid-cols-3 gap-1">
             {[TEAM.rebuild, TEAM.crown, TEAM.sweeping].map((p) => ({ src: p.sm, alt: p.alt })).map((im) => (
@@ -425,30 +426,58 @@ function WorkAndReviews() {
           </div>
         </Reveal>
         <Reveal delay={0.08} className="card flex flex-col p-7">
-          <div className="flex gap-1 text-gold" aria-hidden>
-            {Array.from({ length: 5 }, (_, i) => (
-              <Star key={i} className={`h-5 w-5 ${REVIEWS.length ? 'fill-current' : ''}`} strokeWidth={1.5} />
-            ))}
-          </div>
-          <h2 className="mt-5 text-2xl text-bone">Reviews</h2>
           {REVIEWS.length ? (
-            <figure className="mt-4">
-              <blockquote className="text-lg leading-relaxed text-bone">&ldquo;{REVIEWS[0].text}&rdquo;</blockquote>
-              <figcaption className="mt-3 text-sm text-mute">
-                {REVIEWS[0].author}
-                {REVIEWS[0].city ? `, ${REVIEWS[0].city}` : ''} on {REVIEWS[0].source}
-              </figcaption>
-            </figure>
+            <>
+              <div className="flex gap-1 text-gold" aria-label="5 star reviews">
+                {Array.from({ length: 5 }, (_, i) => (
+                  <Star key={i} className="h-5 w-5 fill-current" strokeWidth={1.5} aria-hidden />
+                ))}
+              </div>
+              <h2 className="mt-5 text-2xl text-bone">What customers say</h2>
+              <figure className="mt-4">
+                <blockquote className="text-lg leading-relaxed text-bone">&ldquo;{REVIEWS[0].text}&rdquo;</blockquote>
+                <figcaption className="mt-3 text-sm text-mute">
+                  {REVIEWS[0].author}
+                  {REVIEWS[0].city ? `, ${REVIEWS[0].city}` : ''} on {REVIEWS[0].source}
+                </figcaption>
+              </figure>
+            </>
           ) : (
-            <p className="mt-3 text-mute">We are a new business and every review here will be real. We never buy, script or filter reviews. Our first customers&rsquo; reviews will appear here as they come in.</p>
+            <>
+              <h2 className="text-2xl text-bone">Trust you can check</h2>
+              <ul className="mt-5 grid gap-4">
+                <li className="flex gap-3">
+                  <BadgeCheck className="mt-0.5 h-5 w-5 shrink-0 text-ember" strokeWidth={1.75} aria-hidden />
+                  <span className="text-[0.95rem] text-mute">
+                    <span className="font-medium text-bone">{CREDENTIALS.fire.title}.</span> Andrew is listed by name in the{' '}
+                    <a href={CREDENTIALS.fire.verifyUrl} target="_blank" rel="noreferrer" className="text-ember underline-offset-4 hover:underline">
+                      official F.I.R.E. directory
+                    </a>
+                    .
+                  </span>
+                </li>
+                <li className="flex gap-3">
+                  <Sparkles className="mt-0.5 h-5 w-5 shrink-0 text-ember" strokeWidth={1.75} aria-hidden />
+                  <span className="text-[0.95rem] text-mute">
+                    <span className="font-medium text-bone">{EXPERIENCE.ownerYears} years in the chimney trade,</span> backed by a crew with {EXPERIENCE.teamYears} years of combined experience.
+                  </span>
+                </li>
+                <li className="flex gap-3">
+                  <Star className="mt-0.5 h-5 w-5 shrink-0 text-gold" strokeWidth={1.75} aria-hidden />
+                  <span className="text-[0.95rem] text-mute">
+                    <span className="font-medium text-bone">Real reviews only.</span> First Chimney&rsquo;s Google reviews will show here as customers post them. We never buy, script or filter reviews.
+                  </span>
+                </li>
+              </ul>
+            </>
           )}
           <div className="mt-auto flex flex-wrap gap-3 pt-6">
-            <Link to="/reviews" className="btn btn-ghost btn-sm">
-              Read reviews
+            <Link to={REVIEWS.length ? '/reviews' : '/reviews#share'} className="btn btn-ghost btn-sm">
+              {REVIEWS.length ? 'Read reviews' : 'Share your experience'}
             </Link>
             {promoIsLive() && (
               <Link to={HOLIDAY_PROMO.path} onClick={() => track('promo_cta_click', { placement: 'reviews_card' })} className="btn btn-primary btn-sm">
-                Be one of our first
+                Book the {HOLIDAY_PROMO.priceLabel} special
               </Link>
             )}
           </div>

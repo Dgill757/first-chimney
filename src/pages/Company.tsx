@@ -440,37 +440,25 @@ export function Reviews() {
   const r = routeFor('/reviews')!;
   return (
     <>
-      <PageIntro crumbs={r.crumbs} title="Reviews" lede="Every review here comes from a real First Chimney customer." />
-      <section className="section">
-        <div className="wrap">
-          {REVIEWS.length === 0 ? (
-            <div className="card mx-auto max-w-2xl p-10 text-center">
-              <div className="flex justify-center gap-1 text-gold" aria-hidden>
-                {Array.from({ length: 5 }, (_, i) => (
-                  <Star key={i} className="h-6 w-6" strokeWidth={1.5} />
-                ))}
-              </div>
-              <h2 className="display-md mt-6 text-bone">Our first reviews are on the way.</h2>
-              <p className="lede mx-auto mt-4">We would rather show you nothing than show you something made up. Recently worked with us? We would love to hear how it went.</p>
-              <div className="mt-8 flex flex-wrap justify-center gap-3">
-                {REVIEW_LINK ? (
-                  <a href={REVIEW_LINK} target="_blank" rel="noreferrer" className="btn btn-primary">
-                    Leave a review
-                  </a>
-                ) : (
-                  <a href={SITE.smsHref} className="btn btn-primary">
-                    Tell us how we did
-                  </a>
-                )}
-                <Link to="/about" className="btn btn-ghost">
-                  How we work
-                </Link>
-              </div>
-            </div>
-          ) : (
-            <ul className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+      <PageIntro crumbs={r.crumbs} title="What people say about Andrew" lede="Every review on this page comes from a real customer and is published with their permission. We never buy, script or filter reviews.">
+        <div className="flex flex-wrap gap-3">
+          <a href="#share" className="btn btn-primary">
+            Share your experience
+          </a>
+          {REVIEW_LINK && (
+            <a href={REVIEW_LINK} target="_blank" rel="noreferrer" className="btn btn-ghost">
+              Review us on Google
+            </a>
+          )}
+        </div>
+      </PageIntro>
+
+      {REVIEWS.length > 0 && (
+        <section className="section pb-0">
+          <div className="wrap">
+            <ul className="columns-1 gap-5 md:columns-2 lg:columns-3">
               {REVIEWS.map((x) => (
-                <li key={x.author + x.date} className="card p-7">
+                <li key={x.author + x.date} className="card mb-5 break-inside-avoid p-7">
                   <div className="flex gap-0.5 text-gold" aria-label={`${x.rating} out of 5 stars`}>
                     {Array.from({ length: x.rating }, (_, i) => (
                       <Star key={i} className="h-4 w-4 fill-current" aria-hidden />
@@ -479,12 +467,70 @@ export function Reviews() {
                   <p className="mt-4 leading-relaxed text-bone">&ldquo;{x.text}&rdquo;</p>
                   <p className="mt-5 text-sm text-mute">
                     {x.author}
-                    {x.city ? `, ${x.city}` : ''} on {x.source}
+                    {x.city ? `, ${x.city}` : ''}
+                    {x.source !== 'Direct' ? ` on ${x.source}` : ''}
                   </p>
                 </li>
               ))}
             </ul>
-          )}
+          </div>
+        </section>
+      )}
+
+      <section className="section">
+        <div className="wrap grid grid-cols-[minmax(0,1fr)] gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="min-w-0">
+            <div className="media aspect-[4/3]">
+              <img src={TEAM.headshot.src} alt={TEAM.headshot.alt} loading="lazy" />
+            </div>
+            <h2 className="display-md mt-10 text-bone">Trust you can check</h2>
+            <ul className="mt-6 grid gap-5">
+              <li className="flex gap-3">
+                <BadgeCheck className="mt-0.5 h-6 w-6 shrink-0 text-ember" strokeWidth={1.75} aria-hidden />
+                <p className="text-mute">
+                  <span className="font-medium text-bone">{CREDENTIALS.fire.title}.</span> Andrew is listed by name in the{' '}
+                  <a href={CREDENTIALS.fire.verifyUrl} target="_blank" rel="noreferrer" className="text-ember underline-offset-4 hover:underline">
+                    {CREDENTIALS.fire.verifyLabel}
+                  </a>
+                  . FIRE certification is earned by the individual, not bought by a company.
+                </p>
+              </li>
+              <li className="flex gap-3">
+                <Sparkles className="mt-0.5 h-6 w-6 shrink-0 text-ember" strokeWidth={1.75} aria-hidden />
+                <p className="text-mute">
+                  <span className="font-medium text-bone">{EXPERIENCE.ownerYears} years in the chimney trade.</span> Andrew leads a crew with {EXPERIENCE.teamYears} years of combined chimney and masonry experience.
+                </p>
+              </li>
+              <li className="flex gap-3">
+                <Camera className="mt-0.5 h-6 w-6 shrink-0 text-ember" strokeWidth={1.75} aria-hidden />
+                <p className="text-mute">
+                  <span className="font-medium text-bone">See the work.</span>{' '}
+                  <Link to="/gallery" className="text-ember underline-offset-4 hover:underline">
+                    Photos from real jobs
+                  </Link>{' '}
+                  are in our gallery.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div id="share" className="card min-w-0 scroll-mt-28 p-6 sm:p-8">
+            <h2 className="text-2xl text-bone">Worked with Andrew before?</h2>
+            <p className="mt-2 text-mute">Whether it was a cleaning last winter or a rebuild years ago, we would love to hear how it went. With your permission, we may share your words here.</p>
+            <div className="mt-6">
+              <LeadForm
+                formId="testimonial"
+                fields={['name', 'email', 'phone', 'city', 'message']}
+                required={['name', 'message']}
+                messageLabel="Your experience with Andrew"
+                messagePlaceholder="What did he do, how did it go, and what stood out to you?"
+                submitLabel="Share my experience"
+                successTitle="Thank you."
+                successBody={<p>We received your words and really appreciate it. We only publish your first name and town, exactly as you gave permission.</p>}
+                publishConsent
+                dense
+              />
+            </div>
+          </div>
         </div>
       </section>
     </>
