@@ -104,3 +104,13 @@ The builder's PDF is now a three-page "Your Fireplace Build" guide (`src/lib/bui
 Every page links back to the saved build. Heat figures are labeled as the maker's rating (input and output appear in the specs).
 
 Final QA: 19 tests; all 25 location pages plus home, holiday, builder, shop, contact, about, FAQ, blog, gallery and reviews checked at 375/390/1440 with no errors, overflow or clipped text; builder walked to a downloaded 3-page guide.
+
+## 11. Team photos and experience (round 4)
+
+- 24 photos of Andrew, the crew, trucks and real jobs added (optimized from 80 MB of PNGs to 8.9 MB WebP, full + thumbnail, descriptive filenames and alt text) in `public/media/team`, catalogued in `src/data/team.ts`. Raw originals stay in `public/media/Team-photos/` but are git-ignored, so they never deploy.
+- Experience set in one place (`EXPERIENCE` in `src/data/team.ts`): Andrew 10 years in the chimney industry, crew 25 years combined. Shown on Home (hero card, marquee, Who we are), About, Gallery, Contact, FAQ, structured data (founder with photo, business description) and llms.txt.
+- About page rebuilt around Andrew: portrait hero, experience band, "Why Andrew does this", promise, on-the-job strip.
+- Gallery: all photos with category filters and a swipe/keyboard lightbox; before/after project support kept for future jobs.
+- Real photos replace stock on six service pages (inspection, cleaning, masonry, leak repair, caps, crowns), the homepage, holiday page, contact page, all 4 state pages and all 20 city pages.
+
+To confirm with Andrew: the 10 / 25 year figures; that homeowners are OK with their homes appearing in the gallery (no addresses or towns are shown).

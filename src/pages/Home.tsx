@@ -6,6 +6,7 @@ import { HolidayFeature } from '@/components/Holiday';
 import LeadForm from '@/components/LeadForm';
 import { CallLink, EASE, Faq, FireButton, Reveal, SectionHeading, SERVICE_ICONS } from '@/components/ui';
 import { GENERAL_FAQS, PROJECTS, REVIEWS } from '@/data/content';
+import { EXPERIENCE, JOB_PHOTOS, TEAM } from '@/data/team';
 import { SERVICE_AREAS } from '@/data/serviceAreas';
 import { SERVICES, serviceById } from '@/data/services';
 import { HOLIDAY_PROMO, promoIsLive } from '@/lib/promo';
@@ -136,6 +137,17 @@ function Hero() {
           className="hidden lg:block"
         >
           <div className="rounded-[24px] border border-white/12 bg-ink/55 p-6 shadow-[0_40px_120px_-30px_rgb(0_0_0/0.9),inset_0_1px_0_rgb(255_255_255/0.08)] backdrop-blur-xl">
+            <Link to="/about" className="group mb-5 flex items-center gap-4">
+              <span className="h-16 w-16 shrink-0 overflow-hidden rounded-full border-2 border-ember/60">
+                <img src={TEAM.headshot.sm} alt={TEAM.headshot.alt} width={96} height={96} className="h-full w-full object-cover object-[50%_30%]" />
+              </span>
+              <span>
+                <span className="block font-semibold text-bone group-hover:text-ember">{SITE.owner}</span>
+                <span className="block text-sm text-mute">
+                  Owner · {EXPERIENCE.ownerYears} years in the chimney trade
+                </span>
+              </span>
+            </Link>
             {live && (
               <Link to={HOLIDAY_PROMO.path} onClick={() => track('promo_cta_click', { placement: 'hero_card' })} className="group block rounded-2xl border border-ember/30 bg-gradient-to-br from-ember/15 to-transparent p-5">
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ember">{HOLIDAY_PROMO.eyebrow}</p>
@@ -173,7 +185,9 @@ function Hero() {
 
 const FACTS = [
   `${CREDENTIALS.fire.label} inspection`,
+  `${EXPERIENCE.ownerYears} years in the chimney trade`,
   `Owned and run by ${SITE.owner}`,
+  `${EXPERIENCE.teamYears} years of combined crew experience`,
   'Quote before any repair',
   'Drop cloths down, every visit',
   'Virginia / New Jersey / Connecticut / Massachusetts',
@@ -329,13 +343,19 @@ function WhyUs() {
   return (
     <section className="section border-y hairline bg-ink-2" aria-labelledby="why-h">
       <div className="wrap grid gap-14 lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="min-w-0 lg:sticky lg:top-32 lg:self-start">
+        <div className="min-w-0 lg:sticky lg:top-28 lg:self-start">
+          <div className="media relative mb-8 aspect-[4/3]">
+            <img src={TEAM.portrait.src} alt={TEAM.portrait.alt} width={TEAM.portrait.w} height={TEAM.portrait.h} loading="lazy" />
+            <span className="absolute bottom-3 left-3 rounded-full border border-white/15 bg-ink/75 px-3 py-1.5 text-sm text-bone backdrop-blur-md">
+              {SITE.owner}, owner
+            </span>
+          </div>
           <p className="eyebrow">Who we are</p>
-          <h2 id="why-h" className="display-lg mt-4 text-bone">
-            A newer company with an old-fashioned standard.
+          <h2 id="why-h" className="display-md mt-4 text-bone">
+            A new name. {EXPERIENCE.ownerYears === 10 ? 'Ten' : EXPERIENCE.ownerYears} years of doing it right.
           </h2>
           <p className="lede mt-5">
-            First Chimney Contracting is owned and run by {SITE.owner}, a {CREDENTIALS.fire.label.replace(' Certified', '-certified')} chimney inspector. When you call, you reach the person accountable for the work. No call center, no commission-driven upsell.
+            {SITE.owner} has spent {EXPERIENCE.ownerYears} years in the chimney industry, and he genuinely loves this work. With a crew bringing {EXPERIENCE.teamYears} years of combined experience, he built First Chimney to take care of every home like it was his own. When you call, you reach the person accountable for the work.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link to="/about" className="btn btn-ghost">
@@ -344,7 +364,7 @@ function WhyUs() {
             <CallLink placement="why_us" className="btn btn-ghost" />
           </div>
         </div>
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid content-start gap-4 self-start sm:grid-cols-2 lg:pt-6">
           {items.map((x, i) => (
             <Reveal key={x.t} delay={i * 0.06} className={`card p-7 ${i % 2 ? 'sm:translate-y-10' : ''}`}>
               <x.i className="h-7 w-7 text-ember" strokeWidth={1.75} aria-hidden />
@@ -386,11 +406,7 @@ function WorkAndReviews() {
       <div className="wrap grid gap-6 lg:grid-cols-[1.25fr_0.75fr]">
         <Reveal className="card overflow-hidden">
           <div className="grid grid-cols-3 gap-1">
-            {(projects.length ? projects.slice(0, 3).map((p) => ({ src: p.after ?? p.photos[0]?.src, alt: p.title })) : [
-              { src: IMAGES.techRooftop, alt: 'Technician working on a brick chimney' },
-              { src: IMAGES.dropCloths, alt: 'Room protected with drop cloths during chimney service' },
-              { src: IMAGES.capSky, alt: 'Chimney with a metal cap' },
-            ]).map((im) => (
+            {[TEAM.rebuild, TEAM.crown, TEAM.sweeping].map((p) => ({ src: p.sm, alt: p.alt })).map((im) => (
               <div key={im.src} className="aspect-[4/5] overflow-hidden">
                 <img src={im.src} alt={im.alt} loading="lazy" className="h-full w-full object-cover" />
               </div>
@@ -401,12 +417,10 @@ function WorkAndReviews() {
               Our work
             </h2>
             <p className="mt-3 max-w-xl text-mute">
-              {projects.length
-                ? 'Real First Chimney jobs, photographed on site and shared with each homeowner’s permission.'
-                : 'Every visit is photographed start to finish so you see exactly what was done. Andrew’s project gallery is being built from those job photos, shared only with each homeowner’s permission. Photos above are representative.'}
+              {`Rebuilds, crowns, caps, liners and cleanings by Andrew and the crew, photographed on the job.${projects.length ? ' Before-and-after projects are in the gallery too.' : ''}`}
             </p>
             <Link to="/gallery" className="link-arrow mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-ember">
-              View our work <ArrowRight className="h-4 w-4" aria-hidden />
+              See all {JOB_PHOTOS.length} photos <ArrowRight className="h-4 w-4" aria-hidden />
             </Link>
           </div>
         </Reveal>

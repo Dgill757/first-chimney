@@ -15,6 +15,7 @@ import { dirname, join } from 'node:path';
 import { ARTICLES } from '../src/data/blog';
 import { SERVICE_AREAS } from '../src/data/serviceAreas';
 import { SERVICES } from '../src/data/services';
+import { EXPERIENCE } from '../src/data/team';
 import { HOLIDAY_PROMO, promoIsLive } from '../src/lib/promo';
 import { buildRoutes, fullTitle, NOT_FOUND_META, type RouteMeta } from '../src/lib/routes';
 import { buildCatalogRoutes } from '../src/lib/catalogRoutes';
@@ -117,7 +118,7 @@ const llms = [
   '',
   'Key facts:',
   `- Service area: ${STATE_LIST_TEXT} (VA, NJ, CT, MA). Call to confirm coverage for a specific address.`,
-  `- Credential: ${CREDENTIALS.fire.label} (chimney inspection).`,
+  `- Credential: ${CREDENTIALS.fire.label} (chimney inspection). Owner ${SITE.owner} has ${EXPERIENCE.ownerYears} years in the chimney industry; the crew has ${EXPERIENCE.teamYears} years of combined experience.`,
   '- Repairs are quoted before any work begins. Online forms are requests; appointments are confirmed by phone or text.',
   live ? `- Current offer: ${HOLIDAY_PROMO.eyebrow}, ${HOLIDAY_PROMO.title} for ${HOLIDAY_PROMO.priceLabel}. Details: ${SITE.domain}${HOLIDAY_PROMO.path}` : '',
   '- The fireplace designer and fireplace shop are inquiry tools. No online prices or checkout.',

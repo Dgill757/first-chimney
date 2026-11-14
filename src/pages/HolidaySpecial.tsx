@@ -8,6 +8,7 @@ import { HOLIDAY_PROMO } from '@/lib/promo';
 import { routeFor } from '@/lib/routes';
 import { CREDENTIALS, IMAGES, SITE, STATE_LIST_TEXT } from '@/lib/site';
 import { track } from '@/lib/track';
+import { TEAM } from '@/data/team';
 
 const INCLUDE_ICONS = [Brush, SearchCheck, ClipboardCheck];
 
@@ -166,7 +167,7 @@ export default function HolidaySpecial() {
       <section className="section relative overflow-hidden bg-ink-2">
         <div className="wrap grid items-center gap-14 lg:grid-cols-2">
           <Reveal className="media aspect-[5/4]">
-            <img src={IMAGES.sweepStone} alt="Chimney sweep cleaning a stone fireplace with the room protected" loading="lazy" width={1000} height={800} />
+            <img src={TEAM.sweeping.src} alt={TEAM.sweeping.alt} loading="lazy" width={TEAM.sweeping.w} height={TEAM.sweeping.h} />
           </Reveal>
           <div>
             <h2 className="display-md text-bone">Why book before the holidays</h2>

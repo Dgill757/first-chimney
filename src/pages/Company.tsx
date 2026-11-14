@@ -3,7 +3,8 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { AnimatePresence, motion } from 'motion/react';
 import { ArrowRight, BadgeCheck, Camera, ChevronLeft, ChevronRight, ClipboardList, Mail, MapPin, MessageSquareText, Phone, ShieldCheck, Sparkles, Star, X } from 'lucide-react';
 import LeadForm from '@/components/LeadForm';
-import { CallLink, EASE, Faq, PageIntro, Reveal } from '@/components/ui';
+import { Breadcrumbs, CallLink, EASE, Faq, PageIntro, Reveal } from '@/components/ui';
+import { EXPERIENCE, GALLERY_CATEGORIES, JOB_PHOTOS, TEAM, type GalleryCategory } from '@/data/team';
 import { GENERAL_FAQS, PROJECTS, REVIEWS, REVIEW_LINK, type Project } from '@/data/content';
 import { SERVICES } from '@/data/services';
 import { HOLIDAY_PROMO, promoIsLive } from '@/lib/promo';
@@ -14,20 +15,68 @@ import { track } from '@/lib/track';
 /* ------------------------------ ABOUT ------------------------------ */
 export function About() {
   const r = routeFor('/about')!;
+  const strip = [TEAM.liner, TEAM.crown, TEAM.rebuild, TEAM.capCrown, TEAM.roofBrush, TEAM.headshot];
   return (
     <>
-      <PageIntro crumbs={r.crumbs} title="A chimney company built on doing it right the first time." lede={`${SITE.name} is owned and run by ${SITE.owner}. The idea is simple: show homeowners what we see, explain it plainly, quote before we work and leave the house clean.`} />
-      <section className="section">
-        <div className="wrap grid items-center gap-14 lg:grid-cols-2">
-          <Reveal className="media aspect-[4/5] max-h-[38rem]">
-            <img src={IMAGES.chimneyTopSky} alt="Chimney technician working at the top of a chimney against a blue sky" loading="lazy" />
+      <section className="relative overflow-hidden pb-16 pt-32 md:pb-24 md:pt-40">
+        <div aria-hidden className="ember-glow pointer-events-none absolute inset-x-0 bottom-0 h-72 opacity-60" />
+        <div className="wrap relative grid grid-cols-[minmax(0,1fr)] items-center gap-12 lg:grid-cols-[1fr_1fr]">
+          <div className="min-w-0">
+            <Breadcrumbs crumbs={r.crumbs} />
+            <p className="eyebrow mt-8">Meet First Chimney</p>
+            <h1 className="mt-4 text-[clamp(2.5rem,5vw,4.4rem)] text-bone">Built by someone who genuinely loves chimneys.</h1>
+            <p className="lede mt-6">
+              {SITE.owner} has spent {EXPERIENCE.ownerYears} years in the chimney industry. He started First Chimney Contracting to take care of homeowners the way he would want his own home taken care of.
+            </p>
+            <div className="mt-9 flex flex-wrap gap-3">
+              <CallLink placement="about_hero" className="btn btn-primary btn-lg">
+                <Phone className="h-5 w-5" aria-hidden /> Talk to Andrew
+              </CallLink>
+              <Link to="/gallery" className="btn btn-ghost btn-lg">
+                See our work
+              </Link>
+            </div>
+          </div>
+          <Reveal className="min-w-0">
+            <figure className="media relative aspect-[4/3] border hairline shadow-[0_40px_120px_-50px_rgb(240_122_50/0.55)]">
+              <img src={TEAM.withTruck.src} alt={TEAM.withTruck.alt} width={TEAM.withTruck.w} height={TEAM.withTruck.h} fetchPriority="high" />
+              <figcaption className="absolute bottom-4 left-4 rounded-full border border-white/15 bg-ink/75 px-4 py-2 text-sm text-bone backdrop-blur-md">
+                {SITE.owner}, owner
+              </figcaption>
+            </figure>
           </Reveal>
-          <div>
-            <h2 className="display-md text-bone">The standard</h2>
+        </div>
+      </section>
+
+      <section className="border-y hairline bg-ink-2" aria-label="Experience">
+        <dl className="wrap grid grid-cols-2 gap-px py-2 lg:grid-cols-4">
+          {[
+            { k: `${EXPERIENCE.ownerYears} years`, v: 'Andrew in the chimney trade' },
+            { k: `${EXPERIENCE.teamYears} years`, v: 'Combined crew experience' },
+            { k: 'F.I.R.E.', v: 'Certified chimney inspection' },
+            { k: '4 states', v: 'VA, NJ, CT and MA' },
+          ].map((x) => (
+            <div key={x.v} className="px-4 py-8 text-center">
+              <dt className="font-display text-[clamp(1.9rem,3.6vw,2.9rem)] font-bold text-bone" style={{ fontStretch: '110%' }}>
+                {x.k}
+              </dt>
+              <dd className="mt-1 text-sm text-mute">{x.v}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+
+      <section className="section">
+        <div className="wrap grid grid-cols-[minmax(0,1fr)] items-center gap-14 lg:grid-cols-2">
+          <Reveal className="media aspect-[4/3] min-w-0">
+            <img src={TEAM.sweeping.src} alt={TEAM.sweeping.alt} loading="lazy" />
+          </Reveal>
+          <div className="min-w-0">
+            <h2 className="display-md text-bone">Why Andrew does this</h2>
             <div className="mt-6 grid gap-5 text-[1.05rem] leading-relaxed text-mute">
-              <p>A lot of homeowners have had the same experience with chimney service: a rushed visit, a vague warning, and a big number with no real explanation. First Chimney exists to be the opposite of that.</p>
-              <p>{SITE.owner} holds F.I.R.E. certification for chimney inspection, and every visit is handled the same way. Protect the room. Do the work carefully. Document what matters. Explain it in plain English. Quote anything extra before it happens.</p>
-              <p>First Chimney is a newer company. That means every job is a chance to earn a customer for life, and we treat it that way.</p>
+              <p>Andrew genuinely loves chimneys: the craft of good masonry, the character of an old brick chimney, and the satisfaction of a flue that draws perfectly. Most of all, he loves seeing people actually use their fireplaces, families gathered around a fire they can trust.</p>
+              <p>After {EXPERIENCE.ownerYears} years in the chimney industry, he started First Chimney Contracting with a simple idea: treat every house like his own. That means showing you what he sees, explaining it plainly, quoting before any work begins and leaving your home cleaner than he found it.</p>
+              <p>He is not doing it alone. The First Chimney crew brings {EXPERIENCE.teamYears} years of combined chimney and masonry experience to every job, from a routine cleaning to a full rebuild.</p>
             </div>
             <p className="mt-8 inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm text-bone">
               <BadgeCheck className="h-4 w-4 text-ember" strokeWidth={1.75} aria-hidden /> {CREDENTIALS.fire.label}
@@ -35,6 +84,7 @@ export function About() {
           </div>
         </div>
       </section>
+
       <section className="section border-t hairline bg-ink-2">
         <div className="wrap">
           <h2 className="display-md text-bone">What you can count on</h2>
@@ -52,6 +102,24 @@ export function About() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section border-t hairline">
+        <div className="wrap">
+          <div className="flex flex-wrap items-end justify-between gap-6">
+            <h2 className="display-md text-bone">On the job</h2>
+            <Link to="/gallery" className="link-arrow inline-flex items-center gap-1.5 font-medium text-ember">
+              Full gallery <ArrowRight className="h-4 w-4" aria-hidden />
+            </Link>
+          </div>
+          <ul className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-3">
+            {strip.map((p, i) => (
+              <Reveal as="li" key={p.src} delay={(i % 3) * 0.05} className="zoom media aspect-[4/3]">
+                <img src={p.sm} alt={p.alt} loading="lazy" />
+              </Reveal>
+            ))}
+          </ul>
           <p className="mt-10 text-mute">
             Serving homeowners in {STATE_LIST_TEXT}.{' '}
             <Link to="/service-areas" className="text-ember underline-offset-4 hover:underline">
@@ -113,6 +181,15 @@ export function Contact() {
             </div>
           </div>
           <aside className="grid h-fit gap-4">
+            <div className="card overflow-hidden">
+              <img src={TEAM.withTruck.sm} alt={TEAM.withTruck.alt} loading="lazy" className="aspect-[16/10] w-full object-cover" />
+              <div className="p-5">
+                <p className="font-semibold text-bone">You will talk to Andrew.</p>
+                <p className="mt-1 text-sm text-mute">
+                  {SITE.owner}, owner. {EXPERIENCE.ownerYears} years in the chimney trade and a crew with {EXPERIENCE.teamYears} years of combined experience.
+                </p>
+              </div>
+            </div>
             <a href={SITE.phoneHref} onClick={() => track('click_to_call', { placement: 'contact_aside' })} className="card lift flex items-center gap-4 p-5">
               <span className="grid h-12 w-12 place-items-center rounded-full bg-ember text-[#1a0d05]">
                 <Phone className="h-5 w-5" aria-hidden />
@@ -222,64 +299,138 @@ function Lightbox({ project, onClose }: { project: Project; onClose: () => void 
   );
 }
 
+function PhotoLightbox({ photos, index, onClose, onIndex }: { photos: typeof JOB_PHOTOS; index: number; onClose: () => void; onIndex: (i: number) => void }) {
+  const n = photos.length;
+  const p = photos[index];
+  const startX = useRef<number | null>(null);
+  useEffect(() => {
+    const k = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+      if (e.key === 'ArrowRight') onIndex((index + 1) % n);
+      if (e.key === 'ArrowLeft') onIndex((index - 1 + n) % n);
+    };
+    window.addEventListener('keydown', k);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      window.removeEventListener('keydown', k);
+      document.body.style.overflow = prev;
+    };
+  }, [index, n, onClose, onIndex]);
+  return (
+    <motion.div
+      role="dialog"
+      aria-modal="true"
+      aria-label={p.alt}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.2, ease: EASE }}
+      className="fixed inset-0 z-[75] grid place-items-center bg-ink/95 p-4 backdrop-blur"
+      onClick={onClose}
+      onPointerDown={(e) => (startX.current = e.clientX)}
+      onPointerUp={(e) => {
+        if (startX.current === null) return;
+        const dx = e.clientX - startX.current;
+        startX.current = null;
+        if (Math.abs(dx) > 50) onIndex(dx < 0 ? (index + 1) % n : (index - 1 + n) % n);
+      }}
+    >
+      <figure className="relative max-h-full w-full max-w-6xl" onClick={(e) => e.stopPropagation()}>
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.img key={p.src} src={p.src} alt={p.alt} className="mx-auto max-h-[78dvh] w-auto rounded-[20px] object-contain" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.18 }} />
+        </AnimatePresence>
+        <figcaption className="mt-4 flex flex-wrap items-center justify-between gap-3 text-sm">
+          <span className="text-bone">{p.alt}</span>
+          <span className="text-dim">
+            {index + 1} / {n}
+          </span>
+        </figcaption>
+        <div className="pointer-events-none absolute inset-x-2 top-[40%] flex justify-between">
+          <button type="button" onClick={() => onIndex((index - 1 + n) % n)} className="pointer-events-auto grid h-12 w-12 place-items-center rounded-full bg-ink/80 text-bone" aria-label="Previous photo">
+            <ChevronLeft className="h-6 w-6" aria-hidden />
+          </button>
+          <button type="button" onClick={() => onIndex((index + 1) % n)} className="pointer-events-auto grid h-12 w-12 place-items-center rounded-full bg-ink/80 text-bone" aria-label="Next photo">
+            <ChevronRight className="h-6 w-6" aria-hidden />
+          </button>
+        </div>
+      </figure>
+      <button type="button" onClick={onClose} className="absolute right-4 top-4 grid h-11 w-11 place-items-center rounded-full border border-white/20 text-bone" aria-label="Close">
+        <X className="h-5 w-5" aria-hidden />
+      </button>
+    </motion.div>
+  );
+}
+
 export function Gallery() {
   const r = routeFor('/gallery')!;
-  const [open, setOpen] = useState<Project | null>(null);
+  const [cat, setCat] = useState<GalleryCategory | 'All'>('All');
+  const [open, setOpen] = useState<number | null>(null);
+  const [openProject, setOpenProject] = useState<Project | null>(null);
   const projects = PROJECTS.filter((p) => p.permission);
+  const photos = cat === 'All' ? JOB_PHOTOS : JOB_PHOTOS.filter((p) => p.category === cat);
   return (
     <>
-      <PageIntro crumbs={r.crumbs} title="Our work" lede="Real First Chimney jobs, photographed on site and published with each homeowner's permission." />
-      <section className="section">
+      <PageIntro crumbs={r.crumbs} title="Our work" lede={`Real First Chimney jobs and the crew behind them. ${EXPERIENCE.teamYears} years of combined experience, photographed on site.`}>
+        <div className="flex flex-wrap gap-3">
+          <Link to={promoIsLive() ? HOLIDAY_PROMO.path : '/contact'} className="btn btn-primary">
+            {promoIsLive() ? `Book the ${HOLIDAY_PROMO.priceLabel} special` : 'Schedule service'} <ArrowRight className="h-4 w-4" aria-hidden />
+          </Link>
+          <CallLink placement="gallery_intro" />
+        </div>
+      </PageIntro>
+      <section className="section pt-12">
         <div className="wrap">
-          {projects.length === 0 ? (
-            <div className="card grid gap-10 overflow-hidden p-8 sm:p-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-              <div>
-                <Camera className="h-8 w-8 text-ember" strokeWidth={1.75} aria-hidden />
-                <h2 className="display-md mt-6 text-bone">The first projects are being photographed now.</h2>
-                <p className="lede mt-4">We only show jobs we actually did, with the homeowner's okay. Every visit is documented, so this page will fill with real before-and-afters from homes like yours.</p>
-                <div className="mt-8 flex flex-wrap gap-3">
-                  <Link to={promoIsLive() ? HOLIDAY_PROMO.path : '/contact'} className="btn btn-primary">
-                    {promoIsLive() ? `Book the ${HOLIDAY_PROMO.priceLabel} special` : 'Schedule service'} <ArrowRight className="h-4 w-4" aria-hidden />
-                  </Link>
-                  <Link to="/services" className="btn btn-ghost">
-                    See our services
-                  </Link>
-                </div>
-              </div>
-              <div className="media aspect-[4/3]">
-                <img src={IMAGES.techRooftop} alt="Chimney technician working on a brick chimney (illustrative photo)" loading="lazy" />
-              </div>
-            </div>
-          ) : (
-            <div className="grid gap-8 md:grid-cols-2">
-              {projects.map((p) => (
-                <article key={p.slug} className="card overflow-hidden">
-                  {p.before && p.after ? (
-                    <BeforeAfter before={p.before} after={p.after} alt={p.title} />
-                  ) : (
-                    <button type="button" onClick={() => setOpen(p)} className="zoom block aspect-[4/3] w-full overflow-hidden">
-                      <img src={p.photos[0]?.src} alt={p.photos[0]?.alt} loading="lazy" className="h-full w-full object-cover" />
-                    </button>
-                  )}
-                  <div className="p-6">
-                    <p className="text-sm text-dim">
-                      {p.service} / {p.city}, {p.state}
-                    </p>
-                    <h2 className="mt-1 text-xl text-bone">{p.title}</h2>
-                    <p className="mt-2 text-mute">{p.summary}</p>
-                    {p.photos.length > 0 && (
-                      <button type="button" onClick={() => setOpen(p)} className="mt-4 text-sm font-medium text-ember">
-                        View {p.photos.length} photos
+          <div className="flex flex-wrap gap-2" role="group" aria-label="Filter photos">
+            {(['All', ...GALLERY_CATEGORIES] as const).map((c) => (
+              <button key={c} type="button" aria-pressed={cat === c} onClick={() => setCat(c)} className={`rounded-full border px-4 py-2 text-sm transition-colors ${cat === c ? 'border-ember bg-ember/10 text-bone' : 'border-white/12 text-mute hover:text-bone'}`}>
+                {c}
+                <span className="ml-1.5 text-dim">{c === 'All' ? JOB_PHOTOS.length : JOB_PHOTOS.filter((p) => p.category === c).length}</span>
+              </button>
+            ))}
+          </div>
+          <ul className="mt-10 columns-1 gap-4 sm:columns-2 lg:columns-3">
+            {photos.map((p, i) => (
+              <li key={p.src} className="mb-4 break-inside-avoid">
+                <button type="button" onClick={() => setOpen(i)} className="zoom group relative block w-full overflow-hidden rounded-[20px] border hairline" aria-label={`Open photo: ${p.alt}`}>
+                  <img src={p.sm} alt={p.alt} width={p.w} height={p.h} loading={i < 6 ? 'eager' : 'lazy'} className="h-auto w-full" />
+                  <span className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/85 to-transparent p-4 pt-10 text-left text-sm text-bone opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
+                    {p.alt}
+                  </span>
+                </button>
+              </li>
+            ))}
+          </ul>
+
+          {projects.length > 0 && (
+            <div className="mt-20">
+              <h2 className="display-md text-bone">Before and after</h2>
+              <div className="mt-8 grid gap-8 md:grid-cols-2">
+                {projects.map((p) => (
+                  <article key={p.slug} className="card overflow-hidden">
+                    {p.before && p.after ? (
+                      <BeforeAfter before={p.before} after={p.after} alt={p.title} />
+                    ) : (
+                      <button type="button" onClick={() => setOpenProject(p)} className="zoom block aspect-[4/3] w-full overflow-hidden">
+                        <img src={p.photos[0]?.src} alt={p.photos[0]?.alt} loading="lazy" className="h-full w-full object-cover" />
                       </button>
                     )}
-                  </div>
-                </article>
-              ))}
+                    <div className="p-6">
+                      <p className="text-sm text-dim">
+                        {p.service} / {p.city}, {p.state}
+                      </p>
+                      <h3 className="mt-1 text-xl text-bone">{p.title}</h3>
+                      <p className="mt-2 text-mute">{p.summary}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
             </div>
           )}
         </div>
       </section>
-      <AnimatePresence>{open && <Lightbox project={open} onClose={() => setOpen(null)} />}</AnimatePresence>
+      <AnimatePresence>{open !== null && <PhotoLightbox photos={photos} index={open} onClose={() => setOpen(null)} onIndex={setOpen} />}</AnimatePresence>
+      <AnimatePresence>{openProject && <Lightbox project={openProject} onClose={() => setOpenProject(null)} />}</AnimatePresence>
     </>
   );
 }

@@ -3,6 +3,15 @@ import { ArrowRight, CloudRain, Home, MapPin } from 'lucide-react';
 import LeadForm from '@/components/LeadForm';
 import { Faq, FireButton, PageIntro, Reveal, SERVICE_ICONS } from '@/components/ui';
 import { HOLIDAY_PROMO, promoIsLive } from '@/lib/promo';
+import { JOB_PHOTOS, TEAM } from '@/data/team';
+
+const STATE_PHOTO: Record<string, (typeof JOB_PHOTOS)[number]> = { virginia: TEAM.inspectionRoof, 'new-jersey': TEAM.rebuild, connecticut: TEAM.crown, massachusetts: TEAM.capCrown };
+const photoFor = (slug: string) => {
+  const pool = JOB_PHOTOS.filter((p) => p.category !== 'Andrew & the crew');
+  let h = 0;
+  for (const c of slug) h = (h * 31 + c.charCodeAt(0)) >>> 0;
+  return pool[h % pool.length];
+};
 import { SERVICE_AREAS, isPublishableCity, publishedCities, stateBySlug } from '@/data/serviceAreas';
 import { SERVICES } from '@/data/services';
 import { routeFor } from '@/lib/routes';
@@ -71,6 +80,14 @@ export function StateArea() {
         </div>
       </PageIntro>
 
+      <section className="pt-14">
+        <div className="wrap">
+          <figure className="media relative aspect-[21/9] border hairline">
+            <img src={(STATE_PHOTO[s.slug] ?? TEAM.inspectionRoof).src} alt={(STATE_PHOTO[s.slug] ?? TEAM.inspectionRoof).alt} loading="lazy" />
+            <figcaption className="absolute bottom-3 left-3 rounded-full border border-white/15 bg-ink/75 px-3 py-1.5 text-sm text-bone backdrop-blur-md">First Chimney on the job</figcaption>
+          </figure>
+        </div>
+      </section>
       <section className="section">
         <div className="wrap grid gap-6 lg:grid-cols-2">
           <Reveal className="card p-8">
@@ -171,6 +188,9 @@ function CityArea({ stateSlug, citySlug }: { stateSlug: string; citySlug: string
       </PageIntro>
       <section className="section">
         <div className="wrap">
+          <figure className="media relative mb-12 aspect-[21/9] border hairline">
+            <img src={photoFor(c.slug).src} alt={photoFor(c.slug).alt} loading="lazy" />
+          </figure>
           <h2 className="display-md text-bone">What we see in {c.name}</h2>
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {c.localNotes.map((n, i) => (

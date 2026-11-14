@@ -15,6 +15,7 @@ import { SERVICES } from '../data/services';
 import { SOURCES } from '../data/sources';
 import { HOLIDAY_PROMO, promoIsLive } from './promo';
 import { CREDENTIALS, SITE, STATE_LIST_TEXT, STATES } from './site';
+import { EXPERIENCE, JOB_PHOTOS, TEAM } from '../data/team';
 
 export type Crumb = { name: string; path: string };
 
@@ -49,7 +50,9 @@ export function businessJsonLd() {
     image: abs(SITE.ogImage),
     telephone: SITE.phoneE164,
     email: SITE.email,
-    founder: { '@type': 'Person', name: SITE.owner },
+    description: `Chimney inspection, cleaning and repair company owned by ${SITE.owner}, ${CREDENTIALS.fire.label}, with ${EXPERIENCE.ownerYears} years in the chimney industry and a crew with ${EXPERIENCE.teamYears} years of combined experience.`,
+    founder: { '@type': 'Person', name: SITE.owner, jobTitle: 'Owner', image: abs(TEAM.portrait.src) },
+    employee: { '@type': 'Person', name: SITE.owner, jobTitle: 'Owner', image: abs(TEAM.portrait.src) },
     areaServed: STATES.map((s) => ({ '@type': 'State', name: s.name })),
     knowsAbout: ['Chimney inspection', 'Chimney cleaning', 'Chimney repair', 'Masonry repair', 'Fireplace repair', 'Chimney leak repair'],
     hasOfferCatalog: {
@@ -286,11 +289,11 @@ export function buildRoutes(extra: RouteMeta[] = []): RouteMeta[] {
 
   add({
     path: '/gallery',
-    title: 'Our Work',
-    description: 'Real First Chimney Contracting projects: chimney repairs, masonry, caps, crowns and fireplace work, documented start to finish.',
+    title: 'Our Work: Chimney Rebuilds, Crowns, Caps & Cleaning',
+    description: `Photos of real First Chimney jobs: chimney rebuilds, crowns, caps, liners and cleanings by ${SITE.owner} and the crew.`,
     image: SITE.ogImage,
     h1: 'Our work',
-    summary: ['Project photos from real First Chimney jobs, published with homeowner permission.'],
+    summary: [`${JOB_PHOTOS.length} photos of First Chimney jobs and crew: chimney rebuilds, crowns, caps, liners, cleanings and inspections.`, ...JOB_PHOTOS.map((p) => p.alt)],
     links: serviceLinks,
     crumbs: [HOME, { name: 'Our Work', path: '/gallery' }],
     priority: 0.5,
@@ -311,11 +314,12 @@ export function buildRoutes(extra: RouteMeta[] = []): RouteMeta[] {
   add({
     path: '/about',
     title: 'About First Chimney Contracting',
-    description: `Owned and run by ${SITE.owner}, ${CREDENTIALS.fire.label}. Honest inspections, clean work and straight answers for homeowners in ${STATE_LIST_TEXT}.`,
-    image: SITE.ogImage,
-    h1: 'About First Chimney Contracting',
+    description: `Meet ${SITE.owner}: ${EXPERIENCE.ownerYears} years in the chimney industry, ${CREDENTIALS.fire.label}, leading a crew with ${EXPERIENCE.teamYears} years of combined experience across ${STATE_LIST_TEXT}.`,
+    image: TEAM.withTruck.src,
+    h1: 'Built by someone who genuinely loves chimneys',
     summary: [
-      `${SITE.name} is owned and operated by ${SITE.owner}, who holds F.I.R.E. certification for chimney inspection.`,
+      `${SITE.name} is owned and operated by ${SITE.owner}, who has spent ${EXPERIENCE.ownerYears} years in the chimney industry and holds F.I.R.E. certification for chimney inspection. The crew brings ${EXPERIENCE.teamYears} years of combined chimney and masonry experience.`,
+      'Andrew genuinely loves chimneys and loves seeing families use their fireplaces safely, and he started First Chimney to take care of every home like his own.',
       'The company was built on a simple standard: show homeowners what we see, explain it plainly, quote before we work and leave the house clean.',
       `We serve homeowners in ${STATE_LIST_TEXT}.`,
     ],

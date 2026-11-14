@@ -7,6 +7,7 @@
  */
 import { HOLIDAY_PROMO } from '../lib/promo';
 import { SITE, STATE_LIST_TEXT } from '../lib/site';
+import { EXPERIENCE } from './team';
 
 export const GENERAL_FAQS: { q: string; a: string }[] = [
   {
@@ -20,6 +21,10 @@ export const GENERAL_FAQS: { q: string; a: string }[] = [
   {
     q: 'Are you certified?',
     a: 'Yes. Andrew Paterini, the owner, holds F.I.R.E. certification for chimney inspection.',
+  },
+  {
+    q: 'How experienced is your team?',
+    a: `Andrew has ${EXPERIENCE.ownerYears} years in the chimney industry, and the First Chimney crew brings ${EXPERIENCE.teamYears} years of combined chimney and masonry experience.`,
   },
   {
     q: 'How often should my chimney be inspected and cleaned?',

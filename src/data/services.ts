@@ -6,6 +6,7 @@
  * Technical statements follow NFPA 211 and U.S. Fire Administration guidance; see src/data/sources.ts.
  */
 import { IMAGES } from '../lib/site';
+import { TEAM } from './team';
 
 export type IconName = 'camera' | 'brush' | 'brick' | 'droplet' | 'cap' | 'crown' | 'flame' | 'wind';
 
@@ -34,8 +35,8 @@ export const SERVICES: Service[] = [
     title: 'Chimney Inspection',
     short: 'A certified look at the whole system, from firebox to crown, with plain-English findings.',
     icon: 'camera',
-    image: IMAGES.inspectionCloseup,
-    imageAlt: 'Technician inspecting the inside of a fireplace firebox',
+    image: TEAM.inspectionRoof.src,
+    imageAlt: TEAM.inspectionRoof.alt,
     headline: 'Know exactly what shape your chimney is in.',
     answer:
       'A chimney inspection checks the firebox, damper, smoke chamber, flue liner, crown, cap and flashing for damage, blockages and fire hazards. NFPA 211 recommends an inspection every year, and a more detailed Level 2 inspection when you buy or sell a home, change fuel or appliance, or after a chimney fire or major storm.',
@@ -86,8 +87,8 @@ export const SERVICES: Service[] = [
     title: 'Chimney Cleaning & Sweeping',
     short: 'Creosote and soot removed from the flue, with your living room protected the whole time.',
     icon: 'brush',
-    image: IMAGES.sweepStone,
-    imageAlt: 'Chimney sweep cleaning a stone fireplace with a rotary brush',
+    image: TEAM.sweeping.src,
+    imageAlt: TEAM.sweeping.alt,
     headline: 'A clean flue burns safer and drafts better.',
     answer:
       'Chimney cleaning removes creosote, soot and debris from the flue, smoke chamber and firebox. Creosote is a flammable byproduct of burning wood, and buildup in the flue is a leading cause of chimney fires. Wood-burning chimneys should be inspected yearly and cleaned when buildup is found, typically once a season for regular use.',
@@ -138,8 +139,8 @@ export const SERVICES: Service[] = [
     title: 'Masonry Repair & Rebuilds',
     short: 'Tuckpointing, brick replacement and partial or full rebuilds above the roofline.',
     icon: 'brick',
-    image: IMAGES.techRooftop,
-    imageAlt: 'Technician working on a brick chimney above the roofline',
+    image: TEAM.rebuild.src,
+    imageAlt: TEAM.rebuild.alt,
     headline: 'Brick and mortar that stand up to real weather.',
     answer:
       'Chimney masonry repair restores mortar joints (tuckpointing), replaces cracked or spalling brick, and rebuilds sections that have become loose or unsafe. Water is the main cause of masonry damage: it soaks into brick and mortar, freezes, expands and breaks the material apart. Fixing it early usually costs far less than a rebuild.',
@@ -186,8 +187,8 @@ export const SERVICES: Service[] = [
     title: 'Leak Repair & Waterproofing',
     short: 'We find where water gets in, fix it at the source and help keep it out.',
     icon: 'droplet',
-    image: IMAGES.flueRoof,
-    imageAlt: 'Technician checking a chimney flue and crown on a roof',
+    image: TEAM.roofProtection.src,
+    imageAlt: TEAM.roofProtection.alt,
     headline: 'Stop the leak where it starts.',
     answer:
       'Chimney leaks usually come from one of four places: failed flashing where the chimney meets the roof, a cracked crown, a missing or damaged cap, or porous brick and mortar. Repair means finding the actual entry point first, then fixing flashing, sealing or rebuilding the crown, installing a cap, or applying a breathable masonry water repellent.',
@@ -234,8 +235,8 @@ export const SERVICES: Service[] = [
     title: 'Chimney Caps & Chase Covers',
     short: 'Keep rain, animals and debris out of the flue with a properly fitted cap.',
     icon: 'cap',
-    image: IMAGES.capSky,
-    imageAlt: 'Brick chimney with a metal chimney cap against a blue sky',
+    image: TEAM.capCrown.src,
+    imageAlt: TEAM.capCrown.alt,
     headline: 'The cheapest protection your chimney can have.',
     answer:
       'A chimney cap is a metal cover with mesh sides that sits over the flue opening. It keeps rain, birds, raccoons, leaves and debris out of the chimney and helps stop sparks from landing on the roof. A chase cover does the same job for the top of a framed (factory-built) chimney chase.',
@@ -275,8 +276,8 @@ export const SERVICES: Service[] = [
     title: 'Chimney Crown Repair',
     short: 'Seal or rebuild the cement crown that sheds water off the top of your chimney.',
     icon: 'crown',
-    image: IMAGES.crownFlue,
-    imageAlt: 'Top of a masonry chimney showing the crown and flue openings',
+    image: TEAM.crown.src,
+    imageAlt: TEAM.crown.alt,
     headline: 'A cracked crown lets water straight in.',
     answer:
       'The chimney crown is the cement slab that covers the top of a masonry chimney around the flue. It sheds rain away from the brick. Small cracks can be sealed with a crown coating, but a crown that is crumbling, too flat or built from regular mortar usually needs to be rebuilt to stop water from soaking into the chimney.',

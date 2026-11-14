@@ -7,3 +7,6 @@ coverage/
 .env*
 !.env.example
 marketing/holiday-2026/out/
+
+# Raw team photo originals (optimized copies live in public/media/team)
+public/media/Team-photos/
