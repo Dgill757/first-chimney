@@ -1,421 +1,506 @@
-﻿import { useMemo } from 'react';
+﻿import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { motion, useReducedMotion } from 'motion/react';
-import {
-  Shield,
-  CheckCircle,
-  MapPin,
-  ArrowRight,
-  Camera,
-  Wrench,
-  FileText,
-  ChevronRight,
-  Droplets,
-  Wind,
-  AlertTriangle,
-  CircleDashed,
-  Flame,
-  BrickWall,
-  BadgeCheck,
-  Star,
-} from 'lucide-react';
-import { WavePath } from '../components/ui/wave-path';
-import { BackgroundPaths } from '../components/ui/background-paths';
-import SEO from '@/components/SEO';
-import { IMAGE_ASSETS, SITE } from '@/lib/site';
+import { AnimatePresence, motion, useReducedMotion, useScroll, useTransform } from 'motion/react';
+import { ArrowRight, ArrowUpRight, BadgeCheck, Camera, ClipboardList, Hammer, MessageSquareText, Phone, ShieldCheck, Sparkles, UserRound } from 'lucide-react';
+import FireplacePreview from '@/components/FireplacePreview';
+import { HolidayFeature } from '@/components/Holiday';
+import LeadForm from '@/components/LeadForm';
+import { CallLink, EASE, Faq, Reveal, SectionHeading, SERVICE_ICONS } from '@/components/ui';
+import { GENERAL_FAQS, REVIEWS } from '@/data/content';
+import { DEFAULT_DESIGN, STYLES, SURROUNDS, type Design } from '@/data/designer';
+import { SERVICE_AREAS } from '@/data/serviceAreas';
+import { SERVICES, serviceById } from '@/data/services';
+import { HOLIDAY_PROMO, promoIsLive } from '@/lib/promo';
+import { CREDENTIALS, IMAGES, SITE } from '@/lib/site';
+import { track } from '@/lib/track';
 
-export default function Home() {
-  const reduceMotion = useReducedMotion();
-
-  const emberParticles = useMemo(
-    () =>
-      Array.from({ length: 14 }, (_, i) => ({
-        id: i,
-        size: 4 + ((i * 5) % 8),
-        left: `${(i * 13) % 100}%`,
-        delay: `${i * 0.8}s`,
-        duration: `${8 + (i % 4) * 2}s`,
-      })),
-    [],
-  );
-
-  const services = [
-    {
-      title: 'Level 2 Inspections',
-      desc: 'HD camera diagnostics to uncover hidden hazards before they become expensive repairs.',
-      icon: Camera,
-      path: '/services/chimney-inspection',
-      image: IMAGE_ASSETS.inspection,
-    },
-    {
-      title: 'Chimney Sweeping',
-      desc: 'Mess-free sweeping to remove creosote buildup and restore healthy draft performance.',
-      icon: Shield,
-      path: '/services/chimney-sweeping',
-      image: IMAGE_ASSETS.chimneySweep1,
-    },
-    {
-      title: 'Masonry & Rebuilds',
-      desc: 'Tuckpointing, structural repair, and full rebuilds designed for long-term durability.',
-      icon: Wrench,
-      path: '/services/masonry-rebuilds',
-      image: IMAGE_ASSETS.masonry,
-    },
-    {
-      title: 'Leak Resolution',
-      desc: 'Flashing, waterproofing, and cap/crown solutions that stop recurring water intrusion.',
-      icon: CheckCircle,
-      path: '/services/leak-repair',
-      image: IMAGE_ASSETS.crown,
-    },
-    {
-      title: 'Fireplace Repair',
-      desc: 'Restore function, airflow, and aesthetics for safe fires and a cleaner home.',
-      icon: Flame,
-      path: '/services/fireplace-repair',
-      image: IMAGE_ASSETS.fireplace,
-    },
-    {
-      title: 'Dryer Vent Cleaning',
-      desc: 'Reduce fire risk and improve efficiency with complete lint and blockage removal.',
-      icon: FileText,
-      path: '/services/dryer-vent-cleaning',
-      image: IMAGE_ASSETS.chimneySweep2,
-    },
-  ];
-
-  const diagnostics = [
-    {
-      title: 'Smoke Problems',
-      desc: 'Smoke backing up when the fireplace is running.',
-      icon: Wind,
-      image: IMAGE_ASSETS.chimneySweep2,
-      path: '/services/chimney-sweeping',
-    },
-    {
-      title: 'Water Stains',
-      desc: 'Brown marks near your chimney chase or ceiling.',
-      icon: Droplets,
-      image: IMAGE_ASSETS.crown,
-      path: '/services/leak-repair',
-    },
-    {
-      title: 'Crumbling Mortar',
-      desc: 'Spalling brick, cracked mortar joints, or loose masonry.',
-      icon: BrickWall,
-      image: IMAGE_ASSETS.beforeAfter2,
-      path: '/services/masonry-rebuilds',
-    },
-    {
-      title: 'Missing Caps',
-      desc: 'Open flue tops inviting rain, animals, and debris.',
-      icon: CircleDashed,
-      image: IMAGE_ASSETS.cap,
-      path: '/services/chimney-cap',
-    },
-    {
-      title: 'Bad Odors',
-      desc: 'Campfire smell or musty odors in warm weather.',
-      icon: AlertTriangle,
-      image: IMAGE_ASSETS.chimneySweep3,
-      path: '/services/chimney-inspection',
-    },
-    {
-      title: 'Draft Issues',
-      desc: 'Poor airflow and difficulty keeping fires lit.',
-      icon: Wind,
-      image: IMAGE_ASSETS.inspectionAlt,
-      path: '/services/chimney-inspection',
-    },
-  ];
+function Hero() {
+  const reduce = useReducedMotion();
+  const live = promoIsLive();
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 700], ['0%', reduce ? '0%' : '12%']);
 
   return (
-    <div className="flex flex-col">
-      <SEO
-        title="Chimney Services Built for Safety and Long-Term Value"
-        description="First Chimney delivers inspections, sweeping, chimney leak repair, masonry restoration, and fireplace services across VA, MD, WV, and PA."
-        path="/"
-        image={IMAGE_ASSETS.hero}
-      />
+    <section className="relative flex min-h-[100dvh] items-end overflow-hidden pb-16 pt-36 md:items-center md:pb-24">
+      <motion.div aria-hidden className="absolute inset-0" style={{ y }}>
+        {reduce ? (
+          <img src={IMAGES.heroPoster} alt="" className="h-full w-full object-cover" fetchPriority="high" />
+        ) : (
+          <video className="h-full w-full object-cover" autoPlay muted loop playsInline preload="metadata" poster={IMAGES.heroPoster}>
+            <source src={IMAGES.heroVideo} type="video/mp4" />
+          </video>
+        )}
+      </motion.div>
+      <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-ink via-ink/75 to-ink/10" />
+      <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-ink/60" />
 
-      <section className="relative h-screen min-h-[640px] flex items-center justify-center overflow-hidden">
-        <div aria-hidden="true" className="absolute inset-0 z-0">
-          {!reduceMotion ? (
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              poster={IMAGE_ASSETS.hero}
-              className="w-full h-full object-cover scale-[1.04]"
-            >
-              <source src={IMAGE_ASSETS.heroVideo} type="video/mp4" />
-            </video>
-          ) : (
-            <img src={IMAGE_ASSETS.hero} alt="" className="w-full h-full object-cover scale-[1.04]" />
-          )}
-          <div className="absolute inset-0 bg-gradient-to-b from-midnight/86 via-midnight/72 to-midnight" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(198,106,43,0.14),transparent_52%)]" />
-        </div>
-
-        <div className="absolute inset-0 pointer-events-none">
-          {emberParticles.map((p) => (
-            <span
-              key={p.id}
-              className="ember-particle"
-              style={{
-                width: `${p.size}px`,
-                height: `${p.size}px`,
-                left: p.left,
-                bottom: '-10px',
-                animationDelay: p.delay,
-                animationDuration: `${p.duration}, ${4 + p.id * 0.2}s`,
-              }}
-            />
-          ))}
-        </div>
-
-        <div className="container mx-auto px-6 lg:px-12 relative z-10 text-center mt-20">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full mb-8"
-            >
-              <Shield className="w-4 h-4 text-copper-ember" />
-              <span className="text-sm font-semibold tracking-wide uppercase">CSIA Certified | Licensed & Insured</span>
-            </motion.div>
-
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-6 text-white">
-              <motion.span initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }} className="block">
-                Chimney Safety Done
-              </motion.span>
+      <div className="wrap relative">
+        <div className="max-w-3xl">
+          <motion.p
+            initial={reduce ? false : { opacity: 0, transform: 'translateY(10px)' }}
+            animate={{ opacity: 1, transform: 'translateY(0px)' }}
+            transition={{ duration: 0.6, ease: EASE }}
+            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-ink/50 px-3.5 py-1.5 text-sm text-bone backdrop-blur-md"
+          >
+            <BadgeCheck className="h-4 w-4 text-ember" strokeWidth={1.75} aria-hidden />
+            {CREDENTIALS.fire.label} <span className="text-dim">/</span> Owner-operated
+          </motion.p>
+          <h1 className="display-xl mt-6 text-bone">
+            {['Chimney service', 'done right'].map((line, i) => (
               <motion.span
-                initial={{ opacity: 0, y: 28 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.55, delay: 0.12 }}
-                className="block text-gradient"
+                key={line}
+                className="block"
+                initial={reduce ? false : { opacity: 0, transform: 'translateY(24px)', filter: 'blur(6px)' }}
+                animate={{ opacity: 1, transform: 'translateY(0px)', filter: 'blur(0px)' }}
+                transition={{ duration: 0.8, delay: 0.08 + i * 0.1, ease: EASE }}
               >
-                Right the First Time.
+                {line}
               </motion.span>
-            </h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.24 }}
-              className="text-lg md:text-xl text-warm-ivory/90 mb-10 max-w-2xl mx-auto leading-relaxed"
+            ))}
+            <motion.span
+              className="block text-ember"
+              initial={reduce ? false : { opacity: 0, transform: 'translateY(24px)', filter: 'blur(6px)' }}
+              animate={{ opacity: 1, transform: 'translateY(0px)', filter: 'blur(0px)' }}
+              transition={{ duration: 0.8, delay: 0.28, ease: EASE }}
             >
-              Premium chimney inspection, sweeping, leak repair, and masonry restoration for homeowners across the Mid-Atlantic.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.34 }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
-            >
-              <Link
-                to="/contact"
-                className="w-full sm:w-auto bg-copper-ember text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-fire-gold shadow-[0_0_22px_rgba(198,106,43,0.45)] hover:shadow-[0_0_32px_rgba(231,163,75,0.62)] flex items-center justify-center gap-2 group"
-              >
-                Book Your Inspection
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1" />
+              the first time.
+            </motion.span>
+          </h1>
+          <motion.p
+            initial={reduce ? false : { opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.45 }}
+            className="lede mt-6 text-bone/80"
+          >
+            Cleaning, inspection and repair for homes in Virginia, New Jersey, Connecticut and Massachusetts.
+          </motion.p>
+          <motion.div
+            initial={reduce ? false : { opacity: 0, transform: 'translateY(10px)' }}
+            animate={{ opacity: 1, transform: 'translateY(0px)' }}
+            transition={{ duration: 0.6, delay: 0.55, ease: EASE }}
+            className="mt-9 flex flex-wrap gap-3"
+          >
+            {live ? (
+              <Link to={HOLIDAY_PROMO.path} onClick={() => track('promo_cta_click', { placement: 'home_hero' })} className="btn btn-primary btn-lg">
+                Book the {HOLIDAY_PROMO.priceLabel} holiday special <ArrowRight className="h-5 w-5" aria-hidden />
               </Link>
-              <a
-                href={SITE.phoneHref}
-                className="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/25 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/20 flex items-center justify-center gap-2"
-              >
-                Call {SITE.phoneDisplay}
-              </a>
-            </motion.div>
+            ) : (
+              <Link to="/contact" className="btn btn-primary btn-lg">
+                Schedule service <ArrowRight className="h-5 w-5" aria-hidden />
+              </Link>
+            )}
+            <CallLink placement="home_hero" className="btn btn-ghost btn-lg backdrop-blur-md" />
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
-            <div className="flex justify-center w-full mt-8">
-              <WavePath className="text-copper-ember/30" />
+const FACTS = [
+  `${CREDENTIALS.fire.label} inspection`,
+  `Owned and run by ${SITE.owner}`,
+  'Quote before any repair',
+  'Drop cloths down, every visit',
+  'Virginia / New Jersey / Connecticut / Massachusetts',
+  'Plain-English findings',
+];
+
+function FactsMarquee() {
+  const row = [...FACTS, ...FACTS];
+  return (
+    <div className="relative overflow-hidden border-y hairline bg-ink-2 py-5" aria-label="Why homeowners choose First Chimney">
+      <div aria-hidden className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-ink-2 to-transparent" />
+      <div aria-hidden className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-ink-2 to-transparent" />
+      <ul className="marquee-track flex w-max gap-12 whitespace-nowrap">
+        {row.map((f, i) => (
+          <li key={i} aria-hidden={i >= FACTS.length} className="flex items-center gap-3 font-display text-lg text-bone/85" style={{ fontStretch: '108%' }}>
+            <Sparkles className="h-4 w-4 text-ember" strokeWidth={1.75} aria-hidden />
+            {f}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function ServicesBento() {
+  const [a, b, ...rest] = SERVICES;
+  const Big = ({ s, i }: { s: typeof a; i: number }) => {
+    const Icon = SERVICE_ICONS[s.icon];
+    return (
+      <Reveal delay={i * 0.06} className="md:col-span-3 lg:col-span-3">
+        <Link to={`/services/${s.id}`} className="zoom group relative flex h-full min-h-[22rem] flex-col justify-end overflow-hidden rounded-[20px] border hairline">
+          <img src={s.image} alt={s.imageAlt} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/5" />
+          <div className="relative p-7">
+            <Icon className="h-7 w-7 text-ember" strokeWidth={1.75} aria-hidden />
+            <h3 className="mt-4 text-2xl text-bone">{s.title}</h3>
+            <p className="mt-2 max-w-md text-mute">{s.short}</p>
+            <span className="link-arrow mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-ember">
+              Learn more <ArrowRight className="h-4 w-4" aria-hidden />
+            </span>
+          </div>
+        </Link>
+      </Reveal>
+    );
+  };
+  return (
+    <section className="section" aria-labelledby="services-h">
+      <div className="wrap">
+        <SectionHeading id="services-h" title="Everything your chimney needs, from the firebox to the crown." />
+        <div className="mt-14 grid gap-4 md:grid-cols-6">
+          <Big s={a} i={0} />
+          <Big s={b} i={1} />
+          {rest.map((s, i) => {
+            const Icon = SERVICE_ICONS[s.icon];
+            return (
+              <Reveal key={s.id} delay={(i % 3) * 0.06} className="md:col-span-3 lg:col-span-2">
+                <Link to={`/services/${s.id}`} className="card lift group flex h-full flex-col p-6">
+                  <div className="flex items-start justify-between">
+                    <span className="grid h-11 w-11 place-items-center rounded-xl border border-white/10 bg-ink text-ember">
+                      <Icon className="h-5 w-5" strokeWidth={1.75} aria-hidden />
+                    </span>
+                    <ArrowUpRight className="h-5 w-5 text-dim transition-colors group-hover:text-ember" aria-hidden />
+                  </div>
+                  <h3 className="mt-6 text-lg text-bone">{s.title}</h3>
+                  <p className="mt-2 text-[0.95rem] leading-relaxed text-mute">{s.short}</p>
+                </Link>
+              </Reveal>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function DesignerTeaser() {
+  const [design, setDesign] = useState<Design>(DEFAULT_DESIGN);
+  const swatches = SURROUNDS.slice(0, 6);
+  return (
+    <section className="section relative overflow-hidden" aria-labelledby="designer-h">
+      <div className="wrap grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
+        <Reveal className="order-2 lg:order-1">
+          <div className="media relative aspect-[4/3] border hairline shadow-[0_40px_120px_-50px_rgb(240_122_50/0.6)]">
+            <FireplacePreview design={design} className="h-full w-full" />
+          </div>
+        </Reveal>
+        <div className="order-1 lg:order-2">
+          <p className="eyebrow">Design your fireplace</p>
+          <h2 id="designer-h" className="display-lg mt-4 text-bone">
+            See it before anyone lifts a trowel.
+          </h2>
+          <p className="lede mt-5">Try a few finishes right here. The full designer adds mantels, hearths, fire types and extras, then sends your design to us.</p>
+
+          <fieldset className="mt-8">
+            <legend className="text-sm font-medium text-bone">Surround</legend>
+            <div className="mt-3 flex flex-wrap gap-2.5">
+              {swatches.map((s) => {
+                const on = design.surround === s.id;
+                return (
+                  <button
+                    key={s.id}
+                    type="button"
+                    aria-pressed={on}
+                    onClick={() => setDesign((d) => ({ ...d, surround: s.id }))}
+                    className={`flex items-center gap-2 rounded-full border px-3 py-1.5 text-sm transition-colors ${on ? 'border-ember bg-ember/10 text-bone' : 'border-white/12 text-mute hover:border-white/30'}`}
+                  >
+                    <span className="h-4 w-4 rounded-full border border-white/20" style={{ background: s.base }} aria-hidden />
+                    {s.name}
+                  </button>
+                );
+              })}
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-soft-black border-y border-white/5 py-8">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center">
-            {[
-              { label: 'CSIA Certified', icon: BadgeCheck },
-              { label: 'NFI Ready', icon: Shield },
-              { label: '5-State Coverage', icon: MapPin },
-              { label: '5-Star Client Focus', icon: Star },
-            ].map((item, i) => (
-              <motion.div
-                key={item.label}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.38, delay: i * 0.06 }}
-                className="trust-badge bg-midnight/60 border border-white/10 rounded-xl py-4 px-3 text-sm md:text-base font-semibold text-warm-ivory/90 flex flex-col items-center gap-2"
-              >
-                <item.icon className="w-5 h-5 text-copper-ember" />
-                <span>{item.label}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-midnight relative">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-sm font-bold tracking-widest text-copper-ember uppercase mb-4">Our Expertise</h2>
-            <h3 className="text-4xl md:text-5xl font-display font-bold mb-6 text-white">Comprehensive Chimney Care</h3>
-            <p className="text-warm-ivory/85 text-lg">From annual maintenance to structural rebuilds, every service is engineered for safety, performance, and longevity.</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, i) => (
-              <Link key={i} to={service.path} className="glass-card rounded-2xl overflow-hidden hover-lift group">
-                <div className="aspect-[16/10] overflow-hidden relative">
-                  <img src={service.image} alt={service.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-midnight/85 to-transparent" />
-                </div>
-                <div className="p-7">
-                  <div className="w-12 h-12 bg-soft-black border border-white/15 rounded-xl flex items-center justify-center mb-5 group-hover:border-copper-ember/60 transition-colors">
-                    <service.icon className="w-6 h-6 text-copper-ember" />
-                  </div>
-                  <h4 className="text-xl font-display font-bold mb-3 text-white group-hover:text-copper-ember transition-colors">{service.title}</h4>
-                  <p className="text-warm-ivory/80 mb-6 line-clamp-2">{service.desc}</p>
-                  <div className="flex items-center text-sm font-semibold text-white group-hover:text-copper-ember transition-colors">
-                    Learn More <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link to="/services" className="inline-flex items-center gap-2 text-warm-ivory hover:text-copper-ember font-semibold transition-colors">
-              View All Services <ArrowRight className="w-4 h-4" />
+          </fieldset>
+          <fieldset className="mt-6">
+            <legend className="text-sm font-medium text-bone">Style</legend>
+            <div className="mt-3 flex flex-wrap gap-2.5">
+              {STYLES.map((s) => {
+                const on = design.style === s.id;
+                return (
+                  <button
+                    key={s.id}
+                    type="button"
+                    aria-pressed={on}
+                    onClick={() => setDesign((d) => ({ ...d, style: s.id, fire: s.id === 'modern' ? 'linear-gas' : d.fire === 'linear-gas' ? 'open-wood' : d.fire, mantel: s.id === 'modern' ? 'walnut-float' : d.mantel }))}
+                    className={`rounded-full border px-3.5 py-1.5 text-sm transition-colors ${on ? 'border-ember bg-ember/10 text-bone' : 'border-white/12 text-mute hover:border-white/30'}`}
+                  >
+                    {s.name}
+                  </button>
+                );
+              })}
+            </div>
+          </fieldset>
+          <div className="mt-9 flex flex-wrap gap-3">
+            <Link to={`/design-your-fireplace?s=${design.style}&m=${design.surround}&t=${design.mantel}&h=${design.hearth}&f=${design.fire}`} className="btn btn-primary">
+              Open the full designer <ArrowRight className="h-4 w-4" aria-hidden />
+            </Link>
+            <Link to="/fireplace-shop" className="btn btn-ghost">
+              Browse the fireplace shop
             </Link>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+  );
+}
 
-      <section className="py-24 bg-soft-black relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-copper-ember/15 to-transparent pointer-events-none" />
-
-        <div className="container mx-auto px-6 lg:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-sm font-bold tracking-widest text-copper-ember uppercase mb-4">Transparent Diagnostics</h2>
-              <h3 className="text-4xl md:text-5xl font-display font-bold mb-6 leading-tight text-white">Know What's Wrong Before You Spend Big.</h3>
-              <p className="text-warm-ivory/90 text-lg mb-8 leading-relaxed">
-                Every Level 2 inspection includes internal camera scanning and a digital report with photo evidence, so you can confidently prioritize repairs and avoid guesswork.
-              </p>
-
-              <ul className="space-y-4 mb-10">
-                {[
-                  'HD internal flue camera scanning',
-                  'Issue-by-issue findings with photo proof',
-                  'Clear severity-based recommendations',
-                  'Transparent pricing with no pressure tactics',
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-copper-ember shrink-0" />
-                    <span className="text-warm-ivory/95">{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <Link to="/services/chimney-inspection" className="inline-flex items-center gap-2 bg-white text-midnight px-6 py-3 rounded-xl font-semibold hover:bg-warm-ivory">
-                Explore Our Inspection Process
-              </Link>
-            </div>
-
-            <div className="relative">
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 relative">
-                <img src={IMAGE_ASSETS.inspectionAlt} alt="Camera inspection inside chimney flue" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-midnight/85 to-transparent flex items-end p-8">
-                  <div className="bg-midnight/80 backdrop-blur-md border border-white/20 p-4 rounded-xl w-full">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm font-semibold text-white">Flue Scan in Progress</span>
-                      <span className="text-xs text-copper-ember animate-pulse">LIVE</span>
-                    </div>
-                    <div className="h-2 bg-soft-black rounded-full overflow-hidden">
-                      <div className="h-full bg-copper-ember w-2/3" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-midnight relative border-y border-white/5">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-sm font-bold tracking-widest text-copper-ember uppercase mb-4">Smart Diagnostic Tool</h2>
-            <h3 className="text-4xl md:text-5xl font-display font-bold mb-6 text-white">Know What’s Wrong Before You Spend Big</h3>
-            <p className="text-warm-ivory/85 text-lg">Click the issue you are seeing at home and go straight to the service page that solves it.</p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {diagnostics.map((issue) => (
-              <Link key={issue.title} to={issue.path} className="group relative overflow-hidden rounded-2xl min-h-64 flex items-end border border-white/10">
-                <img src={issue.image} alt={issue.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-gradient-to-t from-midnight/95 via-midnight/60 to-transparent" />
-                <div className="relative z-10 p-6 w-full">
-                  <issue.icon className="w-8 h-8 text-copper-ember mb-4" />
-                  <h4 className="text-2xl font-display font-bold mb-2 text-white">{issue.title}</h4>
-                  <p className="text-warm-ivory/85 text-sm">{issue.desc}</p>
-                  <span className="inline-block mt-4 text-copper-ember font-semibold group-hover:text-fire-gold">View Service</span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-midnight border-y border-white/5">
-        <div className="container mx-auto px-6 lg:px-12 text-center">
-          <MapPin className="w-12 h-12 text-copper-ember mx-auto mb-6" />
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-white">Serving the Mid-Atlantic</h2>
-          <p className="text-warm-ivory/85 max-w-2xl mx-auto mb-12">Professional chimney and fireplace service across Virginia, Maryland, West Virginia, and Pennsylvania.</p>
-
-          <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-            {['Virginia', 'Maryland', 'West Virginia', 'Pennsylvania'].map((state) => (
-              <Link
-                key={state}
-                to={`/service-areas/${state.toLowerCase().replace(/[.']/g, '').replace(/ /g, '-')}`}
-                className="bg-soft-black border border-white/10 px-6 py-3 rounded-full text-warm-ivory hover:border-copper-ember hover:text-white transition-colors"
-              >
-                {state}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="relative overflow-hidden bg-midnight border-t border-white/5">
-        <BackgroundPaths
-          title="Ready to secure your home?"
-          description="Don't wait until a minor issue becomes a major hazard. Schedule your comprehensive inspection today."
-        >
-          <Link
-            to="/contact"
-            className="w-full sm:w-auto bg-copper-ember text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-fire-gold shadow-[0_0_20px_rgba(198,106,43,0.4)]"
-          >
-            Request an Estimate
+function WhyUs() {
+  const items = [
+    { i: Camera, t: 'We show you what we see', b: 'Findings come with photos where possible, so you are never asked to take a repair on faith.' },
+    { i: ClipboardList, t: 'Quote first, work second', b: 'Anything beyond what you booked is explained and priced before a single tool comes out.' },
+    { i: ShieldCheck, t: 'Certified, careful work', b: `${CREDENTIALS.fire.label} inspection, done the same careful way on every chimney.` },
+    { i: UserRound, t: 'An owner who answers', b: `First Chimney is owned and run by ${SITE.owner}. You deal with the person accountable for the work.` },
+  ];
+  return (
+    <section className="section border-y hairline bg-ink-2" aria-labelledby="why-h">
+      <div className="wrap grid gap-14 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="lg:sticky lg:top-32 lg:self-start">
+          <h2 id="why-h" className="display-lg text-bone">
+            A newer company with an old-fashioned standard.
+          </h2>
+          <p className="lede mt-5">First Chimney was built to be the company you would want working in your own house: clear answers, careful work, no upsell.</p>
+          <Link to="/about" className="link-arrow mt-8 inline-flex items-center gap-1.5 font-medium text-ember">
+            Meet First Chimney <ArrowRight className="h-4 w-4" aria-hidden />
           </Link>
-          <a
-            href={SITE.phoneHref}
-            className="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/20"
-          >
-            Call {SITE.phoneDisplay}
-          </a>
-        </BackgroundPaths>
-      </section>
-    </div>
+        </div>
+        <div className="grid gap-4 sm:grid-cols-2">
+          {items.map((x, i) => (
+            <Reveal key={x.t} delay={i * 0.06} className={`card p-7 ${i % 2 ? 'sm:translate-y-10' : ''}`}>
+              <x.i className="h-7 w-7 text-ember" strokeWidth={1.75} aria-hidden />
+              <h3 className="mt-6 text-xl text-bone">{x.t}</h3>
+              <p className="mt-3 leading-relaxed text-mute">{x.b}</p>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const SYMPTOMS = [
+  { label: 'Smoke comes into the room', service: 'chimney-sweeping', note: 'Often a dirty or blocked flue, or a damper issue. A cleaning and inspection usually finds the cause.' },
+  { label: 'Water stains near the chimney', service: 'leak-repair', note: 'Usually flashing, the crown, a missing cap or porous masonry. We trace it to the source first.' },
+  { label: 'Crumbling brick or mortar', service: 'masonry-rebuilds', note: 'Freeze-thaw damage. Repointing early costs far less than a rebuild later.' },
+  { label: 'Campfire smell in summer', service: 'chimney-sweeping', note: 'Creosote odor pulled in by humidity. Cleaning plus a good damper seal usually fixes it.' },
+  { label: 'Animals or debris in the flue', service: 'chimney-cap', note: 'An open flue invites nesting animals and rain. A properly fitted cap stops it.' },
+  { label: 'Buying or selling a home', service: 'chimney-inspection', note: 'NFPA 211 recommends a Level 2 inspection at a property sale.' },
+  { label: 'Damper sticks or will not seal', service: 'fireplace-repair', note: 'Rusted or warped dampers can be repaired or replaced, including top-sealing options.' },
+  { label: 'Dryer takes forever', service: 'dryer-vent-cleaning', note: 'Lint buildup in the vent. Failure to clean is the leading cause of home dryer fires.' },
+];
+
+function SymptomFinder() {
+  const [pick, setPick] = useState(0);
+  const s = SYMPTOMS[pick];
+  const svc = serviceById(s.service)!;
+  const Icon = SERVICE_ICONS[svc.icon];
+  const reduce = useReducedMotion();
+  return (
+    <section className="section" aria-labelledby="symptom-h">
+      <div className="wrap">
+        <SectionHeading id="symptom-h" title="What are you noticing?" lede="Pick what you are seeing at home. We will point you to the right service." />
+        <div className="mt-12 grid gap-8 lg:grid-cols-[1fr_1fr]">
+          <div className="flex flex-wrap content-start gap-2.5" role="radiogroup" aria-label="Symptoms">
+            {SYMPTOMS.map((x, i) => (
+              <button
+                key={x.label}
+                type="button"
+                role="radio"
+                aria-checked={pick === i}
+                onClick={() => setPick(i)}
+                className={`rounded-full border px-4 py-2.5 text-[0.95rem] transition-colors ${pick === i ? 'border-ember bg-ember text-[#1a0d05]' : 'border-white/12 text-bone hover:border-white/35'}`}
+              >
+                {x.label}
+              </button>
+            ))}
+          </div>
+          <div className="card relative min-h-[17rem] overflow-hidden p-7 sm:p-9" aria-live="polite">
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.div
+                key={pick}
+                initial={reduce ? { opacity: 0 } : { opacity: 0, transform: 'translateY(8px)', filter: 'blur(4px)' }}
+                animate={{ opacity: 1, transform: 'translateY(0px)', filter: 'blur(0px)' }}
+                exit={{ opacity: 0, transition: { duration: 0.12 } }}
+                transition={{ duration: 0.28, ease: EASE }}
+              >
+                <p className="text-sm text-dim">Most likely you need</p>
+                <h3 className="mt-2 flex items-center gap-3 text-2xl text-bone">
+                  <Icon className="h-6 w-6 text-ember" strokeWidth={1.75} aria-hidden /> {svc.title}
+                </h3>
+                <p className="mt-4 leading-relaxed text-mute">{s.note}</p>
+                <div className="mt-7 flex flex-wrap gap-3">
+                  <Link to={`/services/${svc.id}`} className="btn btn-primary btn-sm">
+                    About {svc.title.toLowerCase()} <ArrowRight className="h-4 w-4" aria-hidden />
+                  </Link>
+                  <Link to={`/contact?service=${encodeURIComponent(svc.title)}`} className="btn btn-ghost btn-sm">
+                    Request this service
+                  </Link>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Process() {
+  const steps = [
+    { i: MessageSquareText, t: 'Reach out', b: 'Call, text or send a request. We confirm a time that works for you.' },
+    { i: Sparkles, t: 'We protect your home', b: 'Drop cloths and containment go down before any work starts.' },
+    { i: Camera, t: 'Clean, inspect, document', b: 'We do the work and photograph anything you should see.' },
+    { i: Hammer, t: 'You decide what is next', b: 'Plain-English findings. Written quotes for repairs, no pressure.' },
+  ];
+  return (
+    <section className="section border-t hairline" aria-labelledby="process-h">
+      <div className="wrap">
+        <SectionHeading id="process-h" title="How a visit works" align="center" />
+        <ol className="relative mt-16 grid gap-10 md:grid-cols-4 md:gap-6">
+          <div aria-hidden className="absolute left-0 right-0 top-7 hidden h-px bg-gradient-to-r from-transparent via-ember/50 to-transparent md:block" />
+          {steps.map((s, i) => (
+            <Reveal as="li" key={s.t} delay={i * 0.08} className="relative text-center">
+              <span className="relative mx-auto grid h-14 w-14 place-items-center rounded-full border border-ember/40 bg-ink text-ember">
+                <s.i className="h-6 w-6" strokeWidth={1.75} aria-hidden />
+              </span>
+              <h3 className="mt-6 text-lg text-bone">{s.t}</h3>
+              <p className="mx-auto mt-2 max-w-[16rem] text-[0.95rem] leading-relaxed text-mute">{s.b}</p>
+            </Reveal>
+          ))}
+        </ol>
+      </div>
+    </section>
+  );
+}
+
+function Areas() {
+  return (
+    <section className="section border-t hairline bg-ink-2" aria-labelledby="areas-h">
+      <div className="wrap">
+        <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-end">
+          <div>
+            <p className="eyebrow">Service areas</p>
+            <h2 id="areas-h" className="display-lg mt-4 text-bone">
+              Four states. One standard.
+            </h2>
+          </div>
+          <p className="lede lg:justify-self-end">Chimneys in coastal Virginia and New England fail in different ways. We know what to look for in each.</p>
+        </div>
+        <ul className="mt-12 grid gap-px overflow-hidden rounded-[20px] border hairline bg-white/[0.07] sm:grid-cols-2 lg:grid-cols-4">
+          {SERVICE_AREAS.map((s) => (
+            <li key={s.slug}>
+              <Link to={`/service-areas/${s.slug}`} className="group flex h-full flex-col justify-between gap-10 bg-ink-2 p-7 transition-colors hover:bg-ink-3">
+                <span className="font-display text-sm text-dim" style={{ fontStretch: '110%' }}>
+                  {s.code}
+                </span>
+                <span>
+                  <span className="block font-display text-[1.7rem] font-bold leading-tight text-bone" style={{ fontStretch: '112%' }}>
+                    {s.name}
+                  </span>
+                  <span className="mt-2 block text-sm text-mute">{s.watchFor[0].title}</span>
+                  <span className="link-arrow mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-ember">
+                    See {s.name} service <ArrowRight className="h-4 w-4" aria-hidden />
+                  </span>
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}
+
+function ReviewsBlock() {
+  if (!REVIEWS.length) return null;
+  return (
+    <section className="section border-t hairline" aria-labelledby="reviews-h">
+      <div className="wrap">
+        <SectionHeading id="reviews-h" title="What homeowners say" />
+        <ul className="mt-12 grid gap-5 md:grid-cols-3">
+          {REVIEWS.slice(0, 3).map((r) => (
+            <li key={r.author + r.date} className="card p-7">
+              <p className="text-lg leading-relaxed text-bone">&ldquo;{r.text}&rdquo;</p>
+              <p className="mt-5 text-sm text-mute">
+                {r.author}
+                {r.city ? `, ${r.city}` : ''} on {r.source}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}
+
+function FaqBlock() {
+  return (
+    <section className="section border-t hairline" aria-labelledby="faq-h">
+      <div className="wrap grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+        <div>
+          <h2 id="faq-h" className="display-lg text-bone">
+            Good questions.
+          </h2>
+          <p className="lede mt-5">Straight answers about scheduling, pricing and what to expect.</p>
+          <Link to="/faq" className="link-arrow mt-7 inline-flex items-center gap-1.5 font-medium text-ember">
+            All FAQs <ArrowRight className="h-4 w-4" aria-hidden />
+          </Link>
+        </div>
+        <Faq items={GENERAL_FAQS.slice(0, 6)} />
+      </div>
+    </section>
+  );
+}
+
+function FinalCta() {
+  return (
+    <section className="relative overflow-hidden border-t hairline" aria-labelledby="final-h">
+      <div aria-hidden className="ember-glow absolute inset-0 opacity-80" />
+      <div className="wrap relative grid gap-12 py-20 lg:grid-cols-[1fr_minmax(0,32rem)] lg:py-28">
+        <div>
+          <h2 id="final-h" className="display-lg text-bone">
+            Ready when you are.
+          </h2>
+          <p className="lede mt-5">Tell us what you need and we will reach out to schedule. Prefer to talk? Call or text {SITE.owner.split(' ')[0]} directly.</p>
+          <div className="mt-9 grid max-w-sm gap-3">
+            <a href={SITE.phoneHref} onClick={() => track('click_to_call', { placement: 'home_final' })} className="card lift flex items-center gap-4 p-5">
+              <span className="grid h-12 w-12 place-items-center rounded-full bg-ember text-[#1a0d05]">
+                <Phone className="h-5 w-5" aria-hidden />
+              </span>
+              <span>
+                <span className="block text-sm text-dim">Call or text</span>
+                <span className="block text-xl font-medium text-bone">{SITE.phoneDisplay}</span>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div className="card p-6 sm:p-8" style={{ background: 'rgb(24 22 20 / 0.94)' }}>
+          <h3 className="text-xl text-bone">Request service</h3>
+          <div className="mt-5">
+            <LeadForm formId="service-request" fields={['name', 'phone', 'email', 'zip', 'service', 'message']} required={['name', 'phone', 'zip']} submitLabel="Send my request" dense />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default function Home() {
+  return (
+    <>
+      <Hero />
+      <FactsMarquee />
+      <ServicesBento />
+      {promoIsLive() && <HolidayFeature />}
+      <DesignerTeaser />
+      <WhyUs />
+      <SymptomFinder />
+      <Process />
+      <Areas />
+      <ReviewsBlock />
+      <FaqBlock />
+      <FinalCta />
+    </>
   );
 }

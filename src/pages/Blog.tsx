@@ -1,76 +1,206 @@
-﻿import { Link } from 'react-router-dom';
-import { Calendar, User } from 'lucide-react';
-import SEO from '@/components/SEO';
-import { IMAGE_ASSETS } from '@/lib/site';
+﻿import { useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { ArrowRight, BookOpen, Clock, ExternalLink, Lightbulb } from 'lucide-react';
+import { Breadcrumbs, CallLink, PageIntro, Reveal } from '@/components/ui';
+import { ARTICLES, articleBySlug, type Article } from '@/data/blog';
+import { serviceById } from '@/data/services';
+import { SOURCES } from '@/data/sources';
+import { HOLIDAY_PROMO, promoIsLive } from '@/lib/promo';
+import { routeFor } from '@/lib/routes';
+import { SITE } from '@/lib/site';
+import NotFound from './NotFound';
 
-export default function Blog() {
-  const posts = [
-    {
-      id: 'how-often-should-you-sweep-your-chimney',
-      title: 'How Often Should You Sweep Your Chimney?',
-      excerpt: 'Understand annual maintenance intervals, warning signs, and when to schedule professional sweeping before risk increases.',
-      date: 'January 12, 2026',
-      author: 'First Chimney Team',
-      category: 'Maintenance',
-      image: IMAGE_ASSETS.chimneySweep1,
-    },
-    {
-      id: 'the-dangers-of-creosote-buildup',
-      title: 'The Hidden Dangers of Creosote Buildup',
-      excerpt: 'Creosote is combustible and often invisible to homeowners. Learn how it forms and how to reduce chimney fire risk.',
-      date: 'January 28, 2026',
-      author: 'First Chimney Team',
-      category: 'Safety',
-      image: IMAGE_ASSETS.inspectionAlt,
-    },
-    {
-      id: 'what-is-a-level-2-chimney-inspection',
-      title: 'What Is a Level 2 Chimney Inspection?',
-      excerpt: 'See why camera-assisted inspections are critical for real estate transactions, appliance changes, and leak investigations.',
-      date: 'February 11, 2026',
-      author: 'First Chimney Team',
-      category: 'Inspections',
-      image: IMAGE_ASSETS.inspection,
-    },
-  ];
+const fmt = (d: string) => new Date(`${d}T12:00:00`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+const CATS = ['All', ...Array.from(new Set(ARTICLES.map((a) => a.category)))];
 
+function Card({ a, i, big = false }: { a: Article; i: number; big?: boolean }) {
   return (
-    <div className="pt-24 md:pt-28 pb-14 md:pb-16">
-      <SEO
-        title="Chimney Safety Blog"
-        description="Read First Chimney blog articles on chimney maintenance, creosote risks, inspections, and homeowner safety tips."
-        path="/blog"
-      />
-
-      <section className="relative py-20 bg-soft-black border-b border-white/5">
-        <div className="container mx-auto px-6 lg:px-12 text-center max-w-4xl">
-          <h1 className="text-5xl md:text-6xl font-display font-bold mb-6 text-white">The First Chimney Blog</h1>
-          <p className="text-xl text-warm-ivory/85 leading-relaxed">Expert guidance to help you keep your chimney system safe, clean, and efficient year-round.</p>
+    <Reveal delay={(i % 3) * 0.05} className={big ? 'md:col-span-2' : ''}>
+      <Link to={`/blog/${a.slug}`} className={`card lift group grid h-full overflow-hidden ${big ? 'md:grid-cols-[1.2fr_1fr]' : ''}`}>
+        <div className={`zoom overflow-hidden ${big ? 'aspect-[16/10] md:aspect-auto' : 'aspect-[16/10]'}`}>
+          <img src={a.image} alt={a.imageAlt} loading="lazy" className="h-full w-full object-cover" />
         </div>
-      </section>
+        <div className="flex flex-col p-6 sm:p-7">
+          <p className="flex items-center gap-3 text-xs text-dim">
+            <span className="rounded-full border border-white/12 px-2.5 py-0.5 text-mute">{a.category}</span>
+            <span className="flex items-center gap-1">
+              <Clock className="h-3.5 w-3.5" aria-hidden /> {a.readMinutes} min
+            </span>
+          </p>
+          <h2 className={`mt-4 text-bone ${big ? 'text-3xl' : 'text-xl'}`}>{a.title}</h2>
+          <p className="mt-3 line-clamp-3 text-mute">{a.description}</p>
+          <span className="link-arrow mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-medium text-ember">
+            Read <ArrowRight className="h-4 w-4" aria-hidden />
+          </span>
+        </div>
+      </Link>
+    </Reveal>
+  );
+}
 
-      <section className="py-24 bg-midnight">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {posts.map((post) => (
-              <Link key={post.id} to={`/blog/${post.id}`} className="bg-soft-black rounded-2xl overflow-hidden border border-white/10 hover:border-copper-ember/35 group flex flex-col h-full">
-                <div className="relative aspect-video overflow-hidden">
-                  <img src={post.image} alt={post.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                  <div className="absolute top-4 left-4 bg-midnight/80 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold tracking-widest text-copper-ember uppercase border border-white/10">{post.category}</div>
-                </div>
-                <div className="p-8 flex flex-col flex-grow">
-                  <h2 className="text-2xl font-display font-bold mb-4 group-hover:text-copper-ember text-white line-clamp-2">{post.title}</h2>
-                  <p className="text-warm-ivory/80 mb-6 line-clamp-3 flex-grow">{post.excerpt}</p>
-                  <div className="flex items-center justify-between text-sm text-warm-ivory/60 border-t border-white/10 pt-6 mt-auto">
-                    <div className="flex items-center gap-2"><Calendar className="w-4 h-4" /><span>{post.date}</span></div>
-                    <div className="flex items-center gap-2"><User className="w-4 h-4" /><span>{post.author}</span></div>
-                  </div>
-                </div>
-              </Link>
+export function BlogIndex() {
+  const r = routeFor('/blog')!;
+  const [cat, setCat] = useState('All');
+  const list = ARTICLES.filter((a) => cat === 'All' || a.category === cat);
+  return (
+    <>
+      <PageIntro crumbs={r.crumbs} title="Chimney care, explained." lede="Practical guides for homeowners. No jargon, no scare tactics, and sources for every safety claim." />
+      <section className="section pt-12">
+        <div className="wrap">
+          <div role="tablist" aria-label="Categories" className="flex flex-wrap gap-2">
+            {CATS.map((c) => (
+              <button key={c} type="button" role="tab" aria-selected={cat === c} onClick={() => setCat(c)} className={`rounded-full border px-4 py-2 text-sm transition-colors ${cat === c ? 'border-ember bg-ember/10 text-bone' : 'border-white/12 text-mute hover:text-bone'}`}>
+                {c}
+              </button>
+            ))}
+          </div>
+          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {list.map((a, i) => (
+              <Card key={a.slug} a={a} i={i} big={i === 0 && cat === 'All'} />
             ))}
           </div>
         </div>
       </section>
-    </div>
+    </>
+  );
+}
+
+function ArticleCta({ kind }: { kind: Article['cta'] }) {
+  const live = promoIsLive();
+  if (kind === 'holiday' && live) {
+    return (
+      <aside className="card my-12 flex flex-wrap items-center justify-between gap-6 border-ember/30 p-7">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-ember">{HOLIDAY_PROMO.eyebrow}</p>
+          <p className="mt-2 text-xl text-bone">{HOLIDAY_PROMO.title}</p>
+        </div>
+        <div className="flex items-center gap-5">
+          <span className="price-199 text-5xl">{HOLIDAY_PROMO.priceLabel}</span>
+          <Link to={HOLIDAY_PROMO.path} className="btn btn-primary">
+            Claim it
+          </Link>
+        </div>
+      </aside>
+    );
+  }
+  return (
+    <aside className="card my-12 flex flex-wrap items-center justify-between gap-6 p-7">
+      <p className="max-w-md text-lg text-bone">{kind === 'repair' ? 'Seeing any of these signs? We will find the source before recommending a fix.' : 'Want a professional look at your chimney?'}</p>
+      <div className="flex flex-wrap gap-3">
+        <Link to="/contact" className="btn btn-primary">
+          Schedule service
+        </Link>
+        <CallLink placement="article_cta" />
+      </div>
+    </aside>
+  );
+}
+
+export function BlogPost() {
+  const { slug = '' } = useParams();
+  const a = articleBySlug(slug);
+  const r = routeFor(`/blog/${slug}`);
+  if (!a || !r) return <NotFound />;
+  const mid = Math.floor(a.body.length / 2);
+  const more = ARTICLES.filter((x) => x.slug !== a.slug).slice(0, 3);
+  return (
+    <>
+      <article>
+        <header className="pb-12 pt-32 md:pt-40">
+          <div className="wrap max-w-4xl">
+            <Breadcrumbs crumbs={r.crumbs} />
+            <p className="mt-8 flex flex-wrap items-center gap-3 text-sm text-dim">
+              <span className="rounded-full border border-white/12 px-3 py-0.5 text-mute">{a.category}</span>
+              <span>
+                By {SITE.name}. Updated <time dateTime={a.dateModified}>{fmt(a.dateModified)}</time>
+              </span>
+              <span className="flex items-center gap-1">
+                <Clock className="h-3.5 w-3.5" aria-hidden /> {a.readMinutes} min read
+              </span>
+            </p>
+            <h1 className="display-lg mt-5 text-bone">{a.title}</h1>
+            <p className="lede mt-5">{a.description}</p>
+          </div>
+          <div className="wrap mt-12 max-w-5xl">
+            <div className="media aspect-[2/1]">
+              <img src={a.image} alt={a.imageAlt} fetchPriority="high" />
+            </div>
+          </div>
+        </header>
+        <div className="wrap max-w-3xl pb-16">
+          <section className="card p-6 sm:p-7" aria-labelledby="takeaways">
+            <h2 id="takeaways" className="flex items-center gap-2 text-lg text-bone">
+              <Lightbulb className="h-5 w-5 text-ember" strokeWidth={1.75} aria-hidden /> Key takeaways
+            </h2>
+            <ul className="mt-4 grid gap-2.5 text-mute">
+              {a.takeaways.map((t) => (
+                <li key={t} className="flex gap-3">
+                  <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ember" aria-hidden /> {t}
+                </li>
+              ))}
+            </ul>
+          </section>
+          <div className="mt-10 text-[1.08rem] leading-[1.8] text-bone/85">
+            {a.body.map((b, i) => (
+              <div key={i}>
+                {i === mid && <ArticleCta kind={a.cta} />}
+                {b.type === 'h2' && <h2 className="mb-4 mt-12 text-[1.65rem] text-bone">{b.text}</h2>}
+                {b.type === 'p' && <p className="mt-5">{b.text}</p>}
+                {b.type === 'list' && (
+                  <ul className="mt-5 grid gap-2.5">
+                    {b.items.map((x) => (
+                      <li key={x} className="flex gap-3">
+                        <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-ember" aria-hidden /> {x}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {b.type === 'callout' && (
+                  <aside className="mt-8 rounded-[20px] border-l-4 border-ember bg-ink-2 p-6">
+                    <p className="font-medium text-bone">{b.title}</p>
+                    <p className="mt-2 text-mute">{b.text}</p>
+                  </aside>
+                )}
+              </div>
+            ))}
+          </div>
+          <section className="mt-14 border-t hairline pt-8" aria-labelledby="sources">
+            <h2 id="sources" className="flex items-center gap-2 text-base text-bone" style={{ fontFamily: 'var(--font-sans)', fontStretch: '100%', letterSpacing: 0 }}>
+              <BookOpen className="h-4 w-4 text-ember" aria-hidden /> Sources
+            </h2>
+            <ul className="mt-4 grid gap-2 text-sm">
+              {a.sources.map((id) => (
+                <li key={id}>
+                  <a href={SOURCES[id].url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 text-mute hover:text-bone">
+                    {SOURCES[id].publisher}: {SOURCES[id].label} <ExternalLink className="h-3.5 w-3.5" aria-hidden />
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6 text-sm text-dim">
+              Related services:{' '}
+              {a.relatedServices.map((id, i) => (
+                <span key={id}>
+                  {i > 0 && ', '}
+                  <Link to={`/services/${id}`} className="text-ember hover:underline">
+                    {serviceById(id)?.title}
+                  </Link>
+                </span>
+              ))}
+            </p>
+          </section>
+        </div>
+      </article>
+      <section className="section border-t hairline bg-ink-2">
+        <div className="wrap">
+          <h2 className="display-md text-bone">Keep reading</h2>
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
+            {more.map((x, i) => (
+              <Card key={x.slug} a={x} i={i} />
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

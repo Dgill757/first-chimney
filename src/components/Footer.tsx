@@ -1,54 +1,60 @@
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Globe } from 'lucide-react';
-import { SITE, SERVICES } from '@/lib/site';
-
-const quickLinks = [
-  { label: 'Home', path: '/' },
-  { label: 'About', path: '/about' },
-  { label: 'Services', path: '/services' },
-  { label: 'Service Areas', path: '/service-areas' },
-  { label: 'Gallery', path: '/gallery' },
-  { label: 'Reviews', path: '/reviews' },
-  { label: 'Financing', path: '/financing' },
-  { label: 'FAQ', path: '/faq' },
-  { label: 'Blog', path: '/blog' },
-  { label: 'Contact', path: '/contact' },
-];
+import { ArrowUpRight, BadgeCheck, Mail, MapPin, Phone } from 'lucide-react';
+import { SERVICES } from '@/data/services';
+import { SERVICE_AREAS } from '@/data/serviceAreas';
+import { HOLIDAY_PROMO, promoIsLive } from '@/lib/promo';
+import { CREDENTIALS, SITE, STATE_LIST_TEXT } from '@/lib/site';
+import { track } from '@/lib/track';
 
 export default function Footer() {
+  const live = promoIsLive();
+  const socials = Object.entries(SITE.social).filter(([, url]) => Boolean(url));
   return (
-    <footer className="bg-soft-black border-t border-white/5 pt-20 pb-10">
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          <div className="space-y-6">
-            <Link to="/" className="inline-flex items-center">
-              <img src={SITE.logo} alt="First Chimney logo" className="h-12 md:h-14 w-[180px] md:w-[220px] object-contain object-left drop-shadow-[0_0_8px_rgba(255,120,40,0.25)]" />
+    <footer className="relative border-t hairline bg-ink-2 pb-28 pt-20 lg:pb-12">
+      <div className="wrap">
+        <div className="grid gap-14 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
+          <div>
+            <Link to="/" aria-label={`${SITE.name} home`}>
+              <img src={SITE.logo} alt={`${SITE.name} logo`} width={200} height={115} loading="lazy" className="h-16 w-auto" />
             </Link>
-            <p className="text-warm-ivory/80 text-sm leading-relaxed max-w-xs">
-              Premium chimney inspection, sweeping, repair, masonry, leak repair, and fireplace service across the Mid-Atlantic.
+            <p className="mt-6 max-w-sm text-mute">
+              Chimney inspection, cleaning and repair for homeowners in {STATE_LIST_TEXT}. Owned and run by {SITE.owner}.
             </p>
-            <a
-              href={SITE.domain}
-              className="inline-flex items-center gap-2 text-warm-ivory/80 hover:text-copper-ember text-sm transition-colors"
-            >
-              <Globe className="w-4 h-4" />
-              {SITE.displayDomain}
-            </a>
-            <div className="flex items-center gap-4">
-              <a href={SITE.social.facebook} target="_blank" rel="noreferrer" aria-label="First Chimney Facebook" className="w-10 h-10 rounded-full bg-midnight border border-white/10 flex items-center justify-center text-warm-ivory/70 hover:text-copper-ember hover:border-copper-ember/50 transition-all"><Facebook className="w-4 h-4" /></a>
-              <a href={SITE.social.instagram} target="_blank" rel="noreferrer" aria-label="First Chimney Instagram" className="w-10 h-10 rounded-full bg-midnight border border-white/10 flex items-center justify-center text-warm-ivory/70 hover:text-copper-ember hover:border-copper-ember/50 transition-all"><Instagram className="w-4 h-4" /></a>
-              <a href={SITE.social.linkedin} target="_blank" rel="noreferrer" aria-label="First Chimney LinkedIn" className="w-10 h-10 rounded-full bg-midnight border border-white/10 flex items-center justify-center text-warm-ivory/70 hover:text-copper-ember hover:border-copper-ember/50 transition-all"><Linkedin className="w-4 h-4" /></a>
+            <p className="mt-5 inline-flex items-center gap-2 rounded-full border border-white/10 px-3 py-1.5 text-sm text-bone">
+              <BadgeCheck className="h-4 w-4 text-ember" strokeWidth={1.75} aria-hidden />
+              {CREDENTIALS.fire.label}
+            </p>
+            <div className="mt-8 grid gap-3 text-[0.95rem]">
+              <a href={SITE.phoneHref} onClick={() => track('click_to_call', { placement: 'footer' })} className="flex items-center gap-3 text-bone hover:text-ember">
+                <Phone className="h-4 w-4 text-ember" strokeWidth={1.75} aria-hidden /> {SITE.phoneDisplay}
+              </a>
+              <a href={`mailto:${SITE.email}`} className="flex items-center gap-3 text-bone hover:text-ember">
+                <Mail className="h-4 w-4 text-ember" strokeWidth={1.75} aria-hidden /> {SITE.email}
+              </a>
+              <span className="flex items-center gap-3 text-mute">
+                <MapPin className="h-4 w-4 text-ember" strokeWidth={1.75} aria-hidden /> Serving VA, NJ, CT and MA
+              </span>
             </div>
+            {socials.length > 0 && (
+              <div className="mt-6 flex gap-4 text-sm">
+                {socials.map(([name, url]) => (
+                  <a key={name} href={url} target="_blank" rel="noreferrer" className="capitalize text-mute hover:text-bone">
+                    {name}
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
 
           <div>
-            <h4 className="font-display font-semibold text-white mb-6">Quick Links</h4>
-            <ul className="space-y-4">
-              {quickLinks.map((link) => (
-                <li key={link.label}>
-                  <Link to={link.path} className="text-warm-ivory/75 hover:text-copper-ember text-sm transition-colors flex items-center gap-2">
-                    <span className="w-1 h-1 rounded-full bg-copper-ember/60"></span>
-                    {link.label}
+            <h2 className="text-sm font-semibold uppercase tracking-[0.14em] text-dim" style={{ fontFamily: 'var(--font-sans)', fontStretch: '100%' }}>
+              Services
+            </h2>
+            <ul className="mt-5 grid gap-2.5">
+              {SERVICES.map((s) => (
+                <li key={s.id}>
+                  <Link to={`/services/${s.id}`} className="text-[0.95rem] text-mute transition-colors hover:text-bone">
+                    {s.title}
                   </Link>
                 </li>
               ))}
@@ -56,16 +62,24 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-display font-semibold text-white mb-6">Core Services</h4>
-            <ul className="space-y-4">
-              {SERVICES.map((service) => (
-                <li key={service.id}>
-                  <Link
-                    to={`/services/${service.id}`}
-                    className="text-warm-ivory/75 hover:text-copper-ember text-sm transition-colors flex items-center gap-2"
-                  >
-                    <span className="w-1 h-1 rounded-full bg-copper-ember/60"></span>
-                    {service.title}
+            <h2 className="text-sm font-semibold uppercase tracking-[0.14em] text-dim" style={{ fontFamily: 'var(--font-sans)', fontStretch: '100%' }}>
+              Explore
+            </h2>
+            <ul className="mt-5 grid gap-2.5">
+              {[
+                ...(live ? [{ label: `Holiday ${HOLIDAY_PROMO.priceLabel} special`, to: HOLIDAY_PROMO.path }] : []),
+                { label: 'Design your fireplace', to: '/design-your-fireplace' },
+                { label: 'Fireplace shop', to: '/fireplace-shop' },
+                { label: 'Our work', to: '/gallery' },
+                { label: 'Reviews', to: '/reviews' },
+                { label: 'Resource center', to: '/blog' },
+                { label: 'FAQ', to: '/faq' },
+                { label: 'About', to: '/about' },
+                { label: 'Contact', to: '/contact' },
+              ].map((l) => (
+                <li key={l.to}>
+                  <Link to={l.to} className="text-[0.95rem] text-mute transition-colors hover:text-bone">
+                    {l.label}
                   </Link>
                 </li>
               ))}
@@ -73,45 +87,38 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-display font-semibold text-white mb-6">Contact</h4>
-            <ul className="space-y-6">
-              <li className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-midnight border border-white/10 flex items-center justify-center shrink-0">
-                  <Phone className="w-4 h-4 text-copper-ember" />
-                </div>
-                <div>
-                  <p className="text-xs text-warm-ivory/50 uppercase tracking-wider mb-1">Call</p>
-                  <a href={SITE.phoneHref} className="text-white font-medium hover:text-copper-ember transition-colors">{SITE.phoneDisplay}</a>
-                </div>
-              </li>
-              <li className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-midnight border border-white/10 flex items-center justify-center shrink-0">
-                  <Mail className="w-4 h-4 text-copper-ember" />
-                </div>
-                <div>
-                  <p className="text-xs text-warm-ivory/50 uppercase tracking-wider mb-1">Email</p>
-                  <a href={`mailto:${SITE.email}`} className="text-white font-medium hover:text-copper-ember transition-colors">{SITE.email}</a>
-                </div>
-              </li>
-              <li className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-midnight border border-white/10 flex items-center justify-center shrink-0">
-                  <MapPin className="w-4 h-4 text-copper-ember" />
-                </div>
-                <div>
-                  <p className="text-xs text-warm-ivory/50 uppercase tracking-wider mb-1">Coverage</p>
-                  <p className="text-white font-medium text-sm leading-relaxed">Serving {SITE.serviceRegions}</p>
-                </div>
-              </li>
+            <h2 className="text-sm font-semibold uppercase tracking-[0.14em] text-dim" style={{ fontFamily: 'var(--font-sans)', fontStretch: '100%' }}>
+              Service areas
+            </h2>
+            <ul className="mt-5 grid gap-2.5">
+              {SERVICE_AREAS.map((s) => (
+                <li key={s.slug}>
+                  <Link to={`/service-areas/${s.slug}`} className="text-[0.95rem] text-mute transition-colors hover:text-bone">
+                    {s.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
+            <Link to="/contact" className="link-arrow mt-8 inline-flex items-center gap-1.5 text-sm font-medium text-ember">
+              Check your address <ArrowUpRight className="h-4 w-4" aria-hidden />
+            </Link>
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-warm-ivory/50 text-xs">&copy; {new Date().getFullYear()} First Chimney. All rights reserved.</p>
-          <div className="flex items-center gap-6 text-xs text-warm-ivory/50">
-            <Link to="/contact" className="hover:text-white transition-colors">Request Service</Link>
-            <Link to="/faq" className="hover:text-white transition-colors">FAQs</Link>
-            <Link to="/service-areas" className="hover:text-white transition-colors">Service Areas</Link>
+        <div className="mt-16 flex flex-col gap-4 border-t hairline pt-8 text-sm text-dim md:flex-row md:items-center md:justify-between">
+          <p>
+            &copy; {new Date().getFullYear()} {SITE.name}. All rights reserved.
+          </p>
+          <div className="flex flex-wrap gap-6">
+            <Link to="/privacy-policy" className="hover:text-bone">
+              Privacy &amp; SMS terms
+            </Link>
+            <Link to="/service-areas" className="hover:text-bone">
+              Service areas
+            </Link>
+            <a href="/sitemap.xml" className="hover:text-bone">
+              Sitemap
+            </a>
           </div>
         </div>
       </div>
