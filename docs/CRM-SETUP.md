@@ -4,6 +4,16 @@ Andrew's CRM is the GoHighLevel sub-account provided by Summit Marketing Group. 
 
 > Use **Andrew's** sub-account credentials. Do not use Summit Voice AI's own location or token.
 
+## 0. Status (2026-11-15)
+
+- Sub-account **First Chimney Contracting** created under Summit Marketing Group (location `agCfqvrQiesd0B3Fjb7n`).
+- Private integration "Website + Setup" created. Its token is stored only in `~/.first-chimney-ghl.env` on Dan's PC and must be added to Vercel (below). It is not in this repo.
+- Pipelines (Jobs, Fireplace Projects, Partners, Recruiting), 39 custom fields, 20 custom values and 38 tags created by `node crm/setup.mjs`.
+- Workflows 01–05 built and published. 06–21 are paste-ready prompts in `crm/WORKFLOWS.md`.
+- The website maps every form to custom fields by field key and routes opportunities by pipeline name, so nothing else needs configuring. Live-tested with a job application (contact, fields, resume upload, Recruiting opportunity all correct).
+
+**To turn on lead capture:** Vercel → project `first-chimney` → Settings → Environment Variables → add `GHL_PRIVATE_TOKEN` (Sensitive, Production + Preview, value from `~/.first-chimney-ghl.env`) and `GHL_LOCATION_ID` = `agCfqvrQiesd0B3Fjb7n` → Redeploy. Then submit each form once and watch it arrive.
+
 ## 1. Connect (pick A, or do both)
 
 ### A. Inbound webhook (fastest, about 5 minutes)

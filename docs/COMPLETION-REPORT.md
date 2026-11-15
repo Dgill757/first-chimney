@@ -159,3 +159,24 @@ Built so a solo owner gets found, converts more visitors, keeps customers for ye
 | Referral thank-you (for example a gift card) | `REFERRAL_REWARD` in `src/data/growth.ts` |
 | Positions and requirements on the careers page | `POSITIONS` in `src/data/growth.ts` |
 | Whether to offer free second opinions (promised on the choose page) | `src/pages/Growth.tsx` → `ChooseCompany` |
+
+## 14. CRM, careers, referrals and the owner's manual (round 7)
+
+**GoHighLevel sub-account built** (First Chimney Contracting, `agCfqvrQiesd0B3Fjb7n`):
+- 4 pipelines: Jobs (9 stages), Fireplace Projects, Partners, Recruiting.
+- 39 custom fields (contact + opportunity), 20 custom values (links, offers, phone), 38 tags.
+- Workflows published: 01 New Lead (instant reply, owner alert, 10-minute nag), 02 Stage Tags, 03 Holiday $199 follow-up, 04 Health Check router, 05 Appointment confirm + reminders.
+- Workflows 06–21 (estimates, reviews, yearly reminder loop, testimonials, referrals, partner nurture, applicants, missed-call text-back, fireplace projects, door-knock follow-up, four seasonal campaigns, do-not-contact, referral reward) are written as paste-ready AI-builder prompts in `crm/WORKFLOWS.md`. Chrome on Dan's PC stopped loading GHL mid-build, so these remain.
+- `crm/setup.mjs` re-creates the whole data model in any sub-account (idempotent). `crm/smoke-test.ts` tests the live pipeline.
+
+**Website ↔ CRM mapping:** `/api/lead` fills custom fields by key, routes each form to its pipeline by name, and uploads resumes to the GHL media library. Live smoke test passed.
+
+**Careers:** 10 roles (technician, lead tech, helper, mason, masonry laborer, hearth installer, inspection/sales rep, canvasser, office manager, content creator) with responsibilities, requirements, nice-to-haves, JobPosting schema and resume upload.
+
+**Referral program:** Give $25, get $25 with code NEIGHBOR25 (not combinable; credit after the friend's first completed job).
+
+**Owner's Operating Manual:** `marketing/owners-manual/First-Chimney-Owners-Operating-Manual.pdf` (25 pages, branded). Standard, business at a glance, daily/weekly rhythm, CRM flow, sales scripts and objections, on-site inspection guide, partner scripts (realtor, inspector, contractor), canvassing guide, pre-snow marketing materials, content plan, Google Business Profile and review rules, networking (NCSG Convention Apr 6–10 2027 Hershey PA, HPBExpo Mar 3–6 2027 Nashville, MACA, NFI, CoaVAR affiliate, Mid-Atlantic Home Show Jan 16–17 2027, Hampton Roads Home Show Feb 27–28 2027), hiring and training, pricing worksheet, yearly calendar, templates, 30-day launch plan. Source: `manual.html` (re-render with headless Chrome).
+
+### Placeholders to correct in GHL
+- Business address entered as "Virginia Beach, VA 23451" (required field). Replace with Andrew's real business address before sending marketing email (CAN-SPAM requires a valid postal address in email footers).
+- Account email is info@firstchimneycontracting.com. Confirm the inbox exists, or change it.
