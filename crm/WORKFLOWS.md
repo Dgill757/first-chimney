@@ -1,9 +1,9 @@
-# First Chimney: GHL workflows (build list + AI-builder prompts)
+# First Chimney: GHL workflows (all 31 published) and their source prompts
 
 Sub-account: **First Chimney Contracting** (location `agCfqvrQiesd0B3Fjb7n`).
 Pipelines, custom fields, custom values and tags are created by `node crm/setup.mjs` (already run).
 
-## How to build one (about 1 minute each)
+## How to rebuild or add one (about 1 minute each)
 
 1. GHL → First Chimney sub-account → **Automation → Workflows → Build using AI**.
 2. Paste the prompt below and send. If the builder asks a question, pick the option noted.
@@ -11,16 +11,49 @@ Pipelines, custom fields, custom values and tags are created by `node crm/setup.
    Contact-tag workflows can only check **contact** fields and tags, not opportunity stages.
 4. Toggle **Publish**.
 
-## Status
+## Status: 31 workflows, all published (2026-11-15)
 
-| # | Workflow | Status |
-| --- | --- | --- |
-| 01 | New Lead: Instant Reply + Owner Alert | Built and published |
-| 02 | Jobs Pipeline: Stage Tags | Built and published |
-| 03 | Holiday $199 Follow-Up | Built and published |
-| 04 | Health Check Router | Built and published |
-| 05 | Appointment Confirm + Reminders | Built and published |
-| 06–21 | Below | Paste prompts |
+Every workflow below is **published** and has **Allow re-entry ON**, so repeat customers flow through again. All internal alerts go to Andrew by SMS (+1 757-589-0783) and to Dan by email. Customer texts only send once a phone number and A2P registration are live; emails send now.
+
+| # | Workflow | Trigger | What it does |
+| --- | --- | --- | --- |
+| 01 | New Lead: Instant Reply + Owner Alert | Tag `Website Lead` | Jobs opportunity, owner SMS + email, instant SMS + email to lead, 10-minute "still not called" nag |
+| 02 | Jobs Pipeline: Stage Tags | Jobs stage changed | Keeps `Contacted`, `Scheduled`, `Job Complete`, `Past Customer`, `Annual Reminder`, `Estimate - No Decision` in sync |
+| 03 | Holiday $199 Follow-Up | Tag `Holiday Special - $199` | Day 1 SMS, day 3 email, day 7 SMS; skips anyone `Scheduled`; stops on reply |
+| 04 | Health Check Router | Tag `Chimney Health Check` | Urgent → owner alert + "don't use the fireplace" text; Good → yearly list; Soon → guidance email |
+| 05 | Appointment Confirm + Reminders | Appointment confirmed | Confirmation SMS + email with prep tips, 24 h and 2 h reminders |
+| 06 | Estimate Follow-Up | Jobs → Estimate Sent | Day 2, 5, 10 follow-ups; Lost + `Estimate - No Decision` at day 30 |
+| 07 | Job Complete: Review Request | Jobs → Job Complete | Past Customer + yearly list, review SMS at 2 h, email at day 3, → Review Requested |
+| 08 | Annual Reminder: Yearly Rebook | Tag `Annual Reminder` | Welcome email, then every ~365 days an SMS (with consent) or email and a follow-up; loops forever |
+| 09 | Testimonial Received | Tag `Testimonial` | Alerts with the text and publish permission; thanks the customer, invites a Google review |
+| 10 | Referral Received | Tag `Referral` | Owner alert with the friend's details, thanks the referrer ($25/$25), reminder next day |
+| 11 | Referral Partner Nurture | Tag `Referral Partner` | Partners opportunity, intro email with guide + 10% rate, call reminder, 3 monthly value emails |
+| 12 | Job Applicant | Tag `Job Applicant` | Alert with position, experience and resume link; applicant auto-reply; 3-day review reminder |
+| 13 | Missed Call Text Back | Inbound call no-answer / busy / voicemail | Instant text-back, owner alert, 2-hour callback nag |
+| 14 | Fireplace Project Lead | Tags `Fireplace Design Request` / `Product Quote Request` | Alert with design/products, email, day 2 SMS, day 7 and 21 emails |
+| 15 | Door Knock Follow-Up | Tag `Door Knock` | 1-hour health check text, day 3 nudge, day 10 email + yearly list |
+| 16 | Campaign: Fall Rush | Tag `Campaign: Fall Rush` | DNC check, SMS or email by consent, follow-up, removes tag |
+| 17 | Campaign: Spring Masonry | Tag `Campaign: Spring Masonry` | Same pattern, leaks and masonry |
+| 18 | Campaign: Pre-Snow | Tag `Campaign: Pre-Snow` | Same pattern, $199 before the first snow |
+| 19 | Campaign: Database Reactivation | Tag `Campaign: Reactivation` | "Still interested?" email, SMS by consent, close-the-loop email |
+| 20 | Do Not Contact | Tag `Do Not Contact` | DND on all channels, removes from all workflows, marks opportunity lost, alert |
+| 21 | Referral Reward Owed | Tag `Referral Reward Owed` | Owner alert to apply the $25 credit, SMS + email to the referrer, `VIP / Repeat` |
+| 22 | Appointment No-Show Recovery | Appointment no-show | `No Show`, owner alert, rebook SMS, email day 1, last SMS day 4 |
+| 23 | Appointment Cancelled: Rebook | Appointment cancelled | Rebook SMS, email day 2, yearly list at day 16 if not rebooked |
+| 24 | Customer Replied: Owner Alert | Any customer reply | SMS + email to the owner with the message (applicants go to email only) |
+| 25 | Stale Lead Alert | Jobs opportunity idle 2 days in New Lead / Contacted / Inspected | Owner SMS + email |
+| 26 | Inspection Done: Estimate Coming | Jobs → Inspected / Cleaned | Thank-you SMS, yearly list, next-day reminder to send the estimate |
+| 27 | Job Approved: Confirmation | Jobs → Approved | Owner alert (materials, deposit), customer SMS + "what happens next" email |
+| 28 | Post-Job Check-In + Referral Ask | Jobs → Job Complete | Day 7 check-in SMS, day 14 referral email, day 44 fireplace tips |
+| 29 | Campaign: Holiday $199 Blast | Tag `Campaign: Holiday 199` | DNC check, offer by consent, 2 follow-ups, removes tag |
+| 30 | Lost Lead Long-Term Nurture | Tag `Estimate - No Decision` | Day 30 and 90 emails, then hands off to Reactivation at day 180 |
+| 31 | Review Left: Thank You | Tag `Review Left` | Thank-you SMS, `VIP / Repeat`, alert to reply on Google |
+
+**Calendar:** "Chimney Service" (90-minute visits, Mon–Fri 8–5, Sat 9–1, placeholder hours) with booking page https://api.leadconnectorhq.com/widget/booking/95Ph3MxzG1csiA2CyruI, saved as the custom value **Booking Link**.
+
+**Returning contacts:** the website API removes and re-adds trigger tags for existing contacts, so every repeat inquiry fires the automations again.
+
+**Live test (2026-11-15):** a holiday form submission on the live site created the contact with the right tags, one Jobs/New Lead opportunity, and workflow 01 fired its steps. The customer SMS shows "failed" only because no phone number is connected yet.
 
 **Before any text goes out:** buy or port a phone number in the sub-account and finish A2P 10DLC registration. Until then SMS steps are skipped and emails still send. Internal SMS alerts go to Andrew at +1 757-589-0783 and internal emails to dangill@summitmarketinggroup.co (change in each workflow once Andrew has a CRM login).
 
