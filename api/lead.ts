@@ -220,6 +220,20 @@ const FORM_LABEL: Record<FormId, string> = {
 const SALES_FORMS: ReadonlySet<FormId> = new Set<FormId>(['holiday-199', 'contact', 'service-request', 'fireplace-designer', 'shop-quote', 'promo-save', 'safety-check', 'referral']);
 export const isSalesLead = (formId: FormId) => SALES_FORMS.has(formId);
 
+/** Tags that start GHL workflows. Re-applied for returning contacts so automations fire again. */
+export const TRIGGER_TAGS: ReadonlySet<string> = new Set([
+  'Website Lead',
+  HOLIDAY_TAG,
+  'Chimney Health Check',
+  'Fireplace Design Request',
+  'Product Quote Request',
+  'Testimonial',
+  'Referral',
+  'Referral Partner',
+  'Job Applicant',
+  'Annual Reminder',
+]);
+
 /** Reads a "Key: value" line the site writes into `details`. */
 export function detail(lead: Pick<Lead, 'details'>, key: string): string {
   const m = lead.details.match(new RegExp(`^${key}: (.+)$`, 'm'));
@@ -481,11 +495,28 @@ export async function deliver(lead: Lead, ref: string, env: Env, doFetch: Fetch 
           };
           Object.keys(contact).forEach((k) => contact[k] === undefined && delete contact[k]);
           const res = await withRetry(doFetch, `${GHL_BASE}/contacts/upsert`, { method: 'POST', headers, body: JSON.stringify(contact) });
-          const data = (await res.json().catch(() => ({}))) as { contact?: { id?: string }; id?: string };
+          const data = (await res.json().catch(() => ({}))) as { contact?: { id?: string }; id?: string; new?: boolean };
           const contactId = data.contact?.id ?? data.id;
           out.api = true;
           out.contactId = contactId;
           if (!contactId) return;
+          // GHL only fires "tag added" for tags the contact does not already have. A returning
+          // contact (new === false) would silently skip every automation, so remove the tags that
+          // trigger workflows and add them back.
+          if (data.new === false) {
+            const current = buildTags(lead);
+            if (lead.formId === 'safety-check') {
+              const stale = ['Health Check: Urgent', 'Health Check: Soon', 'Health Check: Good'].filter((t) => !current.includes(t));
+              await withRetry(doFetch, `${GHL_BASE}/contacts/${contactId}/tags`, { method: 'DELETE', headers, body: JSON.stringify({ tags: stale }) }).catch(() => undefined);
+            }
+            const triggers = current.filter((t) => TRIGGER_TAGS.has(t));
+            if (triggers.length) {
+              await withRetry(doFetch, `${GHL_BASE}/contacts/${contactId}/tags`, { method: 'DELETE', headers, body: JSON.stringify({ tags: triggers }) }).catch(() => undefined);
+              await withRetry(doFetch, `${GHL_BASE}/contacts/${contactId}/tags`, { method: 'POST', headers, body: JSON.stringify({ tags: triggers }) }).catch((e) =>
+                console.error(`[lead ${ref}] re-tag failed: ${String(e).slice(0, 120)}`),
+              );
+            }
+          }
           // The contact is already saved; a failed note or opportunity must not fail the lead.
           await withRetry(doFetch, `${GHL_BASE}/contacts/${contactId}/notes`, {
             method: 'POST',

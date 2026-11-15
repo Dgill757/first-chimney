@@ -253,3 +253,22 @@ test('forms route to the right pipeline by name', () => {
   assert.equal(pipelineFor('job-application')?.pipeline, 'Recruiting');
   assert.equal(pipelineFor('reminder'), null);
 });
+
+test('returning contacts get their trigger tags re-applied so workflows fire again', async () => {
+  const v = validateLead({ ...base, formId: 'safety-check', promo: '', details: 'Result: Urgent' });
+  assert.ok(v.ok);
+  if (!v.ok) return;
+  const calls: { method: string; url: string; body: any }[] = [];
+  const fake = (async (url: string, init: RequestInit = {}) => {
+    calls.push({ method: String(init.method ?? 'GET'), url, body: init.body ? JSON.parse(String(init.body)) : null });
+    if (url.endsWith('/contacts/upsert')) return new Response(JSON.stringify({ new: false, contact: { id: 'c_old' } }), { status: 200 });
+    return new Response('{}', { status: 200 });
+  }) as typeof fetch;
+  await deliver(v.lead, 'FC-RT', { GHL_PRIVATE_TOKEN: 'pit-test', GHL_LOCATION_ID: 'loc_1' }, fake);
+  const tagCalls = calls.filter((c) => c.url.endsWith('/contacts/c_old/tags'));
+  const removed = tagCalls.filter((c) => c.method === 'DELETE').flatMap((c) => c.body.tags);
+  const added = tagCalls.filter((c) => c.method === 'POST').flatMap((c) => c.body.tags);
+  assert.ok(removed.includes('Health Check: Good') && removed.includes('Health Check: Soon'));
+  assert.ok(!removed.includes('Health Check: Urgent') || added.includes('Website Lead'));
+  assert.ok(added.includes('Website Lead') && added.includes('Chimney Health Check'));
+});
