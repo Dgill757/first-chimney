@@ -180,3 +180,23 @@ Built so a solo owner gets found, converts more visitors, keeps customers for ye
 ### Placeholders to correct in GHL
 - Business address entered as "Virginia Beach, VA 23451" (required field). Replace with Andrew's real business address before sending marketing email (CAN-SPAM requires a valid postal address in email footers).
 - Account email is info@firstchimneycontracting.com. Confirm the inbox exists, or change it.
+
+## 15. Navigation, partners, guides, news and manuals (round 8)
+
+**Navigation:** every page is reachable from the header. Desktop: Services, Build Your Fireplace, Shop, **Areas** (4 states), **Resources** (health check, guides, news, choose a company, buying/selling, FAQ, all resources), **Partners** (5 industries + program), **About** (Meet Andrew, Reviews, Our Work, Refer a Friend, Careers, Contact). The mobile menu has the same six groups. No header overflow at 1024, 1280 or 1440 px (the phone becomes an icon and the CTA shortens below 1536 px).
+
+**Partner program:** `/partners` hub plus `/partners/realtors`, `/home-inspectors`, `/contractors`, `/property-managers` and `/insurance`. Each page covers the industry's pain points, the benefits of working with Andrew, the **10% partner rate** (inspections and cleanings for their clients, listings, tenants and own home), priority scheduling, FAQs, a "Book a 10-minute call" form and a free guide (form-gated, with a direct-download fallback). Partner leads land in the Partners pipeline with the role set.
+
+**Partner guides (public/guides/, 8 pages each, under 1 MB):** the Realtor's Guide to a Safe, Inspected Chimney, the Home Inspector's Guide to Chimney Referrals, the Contractor's Chimney Field Guide, the Property Manager's Chimney Compliance Guide and the Insurance Professional's Chimney Risk Guide. Contents: USFA fire statistics, NFPA 211 inspection levels, IRC chapter 10 rules (3-2-10 termination, clearances, hearth extensions, liners), common problems with Andrew's real photos, national cost ranges (HomeGuide 2026, cited), an industry checklist chapter, red flags, the partner offer and sources. Rebuild with `npx tsx scripts/build-guides.ts`.
+
+**News:** `/news` lists 18 real chimney-fire reports from local outlets (MA, NJ, CT, NY, WI, IL, FL, NH, ID). Each has our own summary, the lesson, tags, filters and a link to the original story, alongside USFA statistics. Add new items to `src/data/news.ts` (sorted automatically, newest first).
+
+**Resources hub:** `/resources` brings together tools, guides, partner downloads and news.
+
+**Owner's Operating Manual (31 pages):** Part 2 added: licensing by state (VA DPOR; NJ, CT and MA home improvement registration), insurance and admin, growth stages with triggers and a first-year timeline, the hiring stages, interview questions by role, a scorecard and reference script, pay and commission structures with guardrails, and who does what as the company grows.
+
+**Team Handbook (13 pages, new):** welcome page, first-week plan and safety rules with a signature line, plus the standard, sales, inspection, partner, canvassing, reviews and template chapters. Built from the manual so the two never drift apart (`marketing/owners-manual/render.sh`).
+
+**Short links:** /inspectors, /contractors, /landlords, /insurance and /guides added; /realtors now points to the realtor partner page.
+
+Remaining setup steps are in `docs/NEXT-STEPS.md`.

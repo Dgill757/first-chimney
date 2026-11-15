@@ -24,7 +24,12 @@
     { "source": "/chimney-safety-check", "destination": "/chimney-health-check", "permanent": true },
     { "source": "/refer", "destination": "/refer-a-friend", "permanent": false },
     { "source": "/jobs", "destination": "/careers", "permanent": false },
-    { "source": "/realtors", "destination": "/real-estate-chimney-inspections", "permanent": false },
+    { "source": "/realtors", "destination": "/partners/realtors", "permanent": false },
+    { "source": "/inspectors", "destination": "/partners/home-inspectors", "permanent": false },
+    { "source": "/contractors", "destination": "/partners/contractors", "permanent": false },
+    { "source": "/landlords", "destination": "/partners/property-managers", "permanent": false },
+    { "source": "/insurance", "destination": "/partners/insurance", "permanent": false },
+    { "source": "/guides", "destination": "/resources", "permanent": false },
     { "source": "/review", "destination": "/reviews#share", "permanent": false },
     { "source": "/remind", "destination": "/blog#reminder", "permanent": false }
   ],

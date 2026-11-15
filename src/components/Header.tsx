@@ -1,7 +1,9 @@
-import { Fragment, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion, useMotionValueEvent, useReducedMotion, useScroll } from 'motion/react';
 import { ArrowRight, ChevronDown, Flame, Menu, Phone, X } from 'lucide-react';
+import { PARTNER_INDUSTRIES, PARTNER_PROGRAM } from '@/data/partners';
+import { SERVICE_AREAS, publishedCities } from '@/data/serviceAreas';
 import { SERVICES } from '@/data/services';
 import { HOLIDAY_PROMO, promoIsLive } from '@/lib/promo';
 import { SITE } from '@/lib/site';
@@ -23,21 +25,39 @@ const FIREPLACE_GROUP: Group = {
     { label: 'Fireplace Repair', to: '/services/fireplace-repair', note: 'Smoke, damper and firebox problems.' },
   ],
 };
+const AREAS_GROUP: Group = {
+  label: 'Areas',
+  items: SERVICE_AREAS.map((st) => ({ label: st.name, to: `/service-areas/${st.slug}`, note: `${publishedCities(st).length} city pages` })),
+  footer: { label: 'All service areas', to: '/service-areas' },
+};
 const RESOURCES_GROUP: Group = {
   label: 'Resources',
   items: [
     { label: 'Chimney Health Check', to: '/chimney-health-check', note: '2 minutes. Is your chimney safe to use?' },
+    { label: 'Chimney Guides', to: '/blog', note: 'Plain-English articles with sources.' },
+    { label: 'Chimney Fire News', to: '/news', note: 'Real reports and the lessons behind them.' },
     { label: 'How to Choose a Chimney Company', to: '/how-to-choose-a-chimney-company', note: '6 questions to ask and the red flags.' },
     { label: 'Buying or Selling a Home', to: '/real-estate-chimney-inspections', note: 'Level 2 inspections for closings.' },
-    { label: 'Resource Center', to: '/blog', note: 'Plain-English chimney guides.' },
     { label: 'FAQ', to: '/faq', note: 'Quick answers to common questions.' },
   ],
-  footer: { label: 'Refer a friend', to: '/refer-a-friend' },
+  footer: { label: 'All resources and downloads', to: '/resources' },
 };
-const LINKS = [
-  { label: 'Service Areas', to: '/service-areas' },
-  { label: 'About', to: '/about' },
-];
+const PARTNERS_GROUP: Group = {
+  label: 'Partners',
+  items: PARTNER_INDUSTRIES.map((x) => ({ label: x.name, to: `/partners/${x.slug}`, note: x.short })),
+  footer: { label: `Partner program · ${PARTNER_PROGRAM.discount}`, to: '/partners' },
+};
+const ABOUT_GROUP: Group = {
+  label: 'About',
+  items: [
+    { label: 'Meet Andrew', to: '/about', note: 'F.I.R.E. Certified, 10 years in the trade.' },
+    { label: 'Reviews', to: '/reviews', note: 'What people say, and share yours.' },
+    { label: 'Our Work', to: '/gallery', note: 'Photos from real jobs.' },
+    { label: 'Refer a Friend', to: '/refer-a-friend', note: 'Give $25, get $25.' },
+    { label: 'Careers', to: '/careers', note: '10 roles. Learn a real trade.' },
+    { label: 'Contact', to: '/contact', note: 'Call, text or send a request.' },
+  ],
+};
 
 function AnnouncementBar() {
   return (
@@ -56,7 +76,7 @@ function AnnouncementBar() {
   );
 }
 
-function Dropdown({ group }: { group: Group }) {
+function Dropdown({ group, align = 'center' }: { group: Group; align?: 'center' | 'right' }) {
   const [open, setOpen] = useState(false);
   const closeTimer = useRef<number | undefined>(undefined);
   const location = useLocation();
@@ -87,7 +107,7 @@ function Dropdown({ group }: { group: Group }) {
         aria-expanded={open}
         aria-haspopup="true"
         onClick={() => setOpen((v) => !v)}
-        className={`flex items-center gap-1 rounded-full px-3 py-2 text-[0.94rem] font-medium transition-colors ${active ? 'text-ember' : 'text-bone/90 hover:text-bone'}`}
+        className={`flex items-center gap-1 whitespace-nowrap rounded-full px-2.5 py-2 text-[0.94rem] font-medium transition-colors xl:px-3 ${active ? 'text-ember' : 'text-bone/90 hover:text-bone'}`}
       >
         {group.label}
         <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${open ? 'rotate-180' : ''}`} strokeWidth={1.75} aria-hidden />
@@ -100,7 +120,7 @@ function Dropdown({ group }: { group: Group }) {
             exit={{ opacity: 0, transition: { duration: 0.12 } }}
             transition={{ duration: 0.2, ease: EASE }}
             style={{ transformOrigin: 'top center' }}
-            className={`absolute left-1/2 top-full z-50 -translate-x-1/2 pt-3 ${wide ? 'w-[min(44rem,90vw)]' : 'w-[22rem]'}`}
+            className={`absolute top-full z-50 pt-3 ${align === 'right' ? 'right-0' : 'left-1/2 -translate-x-1/2'} ${wide ? 'w-[min(44rem,90vw)]' : 'w-[22rem]'}`}
           >
             <div className="rounded-[20px] border border-white/10 bg-ink-2/95 p-3 shadow-[0_30px_80px_-20px_rgb(0_0_0/0.8)] backdrop-blur-xl">
               <ul className={`grid gap-1 ${wide ? 'grid-cols-2' : ''}`}>
@@ -192,7 +212,7 @@ function MobileMenu({ open, onClose, live }: { open: boolean; onClose: () => voi
           <FireButton placement="mobile_menu" size="lg" onClick={onClose} className="mt-4 w-full [&>span]:w-full [&>span]:justify-center" />
 
           <nav className="mt-6 grid gap-7" aria-label="Mobile">
-            {[SERVICES_GROUP, FIREPLACE_GROUP, RESOURCES_GROUP].map((g) => (
+            {[SERVICES_GROUP, FIREPLACE_GROUP, AREAS_GROUP, RESOURCES_GROUP, PARTNERS_GROUP, ABOUT_GROUP].map((g) => (
               <div key={g.label}>
                 <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-dim">{g.label}</p>
                 <ul className="grid grid-cols-1 gap-0.5 sm:grid-cols-2">
@@ -207,7 +227,7 @@ function MobileMenu({ open, onClose, live }: { open: boolean; onClose: () => voi
               </div>
             ))}
             <ul className="grid gap-0.5 border-t border-white/10 pt-5">
-              {[...LINKS, { label: 'Careers', to: '/careers' }, { label: 'Contact', to: '/contact' }].map((l) => (
+              {[{ label: 'All services', to: '/services' }, { label: 'All resources', to: '/resources' }, { label: 'Contact', to: '/contact' }].map((l) => (
                 <li key={l.to}>
                   <Link to={l.to} onClick={onClose} className="block py-2.5 font-display text-xl font-semibold text-bone" style={{ fontStretch: '110%' }}>
                     {l.label}
@@ -264,28 +284,20 @@ export default function Header() {
             <nav className="ml-4 hidden flex-1 items-center gap-0.5 lg:flex xl:ml-6" aria-label="Primary">
               <Dropdown group={SERVICES_GROUP} />
               <FireButton placement="header" className="mx-2" />
-              <NavLink to="/fireplace-shop" className={({ isActive }) => `whitespace-nowrap rounded-full px-3 py-2 text-[0.94rem] font-medium transition-colors ${isActive ? 'text-ember' : 'text-bone/90 hover:text-bone'}`}>
+              <NavLink to="/fireplace-shop" className={({ isActive }) => `whitespace-nowrap rounded-full px-2.5 py-2 xl:px-3 text-[0.94rem] font-medium transition-colors ${isActive ? 'text-ember' : 'text-bone/90 hover:text-bone'}`}>
                 Shop
               </NavLink>
-              {LINKS.map((l, i) => (
-                <Fragment key={l.to}>
-                  {i === 1 && (
-                    <div className="hidden xl:block">
-                      <Dropdown group={RESOURCES_GROUP} />
-                    </div>
-                  )}
-                  <NavLink to={l.to} className={({ isActive }) => `whitespace-nowrap rounded-full px-3 py-2 text-[0.94rem] font-medium transition-colors ${isActive ? 'text-ember' : 'text-bone/90 hover:text-bone'}`}>
-                    {l.label}
-                  </NavLink>
-                </Fragment>
-              ))}
+              <Dropdown group={AREAS_GROUP} />
+              <Dropdown group={RESOURCES_GROUP} />
+              <Dropdown group={PARTNERS_GROUP} align="right" />
+              <Dropdown group={ABOUT_GROUP} align="right" />
             </nav>
 
             <div className="ml-auto flex items-center gap-2">
               <a
                 href={SITE.phoneHref}
                 onClick={() => track('click_to_call', { placement: 'header' })}
-                className="hidden items-center gap-2 whitespace-nowrap rounded-full px-3 py-2 text-[0.94rem] font-medium text-bone transition-colors hover:text-ember xl:flex"
+                className="hidden items-center gap-2 whitespace-nowrap rounded-full px-3 py-2 text-[0.94rem] font-medium text-bone transition-colors hover:text-ember 2xl:flex"
               >
                 <Phone className="h-4 w-4 text-ember" strokeWidth={1.75} aria-hidden />
                 {SITE.phoneDisplay}
@@ -293,7 +305,7 @@ export default function Header() {
               <a
                 href={SITE.phoneHref}
                 onClick={() => track('click_to_call', { placement: 'header_icon' })}
-                className="grid h-11 w-11 place-items-center rounded-full border border-white/15 text-bone xl:hidden"
+                className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-white/15 text-bone 2xl:hidden"
                 aria-label={`Call ${SITE.phoneDisplay}`}
               >
                 <Phone className="h-[1.1rem] w-[1.1rem]" strokeWidth={1.75} aria-hidden />
@@ -301,9 +313,16 @@ export default function Header() {
               <Link
                 to={live ? HOLIDAY_PROMO.path : '/contact'}
                 onClick={() => live && track('promo_cta_click', { placement: 'header_button' })}
-                className="btn btn-primary btn-sm hidden sm:inline-flex"
+                className="btn btn-primary btn-sm hidden whitespace-nowrap sm:inline-flex lg:hidden xl:inline-flex"
               >
-                {live ? `Book the ${HOLIDAY_PROMO.priceLabel} special` : 'Schedule service'}
+                {live ? (
+                  <>
+                    <span className="2xl:hidden">Book {HOLIDAY_PROMO.priceLabel}</span>
+                    <span className="hidden 2xl:inline">Book the {HOLIDAY_PROMO.priceLabel} special</span>
+                  </>
+                ) : (
+                  'Schedule service'
+                )}
               </Link>
               <button
                 type="button"

@@ -10,3 +10,6 @@ marketing/holiday-2026/out/
 
 # Raw team photo originals (optimized copies live in public/media/team)
 public/media/Team-photos/
+
+# Generated guide HTML (absolute file:// paths)
+marketing/guides/

@@ -40,3 +40,29 @@ test('growth pages are registered for prerender and SEO', () => {
     assert.ok(r!.description.length > 60, p);
   }
 });
+
+import { existsSync } from 'node:fs';
+import { NEWS } from '../src/data/news.ts';
+import { PARTNER_INDUSTRIES } from '../src/data/partners.ts';
+
+test('every partner industry has a route, a guide PDF on disk and complete content', () => {
+  for (const p of PARTNER_INDUSTRIES) {
+    assert.ok(routeFor(`/partners/${p.slug}`), p.slug);
+    assert.ok(existsSync(`public${p.guide.file}`), `missing ${p.guide.file}`);
+    assert.ok(p.pains.length >= 3 && p.benefits.length >= 5 && p.faqs.length >= 3, p.slug);
+  }
+  assert.ok(routeFor('/partners') && routeFor('/news') && routeFor('/resources'));
+});
+
+test('news items link to real https sources, are unique and newest first', () => {
+  const urls = new Set<string>();
+  let prev = '9999';
+  for (const n of NEWS) {
+    assert.match(n.url, /^https:\/\//, n.title);
+    assert.ok(!urls.has(n.url), `duplicate ${n.url}`);
+    urls.add(n.url);
+    assert.ok(n.summary.length > 40 && n.lesson.length > 20, n.title);
+    assert.ok(n.date <= prev, `${n.title} out of order`);
+    prev = n.date;
+  }
+});

@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>First Chimney Contracting: Team Handbook</title>
+<style>
+@font-face { font-family: 'Archivo'; src: url('../../public/fonts/archivo.woff2') format('woff2'); font-weight: 100 900; font-stretch: 62% 125%; }
+@font-face { font-family: 'Geist'; src: url('../../public/fonts/geist.woff2') format('woff2'); font-weight: 100 900; }
+:root { --ink:#121110; --ink2:#211e1b; --bone:#f3ede4; --ember:#f07a32; --deep:#b8501c; --mute:#5d5650; --line:#e4ddd2; --soft:#faf6f0; }
+@page { size: Letter; margin: 0.7in 0.75in 0.8in; @bottom-left { content: "First Chimney Contracting · Team Handbook"; font: 8pt Geist, sans-serif; color: #8a8178; } @bottom-right { content: counter(page); font: 8pt Geist, sans-serif; color: #8a8178; } }
+@page cover { margin: 0; @bottom-left { content: none; } @bottom-right { content: none; } }
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin: 0; font: 9.9pt/1.5 Geist, 'Segoe UI', sans-serif; color: #26221f; }
+h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
+h1, h2, h3, h4 { font-family: Archivo, sans-serif; color: var(--ink); line-height: 1.12; margin: 0; }
+h1 { font-size: 26pt; font-stretch: 112%; font-weight: 800; letter-spacing: -0.01em; }
+h2 { font-size: 15pt; font-weight: 750; margin-top: 20pt; }
+h3 { font-size: 11.5pt; font-weight: 700; margin-top: 14pt; }
+h4 { font-size: 10pt; font-weight: 700; margin-top: 10pt; color: var(--deep); text-transform: uppercase; letter-spacing: 0.08em; font-family: Geist, sans-serif; }
+p { margin: 6pt 0; }
+ul, ol { margin: 6pt 0; padding-left: 16pt; }
+li { margin: 2.5pt 0; }
+a { color: var(--deep); text-decoration: none; }
+strong { color: var(--ink); }
+.cover { page: cover; height: 11in; width: 8.5in; position: relative; background: var(--ink); color: var(--bone); overflow: hidden; }
+.cover img.hero { position: absolute; inset: 0; width: 100%; height: 62%; object-fit: cover; opacity: 0.9; }
+.cover .fade { position: absolute; left: 0; right: 0; top: 30%; height: 33%; background: linear-gradient(transparent, var(--ink)); }
+.cover .text { position: absolute; left: 0.75in; right: 0.75in; bottom: 0.85in; }
+.cover .logo { height: 58pt; }
+.cover .kicker { margin-top: 26pt; color: var(--ember); font: 600 9pt Geist; letter-spacing: 0.22em; text-transform: uppercase; }
+.cover h1 { color: var(--bone); font-size: 40pt; margin-top: 8pt; line-height: 1.02; }
+.cover .sub { color: #cfc6ba; font-size: 12pt; margin-top: 12pt; max-width: 5.6in; }
+.cover .meta { margin-top: 26pt; display: flex; gap: 26pt; font-size: 8.5pt; color: #a99f93; }
+.cover .meta b { display: block; color: var(--bone); font-weight: 600; font-size: 9.5pt; }
+.chapter { break-before: page; }
+.chapter-head { border-bottom: 2pt solid var(--ember); padding-bottom: 10pt; margin-bottom: 12pt; }
+.chapter-head .num { font: 700 9pt Geist; color: var(--ember); letter-spacing: 0.2em; text-transform: uppercase; }
+.chapter-head p { color: var(--mute); margin-top: 6pt; font-size: 10.5pt; }
+.box { background: var(--soft); border: 1pt solid var(--line); border-left: 3pt solid var(--ember); border-radius: 6pt; padding: 9pt 12pt; margin: 10pt 0; break-inside: avoid; }
+.box.dark { background: var(--ink2); color: #e9e1d6; border-color: var(--ink2); border-left-color: var(--ember); }
+.box.dark strong, .box.dark h3, .box.dark h4 { color: #fff; }
+.script { font-family: Geist; background: #fff; border: 1pt dashed #d6c9b8; border-radius: 6pt; padding: 8pt 11pt; margin: 8pt 0; break-inside: avoid; }
+.script .who { font-weight: 700; color: var(--deep); }
+table { width: 100%; border-collapse: collapse; margin: 8pt 0; font-size: 9.2pt; break-inside: auto; }
+th { text-align: left; background: var(--ink); color: var(--bone); font-family: Archivo; font-weight: 700; padding: 5pt 7pt; }
+td { border-bottom: 0.75pt solid var(--line); padding: 4pt 7pt; vertical-align: top; }
+tr { break-inside: avoid; }
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14pt; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10pt; }
+.card { border: 1pt solid var(--line); border-radius: 6pt; padding: 8pt 10pt; break-inside: avoid; }
+.card h4 { margin-top: 0; }
+.check { list-style: none; padding-left: 0; }
+.check li { padding-left: 16pt; position: relative; }
+.check li::before { content: ''; position: absolute; left: 0; top: 3pt; width: 8pt; height: 8pt; border: 1.2pt solid var(--deep); border-radius: 2pt; }
+.photo { width: 100%; border-radius: 6pt; object-fit: cover; }
+.toc { columns: 2; column-gap: 24pt; padding-left: 0; list-style: none; }
+.toc li { display: flex; gap: 8pt; padding: 4pt 0; border-bottom: 0.75pt solid var(--line); break-inside: avoid; }
+.toc li span { color: var(--ember); font-weight: 700; min-width: 18pt; }
+.pill { display: inline-block; border: 1pt solid var(--line); border-radius: 99pt; padding: 1pt 7pt; font-size: 8.5pt; margin: 1pt 2pt 1pt 0; background: #fff; }
+.small { font-size: 8.6pt; color: var(--mute); }
+.quote { font-family: Archivo; font-size: 14pt; font-weight: 600; color: var(--ink); border-left: 3pt solid var(--ember); padding-left: 12pt; margin: 14pt 0; }
+</style>
+</head>
+<body>
+<section class="cover">
+  <img class="hero" src="../../public/media/team/andrew-cleaning-fireplace-chimney-brush.webp" alt="">
+  <div class="fade"></div>
+  <div class="text">
+    <img class="logo" src="../../public/brand/logo-light.png" alt="First Chimney Contracting">
+    <div class="kicker">Team Handbook</div>
+    <h1>How we work at First Chimney.</h1>
+    <p class="sub">For every technician, helper, mason, sales rep, canvasser and office teammate. Read it in your first week and keep it in the truck.</p>
+    <div class="meta"><div><b>Edition 1</b>November 2026</div><div><b>Owner</b>Andrew Paterini</div><div><b>Questions</b>(757) 589-0783</div></div>
+  </div>
+</section>
+<section class="chapter">
+  <div class="chapter-head"><div class="num">Welcome</div><h1>Welcome to the crew.</h1>
+  <p>You joined a company built on one idea: treat every home like it is your own, and tell people the truth about their chimney.</p></div>
+  <div class="cols">
+    <div>
+      <h3>Your first week</h3>
+      <ul class="check">
+        <li>Day 1: safety sheet signed, truck walk-through, shadow Andrew</li>
+        <li>Day 2–3: set up and protect work areas, take the 12-photo set</li>
+        <li>Day 4–5: read chapters 1, 6 and 8 of this handbook; ask questions</li>
+        <li>Install the CRM app and learn to log photos and notes</li>
+      </ul>
+      <h3>How you will be measured</h3>
+      <ul><li>Reliability: on time, prepared, does what you said</li><li>Safety: zero shortcuts</li><li>Customer respect: clean, polite, honest</li><li>Quality: no callbacks</li><li>Growth: learning something new every week</li></ul>
+    </div>
+    <img class="photo" style="height:3.6in" src="../../public/media/team/andrew-paterini-headshot-sm.webp" alt="">
+  </div>
+  <h2>Safety rules (sign below)</h2>
+  <ol>
+    <li>Ladders at a 4:1 angle, 3 feet above the roof edge, secured. Inspect before every use.</li>
+    <li>Fall protection on steep, wet or high roofs, and wherever the work is 6 feet or more above a lower level.</li>
+    <li>No roof work in ice, high wind, lightning or heavy rain.</li>
+    <li>Respirator and eye protection when sweeping or handling soot and creosote.</li>
+    <li>Confirm a fireplace or stove is cold before working. Shut off and verify gas before touching a gas appliance.</li>
+    <li>Report every injury, near miss and property damage the same day. No blame for reporting.</li>
+    <li>Never drive tired or distracted. Phones down while driving.</li>
+  </ol>
+  <p style="margin-top:18pt">Name: ______________________________ &nbsp; Signature: ______________________________ &nbsp; Date: ____________</p>
+</section><section class="chapter">
+  <div class="chapter-head"><div class="num">Chapter 01</div><h1>The First Chimney standard</h1>
+  <p>Big companies win on volume. First Chimney wins on trust. These five promises are the whole strategy.</p></div>
+  <div class="cols">
+    <div>
+      <ol>
+        <li><strong>The owner answers.</strong> Homeowners talk to Andrew, not a call center.</li>
+        <li><strong>We show what we see.</strong> Photos of every finding, explained in plain English.</li>
+        <li><strong>Quote first, always.</strong> Nothing is done without written approval.</li>
+        <li><strong>Leave it cleaner.</strong> Drop cloths down before any tool comes out.</li>
+        <li><strong>Honest, even when it costs us.</strong> If it does not need fixing, we say so.</li>
+      </ol>
+      <p class="quote">Speed to the call, proof on the roof, and a reminder every year. That is the business.</p>
+    </div>
+    <img class="photo" style="height:3.3in" src="../../public/media/team/andrew-paterini-owner-portrait-sm.webp" alt="">
+  </div>
+  <h2>Credentials you can point to</h2>
+  <p><strong>F.I.R.E. Certified Technician.</strong> Andrew is listed by name in the official F.I.R.E. Service directory (f-i-r-e-service.com, Virginia certified technicians). When a homeowner or realtor asks, send them the link. Verifiable beats impressive.</p>
+  <p><strong>10 years in the chimney trade, 25 years combined crew experience.</strong> Say it the same way every time, everywhere.</p>
+  <div class="box"><strong>Never do:</strong> invent reviews, borrow reviews from another company, offer anything in exchange for a review, scare people into repairs, or claim a certification you do not hold. One shortcut can undo a year of trust.</div>
+</section><section class="chapter">
+  <div class="chapter-head"><div class="num">Chapter 05</div><h1>Sales: phone, follow-up, estimates</h1>
+  <p>You are not "selling chimneys". You are helping a family use their fireplace safely. Act like it and the sales take care of themselves.</p></div>
+  <h2>Inbound call script</h2>
+  <div class="script"><span class="who">Answer:</span> "First Chimney, this is Andrew."<br>
+  <span class="who">Listen:</span> "What's going on with the chimney?" (Let them talk. Take notes in the app.)<br>
+  <span class="who">Qualify:</span> "What do you burn, and how often?" · "When was it last cleaned or inspected?" · "Noticed anything: smoke, smell, water, debris?" · "What's the address?"<br>
+  <span class="who">Recommend:</span> "The best place to start is a cleaning and inspection. That way I can tell you exactly what's going on, with photos."<br>
+  <span class="who">Book:</span> "I have Tuesday morning or Thursday afternoon. Which works better?"<br>
+  <span class="who">Set expectations:</span> "I'll text you a confirmation. Please don't burn for 24 hours before so it's cool."</div>
+  <h2>Calling back a website lead</h2>
+  <div class="script">"Hi, is this Sarah? This is Andrew Paterini with First Chimney. You filled out a request on our website a few minutes ago about your chimney. Is now a good time for two minutes?"<br>
+  Then use the qualify questions. If they took the health check, say what they told you: "I see you mentioned some black flakes in the firebox. That's usually creosote, so let's get it cleaned and looked at."</div>
+  <h2>Objections, answered honestly</h2>
+  <table>
+    <tr><th>They say</th><th>You say</th></tr>
+    <tr><td>"How much for a repair?"</td><td>"I'd be guessing without seeing it, and I don't want to quote you wrong. The inspection tells us exactly what it needs, and you get photos either way."</td></tr>
+    <tr><td>"Another company quoted less."</td><td>"Could be the right call. Can I see what they quoted? I'll tell you honestly if it covers the same work. If it does, go with them."</td></tr>
+    <tr><td>"I just want a cleaning."</td><td>"Absolutely. I look the whole system over while I'm there anyway, so you'll know if anything else needs attention. No pressure to fix anything."</td></tr>
+    <tr><td>"I need to think about it."</td><td>"Of course. The photos and estimate are in your email. Anything I can clear up now? I'll check in Thursday."</td></tr>
+    <tr><td>"Is it really necessary?"</td><td>Show the photo. Sort it: safety now, this year, can wait. Let them decide. Honesty here is the best sales tool you have.</td></tr>
+    <tr><td>"Somebody called offering a $49 cleaning."</td><td>"Be careful with those. Many make it up with scare tactics on the roof. Whatever you decide, ask for photos and a written quote before any repair."</td></tr>
+  </table>
+  <h2>The estimate presentation</h2>
+  <ol>
+    <li>Sit down with them. Phone in hand, photos up.</li>
+    <li>Good news first. "Your firebox and damper are in good shape."</li>
+    <li>Each issue in one sentence: what it is, why it matters, what happens if it waits.</li>
+    <li>Sort into three groups: <strong>Safety now</strong> · <strong>This year</strong> · <strong>Monitor</strong>.</li>
+    <li>Offer options: <em>repair-only</em> and <em>full fix</em>. People like choosing.</li>
+    <li>Ask: "Which option feels right to you?" Then stop talking.</li>
+    <li>Yes? Take the deposit (masonry and liners) and book it. Not yet? Move the card to <strong>Estimate Sent</strong>. The system follows up.</li>
+  </ol>
+</section><section class="chapter">
+  <div class="chapter-head"><div class="num">Chapter 06</div><h1>On-site inspection guide</h1>
+  <p>For Andrew as a refresher, and for every new technician on day one. Consistency is what makes a report trustworthy.</p></div>
+  <div class="cols">
+    <div>
+      <h3>Before you knock</h3>
+      <ul class="check">
+        <li>Read the CRM note: health check answers, what they noticed, fireplace type.</li>
+        <li>Park so you don't block the driveway. Truck clean.</li>
+        <li>Drop cloths, vacuum, camera, ladder, PPE, flashlight, moisture meter ready.</li>
+      </ul>
+      <h3>At the door</h3>
+      <ul class="check">
+        <li>Introduce yourself by name. Confirm what they asked for.</li>
+        <li>Ask about pets, kids and anything they want you to look at.</li>
+        <li>Ask when the fireplace was last used (must be cool).</li>
+      </ul>
+      <h3>Safety (non-negotiable)</h3>
+      <ul class="check">
+        <li>Ladder at a 4:1 angle, 3 feet above the roof edge, tied off.</li>
+        <li>Fall protection on steep or wet roofs. No roof work in ice, high wind or lightning.</li>
+        <li>Respirator and eye protection for soot and creosote.</li>
+        <li>Gas appliances: shut off and verify before working on them.</li>
+      </ul>
+    </div>
+    <img class="photo" style="height:4.3in" src="../../public/media/team/andrew-brushing-chimney-flue-roof-sm.webp" alt="">
+  </div>
+  <h2>Level 1 inspection checklist</h2>
+  <div class="cols">
+    <div class="card"><h4>Exterior and roof</h4><ul class="check">
+      <li>Crown: cracks, overhang, drip edge</li><li>Cap and spark arrestor: present, rusted, mesh intact</li>
+      <li>Flashing: lifted, rusted, sealed</li><li>Brick and mortar: spalling, open joints, efflorescence</li>
+      <li>Height and clearance from roof and nearby structures</li><li>Chase cover (prefab): rust, standing water</li></ul></div>
+    <div class="card"><h4>Interior</h4><ul class="check">
+      <li>Firebox: cracked brick, gaps in joints</li><li>Damper: opens, closes, seals</li>
+      <li>Smoke chamber: rough or unparged, creosote</li><li>Flue: buildup, tile cracks, gaps (camera)</li>
+      <li>Hearth extension and clearances to combustibles</li><li>Smoke and CO alarms present and working</li></ul></div>
+  </div>
+  <p><strong>Recommend a Level 2</strong> (camera through the whole flue) when: the home is being sold, there was a chimney fire or storm or earthquake event, the appliance or fuel is changing, or a Level 1 finds something you can't fully see.</p>
+  <h2>The standard photo set (every job)</h2>
+  <p><span class="pill">1 House front</span><span class="pill">2 Chimney, full</span><span class="pill">3 Crown</span><span class="pill">4 Cap</span><span class="pill">5 Flashing</span><span class="pill">6 Masonry close-up</span><span class="pill">7 Firebox</span><span class="pill">8 Damper</span><span class="pill">9 Smoke chamber</span><span class="pill">10 Flue camera</span><span class="pill">11 Every problem, with scale</span><span class="pill">12 Clean work area after</span></p>
+  <h2>The 10-minute walkthrough</h2>
+  <div class="script">"Here's what I found. Good news first: [good items]. Now, three things. This one is a safety issue: [photo, one sentence]. This one should be done this year: [photo]. And this one we just keep an eye on: [photo]. I'll put it all in writing with prices. Take your time, nothing happens without your OK."</div>
+  <h2>Before you leave</h2>
+  <ul class="check">
+    <li>Area cleaner than you found it. Show them.</li>
+    <li>Upload photos to the opportunity's Job Photos field and type findings in Findings.</li>
+    <li>Set Inspection Level and Job Type. Move the card. Ask: "Know anyone else with a fireplace?"</li>
+  </ul>
+</section><section class="chapter">
+  <div class="chapter-head"><div class="num">Chapter 07</div><h1>Partner playbook and scripts</h1>
+  <p>Ten good partners can fill a calendar. These people see chimney problems every week and need someone reliable to call.</p></div>
+  <table>
+    <tr><th>Partner type</th><th>Why they need you</th><th>What you give them</th></tr>
+    <tr><td><strong>Realtors</strong> (listing and buyer agents)</td><td>Chimney surprises kill deals and delay closings</td><td>Fast Level 2 inspections, plain-English reports, /realtors page for clients</td></tr>
+    <tr><td><strong>Home inspectors</strong></td><td>They flag chimneys but don't inspect inside the flue</td><td>A trusted "refer to a specialist" name with credentials they can verify</td></tr>
+    <tr><td><strong>Roofers</strong></td><td>Chimney flashing and masonry around their roofs</td><td>Masonry and crown work done right, so their roof doesn't leak</td></tr>
+    <tr><td><strong>HVAC, plumbers, hearth dealers</strong></td><td>Venting, liners, appliance changes</td><td>Relining and inspections when fuel or appliance changes</td></tr>
+    <tr><td><strong>Property managers</strong></td><td>Many units, liability, annual checks</td><td>Scheduled annual inspections, one invoice, photo reports</td></tr>
+    <tr><td><strong>Insurance agents</strong></td><td>Fire and water claims, risk</td><td>A credible inspector to recommend</td></tr>
+    <tr><td><strong>Painters, handymen, remodelers</strong></td><td>They see stained ceilings and crumbling chimneys</td><td>Someone to hand chimney jobs to</td></tr>
+  </table>
+  <h2>Realtor script (call or drop-in)</h2>
+  <div class="script">"Hi, I'm Andrew Paterini, owner of First Chimney and a F.I.R.E. Certified Technician. I know chimney issues can hold up a closing. When one comes up in your deals, I can usually get out quickly and give you a plain answer with photos. The national standard calls for a Level 2 inspection at every sale, and most home inspectors only look from the outside. Can I send you a link you can forward to clients? It's firstchimneycontracting.com/realtors. Text me anytime with an address and a deadline."</div>
+  <h2>Home inspector script</h2>
+  <div class="script">"I'm Andrew with First Chimney. When your report says 'recommend evaluation by a qualified chimney professional,' I'd love to be that name. I do camera inspections inside the flue, send photos, and I'll copy you on what I find so your report looks good. My certification is listed in the F.I.R.E. directory if your clients ask."</div>
+  <h2>Home improvement contractor script (roofers, remodelers, HVAC)</h2>
+  <div class="script">"You're on roofs and in houses every day. When you see a chimney that needs work, I'd like to be your go-to. I'll stay in my lane, do it right, and send the customer back to you for anything that's yours. Want to swap cards and keep each other in mind?"</div>
+  <h2>Realtor office talk (10 minutes at a sales meeting)</h2>
+  <ol><li>Who you are, credential, 10 years.</li><li>Three chimney problems that kill deals (flue cracks, leaks, missing liner) with photos.</li><li>What a Level 2 is and why NFPA 211 calls for it at sale.</li><li>How to reach you: text, address, deadline. Hand out cards with the /realtors QR code.</li></ol>
+  <h2>Partner pages and guides (already built)</h2>
+  <p>Each industry has its own page with the 10% partner rate, a call request form and a free 8-page guide: realtors (/realtors), home inspectors (/inspectors), contractors (/contractors), property managers (/landlords) and insurance (/insurance). Print the guides as leave-behinds. Every guide request lands in the CRM's Partners pipeline.</p>
+  <h2>Keep partners warm</h2>
+  <ul class="check"><li>Answer partner calls first. Always.</li><li>Text a thank-you after every referral, and report back on how it went.</li><li>One useful email a month (the CRM sends it). Coffee once a quarter with your top three.</li><li>Track every partner in the Partners pipeline. Move them to Active Partner after the first referral.</li></ul>
+</section><section class="chapter">
+  <div class="chapter-head"><div class="num">Chapter 08</div><h1>Door knocking and canvassing</h1>
+  <p>The fastest way to fill a slow week, if it's done politely and in the right places.</p></div>
+  <div class="cols">
+    <div>
+      <h3>Where and when</h3>
+      <ul>
+        <li><strong>"Five around" every job:</strong> the 5 houses on each side and across the street from a job you're doing today. "We're working at your neighbor's" is the best opener there is.</li>
+        <li><strong>Neighborhoods with chimneys</strong>: older brick homes, visible chimneys, woodpiles.</li>
+        <li><strong>Best season:</strong> late August to December (pre-snow), and March to May for leaks and masonry.</li>
+        <li><strong>Best hours:</strong> weekdays 4 to 7 pm, Saturdays 10 am to 4 pm.</li>
+      </ul>
+      <h3>Rules</h3>
+      <ul class="check">
+        <li>Check each town's soliciting rules. Some require a permit. Get it.</li>
+        <li>Never knock on "No Soliciting" homes. Leave nothing there either.</li>
+        <li>Never put anything in a mailbox (federal law). Use door hangers.</li>
+        <li>Wear the company shirt. Carry ID and cards.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>What to carry</h3>
+      <ul><li>Door hangers with the /check QR code and $199 offer</li><li>Business cards and the referral card (NEIGHBOR25)</li><li>Phone with the CRM app open</li><li>Photos on your phone of common problems</li></ul>
+      <h3>The 15-second door script</h3>
+      <div class="script">"Hi, I'm Andrew with First Chimney. We're doing a chimney job for your neighbors at [house], so I'm letting folks on the street know we're here this week. Do you use your fireplace at all? … When was the last time someone looked at it?"<br><br>
+      <span class="who">Interested:</span> "I can take a quick look from the ground right now, free, and if it needs anything I'll get you on the schedule while I'm in the area."<br>
+      <span class="who">Not now:</span> "No problem. Here's a card. There's a free 2-minute chimney check on the back. Have a good one."</div>
+    </div>
+  </div>
+  <h2>Log every door</h2>
+  <p>Interested or booked? Create the contact in the CRM app and add tag <strong>Door Knock</strong>. The system texts them a thank-you with the health check link and offer. Not home? Leave a hanger. Track three numbers per outing: <strong>doors knocked · conversations · appointments</strong>. A good day is 1 appointment per 10 conversations.</p>
+  <div class="box"><strong>Hiring canvassers later:</strong> pay per conversation logged or per appointment that shows up, never per sale. It keeps them honest and polite. The careers page already lists the Canvasser role.</div>
+</section><section class="chapter">
+  <div class="chapter-head"><div class="num">Chapter 11</div><h1>Google Business Profile and reviews</h1>
+  <p>For a local service business, the Google profile brings in more calls than the website. Treat it like a second website.</p></div>
+  <h2>Setup checklist</h2>
+  <div class="cols">
+    <ul class="check">
+      <li>Primary category: <strong>Chimney sweep</strong>. Add: Chimney services, Masonry contractor, Fireplace store (if selling units).</li>
+      <li>Service-area business: hide the home address, list main cities in each state.</li>
+      <li>Phone (757) 589-0783, website, hours (only once confirmed).</li>
+      <li>Add every service with the description from the website.</li>
+      <li>Upload 20+ real photos: truck, Andrew, jobs, before and afters.</li>
+      <li>Logo and cover photo.</li>
+    </ul>
+    <ul class="check">
+      <li>Business description using the website's About text.</li>
+      <li>Ask and answer 5 common questions (pricing, area, $199, Level 2).</li>
+      <li>Turn on messaging and connect it to the CRM.</li>
+      <li>Copy the review link into the CRM (custom value "Review Link") and the website.</li>
+      <li>Then claim Bing Places (import from Google) and Apple Business Connect.</li>
+      <li>Submit the sitemap in Google Search Console.</li>
+    </ul>
+  </div>
+  <h2>Weekly habits</h2>
+  <ul><li>One post a week (the Monday before and after works great).</li><li>Five new photos a week.</li><li>Reply to every review within 48 hours.</li></ul>
+  <h2>Reviews: the rules that keep you safe</h2>
+  <div class="box dark"><strong>Do:</strong> ask every customer, happy or not (the CRM does this when you mark Job Complete). Make it easy with the link. Thank people.<br><strong>Never:</strong> offer discounts or gifts for reviews, ask only happy customers, write reviews for anyone, or post reviews from another company. Google removes them, and the FTC fines businesses for fake or incentivized reviews.</div>
+  <h3>Reply templates</h3>
+  <div class="script"><span class="who">5 stars:</span> "Thank you, [Name]. It was a pleasure working on your chimney in [Town]. Enjoy the fireplace this winter. Andrew"<br>
+  <span class="who">Critical:</span> "[Name], thank you for the honest feedback. I'm sorry we fell short on [issue]. I'd like to make it right. Please call me directly at (757) 589-0783. Andrew"</div>
+</section><section class="chapter">
+  <div class="chapter-head"><div class="num">Chapter 16</div><h1>Templates: texts, emails, voicemails</h1>
+  <p>Most of these already run automatically in the CRM. Use them by hand when you need them.</p></div>
+  <div class="cols">
+    <div>
+      <h4>Missed your call</h4><div class="script">"Sorry I missed you. This is Andrew with First Chimney, probably on a roof right now. What can I help you with? I'll call back as soon as I'm down."</div>
+      <h4>On my way</h4><div class="script">"Hi [Name], Andrew from First Chimney. On my way, about 20 minutes out."</div>
+      <h4>Estimate sent</h4><div class="script">"Hi [Name], your estimate and photos are in your email. Happy to walk through any of it on the phone."</div>
+      <h4>Review request</h4><div class="script">"Thanks for having me out today. If you were happy with the work, a quick Google review helps a small business like mine more than you know: [link]"</div>
+      <h4>Referral thank-you</h4><div class="script">"Thank you for sending [Friend] my way. I'll take great care of them, and your $25 credit is on your account for next time."</div>
+    </div>
+    <div>
+      <h4>Voicemail: website lead</h4><div class="script">"Hi [Name], Andrew Paterini with First Chimney returning your chimney request. I'll text you too, so reply whenever is easy. My number is 757-589-0783."</div>
+      <h4>Voicemail: past customer, yearly</h4><div class="script">"Hi [Name], Andrew from First Chimney. It's been about a year since I looked at your chimney. I'm booking fall appointments now and wanted to give you first pick. 757-589-0783."</div>
+      <h4>Door knock follow-up</h4><div class="script">"Great meeting you today, [Name]. Here's the free 2-minute chimney check: firstchimneycontracting.com/check. Text me anytime. Andrew"</div>
+      <h4>Partner thank-you</h4><div class="script">"Thanks for the referral on [address], [Name]. Inspection's done, the report went to your client, and I copied you. I appreciate you."</div>
+      <h4>Unhappy customer</h4><div class="script">"[Name], I'm sorry about [issue]. I want to make this right. Can I come back [day] to take care of it at no charge?"</div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

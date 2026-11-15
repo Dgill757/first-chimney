@@ -16,6 +16,8 @@ import { SOURCES } from '../data/sources';
 import { HOLIDAY_PROMO, promoIsLive } from './promo';
 import { CREDENTIALS, SITE, STATE_LIST_TEXT, STATES } from './site';
 import { EXPERIENCE, JOB_PHOTOS, TEAM } from '../data/team';
+import { NEWS, NEWS_STATS } from '../data/news';
+import { PARTNER_INDUSTRIES, PARTNER_PROGRAM } from '../data/partners';
 import { CAREER_FAQS, CHOOSE_QUESTIONS, HEALTH_CHECK, POSITIONS, REAL_ESTATE_FAQS, RED_FLAGS } from '../data/growth';
 
 export type Crumb = { name: string; path: string };
@@ -486,6 +488,60 @@ export function buildRoutes(extra: RouteMeta[] = []): RouteMeta[] {
     links: [{ label: 'Contact', path: '/contact' }],
     crumbs: [HOME, { name: 'Refer a Friend', path: '/refer-a-friend' }],
     priority: 0.3,
+  });
+
+  add({
+    path: '/partners',
+    title: 'Partner Program for Realtors, Inspectors, Contractors & Property Managers',
+    description: `Partner with ${SITE.owner}, ${CREDENTIALS.fire.title}. ${PARTNER_PROGRAM.discount}, priority scheduling and photo reports for realtors, home inspectors, contractors, property managers and insurance professionals.`,
+    image: TEAM.inspectionRoof.src,
+    h1: 'Work with First Chimney',
+    summary: [...PARTNER_PROGRAM.perks, ...PARTNER_INDUSTRIES.map((p) => `${p.name} (${p.short}): ${p.lede}`)],
+    links: PARTNER_INDUSTRIES.map((p) => ({ label: `${p.name} partner program`, path: `/partners/${p.slug}` })),
+    crumbs: [HOME, { name: 'Partners', path: '/partners' }],
+    priority: 0.7,
+  });
+
+  for (const p of PARTNER_INDUSTRIES) {
+    const path = `/partners/${p.slug}`;
+    add({
+      path,
+      title: `Chimney Partner Program for ${p.name}`,
+      description: `${p.title} ${PARTNER_PROGRAM.discount} for ${p.short.toLowerCase()}, priority scheduling and a free guide: ${p.guide.title}.`,
+      image: TEAM.inspectionRoof.src,
+      h1: p.title,
+      summary: [p.lede, ...p.pains.map((x) => `${x.t}: ${x.b}`), ...p.benefits.map((x) => `${x.t}: ${x.b}`), p.offer, `Free download: ${p.guide.title}. ${p.guide.blurb}`, ...p.faqs.map((f) => `${f.q} ${f.a}`)],
+      links: [{ label: 'Partner program', path: '/partners' }, { label: 'Chimney inspection', path: '/services/chimney-inspection' }, { label: p.guide.title, path: p.guide.file }],
+      crumbs: [HOME, { name: 'Partners', path: '/partners' }, { name: p.name, path }],
+      jsonLd: [faqLd(p.faqs)],
+      priority: 0.6,
+    });
+  }
+
+  add({
+    path: '/news',
+    title: 'Chimney Fire News: Real Reports and the Lessons Behind Them',
+    description: 'Chimney fire news from local outlets across the U.S., including Massachusetts, New Jersey and Connecticut, with links to the original reporting and what each fire teaches homeowners.',
+    image: SITE.ogImage,
+    h1: 'Chimney fires happen every week',
+    summary: [...NEWS_STATS.lines, ...NEWS.map((n) => `${n.title} (${n.place}, ${n.state}, ${n.source}): ${n.summary} Lesson: ${n.lesson} ${n.url}`)],
+    links: [{ label: 'Chimney Health Check', path: '/chimney-health-check' }, { label: 'Chimney cleaning', path: '/services/chimney-sweeping' }],
+    crumbs: [HOME, { name: 'News', path: '/news' }],
+    jsonLd: [{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Chimney fire news', about: { '@id': ORG_ID }, hasPart: NEWS.map((n) => ({ '@type': 'NewsArticle', headline: n.title, url: n.url, publisher: { '@type': 'Organization', name: n.source } })) }],
+    priority: 0.6,
+    changefreq: 'weekly',
+  });
+
+  add({
+    path: '/resources',
+    title: 'Chimney Resources: Tools, Guides, Downloads and News',
+    description: 'Free chimney tools and resources: the 2-minute health check, plain-English guides, downloadable guides for realtors, inspectors, contractors and property managers, and chimney fire news.',
+    image: SITE.ogImage,
+    h1: 'Everything you need to know about your chimney',
+    summary: ['Free tools, plain-English guides, downloadable partner guides and chimney fire news.', ...PARTNER_INDUSTRIES.map((p) => `${p.guide.title}: ${p.guide.blurb}`)],
+    links: [{ label: 'Chimney Health Check', path: '/chimney-health-check' }, { label: 'Guides', path: '/blog' }, { label: 'News', path: '/news' }, { label: 'Partners', path: '/partners' }],
+    crumbs: [HOME, { name: 'Resources', path: '/resources' }],
+    priority: 0.6,
   });
 
   add({

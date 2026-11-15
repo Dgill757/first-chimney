@@ -21,6 +21,10 @@ const Contact = lazy(() => import('./pages/Company').then((m) => ({ default: m.C
 const Gallery = lazy(() => import('./pages/Company').then((m) => ({ default: m.Gallery })));
 const Reviews = lazy(() => import('./pages/Company').then((m) => ({ default: m.Reviews })));
 const Privacy = lazy(() => import('./pages/Company').then((m) => ({ default: m.Privacy })));
+const PartnersHub = lazy(() => import('./pages/Partners').then((m) => ({ default: m.PartnersHub })));
+const PartnerIndustryPage = lazy(() => import('./pages/Partners').then((m) => ({ default: m.PartnerIndustryPage })));
+const News = lazy(() => import('./pages/Partners').then((m) => ({ default: m.News })));
+const Resources = lazy(() => import('./pages/Partners').then((m) => ({ default: m.Resources })));
 const HealthCheck = lazy(() => import('./pages/Growth').then((m) => ({ default: m.HealthCheck })));
 const RealEstate = lazy(() => import('./pages/Growth').then((m) => ({ default: m.RealEstate })));
 const Careers = lazy(() => import('./pages/Growth').then((m) => ({ default: m.Careers })));
@@ -64,6 +68,10 @@ export default function App() {
             <Route path="chimney-safety-check" element={<Navigate to="/chimney-health-check" replace />} />
             <Route path="real-estate-chimney-inspections" element={<RealEstate />} />
             <Route path="careers" element={<Careers />} />
+            <Route path="partners" element={<PartnersHub />} />
+            <Route path="partners/:industry" element={<PartnerIndustryPage />} />
+            <Route path="news" element={<News />} />
+            <Route path="resources" element={<Resources />} />
             <Route path="refer-a-friend" element={<Refer />} />
             <Route path="how-to-choose-a-chimney-company" element={<ChooseCompany />} />
             <Route path="financing" element={<Navigate to="/contact" replace />} />

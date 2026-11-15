@@ -33,6 +33,15 @@ type Props = {
 };
 
 const RESUME_MAX = 3 * 1024 * 1024;
+
+/** The line under the submit button, matched to what the form actually does. */
+const FOOTNOTE: Partial<Record<FormId, string>> = {
+  partner: 'Andrew reads every partner request personally and replies within one business day.',
+  'job-application': 'Your application goes straight to Andrew. We never share it.',
+  testimonial: 'We only publish your first name and town, and only with your permission.',
+  reminder: 'One reminder a year. Unsubscribe anytime.',
+  referral: 'We will contact your friend once, and mention that you sent us.',
+};
 const RESUME_ACCEPT = '.pdf,.doc,.docx,.txt,.rtf,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain';
 
 function readAsBase64(file: File): Promise<string> {
@@ -397,7 +406,7 @@ export default function LeadForm({
             </>
           )}
         </button>
-        <p className="-mt-1 text-center text-xs text-dim">This sends a request. We will call or text to confirm your appointment.</p>
+        <p className="-mt-1 text-center text-xs text-dim">{FOOTNOTE[formId] ?? 'This sends a request. We will call or text to confirm your appointment.'}</p>
       </form>
     </Swap>
   );
