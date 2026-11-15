@@ -13,7 +13,9 @@ The Vercel keys are in and live forms deliver to GHL (tested 2026-11-15). All 31
 - Calendars → Chimney Service: set Andrew's real working hours and assign him once he is a user.
 - Settings → Business Profile: replace "Virginia Beach, VA 23451" with Andrew's real business address (needed in marketing email footers).
 - Confirm the inbox info@firstchimneycontracting.com exists, or change the account email.
-- Add Andrew as a user (Settings → Users). Then switch internal notifications from +1 757-589-0783 and Dan's email to "Assigned user" if you prefer.
+- Andrew is added as a user (admin, Paterini@yahoo.com). Done 2026-11-15. He is Cc'd on the owner-alert email in workflows 01 (new lead) and 24 (customer replied). The other alert emails still go to Dan only; add him as Cc in each if you want (open the Internal Notification action → Cc → Save action → Save).
+- Assign Andrew to the Chimney Service calendar in the GHL UI (the API ignores teamMembers on this calendar type, and a partial PUT wipes the hours).
+- Fix the white-label login domain: my.dlgsolutions.com does not load (dlgsolutions.com uses Afternic parking nameservers, so `my` resolves to parking IPs, not HighLevel). Add the CNAME HighLevel asks for in Agency View → Settings → Company → White Label, at the registrar's DNS. Until then Andrew logs in at app.gohighlevel.com, which his guide lists first.
 
 ## 4. Automations: done
 All 31 workflows are published, with re-entry on. Open any of them in GHL → Automation → Workflows to see the steps. To change wording, open the action and edit it, or use the workflow's AI panel.
@@ -31,6 +33,9 @@ Once all workflows are published: Agency view → Account Snapshots → Create S
 - `marketing/owners-manual/First-Chimney-Team-Handbook.pdf` (13 pages, for every hire)
 - Partner guides at firstchimneycontracting.com/resources (print a stack of each as leave-behinds)
 
+## Andrew's guide
+`marketing/andrew-guide/First-Chimney-Andrews-Guide.html` (interactive, one file, works offline) and `.pdf` (26 pages) plus the two manuals. Rebuild after edits: `python marketing/andrew-guide/build.py` (source is `guide.src.html`). Email the PDF and the HTML to Andrew (Paterini@yahoo.com).
+
 ## Housekeeping
-- The test contact "QA Test Applicant" in GHL is tagged `QA Test - safe to delete`.
+- Test contacts in GHL: "QA Test Applicant", "QA Holiday Test", "QA Live Applicant" (tagged `QA Test - safe to delete`) and 12 "QA Final ..." contacts (emails `dangill+fcqa-<form>@summitmarketinggroup.co`, tag `source: qa-final`). Delete them when you are ready (contacts are never deleted automatically).
 - Approvals still open: $199 terms, hours, brands, city list, homeowner photo permissions (COMPLETION-REPORT §7).

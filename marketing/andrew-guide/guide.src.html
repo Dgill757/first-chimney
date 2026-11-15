@@ -1,0 +1,955 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Andrew's Keys: First Chimney Contracting</title>
+<style>
+@font-face { font-family: 'Archivo'; src: url(data:font/woff2;base64,%%ARCHIVO%%) format('woff2'); font-weight: 100 900; font-stretch: 62% 125%; font-display: swap; }
+@font-face { font-family: 'Geist'; src: url(data:font/woff2;base64,%%GEIST%%) format('woff2'); font-weight: 100 900; font-display: swap; }
+:root {
+  color-scheme: light;
+  --ink: #121110; --ink2: #211e1b; --ink3: #2b2723;
+  --bone: #f3ede4; --paper: #faf6f0; --white: #fff;
+  --ember: #f07a32; --ember2: #ff9550; --deep: #b8501c;
+  --mute: #5d5650; --dim: #8a8178; --line: #e4ddd2;
+  --ok: #2f7d57; --okbg: #e4f2ea; --warn: #8a5a00; --warnbg: #fbf0d6; --info: #3b5b7a; --infobg: #e6eef5;
+  --r: 10px;
+  --ease: cubic-bezier(0.23, 1, 0.32, 1);
+  --display: 'Archivo', 'Segoe UI', system-ui, sans-serif;
+  --body: 'Geist', 'Segoe UI', system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scroll-padding-top: 76px; }
+body { margin: 0; background: var(--bone); color: #26221f; font: 16px/1.6 var(--body); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+h1, h2, h3, h4 { font-family: var(--display); color: var(--ink); line-height: 1.12; margin: 0; }
+h2 { font-size: clamp(1.7rem, 3.4vw, 2.3rem); font-stretch: 110%; font-weight: 800; letter-spacing: -0.012em; }
+h3 { font-size: 1.15rem; font-weight: 750; margin-top: 2rem; }
+h4 { font-size: 0.98rem; font-weight: 700; margin-top: 1.2rem; }
+p { margin: 0.6em 0; max-width: 68ch; }
+ul, ol { padding-left: 1.2em; margin: 0.5em 0; max-width: 72ch; }
+li { margin: 0.28em 0; }
+a { color: var(--deep); text-underline-offset: 3px; }
+a:hover { color: var(--ink); }
+strong { color: var(--ink); }
+:focus-visible { outline: 3px solid var(--ember); outline-offset: 2px; border-radius: 4px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- hero / cover ---------- */
+.hero { background: var(--ink); color: var(--bone); position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(900px 420px at 78% 8%, rgba(240,122,50,.22), transparent 60%); pointer-events: none; }
+.hero-in { position: relative; max-width: 1180px; margin: 0 auto; padding: clamp(28px, 5vw, 56px) clamp(18px, 4vw, 40px) clamp(40px, 6vw, 72px); display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
+.hero .logo { height: 52px; width: auto; display: block; }
+.hero h1 { color: var(--bone); font-size: clamp(2.3rem, 6vw, 4.2rem); font-weight: 800; font-stretch: 118%; letter-spacing: -0.02em; line-height: 1.02; margin-top: clamp(26px, 5vw, 56px); }
+.hero .sub { color: #d3c9bc; font-size: clamp(1.02rem, 1.6vw, 1.2rem); max-width: 34em; margin-top: 18px; }
+.hero .from { display: flex; align-items: center; gap: 12px; margin-top: 26px; color: #b9b0a4; font-size: .92rem; }
+.hero .from img { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; object-position: 50% 20%; border: 2px solid var(--ember); }
+.hero .from b { color: var(--bone); display: block; font-weight: 600; }
+.pphoto { display: none; }
+.ring { position: relative; padding-top: 34px; }
+.ring::before { content: ''; position: absolute; top: 0; left: 50%; width: 74px; height: 74px; margin-left: -37px; border: 6px solid #cfc6ba; border-radius: 50%; border-bottom-color: transparent; transform: rotate(-12deg); opacity: .9; }
+.tags { display: grid; gap: 10px; }
+.tag { position: relative; display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; align-items: center; background: var(--bone); color: var(--ink); text-decoration: none; border-radius: 10px 26px 26px 10px; padding: 13px 20px 13px 48px; box-shadow: 0 1px 0 rgba(255,255,255,.4) inset, 0 8px 24px rgba(0,0,0,.28); transition: transform .18s var(--ease); }
+.tag::before { content: ''; position: absolute; left: 16px; top: 50%; width: 15px; height: 15px; margin-top: -7.5px; border-radius: 50%; background: var(--ink); box-shadow: 0 0 0 3px #d9cfc1; }
+.tag:nth-child(odd) { margin-right: 22px; } .tag:nth-child(even) { margin-left: 22px; }
+.tag:hover { transform: translateX(4px); color: var(--ink); }
+.tag b { font-family: var(--display); font-weight: 750; font-size: 1.02rem; }
+.tag span { font-size: .85rem; color: var(--mute); grid-column: 1; word-break: break-all; }
+.tag .go { grid-column: 2; grid-row: 1 / span 2; font-family: var(--display); font-weight: 700; font-size: .8rem; color: var(--deep); }
+.tag.hot { background: var(--ember); } .tag.hot span, .tag.hot .go { color: #3b1a05; } .tag.hot::before { box-shadow: 0 0 0 3px #f7a367; }
+
+/* ---------- layout ---------- */
+.shell { max-width: 1180px; margin: 0 auto; padding: 0 clamp(18px, 4vw, 40px); display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); }
+.side { position: sticky; top: 0; align-self: start; padding: 28px 0; max-height: 100vh; overflow-y: auto; }
+.side .brand { font-family: var(--display); font-weight: 800; font-size: .95rem; color: var(--ink); margin-bottom: 12px; }
+.side a { display: block; padding: 7px 10px; margin: 1px 0; border-radius: 8px; color: var(--mute); text-decoration: none; font-size: .92rem; border-left: 3px solid transparent; }
+.side a:hover { background: rgba(0,0,0,.05); color: var(--ink); }
+.side a.on { color: var(--ink); font-weight: 650; border-left-color: var(--ember); background: rgba(240,122,50,.1); }
+.side .tools { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--line); display: grid; gap: 8px; }
+.topnav { display: none; }
+main { padding-bottom: 80px; min-width: 0; }
+.chapter { padding: clamp(40px, 6vw, 72px) 0 8px; border-top: 1px solid var(--line); }
+.chapter:first-child { border-top: 0; }
+.chapter > header { margin-bottom: 18px; }
+.chapter > header p { color: var(--mute); font-size: 1.06rem; margin-top: 10px; }
+.lead { font-size: 1.1rem; color: #3a352f; }
+
+/* ---------- components ---------- */
+.btn { font: 600 .9rem var(--body); display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid var(--ink); background: var(--ink); color: var(--bone); padding: 9px 16px; border-radius: 99px; cursor: pointer; text-decoration: none; transition: transform .15s var(--ease), background .15s; }
+.btn:hover { background: var(--ink3); color: var(--bone); transform: translateY(-1px); }
+.btn.ghost { background: transparent; color: var(--ink); } .btn.ghost:hover { background: var(--ink); color: var(--bone); }
+.btn.ember { background: var(--ember); border-color: var(--ember); color: #2a1204; } .btn.ember:hover { background: var(--ember2); color: #2a1204; }
+.btn.sm { padding: 5px 11px; font-size: .8rem; }
+.copy.done { background: var(--ok); border-color: var(--ok); color: #fff; }
+.callout { background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--ember); border-radius: var(--r); padding: 14px 18px; margin: 18px 0; max-width: 78ch; }
+.callout > :first-child { margin-top: 0; } .callout > :last-child { margin-bottom: 0; }
+.callout.dark { background: var(--ink2); color: #e9e1d6; border-color: var(--ink2); border-left-color: var(--ember); } .callout.dark strong, .callout.dark h4 { color: #fff; } .callout.dark a { color: var(--ember2); }
+.callout.warn { border-left-color: #c28a00; background: var(--warnbg); }
+.callout.good { border-left-color: var(--ok); background: var(--okbg); }
+.callout h4 { margin: 0 0 4px; }
+.grid2, .grid3 { display: grid; gap: 14px; margin: 16px 0; }
+.grid2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } .grid3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.card { background: var(--white); border: 1px solid var(--line); border-radius: var(--r); padding: 14px 16px; break-inside: avoid; }
+.card h4 { margin: 0 0 4px; } .card p { margin: .35em 0; font-size: .95rem; color: #3a352f; }
+.card .meta { font-size: .8rem; color: var(--dim); margin-top: 8px; }
+.chip { display: inline-block; font: 600 .72rem var(--body); padding: 2px 9px; border-radius: 99px; background: var(--line); color: var(--mute); white-space: nowrap; vertical-align: middle; }
+.chip.live { background: var(--okbg); color: var(--ok); } .chip.phone { background: var(--warnbg); color: var(--warn); } .chip.ready { background: var(--infobg); color: var(--info); }
+.table-wrap { overflow-x: auto; margin: 14px 0; border: 1px solid var(--line); border-radius: var(--r); background: var(--white); }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; min-width: 560px; }
+th { text-align: left; background: var(--ink); color: var(--bone); font-family: var(--display); font-weight: 700; padding: 9px 12px; font-size: .84rem; }
+td { padding: 9px 12px; border-top: 1px solid var(--line); vertical-align: top; }
+tr { break-inside: avoid; }
+td:first-child { font-weight: 600; color: var(--ink); }
+.steps { counter-reset: s; list-style: none; padding: 0; margin: 16px 0; display: grid; gap: 10px; max-width: none; }
+.steps > li { counter-increment: s; position: relative; background: var(--white); border: 1px solid var(--line); border-radius: var(--r); padding: 12px 16px 12px 58px; margin: 0; break-inside: avoid; }
+.steps > li::before { content: counter(s); position: absolute; left: 14px; top: 12px; width: 30px; height: 30px; border-radius: 50%; background: var(--ink); color: var(--bone); font: 800 .95rem var(--display); display: grid; place-items: center; }
+.steps b { color: var(--ink); }
+
+/* checklists */
+.checks { list-style: none; padding: 0; margin: 12px 0; display: grid; gap: 8px; max-width: none; }
+.checks label { display: flex; gap: 12px; align-items: flex-start; background: var(--white); border: 1px solid var(--line); border-radius: var(--r); padding: 11px 14px; cursor: pointer; transition: background .15s, border-color .15s; }
+.checks label:hover { border-color: #cfc6ba; }
+.checks input { appearance: none; -webkit-appearance: none; flex: none; width: 22px; height: 22px; margin: 1px 0 0; border: 2px solid var(--deep); border-radius: 6px; background: #fff; cursor: pointer; display: grid; place-items: center; }
+.checks input:checked { background: var(--ok); border-color: var(--ok); }
+.checks input:checked::after { content: ''; width: 6px; height: 11px; border: solid #fff; border-width: 0 2.5px 2.5px 0; transform: rotate(45deg) translate(-1px, -1px); }
+.checks input:checked ~ span { color: var(--dim); text-decoration: line-through; text-decoration-color: rgba(0,0,0,.25); }
+.checks small { display: block; color: var(--mute); text-decoration: none; }
+.progress { display: flex; align-items: center; gap: 12px; margin: 10px 0; font-size: .9rem; color: var(--mute); }
+.progress .bar { flex: 1; height: 8px; background: var(--line); border-radius: 99px; overflow: hidden; max-width: 320px; }
+.progress .bar i { display: block; height: 100%; width: 0; background: var(--ember); border-radius: 99px; transition: width .35s var(--ease); }
+
+/* flow diagram */
+.flow { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; margin: 20px 0; align-items: stretch; }
+.flow > div { position: relative; background: var(--white); border: 1px solid var(--line); padding: 14px 12px; text-align: left; font-size: .88rem; }
+.flow > div:first-child { border-radius: var(--r) 0 0 var(--r); } .flow > div:last-child { border-radius: 0 var(--r) var(--r) 0; }
+.flow > div + div { border-left: 0; }
+.flow > div:not(:last-child)::after { content: ''; position: absolute; right: -9px; top: 50%; width: 16px; height: 16px; margin-top: -8px; background: var(--ember); transform: rotate(45deg); z-index: 1; border-radius: 3px; }
+.flow b { display: block; font-family: var(--display); color: var(--ink); margin-bottom: 4px; font-size: .95rem; }
+.flow span { color: var(--mute); }
+
+/* pipelines as brick courses */
+.pipe { margin: 22px 0; }
+.pipe h4 { margin: 0 0 8px; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.pipe h4 small { font: 400 .85rem var(--body); color: var(--mute); }
+.bricks { display: flex; flex-wrap: wrap; gap: 6px; }
+.bricks span { background: var(--white); border: 1px solid var(--line); border-bottom: 3px solid var(--deep); border-radius: 4px; padding: 7px 12px; font-size: .86rem; font-weight: 600; color: var(--ink); }
+.bricks span.end { border-bottom-color: #9b948a; color: var(--mute); background: var(--paper); }
+
+/* workflows */
+.tools-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 14px 0; }
+.search { flex: 1; min-width: 200px; max-width: 360px; font: 500 .95rem var(--body); padding: 9px 14px; border: 1.5px solid var(--line); border-radius: 99px; background: #fff; color: var(--ink); }
+.fchip { font: 600 .82rem var(--body); border: 1.5px solid var(--line); background: #fff; color: var(--mute); padding: 6px 12px; border-radius: 99px; cursor: pointer; }
+.fchip[aria-pressed="true"] { background: var(--ink); color: var(--bone); border-color: var(--ink); }
+.wfs { display: grid; gap: 10px; margin: 14px 0; }
+.wf { background: var(--white); border: 1px solid var(--line); border-radius: var(--r); break-inside: avoid; }
+.wf summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 12px 14px; }
+.wf summary::-webkit-details-marker { display: none; }
+.wf .n { font: 800 1.05rem var(--display); color: var(--deep); }
+.wf .t { font-weight: 650; color: var(--ink); } .wf .t small { display: block; font-weight: 400; color: var(--mute); font-size: .86rem; }
+.wf .chev { width: 10px; height: 10px; border: solid var(--mute); border-width: 0 2px 2px 0; transform: rotate(45deg); transition: transform .2s var(--ease); margin-right: 4px; }
+.wf[open] .chev { transform: rotate(-135deg); }
+.wf .body { padding: 2px 16px 14px 70px; font-size: .94rem; }
+.wf .body p { margin: .35em 0; } .wf .body b { color: var(--ink); }
+.empty { padding: 18px; color: var(--mute); border: 1px dashed var(--line); border-radius: var(--r); }
+
+/* status cards */
+.cap { display: flex; flex-direction: column; gap: 4px; }
+.cap .chip { align-self: flex-start; margin-bottom: 4px; }
+
+details.faq { background: var(--white); border: 1px solid var(--line); border-radius: var(--r); margin: 8px 0; break-inside: avoid; }
+details.faq summary { cursor: pointer; font-weight: 650; color: var(--ink); padding: 12px 16px; }
+details.faq > div { padding: 0 16px 12px; }
+.photo { width: 100%; border-radius: var(--r); display: block; object-fit: cover; aspect-ratio: 4 / 3; }
+.quick a { display: flex; justify-content: space-between; gap: 10px; padding: 10px 14px; background: #fff; border: 1px solid var(--line); border-radius: var(--r); text-decoration: none; color: var(--ink); font-weight: 600; margin: 6px 0; }
+.quick a span { color: var(--deep); font-weight: 600; font-size: .85rem; }
+.foot { margin-top: 56px; padding: 24px 0; border-top: 1px solid var(--line); color: var(--mute); font-size: .9rem; }
+
+@media (max-width: 980px) {
+  .shell { grid-template-columns: minmax(0, 1fr); }
+  .side { display: none; }
+  .topnav { display: flex; gap: 6px; overflow-x: auto; position: sticky; top: 0; z-index: 20; background: rgba(243,237,228,.96); backdrop-filter: blur(8px); padding: 10px clamp(18px, 4vw, 40px); border-bottom: 1px solid var(--line); scrollbar-width: none; }
+  .topnav a { flex: none; font-size: .85rem; font-weight: 600; text-decoration: none; color: var(--mute); padding: 6px 12px; border-radius: 99px; background: #fff; border: 1px solid var(--line); }
+  .topnav a.on { background: var(--ink); color: var(--bone); border-color: var(--ink); }
+  .hero-in { grid-template-columns: minmax(0, 1fr); }
+  html { scroll-padding-top: 64px; }
+}
+@media (max-width: 720px) {
+  .grid2, .grid3 { grid-template-columns: minmax(0, 1fr); }
+  .flow { grid-template-columns: minmax(0, 1fr); }
+  .flow > div, .flow > div:first-child, .flow > div:last-child { border-radius: 0; border-left: 1px solid var(--line); }
+  .flow > div + div { border-top: 0; } .flow > div:first-child { border-radius: var(--r) var(--r) 0 0; } .flow > div:last-child { border-radius: 0 0 var(--r) var(--r); }
+  .flow > div:not(:last-child)::after { right: auto; left: 24px; top: auto; bottom: -9px; margin: 0; }
+  .wf summary { grid-template-columns: 36px minmax(0, 1fr) auto; } .wf .body { padding-left: 16px; }
+  .tag:nth-child(odd), .tag:nth-child(even) { margin: 0; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+
+/* ---------- print (the PDF) ---------- */
+@page { size: Letter; margin: 0.6in 0.65in 0.7in; }
+@page :first { margin: 0; }
+@media print {
+  html { scroll-behavior: auto; }
+  body { background: #fff; font-size: 10pt; line-height: 1.45; }
+  .side, .topnav, .no-print, .btn, .search, .fchip, .tools-row, .progress { display: none !important; }
+  .hero { height: 10.9in; overflow: hidden; display: block; break-after: page; }
+  .hero-in { height: 10.9in; padding: 0.6in 0.7in; grid-template-columns: 1fr; align-content: space-between; gap: 24pt; }
+  .hero h1 { font-size: 38pt; margin-top: 20pt; }
+  .tags { grid-template-columns: 1fr 1fr; }
+  .tag:nth-child(odd), .tag:nth-child(even) { margin: 0; }
+  .shell { display: block; padding: 0; max-width: none; }
+  main { padding: 0; }
+  .chapter { break-before: page; border: 0; padding-top: 0; }
+  .chapter.cont { break-before: auto; padding-top: 22pt; }
+  h2 { font-size: 21pt; margin-bottom: 4pt; } h3 { font-size: 12.5pt; margin-top: 14pt; break-after: avoid; } h4 { break-after: avoid; }
+  .chapter > header { border-bottom: 2pt solid var(--ember); padding-bottom: 8pt; break-after: avoid; break-inside: avoid; }
+  .table-wrap { overflow: visible; } table { min-width: 0; font-size: 8.8pt; } th, td { padding: 4pt 6pt; }
+  .grid3 { grid-template-columns: 1fr 1fr 1fr; } .grid2 { grid-template-columns: 1fr 1fr; }
+  .card, .callout, .steps > li, .wf, details.faq, .pipe { break-inside: avoid; }
+  .wf summary { padding: 7pt 10pt; } .wf .body { padding: 0 12pt 8pt 54pt; font-size: 9pt; } .wf .chev { display: none; }
+  .wfs { gap: 6pt; } .wf .t { font-size: 9.6pt; }
+  .photo { aspect-ratio: 16 / 9; }
+  .checks label { padding: 6pt 9pt; }
+  .foot { break-inside: avoid; margin-top: 18pt; padding: 10pt 0 0; }
+  .pb { break-before: page; margin-top: 0; }
+  #s-stepin td, #s-stepin th { padding: 2.2pt 6pt; font-size: 8.3pt; } #s-stepin h3 { margin-top: 8pt; } #s-stepin .card { padding: 6pt 9pt; } #s-stepin .card p { margin: 2pt 0; }
+  #s-routine h3 { margin-top: 10pt; } #s-routine .checks label { padding: 3pt 8pt; font-size: 9.5pt; }
+  #s-stepin .grid2 { grid-template-columns: 1fr 1fr 1fr; } #s-routine .checks { gap: 2.5pt; margin: 4pt 0; } #s-routine .checks label { padding: 2pt 8pt; font-size: 9.2pt; } #s-routine .callout { padding: 7pt 12pt; margin: 8pt 0; }
+  #dan .card p { font-size: 8.8pt; line-height: 1.38; } #dan .card { padding: 7pt 9pt; }
+  .wfs { display: block; } .wf { margin-bottom: 6pt; } .wfs > h4 { margin: 12pt 0 4pt !important; break-after: avoid; }
+  .checks { gap: 4pt; margin: 6pt 0; } .checks li { break-inside: avoid; } .checks label { padding: 4pt 8pt; } .checks small { font-size: 8.5pt; }
+  .grid2, .grid3 { gap: 8pt; margin: 8pt 0; } .card { padding: 8pt 10pt; } .card p { font-size: 9pt; }
+  .steps { gap: 6pt; margin: 8pt 0; } .steps > li { padding: 7pt 10pt 7pt 44pt; } .steps > li::before { left: 10pt; top: 7pt; width: 22pt; height: 22pt; font-size: 10pt; }
+  .hero .pphoto { display: block; width: 100%; height: 2.5in; object-fit: cover; object-position: 50% 30%; border-radius: 10pt; margin-top: 16pt; }
+  .hero-in > div:first-child { display: block; }
+}
+</style>
+</head>
+<body>
+
+<a class="sr" href="#start">Skip to the guide</a>
+
+<!-- ======================= HERO ======================= -->
+<header class="hero" id="top">
+  <div class="hero-in">
+    <div>
+      <img class="logo" src="%%LOGO%%" alt="First Chimney Contracting">
+      <h1>Andrew, here are the keys to your business.</h1>
+      <p class="sub">Your website, your CRM, 31 automations that work while you are on a roof, and how to run all of it from your phone. This is everything we built, how it fits together, and what to do each day.</p>
+      <img class="pphoto" src="%%TRUCK%%" alt="">
+      <div class="from"><img src="%%ANDREW%%" alt="Andrew Paterini"><div><b>Built for Andrew Paterini, owner</b>Delivered by Dan Gill III &middot; November 2026</div></div>
+    </div>
+    <div class="ring" aria-label="Your keys">
+      <div class="tags">
+        <a class="tag hot" href="https://app.gohighlevel.com/" target="_blank" rel="noopener"><b>Log in to your CRM</b><span>app.gohighlevel.com</span><i class="go">Open</i></a>
+        <a class="tag" href="#phone"><b>Get the phone app</b><span>Search &ldquo;HighLevel&rdquo; in your app store</span><i class="go">How</i></a>
+        <a class="tag" href="https://www.firstchimneycontracting.com" target="_blank" rel="noopener"><b>Your website</b><span>firstchimneycontracting.com</span><i class="go">Visit</i></a>
+        <a class="tag" href="https://api.leadconnectorhq.com/widget/booking/95Ph3MxzG1csiA2CyruI" target="_blank" rel="noopener"><b>Your booking page</b><span>Customers pick a time</span><i class="go">Try it</i></a>
+        <a class="tag" href="#dan"><b>Call in Dan</b><span>Phone number, voice AI, texting</span><i class="go">See</i></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="topnav" aria-label="Sections" id="topnav"></nav>
+
+<div class="shell">
+<aside class="side" aria-label="Sections">
+  <div class="brand">Andrew's Keys</div>
+  <div id="sidenav"></div>
+  <div class="tools no-print">
+    <button class="btn ghost sm" id="printBtn" type="button">Save as PDF / print</button>
+    <button class="btn ghost sm" id="resetBtn" type="button">Reset my checklists</button>
+  </div>
+</aside>
+
+<main id="start">
+
+<!-- ======================= 1 START HERE ======================= -->
+<section class="chapter" id="s-start" data-title="Start here">
+  <header>
+    <h2>Start here</h2>
+    <p>Hey Andrew. Dan here. Everything you need is in this one guide. Do these five things first and you are live. Tick them off as you go; this page remembers your progress on this device.</p>
+  </header>
+
+  <div class="progress no-print" aria-live="polite"><div class="bar"><i id="startBar"></i></div><span id="startCount">0 of 5 done</span></div>
+  <ul class="checks" id="startChecks">
+    <li><label><input type="checkbox" data-key="start1"><span><b>Find your invite email and set your password.</b><small>Look in your inbox (and spam or promotions) for an email inviting you to First Chimney Contracting. It comes from the CRM system, not from a person. Tap the button inside it and choose a password.</small></span></label></li>
+    <li><label><input type="checkbox" data-key="start2"><span><b>Log in and look around for two minutes.</b><small>Go to <a href="https://app.gohighlevel.com/" target="_blank" rel="noopener">app.gohighlevel.com</a> and sign in with Paterini@yahoo.com. Click Opportunities, Conversations and Contacts once each so you know where they live. Bookmark the page.</small></span></label></li>
+    <li><label><input type="checkbox" data-key="start3"><span><b>Install the phone app and sign in.</b><small>Step by step in <a href="#phone">Your phone</a>. Same email, same password.</small></span></label></li>
+    <li><label><input type="checkbox" data-key="start4"><span><b>Turn on notifications in the app.</b><small>This is how new leads and customer replies reach you in seconds. Steps in <a href="#phone">Your phone</a>.</small></span></label></li>
+    <li><label><input type="checkbox" data-key="start5"><span><b>Send Dan the short list in <a href="#todo">What I need from you</a>.</b><small>Your real business address, hours, brands, and a few approvals. Ten minutes, and it unlocks texting and the last site details.</small></span></label></li>
+  </ul>
+
+  <div class="callout">
+    <h4>The 30 second version of the whole system</h4>
+    <p>A homeowner finds your website, fills out a form or books a time. The CRM catches it, puts it in your pipeline, and alerts you. It also replies to them so they do not call the next company. You call, you book, you do the work. When you mark the job complete, the system asks for the review, asks for the referral, and reminds them again next year.</p>
+  </div>
+
+  <div class="callout warn">
+    <h4>One honest note: texting is not switched on yet</h4>
+    <p>Every automation that sends a text is built and published, but texts only go out once your business phone number is set up and approved by the carriers (a registration called A2P, which takes a few days). Emails and everything else work today. Dan and you finish the phone setup together; see <a href="#dan">Work with Dan</a>.</p>
+  </div>
+</section>
+
+<!-- ======================= 2 KEYS ======================= -->
+<section class="chapter" id="s-keys" data-title="Your keys">
+  <header>
+    <h2>Your keys: logins and links</h2>
+    <p>Everything you log into or send people to, in one place. Use the buttons to copy a link and paste it into a text.</p>
+  </header>
+
+  <div class="table-wrap"><table>
+    <thead><tr><th>What</th><th>Where</th><th>Notes</th><th class="no-print"></th></tr></thead>
+    <tbody>
+      <tr><td>CRM login</td><td><a href="https://app.gohighlevel.com/" target="_blank" rel="noopener">app.gohighlevel.com</a></td><td>Username is <b>Paterini@yahoo.com</b>. You set the password from the invite email. You are an admin: you can see and change everything.</td><td class="no-print"><button class="btn sm ghost copy" data-copy="https://app.gohighlevel.com/">Copy</button></td></tr>
+      <tr><td>Branded login address</td><td>my.dlgsolutions.com</td><td>This is the Dan-branded address for the same CRM. Use it once it loads for you. If it does not, the line above always works.</td><td class="no-print"><button class="btn sm ghost copy" data-copy="https://my.dlgsolutions.com/">Copy</button></td></tr>
+      <tr><td>Phone app</td><td>&ldquo;HighLevel&rdquo; in the App Store or Google Play</td><td>Some stores still list it as <b>LeadConnector</b>. Same sign-in as the website. See <a href="#phone">Your phone</a>.</td><td class="no-print"></td></tr>
+      <tr><td>Your website</td><td><a href="https://www.firstchimneycontracting.com" target="_blank" rel="noopener">www.firstchimneycontracting.com</a></td><td>Live now. Hosted on Vercel and updated by Dan. You do not need a login for it.</td><td class="no-print"><button class="btn sm ghost copy" data-copy="https://www.firstchimneycontracting.com">Copy</button></td></tr>
+      <tr><td>Booking page</td><td><a href="https://api.leadconnectorhq.com/widget/booking/95Ph3MxzG1csiA2CyruI" target="_blank" rel="noopener">Chimney Service calendar</a></td><td>Customers pick a 90 minute visit. Set your real hours first (see <a href="#todo">What I need from you</a>).</td><td class="no-print"><button class="btn sm ghost copy" data-copy="https://api.leadconnectorhq.com/widget/booking/95Ph3MxzG1csiA2CyruI">Copy</button></td></tr>
+      <tr><td>$199 holiday page</td><td><a href="https://www.firstchimneycontracting.com/199" target="_blank" rel="noopener">firstchimneycontracting.com/199</a></td><td>Short link for Facebook, flyers and the truck.</td><td class="no-print"><button class="btn sm ghost copy" data-copy="https://www.firstchimneycontracting.com/199">Copy</button></td></tr>
+      <tr><td>Free chimney health check</td><td><a href="https://www.firstchimneycontracting.com/check" target="_blank" rel="noopener">firstchimneycontracting.com/check</a></td><td>A 2 minute self assessment. Great text after a door knock.</td><td class="no-print"><button class="btn sm ghost copy" data-copy="https://www.firstchimneycontracting.com/check">Copy</button></td></tr>
+      <tr><td>Refer a friend</td><td><a href="https://www.firstchimneycontracting.com/refer" target="_blank" rel="noopener">firstchimneycontracting.com/refer</a></td><td>Give $25, get $25 with code NEIGHBOR25.</td><td class="no-print"><button class="btn sm ghost copy" data-copy="https://www.firstchimneycontracting.com/refer">Copy</button></td></tr>
+      <tr><td>Past customer stories</td><td><a href="https://www.firstchimneycontracting.com/review" target="_blank" rel="noopener">firstchimneycontracting.com/review</a></td><td>Where past customers share their experience with you, with permission.</td><td class="no-print"><button class="btn sm ghost copy" data-copy="https://www.firstchimneycontracting.com/review">Copy</button></td></tr>
+      <tr><td>Realtors and partners</td><td><a href="https://www.firstchimneycontracting.com/realtors" target="_blank" rel="noopener">firstchimneycontracting.com/realtors</a></td><td>Also /inspectors, /contractors, /landlords, /insurance. Each has a free guide.</td><td class="no-print"><button class="btn sm ghost copy" data-copy="https://www.firstchimneycontracting.com/realtors">Copy</button></td></tr>
+      <tr><td>Jobs and hiring</td><td><a href="https://www.firstchimneycontracting.com/jobs" target="_blank" rel="noopener">firstchimneycontracting.com/jobs</a></td><td>10 open roles with a resume upload. Applicants never enter your sales pipeline.</td><td class="no-print"><button class="btn sm ghost copy" data-copy="https://www.firstchimneycontracting.com/jobs">Copy</button></td></tr>
+      <tr><td>Your business line</td><td>(757) 589-0783</td><td>Shown on the website and used in every automation message. Alerts and calls go here today.</td><td class="no-print"></td></tr>
+      <tr><td>Dan</td><td><a href="mailto:dangill@summitmarketinggroup.co">dangill@summitmarketinggroup.co</a></td><td>Voice AI, texting setup, website changes, anything that looks off. Book a call: <a href="https://calendly.com/aivoice/call" target="_blank" rel="noopener">calendly.com/aivoice/call</a></td><td class="no-print"></td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="callout">
+    <h4>About your password</h4>
+    <p>Dan never sees it and neither does this guide. If you forget it, use &ldquo;Forgot password&rdquo; on the login page. Turn on two step sign in when the app offers it. Your CRM holds your customers' names and phone numbers, so treat it like the keys to the truck.</p>
+  </div>
+
+  <h3 class="no-print">Quick links into your CRM</h3>
+  <p class="no-print">These open once you are signed in.</p>
+  <div class="quick grid2 no-print" style="margin-top:6px">
+    <div>
+      <a href="https://app.gohighlevel.com/v2/location/agCfqvrQiesd0B3Fjb7n/opportunities/list" target="_blank" rel="noopener">Opportunities (your pipeline) <span>Open</span></a>
+      <a href="https://app.gohighlevel.com/v2/location/agCfqvrQiesd0B3Fjb7n/conversations/conversations" target="_blank" rel="noopener">Conversations (inbox) <span>Open</span></a>
+      <a href="https://app.gohighlevel.com/v2/location/agCfqvrQiesd0B3Fjb7n/contacts/smart_list/All" target="_blank" rel="noopener">Contacts <span>Open</span></a>
+    </div>
+    <div>
+      <a href="https://app.gohighlevel.com/v2/location/agCfqvrQiesd0B3Fjb7n/calendars/view" target="_blank" rel="noopener">Calendar <span>Open</span></a>
+      <a href="https://app.gohighlevel.com/v2/location/agCfqvrQiesd0B3Fjb7n/dashboard" target="_blank" rel="noopener">Dashboard <span>Open</span></a>
+      <a href="https://app.gohighlevel.com/v2/location/agCfqvrQiesd0B3Fjb7n/automation/workflows" target="_blank" rel="noopener">Automations <span>Open</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 3 WHAT WE BUILT ======================= -->
+<section class="chapter" id="s-built" data-title="What we built">
+  <header>
+    <h2>What we built: your website</h2>
+    <p>A website built to out-compete the established chimney companies, and to be found by Google and by AI assistants. You own it. Nothing here is a template.</p>
+  </header>
+
+  <div class="grid3">
+    <img class="photo" src="%%TRUCK%%" alt="Andrew Paterini with the First Chimney truck">
+    <img class="photo" src="%%JOB1%%" alt="Andrew repairing a chimney crown">
+    <img class="photo" src="%%JOB2%%" alt="Masonry repair under scaffolding">
+  </div>
+  <p>Every photo on the site is you, your crew and your jobs. We removed everything that belonged to other companies, and we did not write a single fake review.</p>
+
+  <h3>Pages that bring in work</h3>
+  <div class="grid2">
+    <div class="card"><h4>$199 holiday special</h4><p>Dedicated page, a popup that saves a coupon to a customer's phone, a banner, and a short link. Tagged in the CRM so the right follow up fires.</p></div>
+    <div class="card"><h4>Build Your Fireplace</h4><p>Customers design a fireplace from a real catalog of 230 models (Fireplace Xtrordinair, Lopi, Kozy Heat, Valor, Enviro, Modern Flames, SimpliFire), see a live preview, check heat sizing, and get a branded PDF. The build lands in your CRM as a project lead.</p></div>
+    <div class="card"><h4>Fireplace Shop</h4><p>11 categories and 230 product pages, each with its own search friendly page. Customers save products and ask you for a quote. Inquiry only, no prices or checkout, so you confirm fit and pricing.</p></div>
+    <div class="card"><h4>Services</h4><p>Inspections, cleaning, masonry, leak repair, caps, crowns, relining and fireplace repair, each with signs to look for, what is included, your process and FAQs.</p></div>
+    <div class="card"><h4>Service areas</h4><p>Virginia, New Jersey, Connecticut and Massachusetts, plus 20 city pages with local content. The city list is a proposal for you to confirm.</p></div>
+    <div class="card"><h4>Free chimney health check</h4><p>10 questions that score a home Urgent, Soon or Good, teach the homeowner, and send you the answers. Urgent tells them to stop using the fireplace and alerts you.</p></div>
+    <div class="card"><h4>Partners and real estate</h4><p>Pages for realtors, home inspectors, contractors, property managers and insurance pros, each with a 10% partner rate and a free guide. Level 2 inspection page for home sales.</p></div>
+    <div class="card"><h4>Careers and referrals</h4><p>10 job roles with resume upload, a Give $25 / Get $25 referral program, a yearly reminder sign up, and a place for past customers to share their story.</p></div>
+    <div class="card"><h4>Learn and trust</h4><p>A blog, a chimney fire news page with 18 real local reports, a resource center, your F.I.R.E. Certified Technician credential linked to the public directory, and a &ldquo;how to choose a chimney company&rdquo; page.</p></div>
+  </div>
+
+  <h3>Built to be found: Google and AI search</h3>
+  <p>Most chimney sites are invisible to AI assistants. Yours is written for them on purpose.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>What</th><th>What it does for you</th></tr></thead>
+    <tbody>
+      <tr><td>About 300 real pages</td><td>Every service, state, city and product has its own page that loads fast and can be read by search engines without running scripts. All are listed in the sitemap.</td></tr>
+      <tr><td>llms.txt and llms-full.txt</td><td>Plain text files at <a href="https://www.firstchimneycontracting.com/llms.txt" target="_blank" rel="noopener">/llms.txt</a> that tell AI assistants like ChatGPT, Gemini, Perplexity and Claude who you are, what you do, where you work and what you charge for. This is the &ldquo;GEO&rdquo; (generative engine optimization) layer.</td></tr>
+      <tr><td>Structured data</td><td>Hidden labels on every page (business, services, offers, FAQs, articles, products and job postings) so Google can show rich results and AI can quote you correctly.</td></tr>
+      <tr><td>Crawlers welcomed</td><td>robots.txt explicitly allows the major search and AI crawlers. Canonical addresses are set so Google sees one site, not two.</td></tr>
+      <tr><td>Speed</td><td>The hero video is 1.75 MB (the old site shipped a 38 MB one). Fast pages rank and convert better, especially on phones.</td></tr>
+      <tr><td>Honest content</td><td>No invented reviews, no borrowed credentials, no claims we could not back up. Google and AI both reward that over time.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout">
+    <h4>What helps rankings most from here</h4>
+    <p>1) Create and verify your Google Business Profile. 2) Ask every customer for a Google review (the CRM does the asking). 3) Keep your hours and service area accurate. We built the foundation; reviews and your profile are what move you up the map.</p>
+  </div>
+
+  <h3>How to change the website</h3>
+  <p>Your products, brands, prices, cities, hours and offers all live in simple files that Dan updates, usually the same day. Text Dan or email him what you want changed. Examples: turn a brand off if you do not sell it, confirm the $199 terms, add real reviews, add job photos. You never have to touch code.</p>
+</section>
+
+<!-- ======================= 4 FLOW ======================= -->
+<section class="chapter cont" id="s-flow" data-title="Website to CRM">
+  <header>
+    <h2>How the website talks to your CRM</h2>
+    <p>No copy and paste, ever. Every form on the site feeds the CRM the moment someone hits Send.</p>
+  </header>
+
+  <div class="flow">
+    <div><b>1. Visitor</b><span>Fills out a form, books a time, designs a fireplace or takes the health check.</span></div>
+    <div><b>2. Your site</b><span>Checks the form, blocks spam, and sends it securely to the CRM.</span></div>
+    <div><b>3. CRM record</b><span>Creates or updates the contact, fills the custom fields, adds tags and a note.</span></div>
+    <div><b>4. Pipeline</b><span>Opens the right opportunity in the right stage (Jobs, Fireplace Projects, Partners or Recruiting).</span></div>
+    <div><b>5. Automation</b><span>The tag starts a workflow: alert to you, reply to them, follow ups.</span></div>
+  </div>
+
+  <p>If the same person fills out another form later, the system finds them by email or phone and updates the same contact instead of making a duplicate. It also re-fires the automations so a repeat customer is treated like a fresh lead.</p>
+
+  <h3>Each form, where it goes, and what it triggers</h3>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Form on the site</th><th>Pipeline and stage</th><th>Tags it adds</th><th>Automation</th></tr></thead>
+    <tbody>
+      <tr><td>$199 holiday request</td><td>Jobs &rarr; New Lead ($199 value)</td><td>Website Lead, Holiday Special - $199</td><td>01 New Lead, 03 Holiday Follow-Up</td></tr>
+      <tr><td>Saved holiday coupon (popup)</td><td>Jobs &rarr; New Lead</td><td>Website Lead, Holiday Special - $199</td><td>01, 03</td></tr>
+      <tr><td>Contact form</td><td>Jobs &rarr; New Lead</td><td>Website Lead</td><td>01</td></tr>
+      <tr><td>Service request (service pages)</td><td>Jobs &rarr; New Lead</td><td>Website Lead, Service: (the service)</td><td>01</td></tr>
+      <tr><td>Chimney health check</td><td>Jobs &rarr; New Lead</td><td>Website Lead, Chimney Health Check, Health Check: Urgent / Soon / Good</td><td>01, 04 Health Check Router</td></tr>
+      <tr><td>Build Your Fireplace</td><td>Jobs &rarr; New Lead and Fireplace Projects &rarr; New Design Request</td><td>Website Lead, Fireplace Design Request</td><td>01, 14 Fireplace Project</td></tr>
+      <tr><td>Fireplace Shop quote</td><td>Jobs &rarr; New Lead and Fireplace Projects &rarr; New Design Request</td><td>Website Lead, Product Quote Request</td><td>01, 14</td></tr>
+      <tr><td>Refer a friend</td><td>Jobs &rarr; New Lead</td><td>Website Lead, Referral</td><td>01, 10 Referral Received</td></tr>
+      <tr><td>Partner call request</td><td>Partners &rarr; New Partner</td><td>Referral Partner, Partner: (role)</td><td>11 Partner Nurture</td></tr>
+      <tr><td>Job application</td><td>Recruiting &rarr; Applied</td><td>Job Applicant, Recruiting, Applied: (role)</td><td>12 Job Applicant</td></tr>
+      <tr><td>Past customer story</td><td>No opportunity (not a sale)</td><td>Testimonial</td><td>09 Testimonial Received</td></tr>
+      <tr><td>Yearly reminder sign up</td><td>No opportunity</td><td>Annual Reminder</td><td>08 Annual Reminder</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>What gets saved on each contact</h3>
+  <p>Open any contact in the CRM and you will see the details the website captured, so you never have to ask twice: which form, which service, preferred timeframe, promo code, the page they landed on and where the visit came from (Google, Facebook, a flyer), their health check result and answers, fireplace design and products, referral details, job application answers and a link to their resume, and the website reference number (FC-XXXXXXX) for support.</p>
+  <div class="callout dark">
+    <h4>Under the hood, for the curious</h4>
+    <p>The website sends each submission to a secure endpoint that calls the CRM's own API with a private key stored on the server, never in the page. It looks up the custom fields by name, so the mapping is exact. We also built a webhook path as a backup. We tested every form against the live site before handing it over.</p>
+  </div>
+</section>
+
+<!-- ======================= 5 CRM TOUR ======================= -->
+<section class="chapter" id="s-tour" data-title="Your CRM tour">
+  <header>
+    <h2>Your CRM, menu by menu</h2>
+    <p>The left side of the screen is your whole business. Here is what each button is for and how often you will use it.</p>
+  </header>
+
+  <div class="table-wrap"><table>
+    <thead><tr><th>Menu</th><th>What it is</th><th>You use it</th></tr></thead>
+    <tbody>
+      <tr><td>Conversations</td><td>Your universal inbox. Texts, emails, calls, web chat and Facebook or Instagram messages from every customer in one thread per person. Reply from here or from the app. Filter by Unread, Recents or Assigned to you.</td><td>Every day</td></tr>
+      <tr><td>Opportunities</td><td>Your pipelines. Each job or project is a card. Drag it to the next stage and the automations take over.</td><td>Every day</td></tr>
+      <tr><td>Contacts</td><td>Everyone you have ever dealt with. Search by name, phone or tag. Open a person to see their full history, notes, tasks, appointments and fields.</td><td>Every day</td></tr>
+      <tr><td>Calendars</td><td>Your schedule and the booking page. Customers book 90 minute visits; they land here and trigger confirmations and reminders.</td><td>Every day</td></tr>
+      <tr><td>Dashboard</td><td>Leads, appointments, opportunities and conversations at a glance. Good for your Friday review.</td><td>Weekly</td></tr>
+      <tr><td>Payments</td><td>Invoices, estimates, payment links, text to pay and card on file. Ready to switch on with Dan.</td><td>Once set up</td></tr>
+      <tr><td>Marketing</td><td>Email and text campaigns, social planner, templates. The seasonal campaigns run from tags (see Automations).</td><td>Monthly</td></tr>
+      <tr><td>Automation</td><td>Your 31 workflows. You can read every step. Please let Dan change them so nothing breaks.</td><td>Rarely</td></tr>
+      <tr><td>AI Agents</td><td>Where Voice AI and Conversation AI live. Not switched on yet.</td><td>When ready</td></tr>
+      <tr><td>Sites</td><td>Forms, funnels and chat widget tools. Your main site is hosted separately, so you will not need this much.</td><td>Rarely</td></tr>
+      <tr><td>Media Storage</td><td>Files and images, including applicant resumes uploaded from the careers page.</td><td>Sometimes</td></tr>
+      <tr><td>Reputation</td><td>Review requests and your Google reviews in one place. Needs your Google Business Profile link.</td><td>Weekly once set up</td></tr>
+      <tr><td>Settings</td><td>Business profile, your profile and notifications, phone numbers, calendars, custom fields and values, tags, team.</td><td>Setup only</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Reading a contact record</h3>
+  <ul>
+    <li><b>Top card:</b> name, phone, email, tags. Tap the phone number to call or the message icon to text.</li>
+    <li><b>Notes:</b> the website writes a note with everything the customer typed and the page they were on. Add your own notes after every call.</li>
+    <li><b>Tasks:</b> reminders for you. Some automations create them.</li>
+    <li><b>Opportunities:</b> the jobs tied to this person and which stage each is in.</li>
+    <li><b>Tags:</b> labels that drive automations. Adding or removing the wrong tag can start or stop messages, so use the ones listed in <a href="#stepin">When to step in</a>.</li>
+  </ul>
+  <div class="callout">
+    <h4>Test contacts you may see</h4>
+    <p>During setup we sent test forms through the live site. Contacts named <b>QA ...</b> or tagged <b>QA Test - safe to delete</b> are tests. Ignore them. Dan will clear them out.</p>
+  </div>
+</section>
+
+<!-- ======================= 6 PIPELINES ======================= -->
+<section class="chapter cont" id="s-pipes" data-title="Pipelines">
+  <header>
+    <h2>Your pipelines and stages</h2>
+    <p>You have four pipelines. The one you live in is <b>Jobs</b>. Moving a card from stage to stage is the only &ldquo;data entry&rdquo; you do, and it runs the follow up for you.</p>
+  </header>
+
+  <div class="pipe"><h4>Jobs <small>every homeowner request, from first click to review</small></h4>
+    <div class="bricks"><span>New Lead</span><span>Contacted</span><span>Scheduled</span><span>Inspected / Cleaned</span><span>Estimate Sent</span><span>Approved</span><span>Job Complete</span><span>Review Requested</span><span class="end">Lost</span></div></div>
+  <div class="pipe"><h4>Fireplace Projects <small>design and shop requests</small></h4>
+    <div class="bricks"><span>New Design Request</span><span>Consult Scheduled</span><span>Proposal Sent</span><span>Approved / Ordered</span><span>Installed</span><span class="end">Lost</span></div></div>
+  <div class="pipe"><h4>Partners <small>realtors, inspectors, contractors, property managers, insurance</small></h4>
+    <div class="bricks"><span>New Partner</span><span>Intro Call</span><span>First Referral Sent</span><span>Active Partner</span><span class="end">Inactive</span></div></div>
+  <div class="pipe"><h4>Recruiting <small>job applicants only</small></h4>
+    <div class="bricks"><span>Applied</span><span>Phone Screen</span><span>Working Interview</span><span>Offer</span><span>Hired</span><span class="end">Not a Fit</span></div></div>
+
+  <h3 class="pb">The Jobs pipeline, stage by stage</h3>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Stage</th><th>What it means</th><th>What happens automatically</th><th>You</th></tr></thead>
+    <tbody>
+      <tr><td>New Lead</td><td>The website just captured them.</td><td>Alert to you, instant reply to them, nag if no one has called in 10 minutes.</td><td>Call within 10 minutes. Then move to Contacted.</td></tr>
+      <tr><td>Contacted</td><td>You spoke or texted with them.</td><td>Contacted tag added.</td><td>Offer a time, then book it.</td></tr>
+      <tr><td>Scheduled</td><td>A visit is on the calendar.</td><td>Scheduled tag; confirmation and reminders when booked through the calendar; $199 follow ups stop.</td><td>Show up on time.</td></tr>
+      <tr><td>Inspected / Cleaned</td><td>You did the visit.</td><td>Thank you text, added to the yearly list, a reminder to send the estimate.</td><td>Send the estimate within a day.</td></tr>
+      <tr><td>Estimate Sent</td><td>Price is with the customer.</td><td>Follow ups on day 2, 5 and 10. At day 30 with no answer it moves to Lost and starts a gentle nurture.</td><td>Answer questions. Move to Approved when they say yes.</td></tr>
+      <tr><td>Approved</td><td>They said yes.</td><td>Alert to you (order materials, collect deposit), confirmation text, and a &ldquo;what happens next&rdquo; email to them.</td><td>Schedule the work.</td></tr>
+      <tr><td>Job Complete</td><td>Work finished.</td><td>Past Customer and yearly reminder tags, review request after 2 hours, a check in on day 7, a referral ask on day 14, fireplace tips on day 44.</td><td>Move it the same day. This single move earns you reviews.</td></tr>
+      <tr><td>Review Requested</td><td>The review ask went out.</td><td>Set automatically.</td><td>Watch for the Google review and reply to it.</td></tr>
+      <tr><td>Lost</td><td>Not moving forward.</td><td>Estimate - No Decision tag, then check ins at day 30, 90 and 180.</td><td>Add a note why. Nothing else.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="callout good">
+    <h4>The one habit that makes it all work</h4>
+    <p>Move the card the moment the stage changes. The automations watch the stage. If a card sits in the wrong column, the customer gets the wrong message or none at all.</p>
+  </div>
+</section>
+
+<!-- ======================= 7 AUTOMATIONS ======================= -->
+<section class="chapter" id="s-auto" data-title="Automations">
+  <header>
+    <h2>Your 31 automations</h2>
+    <p>All 31 are built, published and switched on. This is what each one does, what starts it, and what you do. Search or filter by group.</p>
+  </header>
+
+  <div class="callout">
+    <h4>Rules every automation follows</h4>
+    <ul>
+      <li>Nobody who replied &ldquo;STOP&rdquo; or is tagged <b>Do Not Contact</b> gets another message.</li>
+      <li>Marketing texts only go to people who ticked the SMS consent box on the website.</li>
+      <li>If a customer replies, the follow up sequence for them stops, and you get an alert.</li>
+      <li>Reviews are requested from every completed customer, never only the happy ones, and nothing is ever offered in exchange for a review. That keeps you inside Google and FTC rules.</li>
+      <li>New lead and customer reply alerts reach you by email today. Text alerts and all customer texts start once your phone number is approved.</li>
+    </ul>
+  </div>
+
+  <div class="tools-row no-print">
+    <input class="search" id="wfSearch" type="search" placeholder="Search automations" aria-label="Search automations">
+    <span id="wfChips"></span>
+  </div>
+  <div class="wfs" id="wfList"></div>
+  <p class="no-print" style="color:var(--mute);font-size:.9rem" id="wfCount"></p>
+
+  <h3>Running the seasonal campaigns</h3>
+  <p>Four campaigns run on a tag. In Contacts, filter the people you want (for example everyone tagged <b>Past Customer</b> but not <b>Do Not Contact</b>), select all, choose <b>Add tag</b>, and type the campaign tag. The automation sends, then removes the tag so you can run it again next year.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>When</th><th>Tag to add</th><th>Message</th></tr></thead>
+    <tbody>
+      <tr><td>Late August</td><td>Campaign: Fall Rush</td><td>Book your cleaning and inspection before the rush.</td></tr>
+      <tr><td>Early March</td><td>Campaign: Spring Masonry</td><td>Fix leaks, crowns and loose brick before summer storms.</td></tr>
+      <tr><td>November</td><td>Campaign: Pre-Snow</td><td>Cleaning and inspection for $199 before the first snow.</td></tr>
+      <tr><td>Any slow month</td><td>Campaign: Reactivation</td><td>&ldquo;Still thinking about your chimney?&rdquo; to old leads.</td></tr>
+      <tr><td>Anytime you run the holiday offer</td><td>Campaign: Holiday 199</td><td>The $199 offer with two follow ups.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- ======================= 8 STEP IN ======================= -->
+<section class="chapter cont" id="s-stepin" data-title="When to step in">
+  <header>
+    <h2>When you need to step in</h2>
+    <p>The system handles the routine. These are the moments that need a human, and you will always be told.</p>
+  </header>
+
+  <div class="table-wrap"><table>
+    <thead><tr><th>You get this</th><th>It means</th><th>Do this</th></tr></thead>
+    <tbody>
+      <tr><td>&ldquo;New website lead&rdquo; email</td><td>Someone wants chimney work.</td><td>Call within 10 minutes. Speed wins the job. Move to Contacted.</td></tr>
+      <tr><td>Health check marked <b>Urgent</b></td><td>Their answers suggest a real safety problem.</td><td>Call right away. They were told to stop using the fireplace.</td></tr>
+      <tr><td>&ldquo;Reply from (name)&rdquo;</td><td>A customer answered a message.</td><td>Reply in Conversations the same day. Automated follow ups stop for them.</td></tr>
+      <tr><td>Stale lead alert</td><td>A lead sat 2 days in New Lead, Contacted or Inspected. (Goes to Dan by email today; to you by text once the phone is live.)</td><td>Call or close it out as Lost with a note.</td></tr>
+      <tr><td>Job Approved alert</td><td>They said yes.</td><td>Order materials, take the deposit, schedule the work.</td></tr>
+      <tr><td>Missed call alert</td><td>Someone called and you did not answer. They were auto texted. (Needs the phone number.)</td><td>Call back when you are down.</td></tr>
+      <tr><td>New partner</td><td>A realtor, inspector or contractor asked for a call.</td><td>Call within 3 days. A task is created.</td></tr>
+      <tr><td>New job applicant</td><td>Someone applied, with a resume link.</td><td>Review within 3 days. Move through Recruiting.</td></tr>
+      <tr><td>New testimonial</td><td>A past customer wrote a few words and said whether you may publish them.</td><td>If permission is Yes, send it to Dan to add to the site. Otherwise keep it private.</td></tr>
+      <tr><td>Referral received</td><td>A customer sent a friend.</td><td>Call the friend, mention who sent them.</td></tr>
+      <tr><td>Referral reward owed</td><td>You add this tag to the <b>referrer</b> when their friend's first job is done.</td><td>Apply the $25 credit. The system thanks them.</td></tr>
+      <tr><td>Review left</td><td>A customer posted a Google review.</td><td>Reply on Google. Add the tag <b>Review Left</b> so they are not asked again.</td></tr>
+      <tr><td>Someone asks to stop</td><td>They do not want messages.</td><td>Add the tag <b>Do Not Contact</b>. It blocks all channels and stops every automation.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Tags you may add yourself</h3>
+  <div class="grid2">
+    <div class="card"><h4>Door Knock</h4><p>After meeting someone on a street or at a door. Sends the free health check an hour later, then a nudge.</p></div>
+    <div class="card"><h4>Do Not Contact</h4><p>Stops every message to that person.</p></div>
+    <div class="card"><h4>Review Left</h4><p>They posted a review. Stops further asks.</p></div>
+    <div class="card"><h4>Referral Reward Owed</h4><p>Add to the referrer when the friend's job is complete.</p></div>
+    <div class="card"><h4>Annual Reminder</h4><p>Puts a past customer on the yearly rebook list.</p></div>
+    <div class="card"><h4>Campaign: (name)</h4><p>Starts a seasonal campaign, then removes itself.</p></div>
+  </div>
+</section>
+
+<!-- ======================= 9 ROUTINE ======================= -->
+<section class="chapter" id="s-routine" data-title="Daily routine">
+  <header>
+    <h2>Your daily, weekly and monthly routine</h2>
+    <p>Fifteen minutes a day keeps the machine running. Tick these off; they reset when you press the reset button on the side menu.</p>
+  </header>
+
+  <div class="callout">
+    <h4>Your speed to lead rule</h4>
+    <p>The first company to call usually gets the job. Answer new leads in 10 minutes and you beat most of the market. If you are on a roof, reply by text from the app (&ldquo;On a roof, will call you at 4. Does that work?&rdquo;). That keeps them with you.</p>
+  </div>
+
+  <div class="grid2">
+    <div>
+      <h3 style="margin-top:0">Every morning (10 minutes)</h3>
+      <ul class="checks">
+        <li><label><input type="checkbox" data-key="d1"><span>Open <b>Conversations</b>. Answer everything unread.</span></label></li>
+        <li><label><input type="checkbox" data-key="d2"><span>Open <b>Opportunities &rarr; Jobs</b>. Clear the <b>New Lead</b> column: call everyone in it.</span></label></li>
+        <li><label><input type="checkbox" data-key="d3"><span>Check <b>Calendars</b> for today's visits and addresses.</span></label></li>
+        <li><label><input type="checkbox" data-key="d4"><span>Look at any <b>Urgent</b> health check and <b>Stale</b> alerts from overnight.</span></label></li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="margin-top:0">At the end of the day (5 minutes)</h3>
+      <ul class="checks">
+        <li><label><input type="checkbox" data-key="e1"><span>Drag every card to its true stage: Scheduled, Inspected, Estimate Sent, Approved, <b>Job Complete</b>.</span></label></li>
+        <li><label><input type="checkbox" data-key="e2"><span>Add a quick note on each call or visit.</span></label></li>
+        <li><label><input type="checkbox" data-key="e3"><span>Send any estimates that are waiting.</span></label></li>
+        <li><label><input type="checkbox" data-key="e4"><span>Tag anyone who asked to stop with <b>Do Not Contact</b>.</span></label></li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Every Friday (20 minutes)</h3>
+  <ul class="checks">
+    <li><label><input type="checkbox" data-key="w1"><span>Open the <b>Dashboard</b>. Write down: leads in, visits done, estimates sent, jobs won, jobs complete.</span></label></li>
+    <li><label><input type="checkbox" data-key="w2"><span>Scan <b>Opportunities</b> for cards sitting too long. Call, or move to Lost with a note.</span></label></li>
+    <li><label><input type="checkbox" data-key="w3"><span>Check <b>Reputation</b> or Google for new reviews and reply to each.</span></label></li>
+    <li><label><input type="checkbox" data-key="w4"><span>Look at <b>Recruiting</b> and <b>Partners</b> for anyone waiting on you.</span></label></li>
+    <li><label><input type="checkbox" data-key="w5"><span>Ask one partner (realtor, inspector, contractor) for a coffee or send them the guide link.</span></label></li>
+  </ul>
+
+  <h3>Every month</h3>
+  <ul class="checks">
+    <li><label><input type="checkbox" data-key="m1"><span>Add finished jobs to the <b>yearly reminder</b> list if they are missing the tag.</span></label></li>
+    <li><label><input type="checkbox" data-key="m2"><span>Run the season's campaign tag (see <a href="#s-auto">Automations</a>).</span></label></li>
+    <li><label><input type="checkbox" data-key="m3"><span>Send Dan your list of changes: new photos, new reviews, price or offer changes, brands.</span></label></li>
+    <li><label><input type="checkbox" data-key="m4"><span>Skim your <b>Owner's Operating Manual</b> chapter for the month (marketing calendar, networking dates).</span></label></li>
+  </ul>
+
+</section>
+
+<!-- ======================= 10 PHONE ======================= -->
+<section class="chapter" id="phone" data-title="Your phone">
+  <header>
+    <h2>Your phone: app, login and notifications</h2>
+    <p>The app is your business in your pocket. Install it once and set the notifications. Ten minutes.</p>
+  </header>
+
+  <h3>1. Get your password</h3>
+  <ol class="steps">
+    <li><b>Look for the invite email.</b> It was sent to Paterini@yahoo.com when Dan added you. Search your inbox for &ldquo;First Chimney&rdquo; or &ldquo;invited&rdquo; and check spam and promotions.</li>
+    <li><b>Tap the button inside</b> and choose a password. Use a long one you do not use anywhere else.</li>
+    <li><b>No email?</b> Go to the login page, tap Forgot password, and enter Paterini@yahoo.com. Still nothing? Tell Dan and he will resend it.</li>
+  </ol>
+
+  <h3>2. Log in on a computer</h3>
+  <ol class="steps">
+    <li>Go to <a href="https://app.gohighlevel.com/" target="_blank" rel="noopener">app.gohighlevel.com</a>. Enter Paterini@yahoo.com and your password.</li>
+    <li>You will land in First Chimney Contracting. If you ever see more than one business, pick First Chimney Contracting from the top left.</li>
+    <li>Bookmark it. The branded address my.dlgsolutions.com opens the same place once it loads for you.</li>
+  </ol>
+
+  <h3>3. Install the phone app</h3>
+  <ol class="steps">
+    <li><b>iPhone:</b> open the App Store and search <b>HighLevel</b>. <b>Android:</b> open Google Play and search <b>HighLevel</b>. Some stores still show it under the older name <b>LeadConnector</b>. It is free.</li>
+    <li>Open it and sign in with the same email and password as the website. There is no separate account.</li>
+    <li>Allow notifications when the phone asks. If you tapped &ldquo;Don't allow&rdquo; by mistake, turn it back on in your phone's Settings, under Notifications, for the app.</li>
+    <li>Turn on Face ID or fingerprint if offered, and two step sign in if it asks.</li>
+    <li>Add the app to your home screen next to your phone and messages. In the app you can reply to customers, see your pipeline, open contacts, and check your calendar.</li>
+  </ol>
+
+  <h3>4. Turn on notifications so you hear about every lead</h3>
+  <p>The CRM has two layers. Both matter.</p>
+  <div class="grid2">
+    <div class="card"><h4>Layer 1: email alerts (already running)</h4><p>Every new lead and every customer reply triggers an email that copies you. Make sure these never land in spam: open one, mark it &ldquo;Not spam&rdquo;, and add the sender to your contacts. Turn on email notifications on your phone's mail app for that inbox.</p></div>
+    <div class="card"><h4>Layer 2: app notifications (you set these)</h4><p>In the app or on the website, open <b>Settings &rarr; My Profile &rarr; Notifications</b>. For each type, choose the channels you want: in app, email, mobile (push) and text. Turn on <b>every</b> option for inbound messages, appointments, tasks and reviews. These use your phone's push alerts, which are the fastest.</p></div>
+  </div>
+  <ul class="checks no-print">
+    <li><label><input type="checkbox" data-key="n1"><span>Allowed notifications for the app in my phone's Settings.</span></label></li>
+    <li><label><input type="checkbox" data-key="n2"><span>In Settings &rarr; My Profile &rarr; Notifications, turned on Mobile and Email for new messages, appointments, tasks and reviews.</span></label></li>
+    <li><label><input type="checkbox" data-key="n3"><span>Marked a CRM email &ldquo;Not spam&rdquo; and added it to my contacts.</span></label></li>
+    <li><label><input type="checkbox" data-key="n4"><span>Sent myself a test: asked Dan to text my business number, and saw it appear in Conversations.</span></label></li>
+  </ul>
+  <div class="callout warn">
+    <h4>Heads up on text alerts</h4>
+    <p>The automations also text you for new leads and replies. Those texts, and all customer texts, begin after your phone number is registered. Until then, email and push alerts are how you get notified. Dan will confirm once texting is live.</p>
+  </div>
+
+  <h3>5. Using the app on the roof</h3>
+  <ul>
+    <li><b>Conversations</b> tab: swipe to reply. Tap the microphone to dictate if your hands are dirty.</li>
+    <li><b>Opportunities</b>: tap a card, change the stage. This is how you run the pipeline from the truck.</li>
+    <li><b>Contacts</b>: search a name or phone number. Tap to call or text. Add a note by voice.</li>
+    <li><b>Calendar</b>: tap a visit to get the address and call the customer.</li>
+  </ul>
+  <p style="color:var(--mute);font-size:.92rem">App store listings and menu names change from time to time. If something looks different, the idea is the same: Conversations, Contacts, Opportunities, Calendar. Text Dan a screenshot and he will point you.</p>
+</section>
+
+<!-- ======================= 11 CAPABILITIES ======================= -->
+<section class="chapter" id="s-can" data-title="What it can do">
+  <header>
+    <h2>What your CRM can do</h2>
+    <p>You have a full business platform, not just a lead inbox. Here is everything in it and exactly where each piece stands today.</p>
+  </header>
+
+  <div class="callout">
+    <p style="margin:0"><span class="chip live">Live now</span> works today &nbsp; <span class="chip phone">Needs phone</span> turns on once your business number is approved &nbsp; <span class="chip ready">Ready when you are</span> available in your account; tell Dan and he switches it on</p>
+  </div>
+
+  <div class="grid3" id="capGrid"></div>
+
+  <div class="callout dark">
+    <h4>You do not have to learn all of this</h4>
+    <p>The goal is simple: more booked jobs, fewer missed ones, more reviews, more repeat customers. Start with the daily routine. When you are ready for the next piece, tell Dan which one and we will turn it on, test it and show you how it works.</p>
+  </div>
+</section>
+
+<!-- ======================= 12 DAN ======================= -->
+<section class="chapter" id="dan" data-title="Work with Dan">
+  <header>
+    <h2>Work with Dan: what we can turn on next</h2>
+    <p>Everything below is available in your account. Say the word and Dan sets it up, tests it, and shows you the result.</p>
+  </header>
+
+  <div class="callout">
+    <h4>How to ask</h4>
+    <p>Email <a href="mailto:dangill@summitmarketinggroup.co">dangill@summitmarketinggroup.co</a> or book time at <a href="https://calendly.com/aivoice/call" target="_blank" rel="noopener">calendly.com/aivoice/call</a>. Tell Dan which number (1 to 10) you want next.</p>
+  </div>
+
+  <div class="grid2">
+    <div class="card"><h4>1. Your business phone and texting <span class="chip phone">First</span></h4><p>A local number in your CRM that forwards to your cell (or a port of your 757 line later), plus the carrier registration (A2P 10DLC) that lets the automations text. This unlocks every customer text, text alerts to you, and missed call text back. Takes a few days to approve. <b>Do this first.</b></p></div>
+    <div class="card"><h4>2. Voice AI <span class="chip ready">Ready when you are</span></h4><p>An AI receptionist that answers your calls 24/7 when you are on a roof or after hours. It speaks naturally, answers common questions in your voice, collects the problem and address, books the visit on your calendar, and texts you a summary. Roofers and chimney pros miss 3 to 5 calls a day; this catches them.</p></div>
+    <div class="card"><h4>3. Conversational AI <span class="chip ready">Ready when you are</span></h4><p>An AI that answers texts, website chat, Facebook and Instagram messages and Google messages instantly. It qualifies the lead, answers pricing and service questions you approve, and books the appointment. You take over any conversation with one tap.</p></div>
+    <div class="card"><h4>4. Website chat widget <span class="chip ready">Ready when you are</span></h4><p>A chat bubble on your site that captures visitors who are not ready to fill out a form, and hands them to the AI or to you.</p></div>
+    <div class="card"><h4>5. Payments, invoices and estimates <span class="chip ready">Ready when you are</span></h4><p>Send estimates and invoices by text or email, take cards and tap to pay, store a card on file, and track what is paid. Connects to a payment processor in your name.</p></div>
+    <div class="card"><h4>6. Contracts and e-signature <span class="chip ready">Ready when you are</span></h4><p>Turn an estimate into a signed contract from a phone. Templates for your standard work, signed copies saved to the customer.</p></div>
+    <div class="card"><h4>7. Reputation management <span class="chip ready">Ready when you are</span></h4><p>Automatic review requests (already built), a Google review button on your site, and one place to see and answer reviews. Needs your Google Business Profile link.</p></div>
+    <div class="card"><h4>8. Email and text marketing <span class="chip ready">Ready when you are</span></h4><p>Newsletters, seasonal blasts, a database reactivation push, and the yearly reminder to every past customer. Needs your real mailing address for the email footer.</p></div>
+    <div class="card"><h4>9. Social media planner <span class="chip ready">Ready when you are</span></h4><p>Schedule posts to Facebook, Instagram and Google from one place, using your real job photos and a 30 day plan.</p></div>
+    <div class="card"><h4>10. Reports <span class="chip ready">Ready when you are</span></h4><p>Where jobs come from (Google, Facebook, referrals, flyers), cost per lead and close rate, so you spend money only where it pays.</p></div>
+  </div>
+
+</section>
+
+<!-- ======================= 13 TO DO ======================= -->
+<section class="chapter" id="todo" data-title="What I need from you">
+  <header>
+    <h2>What I need from you</h2>
+    <p>These few details finish the build. Reply to Dan with answers; he updates the website and the CRM. Tick them off as you send them.</p>
+  </header>
+
+  <ul class="checks">
+    <li><label><input type="checkbox" data-key="t1"><span><b>Your real business address.</b><small>The CRM has a placeholder (Virginia Beach, VA 23451). Marketing emails legally need a real postal address in the footer.</small></span></label></li>
+    <li><label><input type="checkbox" data-key="t2"><span><b>Your working hours.</b><small>The booking calendar uses placeholder hours: Mon to Fri 8 to 5, Saturday 9 to 1, 90 minute visits. Tell Dan what is true.</small></span></label></li>
+    <li><label><input type="checkbox" data-key="t3"><span><b>The $199 terms.</b><small>Is cleaning always included? One flue or the whole home? When does it end? The site now says &ldquo;tell us how many, we confirm pricing before the visit.&rdquo;</small></span></label></li>
+    <li><label><input type="checkbox" data-key="t4"><span><b>Which fireplace brands you really sell and install.</b><small>The shop shows all seven. Dan turns off the ones you are not an authorized dealer or installer for.</small></span></label></li>
+    <li><label><input type="checkbox" data-key="t5"><span><b>Confirm the 20 city pages.</b><small>Which towns you actually serve in each state. Dan removes any you do not.</small></span></label></li>
+    <li><label><input type="checkbox" data-key="t6"><span><b>Your Google Business Profile link.</b><small>Create and verify it (chapter 11 of your Owner's Manual), then send Dan the review link. It switches on &ldquo;Review us on Google&rdquo; on the site and in the review automations.</small></span></label></li>
+    <li><label><input type="checkbox" data-key="t7"><span><b>Facebook and Instagram addresses.</b><small>They appear in the website footer once Dan has them.</small></span></label></li>
+    <li><label><input type="checkbox" data-key="t8"><span><b>Confirm info@firstchimneycontracting.com gets mail.</b><small>It is shown across the site and used as the CRM's business email.</small></span></label></li>
+    <li><label><input type="checkbox" data-key="t9"><span><b>Confirm your numbers.</b><small>10 years in the chimney industry for you, 25 years combined for your crew, and that homeowners are fine with their homes appearing in your photos.</small></span></label></li>
+    <li><label><input type="checkbox" data-key="t10"><span><b>Decide how to handle your phone number.</b><small>New local number that forwards to your cell, or port your 757 number later. Dan recommends starting with the new number.</small></span></label></li>
+    <li><label><input type="checkbox" data-key="t11"><span><b>Real reviews and job photos.</b><small>Send past customers the link firstchimneycontracting.com/review. Send Dan before and after photos with the homeowner's OK. They go straight onto the site.</small></span></label></li>
+  </ul>
+</section>
+
+<!-- ======================= 14 HELP ======================= -->
+<section class="chapter cont" id="s-help" data-title="Help">
+  <header>
+    <h2>If something looks wrong</h2>
+    <p>Most problems have a two minute answer.</p>
+  </header>
+
+  <details class="faq"><summary>I did not get an alert for a new lead.</summary><div><p>Check spam, and make sure the notification settings in <a href="#phone">Your phone</a> are on. Then open Contacts and search the customer's name or filter by the tag <b>Website Form</b>. If the contact is there, the website worked and only the alert is missing. Tell Dan.</p></div></details>
+  <details class="faq"><summary>A customer says they never got a text.</summary><div><p>Texts do not send until your business number is registered. See <a href="#dan">Work with Dan</a>. Emails do send.</p></div></details>
+  <details class="faq"><summary>The booking page shows no times.</summary><div><p>Your hours may need updating, or the day is full. Tell Dan your real hours and he fixes the calendar.</p></div></details>
+  <details class="faq"><summary>I moved a card by mistake.</summary><div><p>Drag it back. If it triggered a message (for example Job Complete sent a review text), no harm done, but let the customer know if it was confusing.</p></div></details>
+  <details class="faq"><summary>How do I stop messages to one person?</summary><div><p>Open the contact and add the tag <b>Do Not Contact</b>. That blocks every channel and removes them from all automations.</p></div></details>
+  <details class="faq"><summary>How do I add a customer by hand?</summary><div><p>Contacts &rarr; Add Contact. Add their name, phone and email, then open Opportunities &rarr; Jobs and add an opportunity for them. If you tag them <b>Website Lead</b>, the new lead automation will run for them as well.</p></div></details>
+  <details class="faq"><summary>Can I edit an automation?</summary><div><p>You can open and read every one. Please ask Dan to change wording or timing so nothing breaks. It takes him a few minutes.</p></div></details>
+  <details class="faq"><summary>Where is my Owner's Operating Manual?</summary><div><p>The 31 page manual and 13 page Team Handbook come with this guide as PDFs. The manual covers licensing by state, insurance, scripts, pricing, hiring, canvassing, networking dates and a 30 day launch plan.</p></div></details>
+  <details class="faq"><summary>Something is broken or I want a change.</summary><div><p>Text or email Dan with a screenshot and what you expected. Include the website reference number (it looks like FC-8XQUWAI) if it is about a form.</p></div></details>
+
+  <h3>Words you will hear</h3>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Word</th><th>Plain English</th></tr></thead>
+    <tbody>
+      <tr><td>CRM</td><td>The system that stores your customers and everything that happens with them.</td></tr>
+      <tr><td>Pipeline and stage</td><td>A board of columns. A job moves left to right as it progresses.</td></tr>
+      <tr><td>Opportunity</td><td>One job or project, shown as a card on the board.</td></tr>
+      <tr><td>Contact</td><td>A person. One person can have many opportunities over the years.</td></tr>
+      <tr><td>Tag</td><td>A label on a contact that can start or stop an automation.</td></tr>
+      <tr><td>Workflow / automation</td><td>A set of steps that runs by itself when something happens.</td></tr>
+      <tr><td>Custom field</td><td>An extra box on the contact, like Health Check Result or Resume Link.</td></tr>
+      <tr><td>A2P 10DLC</td><td>The carriers' registration that lets a business send texts. Required in the US.</td></tr>
+      <tr><td>Voice AI</td><td>An AI that answers phone calls like a receptionist.</td></tr>
+      <tr><td>GEO / llms.txt</td><td>Making your site readable to AI assistants so they can recommend and quote you.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="foot">
+    <p><b>First Chimney Contracting</b> &middot; Andrew Paterini, F.I.R.E. Certified Technician &middot; (757) 589-0783 &middot; serving Virginia, New Jersey, Connecticut and Massachusetts.</p>
+    <p>Built and delivered by Dan Gill III, November 2026. Questions: <a href="mailto:dangill@summitmarketinggroup.co">dangill@summitmarketinggroup.co</a></p>
+  </div>
+</section>
+
+</main>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var params = new URLSearchParams(location.search);
+  var PRINT = params.has('print');
+  var store = { get: function (k) { try { return localStorage.getItem('fc-guide-' + k); } catch (e) { return null; } }, set: function (k, v) { try { localStorage.setItem('fc-guide-' + k, v); } catch (e) {} }, del: function (k) { try { localStorage.removeItem('fc-guide-' + k); } catch (e) {} } };
+
+  /* ---------- nav ---------- */
+  var chapters = [].slice.call(document.querySelectorAll('.chapter'));
+  var side = document.getElementById('sidenav'), top = document.getElementById('topnav');
+  chapters.forEach(function (c) {
+    var t = c.getAttribute('data-title');
+    [side, top].forEach(function (host) { var a = document.createElement('a'); a.href = '#' + c.id; a.textContent = t; a.dataset.for = c.id; host.appendChild(a); });
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          document.querySelectorAll('[data-for]').forEach(function (a) { a.classList.toggle('on', a.dataset.for === e.target.id); });
+          var on = top.querySelector('.on'); if (on && top.scrollWidth > top.clientWidth) top.scrollTo({ left: on.offsetLeft - 20, behavior: 'smooth' });
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    chapters.forEach(function (c) { io.observe(c); });
+  }
+
+  /* ---------- copy buttons ---------- */
+  document.querySelectorAll('.copy').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var text = b.getAttribute('data-copy');
+      var done = function () { var old = b.textContent; b.textContent = 'Copied'; b.classList.add('done'); setTimeout(function () { b.textContent = old; b.classList.remove('done'); }, 1400); };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, function () { fallback(text); done(); });
+      else { fallback(text); done(); }
+    });
+  });
+  function fallback(t) { var ta = document.createElement('textarea'); ta.value = t; ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); } catch (e) {} document.body.removeChild(ta); }
+
+  /* ---------- checklists ---------- */
+  var boxes = [].slice.call(document.querySelectorAll('input[type=checkbox][data-key]'));
+  boxes.forEach(function (b) { b.checked = store.get(b.dataset.key) === '1'; b.addEventListener('change', function () { if (b.checked) store.set(b.dataset.key, '1'); else store.del(b.dataset.key); startProgress(); }); });
+  function startProgress() {
+    var all = [].slice.call(document.querySelectorAll('#startChecks input')); var n = all.filter(function (i) { return i.checked; }).length;
+    document.getElementById('startBar').style.width = (n / all.length * 100) + '%';
+    document.getElementById('startCount').textContent = n === all.length ? 'All done. You are live.' : n + ' of ' + all.length + ' done';
+  }
+  startProgress();
+  document.getElementById('resetBtn').addEventListener('click', function (e) {
+    var b = e.currentTarget;
+    if (b.dataset.armed === '1') { boxes.forEach(function (x) { x.checked = false; store.del(x.dataset.key); }); startProgress(); b.textContent = 'Reset my checklists'; b.dataset.armed = '0'; return; }
+    b.dataset.armed = '1'; b.textContent = 'Tap again to confirm'; setTimeout(function () { b.dataset.armed = '0'; b.textContent = 'Reset my checklists'; }, 3000);
+  });
+  document.getElementById('printBtn').addEventListener('click', function () { openAll(true); window.print(); });
+
+  /* ---------- workflows ---------- */
+  var CATS = [
+    ['catch', 'Catch every lead'], ['win', 'Win the job'], ['after', 'After the job'], ['keep', 'Keep customers coming back'], ['grow', 'Fireplaces, partners and referrals'], ['safety', 'Hiring and safety nets']
+  ];
+  /* sms: 'c' = customer texts (need phone), 'i' = text alerts to you (need phone), '' = none */
+  var W = [
+    [1, 'New Lead: Instant Reply + Owner Alert', 'catch', 'c', 'Any sales inquiry from the website (tag Website Lead).', 'Creates the job in Jobs, New Lead. Alerts you by email (and text once live). Replies to the customer by email and text so they do not call someone else. If nobody has called in 10 minutes, it nags you.', 'Call within 10 minutes and move the card to Contacted.'],
+    [13, 'Missed Call Text Back', 'catch', 'c', 'Someone calls and the call is missed, busy or goes to voicemail.', 'Texts them right away: &ldquo;Sorry I missed you, probably on a roof. What can I help with?&rdquo; Alerts you. Nags you after 2 hours.', 'Call them back. Needs the business phone number.'],
+    [24, 'Customer Replied: Owner Alert', 'catch', 'i', 'Any customer reply to a message.', 'Sends you the reply by email (and text once live) so you can answer fast. Applicants are routed to email only.', 'Reply in Conversations the same day.'],
+    [25, 'Stale Lead Alert', 'catch', 'i', 'A Jobs card sits 2 days in New Lead, Contacted or Inspected.', 'Alerts you so no lead quietly dies.', 'Call, or close it as Lost with a note.'],
+    [5, 'Appointment Confirm + Reminders', 'catch', 'c', 'A customer books a visit on your calendar.', 'Confirmation by text and email with prep tips (clear the hearth, pets away), reminders 24 hours and 2 hours before.', 'Show up. Fewer no shows.'],
+    [22, 'Appointment No-Show Recovery', 'catch', 'c', 'A visit is marked no show.', 'Tags No Show, alerts you, sends a friendly rebook text, an email next day and a last text on day 4.', 'Mark no shows on the calendar.'],
+    [23, 'Appointment Cancelled: Rebook', 'catch', 'c', 'A visit is cancelled.', 'Offers to rebook by text, emails on day 2, and puts them on the yearly list on day 16 if they never rebooked.', 'Nothing. It rebooks for you.'],
+    [4, 'Health Check Router', 'catch', 'c', 'Someone finishes the free chimney health check.', 'Urgent: alerts you and tells them not to use the fireplace. Soon: a guidance email. Good: yearly reminder list.', 'Call Urgent ones right away.'],
+    [15, 'Door Knock Follow-Up', 'catch', 'c', 'You tag someone Door Knock.', 'One hour later it texts the free health check. Day 3 a nudge if they have not booked. Day 10 an email and the yearly list.', 'Add the tag after any door or street conversation.'],
+    [3, 'Holiday $199 Follow-Up', 'catch', 'c', 'Anyone tagged Holiday Special - $199 (form or popup coupon).', 'Day 1 text, day 3 email, day 7 text. Skips anyone already Scheduled. Stops if they reply.', 'When they reply, answer and book.'],
+    [2, 'Jobs Pipeline: Stage Tags', 'win', '', 'You move a card in the Jobs pipeline.', 'Keeps tags in sync: Contacted, Scheduled, Job Complete, Past Customer, Annual Reminder, Estimate - No Decision.', 'Just move cards.'],
+    [26, 'Inspection Done: Estimate Coming', 'win', 'c', 'Card moves to Inspected / Cleaned.', 'Thank you text, adds them to the yearly list, reminds you next day to send the estimate.', 'Send the estimate.'],
+    [6, 'Estimate Follow-Up', 'win', 'c', 'Card moves to Estimate Sent.', 'Follow ups on day 2, 5 and 10, only while still at Estimate Sent. At day 30 it tags Estimate - No Decision and moves to Lost.', 'Answer questions; move to Approved on a yes.'],
+    [27, 'Job Approved: Confirmation', 'win', 'c', 'Card moves to Approved.', 'Alerts you (order materials, collect deposit). Texts the customer and emails &ldquo;what happens next.&rdquo;', 'Schedule the work.'],
+    [30, 'Lost Lead Long-Term Nurture', 'win', '', 'Tag Estimate - No Decision.', 'Emails on day 30 and 90, then hands off to the reactivation campaign at day 180.', 'Nothing. Some come back.'],
+    [7, 'Job Complete: Review Request', 'after', 'c', 'Card moves to Job Complete.', 'Adds Past Customer and yearly reminder, texts a Google review request after 2 hours, emails on day 3 unless they already reviewed, then moves to Review Requested.', 'Move the card the day you finish.'],
+    [28, 'Post-Job Check-In + Referral Ask', 'after', 'c', 'Card moves to Job Complete.', 'Day 7 check in text. Day 14 referral email (give $25, get $25). Day 44 fireplace tips.', 'Handle anything the check in turns up.'],
+    [31, 'Review Left: Thank You', 'after', 'c', 'You tag a contact Review Left.', 'Thank you text, VIP / Repeat tag, and an alert to reply on Google.', 'Add the tag when you see a review.'],
+    [9, 'Testimonial Received', 'after', '', 'A past customer shares their story on the site.', 'Alerts with the text and whether you may publish it. Thanks them and invites a Google review.', 'If permission is Yes, send it to Dan.'],
+    [8, 'Annual Reminder: Yearly Rebook', 'keep', 'c', 'Tag Annual Reminder (every completed job gets it).', 'A welcome email, then a year later a text (with consent) or email, and a follow up. It loops, so it repeats every year.', 'Nothing. Free repeat work.'],
+    [16, 'Campaign: Fall Rush', 'keep', 'c', 'You tag Campaign: Fall Rush (late August).', 'Checks Do Not Contact, then text or email by consent, a follow up a week later, then removes the tag.', 'Add the tag to Past Customers.'],
+    [17, 'Campaign: Spring Masonry', 'keep', 'c', 'You tag Campaign: Spring Masonry (early March).', 'Same pattern about leaks, crowns and loose brick.', 'Add the tag to Past Customers.'],
+    [18, 'Campaign: Pre-Snow', 'keep', 'c', 'You tag Campaign: Pre-Snow (November).', 'Cleaning and inspection for $199 before the first snow.', 'Add the tag in November.'],
+    [29, 'Campaign: Holiday $199 Blast', 'keep', 'c', 'You tag Campaign: Holiday 199.', 'The $199 offer with two follow ups, by consent.', 'Add the tag to run the offer.'],
+    [19, 'Campaign: Database Reactivation', 'keep', 'c', 'You tag Campaign: Reactivation.', '&ldquo;Still interested?&rdquo; email, text by consent, and a close the loop email. Stops on reply.', 'Run it on old leads in slow months.'],
+    [14, 'Fireplace Project Lead', 'grow', 'c', 'A fireplace design or product quote request.', 'Alerts you with the design and products. Emails the customer. Day 2 text, day 7 and 21 emails.', 'Call, measure, confirm fit and price.'],
+    [10, 'Referral Received', 'grow', 'c', 'Tag Referral.', 'Alerts you with the friend\'s details. Thanks the referrer. Reminder the next day.', 'Call the friend, mention who sent them.'],
+    [21, 'Referral Reward Owed', 'grow', 'c', 'You tag the referrer Referral Reward Owed.', 'Alerts you to apply the $25 credit. Texts and emails the referrer. Tags them VIP / Repeat.', 'Apply the credit after the friend\'s job.'],
+    [11, 'Referral Partner Nurture', 'grow', 'i', 'A partner asks for a call.', 'Creates the partner opportunity. Sends a welcome email with your realtor page, guide and 10% partner rate. Creates a call task. Three monthly value emails.', 'Call within 3 days.'],
+    [12, 'Job Applicant', 'safety', 'i', 'Someone applies on the careers page.', 'Alerts you with position, experience and resume link. Auto replies to the applicant. Creates a review task for day 3.', 'Review within 3 days.'],
+    [20, 'Do Not Contact', 'safety', '', 'You tag a contact Do Not Contact.', 'Turns off every channel, removes them from all other automations, marks their opportunity lost and alerts Dan.', 'Use it any time someone asks to stop.']
+  ];
+  var state = { q: '', cat: 'all' };
+  var list = document.getElementById('wfList'), chips = document.getElementById('wfChips');
+  function mkChip(id, label) { var b = document.createElement('button'); b.type = 'button'; b.className = 'fchip'; b.textContent = label; b.setAttribute('aria-pressed', id === state.cat ? 'true' : 'false'); b.addEventListener('click', function () { state.cat = id; [].forEach.call(chips.children, function (c) { c.setAttribute('aria-pressed', c === b ? 'true' : 'false'); }); renderWf(); }); chips.appendChild(b); }
+  mkChip('all', 'All 31'); CATS.forEach(function (c) { mkChip(c[0], c[1]); });
+  document.getElementById('wfSearch').addEventListener('input', function (e) { state.q = e.target.value.toLowerCase(); renderWf(); });
+  function renderWf() {
+    list.innerHTML = ''; var shown = 0;
+    CATS.forEach(function (c) {
+      if (state.cat !== 'all' && state.cat !== c[0]) return;
+      var items = W.filter(function (w) { return w[2] === c[0] && (!state.q || (w[1] + ' ' + w[4] + ' ' + w[5] + ' ' + w[6]).toLowerCase().indexOf(state.q) > -1); });
+      if (!items.length) return;
+      var h = document.createElement('h4'); h.textContent = c[1]; h.style.margin = '14px 0 2px'; list.appendChild(h);
+      items.forEach(function (w) {
+        shown++;
+        var d = document.createElement('details'); d.className = 'wf'; if (PRINT) d.open = true;
+        var chip = w[3] === 'c' ? '<span class="chip phone">Texts need phone</span>' : (w[3] === 'i' ? '<span class="chip phone">Text alert needs phone</span>' : '<span class="chip live">Live</span>');
+        d.innerHTML = '<summary><span class="n">' + ('0' + w[0]).slice(-2) + '</span><span class="t">' + w[1] + '<small>' + w[4] + '</small></span><span>' + chip + ' <i class="chev"></i></span></summary><div class="body"><p><b>What it does.</b> ' + w[5] + '</p><p><b>You.</b> ' + w[6] + '</p></div>';
+        list.appendChild(d);
+      });
+    });
+    if (!shown) list.innerHTML = '<div class="empty">No automation matches that search. Try a word like &ldquo;review&rdquo;, &ldquo;estimate&rdquo; or &ldquo;text&rdquo;.</div>';
+    document.getElementById('wfCount').textContent = 'Showing ' + shown + ' of ' + W.length + '. Open any one to read it.';
+  }
+  renderWf();
+
+  /* ---------- capabilities ---------- */
+  var CAP = [
+    ['live', 'Lead capture', 'Every form on the website lands in the CRM with tags, fields and a pipeline card.'],
+    ['live', 'Pipelines', 'Jobs, Fireplace Projects, Partners and Recruiting, with stage driven automations.'],
+    ['live', 'Online booking', 'A 90 minute visit calendar with confirmations and reminders.'],
+    ['live', 'Email automations', '31 published workflows. Every email step works today.'],
+    ['live', 'Contacts, notes and tasks', 'One record per person with the full history and custom fields.'],
+    ['live', 'Universal inbox', 'Conversations shows all messages per person. Email works now; text joins when the phone is live.'],
+    ['phone', 'Text automations', 'Instant replies, reminders, follow ups, review requests. Built and waiting on the number.'],
+    ['phone', 'Missed call text back', 'Auto text when you cannot answer. Needs the business number.'],
+    ['phone', 'Calling and texting from the CRM', 'Call and text customers from the app using your business number.'],
+    ['ready', 'Voice AI receptionist', 'Answers calls 24/7, books visits, texts you a summary.'],
+    ['ready', 'Conversational AI', 'Replies to texts, web chat, Facebook, Instagram and Google messages and books jobs.'],
+    ['ready', 'Website chat widget', 'A chat bubble on the site that captures visitors and hands off to AI or you.'],
+    ['ready', 'Payments and invoices', 'Estimates and invoices by text or email, card payments, card on file, payment links.'],
+    ['ready', 'Contracts and e-signature', 'Send, sign and store contracts from a phone.'],
+    ['ready', 'Reputation management', 'Review requests (built), reply to reviews, Google review button. Needs your Google profile link.'],
+    ['ready', 'Email and text marketing', 'Newsletters, seasonal blasts, reactivation. Needs your mailing address.'],
+    ['ready', 'Social planner', 'Schedule Facebook, Instagram and Google posts from one place.'],
+    ['ready', 'Reporting', 'Lead sources, close rate and what each channel costs you.']
+  ];
+  var LABEL = { live: 'Live now', phone: 'Needs phone', ready: 'Ready when you are' };
+  document.getElementById('capGrid').innerHTML = CAP.map(function (c) { return '<div class="card cap"><span class="chip ' + c[0] + '">' + LABEL[c[0]] + '</span><h4>' + c[1] + '</h4><p>' + c[2] + '</p></div>'; }).join('');
+
+  /* ---------- print / details ---------- */
+  function openAll(on) { document.querySelectorAll('details').forEach(function (d) { d.open = on; }); }
+  if (PRINT) { openAll(true); document.documentElement.classList.add('print'); }
+  window.addEventListener('beforeprint', function () { openAll(true); });
+})();
+</script>
+</body>
+</html>

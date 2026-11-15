@@ -210,3 +210,23 @@ Remaining setup steps are in `docs/NEXT-STEPS.md`.
 - Calendar "Chimney Service" created (placeholder hours) and its booking page saved as the Booking Link custom value.
 - **Snapshot "Chimney Company OS v1 (First Chimney)" created** in the agency (all assets), ready to load into the next chimney client and to adapt for roofing.
 - Test contacts are tagged `QA Test - safe to delete`.
+
+## 17. Final verification and Andrew's handoff (round 10, 2026-11-15)
+
+**Re-audited live against the production site and the GHL sub-account**
+- Site: 20 key routes return 200 (`/shop` intentionally redirects to `/fireplace-shop`), llms.txt, llms-full.txt, sitemap.xml and robots.txt serve, apex redirects to www, `/api/lead` validates (400-style error object) and rejects GET (405).
+- CRM: 31 workflows all `published`; 4 pipelines with stages as designed; 32 contact custom fields, 23 custom values, 54 tags; calendar "Chimney Service" active; Andrew added as account admin.
+- Forms: every form type was submitted to the live `/api/lead` and checked in GHL for contact, tags, custom-field mapping and pipeline/stage. Verified: holiday-199, contact, service-request, fireplace-designer (Jobs + Fireplace Projects), shop-quote (Jobs + Fireplace Projects), promo-save, testimonial (no opportunity, permission captured), safety-check (Urgent result, answers), partner (Partners), job-application (Recruiting, resume uploaded to media library), referral. One opportunity per pipeline, no duplicates. The yearly reminder form is covered by the same code path and tag (Annual Reminder); its live check is listed in the handoff message.
+- The site's rate limiter (6 per 10 min per IP) blocked part of the first run, as designed; failed attempts extend the window.
+
+**Changes made**
+- Andrew added as Cc on the owner-alert email in workflow 01 and workflow 24 (still published).
+- Calendar: an API call to assign Andrew accidentally cleared the opening hours and reset the visit length; restored (90 min, Mon-Fri 8-5, Sat 9-1, 30 min interval) and re-verified with free-slot lookups. Team member assignment must be done in the GHL UI.
+
+**Found, not fixed (needs Dan)**
+1. `my.dlgsolutions.com` does not load: `dlgsolutions.com` is on Afternic parking nameservers and the `my` host resolves to parking IPs (TLS handshake rejected). Andrew's guide lists `app.gohighlevel.com` as the working login.
+2. The sub-account has no phone number, so no SMS (customer or internal) can send until one is bought and A2P 10DLC approved.
+3. Only workflows 01 and 24 copy Andrew; the rest alert Dan only.
+4. Business address is still the placeholder; calendar hours are placeholders; Google review link is still the testimonial page.
+
+**Andrew's guide** (`marketing/andrew-guide/`): a single-file interactive HTML guide (saved checklists, searchable 31-workflow library, copy buttons, mobile layout) and a 26-page PDF generated from the same source, plus the Owner's Manual and Team Handbook. Covers logins, the phone app and notifications, what was built, how the website feeds the CRM, each pipeline and stage, every automation, when to step in, daily/weekly/monthly routine, what the CRM can do and what Dan can turn on (voice AI, conversational AI, payments and more), and what Dan needs from Andrew.
