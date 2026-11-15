@@ -210,6 +210,8 @@ export function HolidayPopup() {
 
   const show = useCallback(() => {
     if (!allowed()) return;
+    // Never interrupt someone who is typing into a form.
+    if (document.activeElement?.closest('form, input, textarea, select')) return;
     store.set(window.sessionStorage, SESSION_KEY, '1');
     lastFocus.current = document.activeElement as HTMLElement;
     setOpen(true);

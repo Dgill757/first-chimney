@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AnimatePresence, motion, useMotionTemplate, useMotionValue, useReducedMotion, useScroll, useSpring, useTransform } from 'motion/react';
 import { ArrowRight, ArrowUpRight, BadgeCheck, Camera, ClipboardList, Hammer, MessageSquareText, Phone, ShieldCheck, Sparkles, Star } from 'lucide-react';
@@ -508,7 +508,8 @@ function SymptomFinder() {
     <section className="section" aria-labelledby="symptom-h">
       <div className="wrap">
         <SectionHeading id="symptom-h" title="What are you noticing?" lede="Pick what you are seeing at home. We will point you to the right service." />
-        <div className="mt-12 grid gap-8 lg:grid-cols-[1fr_1fr]">
+        <div className="mt-12 grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[1fr_1fr]">
+          <div className="min-w-0">
           <div className="flex flex-wrap content-start gap-2.5" role="radiogroup" aria-label="Symptoms">
             {SYMPTOMS.map((x, i) => (
               <button
@@ -522,6 +523,14 @@ function SymptomFinder() {
                 {x.label}
               </button>
             ))}
+          </div>
+          <Link to="/chimney-health-check" className="card lift mt-6 flex items-center justify-between gap-4 p-5">
+            <span className="min-w-0">
+              <span className="block font-medium text-bone">Not sure? Take the 2-minute chimney health check.</span>
+              <span className="mt-0.5 block text-sm text-mute">10 questions, a plain-English answer and what to do next.</span>
+            </span>
+            <ArrowRight className="h-5 w-5 shrink-0 text-ember" aria-hidden />
+          </Link>
           </div>
           <div className="card relative min-h-[17rem] overflow-hidden p-7 sm:p-9" aria-live="polite">
             <AnimatePresence mode="wait" initial={false}>

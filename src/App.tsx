@@ -21,6 +21,11 @@ const Contact = lazy(() => import('./pages/Company').then((m) => ({ default: m.C
 const Gallery = lazy(() => import('./pages/Company').then((m) => ({ default: m.Gallery })));
 const Reviews = lazy(() => import('./pages/Company').then((m) => ({ default: m.Reviews })));
 const Privacy = lazy(() => import('./pages/Company').then((m) => ({ default: m.Privacy })));
+const HealthCheck = lazy(() => import('./pages/Growth').then((m) => ({ default: m.HealthCheck })));
+const RealEstate = lazy(() => import('./pages/Growth').then((m) => ({ default: m.RealEstate })));
+const Careers = lazy(() => import('./pages/Growth').then((m) => ({ default: m.Careers })));
+const Refer = lazy(() => import('./pages/Growth').then((m) => ({ default: m.Refer })));
+const ChooseCompany = lazy(() => import('./pages/Growth').then((m) => ({ default: m.ChooseCompany })));
 
 /** Client-side twin of the vercel.json redirects; keeps ?query so shared builds still open. */
 function KeepQueryRedirect({ to }: { to: string }) {
@@ -55,6 +60,12 @@ export default function App() {
             <Route path="blog" element={<BlogIndex />} />
             <Route path="blog/:slug" element={<BlogPost />} />
             <Route path="privacy-policy" element={<Privacy />} />
+            <Route path="chimney-health-check" element={<HealthCheck />} />
+            <Route path="chimney-safety-check" element={<Navigate to="/chimney-health-check" replace />} />
+            <Route path="real-estate-chimney-inspections" element={<RealEstate />} />
+            <Route path="careers" element={<Careers />} />
+            <Route path="refer-a-friend" element={<Refer />} />
+            <Route path="how-to-choose-a-chimney-company" element={<ChooseCompany />} />
             <Route path="financing" element={<Navigate to="/contact" replace />} />
             <Route path="*" element={<NotFound />} />
           </Route>

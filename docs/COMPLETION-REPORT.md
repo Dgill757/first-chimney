@@ -127,3 +127,35 @@ To confirm with Andrew: the 10 / 25 year figures; that homeowners are OK with th
 1. Send Andrew's past customers the link `firstchimneycontracting.com/reviews#share`. Real words, real permission, published on the site.
 2. When the Google Business Profile is live, ask First Chimney's customers for a Google review after each job (the CRM review-request workflow automates this). Do not offer incentives, do not filter who gets asked, and never write reviews for customers.
 3. Past customers can leave a Google review for First Chimney once First Chimney has done work for them.
+
+## 13. Growth engine and back office (round 6)
+
+Built so a solo owner gets found, converts more visitors, keeps customers for years and can hire.
+
+**New pages (all prerendered, in the sitemap and llms.txt, linked from the header Resources menu and footer):**
+- `/chimney-health-check`: a 10-question self-assessment. It scores Urgent, Soon or Good with tested logic, educates the homeowner, recommends services and sends the answers with the lead. Urgent tells them to stop using the fireplace. Good offers the yearly reminder.
+- `/real-estate-chimney-inspections`: Level 2 inspections for home sales (NFPA 211), with a role picker. Buyers and sellers get a service request; realtors, inspectors and property managers become partner leads.
+- `/how-to-choose-a-chimney-company`: six questions to ask any chimney company, red flags, how First Chimney answers each (with the F.I.R.E. directory link), and a free second-opinion form.
+- `/careers`: three roles, an application form (position, license, roofs), tagged `Job Applicant`. It never enters the sales pipeline.
+- `/refer-a-friend`: referral capture. The reward is a setting (`REFERRAL_REWARD` in `src/data/growth.ts`).
+- Yearly reminder sign-up on the Resource Center and the health check result (`Annual Reminder` tag).
+- Homepage link to the health check, under "What are you noticing?".
+
+**Short links for print and the truck:** `/check`, `/refer`, `/review`, `/realtors`, `/jobs`, `/remind`.
+
+**Lead API:** five new form types with their own tags. `Website Lead` and job opportunities only for homeowner leads. Applicants need a phone number.
+
+**Popup:** no longer shows on form-heavy pages, and never opens while someone is typing in a form.
+
+**Back office docs:**
+- `docs/GHL-AUTOMATION-PLAYBOOK.md`: pipelines, custom fields, 14 workflows with exact messages, reporting, and a test checklist.
+- `docs/OPERATIONS-PLAYBOOK.md`: weekly scorecard, pricing worksheet, phone script, on-site walkthrough, hiring, a 12-week training plan, marketing calendar, local search setup, realtor outreach.
+
+**Testing:** 29 automated tests pass (health check scoring, new form tags, routing, popup exclusions). Clicked through the health check in a headless browser on both the Urgent and Good paths. No horizontal clipping at 375, 768 or 1280 px. Header verified at 1024, 1280 and 1440 px.
+
+### Approvals for Andrew (round 6)
+| Item | Where to change |
+| --- | --- |
+| Referral thank-you (for example a gift card) | `REFERRAL_REWARD` in `src/data/growth.ts` |
+| Positions and requirements on the careers page | `POSITIONS` in `src/data/growth.ts` |
+| Whether to offer free second opinions (promised on the choose page) | `src/pages/Growth.tsx` → `ChooseCompany` |

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { Fragment, useEffect, useRef, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion, useMotionValueEvent, useReducedMotion, useScroll } from 'motion/react';
 import { ArrowRight, ChevronDown, Flame, Menu, Phone, X } from 'lucide-react';
@@ -23,9 +23,19 @@ const FIREPLACE_GROUP: Group = {
     { label: 'Fireplace Repair', to: '/services/fireplace-repair', note: 'Smoke, damper and firebox problems.' },
   ],
 };
+const RESOURCES_GROUP: Group = {
+  label: 'Resources',
+  items: [
+    { label: 'Chimney Health Check', to: '/chimney-health-check', note: '2 minutes. Is your chimney safe to use?' },
+    { label: 'How to Choose a Chimney Company', to: '/how-to-choose-a-chimney-company', note: '6 questions to ask and the red flags.' },
+    { label: 'Buying or Selling a Home', to: '/real-estate-chimney-inspections', note: 'Level 2 inspections for closings.' },
+    { label: 'Resource Center', to: '/blog', note: 'Plain-English chimney guides.' },
+    { label: 'FAQ', to: '/faq', note: 'Quick answers to common questions.' },
+  ],
+  footer: { label: 'Refer a friend', to: '/refer-a-friend' },
+};
 const LINKS = [
   { label: 'Service Areas', to: '/service-areas' },
-  { label: 'Resources', to: '/blog' },
   { label: 'About', to: '/about' },
 ];
 
@@ -182,7 +192,7 @@ function MobileMenu({ open, onClose, live }: { open: boolean; onClose: () => voi
           <FireButton placement="mobile_menu" size="lg" onClick={onClose} className="mt-4 w-full [&>span]:w-full [&>span]:justify-center" />
 
           <nav className="mt-6 grid gap-7" aria-label="Mobile">
-            {[SERVICES_GROUP, FIREPLACE_GROUP].map((g) => (
+            {[SERVICES_GROUP, FIREPLACE_GROUP, RESOURCES_GROUP].map((g) => (
               <div key={g.label}>
                 <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-dim">{g.label}</p>
                 <ul className="grid grid-cols-1 gap-0.5 sm:grid-cols-2">
@@ -197,7 +207,7 @@ function MobileMenu({ open, onClose, live }: { open: boolean; onClose: () => voi
               </div>
             ))}
             <ul className="grid gap-0.5 border-t border-white/10 pt-5">
-              {[...LINKS, { label: 'FAQ', to: '/faq' }, { label: 'Contact', to: '/contact' }].map((l) => (
+              {[...LINKS, { label: 'Careers', to: '/careers' }, { label: 'Contact', to: '/contact' }].map((l) => (
                 <li key={l.to}>
                   <Link to={l.to} onClick={onClose} className="block py-2.5 font-display text-xl font-semibold text-bone" style={{ fontStretch: '110%' }}>
                     {l.label}
@@ -254,19 +264,20 @@ export default function Header() {
             <nav className="ml-4 hidden flex-1 items-center gap-0.5 lg:flex xl:ml-6" aria-label="Primary">
               <Dropdown group={SERVICES_GROUP} />
               <FireButton placement="header" className="mx-2" />
-              <NavLink to="/fireplace-shop" className={({ isActive }) => `rounded-full px-3 py-2 text-[0.94rem] font-medium transition-colors ${isActive ? 'text-ember' : 'text-bone/90 hover:text-bone'}`}>
+              <NavLink to="/fireplace-shop" className={({ isActive }) => `whitespace-nowrap rounded-full px-3 py-2 text-[0.94rem] font-medium transition-colors ${isActive ? 'text-ember' : 'text-bone/90 hover:text-bone'}`}>
                 Shop
               </NavLink>
-              {LINKS.map((l) => (
-                <NavLink
-                  key={l.to}
-                  to={l.to}
-                  className={({ isActive }) =>
-                    `rounded-full px-3 py-2 text-[0.94rem] font-medium transition-colors ${l.to === '/blog' ? 'hidden xl:block' : ''} ${isActive ? 'text-ember' : 'text-bone/90 hover:text-bone'}`
-                  }
-                >
-                  {l.label}
-                </NavLink>
+              {LINKS.map((l, i) => (
+                <Fragment key={l.to}>
+                  {i === 1 && (
+                    <div className="hidden xl:block">
+                      <Dropdown group={RESOURCES_GROUP} />
+                    </div>
+                  )}
+                  <NavLink to={l.to} className={({ isActive }) => `whitespace-nowrap rounded-full px-3 py-2 text-[0.94rem] font-medium transition-colors ${isActive ? 'text-ember' : 'text-bone/90 hover:text-bone'}`}>
+                    {l.label}
+                  </NavLink>
+                </Fragment>
               ))}
             </nav>
 
@@ -274,7 +285,7 @@ export default function Header() {
               <a
                 href={SITE.phoneHref}
                 onClick={() => track('click_to_call', { placement: 'header' })}
-                className="hidden items-center gap-2 rounded-full px-3 py-2 text-[0.94rem] font-medium text-bone transition-colors hover:text-ember xl:flex"
+                className="hidden items-center gap-2 whitespace-nowrap rounded-full px-3 py-2 text-[0.94rem] font-medium text-bone transition-colors hover:text-ember xl:flex"
               >
                 <Phone className="h-4 w-4 text-ember" strokeWidth={1.75} aria-hidden />
                 {SITE.phoneDisplay}

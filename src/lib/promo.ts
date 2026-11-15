@@ -71,12 +71,26 @@ export function promoIsLive(now: Date = new Date()): boolean {
   return now <= new Date(`${HOLIDAY_PROMO.validThrough}T23:59:59`);
 }
 
+/** Pages where a popup would interrupt a form or a decision already in progress. */
+export const POPUP_EXCLUDED_PATHS = [
+  '/holiday-chimney-special',
+  '/build-your-fireplace',
+  '/fireplace-shop/quote',
+  '/contact',
+  '/privacy-policy',
+  '/chimney-health-check',
+  '/careers',
+  '/refer-a-friend',
+  '/real-estate-chimney-inspections',
+  '/reviews',
+];
+
 /** Pure decision for whether the popup may open on this visit. Unit tested. */
 export function shouldShowPopup(o: { pathname: string; preview: boolean; now: number; shownThisSession: boolean; dismissedAt: number | null; claimed: boolean }): boolean {
   if (o.preview) return true;
   if (!HOLIDAY_PROMO.popup.enabled || !promoIsLive(new Date(o.now))) return false;
   if (o.claimed || o.shownThisSession) return false;
-  if (['/holiday-chimney-special', '/build-your-fireplace', '/fireplace-shop/quote', '/contact', '/privacy-policy'].some((p) => o.pathname.startsWith(p))) return false;
+  if (POPUP_EXCLUDED_PATHS.some((p) => o.pathname.startsWith(p))) return false;
   if (o.dismissedAt && o.now - o.dismissedAt < HOLIDAY_PROMO.popup.cooldownDays * 86_400_000) return false;
   return true;
 }

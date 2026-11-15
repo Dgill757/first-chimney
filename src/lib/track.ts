@@ -35,7 +35,9 @@ export type EventName =
   | 'designer_step'
   | 'designer_save'
   | 'shop_quote_add'
-  | 'cta_click';
+  | 'cta_click'
+  | 'health_check_answer'
+  | 'health_check_result';
 
 export function track(event: EventName, props: Props = {}): void {
   if (typeof window === 'undefined') return;

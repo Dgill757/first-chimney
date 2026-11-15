@@ -177,3 +177,51 @@ test('handler: rejects GET', async () => {
   await handler({ method: 'GET', headers: {} }, res);
   assert.equal(r.code, 405);
 });
+
+test('health check leads are sales leads tagged with their result', () => {
+  const v = validateLead({ ...base, formId: 'safety-check', promo: '', details: 'Chimney Health Check\nResult: Urgent\nScore: 11' });
+  assert.ok(v.ok);
+  if (!v.ok) return;
+  const tags = buildTags(v.lead);
+  assert.ok(tags.includes('Website Lead'));
+  assert.ok(tags.includes('Chimney Health Check'));
+  assert.ok(tags.includes('Health Check: Urgent'));
+});
+
+test('job applicants are kept out of the sales pipeline', async () => {
+  const v = validateLead({ ...base, formId: 'job-application', promo: '', details: 'Position: Helper / apprentice\nDriver license: Yes' });
+  assert.ok(v.ok);
+  if (!v.ok) return;
+  const tags = buildTags(v.lead);
+  assert.ok(!tags.includes('Website Lead'));
+  assert.ok(tags.includes('Job Applicant'));
+  assert.ok(tags.includes('Applied: Helper / apprentice'));
+  const calls: string[] = [];
+  const fake = (async (url: string) => {
+    calls.push(url);
+    if (url.endsWith('/contacts/upsert')) return new Response(JSON.stringify({ contact: { id: 'c_9' } }), { status: 200 });
+    return new Response('{}', { status: 200 });
+  }) as typeof fetch;
+  await deliver(v.lead, 'FC-T9', { GHL_PRIVATE_TOKEN: 'pit-test', GHL_LOCATION_ID: 'loc_1', GHL_PIPELINE_ID: 'p1', GHL_PIPELINE_STAGE_ID: 's1' }, fake);
+  assert.equal(calls.filter((u) => u.includes('/opportunities')).length, 0);
+});
+
+test('job applications need a phone number', () => {
+  const v = validateLead({ ...base, formId: 'job-application', phone: '' });
+  assert.equal(v.ok, false);
+  if (!v.ok) assert.ok(v.fields.phone);
+});
+
+test('partner, referral and reminder forms get their own tags', () => {
+  const partner = validateLead({ ...base, formId: 'partner', promo: '', details: 'Role: Realtor' });
+  const referral = validateLead({ ...base, formId: 'referral', promo: '' });
+  const reminder = validateLead({ ...base, formId: 'reminder', promo: '', phone: '' });
+  assert.ok(partner.ok && referral.ok && reminder.ok);
+  if (!partner.ok || !referral.ok || !reminder.ok) return;
+  assert.ok(buildTags(partner.lead).includes('Partner: Realtor'));
+  assert.ok(!buildTags(partner.lead).includes('Website Lead'));
+  assert.ok(buildTags(referral.lead).includes('Referral'));
+  assert.ok(buildTags(referral.lead).includes('Website Lead'));
+  assert.ok(buildTags(reminder.lead).includes('Annual Reminder'));
+  assert.ok(!buildTags(reminder.lead).includes('Website Lead'));
+});

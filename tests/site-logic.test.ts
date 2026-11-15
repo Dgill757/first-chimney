@@ -52,6 +52,7 @@ test('popup rules: never on the promo page, after a claim, or within cooldown', 
   assert.equal(shouldShowPopup({ ...base, dismissedAt: base.now - 60_000 }), false);
   assert.equal(shouldShowPopup({ ...base, dismissedAt: base.now - 10 * 86_400_000 }), HOLIDAY_PROMO.live);
   assert.equal(shouldShowPopup({ ...base, pathname: HOLIDAY_PROMO.path, preview: true }), true);
+  for (const p of ['/chimney-health-check', '/careers', '/reviews']) assert.equal(shouldShowPopup({ ...base, pathname: p }), false, p);
 });
 
 test('reminder .ics is a valid VEVENT with the offer code', () => {

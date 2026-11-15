@@ -38,7 +38,20 @@ const GHL_VERSION = '2021-07-28';
 const MAX_ATTEMPTS = 3;
 const RETRY_DELAY_MS = 1200;
 
-export const FORM_IDS = ['holiday-199', 'contact', 'service-request', 'fireplace-designer', 'shop-quote', 'promo-save', 'testimonial'] as const;
+export const FORM_IDS = [
+  'holiday-199',
+  'contact',
+  'service-request',
+  'fireplace-designer',
+  'shop-quote',
+  'promo-save',
+  'testimonial',
+  'safety-check',
+  'partner',
+  'job-application',
+  'referral',
+  'reminder',
+] as const;
 export type FormId = (typeof FORM_IDS)[number];
 
 export const HOLIDAY_TAG = 'Holiday Special - $199';
@@ -107,6 +120,7 @@ export function validateLead(input: unknown): { ok: true; lead: Lead } | { ok: f
   if (!phone && !email && !fields.phone && !fields.email) fields.phone = 'Add a phone number or email so we can reach you.';
   // The holiday and service forms are scheduling requests, so a phone number is required.
   if ((formId === 'holiday-199' || formId === 'service-request') && !phone && !fields.phone) fields.phone = 'Please add a phone number so we can schedule.';
+  if (formId === 'job-application' && !phone && !fields.phone) fields.phone = 'Please add a phone number so Andrew can call you.';
 
   const zip = str(b.zip, 10);
   if (zip && !/^\d{5}(-\d{4})?$/.test(zip)) fields.zip = 'Please enter a 5-digit ZIP code.';
@@ -163,14 +177,52 @@ const FORM_LABEL: Record<FormId, string> = {
   'shop-quote': 'Fireplace Shop Quote',
   'promo-save': 'Saved Holiday Offer',
   testimonial: 'Customer Testimonial',
+  'safety-check': 'Chimney Health Check',
+  partner: 'Real Estate Partner',
+  'job-application': 'Job Application',
+  referral: 'Customer Referral',
+  reminder: 'Annual Reminder Signup',
 };
 
+/**
+ * Forms that represent a homeowner who may need work. Only these get `Website Lead`
+ * (which fires Andrew's new-lead alert) and open a job opportunity. Applicants,
+ * partners, testimonials and reminder sign-ups have their own tags and workflows.
+ */
+const SALES_FORMS: ReadonlySet<FormId> = new Set<FormId>(['holiday-199', 'contact', 'service-request', 'fireplace-designer', 'shop-quote', 'promo-save', 'safety-check', 'referral']);
+export const isSalesLead = (formId: FormId) => SALES_FORMS.has(formId);
+
+/** Reads a "Key: value" line the site writes into `details`. */
+export function detail(lead: Pick<Lead, 'details'>, key: string): string {
+  const m = lead.details.match(new RegExp(`^${key}: (.+)$`, 'm'));
+  return m ? m[1].trim().slice(0, 60) : '';
+}
+
 export function buildTags(lead: Lead): string[] {
-  const tags = new Set<string>(['Website Lead', `Form: ${FORM_LABEL[lead.formId]}`]);
+  const tags = new Set<string>(['Website Form', `Form: ${FORM_LABEL[lead.formId]}`]);
+  if (isSalesLead(lead.formId)) tags.add('Website Lead');
   if (lead.formId === 'holiday-199' || lead.formId === 'promo-save' || lead.promo === 'holiday-199-cleaning-inspection') tags.add(HOLIDAY_TAG);
   if (lead.formId === 'fireplace-designer') tags.add('Fireplace Design Request');
   if (lead.formId === 'shop-quote') tags.add('Product Quote Request');
   if (lead.formId === 'testimonial') tags.add('Testimonial');
+  if (lead.formId === 'safety-check') {
+    tags.add('Chimney Health Check');
+    const result = detail(lead, 'Result');
+    if (result) tags.add(`Health Check: ${result}`);
+  }
+  if (lead.formId === 'partner') {
+    tags.add('Referral Partner');
+    const role = detail(lead, 'Role');
+    if (role) tags.add(`Partner: ${role}`);
+  }
+  if (lead.formId === 'job-application') {
+    tags.add('Recruiting');
+    tags.add('Job Applicant');
+    const position = detail(lead, 'Position');
+    if (position) tags.add(`Applied: ${position}`);
+  }
+  if (lead.formId === 'referral') tags.add('Referral');
+  if (lead.formId === 'reminder') tags.add('Annual Reminder');
   if (lead.service) tags.add(`Service: ${lead.service}`);
   if (lead.state) tags.add(`State: ${lead.state}`);
   if (lead.attribution.utmSource) tags.add(`Source: ${lead.attribution.utmSource}`);
@@ -329,7 +381,7 @@ export async function deliver(lead: Lead, ref: string, env: Env, doFetch: Fetch 
             headers,
             body: JSON.stringify({ body: buildNote(lead, ref) }),
           }).catch((e) => console.error(`[lead ${ref}] note failed: ${String(e).slice(0, 120)}`));
-          if (env.GHL_PIPELINE_ID && env.GHL_PIPELINE_STAGE_ID) {
+          if (env.GHL_PIPELINE_ID && env.GHL_PIPELINE_STAGE_ID && isSalesLead(lead.formId)) {
             await withRetry(doFetch, `${GHL_BASE}/opportunities/`, {
               method: 'POST',
               headers,

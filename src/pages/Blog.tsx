@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArrowRight, BookOpen, Clock, ExternalLink, Lightbulb } from 'lucide-react';
 import { Breadcrumbs, CallLink, FireButton, PageIntro, Reveal } from '@/components/ui';
@@ -9,6 +9,9 @@ import { HOLIDAY_PROMO, promoIsLive } from '@/lib/promo';
 import { routeFor } from '@/lib/routes';
 import { SITE } from '@/lib/site';
 import NotFound from './NotFound';
+import { ReminderSignup } from './Growth';
+import { HEALTH_CHECK } from '@/data/growth';
+import { TEAM } from '@/data/team';
 
 const fmt = (d: string) => new Date(`${d}T12:00:00`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 const CATS = ['All', ...Array.from(new Set(ARTICLES.map((a) => a.category)))];
@@ -59,6 +62,22 @@ export function BlogIndex() {
               <Card key={a.slug} a={a} i={i} big={i === 0 && cat === 'All'} />
             ))}
           </div>
+        </div>
+      </section>
+      <section className="section pt-0">
+        <div className="wrap grid grid-cols-[minmax(0,1fr)] gap-6 lg:grid-cols-2">
+          <Link to="/chimney-health-check" className="card lift group flex min-w-0 flex-col overflow-hidden">
+            <img src={TEAM.inspectionRoof.sm} alt={TEAM.inspectionRoof.alt} loading="lazy" className="aspect-[16/8] w-full object-cover" />
+            <div className="flex flex-1 flex-col p-6 sm:p-8">
+              <p className="eyebrow">Free 2-minute check</p>
+              <h2 className="mt-3 text-2xl text-bone">Is your chimney safe to use?</h2>
+              <p className="mt-2 text-mute">Answer {HEALTH_CHECK.length} quick questions and get a plain-English read on your chimney and what to do next.</p>
+              <span className="link-arrow mt-auto inline-flex items-center gap-1.5 pt-6 font-medium text-ember">
+                Start the health check <ArrowRight className="h-4 w-4" aria-hidden />
+              </span>
+            </div>
+          </Link>
+          <ReminderSignup placement="resource-center" />
         </div>
       </section>
     </>

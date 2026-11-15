@@ -76,9 +76,14 @@ export default function Footer() {
                 { label: 'Electric fireplaces', to: '/fireplace-shop/electric-fireplaces' },
                 { label: 'Our work', to: '/gallery' },
                 { label: 'Reviews', to: '/reviews' },
+                { label: 'Chimney health check', to: '/chimney-health-check' },
+                { label: 'Buying or selling a home', to: '/real-estate-chimney-inspections' },
+                { label: 'How to choose a chimney company', to: '/how-to-choose-a-chimney-company' },
                 { label: 'Resource center', to: '/blog' },
                 { label: 'FAQ', to: '/faq' },
                 { label: 'About', to: '/about' },
+                { label: 'Refer a friend', to: '/refer-a-friend' },
+                { label: 'Careers', to: '/careers' },
                 { label: 'Contact', to: '/contact' },
               ].map((l) => (
                 <li key={l.to}>

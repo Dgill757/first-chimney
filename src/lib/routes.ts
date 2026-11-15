@@ -16,6 +16,7 @@ import { SOURCES } from '../data/sources';
 import { HOLIDAY_PROMO, promoIsLive } from './promo';
 import { CREDENTIALS, SITE, STATE_LIST_TEXT, STATES } from './site';
 import { EXPERIENCE, JOB_PHOTOS, TEAM } from '../data/team';
+import { CAREER_FAQS, CHOOSE_QUESTIONS, HEALTH_CHECK, POSITIONS, REAL_ESTATE_FAQS, RED_FLAGS } from '../data/growth';
 
 export type Crumb = { name: string; path: string };
 
@@ -398,6 +399,83 @@ export function buildRoutes(extra: RouteMeta[] = []): RouteMeta[] {
       priority: 0.6,
     });
   }
+
+  add({
+    path: '/chimney-health-check',
+    title: 'Free Chimney Health Check: Is Your Chimney Safe to Use?',
+    description: `Answer ${HEALTH_CHECK.length} quick questions and get a plain-English read on your chimney: warning signs, what to do next and when to stop using the fireplace. Free, 2 minutes.`,
+    image: TEAM.inspectionRoof.src,
+    h1: 'Is your chimney safe to use?',
+    summary: [
+      `A free ${HEALTH_CHECK.length}-question chimney self-check built from the warning signs ${SITE.owner}, ${CREDENTIALS.fire.fullName}, looks for on every inspection.`,
+      ...HEALTH_CHECK.map((q) => `${q.q}${q.hint ? ` ${q.hint}` : ''}`),
+      'Smoke drifting into the room or signs of a past chimney fire mean the fireplace should not be used until it is inspected.',
+    ],
+    links: [{ label: 'Chimney inspection', path: '/services/chimney-inspection' }, { label: 'Chimney cleaning', path: '/services/chimney-sweeping' }, { label: 'Contact', path: '/contact' }],
+    crumbs: [HOME, { name: 'Chimney Health Check', path: '/chimney-health-check' }],
+    priority: 0.8,
+  });
+
+  add({
+    path: '/real-estate-chimney-inspections',
+    title: 'Level 2 Chimney Inspections for Home Buyers, Sellers & Realtors',
+    description: `Level 2 chimney inspections for home sales in ${STATE_LIST_TEXT}. NFPA 211 calls for a Level 2 inspection when a property is sold. ${CREDENTIALS.fire.title}.`,
+    image: TEAM.inspectionRoof.src,
+    h1: 'Chimney inspections that keep closings on track',
+    summary: [
+      'A general home inspection usually looks at the chimney from the outside. A Level 2 chimney inspection includes a camera look inside the flue.',
+      ...REAL_ESTATE_FAQS.map((f) => `${f.q} ${f.a}`),
+      'Realtors, home inspectors and property managers can partner with First Chimney for chimney questions in their deals.',
+    ],
+    links: [{ label: 'Inspection levels explained', path: '/blog/what-is-a-level-2-chimney-inspection' }, { label: 'Chimney inspection', path: '/services/chimney-inspection' }],
+    crumbs: [HOME, { name: 'Real Estate Inspections', path: '/real-estate-chimney-inspections' }],
+    jsonLd: [
+      faqLd(REAL_ESTATE_FAQS),
+      { '@context': 'https://schema.org', '@type': 'Service', name: 'Level 2 chimney inspection for real estate transactions', serviceType: 'Chimney inspection', provider: { '@id': ORG_ID }, areaServed: STATES.map((s) => ({ '@type': 'State', name: s.name })) },
+    ],
+    priority: 0.7,
+  });
+
+  add({
+    path: '/how-to-choose-a-chimney-company',
+    title: 'How to Choose a Chimney Company: 6 Questions & Red Flags',
+    description: 'Six questions to ask any chimney sweep or chimney company before they get on your roof, the red flags of chimney scams, and how First Chimney answers each one.',
+    image: SITE.ogImage,
+    h1: 'How to choose a chimney company',
+    summary: [
+      ...CHOOSE_QUESTIONS.map((x) => `${x.q} ${x.why} First Chimney: ${x.us}`),
+      `Red flags: ${RED_FLAGS.join('; ')}.`,
+      'Homeowners can send an existing chimney repair quote to Andrew for a second opinion.',
+    ],
+    links: [{ label: 'About Andrew', path: '/about' }, { label: 'Reviews', path: '/reviews' }, { label: 'Contact', path: '/contact' }],
+    crumbs: [HOME, { name: 'How to Choose a Chimney Company', path: '/how-to-choose-a-chimney-company' }],
+    jsonLd: [faqLd(CHOOSE_QUESTIONS.map((x) => ({ q: x.q, a: `${x.why} ${x.us}` })))],
+    priority: 0.7,
+  });
+
+  add({
+    path: '/careers',
+    title: 'Careers: Chimney Technician, Helper & Mason Jobs',
+    description: `Work with ${SITE.owner} at ${SITE.name}. Chimney technician, helper / apprentice and mason positions. Learn the trade from a ${CREDENTIALS.fire.title}.`,
+    image: TEAM.liner.src,
+    h1: 'Learn a real trade from someone who loves it',
+    summary: [...POSITIONS.map((p) => `${p.title}: ${p.summary}`), ...CAREER_FAQS.map((f) => `${f.q} ${f.a}`)],
+    links: [{ label: 'About', path: '/about' }],
+    crumbs: [HOME, { name: 'Careers', path: '/careers' }],
+    priority: 0.4,
+  });
+
+  add({
+    path: '/refer-a-friend',
+    title: 'Refer a Friend',
+    description: `Know someone whose chimney needs a look? Send a referral and ${SITE.owner} will reach out personally.`,
+    image: TEAM.headshot.src,
+    h1: 'Refer a friend',
+    summary: [`Send a referral and ${SITE.owner} will reach out personally and mention who sent them.`],
+    links: [{ label: 'Contact', path: '/contact' }],
+    crumbs: [HOME, { name: 'Refer a Friend', path: '/refer-a-friend' }],
+    priority: 0.3,
+  });
 
   add({
     path: '/privacy-policy',

@@ -36,7 +36,14 @@ If both are set, both run. A lead counts as delivered if at least one succeeds; 
 
 | Tag | When |
 | --- | --- |
-| `Website Lead` | Every submission |
+| `Website Form` | Every submission |
+| `Website Lead` | Homeowner forms only (holiday, contact, service request, health check, designer, shop, referral). Fires the new-lead alert. |
+| `Chimney Health Check`, `Health Check: Urgent/Soon/Good` | Health check quiz |
+| `Referral` | Refer-a-friend form |
+| `Referral Partner`, `Partner: <role>` | Real estate partner form |
+| `Recruiting`, `Job Applicant`, `Applied: <position>` | Careers form (never enters the Jobs pipeline) |
+| `Testimonial` | Reviews page form (publish permission recorded in the note) |
+| `Annual Reminder` | Yearly reminder sign-up |
 | `Form: Holiday $199 Cleaning + Inspection` | Holiday form |
 | **`Holiday Special - $199`** | Holiday form and saved-offer leads |
 | `Fireplace Design Request` | Design Your Fireplace submission (note contains the full design + a link to reopen it) |
@@ -47,6 +54,8 @@ If both are set, both run. A lead counts as delivered if at least one succeeds; 
 | `SMS Consent: Yes/No` | Always. Only text marketing to `Yes` |
 
 ## 3. Recommended workflows (build in GHL, publish, do not enable paid add-ons without approval)
+
+**The complete build, with every message written out, is in `GHL-AUTOMATION-PLAYBOOK.md`.** The table below is the short version.
 
 | Workflow | Trigger | Steps |
 | --- | --- | --- |

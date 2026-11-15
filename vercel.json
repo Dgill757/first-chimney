@@ -19,7 +19,14 @@
     { "source": "/shop", "destination": "/fireplace-shop", "permanent": false },
     { "source": "/shop/:path*", "destination": "/fireplace-shop/:path*", "permanent": false },
     { "source": "/design-your-fireplace", "destination": "/build-your-fireplace", "permanent": true },
-    { "source": "/build-my-fireplace", "destination": "/build-your-fireplace", "permanent": true }
+    { "source": "/build-my-fireplace", "destination": "/build-your-fireplace", "permanent": true },
+    { "source": "/check", "destination": "/chimney-health-check", "permanent": false },
+    { "source": "/chimney-safety-check", "destination": "/chimney-health-check", "permanent": true },
+    { "source": "/refer", "destination": "/refer-a-friend", "permanent": false },
+    { "source": "/jobs", "destination": "/careers", "permanent": false },
+    { "source": "/realtors", "destination": "/real-estate-chimney-inspections", "permanent": false },
+    { "source": "/review", "destination": "/reviews#share", "permanent": false },
+    { "source": "/remind", "destination": "/blog#reminder", "permanent": false }
   ],
   "headers": [
     {
