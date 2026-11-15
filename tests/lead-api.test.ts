@@ -4,7 +4,7 @@
  */
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import handler, { buildNote, buildTags, deliver, HOLIDAY_TAG, isConfigured, normalizePhone, splitName, validateLead } from '../api/lead.ts';
+import handler, { buildNote, buildTags, checkResume, customFieldValues, deliver, HOLIDAY_TAG, isConfigured, normalizePhone, pipelineFor, splitName, validateLead } from '../api/lead.ts';
 
 const base = {
   formId: 'holiday-199',
@@ -134,7 +134,7 @@ test('deliver: does not retry a 401', async () => {
   assert.ok(v.ok);
   if (!v.ok) return;
   let n = 0;
-  const fake = (async () => { n++; return new Response('nope', { status: 401 }); }) as typeof fetch;
+  const fake = (async (url: string) => { if (String(url).endsWith('/contacts/upsert')) n++; return new Response('nope', { status: 401 }); }) as typeof fetch;
   const out = await deliver(v.lead, 'FC-T3', { GHL_PRIVATE_TOKEN: 'bad', GHL_LOCATION_ID: 'loc' }, fake);
   assert.equal(out.api, false);
   assert.equal(n, 1);
@@ -196,14 +196,19 @@ test('job applicants are kept out of the sales pipeline', async () => {
   assert.ok(!tags.includes('Website Lead'));
   assert.ok(tags.includes('Job Applicant'));
   assert.ok(tags.includes('Applied: Helper / apprentice'));
-  const calls: string[] = [];
-  const fake = (async (url: string) => {
-    calls.push(url);
+  const opps: any[] = [];
+  const fake = (async (url: string, init: RequestInit = {}) => {
     if (url.endsWith('/contacts/upsert')) return new Response(JSON.stringify({ contact: { id: 'c_9' } }), { status: 200 });
+    if (url.includes('/opportunities/pipelines'))
+      return new Response(JSON.stringify({ pipelines: [{ id: 'jobs', name: 'Jobs', stages: [{ id: 'j1', name: 'New Lead' }] }, { id: 'rec', name: 'Recruiting', stages: [{ id: 'r1', name: 'Applied' }] }] }), { status: 200 });
+    if (url.endsWith('/opportunities/')) opps.push(JSON.parse(String(init.body)));
     return new Response('{}', { status: 200 });
   }) as typeof fetch;
-  await deliver(v.lead, 'FC-T9', { GHL_PRIVATE_TOKEN: 'pit-test', GHL_LOCATION_ID: 'loc_1', GHL_PIPELINE_ID: 'p1', GHL_PIPELINE_STAGE_ID: 's1' }, fake);
-  assert.equal(calls.filter((u) => u.includes('/opportunities')).length, 0);
+  // The Jobs override env must not capture applicants; they route to Recruiting by name.
+  await deliver(v.lead, 'FC-T9', { GHL_PRIVATE_TOKEN: 'pit-test', GHL_LOCATION_ID: 'loc_1', GHL_PIPELINE_ID: 'jobs', GHL_PIPELINE_STAGE_ID: 'j1' }, fake);
+  assert.equal(opps.length, 1);
+  assert.equal(opps[0].pipelineId, 'rec');
+  assert.equal(opps[0].pipelineStageId, 'r1');
 });
 
 test('job applications need a phone number', () => {
@@ -224,4 +229,27 @@ test('partner, referral and reminder forms get their own tags', () => {
   assert.ok(buildTags(referral.lead).includes('Website Lead'));
   assert.ok(buildTags(reminder.lead).includes('Annual Reminder'));
   assert.ok(!buildTags(reminder.lead).includes('Website Lead'));
+});
+
+test('custom fields are filled from the form, and resumes are validated', () => {
+  const v = validateLead({ ...base, formId: 'job-application', promo: '', details: 'Position: Mason' + String.fromCharCode(10) + 'Driver license: Yes' + String.fromCharCode(10) + 'Years of experience: 6', resume: { name: 'cv.pdf', type: 'application/pdf', data: Buffer.from('%PDF-1.4 test').toString('base64') } });
+  assert.ok(v.ok);
+  if (!v.ok) return;
+  assert.equal(v.lead.resume?.name, 'cv.pdf');
+  const f = customFieldValues(v.lead, 'FC-X', 'https://files/cv.pdf');
+  assert.equal(f['contact.position_applied'], 'Mason');
+  assert.equal(f['contact.years_of_experience'], '6');
+  assert.equal(f['contact.resume_link'], 'https://files/cv.pdf');
+  const bad = validateLead({ ...base, formId: 'job-application', resume: { name: 'virus.exe', type: 'application/x-msdownload', data: 'AAAA' } });
+  assert.equal(bad.ok, false);
+  const big = checkResume({ name: 'cv.pdf', type: 'application/pdf', data: 'A'.repeat(5_000_000) });
+  assert.ok(big.error);
+});
+
+test('forms route to the right pipeline by name', () => {
+  assert.deepEqual(pipelineFor('holiday-199'), { pipeline: 'Jobs', stage: 'New Lead' });
+  assert.equal(pipelineFor('fireplace-designer')?.pipeline, 'Fireplace Projects');
+  assert.equal(pipelineFor('partner')?.pipeline, 'Partners');
+  assert.equal(pipelineFor('job-application')?.pipeline, 'Recruiting');
+  assert.equal(pipelineFor('reminder'), null);
 });

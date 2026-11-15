@@ -13,7 +13,7 @@ import { AnimatePresence, motion } from 'motion/react';
 import { AlertTriangle, ArrowLeft, ArrowRight, BadgeCheck, BellRing, Briefcase, Check, CheckCircle2, ClipboardCheck, Gift, HardHat, Home as HomeIcon, KeyRound, Phone, ShieldAlert, Sparkles, Users, XCircle } from 'lucide-react';
 import LeadForm from '@/components/LeadForm';
 import { CallLink, EASE, Faq, PageIntro, Reveal } from '@/components/ui';
-import { CAREER_FAQS, CHOOSE_QUESTIONS, HEALTH_CHECK, PARTNER_ROLES, POSITIONS, REAL_ESTATE_FAQS, RED_FLAGS, REFERRAL_REWARD, scoreHealthCheck, type CheckLevel } from '@/data/growth';
+import { CAREER_FAQS, CHOOSE_QUESTIONS, HEALTH_CHECK, PARTNER_ROLES, POSITIONS, REAL_ESTATE_FAQS, RED_FLAGS, REFERRAL, scoreHealthCheck, type CheckLevel } from '@/data/growth';
 import { SERVICES } from '@/data/services';
 import { EXPERIENCE, TEAM } from '@/data/team';
 import { HOLIDAY_PROMO, promoIsLive } from '@/lib/promo';
@@ -383,9 +383,16 @@ export function RealEstate() {
 
 export function Careers() {
   const r = routeFor('/careers')!;
-  const [position, setPosition] = useState<string>(POSITIONS[1].title);
+  const [position, setPosition] = useState<string>(POSITIONS.find((p) => p.id === 'helper')!.title);
+  const [years, setYears] = useState('');
+  const [start, setStart] = useState('');
   const [license, setLicense] = useState<'Yes' | 'No'>('Yes');
   const [roofs, setRoofs] = useState<'Yes' | 'No'>('Yes');
+  const groups = ['Field', 'Sales & marketing', 'Office'] as const;
+  const apply = (title: string) => {
+    setPosition(title);
+    document.getElementById('apply')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
   return (
     <>
       <section className="relative overflow-hidden pb-16 pt-32 md:pb-24 md:pt-40">
@@ -395,11 +402,16 @@ export function Careers() {
             <p className="eyebrow">Careers at First Chimney</p>
             <h1 className="mt-4 text-[clamp(2.4rem,5vw,4.2rem)] text-bone">Learn a real trade from someone who loves it.</h1>
             <p className="lede mt-6">
-              {SITE.owner} has spent {EXPERIENCE.ownerYears} years in the chimney industry. He is looking for good people who show up, work carefully and treat every home like their own.
+              {SITE.owner} has spent {EXPERIENCE.ownerYears} years in the chimney industry. First Chimney is growing, and he is looking for good people who show up, work carefully and treat every home like their own.
             </p>
-            <a href="#apply" className="btn btn-primary btn-lg mt-9">
-              Apply in 2 minutes
-            </a>
+            <div className="mt-9 flex flex-wrap gap-3">
+              <a href="#roles" className="btn btn-primary btn-lg">
+                See all {POSITIONS.length} roles
+              </a>
+              <a href="#apply" className="btn btn-ghost btn-lg">
+                Apply in 2 minutes
+              </a>
+            </div>
           </div>
           <Reveal className="min-w-0">
             <div className="media aspect-[4/3]">
@@ -411,25 +423,66 @@ export function Careers() {
 
       <section className="section pt-0">
         <div className="wrap grid grid-cols-[minmax(0,1fr)] gap-6 md:grid-cols-3">
-          {POSITIONS.map((p, i) => (
-            <Reveal key={p.title} delay={i * 0.05} className="card flex flex-col p-7">
-              {i === 0 ? (
-                <Briefcase className="h-7 w-7 text-ember" strokeWidth={1.75} aria-hidden />
-              ) : i === 1 ? (
-                <HardHat className="h-7 w-7 text-ember" strokeWidth={1.75} aria-hidden />
-              ) : (
-                <ClipboardCheck className="h-7 w-7 text-ember" strokeWidth={1.75} aria-hidden />
-              )}
-              <h2 className="mt-5 text-xl text-bone">{p.title}</h2>
-              <p className="mt-2 text-mute">{p.summary}</p>
-              <ul className="mt-5 grid gap-2 text-sm text-mute">
-                {p.fit.map((f) => (
-                  <li key={f} className="flex gap-2">
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-ember" aria-hidden /> {f}
+          {[
+            { icon: HardHat, t: 'Hands-on, every day', b: 'Roofs, ladders, fireboxes and masonry. Every job is different, and you see the result before you leave.' },
+            { icon: BadgeCheck, t: 'Learn it the right way', b: `Training comes from a ${CREDENTIALS.fire.title}. Safety first, then quality, then speed.` },
+            { icon: HomeIcon, t: 'Respect for the customer', b: 'Drop cloths down, honest findings, clean work area. That is the standard here.' },
+          ].map((x, i) => (
+            <Reveal key={x.t} delay={i * 0.05} className="card p-7">
+              <x.icon className="h-7 w-7 text-ember" strokeWidth={1.75} aria-hidden />
+              <h2 className="mt-5 text-xl text-bone">{x.t}</h2>
+              <p className="mt-2 text-mute">{x.b}</p>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      <section id="roles" className="section scroll-mt-24 pt-0">
+        <div className="wrap">
+          <h2 className="display-md text-bone">Open roles</h2>
+          <p className="mt-3 max-w-2xl text-mute">Pay depends on experience and is discussed on the first call. Don’t see a perfect fit? Apply anyway and tell Andrew what you are good at.</p>
+          {groups.map((g) => (
+            <div key={g} className="mt-10">
+              <p className="eyebrow">{g}</p>
+              <ul className="mt-4 grid grid-cols-[minmax(0,1fr)] gap-4 lg:grid-cols-2">
+                {POSITIONS.filter((p) => p.group === g).map((p) => (
+                  <li key={p.id} className="card flex min-w-0 flex-col p-6 sm:p-7">
+                    <div className="flex flex-wrap items-start justify-between gap-3">
+                      <h3 className="text-xl text-bone">{p.title}</h3>
+                      <span className="rounded-full border border-white/12 px-3 py-1 text-xs text-mute">{p.type}</span>
+                    </div>
+                    <p className="mt-3 text-mute">{p.summary}</p>
+                    <details className="group mt-4">
+                      <summary className="cursor-pointer list-none text-sm font-medium text-ember">
+                        <span className="group-open:hidden">Responsibilities and requirements</span>
+                        <span className="hidden group-open:inline">Hide details</span>
+                      </summary>
+                      <div className="mt-4 grid gap-5 text-sm">
+                        {[
+                          ['What you will do', p.responsibilities],
+                          ['What you need', p.requirements],
+                          ['Nice to have', p.niceToHave],
+                        ].map(([label, items]) => (
+                          <div key={label as string}>
+                            <p className="font-medium text-bone">{label as string}</p>
+                            <ul className="mt-2 grid gap-1.5 text-mute">
+                              {(items as string[]).map((it) => (
+                                <li key={it} className="flex gap-2">
+                                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-ember" aria-hidden /> {it}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    </details>
+                    <button type="button" onClick={() => apply(p.title)} className="btn btn-ghost btn-sm mt-6 self-start">
+                      Apply for this role <ArrowRight className="h-4 w-4" aria-hidden />
+                    </button>
                   </li>
                 ))}
               </ul>
-            </Reveal>
+            </div>
           ))}
         </div>
       </section>
@@ -437,29 +490,51 @@ export function Careers() {
       <section className="section pt-0">
         <div className="wrap grid grid-cols-[minmax(0,1fr)] gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="min-w-0">
-            <h2 className="display-md text-bone">What the work is like</h2>
-            <ul className="mt-8 grid gap-6">
-              <Point icon={HardHat} title="Hands-on, every day">
-                Roofs, ladders, fireboxes and masonry. Every job is a little different and you see the result before you leave.
+            <h2 className="display-md text-bone">How hiring works</h2>
+            <ol className="mt-8 grid gap-6">
+              <Point icon={ClipboardCheck} title="1. Apply here">
+                Two minutes. A resume is optional.
               </Point>
-              <Point icon={BadgeCheck} title="Learn it the right way">
-                Training comes from a {CREDENTIALS.fire.title}. Safety first, then quality, then speed.
+              <Point icon={Phone} title="2. A short call with Andrew">
+                Ten minutes to see if it is a fit, both ways.
               </Point>
-              <Point icon={HomeIcon} title="Respect for the customer">
-                Drop cloths down, honest findings, clean work area. That is the standard here.
+              <Point icon={HardHat} title="3. A paid working interview">
+                A half day on a real job. You see the work, we see how you work.
               </Point>
-            </ul>
+            </ol>
             <div className="mt-10">
               <Faq items={CAREER_FAQS} />
             </div>
           </div>
           <div id="apply" className="card min-w-0 scroll-mt-28 p-6 sm:p-8">
             <h2 className="text-2xl text-bone">Apply</h2>
-            <p className="mt-2 text-mute">No resume needed. Andrew reads every application himself.</p>
+            <p className="mt-2 text-mute">Andrew reads every application himself.</p>
             <div className="mt-6 grid gap-5">
-              <div>
-                <p className="mb-3 text-sm text-dim">Position</p>
-                <Chips options={POSITIONS.map((p) => p.title)} value={position} onChange={setPosition} label="Position" />
+              <div className="field">
+                <label htmlFor="careers-position">Position</label>
+                <select id="careers-position" className="input" value={position} onChange={(e) => setPosition(e.target.value)}>
+                  {POSITIONS.map((p) => (
+                    <option key={p.id} value={p.title}>
+                      {p.title} ({p.type})
+                    </option>
+                  ))}
+                  <option value="General application">Not sure yet / general application</option>
+                </select>
+              </div>
+              <div className="grid gap-5 sm:grid-cols-2">
+                <div className="field">
+                  <label htmlFor="careers-years">Years of related experience</label>
+                  <select id="careers-years" className="input" value={years} onChange={(e) => setYears(e.target.value)}>
+                    <option value="">Select</option>
+                    {['None yet', 'Less than 1', '1 to 3', '3 to 5', '5 to 10', '10+'].map((y) => (
+                      <option key={y}>{y}</option>
+                    ))}
+                  </select>
+                </div>
+                <div className="field">
+                  <label htmlFor="careers-start">When can you start?</label>
+                  <input id="careers-start" className="input" placeholder="Example: in 2 weeks" value={start} onChange={(e) => setStart(e.target.value)} />
+                </div>
               </div>
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
@@ -478,11 +553,12 @@ export function Careers() {
                 fields={['name', 'phone', 'email', 'city', 'state', 'message']}
                 required={['name', 'phone', 'message']}
                 messageLabel="Tell Andrew about yourself"
-                messagePlaceholder="Work experience, trades you know, when you can start, anything else he should know."
-                details={() => `Position: ${position}\nDriver license: ${license}\nComfortable on roofs and ladders: ${roofs}`}
+                messagePlaceholder="Work experience, trades you know, certifications, anything else he should know."
+                details={() => `Position: ${position}\nYears of experience: ${years || 'Not given'}\nAvailable to start: ${start || 'Not given'}\nDriver license: ${license}\nComfortable on roofs and ladders: ${roofs}`}
                 submitLabel="Send my application"
                 successTitle="Application received."
                 successBody={<p>Thanks for your interest in First Chimney. Andrew reads every application and will call if it looks like a fit.</p>}
+                resumeUpload
                 dense
               />
             </div>
@@ -503,7 +579,7 @@ export function Refer() {
         crumbs={r.crumbs}
         eyebrow="Refer a friend"
         title="Know someone whose chimney needs a look?"
-        lede={`Most of our work comes from neighbors telling neighbors. Send their name and number and ${SITE.owner} will reach out personally, and mention you sent them.`}
+        lede={`Most of our work comes from neighbors telling neighbors. Send their name and number and ${SITE.owner} will reach out personally. They get $25 off their first service, and you get $25 off your next one.`}
       />
       <section className="section pt-12">
         <div className="wrap grid grid-cols-[minmax(0,1fr)] gap-12 lg:grid-cols-[minmax(0,1fr)_24rem]">
@@ -517,10 +593,11 @@ export function Refer() {
                 required={['name', 'message']}
                 messageLabel="Who should we contact?"
                 messagePlaceholder="Their name, phone number, town and what they need (cleaning, a leak, a rebuild...)"
-                details={() => 'Referral: the person in the message was referred by this contact. Call them, mention who sent you, and thank the referrer.'}
+                details={() => `Referral code: ${REFERRAL.friendCode}
+Referral: the person in the message was referred by this contact. Call them, mention who sent you, apply ${REFERRAL.friendOffer}, and credit the referrer ${REFERRAL.referrerOffer} after the first completed job.`}
                 submitLabel="Send referral"
                 successTitle="Thank you."
-                successBody={<p>We will reach out to them soon and let them know you sent us. Referrals are the best compliment a small business can get.</p>}
+                successBody={<p>We will reach out to them soon and let them know you sent us. Tell them to mention code {REFERRAL.friendCode} for {REFERRAL.friendOffer}. Your {REFERRAL.referrerOffer} is applied after their first job.</p>}
                 dense
               />
             </div>
@@ -528,8 +605,14 @@ export function Refer() {
           <aside className="grid h-fit gap-4">
             <div className="card p-6">
               <Gift className="h-7 w-7 text-ember" strokeWidth={1.75} aria-hidden />
-              <p className="mt-4 text-lg text-bone">{REFERRAL_REWARD ? `As a thank-you: ${REFERRAL_REWARD}.` : 'Andrew will personally thank you.'}</p>
-              <p className="mt-2 text-sm text-mute">Every referral goes straight to Andrew. Nobody gets added to a call list.</p>
+              <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-ember">Give $25, get $25</p>
+              <p className="mt-2 text-lg text-bone">Your friend gets {REFERRAL.friendOffer}. You get {REFERRAL.referrerOffer}.</p>
+              <div className="mt-4 rounded-2xl border border-dashed border-ember/50 bg-ember/[0.06] p-4 text-center">
+                <p className="text-xs text-dim">Friend’s code</p>
+                <p className="mt-1 font-mono text-2xl tracking-[0.12em] text-bone">{REFERRAL.friendCode}</p>
+              </div>
+              <p className="mt-4 text-xs leading-relaxed text-dim">{REFERRAL.terms}</p>
+              <p className="mt-3 text-sm text-mute">Every referral goes straight to Andrew. Nobody gets added to a call list.</p>
             </div>
             <div className="card overflow-hidden">
               <img src={TEAM.headshot.sm} alt={TEAM.headshot.alt} loading="lazy" className="aspect-[16/10] w-full object-cover" />

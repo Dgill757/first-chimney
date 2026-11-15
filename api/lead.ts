@@ -9,8 +9,12 @@
  *   GHL_WEBHOOK_URL      Inbound Webhook trigger URL from a GHL workflow. Simplest setup.
  *   GHL_PRIVATE_TOKEN    Private Integration token (pit-...) for Andrew's sub-account,
  *   GHL_LOCATION_ID      plus its Location ID. Upserts the contact, adds tags and a note.
- *   GHL_PIPELINE_ID      Optional. With GHL_PIPELINE_STAGE_ID, also opens an opportunity
- *   GHL_PIPELINE_STAGE_ID  in the job pipeline for every lead.
+ *   GHL_PIPELINE_ID      Optional override. Without it, opportunities are routed by pipeline
+ *   GHL_PIPELINE_STAGE_ID  NAME (Jobs, Fireplace Projects, Partners, Recruiting), looked up once.
+ *
+ * With the token, every form also fills the sub-account's custom fields (matched by field
+ * key, e.g. contact.health_check_result), and job applications upload the resume to the
+ * GHL media library and save its link in "Resume Link".
  *
  * Secrets never reach the browser, the repo or the logs. Logs contain only the
  * form id, reference and a redacted summary.
@@ -78,7 +82,27 @@ export type Lead = {
   sourcePage: string;
   submittedAt: string;
   attribution: Record<string, string>;
+  resume: Resume | null;
 };
+
+export type Resume = { name: string; type: string; data: string };
+const RESUME_TYPES = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'text/plain', 'application/rtf'];
+export const RESUME_MAX_BYTES = 3 * 1024 * 1024;
+
+/** Validates a base64 resume. Returns an error message, or null when acceptable. */
+export function checkResume(r: unknown): { resume: Resume | null; error?: string } {
+  if (r == null || r === '') return { resume: null };
+  if (typeof r !== 'object') return { resume: null, error: 'Resume upload failed. Please try again.' };
+  const o = r as Record<string, unknown>;
+  const name = typeof o.name === 'string' ? o.name.replace(/[^\w.\- ]/g, '').slice(0, 120) : '';
+  const type = typeof o.type === 'string' ? o.type : '';
+  const data = typeof o.data === 'string' ? o.data.replace(/^data:[^,]*,/, '') : '';
+  if (!name || !data) return { resume: null, error: 'Resume upload failed. Please try again.' };
+  if (!RESUME_TYPES.includes(type) && !/\.(pdf|docx?|txt|rtf)$/i.test(name)) return { resume: null, error: 'Please upload a PDF, Word or text file.' };
+  if (Math.floor((data.length * 3) / 4) > RESUME_MAX_BYTES) return { resume: null, error: 'Please upload a file under 3 MB.' };
+  if (!/^[A-Za-z0-9+/=\s]+$/.test(data)) return { resume: null, error: 'Resume upload failed. Please try again.' };
+  return { resume: { name, type: type || 'application/octet-stream', data } };
+}
 
 /* ------------------------------------------------------------------ */
 /* Validation                                                           */
@@ -127,6 +151,9 @@ export function validateLead(input: unknown): { ok: true; lead: Lead } | { ok: f
 
   if (b.consent !== true) fields.consent = 'Please confirm we may contact you about this request.';
 
+  const resumeCheck = checkResume(b.resume);
+  if (resumeCheck.error) fields.resume = resumeCheck.error;
+
   if (Object.keys(fields).length) return { ok: false, fields };
 
   const attrIn = (b.attribution && typeof b.attribution === 'object' ? b.attribution : {}) as Record<string, unknown>;
@@ -161,6 +188,7 @@ export function validateLead(input: unknown): { ok: true; lead: Lead } | { ok: f
       sourcePage: str(b.sourcePage, 200),
       submittedAt: str(b.submittedAt, 40) || new Date().toISOString(),
       attribution,
+      resume: formId === 'job-application' ? resumeCheck.resume : null,
     },
   };
 }
@@ -197,6 +225,63 @@ export function detail(lead: Pick<Lead, 'details'>, key: string): string {
   const m = lead.details.match(new RegExp(`^${key}: (.+)$`, 'm'));
   return m ? m[1].trim().slice(0, 60) : '';
 }
+
+/** Which pipeline/stage each form opens an opportunity in (by name, so snapshots keep working). */
+export function pipelineFor(formId: FormId): { pipeline: string; stage: string } | null {
+  if (formId === 'fireplace-designer' || formId === 'shop-quote') return { pipeline: 'Fireplace Projects', stage: 'New Design Request' };
+  if (formId === 'partner') return { pipeline: 'Partners', stage: 'New Partner' };
+  if (formId === 'job-application') return { pipeline: 'Recruiting', stage: 'Applied' };
+  if (formId === 'testimonial' || formId === 'reminder') return null;
+  return { pipeline: 'Jobs', stage: 'New Lead' };
+}
+
+/** Values for the sub-account's custom fields, keyed by GHL field key. Empty values are skipped. */
+export function customFieldValues(lead: Lead, ref: string, resumeUrl = ''): Record<string, string> {
+  const a = lead.attribution;
+  const v: Record<string, string> = {
+    'contact.lead_form': FORM_LABEL[lead.formId],
+    'contact.website_reference': ref,
+    'contact.service_requested': lead.service,
+    'contact.preferred_timeframe': lead.timeframe,
+    'contact.promo_code': lead.promo,
+    'contact.first_landing_page': a.landingPage ?? '',
+    'contact.utm_source': a.utmSource ?? '',
+    'contact.utm_medium': a.utmMedium ?? '',
+    'contact.utm_campaign': a.utmCampaign ?? '',
+  };
+  if (lead.formId === 'safety-check') {
+    v['contact.health_check_result'] = detail(lead, 'Result');
+    v['contact.health_check_answers'] = lead.details;
+  }
+  if (lead.formId === 'partner') {
+    v['contact.partner_role'] = detail(lead, 'Role');
+    v['contact.partner_company'] = detail(lead, 'Company');
+  }
+  if (lead.formId === 'job-application') {
+    v['contact.position_applied'] = detail(lead, 'Position');
+    v['contact.driver_license'] = detail(lead, 'Driver license');
+    v['contact.comfortable_on_roofs'] = detail(lead, 'Comfortable on roofs and ladders');
+    v['contact.years_of_experience'] = detail(lead, 'Years of experience');
+    v['contact.available_start_date'] = detail(lead, 'Available to start');
+    v['contact.resume_link'] = resumeUrl;
+  }
+  if (lead.formId === 'referral') {
+    v['contact.referred_friend_details'] = lead.message;
+    v['contact.referral_code'] = detail(lead, 'Referral code');
+  }
+  if (lead.formId === 'testimonial') {
+    v['contact.testimonial_text'] = lead.message;
+    v['contact.publish_permission'] = /Permission to publish: YES/.test(lead.details) ? 'Yes' : 'No';
+  }
+  if (lead.formId === 'fireplace-designer') v['contact.fireplace_design_summary'] = lead.details;
+  if (lead.products.length) v['contact.products_of_interest'] = lead.products.join('\n');
+  for (const k of Object.keys(v)) if (!v[k]) delete v[k];
+  return v;
+}
+
+/* Per-instance caches of the sub-account's field ids and pipelines. */
+let fieldCache: Promise<Map<string, string>> | null = null;
+let pipelineCache: Promise<{ id: string; name: string; stages: { id: string; name: string }[] }[]> | null = null;
 
 export function buildTags(lead: Lead): string[] {
   const tags = new Set<string>(['Website Form', `Form: ${FORM_LABEL[lead.formId]}`]);
@@ -354,6 +439,31 @@ export async function deliver(lead: Lead, ref: string, env: Env, doFetch: Fetch 
     jobs.push(
       (async () => {
         try {
+          let resumeUrl = '';
+          if (lead.resume) {
+            try {
+              const fd = new FormData();
+              const bytes = Uint8Array.from(atob(lead.resume.data.replace(/\s/g, '')), (c) => c.charCodeAt(0));
+              fd.append('file', new Blob([bytes], { type: lead.resume.type }), `${ref}-${lead.resume.name}`);
+              fd.append('name', `${ref}-${lead.resume.name}`);
+              const up = await doFetch(`${GHL_BASE}/medias/upload-file`, { method: 'POST', headers: { Authorization: headers.Authorization, Version: GHL_VERSION }, body: fd });
+              if (up.ok) resumeUrl = ((await up.json().catch(() => ({}))) as { url?: string }).url ?? '';
+              else console.error(`[lead ${ref}] resume upload HTTP ${up.status}`);
+            } catch (e) {
+              console.error(`[lead ${ref}] resume upload failed: ${String(e).slice(0, 120)}`);
+            }
+          }
+
+          fieldCache ??= doFetch(`${GHL_BASE}/locations/${env.GHL_LOCATION_ID}/customFields?model=all`, { headers })
+            .then((r) => (r.ok ? r.json() : { customFields: [] }))
+            .then((d: { customFields?: { id: string; fieldKey?: string }[] }) => new Map((d.customFields ?? []).filter((f) => f.fieldKey).map((f) => [f.fieldKey as string, f.id])))
+            .catch(() => new Map<string, string>());
+          const ids = await fieldCache;
+          if (!ids.size) fieldCache = null;
+          const customFields = Object.entries(customFieldValues(lead, ref, resumeUrl))
+            .filter(([k]) => ids.has(k))
+            .map(([k, value]) => ({ id: ids.get(k), field_value: value }));
+
           const contact: Record<string, unknown> = {
             locationId: env.GHL_LOCATION_ID,
             firstName: lead.firstName || undefined,
@@ -367,6 +477,7 @@ export async function deliver(lead: Lead, ref: string, env: Env, doFetch: Fetch 
             postalCode: lead.zip || undefined,
             source: `Website - ${FORM_LABEL[lead.formId]}`,
             tags: buildTags(lead),
+            ...(customFields.length ? { customFields } : {}),
           };
           Object.keys(contact).forEach((k) => contact[k] === undefined && delete contact[k]);
           const res = await withRetry(doFetch, `${GHL_BASE}/contacts/upsert`, { method: 'POST', headers, body: JSON.stringify(contact) });
@@ -379,16 +490,33 @@ export async function deliver(lead: Lead, ref: string, env: Env, doFetch: Fetch 
           await withRetry(doFetch, `${GHL_BASE}/contacts/${contactId}/notes`, {
             method: 'POST',
             headers,
-            body: JSON.stringify({ body: buildNote(lead, ref) }),
+            body: JSON.stringify({ body: buildNote(lead, ref) + (resumeUrl ? `\nResume: ${resumeUrl}` : lead.resume ? '\nResume: upload failed, ask the applicant to email it.' : '') }),
           }).catch((e) => console.error(`[lead ${ref}] note failed: ${String(e).slice(0, 120)}`));
-          if (env.GHL_PIPELINE_ID && env.GHL_PIPELINE_STAGE_ID && isSalesLead(lead.formId)) {
+          const route = pipelineFor(lead.formId);
+          let pipelineId = env.GHL_PIPELINE_ID && isSalesLead(lead.formId) ? env.GHL_PIPELINE_ID : '';
+          let stageId = pipelineId ? (env.GHL_PIPELINE_STAGE_ID ?? '') : '';
+          if (!pipelineId && route) {
+            pipelineCache ??= doFetch(`${GHL_BASE}/opportunities/pipelines?locationId=${env.GHL_LOCATION_ID}`, { headers })
+              .then((r) => (r.ok ? r.json() : { pipelines: [] }))
+              .then((d: { pipelines?: { id: string; name: string; stages: { id: string; name: string }[] }[] }) => d.pipelines ?? [])
+              .catch(() => []);
+            const list = await pipelineCache;
+            if (!list.length) pipelineCache = null;
+            const p = list.find((x) => x.name.toLowerCase() === route.pipeline.toLowerCase());
+            const st = p?.stages.find((x) => x.name.toLowerCase() === route.stage.toLowerCase()) ?? p?.stages[0];
+            if (p && st) {
+              pipelineId = p.id;
+              stageId = st.id;
+            }
+          }
+          if (pipelineId && stageId) {
             await withRetry(doFetch, `${GHL_BASE}/opportunities/`, {
               method: 'POST',
               headers,
               body: JSON.stringify({
                 locationId: env.GHL_LOCATION_ID,
-                pipelineId: env.GHL_PIPELINE_ID,
-                pipelineStageId: env.GHL_PIPELINE_STAGE_ID,
+                pipelineId,
+                pipelineStageId: stageId,
                 contactId,
                 name: `${lead.name} - ${FORM_LABEL[lead.formId]}`,
                 status: 'open',
@@ -436,7 +564,7 @@ export default async function handler(req: Req, res: Res) {
 
   let body: unknown = req.body;
   if (typeof body === 'string') {
-    if (body.length > 20_000) return res.status(413).json({ ok: false, code: 'invalid', message: 'Request too large.' });
+    if (body.length > 4_400_000) return res.status(413).json({ ok: false, code: 'invalid', message: 'Request too large.' });
     try {
       body = JSON.parse(body);
     } catch {

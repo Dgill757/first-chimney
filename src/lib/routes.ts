@@ -455,11 +455,22 @@ export function buildRoutes(extra: RouteMeta[] = []): RouteMeta[] {
 
   add({
     path: '/careers',
-    title: 'Careers: Chimney Technician, Helper & Mason Jobs',
+    title: 'Careers: Chimney Technician, Mason, Installer, Sales & Office Jobs',
     description: `Work with ${SITE.owner} at ${SITE.name}. Chimney technician, helper / apprentice and mason positions. Learn the trade from a ${CREDENTIALS.fire.title}.`,
     image: TEAM.liner.src,
     h1: 'Learn a real trade from someone who loves it',
-    summary: [...POSITIONS.map((p) => `${p.title}: ${p.summary}`), ...CAREER_FAQS.map((f) => `${f.q} ${f.a}`)],
+    summary: [...POSITIONS.map((p) => `${p.title} (${p.type}): ${p.summary} Requirements: ${p.requirements.join('; ')}.`), ...CAREER_FAQS.map((f) => `${f.q} ${f.a}`)],
+    jsonLd: POSITIONS.map((p) => ({
+      '@context': 'https://schema.org',
+      '@type': 'JobPosting',
+      title: p.title,
+      description: `${p.summary} Responsibilities: ${p.responsibilities.join('; ')}. Requirements: ${p.requirements.join('; ')}.`,
+      datePosted: '2026-11-15',
+      employmentType: p.type.includes('Part') ? 'PART_TIME' : p.type === 'Seasonal' ? 'TEMPORARY' : 'FULL_TIME',
+      hiringOrganization: { '@type': 'Organization', name: SITE.name, sameAs: SITE.domain, logo: abs(SITE.logoDark) },
+      jobLocation: { '@type': 'Place', address: { '@type': 'PostalAddress', addressLocality: 'Virginia Beach', addressRegion: 'VA', addressCountry: 'US' } },
+      directApply: true,
+    })),
     links: [{ label: 'About', path: '/about' }],
     crumbs: [HOME, { name: 'Careers', path: '/careers' }],
     priority: 0.4,
@@ -467,8 +478,8 @@ export function buildRoutes(extra: RouteMeta[] = []): RouteMeta[] {
 
   add({
     path: '/refer-a-friend',
-    title: 'Refer a Friend',
-    description: `Know someone whose chimney needs a look? Send a referral and ${SITE.owner} will reach out personally.`,
+    title: 'Refer a Friend: Give $25, Get $25',
+    description: `Give $25, get $25. Refer a friend to ${SITE.name}: they get $25 off their first chimney service and you get $25 off your next one.`,
     image: TEAM.headshot.src,
     h1: 'Refer a friend',
     summary: [`Send a referral and ${SITE.owner} will reach out personally and mention who sent them.`],

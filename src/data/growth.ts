@@ -206,46 +206,199 @@ export const REAL_ESTATE_FAQS = [
 
 /* -------------------------------- Careers -------------------------------- */
 
-export const POSITIONS = [
+export type Position = {
+  id: string;
+  title: string;
+  type: 'Full-time' | 'Part-time' | 'Seasonal' | 'Full-time or part-time' | 'Part-time / freelance';
+  group: 'Field' | 'Sales & marketing' | 'Office';
+  summary: string;
+  responsibilities: string[];
+  requirements: string[];
+  niceToHave: string[];
+};
+
+/**
+ * Every role a growing chimney company eventually needs. Pay and benefits are
+ * deliberately not listed: Andrew sets them per hire. Remove a role here to hide it.
+ */
+export const POSITIONS: Position[] = [
   {
+    id: 'technician',
     title: 'Chimney technician',
-    summary: 'You already know chimneys: sweeping, inspections, caps, dampers and explaining it all to a homeowner.',
-    fit: ['Chimney or masonry experience', 'Comfortable on ladders and roofs', 'Explains findings plainly and honestly'],
+    type: 'Full-time',
+    group: 'Field',
+    summary: 'The core of the company. Sweeps, inspections, caps, dampers and the plain-English walkthrough that earns a homeowner’s trust.',
+    responsibilities: [
+      'Clean chimneys, fireplaces, wood stoves, inserts and dryer vents',
+      'Perform Level 1 and Level 2 inspections with camera and photo documentation',
+      'Install chimney caps, top-sealing dampers and spark arrestors',
+      'Walk homeowners through findings with photos, honestly and without pressure',
+      'Protect every home: drop cloths, clean work area, respect for the customer',
+    ],
+    requirements: ['Chimney or masonry field experience', 'Comfortable on ladders and steep roofs', 'Valid driver’s license and a clean driving record', 'Clear communication with homeowners'],
+    niceToHave: ['F.I.R.E., CSIA or NFI certification (or willingness to earn one)', 'Experience with inspection cameras', 'Basic masonry repair'],
   },
   {
+    id: 'lead-technician',
+    title: 'Lead technician / crew lead',
+    type: 'Full-time',
+    group: 'Field',
+    summary: 'Run a truck. Lead a helper, own the quality of every job and help train the next technician.',
+    responsibilities: [
+      'Lead daily jobs and keep the schedule on time',
+      'Train and supervise helpers on safety and technique',
+      'Diagnose leaks, draft problems and flue damage',
+      'Write clear findings and repair recommendations in the CRM',
+      'Keep the truck stocked, organized and inspected',
+    ],
+    requirements: ['3+ years in the chimney trade', 'Proven ability to lead a small crew', 'Valid driver’s license', 'Strong safety habits on roofs and ladders'],
+    niceToHave: ['Chimney inspection certification', 'Relining and stainless liner installation', 'Smoke chamber parging'],
+  },
+  {
+    id: 'helper',
     title: 'Helper / apprentice',
-    summary: 'No chimney experience needed. Learn the trade from a F.I.R.E. Certified Technician, one job at a time.',
-    fit: ['Shows up on time, every time', 'Not afraid of heights or hard work', 'Treats a customer’s home like their own'],
+    type: 'Full-time or part-time',
+    group: 'Field',
+    summary: 'No chimney experience needed. Learn a real trade from a F.I.R.E. Certified Technician, one job at a time.',
+    responsibilities: [
+      'Set up and protect the work area, carry and set ladders safely',
+      'Run vacuums and equipment, haul debris, clean up',
+      'Learn to sweep, take the standard photo set and help on repairs',
+      'Mix mortar and assist on caps, crowns and masonry work',
+    ],
+    requirements: ['Shows up on time, every time', 'Not afraid of heights or hard work', 'Can lift 50 lb and work outdoors in all seasons', 'Treats a customer’s home like their own'],
+    niceToHave: ['Construction, roofing or trade school background', 'Valid driver’s license'],
   },
   {
-    title: 'Mason',
-    summary: 'Crowns, rebuilds, tuckpointing and brickwork that has to survive decades of weather.',
-    fit: ['Brick and block experience', 'Clean, careful work', 'Takes pride in a straight line'],
+    id: 'mason',
+    title: 'Mason (brick and stone)',
+    type: 'Full-time',
+    group: 'Field',
+    summary: 'Crowns, rebuilds, tuckpointing and brickwork that has to survive decades of freeze and thaw.',
+    responsibilities: [
+      'Rebuild chimneys from the roofline up',
+      'Pour and form chimney crowns, repoint and tuckpoint joints',
+      'Repair spalled brick, stone and firebox walls',
+      'Set flue tiles and work cleanly around finished homes',
+    ],
+    requirements: ['Brick and block experience', 'Comfortable working from roofs and scaffolding', 'Clean, careful work and pride in a straight line'],
+    niceToHave: ['Stone and historic masonry', 'Refractory and firebox work', 'Own hand tools'],
   },
-] as const;
+  {
+    id: 'masonry-laborer',
+    title: 'Masonry laborer',
+    type: 'Full-time or part-time',
+    group: 'Field',
+    summary: 'Keep the mason moving: mix, carry, stage, clean. A great path into the masonry trade.',
+    responsibilities: ['Mix mortar and concrete', 'Stage brick, block and materials on roofs and scaffolding', 'Set up and break down scaffolding and tarps', 'Keep the site safe and clean'],
+    requirements: ['Physically fit and comfortable at heights', 'Reliable transportation', 'Willing to learn'],
+    niceToHave: ['Scaffolding experience', 'Construction labor background'],
+  },
+  {
+    id: 'hearth-installer',
+    title: 'Hearth installer (gas, wood and inserts)',
+    type: 'Full-time',
+    group: 'Field',
+    summary: 'Install the fireplaces, inserts and stoves homeowners design on our website, and service them for years after.',
+    responsibilities: [
+      'Install gas, wood and pellet inserts, stoves and fireplaces to manufacturer specs',
+      'Install liners, venting and surrounds',
+      'Start up, test and walk the homeowner through their new unit',
+      'Service and troubleshoot existing gas appliances',
+    ],
+    requirements: ['Hearth or HVAC installation experience', 'Understanding of venting and clearances', 'Valid driver’s license'],
+    niceToHave: ['NFI certification (gas, wood or pellet)', 'Gas fitter license where required'],
+  },
+  {
+    id: 'inspection-sales',
+    title: 'Inspection and sales rep (estimator)',
+    type: 'Full-time',
+    group: 'Sales & marketing',
+    summary: 'Turn inspections into clear, honest proposals. The person homeowners trust to explain what their chimney really needs.',
+    responsibilities: [
+      'Run inspections and present findings with photos',
+      'Build good, better, best repair proposals in the CRM',
+      'Follow up on estimates and keep the pipeline moving',
+      'Build relationships with realtors and home inspectors',
+    ],
+    requirements: ['Sales or estimating experience in home services', 'Comfortable on roofs for inspections', 'Organized and responsive', 'Valid driver’s license'],
+    niceToHave: ['Chimney or masonry background', 'CRM experience (GoHighLevel a plus)'],
+  },
+  {
+    id: 'canvasser',
+    title: 'Canvasser / door-to-door marketing rep',
+    type: 'Seasonal',
+    group: 'Sales & marketing',
+    summary: 'Knock doors in neighborhoods we are already working in. Friendly, honest, no pressure: you set appointments, Andrew does the rest.',
+    responsibilities: [
+      'Visit homes near active jobs with door hangers and the health check card',
+      'Start friendly conversations and book free-to-ask appointments',
+      'Log every conversation in the CRM app',
+      'Follow local soliciting rules and respect "no soliciting" signs',
+    ],
+    requirements: ['Outgoing and comfortable talking to strangers', 'Reliable and coachable', 'Smartphone for the CRM app'],
+    niceToHave: ['Door-to-door or field marketing experience', 'Bilingual'],
+  },
+  {
+    id: 'office-manager',
+    title: 'Office manager / scheduler',
+    type: 'Part-time',
+    group: 'Office',
+    summary: 'The voice on the phone and the calendar behind the trucks. Can start part-time and partly remote.',
+    responsibilities: [
+      'Answer calls and texts, book and confirm appointments',
+      'Keep the CRM pipelines current and follow up on estimates',
+      'Send invoices and collect payments',
+      'Coordinate permits, materials and the weekly schedule',
+    ],
+    requirements: ['Excellent phone manner', 'Organized and detail-oriented', 'Comfortable with software and a CRM'],
+    niceToHave: ['Home services or contractor office experience', 'QuickBooks or GoHighLevel experience'],
+  },
+  {
+    id: 'content-creator',
+    title: 'Social media and content creator',
+    type: 'Part-time / freelance',
+    group: 'Sales & marketing',
+    summary: 'Show the real work. Short videos and photos from job sites that teach homeowners something.',
+    responsibilities: ['Film and edit short job-site videos and before and afters (with homeowner permission)', 'Post to Facebook, Instagram, Google and Nextdoor on a schedule', 'Write simple, helpful captions', 'Track what gets calls'],
+    requirements: ['Portfolio of short-form video', 'Can work around a field schedule', 'Comfortable on job sites'],
+    niceToHave: ['Experience with trades or home service brands', 'Drone experience'],
+  },
+];
 
 export const CAREER_FAQS = [
   {
     q: 'Do I need experience?',
-    a: 'Not for the helper role. Good habits matter more than experience: be on time, be careful, be respectful in people’s homes. The rest can be taught.',
+    a: 'Not for the helper, laborer or canvasser roles. Good habits matter more than experience: be on time, be careful, be respectful in people’s homes. The rest can be taught.',
   },
   {
     q: 'Where is the work?',
-    a: 'At homes across our service area. A valid driver’s license helps.',
+    a: 'At homes across our service area in Virginia, New Jersey, Connecticut and Massachusetts. Most field roles need a valid driver’s license.',
+  },
+  {
+    q: 'Do I need a resume?',
+    a: 'No. Upload one if you have it. If not, just tell Andrew about yourself in the form.',
   },
   {
     q: 'What happens after I apply?',
-    a: 'Andrew reads every application himself and calls the people who look like a good fit.',
+    a: 'Andrew reads every application himself. If it looks like a fit, he will call for a short phone chat, then a paid working interview on a real job.',
+  },
+  {
+    q: 'Will you help me get certified?',
+    a: 'Training comes from a F.I.R.E. Certified Technician. Ask about certification during your interview.',
   },
 ];
 
 /* ------------------------------- Referrals ------------------------------- */
 
-/**
- * Leave null until Andrew picks a thank-you. When set (for example
- * "a $25 gift card after their first job"), the referral page shows it.
- */
-export const REFERRAL_REWARD: string | null = null;
+/** Give $25, get $25. Approved by Dan and Andrew on 2026-11-15. */
+export const REFERRAL = {
+  friendCode: 'NEIGHBOR25',
+  friendOffer: '$25 off their first service',
+  referrerOffer: '$25 off your next service',
+  terms: 'One referral credit per new household. The new customer mentions the code when booking. Cannot be combined with other offers. Credit is applied after the friend’s first completed job.',
+};
+export const REFERRAL_REWARD: string | null = `${REFERRAL.referrerOffer} when they book, and ${REFERRAL.friendOffer}`;
 
 /* --------------------------- How to choose us ---------------------------- */
 

@@ -45,6 +45,8 @@ export type LeadInput = {
   smsConsent?: boolean;
   /** Honeypot. Real people never fill this. */
   website?: string;
+  /** Optional resume (base64) for job applications. */
+  resume?: { name: string; type: string; data: string };
 };
 
 export type LeadPayload = LeadInput & {

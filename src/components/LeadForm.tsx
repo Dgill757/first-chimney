@@ -28,7 +28,21 @@ type Props = {
   dense?: boolean;
   /** Adds a required checkbox granting permission to publish the person's words (testimonials). */
   publishConsent?: boolean;
+  /** Adds an optional resume upload (PDF, Word or text, up to 3 MB). */
+  resumeUpload?: boolean;
 };
+
+const RESUME_MAX = 3 * 1024 * 1024;
+const RESUME_ACCEPT = '.pdf,.doc,.docx,.txt,.rtf,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain';
+
+function readAsBase64(file: File): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const r = new FileReader();
+    r.onload = () => resolve(String(r.result).replace(/^data:[^,]*,/, ''));
+    r.onerror = () => reject(r.error);
+    r.readAsDataURL(file);
+  });
+}
 
 const TIMEFRAMES = ['As soon as possible', 'Within the next week', 'Within 2 weeks', 'Before the holidays', 'I am flexible'];
 
@@ -51,6 +65,7 @@ export default function LeadForm({
   onSuccess,
   dense = false,
   publishConsent = false,
+  resumeUpload = false,
 }: Props) {
   const uid = useId();
   const id = (f: string) => `${uid}-${f}`;
@@ -59,6 +74,7 @@ export default function LeadForm({
   const [state, setState] = useState<'idle' | 'sending' | 'done' | 'failed'>('idle');
   const [failMsg, setFailMsg] = useState('');
   const [ref, setRef] = useState('');
+  const [resume, setResume] = useState<File | null>(null);
   const started = useRef(false);
   const has = (f: FieldName) => fields.includes(f);
   const req = (f: FieldName) => required.includes(f);
@@ -88,6 +104,8 @@ export default function LeadForm({
     }
     if (!v.consent) e.consent = 'Please check this box so we can contact you about your request.';
     if (publishConsent && !v.publish) e.publish = 'Please check this box so we can share your words.';
+    if (resume && resume.size > RESUME_MAX) e.resume = 'Please choose a file under 3 MB.';
+    if (resume && !/\.(pdf|docx?|txt|rtf)$/i.test(resume.name)) e.resume = 'Please upload a PDF, Word or text file.';
     return e;
   }
 
@@ -101,6 +119,16 @@ export default function LeadForm({
       return;
     }
     setState('sending');
+    let resumePayload: { name: string; type: string; data: string } | undefined;
+    if (resume) {
+      try {
+        resumePayload = { name: resume.name, type: resume.type || 'application/octet-stream', data: await readAsBase64(resume) };
+      } catch {
+        setErrors({ resume: 'Could not read that file. Please try another one.' });
+        setState('idle');
+        return;
+      }
+    }
     const result = await submitLead({
       formId,
       name: v.name.trim(),
@@ -119,6 +147,7 @@ export default function LeadForm({
       consent: v.consent,
       smsConsent: v.smsConsent,
       website: v.website,
+      resume: resumePayload,
     });
     if (result.ok) {
       setRef(result.ref);
@@ -285,6 +314,26 @@ export default function LeadForm({
             </label>
             <textarea id={id('message')} className={cls('message')} rows={dense ? 3 : 4} placeholder={messagePlaceholder} value={v.message} onChange={set('message')} {...aria('message')} />
             <Err f="message" />
+          </div>
+        )}
+
+        {resumeUpload && (
+          <div className="field">
+            <label htmlFor={id('resume')}>
+              Resume <span className="font-normal text-dim">(optional, PDF or Word, up to 3 MB)</span>
+            </label>
+            <input
+              id={id('resume')}
+              type="file"
+              accept={RESUME_ACCEPT}
+              className="input file:mr-4 file:rounded-full file:border-0 file:bg-ember file:px-4 file:py-1.5 file:text-sm file:font-medium file:text-[#1a0d05]"
+              onChange={(e) => {
+                setResume(e.target.files?.[0] ?? null);
+                if (errors.resume) setErrors((x) => ({ ...x, resume: '' }));
+              }}
+              {...aria('resume')}
+            />
+            <Err f="resume" />
           </div>
         )}
 
