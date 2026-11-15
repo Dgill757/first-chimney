@@ -200,3 +200,13 @@ Built so a solo owner gets found, converts more visitors, keeps customers for ye
 **Short links:** /inspectors, /contractors, /landlords, /insurance and /guides added; /realtors now points to the realtor partner page.
 
 Remaining setup steps are in `docs/NEXT-STEPS.md`.
+
+## 16. CRM live: 31 automations, calendar, snapshot (round 9)
+
+- Vercel keys added by Dan; the live site now delivers every form to GHL (tested with an application and a holiday lead).
+- **31 workflows built with the GHL AI builder and all published**, with re-entry on for each. The 21 planned ones plus 10 more: no-show recovery, cancellation rebooking, customer-replied alerts, stale-lead alerts, inspection-done, job-approved, post-job check-in + referral ask, holiday $199 blast, lost-lead nurture and review-left thank-you. The full list with triggers is in `crm/WORKFLOWS.md`.
+- Fixes found in review: the yearly reminder now loops with a Go To (tag re-adding would have been skipped); referral task replaced by an SMS reminder (tasks need a user); re-entry enabled on workflow 01.
+- Website API: returning contacts get their trigger tags removed and re-added so automations fire on every repeat inquiry; stale health check results cleared.
+- Calendar "Chimney Service" created (placeholder hours) and its booking page saved as the Booking Link custom value.
+- **Snapshot "Chimney Company OS v1 (First Chimney)" created** in the agency (all assets), ready to load into the next chimney client and to adapt for roofing.
+- Test contacts are tagged `QA Test - safe to delete`.
