@@ -1,7 +1,7 @@
 /**
  * Service areas.
  *
- * STATES are confirmed by Andrew: VA, NJ, CT, MA.
+ * STATES are confirmed by Andrew: VA, NJ, CT, MA, RI (Rhode Island added 2026-11-17 at Andrew's request).
  *
  * CITIES ARE INTENTIONALLY EMPTY. A city page is only generated when its entry
  * has `published: true`, and an entry should only be added once Andrew confirms
@@ -126,6 +126,28 @@ export const SERVICE_AREAS: StateArea[] = [
       { q: 'Do you serve all of Massachusetts?', a: 'Call or text with your address and we will confirm coverage before we schedule.' },
     ],
     cities: CITY_DATA.MA,
+  },
+  {
+    code: 'RI',
+    name: 'Rhode Island',
+    slug: 'rhode-island',
+    headline: 'Chimney service for Rhode Island homes',
+    intro:
+      'Rhode Island packs a lot of old housing and a lot of coastline into a small state. Salt air, nor\'easters and centuries-old masonry make regular chimney care worth the effort. First Chimney helps Rhode Island homeowners keep fireplaces and chimneys safe, dry and ready for winter.',
+    climate:
+      'Cold, damp winters with repeated freeze-thaw cycles, plus salt-laden coastal wind and storm surge-driven rain. Moisture that soaks into brick in the fall expands when it freezes, and salt air speeds up corrosion on chimney caps, flashing and chase covers.',
+    housing:
+      'A mix of colonial-era and Victorian homes, mill-town multi-families, mid-century capes and ranches, and seasonal shore houses. Older masonry chimneys often have cracked or missing liners, and seasonal homes can sit unused for months, so a fireplace should be inspected before the first fire of the season.',
+    watchFor: [
+      { title: 'Salt-air corrosion', body: 'Painted steel caps and chase covers rust out quickly near the water. Stainless steel holds up far better on the coast.' },
+      { title: 'Nor\'easter leaks', body: 'Wind-driven rain exposes weak flashing and cracked crowns. A stain near the chimney after a big storm is worth checking before the next one.' },
+      { title: 'Unused or seasonal fireplaces', body: 'Shore houses and older homes may have fireplaces that have not been lit in years. Birds, debris and failed liners are common. Inspect before you burn.' },
+    ],
+    faqs: [
+      { q: 'Do you work on historic Rhode Island homes?', a: 'Yes. On older chimneys we focus on repairs that are compatible with the original brick and mortar. If a property is in a historic district, exterior work can have its own approval rules, so check with your town before work starts.' },
+      { q: 'Do you serve all of Rhode Island?', a: 'Call or text (757) 589-0783 with your address and we will confirm coverage before we schedule.' },
+    ],
+    cities: CITY_DATA.RI,
   },
 ];
 

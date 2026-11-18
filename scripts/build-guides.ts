@@ -20,8 +20,11 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = join(ROOT, 'public', 'guides');
 const TMP = join(ROOT, 'marketing', 'guides');
 const CHROME = process.env.CHROME_PATH ?? 'C:/Program Files/Google/Chrome/Application/chrome.exe';
-const img = (name: string) => pathToFileURL(join(ROOT, 'public', 'media', 'team', `${name}-sm.webp`)).href;
+const img = (name: string) => pathToFileURL(join(ROOT, 'public', 'media', 'team', `${name}.webp`)).href;
 const font = (name: string) => pathToFileURL(join(ROOT, 'public', 'fonts', name)).href;
+// Static TrueType instances (scripts/make-static-fonts.py). Variable fonts print as Type 3 in PDF, which many printers draw as dots.
+const STATIC_FACES: [string, string, number[]][] = [['Archivo', 'normal', [400, 500, 600, 700, 800, 900]], ['Archivo', 'italic', [400, 600, 700]], ['Geist', 'normal', [400, 500, 600, 700]]];
+const fontFaces = () => STATIC_FACES.flatMap(([fam, style, ws]) => ws.map((w) => `@font-face { font-family: ${fam}; font-style: ${style}; font-weight: ${w}; src: url('${font(`static/${fam}-${w}${style === 'italic' ? '-italic' : ''}.ttf`)}') format('truetype'); }`)).join('\n');
 const logo = pathToFileURL(join(ROOT, 'public', 'brand', 'logo-light.png')).href;
 
 const HOMEGUIDE_INSPECTION = 'https://homeguide.com/costs/chimney-inspection-cost';
@@ -96,10 +99,9 @@ const INDUSTRY_CHAPTER: Record<string, Chapter> = {
 function guideHtml(p: PartnerIndustry) {
   const ch = INDUSTRY_CHAPTER[p.slug];
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>${p.guide.title}</title><style>
-@font-face { font-family: Archivo; src: url('${font('archivo.woff2')}') format('woff2'); font-weight: 100 900; font-stretch: 62% 125%; }
-@font-face { font-family: Geist; src: url('${font('geist.woff2')}') format('woff2'); font-weight: 100 900; }
+${fontFaces()}
 :root { --ink:#121110; --ink2:#211e1b; --bone:#f3ede4; --ember:#f07a32; --deep:#b8501c; --mute:#5d5650; --line:#e4ddd2; --soft:#faf6f0; }
-@page { size: Letter; margin: 0.7in 0.75in 0.8in; @bottom-left { content: "${SITE.name} · ${p.guide.title.replace(/"/g, '')}"; font: 7.5pt Geist; color: #8a8178; } @bottom-right { content: counter(page); font: 8pt Geist; color: #8a8178; } }
+@page { size: Letter; margin: 0.6in 0.75in 0.7in; @bottom-left { content: "${SITE.name} · ${p.guide.title.replace(/"/g, '')}"; font: 7.5pt Geist; color: #5d5650; } @bottom-right { content: counter(page); font: 8pt Geist; color: #5d5650; } }
 @page cover { margin: 0; @bottom-left { content: none } @bottom-right { content: none } }
 * { box-sizing: border-box } html { -webkit-print-color-adjust: exact; print-color-adjust: exact }
 body { margin: 0; font: 10pt/1.5 Geist, sans-serif; color: #26221f }
@@ -116,7 +118,7 @@ p { margin: 5pt 0 } ul, ol { margin: 5pt 0; padding-left: 16pt } li { margin: 2p
 .cover .logo { height: 52pt } .cover .k { margin-top: 22pt; color: var(--ember); font: 600 9pt Geist; letter-spacing: .22em; text-transform: uppercase }
 .cover h1 { color: var(--bone); font-size: 34pt; margin-top: 8pt; line-height: 1.03 } .cover .s { color: #cfc6ba; font-size: 11.5pt; margin-top: 12pt; max-width: 5.8in }
 .cover .by { margin-top: 22pt; font-size: 9pt; color: #a99f93 } .cover .by b { color: var(--bone) }
-.ch { break-before: page } .head { border-bottom: 2pt solid var(--ember); padding-bottom: 8pt; margin-bottom: 10pt } .num { font: 700 8.5pt Geist; color: var(--ember); letter-spacing: .2em; text-transform: uppercase }
+.ch { break-before: page } .head { border-bottom: 2pt solid var(--ember); padding-bottom: 8pt; margin-bottom: 10pt } .num { font: 700 8.5pt Geist; color: var(--deep); letter-spacing: .2em; text-transform: uppercase }
 .box { background: var(--soft); border: 1pt solid var(--line); border-left: 3pt solid var(--ember); border-radius: 6pt; padding: 8pt 11pt; margin: 9pt 0; break-inside: avoid }
 .dark { background: var(--ink2); color: #e9e1d6; border-color: var(--ink2); border-left-color: var(--ember) } .dark strong { color: #fff }
 .script { background: #fff; border: 1pt dashed #d6c9b8; border-radius: 6pt; padding: 8pt 11pt; margin: 7pt 0; break-inside: avoid }
@@ -126,7 +128,7 @@ table { width: 100%; border-collapse: collapse; margin: 7pt 0; font-size: 9pt } 
 .small { font-size: 8.3pt; color: var(--mute) } .src li { font-size: 8.3pt; word-break: break-all }
 </style></head><body>
 
-<section class="cover"><img class="hero" src="${img('chimney-inspection-roof-truck')}" alt=""><div class="fade"></div><div class="t">
+<section class="cover"><img class="hero" src="${img('andrew-roof-brick-chimney-truck')}" alt=""><div class="fade"></div><div class="t">
 <img class="logo" src="${logo}" alt="${SITE.name}"><div class="k">Free guide for ${p.short.toLowerCase()}</div>
 <h1>${p.guide.title}</h1><p class="s">${p.guide.blurb}</p>
 <p class="by">Prepared by <b>${SITE.owner}</b>, ${CREDENTIALS.fire.title} · ${SITE.name} · ${SITE.phoneDisplay} · ${SITE.displayDomain}</p></div></section>
@@ -167,8 +169,8 @@ ${p.pains.map((x) => `<div class="box"><strong>${x.t}.</strong> ${x.b}</div>`).j
 <section class="ch"><div class="head"><div class="num">04</div><h1>Common problems, with real photos</h1></div>
 <div class="grid">
 <div class="card"><img src="${img('andrew-chimney-crown-repair')}" alt=""><div><h3>Cracked crown</h3><p>Lets water into the masonry and flue, the start of most chimney leaks. Repair $200–$700; full replacement $1,000–$3,000.</p></div></div>
-<div class="card"><img src="${img('andrew-chimney-cap-crown-seal')}" alt=""><div><h3>Missing or failed cap</h3><p>Lets in rain, animals and debris. Cap replacement typically $200–$850.</p></div></div>
-<div class="card"><img src="${img('andrew-carrying-stainless-chimney-liner')}" alt=""><div><h3>Damaged or missing liner</h3><p>Lets heat and gases reach the masonry and framing. Stainless relining typically $1,500–$4,000.</p></div></div>
+<div class="card"><img src="${img('stone-chimney-service-ladder')}" alt=""><div><h3>Missing or failed cap</h3><p>Lets in rain, animals and debris. Cap replacement typically $200–$850.</p></div></div>
+<div class="card"><img src="${img('service-truck-stone-chimney-home')}" alt=""><div><h3>Damaged or missing liner</h3><p>Lets heat and gases reach the masonry and framing. Stainless relining typically $1,500–$4,000.</p></div></div>
 <div class="card"><img src="${img('chimney-rebuild-scaffolding-new-brick')}" alt=""><div><h3>Deteriorated masonry</h3><p>Spalling brick and open joints. Partial top rebuild $600–$1,000; stack above the roofline $1,000–$3,500.</p></div></div>
 <div class="card"><img src="${img('andrew-cleaning-fireplace-chimney-brush')}" alt=""><div><h3>Creosote buildup</h3><p>The fuel for chimney fires. Removed with a professional cleaning. Wet wood and smoldering fires make it worse.</p></div></div>
 <div class="card"><img src="${img('chimney-repair-roof-protection')}" alt=""><div><h3>Flashing leaks</h3><p>Water at the roofline often blamed on the roof. Repair cost depends on the flashing and roof type.</p></div></div>
@@ -185,7 +187,7 @@ ${p.pains.map((x) => `<div class="box"><strong>${x.t}.</strong> ${x.b}</div>`).j
 <h2>Working with First Chimney</h2>
 <div class="box dark"><strong>Partner offer: ${PARTNER_PROGRAM.discount}.</strong> ${p.offer}</div>
 <ul>${PARTNER_PROGRAM.perks.map((x) => `<li>${x}</li>`).join('')}</ul>
-<p><strong>${SITE.owner}</strong>, owner. ${CREDENTIALS.fire.title}, listed in the official F.I.R.E. directory. ${EXPERIENCE.ownerYears} years in the chimney trade, ${EXPERIENCE.teamYears} years of combined crew experience. Serving Virginia, New Jersey, Connecticut and Massachusetts.</p>
+<p><strong>${SITE.owner}</strong>, owner. ${CREDENTIALS.fire.title}, listed in the official F.I.R.E. directory. ${EXPERIENCE.ownerYears} years in the chimney trade, ${EXPERIENCE.teamYears} years of combined crew experience. Serving Virginia, New Jersey, Connecticut, Massachusetts and Rhode Island.</p>
 <p><strong>Call or text:</strong> ${SITE.phoneDisplay} · <strong>Partner page:</strong> ${SITE.displayDomain}/partners/${p.slug} · <strong>Free homeowner check:</strong> ${SITE.displayDomain}/check</p>
 
 <h3>Sources</h3><ul class="src">

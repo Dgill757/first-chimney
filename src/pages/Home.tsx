@@ -97,7 +97,7 @@ function Hero() {
             </motion.span>
           </h1>
           <motion.p initial={reduce ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.45 }} className="lede mt-6 text-bone/80">
-            Cleaning, inspection and repair for homes in Virginia, New Jersey, Connecticut and Massachusetts.
+            Cleaning, inspection and repair for homes in Virginia, New Jersey, Connecticut, Massachusetts and Rhode Island.
           </motion.p>
           <motion.div
             initial={reduce ? false : { opacity: 0, transform: 'translateY(10px)' }}
@@ -190,7 +190,7 @@ const FACTS = [
   `${EXPERIENCE.teamYears} years of combined crew experience`,
   'Quote before any repair',
   'Drop cloths down, every visit',
-  'Virginia / New Jersey / Connecticut / Massachusetts',
+  'Virginia / New Jersey / Connecticut / Massachusetts / Rhode Island',
   'Plain-English findings',
 ];
 
@@ -599,7 +599,7 @@ function Areas() {
           <div>
             <p className="eyebrow">Service areas</p>
             <h2 id="areas-h" className="display-lg mt-4 text-bone">
-              Four states. One standard.
+              Five states. One standard.
             </h2>
           </div>
           <p className="lede lg:justify-self-end">Chimneys in coastal Virginia and New England fail in different ways. We know what to look for in each.</p>

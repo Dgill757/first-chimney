@@ -4,28 +4,39 @@
 <meta charset="utf-8">
 <title>First Chimney Contracting: Owner's Operating Manual</title>
 <style>
-@font-face { font-family: 'Archivo'; src: url('../../public/fonts/archivo.woff2') format('woff2'); font-weight: 100 900; font-stretch: 62% 125%; }
-@font-face { font-family: 'Geist'; src: url('../../public/fonts/geist.woff2') format('woff2'); font-weight: 100 900; }
+@font-face{font-family:'Archivo';font-style:normal;font-weight:400;src:url('../../public/fonts/static/Archivo-400.ttf') format('truetype');}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:500;src:url('../../public/fonts/static/Archivo-500.ttf') format('truetype');}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:600;src:url('../../public/fonts/static/Archivo-600.ttf') format('truetype');}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:700;src:url('../../public/fonts/static/Archivo-700.ttf') format('truetype');}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:800;src:url('../../public/fonts/static/Archivo-800.ttf') format('truetype');}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:900;src:url('../../public/fonts/static/Archivo-900.ttf') format('truetype');}
+@font-face{font-family:'Archivo';font-style:italic;font-weight:400;src:url('../../public/fonts/static/Archivo-400-italic.ttf') format('truetype');}
+@font-face{font-family:'Archivo';font-style:italic;font-weight:600;src:url('../../public/fonts/static/Archivo-600-italic.ttf') format('truetype');}
+@font-face{font-family:'Archivo';font-style:italic;font-weight:700;src:url('../../public/fonts/static/Archivo-700-italic.ttf') format('truetype');}
+@font-face{font-family:'Geist';font-style:normal;font-weight:400;src:url('../../public/fonts/static/Geist-400.ttf') format('truetype');}
+@font-face{font-family:'Geist';font-style:normal;font-weight:500;src:url('../../public/fonts/static/Geist-500.ttf') format('truetype');}
+@font-face{font-family:'Geist';font-style:normal;font-weight:600;src:url('../../public/fonts/static/Geist-600.ttf') format('truetype');}
+@font-face{font-family:'Geist';font-style:normal;font-weight:700;src:url('../../public/fonts/static/Geist-700.ttf') format('truetype');}
 :root { --ink:#121110; --ink2:#211e1b; --bone:#f3ede4; --ember:#f07a32; --deep:#b8501c; --mute:#5d5650; --line:#e4ddd2; --soft:#faf6f0; }
-@page { size: Letter; margin: 0.7in 0.75in 0.8in; @bottom-left { content: "First Chimney Contracting · Owner's Operating Manual"; font: 8pt Geist, sans-serif; color: #8a8178; } @bottom-right { content: counter(page); font: 8pt Geist, sans-serif; color: #8a8178; } }
+@page { size: Letter; margin: 0.62in 0.72in 0.74in; @bottom-left { content: "First Chimney Contracting · Owner's Operating Manual"; font: 8pt Geist, sans-serif; color: #5d5650; } @bottom-right { content: counter(page); font: 8pt Geist, sans-serif; color: #5d5650; } }
 @page cover { margin: 0; @bottom-left { content: none; } @bottom-right { content: none; } }
 * { box-sizing: border-box; }
 html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-body { margin: 0; font: 9.9pt/1.5 Geist, 'Segoe UI', sans-serif; color: #26221f; }
+body { margin: 0; font: 9.9pt/1.46 Geist, 'Segoe UI', sans-serif; color: #26221f; }
 h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
 h1, h2, h3, h4 { font-family: Archivo, sans-serif; color: var(--ink); line-height: 1.12; margin: 0; }
 h1 { font-size: 26pt; font-stretch: 112%; font-weight: 800; letter-spacing: -0.01em; }
-h2 { font-size: 15pt; font-weight: 750; margin-top: 20pt; }
-h3 { font-size: 11.5pt; font-weight: 700; margin-top: 14pt; }
+h2 { font-size: 15pt; font-weight: 750; margin-top: 16pt; }
+h3 { font-size: 11.5pt; font-weight: 700; margin-top: 12pt; }
 h4 { font-size: 10pt; font-weight: 700; margin-top: 10pt; color: var(--deep); text-transform: uppercase; letter-spacing: 0.08em; font-family: Geist, sans-serif; }
-p { margin: 6pt 0; }
-ul, ol { margin: 6pt 0; padding-left: 16pt; }
-li { margin: 2.5pt 0; }
+p { margin: 5pt 0; }
+ul, ol { margin: 5pt 0; padding-left: 16pt; }
+li { margin: 2pt 0; }
 a { color: var(--deep); text-decoration: none; }
 strong { color: var(--ink); }
 .cover { page: cover; height: 11in; width: 8.5in; position: relative; background: var(--ink); color: var(--bone); overflow: hidden; }
-.cover img.hero { position: absolute; inset: 0; width: 100%; height: 62%; object-fit: cover; opacity: 0.9; }
-.cover .fade { position: absolute; left: 0; right: 0; top: 30%; height: 33%; background: linear-gradient(transparent, var(--ink)); }
+.cover img.hero { position: absolute; inset: 0; width: 100%; height: 54%; object-fit: cover; opacity: 0.9; }
+.cover .fade { position: absolute; left: 0; right: 0; top: 16%; height: 38%; background: linear-gradient(transparent, rgba(18,17,16,.92) 70%, var(--ink)); }
 .cover .text { position: absolute; left: 0.75in; right: 0.75in; bottom: 0.85in; }
 .cover .logo { height: 58pt; }
 .cover .kicker { margin-top: 26pt; color: var(--ember); font: 600 9pt Geist; letter-spacing: 0.22em; text-transform: uppercase; }
@@ -34,17 +45,18 @@ strong { color: var(--ink); }
 .cover .meta { margin-top: 26pt; display: flex; gap: 26pt; font-size: 8.5pt; color: #a99f93; }
 .cover .meta b { display: block; color: var(--bone); font-weight: 600; font-size: 9.5pt; }
 .chapter { break-before: page; }
-.chapter-head { border-bottom: 2pt solid var(--ember); padding-bottom: 10pt; margin-bottom: 12pt; }
-.chapter-head .num { font: 700 9pt Geist; color: var(--ember); letter-spacing: 0.2em; text-transform: uppercase; }
+.chapter-head { border-bottom: 2pt solid var(--ember); padding-bottom: 8pt; margin-bottom: 10pt; }
+.chapter-head .num { font: 700 9pt Geist; color: var(--deep); letter-spacing: 0.2em; text-transform: uppercase; }
 .chapter-head p { color: var(--mute); margin-top: 6pt; font-size: 10.5pt; }
 .box { background: var(--soft); border: 1pt solid var(--line); border-left: 3pt solid var(--ember); border-radius: 6pt; padding: 9pt 12pt; margin: 10pt 0; break-inside: avoid; }
 .box.dark { background: var(--ink2); color: #e9e1d6; border-color: var(--ink2); border-left-color: var(--ember); }
 .box.dark strong, .box.dark h3, .box.dark h4 { color: #fff; }
 .script { font-family: Geist; background: #fff; border: 1pt dashed #d6c9b8; border-radius: 6pt; padding: 8pt 11pt; margin: 8pt 0; break-inside: avoid; }
 .script .who { font-weight: 700; color: var(--deep); }
+.chapter.fit .script { padding: 5.5pt 9pt; margin: 6pt 0; } .chapter.fit li { margin: 1.5pt 0; } .chapter.fit td { padding: 2pt 7pt; } .chapter.fit th { padding: 3.6pt 7pt; } .chapter.fit p { margin: 4pt 0; } .chapter.follow { break-before: auto; margin-top: 18pt; } .cols2 { column-count: 2; column-gap: 20pt; break-inside: avoid; } .cols2 li { break-inside: avoid; } .chapter.fit { font-size: 9.45pt; } .chapter.fit table { font-size: 8.9pt; } .chapter.fit td { padding: 2.8pt 7pt; } .chapter.fit h2 { margin-top: 12pt; } .chapter.fit h3 { margin-top: 9pt; }
 table { width: 100%; border-collapse: collapse; margin: 8pt 0; font-size: 9.2pt; break-inside: auto; }
 th { text-align: left; background: var(--ink); color: var(--bone); font-family: Archivo; font-weight: 700; padding: 5pt 7pt; }
-td { border-bottom: 0.75pt solid var(--line); padding: 4pt 7pt; vertical-align: top; }
+td { border-bottom: 0.75pt solid var(--line); padding: 3.4pt 7pt; vertical-align: top; }
 tr { break-inside: avoid; }
 .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14pt; }
 .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10pt; }
@@ -56,7 +68,7 @@ tr { break-inside: avoid; }
 .photo { width: 100%; border-radius: 6pt; object-fit: cover; }
 .toc { columns: 2; column-gap: 24pt; padding-left: 0; list-style: none; }
 .toc li { display: flex; gap: 8pt; padding: 4pt 0; border-bottom: 0.75pt solid var(--line); break-inside: avoid; }
-.toc li span { color: var(--ember); font-weight: 700; min-width: 18pt; }
+.toc li span { color: var(--deep); font-weight: 700; min-width: 18pt; }
 .pill { display: inline-block; border: 1pt solid var(--line); border-radius: 99pt; padding: 1pt 7pt; font-size: 8.5pt; margin: 1pt 2pt 1pt 0; background: #fff; }
 .small { font-size: 8.6pt; color: var(--mute); }
 .quote { font-family: Archivo; font-size: 14pt; font-weight: 600; color: var(--ink); border-left: 3pt solid var(--ember); padding-left: 12pt; margin: 14pt 0; }
@@ -66,7 +78,7 @@ tr { break-inside: avoid; }
 
 <!-- ============================== COVER ============================== -->
 <section class="cover">
-  <img class="hero" src="../../public/media/team/andrew-paterini-first-chimney-truck.webp" alt="">
+  <img class="hero" src="../../public/media/team/andrew-paterini-owner-portrait.webp" alt="">
   <div class="fade"></div>
   <div class="text">
     <img class="logo" src="../../public/brand/logo-light.png" alt="First Chimney Contracting">
@@ -126,7 +138,7 @@ tr { break-inside: avoid; }
       </ol>
       <p class="quote">Speed to the call, proof on the roof, and a reminder every year. That is the business.</p>
     </div>
-    <img class="photo" style="height:3.3in" src="../../public/media/team/andrew-paterini-owner-portrait-sm.webp" alt="">
+    <img class="photo" style="height:3.3in" src="../../public/media/team/andrew-paterini-headshot-sm.webp" alt="">
   </div>
   <h2>Credentials you can point to</h2>
   <p><strong>F.I.R.E. Certified Technician.</strong> Andrew is listed by name in the official F.I.R.E. Service directory (f-i-r-e-service.com, Virginia certified technicians). When a homeowner or realtor asks, send them the link. Verifiable beats impressive.</p>
@@ -139,7 +151,7 @@ tr { break-inside: avoid; }
   <div class="chapter-head"><div class="num">Chapter 02</div><h1>The business at a glance</h1></div>
   <div class="cols">
     <div class="card"><h4>Services</h4><p>Chimney inspection (Level 1 and 2) · Chimney cleaning · Relining · Masonry and rebuilds · Leak repair and waterproofing · Caps and chase covers · Crowns · Fireplace repair · Dryer vent cleaning · Fireplace and insert design and installation</p></div>
-    <div class="card"><h4>Service area</h4><p>Virginia, New Jersey, Connecticut and Massachusetts. Main line (757) 589-0783. Website firstchimneycontracting.com.</p></div>
+    <div class="card"><h4>Service area</h4><p>Virginia, New Jersey, Connecticut, Massachusetts and Rhode Island. Main line (757) 589-0783. Website firstchimneycontracting.com.</p></div>
   </div>
   <h2>Offers</h2>
   <table>
@@ -243,7 +255,7 @@ tr { break-inside: avoid; }
       <li><strong>01 New lead</strong>: instant reply, owner alert, 10-minute nag</li>
       <li><strong>02 Stage tags</strong>: keeps tags in sync with the pipeline</li>
       <li><strong>03 Holiday $199</strong>: 3 polite follow-ups, stops on reply</li>
-      <li><strong>04 Health check router</strong>: urgent alert, good → yearly list</li>
+      <li><strong>04 Health check router</strong>: urgent alert, or good: yearly list</li>
       <li><strong>05 Appointments</strong>: confirm, 24 h and 2 h reminders</li>
       <li><strong>06 Estimates</strong>: follow-ups, then Lost at 30 days</li>
       <li><strong>07 Job complete</strong>: review request, yearly reminder</li>
@@ -262,7 +274,7 @@ tr { break-inside: avoid; }
 </section>
 
 <!-- ============================== 05 SALES ============================== -->
-<section class="chapter">
+<section class="chapter fit">
   <div class="chapter-head"><div class="num">Chapter 05</div><h1>Sales: phone, follow-up, estimates</h1>
   <p>You are not "selling chimneys". You are helping a family use their fireplace safely. Act like it and the sales take care of themselves.</p></div>
   <h2>Inbound call script</h2>
@@ -286,7 +298,7 @@ tr { break-inside: avoid; }
     <tr><td>"Somebody called offering a $49 cleaning."</td><td>"Be careful with those. Many make it up with scare tactics on the roof. Whatever you decide, ask for photos and a written quote before any repair."</td></tr>
   </table>
   <h2>The estimate presentation</h2>
-  <ol>
+  <ol class="cols2">
     <li>Sit down with them. Phone in hand, photos up.</li>
     <li>Good news first. "Your firebox and damper are in good shape."</li>
     <li>Each issue in one sentence: what it is, why it matters, what happens if it waits.</li>
@@ -298,7 +310,7 @@ tr { break-inside: avoid; }
 </section>
 
 <!-- ============================== 06 INSPECTION ============================== -->
-<section class="chapter">
+<section class="chapter follow">
   <div class="chapter-head"><div class="num">Chapter 06</div><h1>On-site inspection guide</h1>
   <p>For Andrew as a refresher, and for every new technician on day one. Consistency is what makes a report trustworthy.</p></div>
   <div class="cols">
@@ -372,7 +384,7 @@ tr { break-inside: avoid; }
   <h2>Realtor office talk (10 minutes at a sales meeting)</h2>
   <ol><li>Who you are, credential, 10 years.</li><li>Three chimney problems that kill deals (flue cracks, leaks, missing liner) with photos.</li><li>What a Level 2 is and why NFPA 211 calls for it at sale.</li><li>How to reach you: text, address, deadline. Hand out cards with the /realtors QR code.</li></ol>
   <h2>Partner pages and guides (already built)</h2>
-  <p>Each industry has its own page with the 10% partner rate, a call request form and a free 8-page guide: realtors (/realtors), home inspectors (/inspectors), contractors (/contractors), property managers (/landlords) and insurance (/insurance). Print the guides as leave-behinds. Every guide request lands in the CRM's Partners pipeline.</p>
+  <p>Each industry has its own page with the 10% partner rate, a call request form and a free 7-page guide: realtors (/realtors), home inspectors (/inspectors), contractors (/contractors), property managers (/landlords) and insurance (/insurance). Print the guides as leave-behinds. Every guide request lands in the CRM's Partners pipeline.</p>
   <h2>Keep partners warm</h2>
   <ul class="check"><li>Answer partner calls first. Always.</li><li>Text a thank-you after every referral, and report back on how it went.</li><li>One useful email a month (the CRM sends it). Coffee once a quarter with your top three.</li><li>Track every partner in the Partners pipeline. Move them to Active Partner after the first referral.</li></ul>
 </section>
@@ -462,7 +474,7 @@ tr { break-inside: avoid; }
     </div>
   </div>
   <h2>Caption formula</h2>
-  <div class="script">[What this is, one line] → [why it matters, one line] → [what to do] → "Free 2-minute chimney check: firstchimneycontracting.com/check"</div>
+  <div class="script">[What this is, one line] / [why it matters, one line] / [what to do] / "Free 2-minute chimney check: firstchimneycontracting.com/check"</div>
 </section>
 
 <!-- ============================== 11 GBP ============================== -->
@@ -524,7 +536,7 @@ tr { break-inside: avoid; }
     <tr><td><strong>Local fire departments</strong></td><td>Fire Prevention Week (October) events and community talks.</td><td>Offer a free safety talk</td></tr>
     <tr><td><strong>Nextdoor and town Facebook groups</strong></td><td>Neighbors asking "who do you use?"</td><td>Claim the Nextdoor business page; answer helpfully, never spam</td></tr>
   </table>
-  <p class="small">Each new state (NJ, CT, MA) has its own realtor associations, home shows and chimney guilds. Repeat this table for each market as it grows.</p>
+  <p class="small">Each new state (NJ, CT, MA, RI) has its own realtor associations, home shows and chimney guilds. Repeat this table for each market as it grows.</p>
 </section>
 
 <!-- ============================== 13 HIRING ============================== -->
@@ -714,6 +726,7 @@ tr { break-inside: avoid; }
     <tr><td>New Jersey</td><td>Home Improvement Contractor registration for residential work.</td><td>NJ Division of Consumer Affairs</td></tr>
     <tr><td>Connecticut</td><td>Home Improvement Contractor registration for residential work.</td><td>CT Department of Consumer Protection</td></tr>
     <tr><td>Massachusetts</td><td>Home Improvement Contractor registration; a Construction Supervisor License may apply to structural work.</td><td>MA Office of Consumer Affairs and Business Regulation</td></tr>
+    <tr><td>Rhode Island</td><td>Contractor registration is required for residential work; confirm current requirements and any local permits before quoting.</td><td>RI Contractors' Registration and Licensing Board</td></tr>
   </table>
   <p class="small">Also check local business licenses, permits for rebuilds and liners, and soliciting permits for door knocking in each town.</p>
   <h2>Safety is a business system</h2>
@@ -734,7 +747,7 @@ tr { break-inside: avoid; }
     <tr><td><strong>3. Office support</strong><br><span class="small">Year 1–2</span></td><td>Missed calls or slow callbacks show up in the scorecard</td><td>Part-time scheduler or AI phone assistant, call scripts, CRM stage discipline</td></tr>
     <tr><td><strong>4. Two trucks</strong><br><span class="small">Year 2</span></td><td>Helper is ready to run jobs alone; backlog persists</td><td>Lead technician, second truck, job costing per truck, weekly crew meeting</td></tr>
     <tr><td><strong>5. Owner off the tools</strong><br><span class="small">Year 2–3</span></td><td>Andrew's time is the bottleneck on estimates</td><td>Inspection and sales rep (estimator), commission plan, estimate templates, ride-alongs</td></tr>
-    <tr><td><strong>6. New markets</strong><br><span class="small">Year 3+</span></td><td>Steady demand from NJ, CT or MA leads</td><td>Local technician or crew per market, state licensing, local partners, city pages already live</td></tr>
+    <tr><td><strong>6. New markets</strong><br><span class="small">Year 3+</span></td><td>Steady demand from NJ, CT, MA or RI leads</td><td>Local technician or crew per market, state licensing, local partners, city pages already live</td></tr>
   </table>
   <h2>Your first-year timeline</h2>
   <table>
@@ -747,7 +760,7 @@ tr { break-inside: avoid; }
   <div class="box">Every stage starts the same way: write down how you do the job, then hand it to someone. If it is not written down, it is not a system.</div>
 </section>
 
-<section class="chapter">
+<section class="chapter fit">
   <div class="chapter-head"><div class="num">Chapter 20</div><h1>Interviews, scorecards and references</h1>
   <p>Hire for reliability and character. Skills can be taught. Bad habits cannot.</p></div>
   <h2>The hiring stages</h2>
@@ -789,22 +802,22 @@ tr { break-inside: avoid; }
   <div class="script">"Hi, I'm Andrew with First Chimney. [Name] applied with us and listed you as a reference. Do you have two minutes? … What was their role? … Were they reliable? … How did they handle mistakes? … Would you hire them again? … Anything I should know to help them succeed?"</div>
 </section>
 
-<section class="chapter">
+<section class="chapter fit">
   <div class="chapter-head"><div class="num">Chapter 21</div><h1>Pay and commission plans</h1>
-  <p>Starting structures, not rules. Check local wages (Indeed and the Bureau of Labor Statistics) and employment law with an accountant: overtime, W-2 versus 1099, and workers' comp all depend on how the role is set up.</p></div>
+  <p>Starting structures, not rules. Check local wages and confirm overtime, W-2 versus 1099 and workers' comp with an accountant.</p></div>
   <table>
     <tr><th>Role</th><th>Common structure</th><th>Bonus or commission idea</th><th>Avoid</th></tr>
     <tr><td>Helper / apprentice</td><td>Hourly, W-2, overtime eligible</td><td>Raise at 90 days and at each training milestone</td><td>Paying "per job", which encourages rushing</td></tr>
     <tr><td>Chimney technician</td><td>Hourly or day rate, W-2</td><td>Quality bonus: no callbacks for the month; bonus when a customer names them in a review</td><td>Commission on repairs they recommend (conflict of interest)</td></tr>
     <tr><td>Lead technician</td><td>Hourly or salary</td><td>Small percentage of the crew's monthly collected revenue above a target</td><td>Bonuses on revenue that has not been collected</td></tr>
     <tr><td>Inspection and sales rep</td><td>Base pay plus commission</td><td>A percentage of <em>collected</em> repair and install revenue they sold (home services often use roughly 5–10%); none on $199 specials</td><td>Paying before the customer pays; pressure tactics</td></tr>
-    <tr><td>Canvasser</td><td>Hourly, or hourly plus a bonus</td><td>Flat bonus for each appointment that actually happens</td><td>Pay per sale (it pushes people to oversell at the door)</td></tr>
+    <tr><td>Canvasser</td><td>Hourly, or hourly plus a bonus</td><td>Flat bonus for each appointment that actually happens</td><td>Pay per sale (pushes overselling)</td></tr>
     <tr><td>Office manager / scheduler</td><td>Hourly, part-time to start</td><td>Monthly bonus on booked appointments or speed-to-lead goals</td><td>No measurable goals</td></tr>
     <tr><td>Mason / laborer</td><td>Hourly or day rate</td><td>Project bonus for on-time, no-callback rebuilds</td><td>Unclear scope and overtime rules</td></tr>
-    <tr><td>Content creator</td><td>Per project or monthly retainer (1099 if truly independent)</td><td>Bonus for posts that produce booked jobs</td><td>Paying for followers instead of leads</td></tr>
+    <tr><td>Content creator</td><td>Per project or retainer (1099 if independent)</td><td>Bonus for posts that produce booked jobs</td><td>Paying for followers instead of leads</td></tr>
   </table>
   <h2>Rules that keep pay plans fair</h2>
-  <ul>
+  <ul class="cols2">
     <li>Commission is earned when the customer pays, not when the estimate is signed.</li>
     <li>Nobody earns more by recommending repairs that are not needed. Inspections stay honest.</li>
     <li>Write every pay plan down, sign it, and review it once a year.</li>

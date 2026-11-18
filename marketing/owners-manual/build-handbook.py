@@ -13,7 +13,7 @@ head = manual[: manual.index("<body>") + len("<body>")]
 head = head.replace("<title>First Chimney Contracting: Owner's Operating Manual</title>", "<title>First Chimney Contracting: Team Handbook</title>")
 head = head.replace("Owner's Operating Manual\"; font", "Team Handbook\"; font")
 
-sections = re.findall(r'<section class="chapter">.*?</section>', manual, flags=re.S)
+sections = re.findall(r'<section class="chapter(?: (?:fit|follow))?">.*?</section>', manual, flags=re.S)
 by_num = {}
 for sec in sections:
     m = re.search(r'Chapter (\d+)', sec)
@@ -51,7 +51,7 @@ welcome = """
       <h3>How you will be measured</h3>
       <ul><li>Reliability: on time, prepared, does what you said</li><li>Safety: zero shortcuts</li><li>Customer respect: clean, polite, honest</li><li>Quality: no callbacks</li><li>Growth: learning something new every week</li></ul>
     </div>
-    <img class="photo" style="height:3.6in" src="../../public/media/team/andrew-paterini-headshot-sm.webp" alt="">
+    <img class="photo" style="height:3.6in" src="../../public/media/team/andrew-paterini-owner-portrait-sm.webp" alt="">
   </div>
   <h2>Safety rules (sign below)</h2>
   <ol>

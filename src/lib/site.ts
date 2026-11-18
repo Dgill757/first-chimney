@@ -7,7 +7,7 @@
  * everywhere on the next build.
  *
  * Rules (from Andrew's instructions):
- *  - Coverage is VA, NJ, CT, MA only. Do not list cities until Andrew confirms them
+ *  - Coverage is VA, NJ, CT, MA, RI only. Do not list cities until Andrew confirms them
  *    (see src/data/serviceAreas.ts).
  *  - FIRE certification is confirmed. CSIA/CSI references were removed at Andrew's request.
  *  - The 757 number is the approved line. An 804 number is under consideration but is NOT
@@ -39,17 +39,18 @@ export const SITE = {
   },
 };
 
-export type StateCode = 'VA' | 'NJ' | 'CT' | 'MA';
+export type StateCode = 'VA' | 'NJ' | 'CT' | 'MA' | 'RI';
 
 export const STATES: { code: StateCode; name: string; slug: string }[] = [
   { code: 'VA', name: 'Virginia', slug: 'virginia' },
   { code: 'NJ', name: 'New Jersey', slug: 'new-jersey' },
   { code: 'CT', name: 'Connecticut', slug: 'connecticut' },
   { code: 'MA', name: 'Massachusetts', slug: 'massachusetts' },
+  { code: 'RI', name: 'Rhode Island', slug: 'rhode-island' },
 ];
 
-export const STATE_LIST_TEXT = 'Virginia, New Jersey, Connecticut & Massachusetts';
-export const STATE_CODES_TEXT = 'VA · NJ · CT · MA';
+export const STATE_LIST_TEXT = 'Virginia, New Jersey, Connecticut, Massachusetts & Rhode Island';
+export const STATE_CODES_TEXT = 'VA · NJ · CT · MA · RI';
 
 /**
  * Credentials shown on the site.

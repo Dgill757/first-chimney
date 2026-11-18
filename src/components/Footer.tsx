@@ -33,7 +33,7 @@ export default function Footer() {
                 <Mail className="h-4 w-4 text-ember" strokeWidth={1.75} aria-hidden /> {SITE.email}
               </a>
               <span className="flex items-center gap-3 text-mute">
-                <MapPin className="h-4 w-4 text-ember" strokeWidth={1.75} aria-hidden /> Serving VA, NJ, CT and MA
+                <MapPin className="h-4 w-4 text-ember" strokeWidth={1.75} aria-hidden /> Serving VA, NJ, CT, MA and RI
               </span>
             </div>
             {socials.length > 0 && (

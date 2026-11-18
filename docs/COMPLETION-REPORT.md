@@ -84,7 +84,7 @@ Real project gallery and reviews; city pages; GA4 + Search Console + Bing Webmas
 - **Hero upgrade**: cursor-following ember glow, rising embers, glass offer/trust card, glowing Build Your Fireplace button (also in nav, mobile menu, footer, shop, articles, fireplace repair, city pages).
 - **Build Your Fireplace** (`/build-your-fireplace`) is now the Chim Chim Churee configurator ported to First Chimney: real catalog of 230 models (Fireplace Xtrordinair, Lopi, Kozy Heat, Valor, Enviro, Modern Flames, SimpliFire) with manufacturer photography and layered preview art, heat sizing, insert fit checker, compare, and a **branded PDF** (product imagery, choices, maker specs, next steps, clickable link back to the build) downloaded on demand and automatically when the build is sent to First Chimney. Old `/design-your-fireplace` and `/build-my-fireplace` links redirect.
 - **Fireplace Shop** on the same catalog: 11 categories and 230 product pages, each prerendered with Product + BreadcrumbList schema (293 indexable routes total).
-- **20 city pages** (5 per state) with unique local content. Proposed list, pending Andrew's confirmation (`src/data/cities.ts`; set `published: false` to remove one).
+- **30 city pages** (Hampton Roads and Rhode Island added 2026-11-17) with unique local content. Proposed list, pending Andrew's confirmation (`src/data/cities.ts`; set `published: false` to remove one).
 - **Articles** link into shop categories and the builder; footer links popular categories.
 - **AI scene generator** ready (`scripts/generate-scenes.mjs`, OpenAI gpt-image-1). Needs `OPENAI_API_KEY`; generates ambiance and material scenes only, never staff or "our work".
 

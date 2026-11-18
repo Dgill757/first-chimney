@@ -9,6 +9,9 @@ import base64, io, os, subprocess, sys
 from pathlib import Path
 from PIL import Image
 
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent / 'scripts'))
+from staticfonts import font_face_css  # static TrueType fonts: prints crisp (variable fonts become Type 3 in PDF)
+
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent.parent
 OUT_HTML = HERE / 'First-Chimney-Andrews-Guide.html'
@@ -30,11 +33,10 @@ def webp_data_uri(path: Path, max_w: int, quality: int = 80) -> str:
 
 team = ROOT / 'public/media/team'
 tokens = {
-    '%%ARCHIVO%%': b64(ROOT / 'public/fonts/archivo.woff2'),
-    '%%GEIST%%': b64(ROOT / 'public/fonts/geist.woff2'),
+    '%%FONTCSS%%': font_face_css(True),
     '%%LOGO%%': webp_data_uri(ROOT / 'public/brand/logo-light.png', 560, 85),
     '%%ANDREW%%': webp_data_uri(team / 'andrew-paterini-owner-portrait.webp', 640, 78),
-    '%%TRUCK%%': webp_data_uri(team / 'andrew-paterini-first-chimney-truck.webp', 900, 74),
+    '%%TRUCK%%': webp_data_uri(team / 'andrew-roof-brick-chimney-truck.webp', 900, 74),
     '%%JOB1%%': webp_data_uri(team / 'andrew-chimney-crown-repair.webp', 700, 72),
     '%%JOB2%%': webp_data_uri(team / 'chimney-masonry-scaffolding-repair.webp', 700, 72),
 }

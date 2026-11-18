@@ -1,7 +1,7 @@
 /**
  * City pages.
  *
- * PROPOSED LIST, published at Dan's direction on 2026-11-14, pending Andrew's confirmation.
+ * PROPOSED LIST, published at Dan's direction on 2026-11-14 (Hampton Roads and Rhode Island added 2026-11-17), pending Andrew's confirmation.
  * Chosen around Andrew's 757/804 Virginia base and the main markets in NJ, CT and MA.
  * To remove a city, set `published: false` (or delete it) and push; its page, sitemap
  * entry and links disappear on the next build.
@@ -69,6 +69,38 @@ export const CITY_DATA: Record<StateCode, City[]> = {
         'Homes that are not lived in year-round benefit from an inspection before the first visit of the season.',
       ],
       [confirm('Williamsburg'), { q: 'How do I keep a big brick chimney in good shape?', a: 'Annual inspection, a sound crown, caps on every flue, and fixing mortar joints early. Small repairs on a large chimney save a lot of money later.' }]),
+    c('hampton', 'Hampton', 'Independent city',
+      'Hampton sits on the water at the mouth of the James River, and its housing runs from historic neighborhoods near the harbor to brick ranches and capes built for the area\'s long military and shipbuilding workforce. Salt air and humid summers work on chimneys year-round. First Chimney helps Hampton homeowners keep fireplaces and chimneys safe and dry.',
+      [
+        'Salt-laden air corrodes painted steel caps and chase covers faster than inland weather does. Stainless steel lasts noticeably longer here.',
+        'Brick ranches and capes from the mid-twentieth century often have single-flue chimneys with crowns that have worn down after decades of coastal weather.',
+        'Heavy rain from coastal storms finds any gap in flashing. A water stain near the chimney after a storm is worth a look.',
+      ],
+      [confirm('Hampton'), { q: 'Does salt air really damage a chimney?', a: 'Yes. It speeds up rust on caps, flashing and chase covers, which is why we recommend stainless steel near the water.' }]),
+    c('newport-news', 'Newport News', 'Independent city',
+      'Newport News stretches along the James River from older neighborhoods with early twentieth-century homes to newer subdivisions farther from the water. That means a mix of aging masonry chimneys and newer factory-built fireplaces. First Chimney inspects, cleans and repairs both for Newport News homeowners.',
+      [
+        'Older homes often have masonry chimneys with clay tile liners that crack with age. An inspection tells you whether yours is still sound.',
+        'Newer subdivisions usually have factory-built fireplaces with metal chimneys. Rusted chase covers and worn caps are the common trouble spots.',
+        'Humidity pulls creosote odor into the house in summer. Cleaning and a cap that seals well usually fixes it.',
+      ],
+      [confirm('Newport News'), { q: 'How often should a Newport News fireplace be inspected?', a: 'At least once a year if you burn regularly. Even if you rarely use it, a yearly check catches leaks, animals and liner damage before they become big repairs.' }]),
+    c('suffolk', 'Suffolk', 'Independent city',
+      'Suffolk is the largest city in Virginia by land area, with a mix of historic downtown homes, growing North Suffolk subdivisions and rural properties with wood stoves and fireplaces. Open land and mature trees also mean more animals and debris finding their way into uncapped flues. First Chimney serves Suffolk homeowners with inspections, cleaning and repairs.',
+      [
+        'Homes surrounded by trees and fields see more birds, squirrels and raccoons in open flues. A properly fitted cap keeps them out.',
+        'Rural properties are more likely to burn wood regularly, which means creosote builds up faster and yearly cleaning matters more.',
+        'Newer North Suffolk homes often have prefab fireplaces where the chase top and cap are the main wear items.',
+      ],
+      [confirm('Suffolk'), { q: 'I heard scratching in my chimney. What now?', a: 'Do not light a fire. An animal may be in the flue. Call us to check it, and we can fit a cap afterward so it does not happen again.' }]),
+    c('portsmouth', 'Portsmouth', 'Independent city',
+      'Portsmouth has one of the oldest historic districts in Virginia, with Olde Towne rowhouses and brick homes that have stood for generations next to the Elizabeth River. Old masonry and salt air are a tough combination. First Chimney helps Portsmouth homeowners find problems early and repair them in a way that suits the original brick.',
+      [
+        'Older brick chimneys often have soft mortar that should be matched with a compatible mix during repair, not a hard modern one.',
+        'Rowhouses may have more than one flue in a shared chimney. Each flue should be checked, including the ones you do not use.',
+        'River and harbor air corrodes metal caps and flashing. Stainless steel is the better long-term choice.',
+      ],
+      [confirm('Portsmouth'), { q: 'My house is in a historic district. Can the chimney still be repaired?', a: 'Usually yes, but exterior changes in a historic district may need approval from your town. We can describe the work and what to ask your local office before anything starts.' }]),
   ],
   NJ: [
     c('toms-river', 'Toms River', 'Ocean County',
@@ -195,5 +227,54 @@ export const CITY_DATA: Record<StateCode, City[]> = {
         'Older dampers often stop sealing. A top-sealing damper can stop cold drafts.',
       ],
       [confirm('Newton'), { q: 'Why is my house drafty near the fireplace?', a: 'A worn throat damper often lets warm air escape and cold air in. A top-sealing damper or glass doors can make a noticeable difference.' }]),
+  ],  RI: [
+    c('providence', 'Providence', 'Providence County',
+      'Providence has some of the oldest and most densely built housing in New England, from Federal-era and Victorian homes on the East Side to brick rowhouses and triple-deckers across the city. Many of those chimneys are more than a century old. First Chimney helps Providence homeowners find out what they have and keep it safe.',
+      [
+        'Many older Providence homes have fireplaces that have not been used in years. An inspection is the first step before lighting one.',
+        'Triple-deckers and rowhouses often share chimneys or have several flues in one stack. Each flue should be checked.',
+        'Old brick and soft mortar need compatible repairs. Hard modern mortar can damage historic brick over time.',
+      ],
+      [confirm('Providence'), { q: 'Is my historic home\'s chimney safe to use?', a: 'It may be, but only an inspection can tell you. Old liners, missing caps and hidden damage are common in homes from the 1800s and early 1900s.' }]),
+    c('warwick', 'Warwick', 'Kent County',
+      'Warwick runs along Narragansett Bay, and its neighborhoods are full of capes, ranches and colonials built through the mid-twentieth century. Salt air and bay storms are the main enemy of chimney metal and flashing here. First Chimney helps Warwick homeowners keep chimneys sound and fireplaces ready.',
+      [
+        'Salt air corrodes steel caps and chase covers faster than inland weather. Stainless steel holds up much better near the bay.',
+        'Mid-century brick chimneys often have worn crowns and top courses after decades of freeze-thaw cycles.',
+        'Wind-driven rain during nor\'easters shows up weak flashing first. Check for stains near the chimney after big storms.',
+      ],
+      [confirm('Warwick'), { q: 'Why does my chimney cap rust so fast?', a: 'Salt in the air near the bay speeds up corrosion on painted and galvanized steel. A stainless steel cap is the long-term fix.' }]),
+    c('cranston', 'Cranston', 'Providence County',
+      'Cranston is mostly residential, with neighborhoods of mid-century capes, ranches and older two-family homes. Many have brick chimneys that have taken years of Rhode Island winters on the top courses and crown. First Chimney inspects, cleans and repairs chimneys for Cranston homeowners.',
+      [
+        'Freeze-thaw cycles wear down mortar joints and crowns at the top of a chimney first. Early repointing costs far less than a rebuild.',
+        'Two-family homes may have separate flues or a shared chimney for heating equipment. Check both after any furnace or boiler change.',
+        'Capes and ranches from the 1950s often have single-flue chimneys without modern liners.',
+      ],
+      [confirm('Cranston'), { q: 'My furnace was replaced. Do I need to check the chimney?', a: 'Yes. A new high-efficiency appliance can change how the flue needs to be sized or lined. Have it inspected so the venting matches the new equipment.' }]),
+    c('pawtucket', 'Pawtucket', 'Providence County',
+      'Pawtucket is a former mill city, with brick multi-family homes and early twentieth-century houses packed close together. Chimneys here tend to be old, shared and tall. First Chimney helps Pawtucket homeowners and landlords keep chimneys safe and dry.',
+      [
+        'Multi-family buildings often have chimneys serving several heating appliances. Each flue should be inspected and cleaned on a schedule.',
+        'Tall brick stacks take a beating from wind and weather. Loose bricks, cracked crowns and failing flashing are the usual findings.',
+        'Landlords and property managers can ask for a written, photo-documented inspection to keep records for each building.',
+      ],
+      [confirm('Pawtucket'), { q: 'Do you inspect chimneys on rental properties?', a: 'Yes. We can give property owners a written, photo-documented report for each building and quote any repairs before work begins.' }]),
+    c('newport', 'Newport', 'Newport County',
+      'Newport blends colonial homes, Gilded Age properties and oceanfront houses, all with serious chimneys exposed to wind, salt and fog. Historic masonry and salt air are demanding, and many properties are in historic districts. First Chimney helps Newport homeowners inspect, clean and repair chimneys with care.',
+      [
+        'Oceanfront exposure shortens the life of metal caps and flashing. Stainless steel is the better choice near the water.',
+        'Many properties are in historic districts where exterior work may need approval. Check with your town before changing how a chimney looks.',
+        'Old chimneys often have several flues and soft mortar that needs compatible repair, not a hard modern mix.',
+      ],
+      [confirm('Newport'), { q: 'Can you repair an antique chimney?', a: 'Yes. We focus on repairs compatible with the original masonry. If a project needs a historic restoration specialist, we will tell you.' }]),
+    c('narragansett', 'Narragansett', 'Washington County',
+      'Narragansett is a shore town with year-round residents and a lot of seasonal and second homes right on the water. Fireplaces that sit unused for months and constant salt exposure are the two big issues. First Chimney helps Narragansett homeowners get fireplaces and chimneys ready for the season.',
+      [
+        'Seasonal homes can sit closed for months. Nests, debris and moisture can build up in the flue, so inspect before the first fire of the season.',
+        'Salt air and storm spray corrode caps, flashing and chase covers quickly. Stainless steel lasts far longer on the coast.',
+        'Wind-driven rain from coastal storms tests every joint around the chimney. Fresh water stains after a storm are worth checking.',
+      ],
+      [confirm('Narragansett'), { q: 'My shore house has been closed all fall. Is it safe to light the fireplace?', a: 'Not until it has been inspected. Animals, debris and moisture can build up in a closed-up flue.' }]),
   ],
 };

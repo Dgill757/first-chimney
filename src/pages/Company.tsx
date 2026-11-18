@@ -54,7 +54,7 @@ export function About() {
             { k: `${EXPERIENCE.ownerYears} years`, v: 'Andrew in the chimney trade' },
             { k: `${EXPERIENCE.teamYears} years`, v: 'Combined crew experience' },
             { k: 'F.I.R.E.', v: 'Certified chimney inspection' },
-            { k: '4 states', v: 'VA, NJ, CT and MA' },
+            { k: '5 states', v: 'VA, NJ, CT, MA and RI' },
           ].map((x) => (
             <div key={x.v} className="px-4 py-8 text-center">
               <dt className="font-display text-[clamp(1.9rem,3.6vw,2.9rem)] font-bold text-bone" style={{ fontStretch: '110%' }}>

@@ -117,7 +117,7 @@ const llms = [
   `> ${SITE.name} is a chimney and fireplace service company owned by ${SITE.owner}, serving homeowners in ${STATE_LIST_TEXT}. Services: chimney inspection (${CREDENTIALS.fire.label}), chimney cleaning and sweeping, masonry repair and rebuilds, leak repair and waterproofing, chimney caps and chase covers, crown repair, fireplace repair and dryer vent cleaning. Phone: ${SITE.phoneDisplay}. Email: ${SITE.email}.`,
   '',
   'Key facts:',
-  `- Service area: ${STATE_LIST_TEXT} (VA, NJ, CT, MA). Call to confirm coverage for a specific address.`,
+  `- Service area: ${STATE_LIST_TEXT} (VA, NJ, CT, MA, RI). Call to confirm coverage for a specific address.`,
   `- Credential: ${CREDENTIALS.fire.label} (chimney inspection). Owner ${SITE.owner} has ${EXPERIENCE.ownerYears} years in the chimney industry; the crew has ${EXPERIENCE.teamYears} years of combined experience.`,
   '- Repairs are quoted before any work begins. Online forms are requests; appointments are confirmed by phone or text.',
   live ? `- Current offer: ${HOLIDAY_PROMO.eyebrow}, ${HOLIDAY_PROMO.title} for ${HOLIDAY_PROMO.priceLabel}. Details: ${SITE.domain}${HOLIDAY_PROMO.path}` : '',

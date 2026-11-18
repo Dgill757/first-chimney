@@ -69,7 +69,7 @@ export const VALUES = {
   'Owner Title': 'Owner, F.I.R.E. Certified Technician',
   'Business Phone': '(757) 589-0783',
   Website: SITE,
-  'Service Area': 'Virginia, New Jersey, Connecticut and Massachusetts',
+  'Service Area': 'Virginia, New Jersey, Connecticut, Massachusetts and Rhode Island',
   'Review Link': `${SITE}/reviews#share`,
   'Booking Link': `${SITE}/contact`,
   'Holiday Offer': 'Chimney cleaning + inspection for $199',

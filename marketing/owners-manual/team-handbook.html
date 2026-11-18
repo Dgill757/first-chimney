@@ -4,28 +4,39 @@
 <meta charset="utf-8">
 <title>First Chimney Contracting: Team Handbook</title>
 <style>
-@font-face { font-family: 'Archivo'; src: url('../../public/fonts/archivo.woff2') format('woff2'); font-weight: 100 900; font-stretch: 62% 125%; }
-@font-face { font-family: 'Geist'; src: url('../../public/fonts/geist.woff2') format('woff2'); font-weight: 100 900; }
+@font-face{font-family:'Archivo';font-style:normal;font-weight:400;src:url('../../public/fonts/static/Archivo-400.ttf') format('truetype');}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:500;src:url('../../public/fonts/static/Archivo-500.ttf') format('truetype');}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:600;src:url('../../public/fonts/static/Archivo-600.ttf') format('truetype');}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:700;src:url('../../public/fonts/static/Archivo-700.ttf') format('truetype');}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:800;src:url('../../public/fonts/static/Archivo-800.ttf') format('truetype');}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:900;src:url('../../public/fonts/static/Archivo-900.ttf') format('truetype');}
+@font-face{font-family:'Archivo';font-style:italic;font-weight:400;src:url('../../public/fonts/static/Archivo-400-italic.ttf') format('truetype');}
+@font-face{font-family:'Archivo';font-style:italic;font-weight:600;src:url('../../public/fonts/static/Archivo-600-italic.ttf') format('truetype');}
+@font-face{font-family:'Archivo';font-style:italic;font-weight:700;src:url('../../public/fonts/static/Archivo-700-italic.ttf') format('truetype');}
+@font-face{font-family:'Geist';font-style:normal;font-weight:400;src:url('../../public/fonts/static/Geist-400.ttf') format('truetype');}
+@font-face{font-family:'Geist';font-style:normal;font-weight:500;src:url('../../public/fonts/static/Geist-500.ttf') format('truetype');}
+@font-face{font-family:'Geist';font-style:normal;font-weight:600;src:url('../../public/fonts/static/Geist-600.ttf') format('truetype');}
+@font-face{font-family:'Geist';font-style:normal;font-weight:700;src:url('../../public/fonts/static/Geist-700.ttf') format('truetype');}
 :root { --ink:#121110; --ink2:#211e1b; --bone:#f3ede4; --ember:#f07a32; --deep:#b8501c; --mute:#5d5650; --line:#e4ddd2; --soft:#faf6f0; }
-@page { size: Letter; margin: 0.7in 0.75in 0.8in; @bottom-left { content: "First Chimney Contracting · Team Handbook"; font: 8pt Geist, sans-serif; color: #8a8178; } @bottom-right { content: counter(page); font: 8pt Geist, sans-serif; color: #8a8178; } }
+@page { size: Letter; margin: 0.62in 0.72in 0.74in; @bottom-left { content: "First Chimney Contracting · Team Handbook"; font: 8pt Geist, sans-serif; color: #5d5650; } @bottom-right { content: counter(page); font: 8pt Geist, sans-serif; color: #5d5650; } }
 @page cover { margin: 0; @bottom-left { content: none; } @bottom-right { content: none; } }
 * { box-sizing: border-box; }
 html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-body { margin: 0; font: 9.9pt/1.5 Geist, 'Segoe UI', sans-serif; color: #26221f; }
+body { margin: 0; font: 9.9pt/1.46 Geist, 'Segoe UI', sans-serif; color: #26221f; }
 h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
 h1, h2, h3, h4 { font-family: Archivo, sans-serif; color: var(--ink); line-height: 1.12; margin: 0; }
 h1 { font-size: 26pt; font-stretch: 112%; font-weight: 800; letter-spacing: -0.01em; }
-h2 { font-size: 15pt; font-weight: 750; margin-top: 20pt; }
-h3 { font-size: 11.5pt; font-weight: 700; margin-top: 14pt; }
+h2 { font-size: 15pt; font-weight: 750; margin-top: 16pt; }
+h3 { font-size: 11.5pt; font-weight: 700; margin-top: 12pt; }
 h4 { font-size: 10pt; font-weight: 700; margin-top: 10pt; color: var(--deep); text-transform: uppercase; letter-spacing: 0.08em; font-family: Geist, sans-serif; }
-p { margin: 6pt 0; }
-ul, ol { margin: 6pt 0; padding-left: 16pt; }
-li { margin: 2.5pt 0; }
+p { margin: 5pt 0; }
+ul, ol { margin: 5pt 0; padding-left: 16pt; }
+li { margin: 2pt 0; }
 a { color: var(--deep); text-decoration: none; }
 strong { color: var(--ink); }
 .cover { page: cover; height: 11in; width: 8.5in; position: relative; background: var(--ink); color: var(--bone); overflow: hidden; }
-.cover img.hero { position: absolute; inset: 0; width: 100%; height: 62%; object-fit: cover; opacity: 0.9; }
-.cover .fade { position: absolute; left: 0; right: 0; top: 30%; height: 33%; background: linear-gradient(transparent, var(--ink)); }
+.cover img.hero { position: absolute; inset: 0; width: 100%; height: 54%; object-fit: cover; opacity: 0.9; }
+.cover .fade { position: absolute; left: 0; right: 0; top: 16%; height: 38%; background: linear-gradient(transparent, rgba(18,17,16,.92) 70%, var(--ink)); }
 .cover .text { position: absolute; left: 0.75in; right: 0.75in; bottom: 0.85in; }
 .cover .logo { height: 58pt; }
 .cover .kicker { margin-top: 26pt; color: var(--ember); font: 600 9pt Geist; letter-spacing: 0.22em; text-transform: uppercase; }
@@ -34,17 +45,18 @@ strong { color: var(--ink); }
 .cover .meta { margin-top: 26pt; display: flex; gap: 26pt; font-size: 8.5pt; color: #a99f93; }
 .cover .meta b { display: block; color: var(--bone); font-weight: 600; font-size: 9.5pt; }
 .chapter { break-before: page; }
-.chapter-head { border-bottom: 2pt solid var(--ember); padding-bottom: 10pt; margin-bottom: 12pt; }
-.chapter-head .num { font: 700 9pt Geist; color: var(--ember); letter-spacing: 0.2em; text-transform: uppercase; }
+.chapter-head { border-bottom: 2pt solid var(--ember); padding-bottom: 8pt; margin-bottom: 10pt; }
+.chapter-head .num { font: 700 9pt Geist; color: var(--deep); letter-spacing: 0.2em; text-transform: uppercase; }
 .chapter-head p { color: var(--mute); margin-top: 6pt; font-size: 10.5pt; }
 .box { background: var(--soft); border: 1pt solid var(--line); border-left: 3pt solid var(--ember); border-radius: 6pt; padding: 9pt 12pt; margin: 10pt 0; break-inside: avoid; }
 .box.dark { background: var(--ink2); color: #e9e1d6; border-color: var(--ink2); border-left-color: var(--ember); }
 .box.dark strong, .box.dark h3, .box.dark h4 { color: #fff; }
 .script { font-family: Geist; background: #fff; border: 1pt dashed #d6c9b8; border-radius: 6pt; padding: 8pt 11pt; margin: 8pt 0; break-inside: avoid; }
 .script .who { font-weight: 700; color: var(--deep); }
+.chapter.fit .script { padding: 5.5pt 9pt; margin: 6pt 0; } .chapter.fit li { margin: 1.5pt 0; } .chapter.fit td { padding: 2pt 7pt; } .chapter.fit th { padding: 3.6pt 7pt; } .chapter.fit p { margin: 4pt 0; } .chapter.follow { break-before: auto; margin-top: 18pt; } .cols2 { column-count: 2; column-gap: 20pt; break-inside: avoid; } .cols2 li { break-inside: avoid; } .chapter.fit { font-size: 9.45pt; } .chapter.fit table { font-size: 8.9pt; } .chapter.fit td { padding: 2.8pt 7pt; } .chapter.fit h2 { margin-top: 12pt; } .chapter.fit h3 { margin-top: 9pt; }
 table { width: 100%; border-collapse: collapse; margin: 8pt 0; font-size: 9.2pt; break-inside: auto; }
 th { text-align: left; background: var(--ink); color: var(--bone); font-family: Archivo; font-weight: 700; padding: 5pt 7pt; }
-td { border-bottom: 0.75pt solid var(--line); padding: 4pt 7pt; vertical-align: top; }
+td { border-bottom: 0.75pt solid var(--line); padding: 3.4pt 7pt; vertical-align: top; }
 tr { break-inside: avoid; }
 .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14pt; }
 .cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10pt; }
@@ -56,7 +68,7 @@ tr { break-inside: avoid; }
 .photo { width: 100%; border-radius: 6pt; object-fit: cover; }
 .toc { columns: 2; column-gap: 24pt; padding-left: 0; list-style: none; }
 .toc li { display: flex; gap: 8pt; padding: 4pt 0; border-bottom: 0.75pt solid var(--line); break-inside: avoid; }
-.toc li span { color: var(--ember); font-weight: 700; min-width: 18pt; }
+.toc li span { color: var(--deep); font-weight: 700; min-width: 18pt; }
 .pill { display: inline-block; border: 1pt solid var(--line); border-radius: 99pt; padding: 1pt 7pt; font-size: 8.5pt; margin: 1pt 2pt 1pt 0; background: #fff; }
 .small { font-size: 8.6pt; color: var(--mute); }
 .quote { font-family: Archivo; font-size: 14pt; font-weight: 600; color: var(--ink); border-left: 3pt solid var(--ember); padding-left: 12pt; margin: 14pt 0; }
@@ -89,7 +101,7 @@ tr { break-inside: avoid; }
       <h3>How you will be measured</h3>
       <ul><li>Reliability: on time, prepared, does what you said</li><li>Safety: zero shortcuts</li><li>Customer respect: clean, polite, honest</li><li>Quality: no callbacks</li><li>Growth: learning something new every week</li></ul>
     </div>
-    <img class="photo" style="height:3.6in" src="../../public/media/team/andrew-paterini-headshot-sm.webp" alt="">
+    <img class="photo" style="height:3.6in" src="../../public/media/team/andrew-paterini-owner-portrait-sm.webp" alt="">
   </div>
   <h2>Safety rules (sign below)</h2>
   <ol>
@@ -116,13 +128,13 @@ tr { break-inside: avoid; }
       </ol>
       <p class="quote">Speed to the call, proof on the roof, and a reminder every year. That is the business.</p>
     </div>
-    <img class="photo" style="height:3.3in" src="../../public/media/team/andrew-paterini-owner-portrait-sm.webp" alt="">
+    <img class="photo" style="height:3.3in" src="../../public/media/team/andrew-paterini-headshot-sm.webp" alt="">
   </div>
   <h2>Credentials you can point to</h2>
   <p><strong>F.I.R.E. Certified Technician.</strong> Andrew is listed by name in the official F.I.R.E. Service directory (f-i-r-e-service.com, Virginia certified technicians). When a homeowner or realtor asks, send them the link. Verifiable beats impressive.</p>
   <p><strong>10 years in the chimney trade, 25 years combined crew experience.</strong> Say it the same way every time, everywhere.</p>
   <div class="box"><strong>Never do:</strong> invent reviews, borrow reviews from another company, offer anything in exchange for a review, scare people into repairs, or claim a certification you do not hold. One shortcut can undo a year of trust.</div>
-</section><section class="chapter">
+</section><section class="chapter fit">
   <div class="chapter-head"><div class="num">Chapter 05</div><h1>Sales: phone, follow-up, estimates</h1>
   <p>You are not "selling chimneys". You are helping a family use their fireplace safely. Act like it and the sales take care of themselves.</p></div>
   <h2>Inbound call script</h2>
@@ -146,7 +158,7 @@ tr { break-inside: avoid; }
     <tr><td>"Somebody called offering a $49 cleaning."</td><td>"Be careful with those. Many make it up with scare tactics on the roof. Whatever you decide, ask for photos and a written quote before any repair."</td></tr>
   </table>
   <h2>The estimate presentation</h2>
-  <ol>
+  <ol class="cols2">
     <li>Sit down with them. Phone in hand, photos up.</li>
     <li>Good news first. "Your firebox and damper are in good shape."</li>
     <li>Each issue in one sentence: what it is, why it matters, what happens if it waits.</li>
@@ -155,7 +167,7 @@ tr { break-inside: avoid; }
     <li>Ask: "Which option feels right to you?" Then stop talking.</li>
     <li>Yes? Take the deposit (masonry and liners) and book it. Not yet? Move the card to <strong>Estimate Sent</strong>. The system follows up.</li>
   </ol>
-</section><section class="chapter">
+</section><section class="chapter follow">
   <div class="chapter-head"><div class="num">Chapter 06</div><h1>On-site inspection guide</h1>
   <p>For Andrew as a refresher, and for every new technician on day one. Consistency is what makes a report trustworthy.</p></div>
   <div class="cols">

@@ -115,7 +115,7 @@ export function buildRoutes(extra: RouteMeta[] = []): RouteMeta[] {
   add({
     path: '/',
     title: `Chimney Cleaning, Inspection & Repair in ${STATE_LIST_TEXT}`,
-    description: `${SITE.name}: ${CREDENTIALS.fire.label} chimney inspection, cleaning, masonry and leak repair in Virginia, New Jersey, Connecticut and Massachusetts. Holiday special: cleaning + inspection for $199.`,
+    description: `${SITE.name}: ${CREDENTIALS.fire.label} chimney inspection, cleaning, masonry and leak repair in Virginia, New Jersey, Connecticut, Massachusetts and Rhode Island. Holiday special: cleaning + inspection for $199.`,
     image: SITE.ogImage,
     h1: 'Chimney service done right the first time.',
     summary: [

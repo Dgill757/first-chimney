@@ -5,7 +5,7 @@ import { Faq, FireButton, PageIntro, Reveal, SERVICE_ICONS } from '@/components/
 import { HOLIDAY_PROMO, promoIsLive } from '@/lib/promo';
 import { JOB_PHOTOS, TEAM } from '@/data/team';
 
-const STATE_PHOTO: Record<string, (typeof JOB_PHOTOS)[number]> = { virginia: TEAM.inspectionRoof, 'new-jersey': TEAM.rebuild, connecticut: TEAM.crown, massachusetts: TEAM.capCrown };
+const STATE_PHOTO: Record<string, (typeof JOB_PHOTOS)[number]> = { virginia: TEAM.inspectionRoof, 'new-jersey': TEAM.rebuild, connecticut: TEAM.crown, massachusetts: TEAM.capCrown, 'rhode-island': TEAM.roofBrush };
 const photoFor = (slug: string) => {
   const pool = JOB_PHOTOS.filter((p) => p.category !== 'Andrew & the crew');
   let h = 0;
@@ -22,7 +22,7 @@ export function ServiceAreasHub() {
   const r = routeFor('/service-areas')!;
   return (
     <>
-      <PageIntro crumbs={r.crumbs} title="Where we work" lede="First Chimney Contracting serves homeowners in four states. Not sure if we reach your town? Send your address and we will confirm before you book." />
+      <PageIntro crumbs={r.crumbs} title="Where we work" lede="First Chimney Contracting serves homeowners in five states. Not sure if we reach your town? Send your address and we will confirm before you book." />
       <section className="section">
         <div className="wrap grid gap-5 md:grid-cols-2">
           {SERVICE_AREAS.map((s, i) => (

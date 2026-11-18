@@ -80,7 +80,7 @@ export const SERVICES: Service[] = [
     related: ['chimney-sweeping', 'leak-repair', 'chimney-crown'],
     metaTitle: 'Chimney Inspection by a F.I.R.E. Certified Technician',
     metaDescription:
-      'Chimney inspections in Virginia, New Jersey, Connecticut and Massachusetts. Firebox to crown, photo-documented findings and plain-English recommendations.',
+      'Chimney inspections in Virginia, New Jersey, Connecticut, Massachusetts and Rhode Island. Firebox to crown, photo-documented findings and plain-English recommendations.',
   },
   {
     id: 'chimney-sweeping',
@@ -132,7 +132,7 @@ export const SERVICES: Service[] = [
     related: ['chimney-inspection', 'fireplace-repair', 'chimney-cap'],
     metaTitle: 'Chimney Cleaning & Sweeping',
     metaDescription:
-      'Professional chimney cleaning that removes creosote and soot, protects your home and leaves you with a clear picture of your chimney. VA, NJ, CT and MA.',
+      'Professional chimney cleaning that removes creosote and soot, protects your home and leaves you with a clear picture of your chimney. VA, NJ, CT, MA and RI.',
   },
   {
     id: 'chimney-relining',
@@ -180,7 +180,7 @@ export const SERVICES: Service[] = [
     related: ['chimney-inspection', 'fireplace-repair', 'chimney-cap'],
     metaTitle: 'Chimney Relining: Stainless Steel Chimney Liners',
     metaDescription:
-      'Chimney relining with stainless steel liners for cracked flues, fireplace inserts, stoves and furnace changes. Serving VA, NJ, CT and MA.',
+      'Chimney relining with stainless steel liners for cracked flues, fireplace inserts, stoves and furnace changes. Serving VA, NJ, CT, MA and RI.',
   },
   {
     id: 'masonry-rebuilds',
@@ -228,7 +228,7 @@ export const SERVICES: Service[] = [
     related: ['chimney-crown', 'leak-repair', 'chimney-inspection'],
     metaTitle: 'Chimney Masonry Repair, Tuckpointing & Rebuilds',
     metaDescription:
-      'Chimney tuckpointing, brick replacement and rebuilds that last. Written quotes before work begins. Serving VA, NJ, CT and MA.',
+      'Chimney tuckpointing, brick replacement and rebuilds that last. Written quotes before work begins. Serving VA, NJ, CT, MA and RI.',
   },
   {
     id: 'leak-repair',
@@ -276,7 +276,7 @@ export const SERVICES: Service[] = [
     related: ['chimney-crown', 'chimney-cap', 'masonry-rebuilds'],
     metaTitle: 'Chimney Leak Repair, Flashing & Waterproofing',
     metaDescription:
-      'Chimney leak repair that finds the real source: flashing, crown, cap or masonry. Breathable waterproofing. Serving VA, NJ, CT and MA.',
+      'Chimney leak repair that finds the real source: flashing, crown, cap or masonry. Breathable waterproofing. Serving VA, NJ, CT, MA and RI.',
   },
   {
     id: 'chimney-cap',
@@ -317,7 +317,7 @@ export const SERVICES: Service[] = [
     related: ['leak-repair', 'chimney-crown', 'chimney-inspection'],
     metaTitle: 'Chimney Cap & Chase Cover Installation',
     metaDescription:
-      'Chimney caps and chase covers that keep rain, animals and debris out. Measured and installed to fit. Serving VA, NJ, CT and MA.',
+      'Chimney caps and chase covers that keep rain, animals and debris out. Measured and installed to fit. Serving VA, NJ, CT, MA and RI.',
   },
   {
     id: 'chimney-crown',
@@ -356,7 +356,7 @@ export const SERVICES: Service[] = [
     related: ['leak-repair', 'chimney-cap', 'masonry-rebuilds'],
     metaTitle: 'Chimney Crown Repair & Rebuilds',
     metaDescription:
-      'Chimney crown sealing and rebuilds to stop water at the top of your chimney. Serving Virginia, New Jersey, Connecticut and Massachusetts.',
+      'Chimney crown sealing and rebuilds to stop water at the top of your chimney. Serving Virginia, New Jersey, Connecticut, Massachusetts and Rhode Island.',
   },
   {
     id: 'fireplace-repair',
@@ -403,7 +403,7 @@ export const SERVICES: Service[] = [
     related: ['chimney-sweeping', 'chimney-inspection', 'masonry-rebuilds'],
     metaTitle: 'Fireplace Repair: Firebox, Damper & Draft',
     metaDescription:
-      'Fireplace repair for smoke problems, damaged firebrick and broken dampers. Serving Virginia, New Jersey, Connecticut and Massachusetts.',
+      'Fireplace repair for smoke problems, damaged firebrick and broken dampers. Serving Virginia, New Jersey, Connecticut, Massachusetts and Rhode Island.',
   },
   {
     id: 'dryer-vent-cleaning',
@@ -444,7 +444,7 @@ export const SERVICES: Service[] = [
     related: ['chimney-sweeping', 'chimney-inspection'],
     metaTitle: 'Dryer Vent Cleaning',
     metaDescription:
-      'Dryer vent cleaning that clears the full duct to reduce fire risk and shorten drying times. Serving VA, NJ, CT and MA.',
+      'Dryer vent cleaning that clears the full duct to reduce fire risk and shorten drying times. Serving VA, NJ, CT, MA and RI.',
   },
 ];
 

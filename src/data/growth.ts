@@ -373,7 +373,7 @@ export const CAREER_FAQS = [
   },
   {
     q: 'Where is the work?',
-    a: 'At homes across our service area in Virginia, New Jersey, Connecticut and Massachusetts. Most field roles need a valid driver’s license.',
+    a: 'At homes across our service area in Virginia, New Jersey, Connecticut, Massachusetts and Rhode Island. Most field roles need a valid driver’s license.',
   },
   {
     q: 'Do I need a resume?',
